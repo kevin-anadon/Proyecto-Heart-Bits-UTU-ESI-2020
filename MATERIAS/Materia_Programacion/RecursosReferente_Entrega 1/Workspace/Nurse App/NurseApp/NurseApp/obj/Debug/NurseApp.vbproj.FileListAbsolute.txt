@@ -1,0 +1,12 @@
+E:\Save de Nitsuga\Estudio\ESI Buceo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\RecursosReferente_Entrega 1\Workspace\Nurse App\NurseApp\NurseApp\obj\Debug\NurseApp.vbprojAssemblyReference.cache
+E:\Save de Nitsuga\Estudio\ESI Buceo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\RecursosReferente_Entrega 1\Workspace\Nurse App\NurseApp\NurseApp\obj\Debug\NurseApp.FrmHome.resources
+E:\Save de Nitsuga\Estudio\ESI Buceo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\RecursosReferente_Entrega 1\Workspace\Nurse App\NurseApp\NurseApp\obj\Debug\NurseApp.Resources.resources
+E:\Save de Nitsuga\Estudio\ESI Buceo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\RecursosReferente_Entrega 1\Workspace\Nurse App\NurseApp\NurseApp\obj\Debug\NurseApp.vbproj.GenerateResource.cache
+E:\Save de Nitsuga\Estudio\ESI Buceo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\RecursosReferente_Entrega 1\Workspace\Nurse App\NurseApp\NurseApp\bin\Debug\NurseApp.exe.config
+E:\Save de Nitsuga\Estudio\ESI Buceo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\RecursosReferente_Entrega 1\Workspace\Nurse App\NurseApp\NurseApp\bin\Debug\NurseApp.exe
+E:\Save de Nitsuga\Estudio\ESI Buceo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\RecursosReferente_Entrega 1\Workspace\Nurse App\NurseApp\NurseApp\bin\Debug\NurseApp.pdb
+E:\Save de Nitsuga\Estudio\ESI Buceo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\RecursosReferente_Entrega 1\Workspace\Nurse App\NurseApp\NurseApp\bin\Debug\NurseApp.xml
+E:\Save de Nitsuga\Estudio\ESI Buceo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\RecursosReferente_Entrega 1\Workspace\Nurse App\NurseApp\NurseApp\obj\Debug\NurseApp.exe
+E:\Save de Nitsuga\Estudio\ESI Buceo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\RecursosReferente_Entrega 1\Workspace\Nurse App\NurseApp\NurseApp\obj\Debug\NurseApp.xml
+E:\Save de Nitsuga\Estudio\ESI Buceo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\RecursosReferente_Entrega 1\Workspace\Nurse App\NurseApp\NurseApp\obj\Debug\NurseApp.pdb
+E:\Save de Nitsuga\Estudio\ESI Buceo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\RecursosReferente_Entrega 1\Workspace\Nurse App\NurseApp\NurseApp\obj\Debug\NurseApp.FrmLogin.resources
