@@ -61,7 +61,7 @@
 		email VARCHAR (64) NOT NULL UNIQUE,
 		usuario VARCHAR (16) NOT NULL UNIQUE,
 		contrasena VARCHAR (16) NOT NULL,
-		pin INT (4) NOT NULL, 
+		pin INT (4), 
 		PRIMARY KEY (id),
 		FOREIGN KEY (id_tipo) REFERENCES tipo_empleado(id)
 	);	
