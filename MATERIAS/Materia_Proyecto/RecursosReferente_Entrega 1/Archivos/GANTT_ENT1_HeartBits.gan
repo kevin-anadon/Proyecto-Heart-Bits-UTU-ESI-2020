@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="Sistema de consulta médica" company="Heart Bits " webLink="http://esi.edu.uy" view-date="2020-03-24" view-index="0" gantt-divider-location="667" resource-divider-location="300" version="2.8.11" locale="es">
+<?xml version="1.0" encoding="UTF-8"?><project name="Sistema de consulta médica" company="Heart Bits " webLink="http://esi.edu.uy" view-date="2020-03-23" view-index="1" gantt-divider-location="667" resource-divider-location="300" version="2.8.11" locale="es">
     <description/>
-    <view zooming-state="default:2" id="gantt-chart">
+    <view zooming-state="default:1" id="gantt-chart">
         <field id="tpc0" name="Codigo" width="165" order="0"/>
         <field id="tpd3" name="Nombre" width="313" order="1"/>
         <field id="tpd13" name="Recursos" width="170" order="2"/>
@@ -8,8 +8,8 @@
         <option id="taskLabelDown" value=""/>
     </view>
     <view id="resource-table">
-        <field id="0" name="Nombre" width="163" order="0"/>
-        <field id="tpc0" name="Tipo" width="133" order="1"/>
+        <field id="0" name="Nombre" width="155" order="0"/>
+        <field id="tpc0" name="Tipo" width="126" order="1"/>
     </view>
     <!-- -->
     <calendars>
@@ -53,44 +53,44 @@
             <depend id="7" type="2" difference="0" hardness="Strong"/>
             <customproperty taskproperty-id="tpc0" value="ADA0103"/>
         </task>
-        <task id="7" name="Especificación de Requerimientos" color="#8cb6ce" meeting="false" start="2020-04-07" duration="3" complete="0" thirdDate="2020-03-30" thirdDate-constraint="0" expand="true">
+        <task id="7" name="Especificación de Requerimientos" color="#8cb6ce" meeting="false" start="2020-04-07" duration="6" complete="0" thirdDate="2020-03-30" thirdDate-constraint="0" expand="true">
             <depend id="33" type="2" difference="0" hardness="Strong"/>
             <depend id="38" type="2" difference="0" hardness="Strong"/>
             <depend id="46" type="2" difference="0" hardness="Strong"/>
             <customproperty taskproperty-id="tpc0" value="ADA0104"/>
         </task>
-        <task id="10" name="Modelo Entidad Relación" color="#8cb6ce" meeting="false" start="2020-03-31" duration="2" complete="0" thirdDate="2020-03-30" thirdDate-constraint="0" expand="true">
+        <task id="10" name="Modelo Entidad Relación" color="#8cb6ce" meeting="false" start="2020-03-31" duration="6" complete="0" thirdDate="2020-03-30" thirdDate-constraint="0" expand="true">
             <depend id="13" type="2" difference="0" hardness="Strong"/>
             <depend id="20" type="2" difference="0" hardness="Strong"/>
             <customproperty taskproperty-id="tpc0" value="BD0105"/>
         </task>
-        <task id="13" name="Diagrama Entidad Relación" color="#8cb6ce" meeting="false" start="2020-04-02" duration="3" complete="0" thirdDate="2020-03-30" thirdDate-constraint="0" expand="true">
+        <task id="13" name="Diagrama Entidad Relación" color="#8cb6ce" meeting="false" start="2020-04-07" duration="3" complete="0" thirdDate="2020-03-30" thirdDate-constraint="0" expand="true">
             <depend id="17" type="2" difference="0" hardness="Strong"/>
             <depend id="20" type="2" difference="0" hardness="Strong"/>
             <customproperty taskproperty-id="tpc0" value="BD0106"/>
         </task>
-        <task id="17" name="Restricción no Estructural" color="#8cb6ce" meeting="false" start="2020-04-06" duration="1" complete="0" thirdDate="2020-03-30" thirdDate-constraint="0" expand="true">
+        <task id="17" name="Restricción no Estructural" color="#8cb6ce" meeting="false" start="2020-04-10" duration="1" complete="0" thirdDate="2020-03-30" thirdDate-constraint="0" expand="true">
             <customproperty taskproperty-id="tpc0" value="BD0107"/>
         </task>
-        <task id="20" name="Modelo Relacional en 3era Forma Normal" color="#8cb6ce" meeting="false" start="2020-04-06" duration="3" complete="0" thirdDate="2020-03-30" thirdDate-constraint="0" expand="true">
+        <task id="20" name="Modelo Relacional en 3era Forma Normal" color="#8cb6ce" meeting="false" start="2020-04-10" duration="3" complete="0" thirdDate="2020-03-30" thirdDate-constraint="0" expand="true">
             <depend id="31" type="2" difference="0" hardness="Strong"/>
             <customproperty taskproperty-id="tpc0" value="BD0108"/>
         </task>
-        <task id="31" name="Diccionario de Datos" color="#8cb6ce" meeting="false" start="2020-04-09" duration="2" complete="0" thirdDate="2020-03-30" thirdDate-constraint="0" expand="true">
+        <task id="31" name="Diccionario de Datos" color="#8cb6ce" meeting="false" start="2020-04-14" duration="2" complete="0" thirdDate="2020-03-30" thirdDate-constraint="0" expand="true">
             <customproperty taskproperty-id="tpc0" value="BD0109"/>
         </task>
-        <task id="33" name="Producto mín. viable Cliente" color="#8cb6ce" meeting="false" start="2020-04-10" duration="2" complete="0" thirdDate="2020-03-30" thirdDate-constraint="0" expand="true">
+        <task id="33" name="Producto mín. viable Cliente" color="#8cb6ce" meeting="false" start="2020-04-14" duration="2" complete="0" thirdDate="2020-03-30" thirdDate-constraint="0" expand="true">
             <depend id="41" type="2" difference="0" hardness="Strong"/>
             <customproperty taskproperty-id="tpc0" value="PROG0110"/>
         </task>
-        <task id="38" name="Producto mín viable Gestión" color="#8cb6ce" meeting="false" start="2020-04-10" duration="2" complete="0" thirdDate="2020-03-30" thirdDate-constraint="0" expand="true">
+        <task id="38" name="Producto mín viable Gestión" color="#8cb6ce" meeting="false" start="2020-04-14" duration="2" complete="0" thirdDate="2020-03-30" thirdDate-constraint="0" expand="true">
             <depend id="41" type="2" difference="0" hardness="Strong"/>
             <customproperty taskproperty-id="tpc0" value="PROG0111"/>
         </task>
-        <task id="41" name="Código Almacenado en GitHub" color="#8cb6ce" meeting="false" start="2020-04-13" duration="1" complete="0" thirdDate="2020-03-30" thirdDate-constraint="0" expand="true">
+        <task id="41" name="Código Almacenado en GitHub" color="#8cb6ce" meeting="false" start="2020-04-16" duration="1" complete="0" thirdDate="2020-03-30" thirdDate-constraint="0" expand="true">
             <customproperty taskproperty-id="tpc0" value="PROG0112"/>
         </task>
-        <task id="46" name="Usuarios y claves del Sistema" color="#8cb6ce" meeting="false" start="2020-04-10" duration="2" complete="0" thirdDate="2020-03-30" thirdDate-constraint="0" expand="true">
+        <task id="46" name="Usuarios y claves del Sistema" color="#8cb6ce" meeting="false" start="2020-04-14" duration="2" complete="0" thirdDate="2020-03-30" thirdDate-constraint="0" expand="true">
             <customproperty taskproperty-id="tpc0" value="PROG0113"/>
         </task>
         <task id="50" name="Nombre Grupo, Integrantes y Roles" color="#8cb6ce" meeting="false" start="2020-03-30" duration="1" complete="0" thirdDate="2020-03-30" thirdDate-constraint="0" expand="true">
