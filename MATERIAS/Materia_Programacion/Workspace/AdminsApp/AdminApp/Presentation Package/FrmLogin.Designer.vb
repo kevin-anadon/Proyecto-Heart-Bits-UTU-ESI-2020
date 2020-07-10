@@ -23,23 +23,17 @@ Partial Class FrmLogin
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmLogin))
-        Me.PicbxMiddleImage = New System.Windows.Forms.PictureBox()
-        CType(Me.PicbxMiddleImage, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.SuspendLayout()
         '
-        'PicbxMiddleImage
+        'Guna2HtmlLabel1
         '
-        Me.PicbxMiddleImage.AccessibleDescription = "PicbxMiddleImage"
-        Me.PicbxMiddleImage.AccessibleName = "PicbxMiddleImage"
-        Me.PicbxMiddleImage.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.PicbxMiddleImage.Cursor = System.Windows.Forms.Cursors.Default
-        Me.PicbxMiddleImage.Image = CType(resources.GetObject("PicbxMiddleImage.Image"), System.Drawing.Image)
-        Me.PicbxMiddleImage.Location = New System.Drawing.Point(-1, -3)
-        Me.PicbxMiddleImage.Name = "PicbxMiddleImage"
-        Me.PicbxMiddleImage.Size = New System.Drawing.Size(675, 810)
-        Me.PicbxMiddleImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PicbxMiddleImage.TabIndex = 0
-        Me.PicbxMiddleImage.TabStop = False
+        Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.White
+        Me.Guna2HtmlLabel1.BackgroundImage = CType(resources.GetObject("Guna2HtmlLabel1.BackgroundImage"), System.Drawing.Image)
+        Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(528, 83)
+        Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
+        Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(3, 2)
+        Me.Guna2HtmlLabel1.TabIndex = 1
         '
         'FrmLogin
         '
@@ -48,15 +42,15 @@ Partial Class FrmLogin
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1360, 800)
         Me.ControlBox = False
-        Me.Controls.Add(Me.PicbxMiddleImage)
+        Me.Controls.Add(Me.Guna2HtmlLabel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmLogin"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        CType(Me.PicbxMiddleImage, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
-    Public WithEvents PicbxMiddleImage As PictureBox
+    Friend WithEvents Guna2HtmlLabel1 As Guna.UI2.WinForms.Guna2HtmlLabel
 End Class
