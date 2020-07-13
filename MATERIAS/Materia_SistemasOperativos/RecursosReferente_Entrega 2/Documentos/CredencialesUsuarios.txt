@@ -1,0 +1,3 @@
+Usuario Contraseña
+root 	heartbits2002
+ssh	remotohb
