@@ -14,6 +14,10 @@ echo Cantidad de logs fallidos: $contfails
 echo Cantidad de logs exitosos: $contexito
 echo Ultimo log: $lastlog
 echo ""
+echo Usuarios activos:
+echo ""
+w
+echo ""
 echo Presione enter para continuar...
 read
 sh menulog.sh
