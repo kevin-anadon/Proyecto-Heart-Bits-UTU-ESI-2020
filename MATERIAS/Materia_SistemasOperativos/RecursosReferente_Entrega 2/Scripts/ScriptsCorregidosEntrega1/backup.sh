@@ -8,6 +8,7 @@ mysqldump -u root -pheartbits2002 --database TelediagnosticoMedico_HeartBits > /
 #Aumento en 1 la variable de entorno CANTBACKUP
 Contador=(expr $CANTBACKUP + 1)
 echo "export CANTBACKUP=$Contador >> $HOME/.bashrc
-echo La base de datos ha sido respaldado con exito!!
-sleep 2 
+
+#Respaldo en segundo disco
+rsync -av /Telediagnostico/Backup/ /discos/ppl/Respaldo/
 exit
