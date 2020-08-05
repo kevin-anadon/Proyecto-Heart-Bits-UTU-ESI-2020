@@ -38,7 +38,7 @@
 		nombre VARCHAR (32) NOT NULL,
         id_dpto INT (10) NOT NULL,
 		PRIMARY KEY (id),
-        FOREIGN KEY (id_dpto) REFERENCES Departamento(id)
+        FOREIGN KEY (id_dpto) REFERENCES departamento(id)
 	);
     
     CREATE TABLE tipo_persona (
@@ -68,7 +68,7 @@
 		pin INT (4), 
 		PRIMARY KEY (id),
         FOREIGN KEY (id_tipo) REFERENCES tipo_persona(id),
-        FOREIGN KEY (id_ciudad) REFERENCES Ciudad(id)
+        FOREIGN KEY (id_ciudad) REFERENCES ciudad(id)
 	);	
 
 	-- ------------------------------------------------------------------------------ --
@@ -135,7 +135,7 @@
 		id_sintoma INT (10) NOT NULL,
 		PRIMARY KEY (id),
 		FOREIGN KEY (id_tipo) REFERENCES tipo_diagnostico(id),
-		FOREIGN KEY (id_paciente) REFERENCES Persona(id),
+		FOREIGN KEY (id_paciente) REFERENCES persona(id),
 		FOREIGN KEY (id_sintoma) REFERENCES sintoma(id)
 	);	
 	-- ------------------------------------------------------------------------------ --
@@ -146,7 +146,7 @@
 		id_paciente INT (10) NOT NULL,
 		PRIMARY KEY (id_sintoma, id_paciente),
 		FOREIGN KEY (id_sintoma) REFERENCES sintoma(id),
-		FOREIGN KEY (id_paciente) REFERENCES Persona(id)
+		FOREIGN KEY (id_paciente) REFERENCES persona(id)
 	);
 
 	CREATE TABLE sintoma_compone (
@@ -165,8 +165,8 @@
 		fechaHoraInicio DATETIME NOT NULL,
 		fechaHoraFin DATETIME,
 		PRIMARY KEY (id_paciente, id_medico),
-		FOREIGN KEY (id_paciente) REFERENCES Persona(id),
-		FOREIGN KEY (id_medico) REFERENCES Persona(id)
+		FOREIGN KEY (id_paciente) REFERENCES persona(id),
+		FOREIGN KEY (id_medico) REFERENCES persona(id)
 	);
 
 	CREATE TABLE verifica (
@@ -174,7 +174,7 @@
 		id_medico INT (10) NOT NULL,
 		PRIMARY KEY (id_tentativo),
 		FOREIGN KEY (id_tentativo) REFERENCES diagnostico(id),
-		FOREIGN KEY (id_medico) REFERENCES Persona(id)
+		FOREIGN KEY (id_medico) REFERENCES persona(id)
 	);
 
 	CREATE TABLE conversa (
@@ -183,8 +183,8 @@
 		id_mensaje INT (10),
 		id_sala INT (10) NOT NULL,
 		PRIMARY KEY (id_paciente, id_medico, id_mensaje),
-		FOREIGN KEY (id_paciente) REFERENCES Persona(id),
-		FOREIGN KEY (id_medico) REFERENCES Persona(id),
+		FOREIGN KEY (id_paciente) REFERENCES persona(id),
+		FOREIGN KEY (id_medico) REFERENCES persona(id),
 		FOREIGN KEY (id_mensaje) REFERENCES mensaje(id),
 		FOREIGN KEY (id_sala) REFERENCES salaChat(id)
 	);
@@ -195,14 +195,14 @@
 		id_paciente INT (10),
 		celular INT (16),
 		PRIMARY KEY (id_paciente, celular),
-		FOREIGN KEY (id_paciente) REFERENCES Persona(id)
+		FOREIGN KEY (id_paciente) REFERENCES persona(id)
 	);
 
 	CREATE TABLE cel_empleado (
 		id_empleado INT (10),
 		celular INT (16),
 		PRIMARY KEY (id_empleado, celular),
-		FOREIGN KEY (id_empleado) REFERENCES Persona(id)
+		FOREIGN KEY (id_empleado) REFERENCES persona(id)
 	);
 	-- ------------------------------------------------------------------------------ --
 -- FIN DE CREACIÓN DE TABLAS - (2) -------------------------------------------------- --
