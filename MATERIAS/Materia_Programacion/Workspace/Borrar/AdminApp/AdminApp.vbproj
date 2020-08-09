@@ -51,6 +51,9 @@
     <ApplicationIcon>TelediganosticoMedico_Logo.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BWCMM">
+      <HintPath>..\..\Resources Package\Dll\BWCMM.dll</HintPath>
+    </Reference>
     <Reference Include="Guna.UI">
       <HintPath>..\..\..\..\..\..\..\..\..\Library\Frameworks\VB.NET\Guna.UI\Guna.UI-Framework-Lib\Guna.UI.WinForms_v1.0.0.9\.net 4.0\Guna.UI.dll</HintPath>
     </Reference>
