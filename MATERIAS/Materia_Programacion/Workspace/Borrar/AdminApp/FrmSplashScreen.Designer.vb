@@ -47,10 +47,10 @@ Partial Class FrmSplashScreen
         Me.LblSystemInfo1.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.LblSystemInfo1.Font = New System.Drawing.Font("Microsoft YaHei UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblSystemInfo1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.LblSystemInfo1.Location = New System.Drawing.Point(-25, 613)
+        Me.LblSystemInfo1.Location = New System.Drawing.Point(714, 613)
         Me.LblSystemInfo1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LblSystemInfo1.Name = "LblSystemInfo1"
-        Me.LblSystemInfo1.Size = New System.Drawing.Size(1079, 22)
+        Me.LblSystemInfo1.Size = New System.Drawing.Size(340, 22)
         Me.LblSystemInfo1.TabIndex = 0
         Me.LblSystemInfo1.Text = "Sistema: Sistema de Gestión para Administradores."
         Me.LblSystemInfo1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -65,10 +65,10 @@ Partial Class FrmSplashScreen
         Me.Label2.Font = New System.Drawing.Font("Microsoft YaHei UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.Label2.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label2.Location = New System.Drawing.Point(-26, 591)
+        Me.Label2.Location = New System.Drawing.Point(830, 591)
         Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(1079, 22)
+        Me.Label2.Size = New System.Drawing.Size(224, 22)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Versión del Sistema: V1.0.1 Alpha."
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight

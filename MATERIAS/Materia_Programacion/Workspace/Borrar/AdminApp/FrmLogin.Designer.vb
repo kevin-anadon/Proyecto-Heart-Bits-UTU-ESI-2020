@@ -30,12 +30,12 @@ Partial Class FrmLogin
         Me.Lbltitle2 = New System.Windows.Forms.Label()
         Me.Lblbody = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.TxtUser = New System.Windows.Forms.TextBox()
-        Me.TxtPass = New System.Windows.Forms.TextBox()
-        Me.BtnLog = New System.Windows.Forms.Button()
-        Me.BtnExit = New System.Windows.Forms.Button()
+        Me.TxtUser = New Guna.UI.WinForms.GunaTextBox()
+        Me.TxtPass = New Guna.UI.WinForms.GunaTextBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.BtnLogin = New Guna.UI.WinForms.GunaButton()
+        Me.BtnExit = New Guna.UI.WinForms.GunaButton()
         CType(Me.PicbxLogin, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PicbxDots, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -134,61 +134,113 @@ Partial Class FrmLogin
         '
         'TxtUser
         '
-        Me.TxtUser.Font = New System.Drawing.Font("Segoe UI Emoji", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtUser.Location = New System.Drawing.Point(691, 358)
-        Me.TxtUser.Multiline = True
+        Me.TxtUser.BackColor = System.Drawing.Color.Transparent
+        Me.TxtUser.BaseColor = System.Drawing.Color.White
+        Me.TxtUser.BorderColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
+        Me.TxtUser.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TxtUser.FocusedBaseColor = System.Drawing.Color.White
+        Me.TxtUser.FocusedBorderColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
+        Me.TxtUser.FocusedForeColor = System.Drawing.SystemColors.ControlText
+        Me.TxtUser.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtUser.Location = New System.Drawing.Point(691, 357)
         Me.TxtUser.Name = "TxtUser"
+        Me.TxtUser.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.TxtUser.Radius = 11
+        Me.TxtUser.SelectedText = ""
         Me.TxtUser.Size = New System.Drawing.Size(316, 49)
-        Me.TxtUser.TabIndex = 11
+        Me.TxtUser.TabIndex = 17
         '
         'TxtPass
         '
-        Me.TxtPass.Font = New System.Drawing.Font("Segoe UI Emoji", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtPass.BackColor = System.Drawing.Color.Transparent
+        Me.TxtPass.BaseColor = System.Drawing.Color.White
+        Me.TxtPass.BorderColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
+        Me.TxtPass.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TxtPass.FocusedBaseColor = System.Drawing.Color.White
+        Me.TxtPass.FocusedBorderColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
+        Me.TxtPass.FocusedForeColor = System.Drawing.SystemColors.ControlText
+        Me.TxtPass.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtPass.Location = New System.Drawing.Point(691, 412)
-        Me.TxtPass.Multiline = True
         Me.TxtPass.Name = "TxtPass"
+        Me.TxtPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.TxtPass.Radius = 11
+        Me.TxtPass.SelectedText = ""
         Me.TxtPass.Size = New System.Drawing.Size(316, 49)
-        Me.TxtPass.TabIndex = 12
-        '
-        'BtnLog
-        '
-        Me.BtnLog.BackColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
-        Me.BtnLog.ForeColor = System.Drawing.Color.White
-        Me.BtnLog.Location = New System.Drawing.Point(691, 487)
-        Me.BtnLog.Name = "BtnLog"
-        Me.BtnLog.Size = New System.Drawing.Size(150, 45)
-        Me.BtnLog.TabIndex = 13
-        Me.BtnLog.Text = "INICIAR SESIÓN"
-        Me.BtnLog.UseVisualStyleBackColor = False
-        '
-        'BtnExit
-        '
-        Me.BtnExit.BackColor = System.Drawing.Color.Transparent
-        Me.BtnExit.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
-        Me.BtnExit.Location = New System.Drawing.Point(857, 487)
-        Me.BtnExit.Name = "BtnExit"
-        Me.BtnExit.Size = New System.Drawing.Size(150, 45)
-        Me.BtnExit.TabIndex = 14
-        Me.BtnExit.Text = "CERRAR PROGRAMA"
-        Me.BtnExit.UseVisualStyleBackColor = False
+        Me.TxtPass.TabIndex = 18
         '
         'PictureBox3
         '
         Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
-        Me.PictureBox3.Location = New System.Drawing.Point(700, 425)
+        Me.PictureBox3.Location = New System.Drawing.Point(705, 425)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(24, 24)
-        Me.PictureBox3.TabIndex = 15
+        Me.PictureBox3.TabIndex = 19
         Me.PictureBox3.TabStop = False
         '
         'PictureBox4
         '
         Me.PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), System.Drawing.Image)
-        Me.PictureBox4.Location = New System.Drawing.Point(730, 434)
+        Me.PictureBox4.Location = New System.Drawing.Point(735, 434)
         Me.PictureBox4.Name = "PictureBox4"
         Me.PictureBox4.Size = New System.Drawing.Size(6, 6)
-        Me.PictureBox4.TabIndex = 16
+        Me.PictureBox4.TabIndex = 20
         Me.PictureBox4.TabStop = False
+        '
+        'BtnLogin
+        '
+        Me.BtnLogin.Animated = True
+        Me.BtnLogin.AnimationHoverSpeed = 0.07!
+        Me.BtnLogin.AnimationSpeed = 0.03!
+        Me.BtnLogin.BackColor = System.Drawing.Color.Transparent
+        Me.BtnLogin.BaseColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.BtnLogin.BorderColor = System.Drawing.Color.Black
+        Me.BtnLogin.BorderSize = 1
+        Me.BtnLogin.DialogResult = System.Windows.Forms.DialogResult.None
+        Me.BtnLogin.FocusedColor = System.Drawing.Color.Empty
+        Me.BtnLogin.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnLogin.ForeColor = System.Drawing.Color.White
+        Me.BtnLogin.Image = Nothing
+        Me.BtnLogin.ImageSize = New System.Drawing.Size(20, 20)
+        Me.BtnLogin.Location = New System.Drawing.Point(691, 487)
+        Me.BtnLogin.Name = "BtnLogin"
+        Me.BtnLogin.OnHoverBaseColor = System.Drawing.Color.Teal
+        Me.BtnLogin.OnHoverBorderColor = System.Drawing.Color.Black
+        Me.BtnLogin.OnHoverForeColor = System.Drawing.Color.White
+        Me.BtnLogin.OnHoverImage = Nothing
+        Me.BtnLogin.OnPressedColor = System.Drawing.Color.Black
+        Me.BtnLogin.Radius = 11
+        Me.BtnLogin.Size = New System.Drawing.Size(150, 45)
+        Me.BtnLogin.TabIndex = 21
+        Me.BtnLogin.Text = "INICIAR SESIÓN"
+        Me.BtnLogin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'BtnExit
+        '
+        Me.BtnExit.Animated = True
+        Me.BtnExit.AnimationHoverSpeed = 0.07!
+        Me.BtnExit.AnimationSpeed = 0.03!
+        Me.BtnExit.BackColor = System.Drawing.Color.Transparent
+        Me.BtnExit.BaseColor = System.Drawing.Color.Transparent
+        Me.BtnExit.BorderColor = System.Drawing.Color.Black
+        Me.BtnExit.BorderSize = 1
+        Me.BtnExit.DialogResult = System.Windows.Forms.DialogResult.None
+        Me.BtnExit.FocusedColor = System.Drawing.Color.Empty
+        Me.BtnExit.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnExit.ForeColor = System.Drawing.Color.Black
+        Me.BtnExit.Image = Nothing
+        Me.BtnExit.ImageSize = New System.Drawing.Size(20, 20)
+        Me.BtnExit.Location = New System.Drawing.Point(857, 487)
+        Me.BtnExit.Name = "BtnExit"
+        Me.BtnExit.OnHoverBaseColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.BtnExit.OnHoverBorderColor = System.Drawing.Color.Black
+        Me.BtnExit.OnHoverForeColor = System.Drawing.Color.Black
+        Me.BtnExit.OnHoverImage = Nothing
+        Me.BtnExit.OnPressedColor = System.Drawing.Color.Black
+        Me.BtnExit.Radius = 11
+        Me.BtnExit.Size = New System.Drawing.Size(150, 45)
+        Me.BtnExit.TabIndex = 22
+        Me.BtnExit.Text = "CERRAR PROGRAMA"
+        Me.BtnExit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'FrmLogin
         '
@@ -197,10 +249,10 @@ Partial Class FrmLogin
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1060, 640)
         Me.ControlBox = False
+        Me.Controls.Add(Me.BtnExit)
+        Me.Controls.Add(Me.BtnLogin)
         Me.Controls.Add(Me.PictureBox4)
         Me.Controls.Add(Me.PictureBox3)
-        Me.Controls.Add(Me.BtnExit)
-        Me.Controls.Add(Me.BtnLog)
         Me.Controls.Add(Me.TxtPass)
         Me.Controls.Add(Me.TxtUser)
         Me.Controls.Add(Me.PictureBox2)
@@ -222,7 +274,6 @@ Partial Class FrmLogin
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
@@ -233,10 +284,10 @@ Partial Class FrmLogin
     Public WithEvents Lbltitle2 As Label
     Public WithEvents Lblbody As Label
     Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents TxtUser As TextBox
-    Friend WithEvents TxtPass As TextBox
-    Friend WithEvents BtnLog As Button
-    Friend WithEvents BtnExit As Button
+    Friend WithEvents TxtUser As Guna.UI.WinForms.GunaTextBox
+    Friend WithEvents TxtPass As Guna.UI.WinForms.GunaTextBox
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents PictureBox4 As PictureBox
+    Friend WithEvents BtnLogin As Guna.UI.WinForms.GunaButton
+    Friend WithEvents BtnExit As Guna.UI.WinForms.GunaButton
 End Class
