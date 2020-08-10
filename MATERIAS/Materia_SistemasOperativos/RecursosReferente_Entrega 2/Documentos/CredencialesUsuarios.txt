@@ -1,3 +1,7 @@
+CentOS 7
 Usuario Contraseña
 root 	heartbits2002
 ssh	remotohb
+Windows 10 Pro
+Usuario Contraseña
+Operador computohb
