@@ -39,7 +39,7 @@ desactivar
 else
 echo -e "\e[1;31mEl servicio ingresado no existe\e[0m"
 sleep 1.4
-sh menuoperador.sh
+sh menuservicios.sh
 fi
 }
 

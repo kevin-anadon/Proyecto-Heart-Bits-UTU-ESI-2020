@@ -4,7 +4,7 @@ function salir
 {
 clear
 echo Gracias por utilizar nuestro programa
-sleep 1.2
+sleep 1
 clear
 exit
 }
@@ -18,19 +18,21 @@ echo "  / /_/ / _ \/ __  / ___/ __/  / __  / / __/ ___/"
 echo " / __  /  __/ /_/ / /  / /_   / /_/ / / /_(__ )"
 echo "/_/ /_/\___/\___ /_/   \__/  /_____/_/\__/____/"
 echo --------------------------------------------------
-echo -e "\e[1m   MENU PRINCIPAL\e[0m"
-echo -e "\e[1mOPERADOR CENTRO COMPUTO\e[0m"
-echo -------------------------
-echo 1")" Activar servicios
-echo 2")" Desactivar servicios
-echo 3")" Estado de servicios
+echo -e "\e[1m MENU PRINCIPAL\e[0m"
+echo -e "\e[1m    REDES\e[0m"
+echo -------------------
+echo 1")" Comprobar conexion a internet
+echo 2")" Ver reglas del firewall
+echo 3")" Bloquear una ip
+echo 4")" Desbloquear una ip
 echo 0")" Salir	
 echo ""
 read -p "Seleccione una opcion: " op
 case $op in
-1)sh activar.sh;;
-2)sh desactivar.sh;;
-3)sh estado.sh;;
+1)sh conexion.sh;;
+2)sh reglas.sh;;
+3)sh bloquear.sh;;
+4)sh desbloquear.sh;;
 0)salir;;
 *)echo -e "\e[1;31mOpcion Incorrecta!!\e[0m"
 sleep 2

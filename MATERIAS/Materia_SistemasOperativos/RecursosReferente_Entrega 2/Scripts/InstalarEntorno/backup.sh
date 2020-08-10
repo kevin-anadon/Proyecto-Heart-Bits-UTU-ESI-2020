@@ -11,4 +11,6 @@ echo "export CANTBACKUP=$Contador >> $HOME/.bashrc
 
 #Respaldo en segundo disco
 rsync -av /Telediagnostico/Backup/ /discos/ppl/Respaldo/
+#Respaldo remoto se encuentra en el cliente
+#Utilizando un .bat
 exit

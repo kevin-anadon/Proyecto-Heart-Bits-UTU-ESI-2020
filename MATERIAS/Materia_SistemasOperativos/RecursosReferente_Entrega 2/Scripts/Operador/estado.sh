@@ -79,7 +79,7 @@ case $op in
 3)activos;;
 4)inactivos;;
 5)consumo;;
-0)sh menuoperador.sh;;
+0)sh menuservicios.sh;;
 *)echo -e "\e[1;31mOpcion Incorrecta!!\e[0m"
 sleep 2
 menu;;

@@ -25,6 +25,7 @@ mkdir /Telediagnostico/Usuarios/Administradores
 mkdir /Telediagnostico/Usuarios/Pacientes
 mkdir /Telediagnostico/Scripts
 mkdir /Telediagnostico/Backup
+chmod -R 775 /Telediagnostico/
 
 #Backup
 #Se envia la orden de que 1 vez al dia, todos los dias a las 23hs se ejecute el script backup.sh
