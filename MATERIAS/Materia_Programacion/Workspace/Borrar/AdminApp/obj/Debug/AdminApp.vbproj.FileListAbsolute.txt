@@ -43,3 +43,4 @@ D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\Borrar\AdminApp\o
 D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\Borrar\AdminApp\obj\Debug\AdminApp.xml
 D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\Borrar\AdminApp\obj\Debug\AdminApp.pdb
 D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\Borrar\AdminApp\bin\Debug\BWCMM.dll
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\Borrar\AdminApp\obj\Debug\AdminApp.FrmHome.resources

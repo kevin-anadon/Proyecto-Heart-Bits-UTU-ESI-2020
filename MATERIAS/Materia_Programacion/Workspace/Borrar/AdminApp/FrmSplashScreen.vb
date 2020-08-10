@@ -13,6 +13,7 @@ Public Class FrmSplashScreen
         Timer1.Enabled = True
 
         Me.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width - 2, Height - 2, 15, 15))
+        Guna.UI.Lib.GraphicsHelper.ShadowForm(Me)
     End Sub
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         If account < 100 Then
