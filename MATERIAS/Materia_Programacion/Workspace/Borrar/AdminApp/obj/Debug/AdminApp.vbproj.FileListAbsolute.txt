@@ -44,3 +44,19 @@ D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\Borrar\AdminApp\o
 D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\Borrar\AdminApp\obj\Debug\AdminApp.pdb
 D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\Borrar\AdminApp\bin\Debug\BWCMM.dll
 D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\Borrar\AdminApp\obj\Debug\AdminApp.FrmHome.resources
+C:\Users\Yorel Acosta\Desktop\Study ESIMdeo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\Borrar\AdminApp\bin\Debug\AdminApp.exe.config
+C:\Users\Yorel Acosta\Desktop\Study ESIMdeo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\Borrar\AdminApp\bin\Debug\AdminApp.exe
+C:\Users\Yorel Acosta\Desktop\Study ESIMdeo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\Borrar\AdminApp\bin\Debug\AdminApp.pdb
+C:\Users\Yorel Acosta\Desktop\Study ESIMdeo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\Borrar\AdminApp\bin\Debug\AdminApp.xml
+C:\Users\Yorel Acosta\Desktop\Study ESIMdeo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\Borrar\AdminApp\bin\Debug\BWCMM.dll
+C:\Users\Yorel Acosta\Desktop\Study ESIMdeo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\Borrar\AdminApp\obj\Debug\AdminApp.vbprojAssemblyReference.cache
+C:\Users\Yorel Acosta\Desktop\Study ESIMdeo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\Borrar\AdminApp\obj\Debug\AdminApp.FrmHome.resources
+C:\Users\Yorel Acosta\Desktop\Study ESIMdeo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\Borrar\AdminApp\obj\Debug\AdminApp.Resources.resources
+C:\Users\Yorel Acosta\Desktop\Study ESIMdeo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\Borrar\AdminApp\obj\Debug\AdminApp.FrmLogin.resources
+C:\Users\Yorel Acosta\Desktop\Study ESIMdeo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\Borrar\AdminApp\obj\Debug\AdminApp.FrmSplashScreen.resources
+C:\Users\Yorel Acosta\Desktop\Study ESIMdeo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\Borrar\AdminApp\obj\Debug\AdminApp.vbproj.GenerateResource.cache
+C:\Users\Yorel Acosta\Desktop\Study ESIMdeo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\Borrar\AdminApp\obj\Debug\AdminApp.vbproj.CoreCompileInputs.cache
+C:\Users\Yorel Acosta\Desktop\Study ESIMdeo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\Borrar\AdminApp\obj\Debug\AdminApp.vbproj.CopyComplete
+C:\Users\Yorel Acosta\Desktop\Study ESIMdeo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\Borrar\AdminApp\obj\Debug\AdminApp.exe
+C:\Users\Yorel Acosta\Desktop\Study ESIMdeo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\Borrar\AdminApp\obj\Debug\AdminApp.xml
+C:\Users\Yorel Acosta\Desktop\Study ESIMdeo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\Borrar\AdminApp\obj\Debug\AdminApp.pdb
