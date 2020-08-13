@@ -9,7 +9,7 @@
 -- 2. CREACIÓN DE TABLAS ------------------------------------------------------------ --
 	-- ------------------------------------------------------------------------------ --
 	-- TABLAS DE CHAT --------------------------------------------------------------- --
-	CREATE TABLE mensaje (
+	CREATE TABLE mensaje ( 
 		id INT (10) AUTO_INCREMENT,
 		texto VARCHAR (65535) NOT NULL,
 		hora TIME NOT NULL,
@@ -80,14 +80,6 @@
 		PRIMARY KEY (id)
 	);	
 
-	CREATE TABLE zona (
-		id INT (10) AUTO_INCREMENT,
-		id_region INT (10) NOT NULL,
-		parte VARCHAR (32) NOT NULL,
-		PRIMARY KEY (id),
-		FOREIGN KEY (id_region) REFERENCES region(id)
-	);	
-
 	CREATE TABLE prioridad (
 		id INT (10) AUTO_INCREMENT,
 		nombre VARCHAR (32) NOT NULL,
@@ -96,10 +88,10 @@
 
 	CREATE TABLE sintoma (
 		id INT (10) AUTO_INCREMENT,
-		id_zona INT (10) NOT NULL,
+		id_region INT (10),
 		descripcion VARCHAR (128) NOT NULL,
 		PRIMARY KEY (id),
-		FOREIGN KEY (id_zona) REFERENCES zona(id)
+		FOREIGN KEY (id_region) REFERENCES region(id)
 	);
 
 	CREATE TABLE patologia (
@@ -193,14 +185,14 @@
 	-- TABLAS ORIENTADAS A TABLAS CON COLUMNAS DE VALOR MULTIVALUADO ---------------  --
 	CREATE TABLE cel_paciente(
 		id_paciente INT (10),
-		celular INT (16),
+		celular VARCHAR (16),
 		PRIMARY KEY (id_paciente, celular),
 		FOREIGN KEY (id_paciente) REFERENCES persona(id)
 	);
 
 	CREATE TABLE cel_empleado (
 		id_empleado INT (10),
-		celular INT (16),
+		celular VARCHAR (16),
 		PRIMARY KEY (id_empleado, celular),
 		FOREIGN KEY (id_empleado) REFERENCES persona(id)
 	);
