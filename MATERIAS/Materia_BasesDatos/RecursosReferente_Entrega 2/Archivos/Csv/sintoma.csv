@@ -1,0 +1,73 @@
+id;id_region;descripcion
+1;7;Disnea
+2;7;"Dolor en el pecho"
+3;NULL;Insomnio
+4;6;Tos
+5;NULL;Dolor
+6;NULL;Rigidez
+7;NULL;Hinchazón
+8;NULL;Eritema
+9;7;Taquipnea
+10;7;Sibilancias
+11;4;Esputo
+12;NULL;Fatiga
+13;NULL;Fiebre
+14;NULL;Escalofrios
+15;7;"Dolor torácico"
+16;2;Prurito
+17;2;Legaña
+18;2;Epifora
+19;2;"Perdida de vision"
+20;2;Fotofobia
+21;2;"Perdida de colores"
+22;NULL;Diarrea
+23;NULL;Nauseas
+24;10;"Dolor abdominal"
+25;NULL;Deshidratacion
+26;NULL;"Incontinencia fecal"
+27;6;Odinofagia
+28;6;Ronquera
+29;10;"Acidez estomacal"
+30;NULL;"Perdida de peso"
+31;NULL;"Sed excesiva"
+32;14;"Incontinencia urinaria"
+33;NULL;"Dolor muscular"
+34;NULL;"Perdida de apetito"
+35;NULL;"Dificultad de movilidad de las articulaciones"
+36;NULL;"Cambios de color de piel"
+37;NULL;"Ampollas en la piel"
+38;NULL;"Piel brillante"
+39;10;Indigestion
+40;2;"Dolor ocular"
+41;14;"Orina oscura"
+42;12;"Dolor articular"
+43;NULL;Ictericia
+44;NULL;Hematoma
+45;10;Ascitis
+46;1;"Encefalopatia hepatica"
+47;NULL;"Araña vascular"
+48;NULL;Debilidad
+49;6;Linfadenopatia
+50;NULL;Hemofilia
+51;NULL;Petequia
+52;NULL;"Dolor oseo"
+53;2;Escotomas
+54;2;Fotopsia
+55;6;"Dolor de garganta"
+56;6;Sarpullido
+57;NULL;"Erupcion cutanea"
+58;NULL;"Presion alta"
+59;NULL;"Pulso acelerado"
+60;12;Temblores
+61;12;"Perdida de los movimientos"
+62;NULL;Hiperactividad
+63;6;Llagas
+64;NULL;Edema
+65;3;Barotraumatismo
+66;5;"Dolor en los dientes"
+67;4;"Sentido del olfato alterado"
+68;NULL;Atrofia
+69;19;Escoliosis
+70;2;"Inflamacion del parpado"
+71;2;"Ojos rojos"
+72;1;"Dolor de cabeza"
