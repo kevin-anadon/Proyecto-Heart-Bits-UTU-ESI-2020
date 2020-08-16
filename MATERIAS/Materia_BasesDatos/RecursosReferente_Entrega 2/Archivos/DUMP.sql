@@ -8,112 +8,220 @@
 
 -- 2. CREACIÓN DE TABLAS ------------------------------------------------------------ --
 	-- ------------------------------------------------------------------------------ --
---
--- Estructura de tabla para la tabla `cel_empleado`
---
+	-- TABLAS DE CHAT --------------------------------------------------------------- --
+	CREATE TABLE mensaje ( 
+		id INT (10) AUTO_INCREMENT,
+		texto VARCHAR (65535) NOT NULL,
+		hora TIME NOT NULL,
+		PRIMARY KEY (id)
+	);
 
-DROP TABLE IF EXISTS `cel_empleado`;
-CREATE TABLE IF NOT EXISTS `cel_empleado` (
-  `id_empleado` int(10) NOT NULL,
-  `celular` varchar(16) NOT NULL,
-  PRIMARY KEY (`id_empleado`,`celular`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+	CREATE TABLE salaChat (
+		id INT (10) AUTO_INCREMENT,
+		estado BOOLEAN NOT NULL,
+		motivo VARCHAR (128) ,
+		fechaHoraInicio DATETIME NOT NULL,
+		fechaHoraFin DATETIME ,
+		PRIMARY KEY (id)
+	);	
+	-- ------------------------------------------------------------------------------ --
 
---
--- Volcado de datos para la tabla `cel_empleado`
---
+	-- TABLAS ORIENTADAS HACIA LAS PERSONAS ----------------------------------------- --
+	CREATE TABLE departamento (
+		id INT (10) AUTO_INCREMENT,
+		nombre VARCHAR (32) NOT NULL,
+		PRIMARY KEY (id)
+	);
+    
+	CREATE TABLE ciudad (
+		id INT (10) AUTO_INCREMENT,
+		nombre VARCHAR (32) NOT NULL,
+        id_dpto INT (10) NOT NULL,
+		PRIMARY KEY (id),
+        FOREIGN KEY (id_dpto) REFERENCES departamento(id)
+	);
+    
+    CREATE TABLE tipo_persona (
+		id INT (10) AUTO_INCREMENT,
+		nombre VARCHAR (64) NOT NULL UNIQUE,
+		PRIMARY KEY (id)
+	);	
+    
+    CREATE TABLE persona (
+		id INT (10) AUTO_INCREMENT,
+		ci INT (8) NOT NULL UNIQUE,
+		primerNom VARCHAR (32) NOT NULL,
+		segundoNom VARCHAR (32),
+		primerApe VARCHAR (32) NOT NULL,
+		segundoApe VARCHAR (32) NOT NULL,
+        genero CHAR (1) NOT NULL,
+		fechaNacimiento DATE NOT NULL,
+		email VARCHAR (64) NOT NULL UNIQUE,
+        calle VARCHAR (64) NOT NULL,
+        npuerta INT (10) NOT NULL,
+        id_ciudad INT (10) NOT NULL,
+		habilitado BOOLEAN ,
+        id_tipo INT (10) NOT NULL,
+        especialidad VARCHAR (64),
+        usuario VARCHAR (16) UNIQUE,
+		contrasena VARCHAR (16) UNIQUE,
+		pin INT (4), 
+		PRIMARY KEY (id),
+        FOREIGN KEY (id_tipo) REFERENCES tipo_persona(id),
+        FOREIGN KEY (id_ciudad) REFERENCES ciudad(id)
+	);	
 
-INSERT INTO `cel_empleado` (`id_empleado`, `celular`) VALUES
-(1, '091854011'),
-(3, '096757353'),
-(10, '099049806'),
-(11, '091836345'),
-(12, '093919411'),
-(13, '094515482'),
-(14, '094689121'),
-(15, '095711918'),
-(16, '095895808'),
-(17, '098117054'),
-(18, '090077196'),
-(19, '092845031'),
-(20, '099794617'),
-(34, '097037692'),
-(35, '096005276'),
-(36, '096033068'),
-(37, '099804488'),
-(38, '093909146'),
-(39, '099942955'),
-(40, '092942925'),
-(41, '093922155'),
-(42, '098941299'),
-(43, '097102177'),
-(44, '096191369'),
-(45, '098860700'),
-(46, '091499778'),
-(47, '095503375'),
-(48, '093115023'),
-(49, '095215053'),
-(50, '099028544');
+	-- ------------------------------------------------------------------------------ --
 
--- --------------------------------------------------------
+	-- TABLAS ORIENTADAS AL ÁREA MÉDICA --------------------------------------------- --
+	CREATE TABLE region (
+		id INT (10) AUTO_INCREMENT,
+		nombre VARCHAR (32) NOT NULL,
+		PRIMARY KEY (id)
+	);	
 
---
--- Estructura de tabla para la tabla `cel_paciente`
---
+	CREATE TABLE prioridad (
+		id INT (10) AUTO_INCREMENT,
+		nombre VARCHAR (32) NOT NULL,
+		PRIMARY KEY (id)
+	);	
 
-DROP TABLE IF EXISTS `cel_paciente`;
-CREATE TABLE IF NOT EXISTS `cel_paciente` (
-  `id_paciente` int(10) NOT NULL,
-  `celular` varchar(16) NOT NULL,
-  PRIMARY KEY (`id_paciente`,`celular`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+	CREATE TABLE sintoma (
+		id INT (10) AUTO_INCREMENT,
+		id_region INT (10),
+		descripcion VARCHAR (128) NOT NULL,
+		PRIMARY KEY (id),
+		FOREIGN KEY (id_region) REFERENCES region(id)
+	);
 
---
--- Volcado de datos para la tabla `cel_paciente`
---
+	CREATE TABLE patologia (
+		id INT (10) AUTO_INCREMENT,
+		id_prioridad INT (10) NOT NULL,
+		nombre VARCHAR (32) NOT NULL UNIQUE,
+		descripcion VARCHAR (128) NOT NULL,
+		indiceMortalidad INT (10) NOT NULL,
+		PRIMARY KEY (id),
+		FOREIGN KEY (id_prioridad) REFERENCES prioridad(id)
+	);
 
-INSERT INTO `cel_paciente` (`id_paciente`, `celular`) VALUES
-(2, '091960412'),
-(4, '095571963'),
-(5, '096986920'),
-(6, '090196189'),
-(7, '092416455'),
-(8, '093498253'),
-(9, '091507102'),
-(21, '093275548'),
-(22, '095075884'),
-(23, '095124353'),
-(24, '095124353'),
-(25, '090868660'),
-(26, '095776573'),
-(27, '097425494'),
-(28, '091044589'),
-(29, '096045529'),
-(30, '099087994'),
-(31, '099203227'),
-(32, '090921797'),
-(33, '099698605');
+	CREATE TABLE tratamiento (
+		id INT (10) AUTO_INCREMENT,
+		id_patologia INT (10) NOT NULL,
+		nombre VARCHAR (32) NOT NULL UNIQUE,
+		descripcion VARCHAR (128) NOT NULL,
+        tipo VARCHAR (32) NOT NULL,
+		PRIMARY KEY (id),
+		FOREIGN KEY (id_patologia) REFERENCES patologia(id)
+	);	
 
--- --------------------------------------------------------
+	CREATE TABLE tipo_diagnostico (
+		id INT (10) AUTO_INCREMENT,
+		nombre VARCHAR (64) NOT NULL UNIQUE,
+		PRIMARY KEY (id)
+	);	
 
---
--- Estructura de tabla para la tabla `ciudad`
---
+	CREATE TABLE diagnostico (
+		id INT (10) AUTO_INCREMENT,
+		id_tipo INT (10) NOT NULL,
+		id_paciente INT (10) NOT NULL,
+		id_sintoma INT (10) NOT NULL,
+		PRIMARY KEY (id),
+		FOREIGN KEY (id_tipo) REFERENCES tipo_diagnostico(id),
+		FOREIGN KEY (id_paciente) REFERENCES persona(id),
+		FOREIGN KEY (id_sintoma) REFERENCES sintoma(id)
+	);	
+	-- ------------------------------------------------------------------------------ --
 
-DROP TABLE IF EXISTS `ciudad`;
-CREATE TABLE IF NOT EXISTS `ciudad` (
-  `id` int(10) NOT NULL AUTO_INCREMENT,
-  `nombre` varchar(32) NOT NULL,
-  `id_dpto` int(10) NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `id_dpto` (`id_dpto`)
-) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8mb4;
+	-- TABLAS ORIENTADAS A RELACIONES DE TABLAS ------------------------------------- --
+	CREATE TABLE paciente_sufre (
+		id_sintoma INT (10) NOT NULL,
+		id_paciente INT (10) NOT NULL,
+		PRIMARY KEY (id_sintoma, id_paciente),
+		FOREIGN KEY (id_sintoma) REFERENCES sintoma(id),
+		FOREIGN KEY (id_paciente) REFERENCES persona(id)
+	);
 
---
--- Volcado de datos para la tabla `ciudad`
---
+	CREATE TABLE sintoma_compone (
+		id_sintoma INT (10) NOT NULL,
+		id_patologia INT (10) NOT NULL,
+		PRIMARY KEY (id_sintoma, id_patologia),
+		FOREIGN KEY (id_sintoma) REFERENCES sintoma(id),
+		FOREIGN KEY (id_patologia) REFERENCES patologia(id)
+	);
 
-INSERT INTO `ciudad` (`id`, `nombre`, `id_dpto`) VALUES
+	CREATE TABLE peticion (
+		id_paciente INT (10) NOT NULL,
+		id_medico INT (10) NOT NULL,
+		estado BOOLEAN NOT NULL,
+		motivo VARCHAR (128),
+		fechaHoraInicio DATETIME NOT NULL,
+		fechaHoraFin DATETIME,
+		PRIMARY KEY (id_paciente, id_medico),
+		FOREIGN KEY (id_paciente) REFERENCES persona(id),
+		FOREIGN KEY (id_medico) REFERENCES persona(id)
+	);
+
+	CREATE TABLE verifica (
+		id_tentativo INT (10), 
+		id_medico INT (10) NOT NULL,
+		PRIMARY KEY (id_tentativo),
+		FOREIGN KEY (id_tentativo) REFERENCES diagnostico(id),
+		FOREIGN KEY (id_medico) REFERENCES persona(id)
+	);
+
+	CREATE TABLE conversa (
+		id_paciente INT (10),
+		id_medico INT (10),
+		id_mensaje INT (10),
+		id_sala INT (10) NOT NULL,
+		PRIMARY KEY (id_paciente, id_medico, id_mensaje),
+		FOREIGN KEY (id_paciente) REFERENCES persona(id),
+		FOREIGN KEY (id_medico) REFERENCES persona(id),
+		FOREIGN KEY (id_mensaje) REFERENCES mensaje(id),
+		FOREIGN KEY (id_sala) REFERENCES salaChat(id)
+	);
+	-- ------------------------------------------------------------------------------ --
+
+	-- TABLAS ORIENTADAS A TABLAS CON COLUMNAS DE VALOR MULTIVALUADO ---------------  --
+	CREATE TABLE cel_paciente(
+		id_paciente INT (10),
+		celular VARCHAR (16),
+		PRIMARY KEY (id_paciente, celular),
+		FOREIGN KEY (id_paciente) REFERENCES persona(id)
+	);
+
+	CREATE TABLE cel_empleado (
+		id_empleado INT (10),
+		celular VARCHAR (16),
+		PRIMARY KEY (id_empleado, celular),
+		FOREIGN KEY (id_empleado) REFERENCES persona(id)
+	);
+	-- ------------------------------------------------------------------------------ --
+-- FIN DE CREACIÓN DE TABLAS - (2) -------------------------------------------------- --
+
+-- 3. INSERCCIÓN DE DATOS ------------------------------------------------------------ --
+INSERT INTO departamento (id, nombre) VALUES
+(1, 'Canelones'),
+(2, 'Maldonado'),
+(3, 'Rocha'),
+(4, 'Treinta y tres'),
+(5, 'Cerro largo'),
+(6, 'Rivera'),
+(7, 'Artigas'),
+(8, 'Salto'),
+(9, 'Paysandou'),
+(10, 'Rio negro'),
+(11, 'Soriano'),
+(12, 'Colonia'),
+(13, 'San jose'),
+(14, 'Flores'),
+(15, 'Florida'),
+(16, 'Lavalleja'),
+(17, 'Durazno'),
+(18, 'Tacuarembo'),
+(19, 'Montevideo');
+
+INSERT INTO ciudad (id, nombre, id_dpto) VALUES
 (1, 'Montevideo', 19),
 (2, 'Rivera', 6),
 (3, 'Punta del Este', 2),
@@ -147,131 +255,145 @@ INSERT INTO `ciudad` (`id`, `nombre`, `id_dpto`) VALUES
 (31, 'Baltasar Brum', 7),
 (32, 'José Batlle y Ordóñez', 16);
 
--- --------------------------------------------------------
 
---
--- Estructura de tabla para la tabla `conversa`
---
+INSERT INTO mensaje (id, texto, hora) VALUES
+(1, 'Buenas en que la puedo ayudar', '20:08:00'),
+(2, 'Hola que tal, se me diagnosticó Asma bronquial y quisiera saber si ese diagnóstico es correcto', '20:09:00'),
+(3, 'Entendido, verificaré el diagnostico y le diré mi opinión', '20:09:30'),
+(4, 'He verificado el diagnóstico tentativo y es correcto, usted padece Asma bronquial', '20:11:00'),
+(5, 'Al finalizar el chat se le indicarán los tratamientos que puede seguir', '20:12:00'),
+(6, 'Algo más que desee consultar?', '20:12:10'),
+(7, 'No, todo claro', '20:13:00'),
+(8, 'Muy bien, que tenga un buen dia', '20:14:00'),
+(9, 'Hasta luego', '20:14:25'),
+(10, 'Buenas en que lo puedo ayudar', '09:04:00'),
+(11, 'Hola que tal, se me diagnosticó Neumonía y quisiera saber si ese diagnóstico es correcto', '09:05:00'),
+(12, 'Entendido, verificaré el diagnostico y le diré mi opinión', '09:05:50'),
+(13, 'He verificado el diagnóstico tentativo y es equívoco, usted padece Asma bronquial', '09:08:00'),
+(14, 'Al finalizar el chat se le indicarán los tratamientos que puede seguir', '09:09:00'),
+(15, 'Algo más que desee consultar?', '09:10:00'),
+(16, 'No, gracias', '09:11:00'),
+(17, 'Muy bien, que tenga un buen dia', '09:11:25'),
+(18, 'Hasta luego', '09:12:00'),
+(19, 'Buenas en que lo puedo ayudar', '11:06:00'),
+(20, 'Hola que tal, se me diagnosticó Artritis y quisiera saber si ese diagnóstico es correcto', '11:07:00'),
+(21, 'Entendido, verificaré el diagnostico y le diré mi opinión', '11:07:54'),
+(22, 'He verificado el diagnóstico tentativo y es correcto, usted padece Artritis', '11:08:00'),
+(23, 'Al finalizar el chat se le indicarán los tratamientos que puede seguir', '11:08:59'),
+(24, 'Algo más que desee consultar?', '11:09:00'),
+(25, 'No, muchas gracias', '11:10:00'),
+(26, 'Muy bien, que tenga un buen dia', '11:10:26'),
+(27, 'Hasta luego', '11:11:00'),
+(28, 'Buenas en que la puedo ayudar', '23:38:00'),
+(29, 'Hola que tal, se me diagnosticó Nefropatía crónica y quisiera saber si ese diagnóstico es correcto', '23:39:00'),
+(30, 'Entendido, verificaré el diagnostico y le diré mi opinión', '23:39:50'),
+(31, 'He verificado el diagnóstico tentativo y es equívoco, usted padece Tendinitis', '23:43:00'),
+(32, 'Al finalizar el chat se le indicarán los tratamientos que puede seguir', '23:44:00'),
+(33, 'Algo más que desee consultar?', '23:45:00'),
+(34, 'No, todo claro', '23:46:00'),
+(35, 'Excelente, que tenga un buen dia', '23:47:00'),
+(36, 'Hasta luego', '23:47:40'),
+(37, 'Buenas en que lo puedo ayudar', '06:59:00'),
+(38, 'Hola que tal, se me diagnosticó Bronquitis y quisiera saber si ese diagnóstico es correcto', '07:00:00'),
+(39, 'Entendido, verificaré el diagnostico y le diré mi opinión', '07:01:00'),
+(40, 'He verificado el diagnóstico tentativo y es correcto, usted padece Bronquitis', '07:04:00'),
+(41, 'Al finalizar el chat se le indicarán los tratamientos que puede seguir', '07:05:00'),
+(42, 'Algo más que desee consultar?', '07:05:20'),
+(43, 'No, gracias', '07:06:00'),
+(44, 'Perfecto, que tenga un buen dia', '07:07:00'),
+(45, 'Hasta luego', '07:07:54'),
+(46, 'Buenas en que lo puedo ayudar', '14:26:00'),
+(47, 'Hola que tal, se me diagnosticó Leucemia y quisiera saber si ese diagnóstico es correcto', '14:27:00'),
+(48, 'Entendido, verificaré el diagnostico y le diré mi opinión', '14:27:30'),
+(49, 'He verificado el diagnóstico tentativo y es equívoco, usted padece Tuberculosis', '14:30:00'),
+(50, 'Al finalizar el chat se le indicarán los tratamientos que puede seguir', '14:31:00'),
+(51, 'Algo más que desee consultar?', '14:31:50'),
+(52, 'Si, cuan mortal es la tuberculosis?', '14:32:00'),
+(53, 'Tiene un 30% de riesgo de muerte', '14:34:00'),
+(54, 'Gracias por contestarme, no tengo más dudas', '14:35:00'),
+(55, 'Muy bien, que tenga un buen dia', '14:36:00'),
+(56, 'Hasta luego', '14:36:25'),
+(57, 'Buenas en que la puedo ayudar', '19:03:00'),
+(58, 'Hola que tal, se me diagnosticó Bronquitis y quisiera saber si ese diagnóstico es correcto', '19:04:00'),
+(59, 'Entendido, verificaré el diagnostico y le diré mi opinión', '19:05:00'),
+(60, 'He verificado el diagnóstico tentativo y es correcto, usted padece Bronquitis', '19:07:00'),
+(61, 'Al finalizar el chat se le indicarán los tratamientos que puede seguir', '19:08:00'),
+(62, 'Algo más que desee consultar?', '19:08:24'),
+(63, 'No, todo claro', '19:09:00'),
+(64, 'Perfecto, que tenga un buen dia', '19:10:00'),
+(65, 'Hasta luego', '19:10:25'),
+(66, 'Buenas en que la puedo ayudar', '17:18:00'),
+(67, 'Hola que tal, se me diagnosticó Conjuntivitis y quisiera saber si ese diagnóstico es correcto', '17:19:00'),
+(68, 'Entendido, verificaré el diagnostico y le diré mi opinión', '17:20:00'),
+(69, 'He verificado el diagnóstico tentativo y es correcto, usted padece Conjuntivitis', '17:24:00'),
+(70, 'Al finalizar el chat se le indicarán los tratamientos que puede seguir', '17:25:00'),
+(71, 'Algo más que desee consultar?', '17:26:00'),
+(72, 'No, muchas gracias', '17:27:00'),
+(73, 'Muy bien, que tenga un buen dia', '17:28:00'),
+(74, 'Hasta luego', '17:28:30'),
+(75, 'Buenas en que lo puedo ayudar', '17:18:00'),
+(76, 'Hola que tal, se me diagnosticó Diabetes tipo 1 y quisiera saber si ese diagnóstico es correcto', '17:19:00'),
+(77, 'Entendido, verificaré el diagnostico y le diré mi opinión', '17:20:00'),
+(78, 'He verificado el diagnóstico tentativo y es equívoco, usted padece Cataratas', '17:26:00'),
+(79, 'Al finalizar el chat se le indicarán los tratamientos que puede seguir', '17:27:00'),
+(80, 'Algo más que desee consultar?', '17:27:30'),
+(81, 'No, todo claro', '17:28:00'),
+(82, 'Muy bien, que tenga un buen dia', '17:29:00'),
+(83, 'Hasta luego', '17:29:30'),
+(84, 'Buenas en que la puedo ayudar', '13:13:00'),
+(85, 'Hola que tal, se me diagnosticó Tracoma y quisiera saber si ese diagnóstico es correcto', '13:14:00'),
+(86, 'Entendido, verificaré el diagnostico y le diré mi opinión', '13:15:00'),
+(87, 'He verificado el diagnóstico tentativo y es correcto, usted padece Cataratas', '13:16:00'),
+(88, 'Al finalizar el chat se le indicarán los tratamientos que puede seguir', '13:17:00'),
+(89, 'Algo más que desee consultar?', '13:17:32'),
+(90, 'No, gracias', '13:18:00'),
+(91, 'Muy bien, que tenga un buen dia', '13:19:00'),
+(92, 'Hasta luego', '13:19:36'),
+(93, 'Buenas en que la puedo ayudar', '07:31:00'),
+(94, 'Hola que tal, se me diagnosticó Disfagia y quisiera saber si ese diagnóstico es correcto', '07:32:00'),
+(95, 'Entendido, verificaré el diagnostico y le diré mi opinión', '07:33:00'),
+(96, 'He verificado el diagnóstico tentativo y es correcto, usted padece Disfagia', '07:36:00'),
+(97, 'Al finalizar el chat se le indicarán los tratamientos que puede seguir', '07:37:00'),
+(98, 'Algo más que desee consultar?', '07:38:00'),
+(99, 'No, muchas gracias', '07:38:20'),
+(100, 'Excelente, que tenga un buen dia', '07:39:00'),
+(101, 'Hasta luego', '07:39:46'),
+(102, 'Buenas en que lo puedo ayudar', '16:09:00'),
+(103, 'Hola que tal, se me diagnosticó Disfagia y quisiera saber si ese diagnóstico es correcto', '16:10:00'),
+(104, 'Entendido, verificaré el diagnostico y le diré mi opinión', '16:11:00'),
+(105, 'He verificado el diagnóstico tentativo y es correcto, usted padece Disfagia', '16:16:00'),
+(106, 'Al finalizar el chat se le indicarán los tratamientos que puede seguir', '16:17:00'),
+(107, 'Algo más que desee consultar?', '16:18:00'),
+(108, 'Si, es mortal?', '16:18:40'),
+(109, 'Tiene un riesgo medio de muerte si no se siguen los tratamientos', '16:19:00'),
+(110, 'Está bien, gracias por responder, no tengo más preguntas', '16:20:00'),
+(111, 'Muy bien, que tenga un buen dia', '16:21:00'),
+(112, 'Hasta luego', '16:21:30'),
+(113, 'Buenas en que la puedo ayudar', '06:01:00'),
+(114, 'Hola que tal, se me diagnosticó Fibrosis pulmonar y quisiera saber si ese diagnóstico es correcto', '06:02:00'),
+(115, 'Entendido, verificaré el diagnostico y le diré mi opinión', '06:03:00'),
+(116, 'He verificado el diagnóstico tentativo y es correcto, usted padece Fibrosis pulmonar', '06:08:00'),
+(117, 'Al finalizar el chat se le indicarán los tratamientos que puede seguir', '06:09:00'),
+(118, 'Algo más que desee consultar?', '06:10:00'),
+(119, 'No, todo claro gracias', '06:11:00'),
+(120, 'Muy bien, que tenga un buen dia', '06:12:00'),
+(121, 'Hasta luego', '06:12:32'),
+(122, 'Buenas en que la puedo ayudar', '21:13:00'),
+(123, 'Hola que tal, se me diagnosticó Diabétes tipo 1 y quisiera saber si ese diagnóstico es correcto', '21:14:00'),
+(124, 'Entendido, verificaré el diagnostico y le diré mi opinión', '21:15:00'),
+(125, 'He verificado el diagnóstico tentativo y es correcto, usted padece Diabétes tipo 1', '21:18:00'),
+(126, 'Al finalizar el chat se le indicarán los tratamientos que puede seguir', '21:19:00'),
+(127, 'Algo más que desee consultar?', '21:20:00'),
+(128, 'No, gracias', '21:21:00'),
+(129, 'Excelente, que tenga un buen dia', '21:22:00'),
+(130, 'Hasta luego', '21:22:30');
 
-DROP TABLE IF EXISTS `conversa`;
-CREATE TABLE IF NOT EXISTS `conversa` (
-  `id_paciente` int(10) NOT NULL,
-  `id_medico` int(10) NOT NULL,
-  `id_mensaje` int(10) NOT NULL,
-  `id_sala` int(10) NOT NULL,
-  PRIMARY KEY (`id_paciente`,`id_medico`,`id_mensaje`),
-  KEY `id_medico` (`id_medico`),
-  KEY `id_mensaje` (`id_mensaje`),
-  KEY `id_sala` (`id_sala`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+INSERT INTO prioridad (id, nombre) VALUES
+(1, 'Alta'),
+(2, 'Media'),
+(3, 'Baja');
 
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `departamento`
---
-
-DROP TABLE IF EXISTS `departamento`;
-CREATE TABLE IF NOT EXISTS `departamento` (
-  `id` int(10) NOT NULL AUTO_INCREMENT,
-  `nombre` varchar(32) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `departamento`
---
-
-INSERT INTO `departamento` (`id`, `nombre`) VALUES
-(1, 'Canelones'),
-(2, 'Maldonado'),
-(3, 'Rocha'),
-(4, 'Treinta y tres'),
-(5, 'Cerro largo'),
-(6, 'Rivera'),
-(7, 'Artigas'),
-(8, 'Salto'),
-(9, 'Paysandou'),
-(10, 'Rio negro'),
-(11, 'Soriano'),
-(12, 'Colonia'),
-(13, 'San jose'),
-(14, 'Flores'),
-(15, 'Florida'),
-(16, 'Lavalleja'),
-(17, 'Durazno'),
-(18, 'Tacuarembo'),
-(19, 'Montevideo');
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `diagnostico`
---
-
-DROP TABLE IF EXISTS `diagnostico`;
-CREATE TABLE IF NOT EXISTS `diagnostico` (
-  `id` int(10) NOT NULL AUTO_INCREMENT,
-  `id_tipo` int(10) NOT NULL,
-  `id_paciente` int(10) NOT NULL,
-  `id_sintoma` int(10) NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `id_tipo` (`id_tipo`),
-  KEY `id_paciente` (`id_paciente`),
-  KEY `id_sintoma` (`id_sintoma`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `mensaje`
---
-
-DROP TABLE IF EXISTS `mensaje`;
-CREATE TABLE IF NOT EXISTS `mensaje` (
-  `id` int(10) NOT NULL AUTO_INCREMENT,
-  `texto` mediumtext NOT NULL,
-  `hora` time NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `paciente_sufre`
---
-
-DROP TABLE IF EXISTS `paciente_sufre`;
-CREATE TABLE IF NOT EXISTS `paciente_sufre` (
-  `id_sintoma` int(10) NOT NULL,
-  `id_paciente` int(10) NOT NULL,
-  PRIMARY KEY (`id_sintoma`,`id_paciente`),
-  KEY `id_paciente` (`id_paciente`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `patologia`
---
-
-DROP TABLE IF EXISTS `patologia`;
-CREATE TABLE IF NOT EXISTS `patologia` (
-  `id` int(10) NOT NULL AUTO_INCREMENT,
-  `id_prioridad` int(10) NOT NULL,
-  `nombre` varchar(32) NOT NULL,
-  `descripcion` varchar(128) NOT NULL,
-  `indiceMortalidad` int(10) NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `nombre` (`nombre`),
-  KEY `id_prioridad` (`id_prioridad`)
-) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `patologia`
---
-
-INSERT INTO `patologia` (`id`, `id_prioridad`, `nombre`, `descripcion`, `indiceMortalidad`) VALUES
+INSERT INTO patologia (id, id_prioridad, nombre, descripcion, indiceMortalidad) VALUES
 (1, 2, 'Nefropatía crónica', 'La enfermedad renal crónica, también llamada insuficiencia renal crónica, describe la pérdida gradual de la función renal.', 30),
 (2, 2, 'Diabetes tipo 1', 'La diabetes tipo 1 es un trastorno crónico en el cual el páncreas produce muy poca insulina o directamente no la produce.', 15),
 (3, 3, 'Cataratas', 'Una catarata es una opacidad de la transparencia normal del cristalino del ojo.', 1),
@@ -313,46 +435,12 @@ INSERT INTO `patologia` (`id`, `id_prioridad`, `nombre`, `descripcion`, `indiceM
 (39, 2, 'Disfagia', 'Es la dificultad para tragar.', 30),
 (40, 3, 'Tendinitis', 'La tendinitis es la inflamación o la irritación de un tendón, las cuerdas fibrosas que unen el músculo al hueso.', 1);
 
--- --------------------------------------------------------
+INSERT INTO tipo_persona (id, nombre) VALUES
+(1, 'Administrador'),
+(2, 'Medico'),
+(3, 'Paciente');
 
---
--- Estructura de tabla para la tabla `persona`
---
-
-DROP TABLE IF EXISTS `persona`;
-CREATE TABLE IF NOT EXISTS `persona` (
-  `id` int(10) NOT NULL AUTO_INCREMENT,
-  `ci` int(8) NOT NULL,
-  `primerNom` varchar(32) NOT NULL,
-  `segundoNom` varchar(32) DEFAULT NULL,
-  `primerApe` varchar(32) NOT NULL,
-  `segundoApe` varchar(32) NOT NULL,
-  `genero` char(1) NOT NULL,
-  `fechaNacimiento` date NOT NULL,
-  `email` varchar(64) NOT NULL,
-  `calle` varchar(64) NOT NULL,
-  `npuerta` int(10) NOT NULL,
-  `id_ciudad` int(10) NOT NULL,
-  `habilitado` tinyint(1) DEFAULT NULL,
-  `id_tipo` int(10) NOT NULL,
-  `especialidad` varchar(64) DEFAULT NULL,
-  `usuario` varchar(16) DEFAULT NULL,
-  `contrasena` varchar(16) DEFAULT NULL,
-  `pin` int(4) DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `ci` (`ci`),
-  UNIQUE KEY `email` (`email`),
-  UNIQUE KEY `usuario` (`usuario`),
-  UNIQUE KEY `contrasena` (`contrasena`),
-  KEY `id_tipo` (`id_tipo`),
-  KEY `id_ciudad` (`id_ciudad`)
-) ENGINE=InnoDB AUTO_INCREMENT=51 DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `persona`
---
-
-INSERT INTO `persona` (`id`, `ci`, `primerNom`, `segundoNom`, `primerApe`, `segundoApe`, `genero`, `fechaNacimiento`, `email`, `calle`, `npuerta`, `id_ciudad`, `habilitado`, `id_tipo`, `especialidad`, `usuario`, `contrasena`, `pin`) VALUES
+INSERT INTO persona (id, ci, primerNom, segundoNom, primerApe, segundoApe, genero, fechaNacimiento, email, calle, npuerta, id_ciudad, habilitado, id_tipo, especialidad, usuario, contrasena, pin) VALUES
 (1, 4606718, 'Julia', 'Leila', 'Howe', 'Perry', 'M', '1959-05-10', 'Maecenas.libero@gmail.com', 'Quisque', 1538, 2, NULL, 2, 'Ginecologa', 'jul59', '681nlo', NULL),
 (2, 3557076, 'Beverly', NULL, 'Riley', 'Contreras', 'M', '1999-09-26', 'nulla.at.sem@hotmail.com', 'Vivamus', 4995, 5, 1, 3, NULL, NULL, NULL, NULL),
 (3, 2839922, 'Anastasia', 'Jaquelyn', 'Crado', 'Kiss', 'M', '1946-11-10', 'lobortis.tellus.justo@gmail.com', 'Ariel', 5999, 6, NULL, 1, NULL, 'admintata16', '14adhj', 2006),
@@ -404,64 +492,8 @@ INSERT INTO `persona` (`id`, `ci`, `primerNom`, `segundoNom`, `primerApe`, `segu
 (49, 2150312, 'Cesar', 'Carter', 'Villarreal', 'Oconnor', 'H', '1993-08-17', 'faucibus@eleifendegestasSed.net', 'Jose belloni', 2057, 22, NULL, 1, NULL, 'ces93', 'xir00p', 9089),
 (50, 3563054, 'Enzo', 'Vincente', 'Antoñoni', 'Mcmillan', 'H', '1968-01-05', 'euismod@nectempusmauris.net', 'Av. Egestas', 7865, 3, NULL, 1, NULL, 'enz68', 'ah9fx5', 8669);
 
--- --------------------------------------------------------
 
---
--- Estructura de tabla para la tabla `peticion`
---
-
-DROP TABLE IF EXISTS `peticion`;
-CREATE TABLE IF NOT EXISTS `peticion` (
-  `id_paciente` int(10) NOT NULL,
-  `id_medico` int(10) NOT NULL,
-  `estado` tinyint(1) NOT NULL,
-  `motivo` varchar(128) DEFAULT NULL,
-  `fechaHoraInicio` datetime NOT NULL,
-  `fechaHoraFin` datetime DEFAULT NULL,
-  PRIMARY KEY (`id_paciente`,`id_medico`),
-  KEY `id_medico` (`id_medico`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `prioridad`
---
-
-DROP TABLE IF EXISTS `prioridad`;
-CREATE TABLE IF NOT EXISTS `prioridad` (
-  `id` int(10) NOT NULL AUTO_INCREMENT,
-  `nombre` varchar(32) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `prioridad`
---
-
-INSERT INTO `prioridad` (`id`, `nombre`) VALUES
-(1, 'Alta'),
-(2, 'Media'),
-(3, 'Baja');
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `region`
---
-
-DROP TABLE IF EXISTS `region`;
-CREATE TABLE IF NOT EXISTS `region` (
-  `id` int(10) NOT NULL AUTO_INCREMENT,
-  `nombre` varchar(32) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `region`
---
-
-INSERT INTO `region` (`id`, `nombre`) VALUES
+INSERT INTO region (id, nombre) VALUES
 (1, 'Cabeza'),
 (2, 'Ojos'),
 (3, 'Orejas'),
@@ -482,42 +514,7 @@ INSERT INTO `region` (`id`, `nombre`) VALUES
 (18, 'Pie'),
 (19, 'Espalda');
 
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `salachat`
---
-
-DROP TABLE IF EXISTS `salachat`;
-CREATE TABLE IF NOT EXISTS `salachat` (
-  `id` int(10) NOT NULL AUTO_INCREMENT,
-  `estado` tinyint(1) NOT NULL,
-  `motivo` varchar(128) DEFAULT NULL,
-  `fechaHoraInicio` datetime NOT NULL,
-  `fechaHoraFin` datetime DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `sintoma`
---
-
-DROP TABLE IF EXISTS `sintoma`;
-CREATE TABLE IF NOT EXISTS `sintoma` (
-  `id` int(10) NOT NULL AUTO_INCREMENT,
-  `id_region` int(10) DEFAULT NULL,
-  `descripcion` varchar(128) NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `id_region` (`id_region`)
-) ENGINE=InnoDB AUTO_INCREMENT=73 DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `sintoma`
---
-
-INSERT INTO `sintoma` (`id`, `id_region`, `descripcion`) VALUES
+INSERT INTO sintoma (id, id_region, descripcion) VALUES
 (1, 7, 'Disnea'),
 (2, 7, 'Dolor en el pecho'),
 (3, NULL, 'Insomnio'),
@@ -591,25 +588,7 @@ INSERT INTO `sintoma` (`id`, `id_region`, `descripcion`) VALUES
 (71, 2, 'Ojos rojos'),
 (72, 1, 'Dolor de cabeza');
 
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `sintoma_compone`
---
-
-DROP TABLE IF EXISTS `sintoma_compone`;
-CREATE TABLE IF NOT EXISTS `sintoma_compone` (
-  `id_sintoma` int(10) NOT NULL,
-  `id_patologia` int(10) NOT NULL,
-  PRIMARY KEY (`id_sintoma`,`id_patologia`),
-  KEY `id_patologia` (`id_patologia`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `sintoma_compone`
---
-
-INSERT INTO `sintoma_compone` (`id_sintoma`, `id_patologia`) VALUES
+INSERT INTO sintoma_compone (id_sintoma, id_patologia) VALUES
 (1, 1),
 (1, 4),
 (1, 7),
@@ -804,74 +783,11 @@ INSERT INTO `sintoma_compone` (`id_sintoma`, `id_patologia`) VALUES
 (72, 35),
 (72, 36);
 
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `tipo_diagnostico`
---
-
-DROP TABLE IF EXISTS `tipo_diagnostico`;
-CREATE TABLE IF NOT EXISTS `tipo_diagnostico` (
-  `id` int(10) NOT NULL AUTO_INCREMENT,
-  `nombre` varchar(64) NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `nombre` (`nombre`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `tipo_diagnostico`
---
-
-INSERT INTO `tipo_diagnostico` (`id`, `nombre`) VALUES
+INSERT INTO tipo_diagnostico (id, nombre) VALUES
 (2, 'Definitivo'),
 (1, 'Tentativo');
 
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `tipo_persona`
---
-
-DROP TABLE IF EXISTS `tipo_persona`;
-CREATE TABLE IF NOT EXISTS `tipo_persona` (
-  `id` int(10) NOT NULL AUTO_INCREMENT,
-  `nombre` varchar(64) NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `nombre` (`nombre`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `tipo_persona`
---
-
-INSERT INTO `tipo_persona` (`id`, `nombre`) VALUES
-(1, 'Administrador'),
-(2, 'Medico'),
-(3, 'Paciente');
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `tratamiento`
---
-
-DROP TABLE IF EXISTS `tratamiento`;
-CREATE TABLE IF NOT EXISTS `tratamiento` (
-  `id` int(10) NOT NULL AUTO_INCREMENT,
-  `id_patologia` int(10) NOT NULL,
-  `nombre` varchar(32) NOT NULL,
-  `descripcion` varchar(128) NOT NULL,
-  `tipo` varchar(32) NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `nombre` (`nombre`),
-  KEY `id_patologia` (`id_patologia`)
-) ENGINE=InnoDB AUTO_INCREMENT=81 DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `tratamiento`
---
-
-INSERT INTO `tratamiento` (`id`, `id_patologia`, `nombre`, `descripcion`, `tipo`) VALUES
+INSERT INTO tratamiento (id, id_patologia, nombre, descripcion, tipo) VALUES
 (1, 1, 'Clortalidona', 'La clortalidona es un medicamento diurético utilizado para tratar la hipertensión', 'Medicamento'),
 (2, 1, 'Eritropoyetina', ' Proteína segregada, principalmente, por el riñón en el adulto y por el hígado en el feto, que estimula la producción de glóbulo', 'Medicamento'),
 (3, 2, 'Insulina', 'Es una hormona polipeptídica formada por 51 aminoácidos,​ producida y secretada por las células beta de los islotes de Langerhan', 'Medicamento'),
@@ -953,108 +869,367 @@ INSERT INTO `tratamiento` (`id`, `id_patologia`, `nombre`, `descripcion`, `tipo`
 (79, 40, 'Prednisona', 'Prednisona es un fármaco corticosteroide sintético que se toma usualmente en forma oral, pero puede ser administrado por vía', 'Medicamento'),
 (80, 40, 'PRP', 'Plasma rico en plaquetas, aplica tomar una muestra de tu sangre y centrifugarla para separar las plaquetas y componentes', 'Quirurjico');
 
--- --------------------------------------------------------
+INSERT INTO paciente_sufre (id_sintoma, id_paciente) VALUES
+(1, 2),
+(2, 4),
+(3, 2),
+(4, 4),
+(5, 2),
+(6, 5),
+(7, 6),
+(8, 5),
+(9, 6),
+(10, 5),
+(11, 7),
+(12, 8),
+(13, 2),
+(13, 7),
+(14, 8),
+(15, 9),
+(16, 21),
+(17, 9),
+(17, 22),
+(18, 21),
+(19, 22),
+(20, 23),
+(21, 22),
+(22, 23),
+(25, 24),
+(26, 25),
+(27, 24),
+(28, 25),
+(29, 26),
+(30, 27),
+(31, 26),
+(32, 27),
+(33, 26),
+(33, 29),
+(34, 28),
+(35, 29),
+(36, 28),
+(37, 29),
+(38, 28),
+(39, 29),
+(40, 30),
+(41, 31),
+(42, 32),
+(54, 32),
+(66, 31),
+(68, 33),
+(70, 33),
+(72, 2),
+(72, 31),
+(72, 33);
 
---
--- Estructura de tabla para la tabla `verifica`
---
+INSERT INTO cel_empleado (id_empleado, celular) VALUES
+(1, '091854011'),
+(3, '096757353'),
+(10, '099049806'),
+(11, '091836345'),
+(12, '093919411'),
+(13, '094515482'),
+(14, '094689121'),
+(15, '095711918'),
+(16, '095895808'),
+(17, '098117054'),
+(18, '090077196'),
+(19, '092845031'),
+(20, '099794617'),
+(34, '097037692'),
+(35, '096005276'),
+(36, '096033068'),
+(37, '099804488'),
+(38, '093909146'),
+(39, '099942955'),
+(40, '092942925'),
+(41, '093922155'),
+(42, '098941299'),
+(43, '097102177'),
+(44, '096191369'),
+(45, '098860700'),
+(46, '091499778'),
+(47, '095503375'),
+(48, '093115023'),
+(49, '095215053'),
+(50, '099028544');
 
-DROP TABLE IF EXISTS `verifica`;
-CREATE TABLE IF NOT EXISTS `verifica` (
-  `id_tentativo` int(10) NOT NULL,
-  `id_medico` int(10) NOT NULL,
-  PRIMARY KEY (`id_tentativo`),
-  KEY `id_medico` (`id_medico`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+INSERT INTO cel_paciente (id_paciente, celular) VALUES
+(2, '091960412'),
+(4, '095571963'),
+(5, '096986920'),
+(6, '090196189'),
+(7, '092416455'),
+(8, '093498253'),
+(9, '091507102'),
+(21, '093275548'),
+(22, '095075884'),
+(23, '095124353'),
+(24, '095124353'),
+(25, '090868660'),
+(26, '095776573'),
+(27, '097425494'),
+(28, '091044589'),
+(29, '096045529'),
+(30, '099087994'),
+(31, '099203227'),
+(32, '090921797'),
+(33, '099698605');
 
---
--- Restricciones para tablas volcadas
---
+INSERT INTO diagnostico (id, id_tipo, id_paciente, id_sintoma) VALUES
+(1, 2, 2, 1),
+(2, 2, 2, 3),
+(3, 2, 2, 5),
+(4, 2, 2, 13),
+(5, 2, 2, 72),
+(6, 2, 4, 2),
+(7, 2, 4, 4),
+(8, 2, 5, 6),
+(9, 2, 5, 8),
+(10, 2, 5, 10),
+(11, 2, 6, 7),
+(12, 2, 6, 9),
+(13, 2, 7, 11),
+(14, 2, 7, 13),
+(15, 2, 8, 12),
+(16, 2, 8, 14),
+(17, 2, 9, 15),
+(18, 2, 9, 17),
+(19, 2, 21, 16),
+(20, 2, 21, 18),
+(21, 2, 22, 17),
+(22, 2, 22, 19),
+(23, 2, 22, 21),
+(24, 2, 23, 20),
+(25, 2, 23, 22),
+(26, 2, 24, 25),
+(27, 2, 24, 27),
+(28, 2, 25, 26),
+(29, 2, 24, 28),
+(30, 2, 26, 29),
+(31, 2, 26, 31),
+(32, 2, 26, 33),
+(33, 2, 27, 30),
+(34, 2, 27, 32),
+(35, 1, 28, 34),
+(36, 1, 28, 36),
+(37, 1, 28, 38),
+(38, 1, 29, 33),
+(39, 1, 29, 35),
+(40, 1, 29, 37),
+(41, 1, 29, 39),
+(42, 1, 30, 40),
+(43, 1, 31, 41),
+(44, 1, 31, 66),
+(45, 1, 31, 72),
+(46, 1, 32, 42),
+(47, 1, 32, 54),
+(48, 1, 33, 68),
+(49, 1, 33, 70),
+(50, 1, 33, 72);
 
---
--- Filtros para la tabla `cel_empleado`
---
-ALTER TABLE `cel_empleado`
-  ADD CONSTRAINT `cel_empleado_ibfk_1` FOREIGN KEY (`id_empleado`) REFERENCES `persona` (`id`);
+INSERT INTO verifica (id_tentativo, id_medico) VALUES
+(11, 1),
+(12, 1),
+(1, 10),
+(2, 10),
+(3, 10),
+(4, 10),
+(5, 10),
+(6, 11),
+(7, 11),
+(13, 12),
+(14, 12),
+(8, 13),
+(9, 13),
+(10, 13),
+(26, 16),
+(27, 16),
+(29, 16),
+(15, 17),
+(16, 17),
+(24, 19),
+(25, 19),
+(17, 20),
+(18, 20),
+(19, 34),
+(20, 34),
+(21, 34),
+(22, 34),
+(23, 34),
+(28, 38),
+(33, 40),
+(34, 40),
+(30, 41),
+(31, 41),
+(32, 41);
 
---
--- Filtros para la tabla `cel_paciente`
---
-ALTER TABLE `cel_paciente`
-  ADD CONSTRAINT `cel_paciente_ibfk_1` FOREIGN KEY (`id_paciente`) REFERENCES `persona` (`id`);
 
---
--- Filtros para la tabla `ciudad`
---
-ALTER TABLE `ciudad`
-  ADD CONSTRAINT `ciudad_ibfk_1` FOREIGN KEY (`id_dpto`) REFERENCES `departamento` (`id`);
+INSERT INTO peticion (id_paciente, id_medico, estado, motivo, fechaHoraInicio, fechaHoraFin) VALUES
+(2, 10, 0, 'Peticion aceptada', '2020-08-05 20:05:00', '2020-08-05 20:07:00'),
+(4, 11, 0, 'Petcion aceptada', '2020-08-03 09:00:00', '2020-08-03 09:03:00'),
+(5, 13, 0, 'Petcion aceptada', '2020-07-14 11:04:00', '2020-07-14 11:05:00'),
+(6, 1, 0, 'Petcion aceptada', '2020-07-14 23:35:00', '2020-07-14 23:37:00'),
+(7, 12, 0, 'Peticion aceptada', '2020-07-29 06:57:00', '2020-07-29 06:58:00'),
+(8, 17, 0, 'Peticion aceptada', '2020-07-30 14:23:00', '2020-07-30 14:25:00'),
+(9, 20, 0, 'Peticion aceptada', '2020-08-01 19:02:00', '2020-08-01 19:02:00'),
+(21, 34, 0, 'Peticion aceptada', '2020-08-01 17:15:00', '2020-08-01 17:17:00'),
+(22, 34, 0, 'Peticion aceptada', '2020-08-01 17:15:00', '2020-08-01 17:17:00'),
+(23, 19, 0, 'Peticion aceptada', '2020-08-02 13:11:00', '2020-08-02 13:12:00'),
+(24, 16, 0, 'Peticion aceptada', '2020-08-03 07:28:00', '2020-08-03 07:30:00'),
+(25, 38, 0, 'Peticion aceptada', '2020-08-04 16:06:00', '2020-08-04 16:08:00'),
+(26, 41, 0, 'Peticion aceptada', '2020-08-04 05:59:00', '2020-08-04 06:00:00'),
+(27, 40, 0, 'Peticion aceptada', '2020-08-05 21:10:00', '2020-08-05 21:12:00'),
+(28, 35, 0, 'Se retiró del Centro de atención de salud', '2020-08-03 15:42:00', '2020-08-03 15:43:00');
 
---
--- Filtros para la tabla `conversa`
---
-ALTER TABLE `conversa`
-  ADD CONSTRAINT `conversa_ibfk_1` FOREIGN KEY (`id_paciente`) REFERENCES `persona` (`id`),
-  ADD CONSTRAINT `conversa_ibfk_2` FOREIGN KEY (`id_medico`) REFERENCES `persona` (`id`),
-  ADD CONSTRAINT `conversa_ibfk_3` FOREIGN KEY (`id_mensaje`) REFERENCES `mensaje` (`id`),
-  ADD CONSTRAINT `conversa_ibfk_4` FOREIGN KEY (`id_sala`) REFERENCES `salachat` (`id`);
+INSERT INTO salachat (id, estado, motivo, fechaHoraInicio, fechaHoraFin) VALUES
+(1, 0, 'Conversación finalizada', '2020-08-05 20:08:00', '2020-08-05 20:14:25'),
+(2, 0, 'Conversación finalizada', '2020-08-03 09:04:00', '2020-08-03 09:12:00'),
+(3, 0, 'Conversación finalizada', '2020-07-14 11:06:00', '2020-07-14 11:11:00'),
+(4, 0, 'Conversación finalizada', '2020-07-14 23:38:00', '2020-07-14 23:47:40'),
+(5, 0, 'Conversación finalizada', '2020-07-29 06:59:00', '2020-07-29 07:07:54'),
+(6, 0, 'Conversación finalizada', '2020-07-30 14:26:00', '2020-07-30 14:36:25'),
+(7, 0, 'Conversación finalizada', '2020-08-01 19:03:00', '2020-08-01 19:10:25'),
+(8, 0, 'Conversación finalizada', '2020-08-01 17:18:00', '2020-08-01 17:28:30'),
+(9, 0, 'Conversación finalizada', '2020-08-01 17:18:00', '2020-08-01 17:29:30'),
+(10, 0, 'Conversación finalizada', '2020-08-02 13:13:00', '2020-08-02 13:19:36'),
+(11, 0, 'Conversación finalizada', '2020-08-03 07:31:00', '2020-08-03 07:39:46'),
+(12, 0, 'Conversación finalizada', '2020-08-04 16:09:00', '2020-08-04 16:21:30'),
+(13, 0, 'Conversación finalizada', '2020-08-04 06:01:00', '2020-08-04 06:12:32'),
+(14, 0, 'Conversación finalizada', '2020-08-05 21:13:00', '2020-08-05 21:22:30');
 
---
--- Filtros para la tabla `diagnostico`
---
-ALTER TABLE `diagnostico`
-  ADD CONSTRAINT `diagnostico_ibfk_1` FOREIGN KEY (`id_tipo`) REFERENCES `tipo_diagnostico` (`id`),
-  ADD CONSTRAINT `diagnostico_ibfk_2` FOREIGN KEY (`id_paciente`) REFERENCES `persona` (`id`),
-  ADD CONSTRAINT `diagnostico_ibfk_3` FOREIGN KEY (`id_sintoma`) REFERENCES `sintoma` (`id`);
+INSERT INTO conversa (id_paciente, id_medico, id_mensaje, id_sala) VALUES
+(2, 10, 1, 1),
+(2, 10, 2, 1),
+(2, 10, 3, 1),
+(2, 10, 4, 1),
+(2, 10, 5, 1),
+(2, 10, 6, 1),
+(2, 10, 7, 1),
+(2, 10, 8, 1),
+(2, 10, 9, 1),
+(4, 11, 10, 2),
+(4, 11, 11, 2),
+(4, 11, 12, 2),
+(4, 11, 13, 2),
+(4, 11, 14, 2),
+(4, 11, 15, 2),
+(4, 11, 16, 2),
+(4, 11, 17, 2),
+(4, 11, 18, 2),
+(5, 13, 5, 3),
+(5, 13, 19, 3),
+(5, 13, 20, 3),
+(5, 13, 21, 3),
+(5, 13, 22, 3),
+(5, 13, 23, 3),
+(5, 13, 24, 3),
+(5, 13, 26, 3),
+(5, 13, 27, 3),
+(6, 1, 28, 4),
+(6, 1, 29, 4),
+(6, 1, 30, 4),
+(6, 1, 31, 4),
+(6, 1, 32, 4),
+(6, 1, 33, 4),
+(6, 1, 34, 4),
+(6, 1, 35, 4),
+(6, 1, 36, 4),
+(7, 12, 37, 5),
+(7, 12, 38, 5),
+(7, 12, 39, 5),
+(7, 12, 40, 5),
+(7, 12, 41, 5),
+(7, 12, 42, 5),
+(7, 12, 43, 5),
+(7, 12, 44, 5),
+(7, 12, 45, 5),
+(8, 17, 46, 6),
+(8, 17, 47, 6),
+(8, 17, 48, 6),
+(8, 17, 49, 6),
+(8, 17, 50, 6),
+(8, 17, 51, 6),
+(8, 17, 52, 6),
+(8, 17, 53, 6),
+(8, 17, 54, 6),
+(8, 17, 55, 6),
+(8, 17, 56, 6),
+(9, 20, 57, 7),
+(9, 20, 58, 7),
+(9, 20, 59, 7),
+(9, 20, 60, 7),
+(9, 20, 61, 7),
+(9, 20, 62, 7),
+(9, 20, 63, 7),
+(9, 20, 64, 7),
+(9, 20, 65, 7),
+(21, 34, 66, 8),
+(21, 34, 67, 8),
+(21, 34, 68, 8),
+(21, 34, 69, 8),
+(21, 34, 70, 8),
+(21, 34, 71, 8),
+(21, 34, 72, 8),
+(21, 34, 73, 8),
+(21, 34, 74, 8),
+(22, 34, 75, 9),
+(22, 34, 76, 9),
+(22, 34, 77, 9),
+(22, 34, 78, 9),
+(22, 34, 79, 9),
+(22, 34, 80, 9),
+(22, 34, 81, 9),
+(22, 34, 82, 9),
+(22, 34, 83, 9),
+(23, 19, 84, 10),
+(23, 19, 85, 10),
+(23, 19, 86, 10),
+(23, 19, 87, 10),
+(23, 19, 88, 10),
+(23, 19, 89, 10),
+(23, 19, 90, 10),
+(23, 19, 91, 10),
+(23, 19, 92, 10),
+(24, 16, 93, 11),
+(24, 16, 94, 11),
+(24, 16, 95, 11),
+(24, 16, 96, 11),
+(24, 16, 97, 11),
+(24, 16, 98, 11),
+(24, 16, 99, 11),
+(24, 16, 100, 11),
+(24, 16, 101, 11),
+(25, 38, 102, 12),
+(25, 38, 103, 12),
+(25, 38, 104, 12),
+(25, 38, 105, 12),
+(25, 38, 106, 12),
+(25, 38, 107, 12),
+(25, 38, 108, 12),
+(25, 38, 109, 12),
+(25, 38, 110, 12),
+(25, 38, 111, 12),
+(25, 38, 112, 12),
+(26, 41, 113, 13),
+(26, 41, 114, 13),
+(26, 41, 115, 13),
+(26, 41, 116, 13),
+(26, 41, 117, 13),
+(26, 41, 118, 13),
+(26, 41, 119, 13),
+(26, 41, 120, 13),
+(26, 41, 121, 13),
+(27, 40, 122, 14),
+(27, 40, 123, 14),
+(27, 40, 124, 14),
+(27, 40, 125, 14),
+(27, 40, 126, 14),
+(27, 40, 130, 14);
 
---
--- Filtros para la tabla `paciente_sufre`
---
-ALTER TABLE `paciente_sufre`
-  ADD CONSTRAINT `paciente_sufre_ibfk_1` FOREIGN KEY (`id_sintoma`) REFERENCES `sintoma` (`id`),
-  ADD CONSTRAINT `paciente_sufre_ibfk_2` FOREIGN KEY (`id_paciente`) REFERENCES `persona` (`id`);
+-- ------------------------------------------------------------------------------- --
+-- FIN DE INSERCCIÓN DE DATOS - (3) -------------------------------------------------- --
 
---
--- Filtros para la tabla `patologia`
---
-ALTER TABLE `patologia`
-  ADD CONSTRAINT `patologia_ibfk_1` FOREIGN KEY (`id_prioridad`) REFERENCES `prioridad` (`id`);
 
---
--- Filtros para la tabla `persona`
---
-ALTER TABLE `persona`
-  ADD CONSTRAINT `persona_ibfk_1` FOREIGN KEY (`id_tipo`) REFERENCES `tipo_persona` (`id`),
-  ADD CONSTRAINT `persona_ibfk_2` FOREIGN KEY (`id_ciudad`) REFERENCES `ciudad` (`id`);
-
---
--- Filtros para la tabla `peticion`
---
-ALTER TABLE `peticion`
-  ADD CONSTRAINT `peticion_ibfk_1` FOREIGN KEY (`id_paciente`) REFERENCES `persona` (`id`),
-  ADD CONSTRAINT `peticion_ibfk_2` FOREIGN KEY (`id_medico`) REFERENCES `persona` (`id`);
-
---
--- Filtros para la tabla `sintoma`
---
-ALTER TABLE `sintoma`
-  ADD CONSTRAINT `sintoma_ibfk_1` FOREIGN KEY (`id_region`) REFERENCES `region` (`id`);
-
---
--- Filtros para la tabla `sintoma_compone`
---
-ALTER TABLE `sintoma_compone`
-  ADD CONSTRAINT `sintoma_compone_ibfk_1` FOREIGN KEY (`id_sintoma`) REFERENCES `sintoma` (`id`),
-  ADD CONSTRAINT `sintoma_compone_ibfk_2` FOREIGN KEY (`id_patologia`) REFERENCES `patologia` (`id`);
-
---
--- Filtros para la tabla `tratamiento`
---
-ALTER TABLE `tratamiento`
-  ADD CONSTRAINT `tratamiento_ibfk_1` FOREIGN KEY (`id_patologia`) REFERENCES `patologia` (`id`);
-
---
--- Filtros para la tabla `verifica`
---
-ALTER TABLE `verifica`
-  ADD CONSTRAINT `verifica_ibfk_1` FOREIGN KEY (`id_tentativo`) REFERENCES `diagnostico` (`id`),
-  ADD CONSTRAINT `verifica_ibfk_2` FOREIGN KEY (`id_medico`) REFERENCES `persona` (`id`);
+-- 4. QUERY LENGUAGE ----------------------------------------------------------------- --
+	-- ------------------------------------------------------------------------------- --
+-- FIN DE QL - (4) ------------------------------------------------------------------- --
