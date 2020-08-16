@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Yorel Acosta\\Desktop\\Study ESIMdeo\\Clase 3BB 2020\\Proyecto-Heart-Bits-UTU-ESI-2020\\MATERIAS\\Materia_Programacion\\Workspace\\SistemaTelediagnosticoMedico\\Persistence\\Persistence.vbproj": {}
+    "E:\\Save de Nitsuga\\Estudio\\ESI Buceo\\Clase 3BB 2020\\- Proyecto Heart Bits 2020\\MATERIAS\\Materia_Programacion\\Workspace\\SistemaTelediagnosticoMedico\\Persistence\\Persistence.vbproj": {}
   },
   "projects": {
-    "C:\\Users\\Yorel Acosta\\Desktop\\Study ESIMdeo\\Clase 3BB 2020\\Proyecto-Heart-Bits-UTU-ESI-2020\\MATERIAS\\Materia_Programacion\\Workspace\\SistemaTelediagnosticoMedico\\Persistence\\Persistence.vbproj": {
+    "E:\\Save de Nitsuga\\Estudio\\ESI Buceo\\Clase 3BB 2020\\- Proyecto Heart Bits 2020\\MATERIAS\\Materia_Programacion\\Workspace\\SistemaTelediagnosticoMedico\\Persistence\\Persistence.vbproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Yorel Acosta\\Desktop\\Study ESIMdeo\\Clase 3BB 2020\\Proyecto-Heart-Bits-UTU-ESI-2020\\MATERIAS\\Materia_Programacion\\Workspace\\SistemaTelediagnosticoMedico\\Persistence\\Persistence.vbproj",
+        "projectUniqueName": "E:\\Save de Nitsuga\\Estudio\\ESI Buceo\\Clase 3BB 2020\\- Proyecto Heart Bits 2020\\MATERIAS\\Materia_Programacion\\Workspace\\SistemaTelediagnosticoMedico\\Persistence\\Persistence.vbproj",
         "projectName": "Persistence",
-        "projectPath": "C:\\Users\\Yorel Acosta\\Desktop\\Study ESIMdeo\\Clase 3BB 2020\\Proyecto-Heart-Bits-UTU-ESI-2020\\MATERIAS\\Materia_Programacion\\Workspace\\SistemaTelediagnosticoMedico\\Persistence\\Persistence.vbproj",
-        "packagesPath": "C:\\Users\\Yorel Acosta\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Yorel Acosta\\Desktop\\Study ESIMdeo\\Clase 3BB 2020\\Proyecto-Heart-Bits-UTU-ESI-2020\\MATERIAS\\Materia_Programacion\\Workspace\\SistemaTelediagnosticoMedico\\Persistence\\obj\\",
+        "projectPath": "E:\\Save de Nitsuga\\Estudio\\ESI Buceo\\Clase 3BB 2020\\- Proyecto Heart Bits 2020\\MATERIAS\\Materia_Programacion\\Workspace\\SistemaTelediagnosticoMedico\\Persistence\\Persistence.vbproj",
+        "packagesPath": "C:\\Users\\Nitsuga\\.nuget\\packages\\",
+        "outputPath": "E:\\Save de Nitsuga\\Estudio\\ESI Buceo\\Clase 3BB 2020\\- Proyecto Heart Bits 2020\\MATERIAS\\Materia_Programacion\\Workspace\\SistemaTelediagnosticoMedico\\Persistence\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Yorel Acosta\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Nitsuga\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -55,7 +55,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
