@@ -1,0 +1,6 @@
+	Mariadb
+USUARIO		CONTRASEÑA
+root		heartbits2002
+administrador	admindiag
+medico		medicodiag
+paciente	pacientediag
