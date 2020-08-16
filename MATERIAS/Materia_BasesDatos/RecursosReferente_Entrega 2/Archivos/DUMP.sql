@@ -387,7 +387,16 @@ INSERT INTO mensaje (id, texto, hora) VALUES
 (127, 'Algo más que desee consultar?', '21:20:00'),
 (128, 'No, gracias', '21:21:00'),
 (129, 'Excelente, que tenga un buen dia', '21:22:00'),
-(130, 'Hasta luego', '21:22:30');
+(130, 'Hasta luego', '21:22:30'),
+(131,'Buenas en que la puedo ayudar','18:05'),
+(132,'Hola que tal, se me diagnosticó SARS-COV2 y quisiera saber si ese diagnóstico es correcto','18:06'),
+(133,'Entendido, verificaré el diagnostico y le diré mi opinión','18:06:30'),
+(134,'He verificado el diagnóstico tentativo y es correcto, usted padece SARS-COV2','18:07'),
+(135,'Al finalizar el chat se le indicarán los tratamientos que puede seguir','18:08'),
+(136,'Algo más que desee consultar?','18:09'),
+(137,'No, todo claro','18:10'),
+(138,'Muy bien, que tenga un buen dia','18:11'),
+(139,'Hasta luego','18:11:50');
 
 INSERT INTO prioridad (id, nombre) VALUES
 (1, 'Alta'),
@@ -434,7 +443,8 @@ INSERT INTO patologia (id, id_prioridad, nombre, descripcion, indiceMortalidad) 
 (37, 3, 'Atelectasia', 'La atelectasia es un colapso completo o parcial del pulmón entero o de una parte (lóbulo) del pulmón.', 8),
 (38, 3, 'Diarrea', 'La diarrea (deposiciones blandas, líquidas y posiblemente más frecuentes) es un problema común.', 3),
 (39, 2, 'Disfagia', 'Es la dificultad para tragar.', 30),
-(40, 3, 'Tendinitis', 'La tendinitis es la inflamación o la irritación de un tendón, las cuerdas fibrosas que unen el músculo al hueso.', 1);
+(40, 3, 'Tendinitis', 'La tendinitis es la inflamación o la irritación de un tendón, las cuerdas fibrosas que unen el músculo al hueso.', 1),
+(41, 1, 'SARS-COV2','La enfermedad por coronavirus (COVID 19) es una ‎enfermedad infecciosa causada por un ‎coronavirus recientemente descubierto.',40);
 
 INSERT INTO tipo_persona (id, nombre) VALUES
 (1, 'Administrador'),
@@ -491,8 +501,9 @@ INSERT INTO persona (id, ci, primerNom, segundoNom, primerApe, segundoApe, gener
 (47, 3271525, 'Ignacio', NULL, 'Sosa', 'Rose', 'H', '1990-02-16', 'dapibus.rutrum@dictum.org', 'Purus', 6339, 29, NULL, 1, NULL, 'ign90', 'b619jo', 2315),
 (48, 4568360, 'Maximiliano', 'Xerxes', 'Louise', 'Velazquez', 'H', '1984-12-30', 'per.inceptos.hymenaeos@acturpisegestas.com', 'Av. giannatasio', 3960, 1, NULL, 1, NULL, 'max84', 'p9u4rn', 5214),
 (49, 2150312, 'Cesar', 'Carter', 'Villarreal', 'Oconnor', 'H', '1993-08-17', 'faucibus@eleifendegestasSed.net', 'Jose belloni', 2057, 22, NULL, 1, NULL, 'ces93', 'xir00p', 9089),
-(50, 3563054, 'Enzo', 'Vincente', 'Antoñoni', 'Mcmillan', 'H', '1968-01-05', 'euismod@nectempusmauris.net', 'Av. Egestas', 7865, 3, NULL, 1, NULL, 'enz68', 'ah9fx5', 8669);
-
+(50, 3563054, 'Enzo', 'Vincente', 'Antoñoni', 'Mcmillan', 'H', '1968-01-05', 'euismod@nectempusmauris.net', 'Av. Egestas', 7865, 3, NULL, 1, NULL, 'enz68', 'ah9fx5', 8669),
+(51,31108971,'Walter','Washington','Gutierrez','Sanguinneti','H','1950-06-20','walterwash@gmail.com','Siracusa',3424,1,true,3,NULL,NULL,NULL,NULL),
+(52,37178735,'Mariana','Melanie','Martinez','Gonzalez','M','1970-03-01','marian.mart@gmail.com','Mataojos',2135,1,NULL,2,'Neurólogo','mar70','9v03p7',NULL);
 
 INSERT INTO region (id, nombre) VALUES
 (1, 'Cabeza'),
@@ -782,7 +793,11 @@ INSERT INTO sintoma_compone (id_sintoma, id_patologia) VALUES
 (72, 33),
 (72, 34),
 (72, 35),
-(72, 36);
+(72, 36),
+(13, 41),
+(4,  41),
+(12, 41),
+(55, 41);
 
 INSERT INTO tipo_diagnostico (id, nombre) VALUES
 (2, 'Definitivo'),
@@ -868,7 +883,9 @@ INSERT INTO tratamiento (id, id_patologia, nombre, descripcion, tipo) VALUES
 (77, 39, 'Maalox', 'Está indicado para el alivio y tratamiento sintomático de la acidez y ardor de estómago', 'Medicamento'),
 (78, 39, 'Dilatación esofágica', 'El médico puede usar un endoscopio con un globo especial conectado para estirar y expandir suavemente el ancho del esófago', 'Quirurjico'),
 (79, 40, 'Prednisona', 'Prednisona es un fármaco corticosteroide sintético que se toma usualmente en forma oral, pero puede ser administrado por vía', 'Medicamento'),
-(80, 40, 'PRP', 'Plasma rico en plaquetas, aplica tomar una muestra de tu sangre y centrifugarla para separar las plaquetas y componentes', 'Quirurjico');
+(80, 40, 'PRP', 'Plasma rico en plaquetas, aplica tomar una muestra de tu sangre y centrifugarla para separar las plaquetas y componentes', 'Quirurjico'),
+(81, 41, 'Remdesivir', 'Es un medicamento antiviral, un nuevo profármaco 2​ que pertenece a los nucleótidos. Se utiliza mediante inyecciones', 'Medicamento'),
+(82, 41, 'Inyección de tocilizumab', 'El uso de la inyección de tocilizumab puede reducir su capacidad para combatir infecciones por bacterias, virus y hongos', 'Medicamento');
 
 INSERT INTO paciente_sufre (id_sintoma, id_paciente) VALUES
 (1, 2),
@@ -920,7 +937,11 @@ INSERT INTO paciente_sufre (id_sintoma, id_paciente) VALUES
 (70, 33),
 (72, 2),
 (72, 31),
-(72, 33);
+(72, 33),
+(55,51),
+(12,51),
+(13,51),
+(4,51);
 
 INSERT INTO cel_empleado (id_empleado, celular) VALUES
 (1, '091854011'),
@@ -1026,7 +1047,11 @@ INSERT INTO diagnostico (id, id_tipo, id_paciente, id_sintoma) VALUES
 (47, 1, 32, 54, '2020-06-07'),
 (48, 1, 33, 68, '2020-08-10'),
 (49, 1, 33, 70, '2020-08-10'),
-(50, 1, 33, 72, '2020-08-10');
+(50, 1, 33, 72, '2020-08-10'),
+(2,51,55,'2020-04-24'),
+(2,51,12,'2020-04-24'),
+(2,51,13,'2020-04-24'),
+(2,51,4,'2020-04-24');
 
 INSERT INTO verifica (id_tentativo, id_medico) VALUES
 (11, 1),
@@ -1062,7 +1087,11 @@ INSERT INTO verifica (id_tentativo, id_medico) VALUES
 (34, 40),
 (30, 41),
 (31, 41),
-(32, 41);
+(32, 41),
+(51,52),
+(52,52),
+(53,52),
+(54,52);
 
 
 INSERT INTO peticion (id_paciente, id_medico, estado, motivo, fechaHoraInicio, fechaHoraFin) VALUES
@@ -1080,7 +1109,8 @@ INSERT INTO peticion (id_paciente, id_medico, estado, motivo, fechaHoraInicio, f
 (25, 38, 0, 'Peticion aceptada', '2020-08-04 16:06:00', '2020-08-04 16:08:00'),
 (26, 41, 0, 'Peticion aceptada', '2020-08-04 05:59:00', '2020-08-04 06:00:00'),
 (27, 40, 0, 'Peticion aceptada', '2020-08-05 21:10:00', '2020-08-05 21:12:00'),
-(28, 35, 0, 'Se retiró del Centro de atención de salud', '2020-08-03 15:42:00', '2020-08-03 15:43:00');
+(28, 35, 0, 'Se retiró del Centro de atención de salud', '2020-08-03 15:42:00', '2020-08-03 15:43:00'),
+(51,52,false,'Peticion aceptada','2020-04-24 18:00','2020-04-24 18:04');
 
 INSERT INTO salachat (id, estado, motivo, fechaHoraInicio, fechaHoraFin) VALUES
 (1, 0, 'Conversación finalizada', '2020-08-05 20:08:00', '2020-08-05 20:14:25'),
@@ -1096,7 +1126,8 @@ INSERT INTO salachat (id, estado, motivo, fechaHoraInicio, fechaHoraFin) VALUES
 (11, 0, 'Conversación finalizada', '2020-08-03 07:31:00', '2020-08-03 07:39:46'),
 (12, 0, 'Conversación finalizada', '2020-08-04 16:09:00', '2020-08-04 16:21:30'),
 (13, 0, 'Conversación finalizada', '2020-08-04 06:01:00', '2020-08-04 06:12:32'),
-(14, 0, 'Conversación finalizada', '2020-08-05 21:13:00', '2020-08-05 21:22:30');
+(14, 0, 'Conversación finalizada', '2020-08-05 21:13:00', '2020-08-05 21:22:30'),
+(15, 0, 'Conversación finalizada','2020-04-24 18:04','2020-04-24 18:11:50');
 
 INSERT INTO conversa (id_paciente, id_medico, id_mensaje, id_sala) VALUES
 (2, 10, 1, 1),
@@ -1225,7 +1256,16 @@ INSERT INTO conversa (id_paciente, id_medico, id_mensaje, id_sala) VALUES
 (27, 40, 124, 14),
 (27, 40, 125, 14),
 (27, 40, 126, 14),
-(27, 40, 130, 14);
+(27, 40, 130, 14),
+(51,52,140,15),
+(51,52,141,15),
+(51,52,142,15),
+(51,52,143,15),
+(51,52,144,15),
+(51,52,145,15),
+(51,52,146,15),
+(51,52,147,15),
+(51,52,148,15);
 
 -- ------------------------------------------------------------------------------- --
 -- FIN DE INSERCCIÓN DE DATOS - (3) -------------------------------------------------- --

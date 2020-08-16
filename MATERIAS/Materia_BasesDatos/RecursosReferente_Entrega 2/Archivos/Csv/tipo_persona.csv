@@ -1,4 +1,4 @@
-id,nombre
-1,Administrador
-2,Medico
-3,Paciente
+id;nombre
+1;Administrador
+2;Medico
+3;Paciente

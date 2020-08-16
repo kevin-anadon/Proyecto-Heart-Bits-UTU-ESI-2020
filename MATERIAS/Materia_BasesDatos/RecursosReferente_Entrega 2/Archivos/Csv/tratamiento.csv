@@ -79,3 +79,5 @@ id;id_patologia;nombre;descripcion;tipo
 78;39;"Dilatación esofágica";"El médico puede usar un endoscopio con un globo especial conectado para estirar y expandir suavemente el ancho del esófago";Quirurjico
 79;40;Prednisona;"Prednisona es un fármaco corticosteroide sintético que se toma usualmente en forma oral, pero puede ser administrado por vía";Medicamento
 80;40;PRP;"Plasma rico en plaquetas, aplica tomar una muestra de tu sangre y centrifugarla para separar las plaquetas y componentes";Quirurjico
+81;41;Remdesivir;"Es un medicamento antiviral, un nuevo profármaco 2​ que pertenece a los nucleótidos. Se utiliza mediante inyecciones";Medicamento
+82;41;"Inyección de tocilizumab";"El uso de la inyección de tocilizumab puede reducir su capacidad para combatir infecciones por bacterias, virus y hongos";Medicamento

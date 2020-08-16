@@ -14,3 +14,4 @@ id_paciente;id_medico;estado;motivo;fechaHoraInicio;fechaHoraFin
 26;41;0;"Peticion aceptada";"2020-08-04 05:59:00";"2020-08-04 06:00:00"
 27;40;0;"Peticion aceptada";"2020-08-05 21:10:00";"2020-08-05 21:12:00"
 28;35;0;"Se retiró del Centro de atención de salud";"2020-08-03 15:42:00";"2020-08-03 15:43:00"
+51;52;0;"Peticion aceptada";"2020-04-24 18:00:00";"2020-04-24 18:04:00"

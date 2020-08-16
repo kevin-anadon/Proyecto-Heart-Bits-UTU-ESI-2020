@@ -39,3 +39,4 @@ id;id_prioridad;nombre;descripcion;indiceMortalidad
 38;3;Diarrea;"La diarrea (deposiciones blandas, líquidas y posiblemente más frecuentes) es un problema común.";3
 39;2;Disfagia;"Es la dificultad para tragar.";30
 40;3;Tendinitis;"La tendinitis es la inflamación o la irritación de un tendón, las cuerdas fibrosas que unen el músculo al hueso.";1
+41;1;SARS-COV2;"La enfermedad por coronavirus (COVID 19) es una ‎enfermedad infecciosa causada por un ‎coronavirus recientemente descubierto.";40
