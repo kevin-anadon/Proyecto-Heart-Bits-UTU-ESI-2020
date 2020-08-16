@@ -33,8 +33,7 @@
 		PRIMARY KEY (id)
 	);
     
-	CREATE TABLE ciudad (
-		id INT (10) AUTO_INCREMENT,
+	CREATE TABLE ciudad (id INT (10) AUTO_INCREMENT,
 		nombre VARCHAR (32) NOT NULL,
         id_dpto INT (10) NOT NULL,
 		PRIMARY KEY (id),
@@ -80,123 +79,35 @@
 		PRIMARY KEY (id)
 	);	
 
-	CREATE TABLE prioridad (
-		id INT (10) AUTO_INCREMENT,
-		nombre VARCHAR (32) NOT NULL,
-		PRIMARY KEY (id)
-	);	
+	CREATE TABLE prioridad (id INT (10) AUTO_INCREMENT,nombre VARCHAR (32) NOT NULL,PRIMARY KEY (id));
 
-	CREATE TABLE sintoma (
-		id INT (10) AUTO_INCREMENT,
-		id_region INT (10),
-		descripcion VARCHAR (128) NOT NULL,
-		PRIMARY KEY (id),
-		FOREIGN KEY (id_region) REFERENCES region(id)
-	);
+	CREATE TABLE sintoma (id INT (10) AUTO_INCREMENT,id_region INT (10),descripcion VARCHAR (128) NOT NULL,PRIMARY KEY (id),FOREIGN KEY (id_region) REFERENCES region(id));
 
-	CREATE TABLE patologia (
-		id INT (10) AUTO_INCREMENT,
-		id_prioridad INT (10) NOT NULL,
-		nombre VARCHAR (32) NOT NULL UNIQUE,
-		descripcion VARCHAR (128) NOT NULL,
-		indiceMortalidad INT (10) NOT NULL,
-		PRIMARY KEY (id),
-		FOREIGN KEY (id_prioridad) REFERENCES prioridad(id)
-	);
+	CREATE TABLE patologia (id INT (10) AUTO_INCREMENT,id_prioridad INT (10) NOT NULL,nombre VARCHAR (32) NOT NULL UNIQUE,descripcion VARCHAR (128) NOT NULL,indiceMortalidad INT (10) NOT NULL,PRIMARY KEY (id),FOREIGN KEY (id_prioridad) REFERENCES prioridad(id));
 
-	CREATE TABLE tratamiento (
-		id INT (10) AUTO_INCREMENT,
-		id_patologia INT (10) NOT NULL,
-		nombre VARCHAR (32) NOT NULL UNIQUE,
-		descripcion VARCHAR (128) NOT NULL,
-        tipo VARCHAR (32) NOT NULL,
-		PRIMARY KEY (id),
-		FOREIGN KEY (id_patologia) REFERENCES patologia(id)
-	);	
+	CREATE TABLE tratamiento (id INT (10) AUTO_INCREMENT,id_patologia INT (10) NOT NULL,nombre VARCHAR (32) NOT NULL UNIQUE,descripcion VARCHAR (128) NOT NULL,tipo VARCHAR (32) NOT NULL,PRIMARY KEY (id),FOREIGN KEY (id_patologia) REFERENCES patologia(id));	
 
-	CREATE TABLE tipo_diagnostico (
-		id INT (10) AUTO_INCREMENT,
-		nombre VARCHAR (64) NOT NULL UNIQUE,
-		PRIMARY KEY (id)
-	);	
+	CREATE TABLE tipo_diagnostico (id INT (10) AUTO_INCREMENT,nombre VARCHAR (64) NOT NULL UNIQUE,PRIMARY KEY (id));	
 
-	CREATE TABLE diagnostico (
-		id INT (10) AUTO_INCREMENT,
-		id_tipo INT (10) NOT NULL,
-		id_paciente INT (10) NOT NULL,
-		id_sintoma INT (10) NOT NULL,
-        fecha DATE NOT NULL,
-		PRIMARY KEY (id),
-		FOREIGN KEY (id_tipo) REFERENCES tipo_diagnostico(id),
-		FOREIGN KEY (id_paciente) REFERENCES persona(id),
-		FOREIGN KEY (id_sintoma) REFERENCES sintoma(id)
-	);	
+	CREATE TABLE diagnostico (id INT (10) AUTO_INCREMENT,id_tipo INT (10) NOT NULL,id_paciente INT (10) NOT NULL,id_sintoma INT (10) NOT NULL,fecha DATE NOT NULL,PRIMARY KEY (id),FOREIGN KEY (id_tipo) REFERENCES tipo_diagnostico(id),FOREIGN KEY (id_paciente) REFERENCES persona(id),FOREIGN KEY (id_sintoma) REFERENCES sintoma(id));	
 	-- ------------------------------------------------------------------------------ --
 
 	-- TABLAS ORIENTADAS A RELACIONES DE TABLAS ------------------------------------- --
-	CREATE TABLE paciente_sufre (
-		id_sintoma INT (10) NOT NULL,
-		id_paciente INT (10) NOT NULL,
-		PRIMARY KEY (id_sintoma, id_paciente),
-		FOREIGN KEY (id_sintoma) REFERENCES sintoma(id),
-		FOREIGN KEY (id_paciente) REFERENCES persona(id)
-	);
+	CREATE TABLE paciente_sufre (id_sintoma INT (10) NOT NULL,id_paciente INT (10) NOT NULL,PRIMARY KEY (id_sintoma, id_paciente),FOREIGN KEY (id_sintoma) REFERENCES sintoma(id),FOREIGN KEY (id_paciente) REFERENCES persona(id));
 
-	CREATE TABLE sintoma_compone (
-		id_sintoma INT (10) NOT NULL,
-		id_patologia INT (10) NOT NULL,
-		PRIMARY KEY (id_sintoma, id_patologia),
-		FOREIGN KEY (id_sintoma) REFERENCES sintoma(id),
-		FOREIGN KEY (id_patologia) REFERENCES patologia(id)
-	);
+	CREATE TABLE sintoma_compone (id_sintoma INT (10) NOT NULL,id_patologia INT (10) NOT NULL,PRIMARY KEY (id_sintoma, id_patologia),FOREIGN KEY (id_sintoma) REFERENCES sintoma(id),FOREIGN KEY (id_patologia) REFERENCES patologia(id));
 
-	CREATE TABLE peticion (
-		id_paciente INT (10) NOT NULL,
-		id_medico INT (10) NOT NULL,
-		estado BOOLEAN NOT NULL,
-		motivo VARCHAR (128),
-		fechaHoraInicio DATETIME NOT NULL,
-		fechaHoraFin DATETIME,
-		PRIMARY KEY (id_paciente, id_medico),
-		FOREIGN KEY (id_paciente) REFERENCES persona(id),
-		FOREIGN KEY (id_medico) REFERENCES persona(id)
-	);
+	CREATE TABLE peticion (id_paciente INT (10) NOT NULL,id_medico INT (10) NOT NULL,estado BOOLEAN NOT NULL,motivo VARCHAR (128),fechaHoraInicio DATETIME NOT NULL,fechaHoraFin DATETIME,PRIMARY KEY (id_paciente, id_medico),FOREIGN KEY (id_paciente) REFERENCES persona(id),FOREIGN KEY (id_medico) REFERENCES persona(id));
 
-	CREATE TABLE verifica (
-		id_tentativo INT (10), 
-		id_medico INT (10) NOT NULL,
-		PRIMARY KEY (id_tentativo),
-		FOREIGN KEY (id_tentativo) REFERENCES diagnostico(id),
-		FOREIGN KEY (id_medico) REFERENCES persona(id)
-	);
+	CREATE TABLE verifica (id_tentativo INT (10), id_medico INT (10) NOT NULL,PRIMARY KEY (id_tentativo),FOREIGN KEY (id_tentativo) REFERENCES diagnostico(id),FOREIGN KEY (id_medico) REFERENCES persona(id));
 
-	CREATE TABLE conversa (
-		id_paciente INT (10),
-		id_medico INT (10),
-		id_mensaje INT (10),
-		id_sala INT (10) NOT NULL,
-		PRIMARY KEY (id_paciente, id_medico, id_mensaje),
-		FOREIGN KEY (id_paciente) REFERENCES persona(id),
-		FOREIGN KEY (id_medico) REFERENCES persona(id),
-		FOREIGN KEY (id_mensaje) REFERENCES mensaje(id),
-		FOREIGN KEY (id_sala) REFERENCES salaChat(id)
-	);
+	CREATE TABLE conversa (id_paciente INT (10),id_medico INT (10),id_mensaje INT (10),id_sala INT (10) NOT NULL,PRIMARY KEY (id_paciente, id_medico, id_mensaje),FOREIGN KEY (id_paciente) REFERENCES persona(id),FOREIGN KEY (id_medico) REFERENCES persona(id),FOREIGN KEY (id_mensaje) REFERENCES mensaje(id),FOREIGN KEY (id_sala) REFERENCES salaChat(id));
 	-- ------------------------------------------------------------------------------ --
 
 	-- TABLAS ORIENTADAS A TABLAS CON COLUMNAS DE VALOR MULTIVALUADO ---------------  --
-	CREATE TABLE cel_paciente(
-		id_paciente INT (10),
-		celular VARCHAR (16),
-		PRIMARY KEY (id_paciente, celular),
-		FOREIGN KEY (id_paciente) REFERENCES persona(id)
-	);
+	CREATE TABLE cel_paciente(id_paciente INT (10),celular VARCHAR (16),PRIMARY KEY (id_paciente, celular),FOREIGN KEY (id_paciente) REFERENCES persona(id));
 
-	CREATE TABLE cel_empleado (
-		id_empleado INT (10),
-		celular VARCHAR (16),
-		PRIMARY KEY (id_empleado, celular),
-		FOREIGN KEY (id_empleado) REFERENCES persona(id)
-	);
+	CREATE TABLE cel_empleado (id_empleado INT (10),celular VARCHAR (16),PRIMARY KEY (id_empleado, celular),FOREIGN KEY (id_empleado) REFERENCES persona(id));
 	-- ------------------------------------------------------------------------------ --
 -- FIN DE CREACIÓN DE TABLAS - (2) -------------------------------------------------- --
 
@@ -997,7 +908,7 @@ INSERT INTO cel_paciente (id_paciente, celular) VALUES
 (32, '090921797'),
 (33, '099698605');
 
-INSERT INTO diagnostico (id, id_tipo, id_paciente, id_sintoma) VALUES
+INSERT INTO diagnostico (id, id_tipo, id_paciente, id_sintoma,fecha) VALUES
 (1, 2, 2, 1, '2020-08-05'),
 (2, 2, 2, 3, '2020-08-05'),
 (3, 2, 2, 5, '2020-08-05'),
@@ -1048,10 +959,10 @@ INSERT INTO diagnostico (id, id_tipo, id_paciente, id_sintoma) VALUES
 (48, 1, 33, 68, '2020-08-10'),
 (49, 1, 33, 70, '2020-08-10'),
 (50, 1, 33, 72, '2020-08-10'),
-(2,51,55,'2020-04-24'),
-(2,51,12,'2020-04-24'),
-(2,51,13,'2020-04-24'),
-(2,51,4,'2020-04-24');
+(51, 2, 51 ,55 ,'2020-04-24'),
+(52,2,51,12,'2020-04-24'),
+(53,2,51,13,'2020-04-24'),
+(54,2,51,4,'2020-04-24');
 
 INSERT INTO verifica (id_tentativo, id_medico) VALUES
 (11, 1),
@@ -1112,7 +1023,7 @@ INSERT INTO peticion (id_paciente, id_medico, estado, motivo, fechaHoraInicio, f
 (28, 35, 0, 'Se retiró del Centro de atención de salud', '2020-08-03 15:42:00', '2020-08-03 15:43:00'),
 (51,52,false,'Peticion aceptada','2020-04-24 18:00','2020-04-24 18:04');
 
-INSERT INTO salachat (id, estado, motivo, fechaHoraInicio, fechaHoraFin) VALUES
+INSERT INTO salaChat (id, estado, motivo, fechaHoraInicio, fechaHoraFin) VALUES
 (1, 0, 'Conversación finalizada', '2020-08-05 20:08:00', '2020-08-05 20:14:25'),
 (2, 0, 'Conversación finalizada', '2020-08-03 09:04:00', '2020-08-03 09:12:00'),
 (3, 0, 'Conversación finalizada', '2020-07-14 11:06:00', '2020-07-14 11:11:00'),
@@ -1257,15 +1168,15 @@ INSERT INTO conversa (id_paciente, id_medico, id_mensaje, id_sala) VALUES
 (27, 40, 125, 14),
 (27, 40, 126, 14),
 (27, 40, 130, 14),
-(51,52,140,15),
-(51,52,141,15),
-(51,52,142,15),
-(51,52,143,15),
-(51,52,144,15),
-(51,52,145,15),
-(51,52,146,15),
-(51,52,147,15),
-(51,52,148,15);
+(51,52,131,15),
+(51,52,132,15),
+(51,52,133,15),
+(51,52,134,15),
+(51,52,135,15),
+(51,52,136,15),
+(51,52,137,15),
+(51,52,138,15),
+(51,52,139,15);
 
 -- ------------------------------------------------------------------------------- --
 -- FIN DE INSERCCIÓN DE DATOS - (3) -------------------------------------------------- --
