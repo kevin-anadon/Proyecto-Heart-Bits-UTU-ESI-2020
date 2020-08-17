@@ -13,6 +13,7 @@ function instalar
 {
 #Variables de entorno
 #Utilizada para saber si el programa ya se encuentra instalado
+sed -i "/export INSTALL=0/d" $HOME/.bashrc
 echo "export INSTALL=1" >> $HOME/.bashrc    
 
 #Utilizada para saber el numero de backups realizados hasta la fecha
@@ -29,7 +30,7 @@ chmod -R 775 /Telediagnostico/
 
 #Backup
 #Se envia la orden de que 1 vez al dia, todos los dias a las 23hs se ejecute el script backup.sh
-echo "0 23 * * * sh /Telediagnostico/Backup/backup.sh" >> /etc/crontab
+echo "0 23 * * * root /Telediagnostico/Scripts/backup.sh" >> /etc/crontab
   
 #Copia de los archivos a el arbol de directorios realizado
 cp abmlmenu.sh /Telediagnostico/Scripts
