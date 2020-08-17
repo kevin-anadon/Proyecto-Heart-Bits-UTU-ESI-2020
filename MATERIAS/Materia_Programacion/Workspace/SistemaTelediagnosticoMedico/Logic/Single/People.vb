@@ -50,7 +50,7 @@ Public Class People
     '''     Debe de ser número entero el parámetro.
     ''' </param>
     ''' <returns>
-    '''     Retorna a la Propiedad local, el tipo de Genero que posee la Persona.
+    '''     Almacena a la Propiedad local, el tipo de Genero que posee la Persona.
     ''' </returns>
     Protected Sub IdentifyGenre(ByVal genrePeople As Integer)
         Select Case genrePeople
