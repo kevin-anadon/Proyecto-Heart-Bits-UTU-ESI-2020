@@ -1,0 +1,140 @@
+id;texto;hora
+1;"Buenas en que la puedo ayudar";20:08:00
+2;"Hola que tal, se me diagnosticó Asma bronquial y quisiera saber si ese diagnóstico es correcto";20:09:00
+3;"Entendido, verificaré el diagnostico y le diré mi opinión";20:09:30
+4;"He verificado el diagnóstico tentativo y es correcto, usted padece Asma bronquial";20:11:00
+5;"Al finalizar el chat se le indicarán los tratamientos que puede seguir";20:12:00
+6;"Algo más que desee consultar?";20:12:10
+7;"No, todo claro";20:13:00
+8;"Muy bien, que tenga un buen dia";20:14:00
+9;"Hasta luego";20:14:25
+10;"Buenas en que lo puedo ayudar";09:04:00
+11;"Hola que tal, se me diagnosticó Neumonía y quisiera saber si ese diagnóstico es correcto";09:05:00
+12;"Entendido, verificaré el diagnostico y le diré mi opinión";09:05:50
+13;"He verificado el diagnóstico tentativo y es equívoco, usted padece Asma bronquial";09:08:00
+14;"Al finalizar el chat se le indicarán los tratamientos que puede seguir";09:09:00
+15;"Algo más que desee consultar?";09:10:00
+16;"No, gracias";09:11:00
+17;"Muy bien, que tenga un buen dia";09:11:25
+18;"Hasta luego";09:12:00
+19;"Buenas en que lo puedo ayudar";11:06:00
+20;"Hola que tal, se me diagnosticó Artritis y quisiera saber si ese diagnóstico es correcto";11:07:00
+21;"Entendido, verificaré el diagnostico y le diré mi opinión";11:07:54
+22;"He verificado el diagnóstico tentativo y es correcto, usted padece Artritis";11:08:00
+23;"Al finalizar el chat se le indicarán los tratamientos que puede seguir";11:08:59
+24;"Algo más que desee consultar?";11:09:00
+25;"No, muchas gracias";11:10:00
+26;"Muy bien, que tenga un buen dia";11:10:26
+27;"Hasta luego";11:11:00
+28;"Buenas en que la puedo ayudar";23:38:00
+29;"Hola que tal, se me diagnosticó Nefropatía crónica y quisiera saber si ese diagnóstico es correcto";23:39:00
+30;"Entendido, verificaré el diagnostico y le diré mi opinión";23:39:50
+31;"He verificado el diagnóstico tentativo y es equívoco, usted padece Tendinitis";23:43:00
+32;"Al finalizar el chat se le indicarán los tratamientos que puede seguir";23:44:00
+33;"Algo más que desee consultar?";23:45:00
+34;"No, todo claro";23:46:00
+35;"Excelente, que tenga un buen dia";23:47:00
+36;"Hasta luego";23:47:40
+37;"Buenas en que lo puedo ayudar";06:59:00
+38;"Hola que tal, se me diagnosticó Bronquitis y quisiera saber si ese diagnóstico es correcto";07:00:00
+39;"Entendido, verificaré el diagnostico y le diré mi opinión";07:01:00
+40;"He verificado el diagnóstico tentativo y es correcto, usted padece Bronquitis";07:04:00
+41;"Al finalizar el chat se le indicarán los tratamientos que puede seguir";07:05:00
+42;"Algo más que desee consultar?";07:05:20
+43;"No, gracias";07:06:00
+44;"Perfecto, que tenga un buen dia";07:07:00
+45;"Hasta luego";07:07:54
+46;"Buenas en que lo puedo ayudar";14:26:00
+47;"Hola que tal, se me diagnosticó Leucemia y quisiera saber si ese diagnóstico es correcto";14:27:00
+48;"Entendido, verificaré el diagnostico y le diré mi opinión";14:27:30
+49;"He verificado el diagnóstico tentativo y es equívoco, usted padece Tuberculosis";14:30:00
+50;"Al finalizar el chat se le indicarán los tratamientos que puede seguir";14:31:00
+51;"Algo más que desee consultar?";14:31:50
+52;"Si, cuan mortal es la tuberculosis?";14:32:00
+53;"Tiene un 30% de riesgo de muerte";14:34:00
+54;"Gracias por contestarme, no tengo más dudas";14:35:00
+55;"Muy bien, que tenga un buen dia";14:36:00
+56;"Hasta luego";14:36:25
+57;"Buenas en que la puedo ayudar";19:03:00
+58;"Hola que tal, se me diagnosticó Bronquitis y quisiera saber si ese diagnóstico es correcto";19:04:00
+59;"Entendido, verificaré el diagnostico y le diré mi opinión";19:05:00
+60;"He verificado el diagnóstico tentativo y es correcto, usted padece Bronquitis";19:07:00
+61;"Al finalizar el chat se le indicarán los tratamientos que puede seguir";19:08:00
+62;"Algo más que desee consultar?";19:08:24
+63;"No, todo claro";19:09:00
+64;"Perfecto, que tenga un buen dia";19:10:00
+65;"Hasta luego";19:10:25
+66;"Buenas en que la puedo ayudar";17:18:00
+67;"Hola que tal, se me diagnosticó Conjuntivitis y quisiera saber si ese diagnóstico es correcto";17:19:00
+68;"Entendido, verificaré el diagnostico y le diré mi opinión";17:20:00
+69;"He verificado el diagnóstico tentativo y es correcto, usted padece Conjuntivitis";17:24:00
+70;"Al finalizar el chat se le indicarán los tratamientos que puede seguir";17:25:00
+71;"Algo más que desee consultar?";17:26:00
+72;"No, muchas gracias";17:27:00
+73;"Muy bien, que tenga un buen dia";17:28:00
+74;"Hasta luego";17:28:30
+75;"Buenas en que lo puedo ayudar";17:18:00
+76;"Hola que tal, se me diagnosticó Diabetes tipo 1 y quisiera saber si ese diagnóstico es correcto";17:19:00
+77;"Entendido, verificaré el diagnostico y le diré mi opinión";17:20:00
+78;"He verificado el diagnóstico tentativo y es equívoco, usted padece Cataratas";17:26:00
+79;"Al finalizar el chat se le indicarán los tratamientos que puede seguir";17:27:00
+80;"Algo más que desee consultar?";17:27:30
+81;"No, todo claro";17:28:00
+82;"Muy bien, que tenga un buen dia";17:29:00
+83;"Hasta luego";17:29:30
+84;"Buenas en que la puedo ayudar";13:13:00
+85;"Hola que tal, se me diagnosticó Tracoma y quisiera saber si ese diagnóstico es correcto";13:14:00
+86;"Entendido, verificaré el diagnostico y le diré mi opinión";13:15:00
+87;"He verificado el diagnóstico tentativo y es correcto, usted padece Cataratas";13:16:00
+88;"Al finalizar el chat se le indicarán los tratamientos que puede seguir";13:17:00
+89;"Algo más que desee consultar?";13:17:32
+90;"No, gracias";13:18:00
+91;"Muy bien, que tenga un buen dia";13:19:00
+92;"Hasta luego";13:19:36
+93;"Buenas en que la puedo ayudar";07:31:00
+94;"Hola que tal, se me diagnosticó Disfagia y quisiera saber si ese diagnóstico es correcto";07:32:00
+95;"Entendido, verificaré el diagnostico y le diré mi opinión";07:33:00
+96;"He verificado el diagnóstico tentativo y es correcto, usted padece Disfagia";07:36:00
+97;"Al finalizar el chat se le indicarán los tratamientos que puede seguir";07:37:00
+98;"Algo más que desee consultar?";07:38:00
+99;"No, muchas gracias";07:38:20
+100;"Excelente, que tenga un buen dia";07:39:00
+101;"Hasta luego";07:39:46
+102;"Buenas en que lo puedo ayudar";16:09:00
+103;"Hola que tal, se me diagnosticó Disfagia y quisiera saber si ese diagnóstico es correcto";16:10:00
+104;"Entendido, verificaré el diagnostico y le diré mi opinión";16:11:00
+105;"He verificado el diagnóstico tentativo y es correcto, usted padece Disfagia";16:16:00
+106;"Al finalizar el chat se le indicarán los tratamientos que puede seguir";16:17:00
+107;"Algo más que desee consultar?";16:18:00
+108;"Si, es mortal?";16:18:40
+109;"Tiene un riesgo medio de muerte si no se siguen los tratamientos";16:19:00
+110;"Está bien, gracias por responder, no tengo más preguntas";16:20:00
+111;"Muy bien, que tenga un buen dia";16:21:00
+112;"Hasta luego";16:21:30
+113;"Buenas en que la puedo ayudar";06:01:00
+114;"Hola que tal, se me diagnosticó Fibrosis pulmonar y quisiera saber si ese diagnóstico es correcto";06:02:00
+115;"Entendido, verificaré el diagnostico y le diré mi opinión";06:03:00
+116;"He verificado el diagnóstico tentativo y es correcto, usted padece Fibrosis pulmonar";06:08:00
+117;"Al finalizar el chat se le indicarán los tratamientos que puede seguir";06:09:00
+118;"Algo más que desee consultar?";06:10:00
+119;"No, todo claro gracias";06:11:00
+120;"Muy bien, que tenga un buen dia";06:12:00
+121;"Hasta luego";06:12:32
+122;"Buenas en que la puedo ayudar";21:13:00
+123;"Hola que tal, se me diagnosticó Diabétes tipo 1 y quisiera saber si ese diagnóstico es correcto";21:14:00
+124;"Entendido, verificaré el diagnostico y le diré mi opinión";21:15:00
+125;"He verificado el diagnóstico tentativo y es correcto, usted padece Diabétes tipo 1";21:18:00
+126;"Al finalizar el chat se le indicarán los tratamientos que puede seguir";21:19:00
+127;"Algo más que desee consultar?";21:20:00
+128;"No, gracias";21:21:00
+129;"Excelente, que tenga un buen dia";21:22:00
+130;"Hasta luego";21:22:30
+131;"Buenas en que la puedo ayudar";15:43:00
+132;"Hola que tal, se me diagnosticó Diabétes tipo 1 y quisiera saber si ese diagnóstico es correcto";15:44:00
+133;"Entendido, verificaré el diagnostico y le diré mi opinión";15:45:00
+134;"He verificado el diagnóstico tentativo y es correcto, usted padece Diabétes tipo 1";15:49:00
+135;"Al finalizar el chat se le indicarán los tratamientos que puede seguir";15:50:00
+136;"Algo más que desee consultar?";15:51:00
+137;"No, gracias";15:52:00
+138;"Excelente, que tenga un buen dia";15:53:00
+139;"Hasta luego";15:54:00
