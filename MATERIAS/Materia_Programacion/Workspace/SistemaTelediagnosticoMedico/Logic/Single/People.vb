@@ -15,7 +15,7 @@ Public Class People
     Protected Property genrePeople As Genre = Nothing
     Protected Property dateBirth As Date = #01/01/1999#
     Protected Property email As String = "someone@example.com"
-    Protected Property numPhone As Integer = 0
+    Protected Property numPhone As String = Nothing
     Protected Property street As String = Nothing
     Protected Property numDoor As Integer = 0
     Protected Property city As City
@@ -24,7 +24,7 @@ Public Class People
 
     End Sub 'Empty constructor (default)
 
-    Public Sub New(ci As Integer, allowed As Boolean, fstName As String, scndName As String, fstSurname As String, scndSurname As String, genrePeople As Integer, dateBirth As Date, email As String, numPhone As Integer, street As String, numDoor As Integer, city As City)
+    Public Sub New(ci As Integer, allowed As Boolean, fstName As String, scndName As String, fstSurname As String, scndSurname As String, genrePeople As Integer, dateBirth As Date, email As String, numPhone As String, street As String, numDoor As Integer, city As City)
         Me.ci = ci
         Me.allowed = allowed
         Me.fstName = fstName

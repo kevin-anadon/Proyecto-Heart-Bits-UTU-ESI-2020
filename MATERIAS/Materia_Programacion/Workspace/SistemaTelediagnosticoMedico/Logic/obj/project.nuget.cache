@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "T4cYhHCj5nGNl5ePHjNCfMV8ezkL7VgPwvoskB0YQb6BXfyeNZE762kibI0AV5Sgl4SaHRxGbmnbxYb9qi1wEg==",
+  "dgSpecHash": "YNZTVzzlMuz/hORg9coZBmNsEhsppMWHiVXaNK3i1hd8J2uNKGCiLVCLAEUWG1Jk3vgx+OMa34u4WFP4hntEcQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Yorel Acosta\\Desktop\\Study ESIMdeo\\Clase 3BB 2020\\Proyecto-Heart-Bits-UTU-ESI-2020\\MATERIAS\\Materia_Programacion\\Workspace\\SistemaTelediagnosticoMedico\\Logic\\Logic.vbproj",
+  "projectFilePath": "D:\\Escritorio\\Proyecto\\MATERIAS\\Materia_Programacion\\Workspace\\SistemaTelediagnosticoMedico\\Logic\\Logic.vbproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Yorel Acosta\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\Yorel Acosta\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+    "C:\\Users\\Kevin\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Kevin\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
   ],
   "logs": []
 }
