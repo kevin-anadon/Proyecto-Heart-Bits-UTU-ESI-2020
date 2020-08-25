@@ -16,12 +16,13 @@ Public Class FrmSympt
     Private Sub FrmSympt_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width - 2, Height - 2, 15, 15))
         Guna.UI.Lib.GraphicsHelper.ShadowForm(Me)
-        Dim da, daa As New System.Data.OleDb.OleDbDataAdapter()
+        Dim da, dacmb As New System.Data.OleDb.OleDbDataAdapter()
         Dim ds = New DataSet
         da.Fill(ds, rsympt, "sintoma")
         DgvSympt.DataSource = (ds.Tables("sintoma"))
         DgvSympt.Refresh()
-        daa.Fill(ds, rreg, "region")
+
+        dacmb.Fill(ds, rreg, "region")
         cmbregion.DataSource = (ds.Tables("region"))
         cmbregion.DisplayMember = "nombre"
     End Sub

@@ -31,13 +31,13 @@ Public Class ConnectionDB
         If nameTable = "sintoma" Then
             Return con.Execute("SELECT s.descripcion,r.nombre FROM sintoma s LEFT JOIN region r ON(s.id_region=r.id) ORDER BY s.descripcion, r.nombre")
         ElseIf nameTable = "region" Then
-            Return con.Execute("SELECT nombre FROM region")
+            Return con.Execute("SELECT nombre FROM region ORDER BY nombre")
         End If
     End Function
 
     Public Function SearchSympt(nameDesc As String) As Recordset
         Dim con As Connection = connect()
-        Return con.Execute("SELECT s.descripcion Síntoma,r.nombre Región FROM sintoma s LEFT JOIN region r ON(s.id_region=r.id) WHERE s.descripcion like '" & nameDesc & "%' ORDER BY s.descripcion, r.nombre")
+        Return con.Execute("SELECT s.descripcion As Síntoma,r.nombre As Región FROM sintoma s LEFT JOIN region r ON(s.id_region=r.id) WHERE s.descripcion like '" & nameDesc & "%' ORDER BY s.descripcion, r.nombre")
     End Function
 
     Public Function SearchRegion(nameRegion As String) As Recordset
