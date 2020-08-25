@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FrmSympt
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class FrmSympt
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmSympt))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -44,26 +44,31 @@ Partial Class FrmSympt
         Me.PicLogo = New System.Windows.Forms.PictureBox()
         Me.PicTittle = New System.Windows.Forms.PictureBox()
         Me.DgvSympt = New Guna.UI.WinForms.GunaDataGridView()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PicListado = New System.Windows.Forms.PictureBox()
         Me.PicFondo = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.TxtSympt = New Guna.UI.WinForms.GunaTextBox()
+        Me.cmbregion = New Guna.UI.WinForms.GunaComboBox()
         Me.PanelButtons.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelLeft.SuspendLayout()
         CType(Me.PicLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PicTittle, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DgvSympt, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PicListado, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PicFondo, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MzButtonWindows1
         '
         Me.MzButtonWindows1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.MzButtonWindows1.BackColor = System.Drawing.Color.White
         Me.MzButtonWindows1.BackgroundImage = CType(resources.GetObject("MzButtonWindows1.BackgroundImage"), System.Drawing.Image)
         Me.MzButtonWindows1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.MzButtonWindows1.Cursor = System.Windows.Forms.Cursors.Default
         Me.MzButtonWindows1.EstiloButton = BWCMM.MZButtonWindows.EstiloDeButton.Windows
-        Me.MzButtonWindows1.Location = New System.Drawing.Point(1017, 2)
+        Me.MzButtonWindows1.Location = New System.Drawing.Point(1020, 0)
         Me.MzButtonWindows1.Name = "MzButtonWindows1"
         Me.MzButtonWindows1.ParentControl = Me
         Me.MzButtonWindows1.Size = New System.Drawing.Size(40, 24)
@@ -73,11 +78,12 @@ Partial Class FrmSympt
         'MzButtonWindows2
         '
         Me.MzButtonWindows2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.MzButtonWindows2.BackColor = System.Drawing.Color.White
         Me.MzButtonWindows2.BackgroundImage = CType(resources.GetObject("MzButtonWindows2.BackgroundImage"), System.Drawing.Image)
         Me.MzButtonWindows2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.MzButtonWindows2.Cursor = System.Windows.Forms.Cursors.Default
         Me.MzButtonWindows2.EstiloButton = BWCMM.MZButtonWindows.EstiloDeButton.Windows
-        Me.MzButtonWindows2.Location = New System.Drawing.Point(977, 2)
+        Me.MzButtonWindows2.Location = New System.Drawing.Point(980, 0)
         Me.MzButtonWindows2.Name = "MzButtonWindows2"
         Me.MzButtonWindows2.ParentControl = Me
         Me.MzButtonWindows2.Size = New System.Drawing.Size(40, 24)
@@ -87,11 +93,12 @@ Partial Class FrmSympt
         'MzButtonWindows3
         '
         Me.MzButtonWindows3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.MzButtonWindows3.BackColor = System.Drawing.Color.White
         Me.MzButtonWindows3.BackgroundImage = CType(resources.GetObject("MzButtonWindows3.BackgroundImage"), System.Drawing.Image)
         Me.MzButtonWindows3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.MzButtonWindows3.Cursor = System.Windows.Forms.Cursors.Default
         Me.MzButtonWindows3.EstiloButton = BWCMM.MZButtonWindows.EstiloDeButton.Windows
-        Me.MzButtonWindows3.Location = New System.Drawing.Point(937, 2)
+        Me.MzButtonWindows3.Location = New System.Drawing.Point(940, 0)
         Me.MzButtonWindows3.Name = "MzButtonWindows3"
         Me.MzButtonWindows3.ParentControl = Me
         Me.MzButtonWindows3.Size = New System.Drawing.Size(40, 24)
@@ -395,14 +402,14 @@ Partial Class FrmSympt
         Me.DgvSympt.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.DgvSympt.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.Transparent
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
         DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DgvSympt.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
-        Me.DgvSympt.ColumnHeadersHeight = 4
+        Me.DgvSympt.ColumnHeadersHeight = 5
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
         DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 10.5!)
@@ -413,11 +420,11 @@ Partial Class FrmSympt
         Me.DgvSympt.DefaultCellStyle = DataGridViewCellStyle3
         Me.DgvSympt.EnableHeadersVisualStyles = False
         Me.DgvSympt.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.DgvSympt.Location = New System.Drawing.Point(223, 274)
+        Me.DgvSympt.Location = New System.Drawing.Point(205, 324)
         Me.DgvSympt.Name = "DgvSympt"
         Me.DgvSympt.RowHeadersVisible = False
         Me.DgvSympt.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DgvSympt.Size = New System.Drawing.Size(812, 297)
+        Me.DgvSympt.Size = New System.Drawing.Size(843, 297)
         Me.DgvSympt.TabIndex = 11
         Me.DgvSympt.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna
         Me.DgvSympt.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
@@ -432,7 +439,7 @@ Partial Class FrmSympt
         Me.DgvSympt.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Segoe UI", 10.5!)
         Me.DgvSympt.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White
         Me.DgvSympt.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
-        Me.DgvSympt.ThemeStyle.HeaderStyle.Height = 4
+        Me.DgvSympt.ThemeStyle.HeaderStyle.Height = 5
         Me.DgvSympt.ThemeStyle.ReadOnly = False
         Me.DgvSympt.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White
         Me.DgvSympt.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
@@ -442,14 +449,14 @@ Partial Class FrmSympt
         Me.DgvSympt.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.DgvSympt.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
         '
-        'PictureBox2
+        'PicListado
         '
-        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(204, 231)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(844, 37)
-        Me.PictureBox2.TabIndex = 12
-        Me.PictureBox2.TabStop = False
+        Me.PicListado.Image = CType(resources.GetObject("PicListado.Image"), System.Drawing.Image)
+        Me.PicListado.Location = New System.Drawing.Point(204, 288)
+        Me.PicListado.Name = "PicListado"
+        Me.PicListado.Size = New System.Drawing.Size(844, 37)
+        Me.PicListado.TabIndex = 12
+        Me.PicListado.TabStop = False
         '
         'PicFondo
         '
@@ -461,12 +468,62 @@ Partial Class FrmSympt
         Me.PicFondo.TabIndex = 10
         Me.PicFondo.TabStop = False
         '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
+        Me.PictureBox2.Location = New System.Drawing.Point(205, 108)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(843, 39)
+        Me.PictureBox2.TabIndex = 13
+        Me.PictureBox2.TabStop = False
+        '
+        'TxtSympt
+        '
+        Me.TxtSympt.BackColor = System.Drawing.Color.Transparent
+        Me.TxtSympt.BaseColor = System.Drawing.Color.White
+        Me.TxtSympt.BorderColor = System.Drawing.Color.Silver
+        Me.TxtSympt.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TxtSympt.FocusedBaseColor = System.Drawing.Color.White
+        Me.TxtSympt.FocusedBorderColor = System.Drawing.Color.Silver
+        Me.TxtSympt.FocusedForeColor = System.Drawing.SystemColors.ControlText
+        Me.TxtSympt.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.TxtSympt.Location = New System.Drawing.Point(204, 153)
+        Me.TxtSympt.Multiline = True
+        Me.TxtSympt.Name = "TxtSympt"
+        Me.TxtSympt.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.TxtSympt.Radius = 8
+        Me.TxtSympt.SelectedText = ""
+        Me.TxtSympt.Size = New System.Drawing.Size(187, 30)
+        Me.TxtSympt.TabIndex = 14
+        '
+        'cmbregion
+        '
+        Me.cmbregion.BackColor = System.Drawing.Color.Transparent
+        Me.cmbregion.BaseColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.cmbregion.BorderColor = System.Drawing.Color.Silver
+        Me.cmbregion.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.cmbregion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbregion.FocusedColor = System.Drawing.Color.Empty
+        Me.cmbregion.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.cmbregion.ForeColor = System.Drawing.Color.White
+        Me.cmbregion.FormattingEnabled = True
+        Me.cmbregion.Location = New System.Drawing.Point(205, 185)
+        Me.cmbregion.Name = "cmbregion"
+        Me.cmbregion.OnHoverItemBaseColor = System.Drawing.Color.Teal
+        Me.cmbregion.OnHoverItemForeColor = System.Drawing.Color.White
+        Me.cmbregion.Radius = 5
+        Me.cmbregion.Size = New System.Drawing.Size(186, 26)
+        Me.cmbregion.TabIndex = 15
+        '
         'FrmSympt
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1060, 640)
+        Me.Controls.Add(Me.cmbregion)
+        Me.Controls.Add(Me.TxtSympt)
         Me.Controls.Add(Me.PictureBox2)
+        Me.Controls.Add(Me.PicListado)
         Me.Controls.Add(Me.DgvSympt)
         Me.Controls.Add(Me.PicTittle)
         Me.Controls.Add(Me.PanelLeft)
@@ -483,8 +540,9 @@ Partial Class FrmSympt
         CType(Me.PicLogo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PicTittle, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DgvSympt, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PicListado, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PicFondo, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -506,6 +564,9 @@ Partial Class FrmSympt
     Friend WithEvents PicTittle As PictureBox
     Friend WithEvents PanelBody As Panel
     Friend WithEvents DgvSympt As Guna.UI.WinForms.GunaDataGridView
-    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents PicListado As PictureBox
     Friend WithEvents PicFondo As PictureBox
+    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents cmbregion As Guna.UI.WinForms.GunaComboBox
+    Friend WithEvents TxtSympt As Guna.UI.WinForms.GunaTextBox
 End Class

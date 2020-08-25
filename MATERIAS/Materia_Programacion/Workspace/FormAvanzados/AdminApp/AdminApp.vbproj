@@ -160,9 +160,33 @@
     </None>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Data\Data.vbproj">
+      <Project>{b5ee54ef-54bf-45f3-b6a1-4bc72046bbbf}</Project>
+      <Name>Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Logica\Logica.vbproj">
+      <Project>{88d516f3-65b2-4627-ba85-47eba9843e5d}</Project>
+      <Name>Logica</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Persistencia\Persistencia.vbproj">
+      <Project>{5430bbfa-d1a1-45f2-8c79-764e90d30510}</Project>
+      <Name>Persistencia</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="TelediganosticoMedico_Logo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="ADODB">
+      <Guid>{B691E011-1797-432E-907A-4D8C69339129}</Guid>
+      <VersionMajor>6</VersionMajor>
+      <VersionMinor>1</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

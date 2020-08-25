@@ -1,0 +1,10 @@
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\Data\bin\Debug\Data.dll
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\Data\bin\Debug\Data.pdb
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\Data\bin\Debug\Data.xml
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\Data\obj\Debug\Data.vbprojAssemblyReference.cache
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\Data\obj\Debug\Data.Resources.resources
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\Data\obj\Debug\Data.vbproj.GenerateResource.cache
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\Data\obj\Debug\Data.vbproj.CoreCompileInputs.cache
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\Data\obj\Debug\Data.dll
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\Data\obj\Debug\Data.xml
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\Data\obj\Debug\Data.pdb

@@ -1,0 +1,17 @@
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\Logica\bin\Debug\Logica.dll
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\Logica\bin\Debug\Logica.pdb
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\Logica\bin\Debug\Logica.xml
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\Logica\bin\Debug\Data.dll
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\Logica\bin\Debug\Persistencia.dll
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\Logica\bin\Debug\Data.pdb
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\Logica\bin\Debug\Data.xml
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\Logica\bin\Debug\Persistencia.pdb
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\Logica\bin\Debug\Persistencia.xml
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\Logica\obj\Debug\Logica.vbprojAssemblyReference.cache
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\Logica\obj\Debug\Logica.Resources.resources
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\Logica\obj\Debug\Logica.vbproj.GenerateResource.cache
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\Logica\obj\Debug\Logica.vbproj.CoreCompileInputs.cache
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\Logica\obj\Debug\Logica.vbproj.CopyComplete
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\Logica\obj\Debug\Logica.dll
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\Logica\obj\Debug\Logica.xml
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\Logica\obj\Debug\Logica.pdb
