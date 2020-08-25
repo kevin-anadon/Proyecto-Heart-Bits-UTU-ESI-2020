@@ -45,13 +45,6 @@ Public Class FrmSympt
     End Sub
 
     Private Sub cmbregion_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbregion.SelectedIndexChanged
-        Dim region As String = cmbregion.SelectedItem.ToString()
-
-        Dim rsearchregion As Recordset = db.SearchRegion(region)
-        Dim dasearchreg As New System.Data.OleDb.OleDbDataAdapter()
-        Dim dsearchreg = New DataSet
-        dasearchreg.Fill(dsearchreg, rsearchregion, "sintoma")
-        DgvSympt.DataSource = (dsearchreg.Tables("sintoma"))
-        DgvSympt.Refresh()
+        'ACA DEBERIA ACTUALIZARSE EL DATAGRIDVIEW CON LO QUE SELECCIONAS DEL COMBO BOX
     End Sub
 End Class

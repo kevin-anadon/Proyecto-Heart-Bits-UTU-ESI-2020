@@ -42,6 +42,6 @@ Public Class ConnectionDB
 
     Public Function SearchRegion(nameRegion As String) As Recordset
         Dim conreg As Connection = connect()
-        Return conreg.Execute("SELECT s.descripcion,r.nombre FROM sintoma s LEFT JOIN region r ON(s.id_region=r.id) WHERE r.nombre =" & nameRegion)
+        Return conreg.Execute("SELECT s.descripcion,r.nombre FROM sintoma s LEFT JOIN region r ON(s.id_region=r.id) WHERE r.nombre ='" + nameRegion + "'")
     End Function
 End Class
