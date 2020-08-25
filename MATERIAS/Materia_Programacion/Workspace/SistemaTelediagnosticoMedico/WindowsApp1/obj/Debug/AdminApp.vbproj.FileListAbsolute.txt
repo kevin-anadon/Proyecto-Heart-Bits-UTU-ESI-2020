@@ -1,0 +1,11 @@
+C:\Users\Yorel Acosta\Desktop\Study ESIMdeo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\SistemaTelediagnosticoMedico\WindowsApp1\bin\Debug\WindowsApp1.exe
+C:\Users\Yorel Acosta\Desktop\Study ESIMdeo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\SistemaTelediagnosticoMedico\WindowsApp1\bin\Debug\WindowsApp1.pdb
+C:\Users\Yorel Acosta\Desktop\Study ESIMdeo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\SistemaTelediagnosticoMedico\WindowsApp1\bin\Debug\WindowsApp1.xml
+C:\Users\Yorel Acosta\Desktop\Study ESIMdeo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\SistemaTelediagnosticoMedico\WindowsApp1\obj\Debug\AdminApp.vbprojAssemblyReference.cache
+C:\Users\Yorel Acosta\Desktop\Study ESIMdeo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\SistemaTelediagnosticoMedico\WindowsApp1\obj\Debug\WindowsApp1.FrmHome_AdminApp.resources
+C:\Users\Yorel Acosta\Desktop\Study ESIMdeo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\SistemaTelediagnosticoMedico\WindowsApp1\obj\Debug\WindowsApp1.Resources.resources
+C:\Users\Yorel Acosta\Desktop\Study ESIMdeo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\SistemaTelediagnosticoMedico\WindowsApp1\obj\Debug\AdminApp.vbproj.GenerateResource.cache
+C:\Users\Yorel Acosta\Desktop\Study ESIMdeo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\SistemaTelediagnosticoMedico\WindowsApp1\obj\Debug\AdminApp.vbproj.CoreCompileInputs.cache
+C:\Users\Yorel Acosta\Desktop\Study ESIMdeo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\SistemaTelediagnosticoMedico\WindowsApp1\obj\Debug\WindowsApp1.exe
+C:\Users\Yorel Acosta\Desktop\Study ESIMdeo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\SistemaTelediagnosticoMedico\WindowsApp1\obj\Debug\WindowsApp1.xml
+C:\Users\Yorel Acosta\Desktop\Study ESIMdeo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\SistemaTelediagnosticoMedico\WindowsApp1\obj\Debug\WindowsApp1.pdb

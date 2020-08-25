@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "IvGWUWaMcSCxsGrBfwplaBImDEad+0gXOCDhGKRIyDGlX3UeZE3Kx0+oFbLVxdt2TB5doQ1WYEDcQHlCJxHRqQ==",
+  "dgSpecHash": "3m6hC2V3WnKLUM88fmRirMp1rZjWVrZqfl1KHfhhG1MHePOayB5+2pgaq2/wzAGeq99MSTm4t7WgRTEVUcBpKQ==",
   "success": true,
-  "projectFilePath": "D:\\Escritorio\\Proyecto\\MATERIAS\\Materia_Programacion\\Workspace\\SistemaTelediagnosticoMedico\\Persistence\\Persistence.vbproj",
+  "projectFilePath": "C:\\Users\\Yorel Acosta\\Desktop\\Study ESIMdeo\\Clase 3BB 2020\\Proyecto-Heart-Bits-UTU-ESI-2020\\MATERIAS\\Materia_Programacion\\Workspace\\SistemaTelediagnosticoMedico\\Persistence\\Persistence.vbproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Kevin\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\Kevin\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+    "C:\\Users\\Yorel Acosta\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Yorel Acosta\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
   ],
   "logs": []
 }
