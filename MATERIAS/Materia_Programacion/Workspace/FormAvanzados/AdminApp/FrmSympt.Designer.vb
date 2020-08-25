@@ -68,7 +68,7 @@ Partial Class FrmSympt
         Me.MzButtonWindows1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.MzButtonWindows1.Cursor = System.Windows.Forms.Cursors.Default
         Me.MzButtonWindows1.EstiloButton = BWCMM.MZButtonWindows.EstiloDeButton.Windows
-        Me.MzButtonWindows1.Location = New System.Drawing.Point(1020, 0)
+        Me.MzButtonWindows1.Location = New System.Drawing.Point(1017, 2)
         Me.MzButtonWindows1.Name = "MzButtonWindows1"
         Me.MzButtonWindows1.ParentControl = Me
         Me.MzButtonWindows1.Size = New System.Drawing.Size(40, 24)
@@ -83,7 +83,7 @@ Partial Class FrmSympt
         Me.MzButtonWindows2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.MzButtonWindows2.Cursor = System.Windows.Forms.Cursors.Default
         Me.MzButtonWindows2.EstiloButton = BWCMM.MZButtonWindows.EstiloDeButton.Windows
-        Me.MzButtonWindows2.Location = New System.Drawing.Point(980, 0)
+        Me.MzButtonWindows2.Location = New System.Drawing.Point(977, 2)
         Me.MzButtonWindows2.Name = "MzButtonWindows2"
         Me.MzButtonWindows2.ParentControl = Me
         Me.MzButtonWindows2.Size = New System.Drawing.Size(40, 24)
@@ -98,7 +98,7 @@ Partial Class FrmSympt
         Me.MzButtonWindows3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.MzButtonWindows3.Cursor = System.Windows.Forms.Cursors.Default
         Me.MzButtonWindows3.EstiloButton = BWCMM.MZButtonWindows.EstiloDeButton.Windows
-        Me.MzButtonWindows3.Location = New System.Drawing.Point(940, 0)
+        Me.MzButtonWindows3.Location = New System.Drawing.Point(937, 2)
         Me.MzButtonWindows3.Name = "MzButtonWindows3"
         Me.MzButtonWindows3.ParentControl = Me
         Me.MzButtonWindows3.Size = New System.Drawing.Size(40, 24)
