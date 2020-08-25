@@ -15,7 +15,6 @@ Public Class FrmSympt
     End Function
     Private Sub FrmSympt_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width - 2, Height - 2, 15, 15))
-        Guna.UI.Lib.GraphicsHelper.ShadowForm(Me)
         Dim da, dacmb As New System.Data.OleDb.OleDbDataAdapter()
         Dim ds = New DataSet
         da.Fill(ds, rsympt, "sintoma")
@@ -53,5 +52,9 @@ Public Class FrmSympt
         Dim frmhome As New FrmHome()
         Me.Dispose()
         frmhome.Show()
+    End Sub
+
+    Private Sub TxtSympt_Enter(sender As Object, e As EventArgs) Handles TxtSympt.Enter
+        TxtSympt.Clear()
     End Sub
 End Class

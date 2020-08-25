@@ -336,7 +336,6 @@ Partial Class FrmSympt
         Me.BtnHome.BackColor = System.Drawing.Color.Transparent
         Me.BtnHome.BaseColor = System.Drawing.Color.Transparent
         Me.BtnHome.BorderColor = System.Drawing.Color.Transparent
-        Me.BtnHome.BorderSize = 1
         Me.BtnHome.DialogResult = System.Windows.Forms.DialogResult.None
         Me.BtnHome.FocusedColor = System.Drawing.Color.Empty
         Me.BtnHome.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -345,8 +344,8 @@ Partial Class FrmSympt
         Me.BtnHome.ImageSize = New System.Drawing.Size(20, 20)
         Me.BtnHome.Location = New System.Drawing.Point(9, 22)
         Me.BtnHome.Name = "BtnHome"
-        Me.BtnHome.OnHoverBaseColor = System.Drawing.Color.Teal
-        Me.BtnHome.OnHoverBorderColor = System.Drawing.Color.Gray
+        Me.BtnHome.OnHoverBaseColor = System.Drawing.Color.Silver
+        Me.BtnHome.OnHoverBorderColor = System.Drawing.Color.Black
         Me.BtnHome.OnHoverForeColor = System.Drawing.Color.White
         Me.BtnHome.OnHoverImage = Nothing
         Me.BtnHome.OnPressedColor = System.Drawing.Color.Black
@@ -487,6 +486,7 @@ Partial Class FrmSympt
         Me.TxtSympt.FocusedBorderColor = System.Drawing.Color.Silver
         Me.TxtSympt.FocusedForeColor = System.Drawing.SystemColors.ControlText
         Me.TxtSympt.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.TxtSympt.ForeColor = System.Drawing.Color.FromArgb(CType(CType(55, Byte), Integer), CType(CType(55, Byte), Integer), CType(CType(55, Byte), Integer))
         Me.TxtSympt.Location = New System.Drawing.Point(204, 153)
         Me.TxtSympt.Multiline = True
         Me.TxtSympt.Name = "TxtSympt"
@@ -495,6 +495,7 @@ Partial Class FrmSympt
         Me.TxtSympt.SelectedText = ""
         Me.TxtSympt.Size = New System.Drawing.Size(187, 30)
         Me.TxtSympt.TabIndex = 14
+        Me.TxtSympt.Text = "Realizar busqueda por síntoma"
         '
         'cmbregion
         '

@@ -17,7 +17,6 @@ Public Class FrmLogin
 
     Private Sub FrmLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width - 2, Height - 2, 15, 15))
-        Guna.UI.Lib.GraphicsHelper.ShadowForm(Me)
     End Sub
 
     Private Sub BtnTopExit_Click(sender As Object, e As EventArgs) Handles BtnTopExit.Click

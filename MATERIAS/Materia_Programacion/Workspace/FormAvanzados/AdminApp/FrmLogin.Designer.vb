@@ -60,7 +60,7 @@ Partial Class FrmLogin
         Me.LblTitle1.Font = New System.Drawing.Font("Microsoft YaHei UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblTitle1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.LblTitle1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.LblTitle1.Location = New System.Drawing.Point(685, 178)
+        Me.LblTitle1.Location = New System.Drawing.Point(694, 178)
         Me.LblTitle1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LblTitle1.Name = "LblTitle1"
         Me.LblTitle1.Size = New System.Drawing.Size(316, 27)
@@ -77,7 +77,7 @@ Partial Class FrmLogin
         Me.Lbltitle2.Font = New System.Drawing.Font("Microsoft YaHei UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Lbltitle2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Lbltitle2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Lbltitle2.Location = New System.Drawing.Point(685, 209)
+        Me.Lbltitle2.Location = New System.Drawing.Point(694, 209)
         Me.Lbltitle2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Lbltitle2.Name = "Lbltitle2"
         Me.Lbltitle2.Size = New System.Drawing.Size(316, 27)
@@ -95,7 +95,7 @@ Partial Class FrmLogin
         Me.Lblbody.Font = New System.Drawing.Font("Segoe UI Emoji", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Lblbody.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
         Me.Lblbody.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Lblbody.Location = New System.Drawing.Point(689, 240)
+        Me.Lblbody.Location = New System.Drawing.Point(698, 240)
         Me.Lblbody.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Lblbody.Name = "Lblbody"
         Me.Lblbody.Size = New System.Drawing.Size(316, 83)
@@ -116,12 +116,12 @@ Partial Class FrmLogin
         Me.TxtUser.FocusedBorderColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
         Me.TxtUser.FocusedForeColor = System.Drawing.SystemColors.ControlText
         Me.TxtUser.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtUser.Location = New System.Drawing.Point(691, 357)
+        Me.TxtUser.Location = New System.Drawing.Point(700, 357)
         Me.TxtUser.Name = "TxtUser"
         Me.TxtUser.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.TxtUser.Radius = 11
         Me.TxtUser.SelectedText = ""
-        Me.TxtUser.Size = New System.Drawing.Size(316, 49)
+        Me.TxtUser.Size = New System.Drawing.Size(317, 49)
         Me.TxtUser.TabIndex = 17
         '
         'TxtPass
@@ -135,12 +135,12 @@ Partial Class FrmLogin
         Me.TxtPass.FocusedBorderColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
         Me.TxtPass.FocusedForeColor = System.Drawing.SystemColors.ControlText
         Me.TxtPass.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtPass.Location = New System.Drawing.Point(691, 412)
+        Me.TxtPass.Location = New System.Drawing.Point(700, 412)
         Me.TxtPass.Name = "TxtPass"
         Me.TxtPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.TxtPass.Radius = 11
         Me.TxtPass.SelectedText = ""
-        Me.TxtPass.Size = New System.Drawing.Size(316, 49)
+        Me.TxtPass.Size = New System.Drawing.Size(317, 49)
         Me.TxtPass.TabIndex = 18
         '
         'BtnLogin
@@ -159,7 +159,7 @@ Partial Class FrmLogin
         Me.BtnLogin.ForeColor = System.Drawing.Color.White
         Me.BtnLogin.Image = Nothing
         Me.BtnLogin.ImageSize = New System.Drawing.Size(20, 20)
-        Me.BtnLogin.Location = New System.Drawing.Point(691, 487)
+        Me.BtnLogin.Location = New System.Drawing.Point(700, 487)
         Me.BtnLogin.Name = "BtnLogin"
         Me.BtnLogin.OnHoverBaseColor = System.Drawing.Color.Teal
         Me.BtnLogin.OnHoverBorderColor = System.Drawing.Color.Black
@@ -188,7 +188,7 @@ Partial Class FrmLogin
         Me.BtnExit.ForeColor = System.Drawing.Color.Black
         Me.BtnExit.Image = Nothing
         Me.BtnExit.ImageSize = New System.Drawing.Size(20, 20)
-        Me.BtnExit.Location = New System.Drawing.Point(857, 487)
+        Me.BtnExit.Location = New System.Drawing.Point(866, 487)
         Me.BtnExit.Name = "BtnExit"
         Me.BtnExit.OnHoverBaseColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.BtnExit.OnHoverBorderColor = System.Drawing.Color.Black
@@ -208,7 +208,7 @@ Partial Class FrmLogin
         Me.BtnTopMin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.BtnTopMin.Cursor = System.Windows.Forms.Cursors.Arrow
         Me.BtnTopMin.EstiloButton = BWCMM.MZButtonWindows.EstiloDeButton.Windows
-        Me.BtnTopMin.Location = New System.Drawing.Point(940, 0)
+        Me.BtnTopMin.Location = New System.Drawing.Point(949, 0)
         Me.BtnTopMin.Name = "BtnTopMin"
         Me.BtnTopMin.ParentControl = Me
         Me.BtnTopMin.Size = New System.Drawing.Size(40, 24)
@@ -222,7 +222,7 @@ Partial Class FrmLogin
         Me.BtnTopMax.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.BtnTopMax.Cursor = System.Windows.Forms.Cursors.Arrow
         Me.BtnTopMax.EstiloButton = BWCMM.MZButtonWindows.EstiloDeButton.Windows
-        Me.BtnTopMax.Location = New System.Drawing.Point(980, 0)
+        Me.BtnTopMax.Location = New System.Drawing.Point(989, 0)
         Me.BtnTopMax.Name = "BtnTopMax"
         Me.BtnTopMax.ParentControl = Me
         Me.BtnTopMax.Size = New System.Drawing.Size(40, 24)
@@ -236,7 +236,7 @@ Partial Class FrmLogin
         Me.BtnTopExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.BtnTopExit.Cursor = System.Windows.Forms.Cursors.Arrow
         Me.BtnTopExit.EstiloButton = BWCMM.MZButtonWindows.EstiloDeButton.Windows
-        Me.BtnTopExit.Location = New System.Drawing.Point(1020, 0)
+        Me.BtnTopExit.Location = New System.Drawing.Point(1029, 0)
         Me.BtnTopExit.Name = "BtnTopExit"
         Me.BtnTopExit.ParentControl = Me
         Me.BtnTopExit.Size = New System.Drawing.Size(40, 24)
@@ -247,7 +247,7 @@ Partial Class FrmLogin
         '
         Me.PictureBox4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), System.Drawing.Image)
-        Me.PictureBox4.Location = New System.Drawing.Point(735, 434)
+        Me.PictureBox4.Location = New System.Drawing.Point(701, 434)
         Me.PictureBox4.Name = "PictureBox4"
         Me.PictureBox4.Size = New System.Drawing.Size(6, 6)
         Me.PictureBox4.TabIndex = 20
@@ -257,7 +257,7 @@ Partial Class FrmLogin
         '
         Me.PictureBox3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
-        Me.PictureBox3.Location = New System.Drawing.Point(705, 425)
+        Me.PictureBox3.Location = New System.Drawing.Point(670, 425)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(24, 24)
         Me.PictureBox3.TabIndex = 19
@@ -272,7 +272,7 @@ Partial Class FrmLogin
         Me.PictureBox2.Location = New System.Drawing.Point(693, 330)
         Me.PictureBox2.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(140, 8)
+        Me.PictureBox2.Size = New System.Drawing.Size(149, 8)
         Me.PictureBox2.TabIndex = 10
         Me.PictureBox2.TabStop = False
         '
@@ -284,7 +284,7 @@ Partial Class FrmLogin
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
         Me.PictureBox1.Location = New System.Drawing.Point(796, 28)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(97, 97)
+        Me.PictureBox1.Size = New System.Drawing.Size(106, 97)
         Me.PictureBox1.TabIndex = 2
         Me.PictureBox1.TabStop = False
         '
@@ -293,7 +293,7 @@ Partial Class FrmLogin
         Me.PicbxDots.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PicbxDots.BackColor = System.Drawing.Color.White
         Me.PicbxDots.Image = CType(resources.GetObject("PicbxDots.Image"), System.Drawing.Image)
-        Me.PicbxDots.Location = New System.Drawing.Point(621, 0)
+        Me.PicbxDots.Location = New System.Drawing.Point(630, 0)
         Me.PicbxDots.Name = "PicbxDots"
         Me.PicbxDots.Size = New System.Drawing.Size(440, 640)
         Me.PicbxDots.TabIndex = 1
@@ -303,7 +303,7 @@ Partial Class FrmLogin
         '
         Me.PicbxLogin.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PicbxLogin.Image = CType(resources.GetObject("PicbxLogin.Image"), System.Drawing.Image)
-        Me.PicbxLogin.Location = New System.Drawing.Point(1, 0)
+        Me.PicbxLogin.Location = New System.Drawing.Point(11, 0)
         Me.PicbxLogin.Name = "PicbxLogin"
         Me.PicbxLogin.Size = New System.Drawing.Size(620, 640)
         Me.PicbxLogin.TabIndex = 0
@@ -313,7 +313,7 @@ Partial Class FrmLogin
         '
         Me.PictureBox5.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PictureBox5.Image = CType(resources.GetObject("PictureBox5.Image"), System.Drawing.Image)
-        Me.PictureBox5.Location = New System.Drawing.Point(705, 369)
+        Me.PictureBox5.Location = New System.Drawing.Point(676, 366)
         Me.PictureBox5.Name = "PictureBox5"
         Me.PictureBox5.Size = New System.Drawing.Size(18, 18)
         Me.PictureBox5.TabIndex = 26
@@ -323,7 +323,7 @@ Partial Class FrmLogin
         '
         Me.PictureBox6.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PictureBox6.Image = CType(resources.GetObject("PictureBox6.Image"), System.Drawing.Image)
-        Me.PictureBox6.Location = New System.Drawing.Point(735, 378)
+        Me.PictureBox6.Location = New System.Drawing.Point(701, 378)
         Me.PictureBox6.Name = "PictureBox6"
         Me.PictureBox6.Size = New System.Drawing.Size(6, 6)
         Me.PictureBox6.TabIndex = 27
@@ -336,7 +336,7 @@ Partial Class FrmLogin
         Me.AutoSize = True
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1060, 640)
+        Me.ClientSize = New System.Drawing.Size(1069, 640)
         Me.ControlBox = False
         Me.Controls.Add(Me.PictureBox6)
         Me.Controls.Add(Me.PictureBox5)
