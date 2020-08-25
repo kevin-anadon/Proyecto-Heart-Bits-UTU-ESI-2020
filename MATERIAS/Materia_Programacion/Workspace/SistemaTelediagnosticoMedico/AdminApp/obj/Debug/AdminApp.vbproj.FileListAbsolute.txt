@@ -9,3 +9,6 @@ C:\Users\Yorel Acosta\Desktop\Study ESIMdeo\Clase 3BB 2020\Proyecto-Heart-Bits-U
 C:\Users\Yorel Acosta\Desktop\Study ESIMdeo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\SistemaTelediagnosticoMedico\AdminApp\obj\Debug\AdminApp.xml
 C:\Users\Yorel Acosta\Desktop\Study ESIMdeo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\SistemaTelediagnosticoMedico\AdminApp\obj\Debug\AdminApp.pdb
 C:\Users\Yorel Acosta\Desktop\Study ESIMdeo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\SistemaTelediagnosticoMedico\AdminApp\obj\Debug\AdminApp.FrmSplashScreen.resources
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\SistemaTelediagnosticoMedico\AdminApp\obj\Debug\AdminApp.exe
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\SistemaTelediagnosticoMedico\AdminApp\obj\Debug\AdminApp.xml
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\SistemaTelediagnosticoMedico\AdminApp\obj\Debug\AdminApp.pdb

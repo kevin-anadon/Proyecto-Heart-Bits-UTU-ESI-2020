@@ -9,4 +9,9 @@ Public Class FrmHome
         Guna.UI.Lib.GraphicsHelper.ShadowForm(Me)
     End Sub
 
+    Private Sub BtnSympt_Click(sender As Object, e As EventArgs) Handles BtnSympt.Click
+        Dim frm As New FrmSympt
+        Me.Dispose()
+        frm.Show()
+    End Sub
 End Class
