@@ -125,10 +125,6 @@
       <Project>{0736e609-d05f-46f7-a31e-2e5109b07526}</Project>
       <Name>Logic</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Persistence\Persistence.vbproj">
-      <Project>{2021261e-3cf2-4a25-8c65-9849cba0f8fe}</Project>
-      <Name>Persistence</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

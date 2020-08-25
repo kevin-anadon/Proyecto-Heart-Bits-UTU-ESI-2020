@@ -1,3 +1,17 @@
-﻿Public Class Symptom
+﻿
+Public Class Symptom
+    Inherits Region
 
-End Class
+    Private Property region As Region
+    Private Property description As String = Nothing
+
+    Public Sub New()
+
+    End Sub 'Empty Constructor (default)
+
+    Public Sub New(region As Region, description As String)
+        Me.region = region
+        Me.description = description
+    End Sub 'Full Constructor
+
+End Class 'Symptom

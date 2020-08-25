@@ -1,3 +1,8 @@
 ﻿Public Class Cities
+    Dim cities As List(Of City)
 
-End Class
+    Public Sub New()
+        cities = New List(Of City)
+    End Sub
+
+End Class 'Cities
