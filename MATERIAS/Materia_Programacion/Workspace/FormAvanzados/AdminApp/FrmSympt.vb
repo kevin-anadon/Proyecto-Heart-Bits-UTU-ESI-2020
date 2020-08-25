@@ -48,4 +48,10 @@ Public Class FrmSympt
     Private Sub cmbregion_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbregion.SelectedIndexChanged
         'ACA DEBERIA ACTUALIZARSE EL DATAGRIDVIEW CON LO QUE SELECCIONAS DEL COMBO BOX
     End Sub
+
+    Private Sub BtnHome_Click_1(sender As Object, e As EventArgs) Handles BtnHome.Click
+        Dim frmhome As New FrmHome()
+        Me.Dispose()
+        frmhome.Show()
+    End Sub
 End Class

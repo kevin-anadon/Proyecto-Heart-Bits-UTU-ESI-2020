@@ -38,7 +38,7 @@ Partial Class FrmSympt
         Me.BtnAdmin = New Guna.UI.WinForms.GunaButton()
         Me.BtnMed = New Guna.UI.WinForms.GunaButton()
         Me.BtnPac = New Guna.UI.WinForms.GunaButton()
-        Me.BtnLogin = New Guna.UI.WinForms.GunaButton()
+        Me.BtnHome = New Guna.UI.WinForms.GunaButton()
         Me.PanelLeft = New System.Windows.Forms.Panel()
         Me.PanelBody = New System.Windows.Forms.Panel()
         Me.PicLogo = New System.Windows.Forms.PictureBox()
@@ -68,7 +68,7 @@ Partial Class FrmSympt
         Me.MzButtonWindows1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.MzButtonWindows1.Cursor = System.Windows.Forms.Cursors.Default
         Me.MzButtonWindows1.EstiloButton = BWCMM.MZButtonWindows.EstiloDeButton.Windows
-        Me.MzButtonWindows1.Location = New System.Drawing.Point(1017, 2)
+        Me.MzButtonWindows1.Location = New System.Drawing.Point(1020, 0)
         Me.MzButtonWindows1.Name = "MzButtonWindows1"
         Me.MzButtonWindows1.ParentControl = Me
         Me.MzButtonWindows1.Size = New System.Drawing.Size(40, 24)
@@ -83,7 +83,7 @@ Partial Class FrmSympt
         Me.MzButtonWindows2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.MzButtonWindows2.Cursor = System.Windows.Forms.Cursors.Default
         Me.MzButtonWindows2.EstiloButton = BWCMM.MZButtonWindows.EstiloDeButton.Windows
-        Me.MzButtonWindows2.Location = New System.Drawing.Point(977, 2)
+        Me.MzButtonWindows2.Location = New System.Drawing.Point(980, 0)
         Me.MzButtonWindows2.Name = "MzButtonWindows2"
         Me.MzButtonWindows2.ParentControl = Me
         Me.MzButtonWindows2.Size = New System.Drawing.Size(40, 24)
@@ -98,7 +98,7 @@ Partial Class FrmSympt
         Me.MzButtonWindows3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.MzButtonWindows3.Cursor = System.Windows.Forms.Cursors.Default
         Me.MzButtonWindows3.EstiloButton = BWCMM.MZButtonWindows.EstiloDeButton.Windows
-        Me.MzButtonWindows3.Location = New System.Drawing.Point(937, 2)
+        Me.MzButtonWindows3.Location = New System.Drawing.Point(940, 0)
         Me.MzButtonWindows3.Name = "MzButtonWindows3"
         Me.MzButtonWindows3.ParentControl = Me
         Me.MzButtonWindows3.Size = New System.Drawing.Size(40, 24)
@@ -115,7 +115,7 @@ Partial Class FrmSympt
         Me.PanelButtons.Controls.Add(Me.BtnAdmin)
         Me.PanelButtons.Controls.Add(Me.BtnMed)
         Me.PanelButtons.Controls.Add(Me.BtnPac)
-        Me.PanelButtons.Controls.Add(Me.BtnLogin)
+        Me.PanelButtons.Controls.Add(Me.BtnHome)
         Me.PanelButtons.Location = New System.Drawing.Point(19, 108)
         Me.PanelButtons.Name = "PanelButtons"
         Me.PanelButtons.Size = New System.Drawing.Size(166, 515)
@@ -327,34 +327,34 @@ Partial Class FrmSympt
         Me.BtnPac.Text = "Pacientes"
         Me.BtnPac.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'BtnLogin
+        'BtnHome
         '
-        Me.BtnLogin.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnLogin.Animated = True
-        Me.BtnLogin.AnimationHoverSpeed = 0.07!
-        Me.BtnLogin.AnimationSpeed = 0.03!
-        Me.BtnLogin.BackColor = System.Drawing.Color.Transparent
-        Me.BtnLogin.BaseColor = System.Drawing.Color.Transparent
-        Me.BtnLogin.BorderColor = System.Drawing.Color.Transparent
-        Me.BtnLogin.BorderSize = 1
-        Me.BtnLogin.DialogResult = System.Windows.Forms.DialogResult.None
-        Me.BtnLogin.FocusedColor = System.Drawing.Color.Empty
-        Me.BtnLogin.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnLogin.ForeColor = System.Drawing.Color.Black
-        Me.BtnLogin.Image = CType(resources.GetObject("BtnLogin.Image"), System.Drawing.Image)
-        Me.BtnLogin.ImageSize = New System.Drawing.Size(20, 20)
-        Me.BtnLogin.Location = New System.Drawing.Point(9, 22)
-        Me.BtnLogin.Name = "BtnLogin"
-        Me.BtnLogin.OnHoverBaseColor = System.Drawing.Color.Teal
-        Me.BtnLogin.OnHoverBorderColor = System.Drawing.Color.Gray
-        Me.BtnLogin.OnHoverForeColor = System.Drawing.Color.White
-        Me.BtnLogin.OnHoverImage = Nothing
-        Me.BtnLogin.OnPressedColor = System.Drawing.Color.Black
-        Me.BtnLogin.Radius = 6
-        Me.BtnLogin.Size = New System.Drawing.Size(146, 30)
-        Me.BtnLogin.TabIndex = 22
-        Me.BtnLogin.Text = "Página principal"
-        Me.BtnLogin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.BtnHome.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnHome.Animated = True
+        Me.BtnHome.AnimationHoverSpeed = 0.07!
+        Me.BtnHome.AnimationSpeed = 0.03!
+        Me.BtnHome.BackColor = System.Drawing.Color.Transparent
+        Me.BtnHome.BaseColor = System.Drawing.Color.Transparent
+        Me.BtnHome.BorderColor = System.Drawing.Color.Transparent
+        Me.BtnHome.BorderSize = 1
+        Me.BtnHome.DialogResult = System.Windows.Forms.DialogResult.None
+        Me.BtnHome.FocusedColor = System.Drawing.Color.Empty
+        Me.BtnHome.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnHome.ForeColor = System.Drawing.Color.Black
+        Me.BtnHome.Image = CType(resources.GetObject("BtnHome.Image"), System.Drawing.Image)
+        Me.BtnHome.ImageSize = New System.Drawing.Size(20, 20)
+        Me.BtnHome.Location = New System.Drawing.Point(9, 22)
+        Me.BtnHome.Name = "BtnHome"
+        Me.BtnHome.OnHoverBaseColor = System.Drawing.Color.Teal
+        Me.BtnHome.OnHoverBorderColor = System.Drawing.Color.Gray
+        Me.BtnHome.OnHoverForeColor = System.Drawing.Color.White
+        Me.BtnHome.OnHoverImage = Nothing
+        Me.BtnHome.OnPressedColor = System.Drawing.Color.Black
+        Me.BtnHome.Radius = 6
+        Me.BtnHome.Size = New System.Drawing.Size(146, 30)
+        Me.BtnHome.TabIndex = 22
+        Me.BtnHome.Text = "Página principal"
+        Me.BtnHome.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'PanelLeft
         '
@@ -559,7 +559,7 @@ Partial Class FrmSympt
     Friend WithEvents BtnAdmin As Guna.UI.WinForms.GunaButton
     Friend WithEvents BtnMed As Guna.UI.WinForms.GunaButton
     Friend WithEvents BtnPac As Guna.UI.WinForms.GunaButton
-    Friend WithEvents BtnLogin As Guna.UI.WinForms.GunaButton
+    Friend WithEvents BtnHome As Guna.UI.WinForms.GunaButton
     Friend WithEvents PicLogo As PictureBox
     Friend WithEvents PicTittle As PictureBox
     Friend WithEvents PanelBody As Panel
