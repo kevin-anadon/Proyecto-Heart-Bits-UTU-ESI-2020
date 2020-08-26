@@ -650,6 +650,7 @@ Partial Class FrmSympt
         Me.Controls.Add(Me.MzButtonWindows1)
         Me.Controls.Add(Me.PicFondo)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmSympt"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.PanelButtons.ResumeLayout(False)

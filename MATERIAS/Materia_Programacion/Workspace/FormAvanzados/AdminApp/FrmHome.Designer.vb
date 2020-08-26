@@ -36,7 +36,6 @@ Partial Class FrmHome
         Me.BtnLogin = New Guna.UI.WinForms.GunaButton()
         Me.PicLogo = New System.Windows.Forms.PictureBox()
         Me.PanelHome = New System.Windows.Forms.Panel()
-        Me.MzButtonWindows1 = New BWCMM.MZButtonWindows()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PicHome = New System.Windows.Forms.PictureBox()
         Me.PicSys = New System.Windows.Forms.PictureBox()
@@ -326,7 +325,6 @@ Partial Class FrmHome
         '
         Me.PanelHome.BackColor = System.Drawing.Color.Transparent
         Me.PanelHome.BackgroundImage = CType(resources.GetObject("PanelHome.BackgroundImage"), System.Drawing.Image)
-        Me.PanelHome.Controls.Add(Me.MzButtonWindows1)
         Me.PanelHome.Controls.Add(Me.PictureBox2)
         Me.PanelHome.Controls.Add(Me.PicHome)
         Me.PanelHome.Controls.Add(Me.PicSys)
@@ -335,21 +333,6 @@ Partial Class FrmHome
         Me.PanelHome.Name = "PanelHome"
         Me.PanelHome.Size = New System.Drawing.Size(872, 640)
         Me.PanelHome.TabIndex = 5
-        '
-        'MzButtonWindows1
-        '
-        Me.MzButtonWindows1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.MzButtonWindows1.BackColor = System.Drawing.Color.Black
-        Me.MzButtonWindows1.BackgroundImage = CType(resources.GetObject("MzButtonWindows1.BackgroundImage"), System.Drawing.Image)
-        Me.MzButtonWindows1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.MzButtonWindows1.Cursor = System.Windows.Forms.Cursors.Default
-        Me.MzButtonWindows1.EstiloButton = BWCMM.MZButtonWindows.EstiloDeButton.Windows
-        Me.MzButtonWindows1.Location = New System.Drawing.Point(1020, 0)
-        Me.MzButtonWindows1.Name = "MzButtonWindows1"
-        Me.MzButtonWindows1.ParentControl = Me
-        Me.MzButtonWindows1.Size = New System.Drawing.Size(40, 24)
-        Me.MzButtonWindows1.TabIndex = 5
-        Me.MzButtonWindows1.TipoButton = BWCMM.MZButtonWindows.ModeButton.Close
         '
         'PictureBox2
         '
@@ -400,6 +383,7 @@ Partial Class FrmHome
         Me.Controls.Add(Me.PanelHome)
         Me.Controls.Add(Me.PanelLeft)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmHome"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Inicio"
@@ -432,5 +416,4 @@ Partial Class FrmHome
     Friend WithEvents PicAdmin As PictureBox
     Friend WithEvents PicSys As PictureBox
     Friend WithEvents PicHome As PictureBox
-    Friend WithEvents MzButtonWindows1 As BWCMM.MZButtonWindows
 End Class
