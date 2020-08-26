@@ -15,12 +15,14 @@ Public Class FrmSympt
     End Function
     Private Sub FrmSympt_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width - 2, Height - 2, 15, 15))
+
         Dim da, dacmb As New System.Data.OleDb.OleDbDataAdapter()
         Dim ds = New DataSet
         da.Fill(ds, rsympt, "sintoma")
         DgvSympt.DataSource = (ds.Tables("sintoma"))
         DgvSympt.Refresh()
 
+        'Inserta todas las regiones en el cmbbox
         dacmb.Fill(ds, rreg, "region")
         cmbregion.DataSource = (ds.Tables("region"))
         cmbregion.DisplayMember = "nombre"
@@ -46,6 +48,17 @@ Public Class FrmSympt
 
     Private Sub cmbregion_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbregion.SelectedIndexChanged
         'ACA DEBERIA ACTUALIZARSE EL DATAGRIDVIEW CON LO QUE SELECCIONAS DEL COMBO BOX
+        'ESTÁ COMENTADO YA QUE NO LOGRAMOS QUE AL MOSTRARSE EL FRAME NO SE EJECUTE EL METODO cmbSympSelectedIndexChanged
+
+        'If cmbregion.Text.ToString() = "Seleccione region" Then
+        'Else
+        'Dim rsearchreg As Recordset = db.SearchRegion(cmbregion.Text.ToString())
+        'Dim dasearchreg As New System.Data.OleDb.OleDbDataAdapter()
+        'dsearch = New DataSet
+        'dasearchreg.Fill(dsearch, rsearchreg, "sintomas_regiones")
+        'DgvSympt.DataSource = (dsearch.Tables("sintomas_regiones"))
+        'DgvSympt.Refresh()
+        'End If
     End Sub
 
     Private Sub BtnHome_Click_1(sender As Object, e As EventArgs) Handles BtnHome.Click
