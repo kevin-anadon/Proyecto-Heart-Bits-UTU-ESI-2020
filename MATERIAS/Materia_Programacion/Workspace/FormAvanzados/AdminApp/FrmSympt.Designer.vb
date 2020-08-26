@@ -663,6 +663,7 @@ Partial Class FrmSympt
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1060, 640)
+        Me.Controls.Add(Me.MzButtonWindows1)
         Me.Controls.Add(Me.BtnDelSympt)
         Me.Controls.Add(Me.ChkReg)
         Me.Controls.Add(Me.GunaLabel1)
@@ -678,7 +679,6 @@ Partial Class FrmSympt
         Me.Controls.Add(Me.PanelLeft)
         Me.Controls.Add(Me.MzButtonWindows3)
         Me.Controls.Add(Me.MzButtonWindows2)
-        Me.Controls.Add(Me.MzButtonWindows1)
         Me.Controls.Add(Me.PicFondo)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)

@@ -87,6 +87,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmAlertRemoveSymptom.Designer.vb">
+      <DependentUpon>FrmAlertRemoveSymptom.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAlertRemoveSymptom.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmSympt.Designer.vb">
       <DependentUpon>FrmSympt.vb</DependentUpon>
     </Compile>
@@ -129,6 +135,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FrmAlertRemoveSymptom.resx">
+      <DependentUpon>FrmAlertRemoveSymptom.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmSympt.resx">
       <DependentUpon>FrmSympt.vb</DependentUpon>
     </EmbeddedResource>

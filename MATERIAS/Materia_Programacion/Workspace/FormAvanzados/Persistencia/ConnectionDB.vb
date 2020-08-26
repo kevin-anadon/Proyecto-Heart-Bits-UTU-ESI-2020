@@ -47,6 +47,21 @@ Public Class ConnectionDB
         End If
     End Function
 
+    Public Function CheckPin(pin As String) As Boolean
+        Dim con As Connection = connect()
+        Dim check As Boolean = False
+        Dim rs As Recordset
+        rs = con.Execute("SELECT ci FROM persona WHERE id_tipo=1 and pin='" + pin + "';")
+        If rs.EOF Then
+            con.Close()
+            Return check
+        Else
+            check = True
+            con.Close()
+            Return check
+        End If
+    End Function
+
     Public Function ObtainTable(nameTable As String) As Recordset
         Dim con As Connection = connect()
         If nameTable = "sintoma" Then

@@ -6,6 +6,10 @@ Imports ADODB
 
 Public Class FrmSympt
     Dim db As New ConnectionDB()
+
+    Dim row As DataGridViewRow
+    Dim SymptSelected As String
+
     Dim rsympt As Recordset = db.ObtainTable("sintoma")
     Dim rreg As Recordset = db.ObtainTable("region")
 
@@ -118,11 +122,17 @@ Public Class FrmSympt
         End If
     End Sub
 
-    Private Sub BtnDelSympt_Click(sender As Object, e As EventArgs) Handles BtnDelSympt.Click
-        Dim row As DataGridViewRow = DgvSympt.CurrentRow
-        Dim SymptSelected As String = CStr(row.Cells("Síntoma").Value)
-        'Obtengo la el síntoma seleccionado
+    Public Sub DeleteSympt(Sympt As String)
+        db.DelSympt(Sympt)
+    End Sub
 
-        db.DelSympt(SymptSelected)
+    Private Sub BtnDelSympt_Click(sender As Object, e As EventArgs) Handles BtnDelSympt.Click
+        Dim alerta As New FrmAlertRemoveSymptom()
+        row = DgvSympt.CurrentRow
+        SymptSelected = CStr(row.Cells("Síntoma").Value)
+        'Obtengo la el síntoma seleccionado
+        'Hago comprobación con PIN, mandó el sintoma que se desea borrar a un método de la clase FrmAlertRemoveSymptom
+        alerta.ObtainSympt(SymptSelected)
+        alerta.ShowDialog()
     End Sub
 End Class
