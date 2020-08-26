@@ -123,6 +123,7 @@ Partial Class FrmLogin
         Me.TxtUser.SelectedText = ""
         Me.TxtUser.Size = New System.Drawing.Size(318, 49)
         Me.TxtUser.TabIndex = 17
+        Me.TxtUser.TextOffsetX = 35
         '
         'TxtPass
         '
@@ -142,6 +143,7 @@ Partial Class FrmLogin
         Me.TxtPass.SelectedText = ""
         Me.TxtPass.Size = New System.Drawing.Size(318, 49)
         Me.TxtPass.TabIndex = 18
+        Me.TxtPass.TextOffsetX = 38
         '
         'BtnLogin
         '
@@ -247,7 +249,7 @@ Partial Class FrmLogin
         '
         Me.PictureBox4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), System.Drawing.Image)
-        Me.PictureBox4.Location = New System.Drawing.Point(701, 434)
+        Me.PictureBox4.Location = New System.Drawing.Point(739, 435)
         Me.PictureBox4.Name = "PictureBox4"
         Me.PictureBox4.Size = New System.Drawing.Size(6, 6)
         Me.PictureBox4.TabIndex = 20
@@ -257,7 +259,7 @@ Partial Class FrmLogin
         '
         Me.PictureBox3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
-        Me.PictureBox3.Location = New System.Drawing.Point(670, 425)
+        Me.PictureBox3.Location = New System.Drawing.Point(711, 425)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(24, 24)
         Me.PictureBox3.TabIndex = 19
@@ -313,7 +315,7 @@ Partial Class FrmLogin
         '
         Me.PictureBox5.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PictureBox5.Image = CType(resources.GetObject("PictureBox5.Image"), System.Drawing.Image)
-        Me.PictureBox5.Location = New System.Drawing.Point(676, 366)
+        Me.PictureBox5.Location = New System.Drawing.Point(711, 372)
         Me.PictureBox5.Name = "PictureBox5"
         Me.PictureBox5.Size = New System.Drawing.Size(18, 18)
         Me.PictureBox5.TabIndex = 26
@@ -323,7 +325,7 @@ Partial Class FrmLogin
         '
         Me.PictureBox6.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PictureBox6.Image = CType(resources.GetObject("PictureBox6.Image"), System.Drawing.Image)
-        Me.PictureBox6.Location = New System.Drawing.Point(701, 378)
+        Me.PictureBox6.Location = New System.Drawing.Point(735, 379)
         Me.PictureBox6.Name = "PictureBox6"
         Me.PictureBox6.Size = New System.Drawing.Size(6, 6)
         Me.PictureBox6.TabIndex = 27

@@ -38,18 +38,18 @@ Partial Class FrmHome
         Me.PanelHome = New System.Windows.Forms.Panel()
         Me.MzButtonWindows1 = New BWCMM.MZButtonWindows()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.PicAdmin = New System.Windows.Forms.PictureBox()
-        Me.PicSys = New System.Windows.Forms.PictureBox()
         Me.PicHome = New System.Windows.Forms.PictureBox()
+        Me.PicSys = New System.Windows.Forms.PictureBox()
+        Me.PicAdmin = New System.Windows.Forms.PictureBox()
         Me.PanelLeft.SuspendLayout()
         Me.PanelButtons.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PicLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelHome.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PicAdmin, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PicSys, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PicHome, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PicSys, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PicAdmin, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PanelLeft
@@ -82,9 +82,9 @@ Partial Class FrmHome
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(161, 22)
+        Me.PictureBox1.Location = New System.Drawing.Point(160, 22)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(2, 30)
+        Me.PictureBox1.Size = New System.Drawing.Size(10, 30)
         Me.PictureBox1.TabIndex = 30
         Me.PictureBox1.TabStop = False
         '
@@ -361,15 +361,14 @@ Partial Class FrmHome
         Me.PictureBox2.TabIndex = 4
         Me.PictureBox2.TabStop = False
         '
-        'PicAdmin
+        'PicHome
         '
-        Me.PicAdmin.BackColor = System.Drawing.Color.Transparent
-        Me.PicAdmin.Image = CType(resources.GetObject("PicAdmin.Image"), System.Drawing.Image)
-        Me.PicAdmin.Location = New System.Drawing.Point(440, 250)
-        Me.PicAdmin.Name = "PicAdmin"
-        Me.PicAdmin.Size = New System.Drawing.Size(427, 390)
-        Me.PicAdmin.TabIndex = 3
-        Me.PicAdmin.TabStop = False
+        Me.PicHome.Image = CType(resources.GetObject("PicHome.Image"), System.Drawing.Image)
+        Me.PicHome.Location = New System.Drawing.Point(18, 35)
+        Me.PicHome.Name = "PicHome"
+        Me.PicHome.Size = New System.Drawing.Size(842, 200)
+        Me.PicHome.TabIndex = 0
+        Me.PicHome.TabStop = False
         '
         'PicSys
         '
@@ -381,14 +380,15 @@ Partial Class FrmHome
         Me.PicSys.TabIndex = 2
         Me.PicSys.TabStop = False
         '
-        'PicHome
+        'PicAdmin
         '
-        Me.PicHome.Image = CType(resources.GetObject("PicHome.Image"), System.Drawing.Image)
-        Me.PicHome.Location = New System.Drawing.Point(18, 35)
-        Me.PicHome.Name = "PicHome"
-        Me.PicHome.Size = New System.Drawing.Size(842, 200)
-        Me.PicHome.TabIndex = 0
-        Me.PicHome.TabStop = False
+        Me.PicAdmin.BackColor = System.Drawing.Color.Transparent
+        Me.PicAdmin.Image = CType(resources.GetObject("PicAdmin.Image"), System.Drawing.Image)
+        Me.PicAdmin.Location = New System.Drawing.Point(440, 250)
+        Me.PicAdmin.Name = "PicAdmin"
+        Me.PicAdmin.Size = New System.Drawing.Size(427, 390)
+        Me.PicAdmin.TabIndex = 3
+        Me.PicAdmin.TabStop = False
         '
         'FrmHome
         '
@@ -409,9 +409,9 @@ Partial Class FrmHome
         CType(Me.PicLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelHome.ResumeLayout(False)
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PicAdmin, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PicSys, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PicHome, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PicSys, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PicAdmin, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

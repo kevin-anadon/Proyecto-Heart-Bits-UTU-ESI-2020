@@ -42,7 +42,7 @@ Public Class ConnectionDB
     Public Function ObtainTable(nameTable As String) As Recordset
         Dim con As Connection = connect()
         If nameTable = "sintoma" Then
-            Return con.Execute("SELECT s.descripcion As Sintoma,r.nombre As Region FROM sintoma s LEFT JOIN region r ON(s.id_region=r.id) ORDER BY s.descripcion, r.nombre")
+            Return con.Execute("SELECT s.descripcion As Síntoma,r.nombre As Región FROM sintoma s LEFT JOIN region r ON(s.id_region=r.id) ORDER BY s.descripcion, r.nombre")
         ElseIf nameTable = "region" Then
             Return con.Execute("SELECT nombre FROM region ORDER BY nombre")
         Else

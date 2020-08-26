@@ -70,4 +70,12 @@ Public Class FrmSympt
     Private Sub TxtSympt_Enter(sender As Object, e As EventArgs) Handles TxtSympt.Enter
         TxtSympt.Clear()
     End Sub
+
+    Private Sub BtnRefresh_Click(sender As Object, e As EventArgs) Handles BtnRefresh.Click
+        DgvSympt.Refresh()
+    End Sub
+
+    Private Sub BtnAddSympt_Click(sender As Object, e As EventArgs) Handles BtnAddSympt.Click
+
+    End Sub
 End Class

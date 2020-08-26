@@ -49,6 +49,8 @@ Partial Class FrmSympt
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.TxtSympt = New Guna.UI.WinForms.GunaTextBox()
         Me.cmbregion = New Guna.UI.WinForms.GunaComboBox()
+        Me.BtnRefresh = New Guna.UI.WinForms.GunaButton()
+        Me.BtnAddSympt = New Guna.UI.WinForms.GunaButton()
         Me.PanelButtons.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelLeft.SuspendLayout()
@@ -107,7 +109,6 @@ Partial Class FrmSympt
         '
         'PanelButtons
         '
-        Me.PanelButtons.Controls.Add(Me.PictureBox1)
         Me.PanelButtons.Controls.Add(Me.BtnFaq)
         Me.PanelButtons.Controls.Add(Me.BtnLogout)
         Me.PanelButtons.Controls.Add(Me.BtnPath)
@@ -125,9 +126,9 @@ Partial Class FrmSympt
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(161, 166)
+        Me.PictureBox1.Location = New System.Drawing.Point(178, 274)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(2, 30)
+        Me.PictureBox1.Size = New System.Drawing.Size(10, 30)
         Me.PictureBox1.TabIndex = 30
         Me.PictureBox1.TabStop = False
         '
@@ -358,6 +359,7 @@ Partial Class FrmSympt
         'PanelLeft
         '
         Me.PanelLeft.BackColor = System.Drawing.Color.White
+        Me.PanelLeft.Controls.Add(Me.PictureBox1)
         Me.PanelLeft.Controls.Add(Me.PanelBody)
         Me.PanelLeft.Controls.Add(Me.PanelButtons)
         Me.PanelLeft.Controls.Add(Me.PicLogo)
@@ -401,7 +403,7 @@ Partial Class FrmSympt
         Me.DgvSympt.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.DgvSympt.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
         DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 10.5!)
         DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
         DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
@@ -516,11 +518,71 @@ Partial Class FrmSympt
         Me.cmbregion.Size = New System.Drawing.Size(186, 26)
         Me.cmbregion.TabIndex = 15
         '
+        'BtnRefresh
+        '
+        Me.BtnRefresh.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnRefresh.Animated = True
+        Me.BtnRefresh.AnimationHoverSpeed = 0.07!
+        Me.BtnRefresh.AnimationSpeed = 0.03!
+        Me.BtnRefresh.BackColor = System.Drawing.Color.Transparent
+        Me.BtnRefresh.BaseColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.BtnRefresh.BorderColor = System.Drawing.Color.Black
+        Me.BtnRefresh.DialogResult = System.Windows.Forms.DialogResult.None
+        Me.BtnRefresh.FocusedColor = System.Drawing.Color.Empty
+        Me.BtnRefresh.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnRefresh.ForeColor = System.Drawing.Color.White
+        Me.BtnRefresh.Image = CType(resources.GetObject("BtnRefresh.Image"), System.Drawing.Image)
+        Me.BtnRefresh.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.BtnRefresh.ImageOffsetX = -10
+        Me.BtnRefresh.ImageSize = New System.Drawing.Size(20, 20)
+        Me.BtnRefresh.Location = New System.Drawing.Point(733, 298)
+        Me.BtnRefresh.Name = "BtnRefresh"
+        Me.BtnRefresh.OnHoverBaseColor = System.Drawing.Color.Teal
+        Me.BtnRefresh.OnHoverBorderColor = System.Drawing.Color.Black
+        Me.BtnRefresh.OnHoverForeColor = System.Drawing.Color.White
+        Me.BtnRefresh.OnHoverImage = Nothing
+        Me.BtnRefresh.OnPressedColor = System.Drawing.Color.Black
+        Me.BtnRefresh.Radius = 11
+        Me.BtnRefresh.Size = New System.Drawing.Size(141, 20)
+        Me.BtnRefresh.TabIndex = 22
+        Me.BtnRefresh.Text = "REFRESCAR TABLA"
+        '
+        'BtnAddSympt
+        '
+        Me.BtnAddSympt.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnAddSympt.Animated = True
+        Me.BtnAddSympt.AnimationHoverSpeed = 0.07!
+        Me.BtnAddSympt.AnimationSpeed = 0.03!
+        Me.BtnAddSympt.BackColor = System.Drawing.Color.Transparent
+        Me.BtnAddSympt.BaseColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.BtnAddSympt.BorderColor = System.Drawing.Color.Black
+        Me.BtnAddSympt.DialogResult = System.Windows.Forms.DialogResult.None
+        Me.BtnAddSympt.FocusedColor = System.Drawing.Color.Empty
+        Me.BtnAddSympt.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnAddSympt.ForeColor = System.Drawing.Color.White
+        Me.BtnAddSympt.Image = CType(resources.GetObject("BtnAddSympt.Image"), System.Drawing.Image)
+        Me.BtnAddSympt.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.BtnAddSympt.ImageOffsetX = -10
+        Me.BtnAddSympt.ImageSize = New System.Drawing.Size(20, 20)
+        Me.BtnAddSympt.Location = New System.Drawing.Point(897, 298)
+        Me.BtnAddSympt.Name = "BtnAddSympt"
+        Me.BtnAddSympt.OnHoverBaseColor = System.Drawing.Color.Teal
+        Me.BtnAddSympt.OnHoverBorderColor = System.Drawing.Color.Black
+        Me.BtnAddSympt.OnHoverForeColor = System.Drawing.Color.White
+        Me.BtnAddSympt.OnHoverImage = Nothing
+        Me.BtnAddSympt.OnPressedColor = System.Drawing.Color.Black
+        Me.BtnAddSympt.Radius = 11
+        Me.BtnAddSympt.Size = New System.Drawing.Size(138, 20)
+        Me.BtnAddSympt.TabIndex = 23
+        Me.BtnAddSympt.Text = "NUEVO SÍNTOMA"
+        '
         'FrmSympt
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1060, 640)
+        Me.Controls.Add(Me.BtnAddSympt)
+        Me.Controls.Add(Me.BtnRefresh)
         Me.Controls.Add(Me.cmbregion)
         Me.Controls.Add(Me.TxtSympt)
         Me.Controls.Add(Me.PictureBox2)
@@ -570,4 +632,6 @@ Partial Class FrmSympt
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents cmbregion As Guna.UI.WinForms.GunaComboBox
     Friend WithEvents TxtSympt As Guna.UI.WinForms.GunaTextBox
+    Friend WithEvents BtnRefresh As Guna.UI.WinForms.GunaButton
+    Friend WithEvents BtnAddSympt As Guna.UI.WinForms.GunaButton
 End Class
