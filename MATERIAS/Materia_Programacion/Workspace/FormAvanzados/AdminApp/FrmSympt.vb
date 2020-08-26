@@ -9,12 +9,23 @@ Public Class FrmSympt
     Dim rsympt As Recordset = db.ObtainTable("sintoma")
     Dim rreg As Recordset = db.ObtainTable("region")
 
-    Public Sub ReloadDgv()
-        Dim da As New System.Data.OleDb.OleDbDataAdapter()
-        Dim ds = New DataSet
-        da.Fill(ds, rsympt, "Tabla")
-        DgvSympt.DataSource = (ds.Tables("Tabla"))
-        DgvSympt.Refresh()
+    Public Sub ReloadDgv(i As Integer)
+        If i = 0 Then
+            'Opción para el load
+            Dim daInsert As New System.Data.OleDb.OleDbDataAdapter()
+            Dim dsInsert = New DataSet
+            daInsert.Fill(dsInsert, rsympt, "Refresh")
+            DgvSympt.DataSource = (dsInsert.Tables("Refresh"))
+            DgvSympt.Refresh()
+        Else
+            'Opcion para el btn refresh
+            Dim rsymptRef As Recordset = db.ObtainTable("sintoma")
+            Dim da As New System.Data.OleDb.OleDbDataAdapter()
+            Dim ds = New DataSet
+            da.Fill(ds, rsymptRef, "Refresh")
+            DgvSympt.DataSource = (ds.Tables("Refresh"))
+            DgvSympt.Refresh()
+        End If
     End Sub
 
     Public Sub ReloadCmb()
@@ -32,7 +43,7 @@ Public Class FrmSympt
     End Function
     Private Sub FrmSympt_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width - 2, Height - 2, 15, 15))
-        ReloadDgv()
+        ReloadDgv(0)
         ReloadCmb()
     End Sub
 
@@ -51,7 +62,6 @@ Public Class FrmSympt
         dasearch.Fill(dsearch, rsearchsympt, "sintoma")
         DgvSympt.DataSource = (dsearch.Tables("sintoma"))
         DgvSympt.Refresh()
-
     End Sub
 
     Private Sub cmbregion_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbregion.SelectedIndexChanged
@@ -80,7 +90,7 @@ Public Class FrmSympt
     End Sub
 
     Private Sub BtnRefresh_Click(sender As Object, e As EventArgs) Handles BtnRefresh.Click
-        DgvSympt.Refresh()
+        ReloadDgv(1)
     End Sub
 
     Private Sub BtnAddSympt_Click(sender As Object, e As EventArgs) Handles BtnAddSympt.Click
@@ -106,5 +116,13 @@ Public Class FrmSympt
         Else
             cmbregion.Hide()
         End If
+    End Sub
+
+    Private Sub BtnDelSympt_Click(sender As Object, e As EventArgs) Handles BtnDelSympt.Click
+        Dim row As DataGridViewRow = DgvSympt.CurrentRow
+        Dim SymptSelected As String = CStr(row.Cells("Síntoma").Value)
+        'Obtengo la el síntoma seleccionado
+
+        db.DelSympt(SymptSelected)
     End Sub
 End Class

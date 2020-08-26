@@ -22,6 +22,16 @@ Public Class ConnectionDB
         con.Close()
     End Sub
 
+    Public Sub DelSympt(sympt As String)
+        Dim con As Connection = connect()
+
+        Dim rsSelectIdSympt As Recordset = con.Execute("SELECT id FROM sintoma WHERE descripcion='" + sympt + "';")
+        Dim idsympt As Integer = DirectCast(rsSelectIdSympt.Fields("id").Value, Integer)
+        Dim rsDel As Recordset = con.Execute("DELETE FROM sintoma WHERE id=" & idsympt)
+        Console.WriteLine(sympt + " Eliminado con exito!!")
+        con.Close()
+    End Sub
+
     Public Function CheckLog(user As String, pass As String) As Boolean
         Dim con As Connection = connect()
         Dim check As Boolean = False

@@ -54,6 +54,7 @@ Partial Class FrmSympt
         Me.TxtAddSympt = New Guna.UI.WinForms.GunaTextBox()
         Me.GunaLabel1 = New Guna.UI.WinForms.GunaLabel()
         Me.ChkReg = New Guna.UI.WinForms.GunaCheckBox()
+        Me.BtnDelSympt = New Guna.UI.WinForms.GunaButton()
         Me.PanelButtons.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelLeft.SuspendLayout()
@@ -628,11 +629,41 @@ Partial Class FrmSympt
         Me.ChkReg.TabIndex = 26
         Me.ChkReg.Text = "Tiene región"
         '
+        'BtnDelSympt
+        '
+        Me.BtnDelSympt.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnDelSympt.Animated = True
+        Me.BtnDelSympt.AnimationHoverSpeed = 0.07!
+        Me.BtnDelSympt.AnimationSpeed = 0.03!
+        Me.BtnDelSympt.BackColor = System.Drawing.Color.Transparent
+        Me.BtnDelSympt.BaseColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.BtnDelSympt.BorderColor = System.Drawing.Color.Black
+        Me.BtnDelSympt.DialogResult = System.Windows.Forms.DialogResult.None
+        Me.BtnDelSympt.FocusedColor = System.Drawing.Color.Empty
+        Me.BtnDelSympt.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnDelSympt.ForeColor = System.Drawing.Color.White
+        Me.BtnDelSympt.Image = CType(resources.GetObject("BtnDelSympt.Image"), System.Drawing.Image)
+        Me.BtnDelSympt.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.BtnDelSympt.ImageOffsetX = -10
+        Me.BtnDelSympt.ImageSize = New System.Drawing.Size(20, 20)
+        Me.BtnDelSympt.Location = New System.Drawing.Point(569, 298)
+        Me.BtnDelSympt.Name = "BtnDelSympt"
+        Me.BtnDelSympt.OnHoverBaseColor = System.Drawing.Color.Teal
+        Me.BtnDelSympt.OnHoverBorderColor = System.Drawing.Color.Black
+        Me.BtnDelSympt.OnHoverForeColor = System.Drawing.Color.White
+        Me.BtnDelSympt.OnHoverImage = Nothing
+        Me.BtnDelSympt.OnPressedColor = System.Drawing.Color.Black
+        Me.BtnDelSympt.Radius = 11
+        Me.BtnDelSympt.Size = New System.Drawing.Size(153, 20)
+        Me.BtnDelSympt.TabIndex = 27
+        Me.BtnDelSympt.Text = "ELIMINAR SÍNTOMA"
+        '
         'FrmSympt
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1060, 640)
+        Me.Controls.Add(Me.BtnDelSympt)
         Me.Controls.Add(Me.ChkReg)
         Me.Controls.Add(Me.GunaLabel1)
         Me.Controls.Add(Me.TxtAddSympt)
@@ -694,4 +725,5 @@ Partial Class FrmSympt
     Friend WithEvents TxtAddSympt As Guna.UI.WinForms.GunaTextBox
     Friend WithEvents GunaLabel1 As Guna.UI.WinForms.GunaLabel
     Friend WithEvents ChkReg As Guna.UI.WinForms.GunaCheckBox
+    Friend WithEvents BtnDelSympt As Guna.UI.WinForms.GunaButton
 End Class

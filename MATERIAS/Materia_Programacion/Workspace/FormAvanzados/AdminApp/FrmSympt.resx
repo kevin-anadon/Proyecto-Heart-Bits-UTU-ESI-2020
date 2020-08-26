@@ -128,6 +128,19 @@
         RK5CYII=
 </value>
   </data>
+  <data name="BtnDelSympt.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        EwAACxMBAJqcGAAAAYtJREFUOE+VVE1OwkAU7hE8mkfwCL2BJG11g5E7sNNFjd6ABbRa0sTAFExMS8CN
+        LqokRKKYcb6ZIbadV1pf8gX6fr55PzPPoqQTx0cuG9pnLPS9JEw9FnKF+1jqJqMT7dosDguPRXD+R1KL
+        tJFYnH5JBB7EefJwqsPLAgMV0AZIRNMoQeqU43+AVmk6QYh+EE79LOHZ5oNvf745JNus+d3Ls+GnkWOY
+        tdkNXlf8/WsrSbuzsdRdL5+kbvC2MvwBlwU2svOrBmSBwD1RERfzSB20SAybNw1uQBhXDSjtajkv6YpQ
+        rVhTthSEhgGC337GZOlFQIcsP3c7Iw4gCTGE7iyqJYTP/tAqBGFgTBjlkD3SwHAWdMkxORT0SA0lKukB
+        6GC7pa4PhoIlYBgEUB4CkQ2+VQvUQXXXRr5tXEbxQS4DZIHSIOgr/oOU8hVI9TsRG+ZRbhjKqT2qm8eZ
+        BD3SsQWc6aijacoCAxVwCA4LejqcFv22yWVRQV7aME2iiX23/DRxkNANbblZDLGsXxQKI9hPCX3LAAAA
+        AElFTkSuQmCC
+</value>
+  </data>
   <data name="BtnAddSympt.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
