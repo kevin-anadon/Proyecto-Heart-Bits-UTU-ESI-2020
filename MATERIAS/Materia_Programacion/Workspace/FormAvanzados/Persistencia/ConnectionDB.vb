@@ -26,12 +26,27 @@ Public Class ConnectionDB
     'Return coleccion
     'End Function
 
+    Public Function CheckLog(user As String, pass As String) As Boolean
+        Dim con As Connection = connect()
+        Dim check As Boolean = False
+        Dim rs As Recordset
+        rs = con.Execute("SELECT ci FROM persona WHERE id_tipo=1 and usuario='" + user + "' and contrasena='" + pass + "'")
+        If rs.EOF Then
+            Return check
+        Else
+            check = True
+            Return check
+        End If
+    End Function
+
     Public Function ObtainTable(nameTable As String) As Recordset
         Dim con As Connection = connect()
         If nameTable = "sintoma" Then
             Return con.Execute("SELECT s.descripcion,r.nombre FROM sintoma s LEFT JOIN region r ON(s.id_region=r.id) ORDER BY s.descripcion, r.nombre")
         ElseIf nameTable = "region" Then
             Return con.Execute("SELECT nombre FROM region ORDER BY nombre")
+        Else
+            Return Nothing
         End If
     End Function
 

@@ -121,7 +121,7 @@ Partial Class FrmLogin
         Me.TxtUser.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.TxtUser.Radius = 11
         Me.TxtUser.SelectedText = ""
-        Me.TxtUser.Size = New System.Drawing.Size(317, 49)
+        Me.TxtUser.Size = New System.Drawing.Size(318, 49)
         Me.TxtUser.TabIndex = 17
         '
         'TxtPass
@@ -140,7 +140,7 @@ Partial Class FrmLogin
         Me.TxtPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.TxtPass.Radius = 11
         Me.TxtPass.SelectedText = ""
-        Me.TxtPass.Size = New System.Drawing.Size(317, 49)
+        Me.TxtPass.Size = New System.Drawing.Size(318, 49)
         Me.TxtPass.TabIndex = 18
         '
         'BtnLogin
