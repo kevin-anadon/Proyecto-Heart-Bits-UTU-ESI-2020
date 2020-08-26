@@ -11,6 +11,7 @@ Public Class FrmSympt
     Dim SymptSelected As String
 
     Dim rsympt As Recordset = db.ObtainTable("sintoma")
+    Dim rspath As Recordset = db.ObtainTable("patologia")
     Dim rreg As Recordset = db.ObtainTable("region")
 
     Public Sub ReloadDgv(i As Integer)
@@ -32,6 +33,16 @@ Public Class FrmSympt
         End If
     End Sub
 
+    Public Sub ReloadChkL()
+        Dim daPath As New System.Data.OleDb.OleDbDataAdapter()
+        Dim dsPath = New DataSet
+        daPath.Fill(dsPath, rspath, "Pathologies")
+
+        'For Each i As Integer In daPath
+        'kList.DataSource = (dsPath.Tables("Pathologies"))
+        'ChkList.Refresh()
+    End Sub
+
     Public Sub ReloadCmb()
         Dim dacmb As New System.Data.OleDb.OleDbDataAdapter()
         Dim ds = New DataSet
@@ -48,6 +59,7 @@ Public Class FrmSympt
     Private Sub FrmSympt_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width - 2, Height - 2, 15, 15))
         ReloadDgv(0)
+        ReloadChkL()
         ReloadCmb()
     End Sub
 
@@ -98,7 +110,7 @@ Public Class FrmSympt
     End Sub
 
     Private Sub BtnAddSympt_Click(sender As Object, e As EventArgs) Handles BtnAddSympt.Click
-        If TxtAddSympt.Text.Trim.Length = 0 Then
+        If TxtAddSympt.Text.Trim.Length = 0 Or TxtAddSympt.Text = "" Then
             MessageBox.Show("CAMPOS VACIOS!!")
         Else
             If Not ChkReg.Checked Then

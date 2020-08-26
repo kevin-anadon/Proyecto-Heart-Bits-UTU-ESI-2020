@@ -52,9 +52,10 @@ Partial Class FrmSympt
         Me.BtnRefresh = New Guna.UI.WinForms.GunaButton()
         Me.BtnAddSympt = New Guna.UI.WinForms.GunaButton()
         Me.TxtAddSympt = New Guna.UI.WinForms.GunaTextBox()
-        Me.GunaLabel1 = New Guna.UI.WinForms.GunaLabel()
         Me.ChkReg = New Guna.UI.WinForms.GunaCheckBox()
         Me.BtnDelSympt = New Guna.UI.WinForms.GunaButton()
+        Me.ChkList = New System.Windows.Forms.CheckedListBox()
+        Me.GunaLabel1 = New Guna.UI.WinForms.GunaLabel()
         Me.PanelButtons.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelLeft.SuspendLayout()
@@ -604,17 +605,6 @@ Partial Class FrmSympt
         Me.TxtAddSympt.TabIndex = 24
         Me.TxtAddSympt.Text = "Ingrese nombre de nuevo síntoma"
         '
-        'GunaLabel1
-        '
-        Me.GunaLabel1.AutoSize = True
-        Me.GunaLabel1.BackColor = System.Drawing.Color.White
-        Me.GunaLabel1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.GunaLabel1.Location = New System.Drawing.Point(842, 202)
-        Me.GunaLabel1.Name = "GunaLabel1"
-        Me.GunaLabel1.Size = New System.Drawing.Size(178, 15)
-        Me.GunaLabel1.TabIndex = 25
-        Me.GunaLabel1.Text = "Elija la región del nuevo síntoma"
-        '
         'ChkReg
         '
         Me.ChkReg.BackColor = System.Drawing.Color.White
@@ -622,7 +612,7 @@ Partial Class FrmSympt
         Me.ChkReg.CheckedOffColor = System.Drawing.SystemColors.Desktop
         Me.ChkReg.CheckedOnColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
         Me.ChkReg.FillColor = System.Drawing.Color.White
-        Me.ChkReg.Location = New System.Drawing.Point(733, 224)
+        Me.ChkReg.Location = New System.Drawing.Point(832, 194)
         Me.ChkReg.Name = "ChkReg"
         Me.ChkReg.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.ChkReg.Size = New System.Drawing.Size(93, 20)
@@ -658,15 +648,37 @@ Partial Class FrmSympt
         Me.BtnDelSympt.TabIndex = 27
         Me.BtnDelSympt.Text = "ELIMINAR SÍNTOMA"
         '
+        'ChkList
+        '
+        Me.ChkList.CheckOnClick = True
+        Me.ChkList.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ChkList.FormattingEnabled = True
+        Me.ChkList.Location = New System.Drawing.Point(688, 188)
+        Me.ChkList.Name = "ChkList"
+        Me.ChkList.Size = New System.Drawing.Size(138, 94)
+        Me.ChkList.TabIndex = 28
+        '
+        'GunaLabel1
+        '
+        Me.GunaLabel1.AutoSize = True
+        Me.GunaLabel1.BackColor = System.Drawing.Color.White
+        Me.GunaLabel1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.GunaLabel1.Location = New System.Drawing.Point(691, 166)
+        Me.GunaLabel1.Name = "GunaLabel1"
+        Me.GunaLabel1.Size = New System.Drawing.Size(132, 15)
+        Me.GunaLabel1.TabIndex = 29
+        Me.GunaLabel1.Text = "Asociación a patologías"
+        '
         'FrmSympt
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1060, 640)
+        Me.Controls.Add(Me.GunaLabel1)
+        Me.Controls.Add(Me.ChkList)
         Me.Controls.Add(Me.MzButtonWindows1)
         Me.Controls.Add(Me.BtnDelSympt)
         Me.Controls.Add(Me.ChkReg)
-        Me.Controls.Add(Me.GunaLabel1)
         Me.Controls.Add(Me.TxtAddSympt)
         Me.Controls.Add(Me.BtnAddSympt)
         Me.Controls.Add(Me.BtnRefresh)
@@ -723,7 +735,8 @@ Partial Class FrmSympt
     Friend WithEvents BtnRefresh As Guna.UI.WinForms.GunaButton
     Friend WithEvents BtnAddSympt As Guna.UI.WinForms.GunaButton
     Friend WithEvents TxtAddSympt As Guna.UI.WinForms.GunaTextBox
-    Friend WithEvents GunaLabel1 As Guna.UI.WinForms.GunaLabel
     Friend WithEvents ChkReg As Guna.UI.WinForms.GunaCheckBox
     Friend WithEvents BtnDelSympt As Guna.UI.WinForms.GunaButton
+    Friend WithEvents GunaLabel1 As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents ChkList As CheckedListBox
 End Class
