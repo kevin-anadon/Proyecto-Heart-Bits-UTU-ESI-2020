@@ -9,32 +9,30 @@ Public Class ConnectionDB
         Return connection
     End Function
 
-    'Public Function listarPriorities() As List(Of Priority)
-    'Dim coleccion As New List(Of Priority)
+    Public Sub InsertSympt(sympt As String, region As String)
+        Dim con As Connection = connect()
 
-    'Dim conn As Connection = connect()
-    'Dim rs As Recordset = conn.Execute("SELECT nombre FROM prioridad")
-
-    'While (Not rs.EOF)
-    'pr As New Priority()
-    '   pr.name = rs.Fields("nombre").Value.ToString()
-
-    '    coleccion.Add(pr)
-    '    rs.MoveNext()
-    'End While
-    ' conn.Close()
-    'Return coleccion
-    'End Function
+        If region = "NULL" Then
+            Dim rsIinsert As Recordset = con.Execute("INSERT INTO sintoma(descripcion) VALUES('" & sympt & "');")
+        Else
+            Dim rsSelectIdReg As Recordset = con.Execute("SELECT id FROM region WHERE nombre='" + region + "';")
+            Dim idreg As Integer = DirectCast(rsSelectIdReg.Fields("id").Value, Integer)
+            Dim rsIinsert As Recordset = con.Execute("INSERT INTO sintoma(id_region,descripcion) VALUES(" & idreg & "," + "'" & sympt & "');")
+        End If
+        con.Close()
+    End Sub
 
     Public Function CheckLog(user As String, pass As String) As Boolean
         Dim con As Connection = connect()
         Dim check As Boolean = False
         Dim rs As Recordset
-        rs = con.Execute("SELECT ci FROM persona WHERE id_tipo=1 and usuario='" + user + "' and contrasena='" + pass + "'")
+        rs = con.Execute("SELECT ci FROM persona WHERE id_tipo=1 and usuario='" + user + "' and contrasena='" + pass + "';")
         If rs.EOF Then
+            con.Close()
             Return check
         Else
             check = True
+            con.Close()
             Return check
         End If
     End Function
@@ -42,21 +40,26 @@ Public Class ConnectionDB
     Public Function ObtainTable(nameTable As String) As Recordset
         Dim con As Connection = connect()
         If nameTable = "sintoma" Then
-            Return con.Execute("SELECT s.descripcion As Síntoma,r.nombre As Región FROM sintoma s LEFT JOIN region r ON(s.id_region=r.id) ORDER BY s.descripcion, r.nombre")
+
+            Return con.Execute("SELECT s.descripcion As Síntoma,r.nombre As Región FROM sintoma s LEFT JOIN region r ON(s.id_region=r.id) ORDER BY s.descripcion, r.nombre;")
         ElseIf nameTable = "region" Then
-            Return con.Execute("SELECT nombre FROM region ORDER BY nombre")
+
+            Return con.Execute("SELECT nombre FROM region ORDER BY nombre;")
         Else
+            con.Close()
             Return Nothing
         End If
     End Function
 
     Public Function SearchSympt(nameDesc As String) As Recordset
         Dim con As Connection = connect()
-        Return con.Execute("SELECT s.descripcion As Síntoma,r.nombre As Región FROM sintoma s LEFT JOIN region r ON(s.id_region=r.id) WHERE s.descripcion like '" & nameDesc & "%' ORDER BY s.descripcion, r.nombre")
+
+        Return con.Execute("SELECT s.descripcion As Síntoma,r.nombre As Región FROM sintoma s LEFT JOIN region r ON(s.id_region=r.id) WHERE s.descripcion like '" & nameDesc & "%' ORDER BY s.descripcion, r.nombre;")
     End Function
 
     Public Function SearchRegion(nameRegion As String) As Recordset 'SIN UTILIZAR HASTA EL MOMENTO
         Dim conreg As Connection = connect()
-        Return conreg.Execute("SELECT s.descripcion Síntoma,r.nombre Región FROM sintoma s LEFT JOIN region r ON(s.id_region=r.id) WHERE r.nombre ='" + nameRegion + "'")
+
+        Return conreg.Execute("SELECT s.descripcion Síntoma,r.nombre Región FROM sintoma s LEFT JOIN region r ON(s.id_region=r.id) WHERE r.nombre ='" + nameRegion + "';")
     End Function
 End Class

@@ -9,23 +9,31 @@ Public Class FrmSympt
     Dim rsympt As Recordset = db.ObtainTable("sintoma")
     Dim rreg As Recordset = db.ObtainTable("region")
 
+    Public Sub ReloadDgv()
+        Dim da As New System.Data.OleDb.OleDbDataAdapter()
+        Dim ds = New DataSet
+        da.Fill(ds, rsympt, "Tabla")
+        DgvSympt.DataSource = (ds.Tables("Tabla"))
+        DgvSympt.Refresh()
+    End Sub
+
+    Public Sub ReloadCmb()
+        Dim dacmb As New System.Data.OleDb.OleDbDataAdapter()
+        Dim ds = New DataSet
+        'Inserta todas las regiones en el cmbbox
+        dacmb.Fill(ds, rreg, "region")
+        cmbregion.DataSource = (ds.Tables("region"))
+        cmbregion.DisplayMember = "nombre"
+    End Sub
+
     <DllImport("Gdi32.dll", EntryPoint:="CreateRoundRectRgn")>
     Private Shared Function CreateRoundRectRgn(LR As Integer, TR As Integer, RR As Integer, BR As Integer, WE As Integer, HE As Integer) As IntPtr
 
     End Function
     Private Sub FrmSympt_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width - 2, Height - 2, 15, 15))
-
-        Dim da, dacmb As New System.Data.OleDb.OleDbDataAdapter()
-        Dim ds = New DataSet
-        da.Fill(ds, rsympt, "sintoma")
-        DgvSympt.DataSource = (ds.Tables("sintoma"))
-        DgvSympt.Refresh()
-
-        'Inserta todas las regiones en el cmbbox
-        dacmb.Fill(ds, rreg, "region")
-        cmbregion.DataSource = (ds.Tables("region"))
-        cmbregion.DisplayMember = "nombre"
+        ReloadDgv()
+        ReloadCmb()
     End Sub
 
     Private Sub MzButtonWindows1_Click(sender As Object, e As EventArgs) Handles MzButtonWindows1.Click
@@ -76,6 +84,27 @@ Public Class FrmSympt
     End Sub
 
     Private Sub BtnAddSympt_Click(sender As Object, e As EventArgs) Handles BtnAddSympt.Click
+        If TxtAddSympt.Text.Trim.Length = 0 Then
+            MessageBox.Show("CAMPOS VACIOS!!")
+        Else
+            If Not ChkReg.Checked Then
+                Dim region As String = "NULL"
+                db.InsertSympt(TxtAddSympt.Text.ToString(), region)
+            Else
+                db.InsertSympt(TxtAddSympt.Text.ToString(), cmbregion.Text.ToString())
+            End If
+        End If
+    End Sub
 
+    Private Sub TxtAddSympt_Enter(sender As Object, e As EventArgs) Handles TxtAddSympt.Enter
+        TxtAddSympt.Clear()
+    End Sub
+
+    Private Sub ChkReg_CheckedChanged(sender As Object, e As EventArgs) Handles ChkReg.CheckedChanged
+        If ChkReg.Checked Then
+            cmbregion.Show()
+        Else
+            cmbregion.Hide()
+        End If
     End Sub
 End Class
