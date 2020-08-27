@@ -1,7 +1,7 @@
 ﻿Public Class Admin
     Inherits Employee
 
-    Private Property pin As Integer = 0
+    Public Property pin As Integer = 0
 
     Public Sub New()
 

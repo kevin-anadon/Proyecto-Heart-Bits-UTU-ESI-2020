@@ -1,6 +1,6 @@
 ﻿Public Class Department
 
-    Private Property name As String = Nothing
+    Public Property name As String = Nothing
 
     Public Sub New()
 

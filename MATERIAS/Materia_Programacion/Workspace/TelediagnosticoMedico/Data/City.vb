@@ -2,8 +2,8 @@
 
 Public Class City
 
-    Private Property department As Department
-    Private Property name As String = Nothing
+    Public Property department As Department
+    Public Property name As String = Nothing
 
     Public Sub New()
 

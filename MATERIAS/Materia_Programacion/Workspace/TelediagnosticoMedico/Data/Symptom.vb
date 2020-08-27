@@ -1,8 +1,8 @@
 ﻿Public Class Symptom
     Inherits Region
 
-    Private Property region As Region
-    Private Property description As String = Nothing
+    Public Property region As Region
+    Public Property description As String = Nothing
 
     Public Sub New()
 
