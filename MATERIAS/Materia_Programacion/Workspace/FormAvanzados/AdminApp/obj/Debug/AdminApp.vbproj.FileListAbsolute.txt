@@ -89,3 +89,32 @@ D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\Adm
 D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\AdminApp\obj\Debug\AdminApp.vbproj.ResolveComReference.cache
 D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\AdminApp\obj\Debug\AdminApp.FrmAlertRemoveSymptom.resources
 D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\AdminApp\obj\Debug\AdminApp.FrmModSympt.resources
+E:\Save de Nitsuga\Estudio\ESI Buceo\Clase 3BB 2020\- Proyecto Heart Bits 2020\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\AdminApp\bin\Debug\AdminApp.exe.config
+E:\Save de Nitsuga\Estudio\ESI Buceo\Clase 3BB 2020\- Proyecto Heart Bits 2020\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\AdminApp\bin\Debug\AdminApp.exe
+E:\Save de Nitsuga\Estudio\ESI Buceo\Clase 3BB 2020\- Proyecto Heart Bits 2020\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\AdminApp\bin\Debug\AdminApp.pdb
+E:\Save de Nitsuga\Estudio\ESI Buceo\Clase 3BB 2020\- Proyecto Heart Bits 2020\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\AdminApp\bin\Debug\AdminApp.xml
+E:\Save de Nitsuga\Estudio\ESI Buceo\Clase 3BB 2020\- Proyecto Heart Bits 2020\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\AdminApp\bin\Debug\Data.dll
+E:\Save de Nitsuga\Estudio\ESI Buceo\Clase 3BB 2020\- Proyecto Heart Bits 2020\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\AdminApp\bin\Debug\Logica.dll
+E:\Save de Nitsuga\Estudio\ESI Buceo\Clase 3BB 2020\- Proyecto Heart Bits 2020\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\AdminApp\bin\Debug\Persistencia.dll
+E:\Save de Nitsuga\Estudio\ESI Buceo\Clase 3BB 2020\- Proyecto Heart Bits 2020\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\AdminApp\bin\Debug\Data.pdb
+E:\Save de Nitsuga\Estudio\ESI Buceo\Clase 3BB 2020\- Proyecto Heart Bits 2020\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\AdminApp\bin\Debug\Data.xml
+E:\Save de Nitsuga\Estudio\ESI Buceo\Clase 3BB 2020\- Proyecto Heart Bits 2020\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\AdminApp\bin\Debug\Logica.pdb
+E:\Save de Nitsuga\Estudio\ESI Buceo\Clase 3BB 2020\- Proyecto Heart Bits 2020\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\AdminApp\bin\Debug\Logica.xml
+E:\Save de Nitsuga\Estudio\ESI Buceo\Clase 3BB 2020\- Proyecto Heart Bits 2020\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\AdminApp\bin\Debug\Persistencia.pdb
+E:\Save de Nitsuga\Estudio\ESI Buceo\Clase 3BB 2020\- Proyecto Heart Bits 2020\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\AdminApp\bin\Debug\Persistencia.xml
+E:\Save de Nitsuga\Estudio\ESI Buceo\Clase 3BB 2020\- Proyecto Heart Bits 2020\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\AdminApp\obj\Debug\AdminApp.vbprojAssemblyReference.cache
+E:\Save de Nitsuga\Estudio\ESI Buceo\Clase 3BB 2020\- Proyecto Heart Bits 2020\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\AdminApp\obj\Debug\Interop.ADODB.dll
+E:\Save de Nitsuga\Estudio\ESI Buceo\Clase 3BB 2020\- Proyecto Heart Bits 2020\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\AdminApp\obj\Debug\AdminApp.vbproj.ResolveComReference.cache
+E:\Save de Nitsuga\Estudio\ESI Buceo\Clase 3BB 2020\- Proyecto Heart Bits 2020\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\AdminApp\obj\Debug\AdminApp.FrmAlertRemoveSymptom.resources
+E:\Save de Nitsuga\Estudio\ESI Buceo\Clase 3BB 2020\- Proyecto Heart Bits 2020\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\AdminApp\obj\Debug\AdminApp.FrmModSympt.resources
+E:\Save de Nitsuga\Estudio\ESI Buceo\Clase 3BB 2020\- Proyecto Heart Bits 2020\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\AdminApp\obj\Debug\AdminApp.FrmSympt.resources
+E:\Save de Nitsuga\Estudio\ESI Buceo\Clase 3BB 2020\- Proyecto Heart Bits 2020\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\AdminApp\obj\Debug\AdminApp.FrmHome.resources
+E:\Save de Nitsuga\Estudio\ESI Buceo\Clase 3BB 2020\- Proyecto Heart Bits 2020\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\AdminApp\obj\Debug\AdminApp.Resources.resources
+E:\Save de Nitsuga\Estudio\ESI Buceo\Clase 3BB 2020\- Proyecto Heart Bits 2020\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\AdminApp\obj\Debug\AdminApp.FrmLogin.resources
+E:\Save de Nitsuga\Estudio\ESI Buceo\Clase 3BB 2020\- Proyecto Heart Bits 2020\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\AdminApp\obj\Debug\AdminApp.FrmSplashScreen.resources
+E:\Save de Nitsuga\Estudio\ESI Buceo\Clase 3BB 2020\- Proyecto Heart Bits 2020\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\AdminApp\obj\Debug\AdminApp.vbproj.GenerateResource.cache
+E:\Save de Nitsuga\Estudio\ESI Buceo\Clase 3BB 2020\- Proyecto Heart Bits 2020\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\AdminApp\obj\Debug\AdminApp.vbproj.CoreCompileInputs.cache
+E:\Save de Nitsuga\Estudio\ESI Buceo\Clase 3BB 2020\- Proyecto Heart Bits 2020\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\AdminApp\obj\Debug\AdminApp.vbproj.CopyComplete
+E:\Save de Nitsuga\Estudio\ESI Buceo\Clase 3BB 2020\- Proyecto Heart Bits 2020\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\AdminApp\obj\Debug\AdminApp.exe
+E:\Save de Nitsuga\Estudio\ESI Buceo\Clase 3BB 2020\- Proyecto Heart Bits 2020\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\AdminApp\obj\Debug\AdminApp.xml
+E:\Save de Nitsuga\Estudio\ESI Buceo\Clase 3BB 2020\- Proyecto Heart Bits 2020\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\AdminApp\obj\Debug\AdminApp.pdb

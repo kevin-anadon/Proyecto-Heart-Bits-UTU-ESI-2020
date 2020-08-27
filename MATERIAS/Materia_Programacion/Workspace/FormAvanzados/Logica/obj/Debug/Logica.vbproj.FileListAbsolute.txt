@@ -15,3 +15,20 @@ D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\Log
 D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\Logica\obj\Debug\Logica.dll
 D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\Logica\obj\Debug\Logica.xml
 D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\Logica\obj\Debug\Logica.pdb
+E:\Save de Nitsuga\Estudio\ESI Buceo\Clase 3BB 2020\- Proyecto Heart Bits 2020\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\Logica\bin\Debug\Logica.dll
+E:\Save de Nitsuga\Estudio\ESI Buceo\Clase 3BB 2020\- Proyecto Heart Bits 2020\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\Logica\bin\Debug\Logica.pdb
+E:\Save de Nitsuga\Estudio\ESI Buceo\Clase 3BB 2020\- Proyecto Heart Bits 2020\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\Logica\bin\Debug\Logica.xml
+E:\Save de Nitsuga\Estudio\ESI Buceo\Clase 3BB 2020\- Proyecto Heart Bits 2020\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\Logica\bin\Debug\Data.dll
+E:\Save de Nitsuga\Estudio\ESI Buceo\Clase 3BB 2020\- Proyecto Heart Bits 2020\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\Logica\bin\Debug\Persistencia.dll
+E:\Save de Nitsuga\Estudio\ESI Buceo\Clase 3BB 2020\- Proyecto Heart Bits 2020\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\Logica\bin\Debug\Data.pdb
+E:\Save de Nitsuga\Estudio\ESI Buceo\Clase 3BB 2020\- Proyecto Heart Bits 2020\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\Logica\bin\Debug\Data.xml
+E:\Save de Nitsuga\Estudio\ESI Buceo\Clase 3BB 2020\- Proyecto Heart Bits 2020\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\Logica\bin\Debug\Persistencia.pdb
+E:\Save de Nitsuga\Estudio\ESI Buceo\Clase 3BB 2020\- Proyecto Heart Bits 2020\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\Logica\bin\Debug\Persistencia.xml
+E:\Save de Nitsuga\Estudio\ESI Buceo\Clase 3BB 2020\- Proyecto Heart Bits 2020\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\Logica\obj\Debug\Logica.vbprojAssemblyReference.cache
+E:\Save de Nitsuga\Estudio\ESI Buceo\Clase 3BB 2020\- Proyecto Heart Bits 2020\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\Logica\obj\Debug\Logica.Resources.resources
+E:\Save de Nitsuga\Estudio\ESI Buceo\Clase 3BB 2020\- Proyecto Heart Bits 2020\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\Logica\obj\Debug\Logica.vbproj.GenerateResource.cache
+E:\Save de Nitsuga\Estudio\ESI Buceo\Clase 3BB 2020\- Proyecto Heart Bits 2020\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\Logica\obj\Debug\Logica.vbproj.CoreCompileInputs.cache
+E:\Save de Nitsuga\Estudio\ESI Buceo\Clase 3BB 2020\- Proyecto Heart Bits 2020\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\Logica\obj\Debug\Logica.vbproj.CopyComplete
+E:\Save de Nitsuga\Estudio\ESI Buceo\Clase 3BB 2020\- Proyecto Heart Bits 2020\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\Logica\obj\Debug\Logica.dll
+E:\Save de Nitsuga\Estudio\ESI Buceo\Clase 3BB 2020\- Proyecto Heart Bits 2020\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\Logica\obj\Debug\Logica.xml
+E:\Save de Nitsuga\Estudio\ESI Buceo\Clase 3BB 2020\- Proyecto Heart Bits 2020\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\Logica\obj\Debug\Logica.pdb

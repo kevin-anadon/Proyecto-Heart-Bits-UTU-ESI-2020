@@ -14,3 +14,19 @@ D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\Per
 D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\Persistencia\obj\Debug\Persistencia.pdb
 D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\Persistencia\obj\Debug\Interop.ADODB.dll
 D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\Persistencia\obj\Debug\Persistencia.vbproj.ResolveComReference.cache
+E:\Save de Nitsuga\Estudio\ESI Buceo\Clase 3BB 2020\- Proyecto Heart Bits 2020\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\Persistencia\bin\Debug\Persistencia.dll
+E:\Save de Nitsuga\Estudio\ESI Buceo\Clase 3BB 2020\- Proyecto Heart Bits 2020\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\Persistencia\bin\Debug\Persistencia.pdb
+E:\Save de Nitsuga\Estudio\ESI Buceo\Clase 3BB 2020\- Proyecto Heart Bits 2020\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\Persistencia\bin\Debug\Persistencia.xml
+E:\Save de Nitsuga\Estudio\ESI Buceo\Clase 3BB 2020\- Proyecto Heart Bits 2020\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\Persistencia\bin\Debug\Data.dll
+E:\Save de Nitsuga\Estudio\ESI Buceo\Clase 3BB 2020\- Proyecto Heart Bits 2020\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\Persistencia\bin\Debug\Data.pdb
+E:\Save de Nitsuga\Estudio\ESI Buceo\Clase 3BB 2020\- Proyecto Heart Bits 2020\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\Persistencia\bin\Debug\Data.xml
+E:\Save de Nitsuga\Estudio\ESI Buceo\Clase 3BB 2020\- Proyecto Heart Bits 2020\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\Persistencia\obj\Debug\Persistencia.vbprojAssemblyReference.cache
+E:\Save de Nitsuga\Estudio\ESI Buceo\Clase 3BB 2020\- Proyecto Heart Bits 2020\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\Persistencia\obj\Debug\Interop.ADODB.dll
+E:\Save de Nitsuga\Estudio\ESI Buceo\Clase 3BB 2020\- Proyecto Heart Bits 2020\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\Persistencia\obj\Debug\Persistencia.vbproj.ResolveComReference.cache
+E:\Save de Nitsuga\Estudio\ESI Buceo\Clase 3BB 2020\- Proyecto Heart Bits 2020\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\Persistencia\obj\Debug\Persistencia.Resources.resources
+E:\Save de Nitsuga\Estudio\ESI Buceo\Clase 3BB 2020\- Proyecto Heart Bits 2020\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\Persistencia\obj\Debug\Persistencia.vbproj.GenerateResource.cache
+E:\Save de Nitsuga\Estudio\ESI Buceo\Clase 3BB 2020\- Proyecto Heart Bits 2020\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\Persistencia\obj\Debug\Persistencia.vbproj.CoreCompileInputs.cache
+E:\Save de Nitsuga\Estudio\ESI Buceo\Clase 3BB 2020\- Proyecto Heart Bits 2020\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\Persistencia\obj\Debug\Persistencia.vbproj.CopyComplete
+E:\Save de Nitsuga\Estudio\ESI Buceo\Clase 3BB 2020\- Proyecto Heart Bits 2020\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\Persistencia\obj\Debug\Persistencia.dll
+E:\Save de Nitsuga\Estudio\ESI Buceo\Clase 3BB 2020\- Proyecto Heart Bits 2020\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\Persistencia\obj\Debug\Persistencia.xml
+E:\Save de Nitsuga\Estudio\ESI Buceo\Clase 3BB 2020\- Proyecto Heart Bits 2020\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\Persistencia\obj\Debug\Persistencia.pdb
