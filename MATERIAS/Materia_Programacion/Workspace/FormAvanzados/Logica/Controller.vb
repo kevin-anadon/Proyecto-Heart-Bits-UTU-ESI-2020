@@ -8,6 +8,9 @@ Public Class Controller
         Return db.ObtainPriorities()
     End Function
 
+    Public Function ObtainRegions() As List(Of Region)
+        Return db.ObtainRegions()
+    End Function
 
 
 End Class

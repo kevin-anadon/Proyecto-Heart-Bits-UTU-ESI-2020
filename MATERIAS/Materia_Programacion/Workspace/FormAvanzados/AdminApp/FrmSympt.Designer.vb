@@ -523,6 +523,7 @@ Partial Class FrmSympt
         Me.cmbregion.OnHoverItemForeColor = System.Drawing.Color.White
         Me.cmbregion.Radius = 5
         Me.cmbregion.Size = New System.Drawing.Size(203, 26)
+        Me.cmbregion.Sorted = True
         Me.cmbregion.TabIndex = 15
         Me.cmbregion.Visible = False
         '
