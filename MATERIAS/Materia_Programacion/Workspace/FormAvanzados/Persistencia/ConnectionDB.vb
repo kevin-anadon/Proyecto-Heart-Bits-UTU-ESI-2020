@@ -79,7 +79,7 @@ Public Class ConnectionDB
         Dim rs As Recordset = con.Execute("SELECT id, nombre FROM region ORDER BY id;")
 
         While (Not rs.EOF)
-            Dim id As String = DirectCast(rs.Fields("id").Value, Integer)
+            Dim id As Integer = DirectCast(rs.Fields("id").Value, Integer)
             Dim name As String = TryCast(rs.Fields("nombre").Value, String)
             regions.Add(New Region(id, name))
             rs.MoveNext()
@@ -95,7 +95,7 @@ Public Class ConnectionDB
         Dim rs As Recordset = con.Execute("SELECT id, nombre FROM prioridad ORDER BY id;")
 
         While (Not rs.EOF)
-            Dim id As String = DirectCast(rs.Fields("id").Value, Integer)
+            Dim id As Integer = DirectCast(rs.Fields("id").Value, Integer)
             Dim name As String = TryCast(rs.Fields("nombre").Value, String)
             priorities.Add(New Priority(id, name))
             rs.MoveNext()
@@ -104,19 +104,24 @@ Public Class ConnectionDB
         Return priorities
     End Function
 
-    Public Function ObtainListSympt() As List(Of String)
-        Dim result As New List(Of String)
+    Public Function ObtainPath() As List(Of Pathology)
+        Dim Pathologies As New List(Of Pathology)
         Dim con As Connection = connect()
 
-        Dim rs As Recordset = con.Execute("SELECT nombre FROM patologia ORDER BY nombre;")
+        Dim rs As Recordset = con.Execute("SELECT id, nombre,descripcion,id_prioridad,indiceMortalidad FROM patologia ORDER BY nombre;")
 
         While (Not rs.EOF)
+            Dim id As Integer = DirectCast(rs.Fields("id").Value, Integer)
+            Dim priority As Priority = TryCast(rs.Fields("id_prioridad").Value, Priority)
             Dim name As String = TryCast(rs.Fields("nombre").Value, String)
-            result.Add(name)
+            Dim description As String = TryCast(rs.Fields("descripcion").Value, String)
+            Dim mortalityIndex As Integer = DirectCast(rs.Fields("indiceMortalidad").Value, Integer)
+
+            Pathologies.Add(New Pathology(id, priority, name, description, mortalityIndex))
             rs.MoveNext()
         End While
         con.Close()
-        Return result
+        Return Pathologies
     End Function
 
     Public Function ObtainTable(nameTable As String) As Recordset

@@ -37,10 +37,13 @@ Public Class FrmSympt
     End Sub
 
     Public Sub ReloadChkL()
-        Dim result As List(Of String) = db.ObtainListSympt()
-        For Each path As String In result
-            ChkList.Items.Add(path)
+        Dim priorname As String = Nothing
+        Dim priorities As List(Of Priority) = log.ObtainPriorities()
+
+        For Each path As Pathology In log.ObtainPath()
+            ChkList.Items.Add(path.name)
         Next
+
     End Sub
 
     Public Sub ReloadCmb()

@@ -12,5 +12,8 @@ Public Class Controller
         Return db.ObtainRegions()
     End Function
 
+    Public Function ObtainPath() As List(Of Pathology)
+        Return db.ObtainPath()
+    End Function
 
 End Class
