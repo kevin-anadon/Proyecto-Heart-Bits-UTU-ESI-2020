@@ -1,7 +1,7 @@
 ﻿Public Class Medic
     Inherits Employee
 
-    Private Property speciality As String = Nothing
+    Public Property speciality As String = Nothing
 
     Public Sub New()
 

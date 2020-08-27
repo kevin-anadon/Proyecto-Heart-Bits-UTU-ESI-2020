@@ -1,5 +1,4 @@
 ﻿Public Class Priority
-
     Public Property id As Integer
     Public Property name As String = Nothing
 

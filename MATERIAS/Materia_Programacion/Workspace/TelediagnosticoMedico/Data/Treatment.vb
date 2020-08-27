@@ -2,10 +2,11 @@
 
 Public Class Treatment
 
-    Private Property pathology As Pathology
-    Private Property name As String = Nothing
-    Private Property description As String = Nothing
-    Private Property kind As String = Nothing
+
+    Public Property pathology As Pathology
+    Public Property name As String = Nothing
+    Public Property description As String = Nothing
+    Public Property kind As String = Nothing
 
     Public Sub New()
 

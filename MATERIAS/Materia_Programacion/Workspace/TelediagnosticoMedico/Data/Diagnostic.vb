@@ -1,13 +1,13 @@
 ﻿Public Class Diagnostic
 
-    Private Enum Kind
+    Public Enum Kind
         Tentativo
         Definitivo
     End Enum
-    Private Property kindDiagnostic As Kind
-    Private Property patient As People
-    Private Property symptom As Symptom
-    Private Property dateD As Date
+    Public Property kindDiagnostic As Kind
+    Public Property patient As People
+    Public Property symptom As Symptom
+    Public Property dateD As Date
 
     Public Sub New()
 
