@@ -13,4 +13,10 @@ Public Class FrmHome
         Me.Dispose()
         frm.Show()
     End Sub
+
+    Private Sub BtnLogout_Click(sender As Object, e As EventArgs) Handles BtnLogout.Click
+        If MsgBox("Está seguro que desea cerrar sesión ?", MsgBoxStyle.YesNoCancel, "Cerrar Programa") = MsgBoxResult.Yes Then
+            End
+        End If
+    End Sub
 End Class

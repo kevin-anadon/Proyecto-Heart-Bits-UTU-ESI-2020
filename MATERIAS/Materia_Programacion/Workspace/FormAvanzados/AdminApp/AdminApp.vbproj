@@ -93,6 +93,12 @@
     <Compile Include="FrmAlertRemoveSymptom.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmModSympt.Designer.vb">
+      <DependentUpon>FrmModSympt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmModSympt.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmSympt.Designer.vb">
       <DependentUpon>FrmSympt.vb</DependentUpon>
     </Compile>
@@ -137,6 +143,9 @@
   <ItemGroup>
     <EmbeddedResource Include="FrmAlertRemoveSymptom.resx">
       <DependentUpon>FrmAlertRemoveSymptom.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmModSympt.resx">
+      <DependentUpon>FrmModSympt.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSympt.resx">
       <DependentUpon>FrmSympt.vb</DependentUpon>

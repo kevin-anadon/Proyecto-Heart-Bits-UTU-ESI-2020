@@ -88,3 +88,4 @@ D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\Adm
 D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\AdminApp\obj\Debug\Interop.ADODB.dll
 D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\AdminApp\obj\Debug\AdminApp.vbproj.ResolveComReference.cache
 D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\AdminApp\obj\Debug\AdminApp.FrmAlertRemoveSymptom.resources
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\FormAvanzados\AdminApp\obj\Debug\AdminApp.FrmModSympt.resources

@@ -9,6 +9,8 @@ Public Class FrmSympt
 
     Dim row As DataGridViewRow
     Dim SymptSelected As String
+    Dim reg As String = Nothing
+
 
     Dim rsympt As Recordset = db.ObtainTable("sintoma")
     Dim rspath As Recordset = db.ObtainTable("patologia")
@@ -34,13 +36,10 @@ Public Class FrmSympt
     End Sub
 
     Public Sub ReloadChkL()
-        Dim daPath As New System.Data.OleDb.OleDbDataAdapter()
-        Dim dsPath = New DataSet
-        daPath.Fill(dsPath, rspath, "Pathologies")
-
-        'For Each i As Integer In daPath
-        'kList.DataSource = (dsPath.Tables("Pathologies"))
-        'ChkList.Refresh()
+        Dim result As List(Of String) = db.ObtainListSympt()
+        For Each path As String In result
+            ChkList.Items.Add(path)
+        Next
     End Sub
 
     Public Sub ReloadCmb()
@@ -110,7 +109,8 @@ Public Class FrmSympt
     End Sub
 
     Private Sub BtnAddSympt_Click(sender As Object, e As EventArgs) Handles BtnAddSympt.Click
-        If TxtAddSympt.Text.Trim.Length = 0 Or TxtAddSympt.Text = "" Then
+        'FALTA IMPLEMENTAR LA ASOCIACION DE UN SINTOMA CON UNA O MÁS PATOLOGIAS
+        If TxtAddSympt.Text.Trim.Length = 0 Or TxtAddSympt.Text = "Ingrese nombre de nuevo síntoma" Or ChkList.CheckedItems.Count = 0 Then
             MessageBox.Show("CAMPOS VACIOS!!")
         Else
             If Not ChkReg.Checked Then
@@ -146,5 +146,29 @@ Public Class FrmSympt
         'Hago comprobación con PIN, mandó el sintoma que se desea borrar a un método de la clase FrmAlertRemoveSymptom
         alerta.ObtainSympt(SymptSelected)
         alerta.ShowDialog()
+    End Sub
+
+    Private Sub DgvSympt_CellContentDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgvSympt.CellContentDoubleClick
+        Dim frmMod As New FrmModSympt()
+
+        row = DgvSympt.CurrentRow
+        SymptSelected = CStr(row.Cells("Síntoma").Value)
+        reg = CStr(row.Cells("Región").Value)
+
+        If reg.Length = 0 Then
+            reg = "No tiene"
+            frmMod.ObtainSympt(SymptSelected, reg)
+            frmMod.ShowDialog()
+        Else
+            frmMod.ObtainSympt(SymptSelected, reg)
+            frmMod.ShowDialog()
+        End If
+
+    End Sub
+
+    Private Sub BtnLogout_Click(sender As Object, e As EventArgs) Handles BtnLogout.Click
+        If MsgBox("Está seguro que desea cerrar sesión ?", MsgBoxStyle.YesNoCancel, "Cerrar Programa") = MsgBoxResult.Yes Then
+            End
+        End If
     End Sub
 End Class

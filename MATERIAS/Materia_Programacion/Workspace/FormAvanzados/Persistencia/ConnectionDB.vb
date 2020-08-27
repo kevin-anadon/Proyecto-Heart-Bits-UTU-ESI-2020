@@ -22,6 +22,17 @@ Public Class ConnectionDB
         con.Close()
     End Sub
 
+    Public Sub UpdateSympt(sympt As String, region As String, symptbefore As String)
+        Dim con As Connection = connect()
+
+        Dim rsSelectIdReg As Recordset = con.Execute("SELECT id FROM region WHERE nombre='" + region + "';")
+        Dim idregion As Integer = DirectCast(rsSelectIdReg.Fields("id").Value, Integer)
+        Dim rsSelectIdSympt As Recordset = con.Execute("SELECT id FROM sintoma WHERE descripcion='" + symptbefore + "';")
+        Dim idsympt As Integer = DirectCast(rsSelectIdSympt.Fields("id").Value, Integer)
+        Dim rsIinsert As Recordset = con.Execute("UPDATE sintoma SET descripcion='" & sympt & "', id_region=" & idregion & " WHERE id=" & idsympt & ";")
+        con.Close()
+    End Sub
+
     Public Sub DelSympt(sympt As String)
         Dim con As Connection = connect()
 
@@ -60,6 +71,21 @@ Public Class ConnectionDB
             con.Close()
             Return check
         End If
+    End Function
+
+    Public Function ObtainListSympt() As List(Of String)
+        Dim result As New List(Of String)
+        Dim con As Connection = connect()
+
+        Dim rs As Recordset = con.Execute("SELECT nombre FROM patologia ORDER BY nombre;")
+
+        While (Not rs.EOF)
+            Dim name As String = TryCast(rs.Fields("nombre").Value, String)
+            result.Add(name)
+            rs.MoveNext()
+        End While
+        con.Close()
+        Return result
     End Function
 
     Public Function ObtainTable(nameTable As String) As Recordset
