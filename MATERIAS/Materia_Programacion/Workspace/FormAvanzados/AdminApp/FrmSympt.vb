@@ -6,6 +6,7 @@ Imports ADODB
 
 Public Class FrmSympt
     Dim db As New ConnectionDB()
+    Dim log As New Controller()
 
     Dim row As DataGridViewRow
     Dim SymptSelected As String
@@ -15,6 +16,7 @@ Public Class FrmSympt
     Dim rsympt As Recordset = db.ObtainTable("sintoma")
     Dim rspath As Recordset = db.ObtainTable("patologia")
     Dim rreg As Recordset = db.ObtainTable("region")
+
 
     Public Sub ReloadDgv(i As Integer)
         If i = 0 Then
@@ -60,6 +62,7 @@ Public Class FrmSympt
         ReloadDgv(0)
         ReloadChkL()
         ReloadCmb()
+        ShowPrior()
     End Sub
 
     Private Sub MzButtonWindows1_Click(sender As Object, e As EventArgs) Handles MzButtonWindows1.Click

@@ -1,7 +1,7 @@
 ﻿Imports ADODB
 Imports Data
 Public Class ConnectionDB
-    Dim Priorities As List(Of Priority)
+    Dim priorities As New List(Of Priority)
 
     Private Function connect() As Connection
         Dim connection As New Connection()
@@ -77,9 +77,18 @@ Public Class ConnectionDB
 
 
     Public Function ObtainPriorities() As List(Of Priority)
+        Dim con As Connection = connect()
 
+        Dim rs As Recordset = con.Execute("SELECT id, nombre FROM prioridad ORDER BY id;")
 
-        Return Nothing
+        While (Not rs.EOF)
+            Dim id As String = DirectCast(rs.Fields("id").Value, Integer)
+            Dim name As String = TryCast(rs.Fields("nombre").Value, String)
+            priorities.Add(New Priority(id, name))
+            rs.MoveNext()
+        End While
+        con.Close()
+        Return priorities
     End Function
 
     Public Function ObtainListSympt() As List(Of String)
