@@ -1,6 +1,5 @@
 ﻿Imports Persistencia
 Imports Data
-
 Public Class Controller
     Dim db As New ConnectionDB()
 

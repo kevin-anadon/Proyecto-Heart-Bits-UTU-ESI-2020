@@ -16,13 +16,7 @@ Public Class FrmModSympt
         reg = r
     End Sub
 
-    <DllImport("Gdi32.dll", EntryPoint:="CreateRoundRectRgn")>
-    Private Shared Function CreateRoundRectRgn(LR As Integer, TR As Integer, RR As Integer, BR As Integer, WE As Integer, HE As Integer) As IntPtr
-
-    End Function
-
     Private Sub FrmModSympt_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width - 2, Height - 2, 11, 11))
         LblSymptTop.Text = Sympt.ToUpper()
         TxtDescr.Text = Sympt
         Lblreg.Text = reg

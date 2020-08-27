@@ -1,13 +1,15 @@
 ﻿Public Class Region
-    Public Property id As String = Nothing
-    Public Property name As String = Nothing
+
+    Private Property region As Region
+    Private Property description As String = Nothing
+
     Public Sub New()
 
-    End Sub
+    End Sub 'Empty Constructor (default)
 
-    Public Sub New(id As Integer, name As String)
-        Me.id = id
-        Me.name = name
-    End Sub
+    Public Sub New(region As Region, description As String)
+        Me.region = region
+        Me.description = description
+    End Sub 'Full Constructor
 
 End Class

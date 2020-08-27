@@ -64,7 +64,14 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin.vb" />
+    <Compile Include="City.vb" />
+    <Compile Include="Department.vb" />
+    <Compile Include="Diagnostic.vb" />
+    <Compile Include="Employee.vb" />
+    <Compile Include="Medic.vb" />
     <Compile Include="Pathology.vb" />
+    <Compile Include="People.vb" />
     <Compile Include="Priority.vb" />
     <Compile Include="Region.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -83,6 +90,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Symptom.vb" />
+    <Compile Include="Treatment.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">

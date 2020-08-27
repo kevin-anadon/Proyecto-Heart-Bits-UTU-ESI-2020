@@ -9,11 +9,6 @@ Public Class FrmAlertRemoveSymptom
         Sympt = s
     End Sub
 
-    <DllImport("Gdi32.dll", EntryPoint:="CreateRoundRectRgn")>
-    Private Shared Function CreateRoundRectRgn(LR As Integer, TR As Integer, RR As Integer, BR As Integer, WE As Integer, HE As Integer) As IntPtr
-
-    End Function
-
     Private Sub BtnPin_Click(sender As Object, e As EventArgs) Handles BtnPin.Click
         If TxtPin.Text.Trim.Length = 0 Then
             MessageBox.Show("CAMPOS VACIOS!!")
@@ -37,7 +32,6 @@ Public Class FrmAlertRemoveSymptom
     End Sub
 
     Private Sub FrmAlertRemoveSymptom_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width - 2, Height - 2, 11, 11))
         LblSympt.Text = Sympt
     End Sub
 End Class

@@ -1,13 +1,13 @@
 ﻿Public Class Priority
 
-    Public Property id As Integer = 0
-    Public Property name As String = Nothing
+    Private Property name As String = Nothing
 
     Public Sub New()
 
-    End Sub
-    Public Sub New(id As Integer, name As String)
-        Me.id = id
+    End Sub 'Empty Constructor (default)
+
+    Public Sub New(name As String)
         Me.name = name
-    End Sub
-End Class
+    End Sub 'Full Constructor
+
+End Class 'Priority
