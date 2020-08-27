@@ -1,8 +1,6 @@
 ﻿Imports ADODB
 Imports Data
 Public Class ConnectionDB
-    Dim priorities As New List(Of Priority)
-
     Private Function connect() As Connection
         Dim connection As New Connection()
         connection.ConnectionString = "driver={MySql ODBC 8.0 Unicode Driver};server=127.0.0.1;port=3306;database=telediagnosticomedico_heartbits;uid=root;pwd=;"
@@ -74,10 +72,25 @@ Public Class ConnectionDB
         End If
     End Function
 
+    Public Function ObtainRegions() As List(Of Region)
+        Dim con As Connection = connect()
+        Dim regions As New List(Of Region)
 
+        Dim rs As Recordset = con.Execute("SELECT id, nombre FROM region ORDER BY id;")
+
+        While (Not rs.EOF)
+            Dim id As String = DirectCast(rs.Fields("id").Value, Integer)
+            Dim name As String = TryCast(rs.Fields("nombre").Value, String)
+            regions.Add(New Region(id, name))
+            rs.MoveNext()
+        End While
+        con.Close()
+        Return regions
+    End Function
 
     Public Function ObtainPriorities() As List(Of Priority)
         Dim con As Connection = connect()
+        Dim priorities As New List(Of Priority)
 
         Dim rs As Recordset = con.Execute("SELECT id, nombre FROM prioridad ORDER BY id;")
 

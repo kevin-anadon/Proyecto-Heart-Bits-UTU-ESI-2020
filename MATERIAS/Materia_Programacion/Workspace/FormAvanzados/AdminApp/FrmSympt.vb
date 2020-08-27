@@ -17,7 +17,6 @@ Public Class FrmSympt
     Dim rspath As Recordset = db.ObtainTable("patologia")
     Dim rreg As Recordset = db.ObtainTable("region")
 
-
     Public Sub ReloadDgv(i As Integer)
         If i = 0 Then
             'Opción para el load
@@ -45,12 +44,9 @@ Public Class FrmSympt
     End Sub
 
     Public Sub ReloadCmb()
-        Dim dacmb As New System.Data.OleDb.OleDbDataAdapter()
-        Dim ds = New DataSet
-        'Inserta todas las regiones en el cmbbox
-        dacmb.Fill(ds, rreg, "region")
-        cmbregion.DataSource = (ds.Tables("region"))
-        cmbregion.DisplayMember = "nombre"
+        For Each Region As Region In log.ObtainRegions()
+            cmbregion.Items.Add(Region.name)
+        Next
     End Sub
 
     <DllImport("Gdi32.dll", EntryPoint:="CreateRoundRectRgn")>
@@ -62,7 +58,6 @@ Public Class FrmSympt
         ReloadDgv(0)
         ReloadChkL()
         ReloadCmb()
-        ShowPrior()
     End Sub
 
     Private Sub MzButtonWindows1_Click(sender As Object, e As EventArgs) Handles MzButtonWindows1.Click
