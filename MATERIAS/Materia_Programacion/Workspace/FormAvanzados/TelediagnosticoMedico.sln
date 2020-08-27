@@ -11,6 +11,8 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Persistencia", "Persistenci
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Data", "Data\Data.vbproj", "{B5EE54EF-54BF-45F3-B6A1-4BC72046BBBF}"
 EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "PatientApp", "PatientApp\PatientApp.vbproj", "{015F1C42-A980-43A3-8201-1C7D800EFED4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{B5EE54EF-54BF-45F3-B6A1-4BC72046BBBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B5EE54EF-54BF-45F3-B6A1-4BC72046BBBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B5EE54EF-54BF-45F3-B6A1-4BC72046BBBF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{015F1C42-A980-43A3-8201-1C7D800EFED4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{015F1C42-A980-43A3-8201-1C7D800EFED4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{015F1C42-A980-43A3-8201-1C7D800EFED4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{015F1C42-A980-43A3-8201-1C7D800EFED4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
