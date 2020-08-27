@@ -1,8 +1,8 @@
 ﻿Public Class Pathology
-    Private Property priority As Priority
-    Private Property name As String = Nothing
-    Private Property description As String = Nothing
-    Private Property mortalityIndex As Integer = 0
+    Public Property priority As Priority
+    Public Property name As String = Nothing
+    Public Property description As String = Nothing
+    Public Property mortalityIndex As Integer = 0
 
     Public Sub New()
 

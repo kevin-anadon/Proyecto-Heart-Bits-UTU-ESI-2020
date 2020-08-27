@@ -1,6 +1,7 @@
 ﻿Imports ADODB
 Imports Data
 Public Class ConnectionDB
+    Dim Priorities As List(Of Priority)
 
     Private Function connect() As Connection
         Dim connection As New Connection()
@@ -71,6 +72,14 @@ Public Class ConnectionDB
             con.Close()
             Return check
         End If
+    End Function
+
+
+
+    Public Function ObtainPriorities() As List(Of Priority)
+
+
+        Return Nothing
     End Function
 
     Public Function ObtainListSympt() As List(Of String)

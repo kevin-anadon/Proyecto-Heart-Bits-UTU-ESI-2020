@@ -1,6 +1,6 @@
 ﻿Public Class Symptom
-    Private Property region As Region = Nothing
-    Private Property description As String = Nothing
+    Public Property region As Region = Nothing
+    Public Property description As String = Nothing
 
     Public Sub New()
 
