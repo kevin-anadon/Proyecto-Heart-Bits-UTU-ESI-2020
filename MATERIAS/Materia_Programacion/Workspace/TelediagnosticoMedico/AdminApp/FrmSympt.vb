@@ -106,6 +106,10 @@ Public Class FrmSympt
                 Dim region As String = "NULL"
                 db.InsertSympt(TxtAddSympt.Text.ToString(), region, Pathologies)
                 MessageBox.Show("INGRESADO CON EXITO!!")
+                TxtAddSympt.Text = "Ingrese nombre de nuevo síntoma"
+                For patselected As Integer = 0 To ChkList.Items.Count - 1
+                    ChkList.SetItemChecked(patselected, False)
+                Next
                 ReloadDgv(2)
             Else
                 If cmbregion.Text.Trim.Length() = 0 Then
@@ -113,6 +117,10 @@ Public Class FrmSympt
                 Else
                     db.InsertSympt(TxtAddSympt.Text.ToString(), cmbregion.Text.ToString(), Pathologies)
                     MessageBox.Show("INGRESADO CON EXITO!!")
+                    TxtAddSympt.Text = "Ingrse nombre de nuevo síntoma"
+                    For patselected As Integer = 0 To ChkList.Items.Count - 1
+                        ChkList.SetItemChecked(patselected, False)
+                    Next
                     ReloadDgv(2)
                 End If
             End If

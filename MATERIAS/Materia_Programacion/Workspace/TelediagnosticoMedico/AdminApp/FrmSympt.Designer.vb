@@ -430,6 +430,7 @@ Partial Class FrmSympt
         Me.DgvSympt.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.DgvSympt.Location = New System.Drawing.Point(205, 324)
         Me.DgvSympt.Name = "DgvSympt"
+        Me.DgvSympt.ReadOnly = True
         Me.DgvSympt.RowHeadersVisible = False
         Me.DgvSympt.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DgvSympt.Size = New System.Drawing.Size(843, 297)
@@ -448,7 +449,7 @@ Partial Class FrmSympt
         Me.DgvSympt.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White
         Me.DgvSympt.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
         Me.DgvSympt.ThemeStyle.HeaderStyle.Height = 26
-        Me.DgvSympt.ThemeStyle.ReadOnly = False
+        Me.DgvSympt.ThemeStyle.ReadOnly = True
         Me.DgvSympt.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White
         Me.DgvSympt.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.DgvSympt.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Segoe UI", 10.5!)

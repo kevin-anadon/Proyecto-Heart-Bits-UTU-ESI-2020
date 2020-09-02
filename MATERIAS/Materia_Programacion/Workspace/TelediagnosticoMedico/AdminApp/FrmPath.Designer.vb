@@ -72,7 +72,7 @@ Partial Class FrmPath
         Me.BtnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.BtnClose.Cursor = System.Windows.Forms.Cursors.Default
         Me.BtnClose.EstiloButton = BWCMM.MZButtonWindows.EstiloDeButton.Windows
-        Me.BtnClose.Location = New System.Drawing.Point(1017, 2)
+        Me.BtnClose.Location = New System.Drawing.Point(1020, 0)
         Me.BtnClose.Name = "BtnClose"
         Me.BtnClose.ParentControl = Me
         Me.BtnClose.Size = New System.Drawing.Size(40, 24)
@@ -87,7 +87,7 @@ Partial Class FrmPath
         Me.BtnMax.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.BtnMax.Cursor = System.Windows.Forms.Cursors.Default
         Me.BtnMax.EstiloButton = BWCMM.MZButtonWindows.EstiloDeButton.Windows
-        Me.BtnMax.Location = New System.Drawing.Point(977, 2)
+        Me.BtnMax.Location = New System.Drawing.Point(980, 0)
         Me.BtnMax.Name = "BtnMax"
         Me.BtnMax.ParentControl = Me
         Me.BtnMax.Size = New System.Drawing.Size(40, 24)
@@ -102,7 +102,7 @@ Partial Class FrmPath
         Me.BtnMin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.BtnMin.Cursor = System.Windows.Forms.Cursors.Default
         Me.BtnMin.EstiloButton = BWCMM.MZButtonWindows.EstiloDeButton.Windows
-        Me.BtnMin.Location = New System.Drawing.Point(937, 2)
+        Me.BtnMin.Location = New System.Drawing.Point(940, 0)
         Me.BtnMin.Name = "BtnMin"
         Me.BtnMin.ParentControl = Me
         Me.BtnMin.Size = New System.Drawing.Size(40, 24)

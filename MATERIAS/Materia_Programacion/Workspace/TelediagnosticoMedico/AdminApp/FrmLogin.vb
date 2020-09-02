@@ -41,4 +41,11 @@ Public Class FrmLogin
             End Try
         End If
     End Sub
+
+    Private Sub TxtPass_KeyDown(sender As Object, e As KeyEventArgs) Handles TxtPass.KeyDown
+        'Detectar si presiona enter, que accione el botón Iniciar Sesión
+        If e.KeyCode = Keys.Enter Then
+            BtnLogin.PerformClick()
+        End If
+    End Sub
 End Class
