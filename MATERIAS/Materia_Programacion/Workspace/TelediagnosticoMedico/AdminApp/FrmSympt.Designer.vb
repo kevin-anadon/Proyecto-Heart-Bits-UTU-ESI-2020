@@ -56,6 +56,7 @@ Partial Class FrmSympt
         Me.BtnDelSympt = New Guna.UI.WinForms.GunaButton()
         Me.ChkList = New System.Windows.Forms.CheckedListBox()
         Me.GunaLabel1 = New Guna.UI.WinForms.GunaLabel()
+        Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.PanelButtons.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelLeft.SuspendLayout()
@@ -65,6 +66,7 @@ Partial Class FrmSympt
         CType(Me.PicListado, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PicFondo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MzButtonWindows1
@@ -75,7 +77,7 @@ Partial Class FrmSympt
         Me.MzButtonWindows1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.MzButtonWindows1.Cursor = System.Windows.Forms.Cursors.Default
         Me.MzButtonWindows1.EstiloButton = BWCMM.MZButtonWindows.EstiloDeButton.Windows
-        Me.MzButtonWindows1.Location = New System.Drawing.Point(1017, 5)
+        Me.MzButtonWindows1.Location = New System.Drawing.Point(1020, 0)
         Me.MzButtonWindows1.Name = "MzButtonWindows1"
         Me.MzButtonWindows1.ParentControl = Me
         Me.MzButtonWindows1.Size = New System.Drawing.Size(40, 24)
@@ -90,7 +92,7 @@ Partial Class FrmSympt
         Me.MzButtonWindows2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.MzButtonWindows2.Cursor = System.Windows.Forms.Cursors.Default
         Me.MzButtonWindows2.EstiloButton = BWCMM.MZButtonWindows.EstiloDeButton.Windows
-        Me.MzButtonWindows2.Location = New System.Drawing.Point(977, 5)
+        Me.MzButtonWindows2.Location = New System.Drawing.Point(980, 0)
         Me.MzButtonWindows2.Name = "MzButtonWindows2"
         Me.MzButtonWindows2.ParentControl = Me
         Me.MzButtonWindows2.Size = New System.Drawing.Size(40, 24)
@@ -105,7 +107,7 @@ Partial Class FrmSympt
         Me.MzButtonWindows3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.MzButtonWindows3.Cursor = System.Windows.Forms.Cursors.Default
         Me.MzButtonWindows3.EstiloButton = BWCMM.MZButtonWindows.EstiloDeButton.Windows
-        Me.MzButtonWindows3.Location = New System.Drawing.Point(937, 5)
+        Me.MzButtonWindows3.Location = New System.Drawing.Point(940, 0)
         Me.MzButtonWindows3.Name = "MzButtonWindows3"
         Me.MzButtonWindows3.ParentControl = Me
         Me.MzButtonWindows3.Size = New System.Drawing.Size(40, 24)
@@ -496,7 +498,7 @@ Partial Class FrmSympt
         Me.TxtSympt.FocusedForeColor = System.Drawing.SystemColors.ControlText
         Me.TxtSympt.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.TxtSympt.ForeColor = System.Drawing.Color.FromArgb(CType(CType(55, Byte), Integer), CType(CType(55, Byte), Integer), CType(CType(55, Byte), Integer))
-        Me.TxtSympt.Location = New System.Drawing.Point(204, 153)
+        Me.TxtSympt.Location = New System.Drawing.Point(234, 153)
         Me.TxtSympt.Multiline = True
         Me.TxtSympt.Name = "TxtSympt"
         Me.TxtSympt.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -670,11 +672,24 @@ Partial Class FrmSympt
         Me.GunaLabel1.TabIndex = 29
         Me.GunaLabel1.Text = "Asociación a patologías"
         '
+        'Guna2PictureBox1
+        '
+        Me.Guna2PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2PictureBox1.Image = CType(resources.GetObject("Guna2PictureBox1.Image"), System.Drawing.Image)
+        Me.Guna2PictureBox1.Location = New System.Drawing.Point(205, 158)
+        Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
+        Me.Guna2PictureBox1.ShadowDecoration.Parent = Me.Guna2PictureBox1
+        Me.Guna2PictureBox1.Size = New System.Drawing.Size(23, 23)
+        Me.Guna2PictureBox1.TabIndex = 46
+        Me.Guna2PictureBox1.TabStop = False
+        Me.Guna2PictureBox1.UseTransparentBackground = True
+        '
         'FrmSympt
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1060, 640)
+        Me.Controls.Add(Me.Guna2PictureBox1)
         Me.Controls.Add(Me.GunaLabel1)
         Me.Controls.Add(Me.ChkList)
         Me.Controls.Add(Me.MzButtonWindows1)
@@ -706,6 +721,7 @@ Partial Class FrmSympt
         CType(Me.PicListado, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PicFondo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -740,4 +756,5 @@ Partial Class FrmSympt
     Friend WithEvents BtnDelSympt As Guna.UI.WinForms.GunaButton
     Friend WithEvents GunaLabel1 As Guna.UI.WinForms.GunaLabel
     Friend WithEvents ChkList As CheckedListBox
+    Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
 End Class

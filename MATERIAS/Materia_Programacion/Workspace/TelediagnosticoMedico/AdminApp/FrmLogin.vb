@@ -26,15 +26,19 @@ Public Class FrmLogin
         If TxtUser.Text.Trim.Length = 0 Or TxtPass.Text.Trim.Length = 0 Then
             MessageBox.Show("CAMPOS VACIOS!!")
         Else
-            Dim rslog As Boolean = db.CheckLog(TxtUser.Text.ToString(), TxtPass.Text.ToString())
-            If rslog = False Then
-                Console.WriteLine("NO EXISTE")
-                MessageBox.Show("Usuario o Contraseña Equivocada!!")
-            Else
-                Console.WriteLine("--------------------EXISTEEE------------------")
-                Me.Hide()
-                FrmHome.Show()
-            End If
+            Try
+                Dim rslog As Boolean = db.CheckLog(TxtUser.Text.ToString(), TxtPass.Text.ToString())
+                If rslog = False Then
+                    Console.WriteLine("NO EXISTE")
+                    MessageBox.Show("Usuario o Contraseña Equivocada!!")
+                Else
+                    Console.WriteLine("--------------------EXISTEEE------------------")
+                    Me.Hide()
+                    FrmHome.Show()
+                End If
+            Catch ex As Exception
+                Console.WriteLine("ERROR: " & ex.ToString())
+            End Try
         End If
     End Sub
 End Class

@@ -34,9 +34,6 @@ Partial Class FrmSplashScreen
         Me.Label3 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.MzButtonWindows1 = New BWCMM.MZButtonWindows()
-        Me.MzButtonWindows2 = New BWCMM.MZButtonWindows()
-        Me.MzButtonWindows3 = New BWCMM.MZButtonWindows()
         CType(Me.PicbxLogoCAS, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -189,48 +186,6 @@ Partial Class FrmSplashScreen
         'Timer1
         '
         '
-        'MzButtonWindows1
-        '
-        Me.MzButtonWindows1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.MzButtonWindows1.BackgroundImage = CType(resources.GetObject("MzButtonWindows1.BackgroundImage"), System.Drawing.Image)
-        Me.MzButtonWindows1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.MzButtonWindows1.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.MzButtonWindows1.EstiloButton = BWCMM.MZButtonWindows.EstiloDeButton.Windows
-        Me.MzButtonWindows1.Location = New System.Drawing.Point(1020, 0)
-        Me.MzButtonWindows1.Name = "MzButtonWindows1"
-        Me.MzButtonWindows1.ParentControl = Me
-        Me.MzButtonWindows1.Size = New System.Drawing.Size(40, 24)
-        Me.MzButtonWindows1.TabIndex = 10
-        Me.MzButtonWindows1.TipoButton = BWCMM.MZButtonWindows.ModeButton.Close
-        '
-        'MzButtonWindows2
-        '
-        Me.MzButtonWindows2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.MzButtonWindows2.BackgroundImage = CType(resources.GetObject("MzButtonWindows2.BackgroundImage"), System.Drawing.Image)
-        Me.MzButtonWindows2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.MzButtonWindows2.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.MzButtonWindows2.EstiloButton = BWCMM.MZButtonWindows.EstiloDeButton.Windows
-        Me.MzButtonWindows2.Location = New System.Drawing.Point(940, 0)
-        Me.MzButtonWindows2.Name = "MzButtonWindows2"
-        Me.MzButtonWindows2.ParentControl = Me
-        Me.MzButtonWindows2.Size = New System.Drawing.Size(40, 24)
-        Me.MzButtonWindows2.TabIndex = 11
-        Me.MzButtonWindows2.TipoButton = BWCMM.MZButtonWindows.ModeButton.Minimize
-        '
-        'MzButtonWindows3
-        '
-        Me.MzButtonWindows3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.MzButtonWindows3.BackgroundImage = CType(resources.GetObject("MzButtonWindows3.BackgroundImage"), System.Drawing.Image)
-        Me.MzButtonWindows3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.MzButtonWindows3.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.MzButtonWindows3.EstiloButton = BWCMM.MZButtonWindows.EstiloDeButton.Windows
-        Me.MzButtonWindows3.Location = New System.Drawing.Point(980, 0)
-        Me.MzButtonWindows3.Name = "MzButtonWindows3"
-        Me.MzButtonWindows3.ParentControl = Me
-        Me.MzButtonWindows3.Size = New System.Drawing.Size(40, 24)
-        Me.MzButtonWindows3.TabIndex = 11
-        Me.MzButtonWindows3.TipoButton = BWCMM.MZButtonWindows.ModeButton.Maximize
-        '
         'FrmSplashScreen
         '
         Me.AccessibleDescription = "FrmSplashScreen"
@@ -242,9 +197,6 @@ Partial Class FrmSplashScreen
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.ClientSize = New System.Drawing.Size(1060, 640)
-        Me.Controls.Add(Me.MzButtonWindows3)
-        Me.Controls.Add(Me.MzButtonWindows2)
-        Me.Controls.Add(Me.MzButtonWindows1)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.LblTitle3)
@@ -275,7 +227,4 @@ Partial Class FrmSplashScreen
     Friend WithEvents PictureBox1 As PictureBox
     Private WithEvents LblSystemInfo1 As Label
     Friend WithEvents Timer1 As Timer
-    Friend WithEvents MzButtonWindows1 As BWCMM.MZButtonWindows
-    Friend WithEvents MzButtonWindows3 As BWCMM.MZButtonWindows
-    Friend WithEvents MzButtonWindows2 As BWCMM.MZButtonWindows
 End Class

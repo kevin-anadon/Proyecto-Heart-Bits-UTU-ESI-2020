@@ -11,6 +11,7 @@ Public Class FrmSympt
     Dim row As DataGridViewRow
     Dim SymptSelected As String
     Dim reg As String = Nothing
+    Dim Pathologies As New List(Of String)
 
 
     Dim rsympt As Recordset = db.ObtainTable("sintoma")
@@ -37,13 +38,9 @@ Public Class FrmSympt
     End Sub
 
     Public Sub ReloadChkL()
-        Dim priorname As String = Nothing
-        Dim priorities As List(Of Priority) = log.ObtainPriorities()
-
         For Each path As Pathology In log.ObtainPath()
             ChkList.Items.Add(path.name)
         Next
-
     End Sub
 
     Public Sub ReloadCmb()
@@ -80,21 +77,6 @@ Public Class FrmSympt
         DgvSympt.Refresh()
     End Sub
 
-    Private Sub cmbregion_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbregion.SelectedIndexChanged
-        'ACA DEBERIA ACTUALIZARSE EL DATAGRIDVIEW CON LO QUE SELECCIONAS DEL COMBO BOX
-        'ESTÁ COMENTADO YA QUE NO LOGRAMOS QUE AL MOSTRARSE EL FRAME NO SE EJECUTE EL METODO cmbSympSelectedIndexChanged
-
-        'If cmbregion.Text.ToString() = "Seleccione region" Then
-        'Else
-        'Dim rsearchreg As Recordset = db.SearchRegion(cmbregion.Text.ToString())
-        'Dim dasearchreg As New System.Data.OleDb.OleDbDataAdapter()
-        'dsearch = New DataSet
-        'dasearchreg.Fill(dsearch, rsearchreg, "sintomas_regiones")
-        'DgvSympt.DataSource = (dsearch.Tables("sintomas_regiones"))
-        'DgvSympt.Refresh()
-        'End If
-    End Sub
-
     Private Sub BtnHome_Click_1(sender As Object, e As EventArgs) Handles BtnHome.Click
         Dim frmhome As New FrmHome()
         Me.Dispose()
@@ -110,15 +92,29 @@ Public Class FrmSympt
     End Sub
 
     Private Sub BtnAddSympt_Click(sender As Object, e As EventArgs) Handles BtnAddSympt.Click
-        'FALTA IMPLEMENTAR LA ASOCIACION DE UN SINTOMA CON UNA O MÁS PATOLOGIAS
+        Pathologies.Clear()
+        Dim i As Integer
+        Dim Valor As String
+        For i = 0 To Me.ChkList.CheckedItems.Count - 1
+            Valor = ChkList.CheckedItems(i)
+            Pathologies.Add(Valor)
+        Next
         If TxtAddSympt.Text.Trim.Length = 0 Or TxtAddSympt.Text = "Ingrese nombre de nuevo síntoma" Or ChkList.CheckedItems.Count = 0 Then
             MessageBox.Show("CAMPOS VACIOS!!")
         Else
             If Not ChkReg.Checked Then
                 Dim region As String = "NULL"
-                db.InsertSympt(TxtAddSympt.Text.ToString(), region)
+                db.InsertSympt(TxtAddSympt.Text.ToString(), region, Pathologies)
+                MessageBox.Show("INGRESADO CON EXITO!!")
+                ReloadDgv(2)
             Else
-                db.InsertSympt(TxtAddSympt.Text.ToString(), cmbregion.Text.ToString())
+                If cmbregion.Text.Trim.Length() = 0 Then
+                    MessageBox.Show("INGRESE UNA REGIÓN!!")
+                Else
+                    db.InsertSympt(TxtAddSympt.Text.ToString(), cmbregion.Text.ToString(), Pathologies)
+                    MessageBox.Show("INGRESADO CON EXITO!!")
+                    ReloadDgv(2)
+                End If
             End If
         End If
     End Sub
@@ -143,33 +139,41 @@ Public Class FrmSympt
         Dim alerta As New FrmAlertRemoveSymptom()
         row = DgvSympt.CurrentRow
         SymptSelected = CStr(row.Cells("Síntoma").Value)
-        'Obtengo la el síntoma seleccionado
+        'Obtengo el síntoma seleccionado
         'Hago comprobación con PIN, mandó el sintoma que se desea borrar a un método de la clase FrmAlertRemoveSymptom
         alerta.ObtainSympt(SymptSelected)
         alerta.ShowDialog()
+        ReloadDgv(3)
     End Sub
 
     Private Sub DgvSympt_CellContentDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgvSympt.CellContentDoubleClick
         Dim frmMod As New FrmModSympt()
+        'Modificación de síntoma
 
         row = DgvSympt.CurrentRow
         SymptSelected = CStr(row.Cells("Síntoma").Value)
-        reg = CStr(row.Cells("Región").Value)
-
-        If reg.Length = 0 Then
+        Try
+            reg = CStr(row.Cells("Región").Value)
+            frmMod.ObtainSympt(SymptSelected, reg)
+            frmMod.ShowDialog()
+            ReloadDgv(4)
+        Catch ex As Exception
             reg = "No tiene"
             frmMod.ObtainSympt(SymptSelected, reg)
             frmMod.ShowDialog()
-        Else
-            frmMod.ObtainSympt(SymptSelected, reg)
-            frmMod.ShowDialog()
-        End If
-
+            ReloadDgv(4)
+        End Try
     End Sub
 
     Private Sub BtnLogout_Click(sender As Object, e As EventArgs) Handles BtnLogout.Click
         If MsgBox("Está seguro que desea cerrar sesión ?", MsgBoxStyle.YesNoCancel, "Cerrar Programa") = MsgBoxResult.Yes Then
             End
         End If
+    End Sub
+
+    Private Sub BtnPath_Click(sender As Object, e As EventArgs) Handles BtnPath.Click
+        Dim frm As New FrmPath()
+        Me.Dispose()
+        frm.Show()
     End Sub
 End Class

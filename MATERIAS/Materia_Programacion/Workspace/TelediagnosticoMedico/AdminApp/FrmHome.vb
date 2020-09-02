@@ -14,4 +14,10 @@ Public Class FrmHome
             End
         End If
     End Sub
+
+    Private Sub BtnPath_Click(sender As Object, e As EventArgs) Handles BtnPath.Click
+        Dim frm As New FrmPath()
+        Me.Dispose()
+        frm.Show()
+    End Sub
 End Class

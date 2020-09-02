@@ -139,6 +139,12 @@
     <Compile Include="FrmSplashScreen.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmPath.Designer.vb">
+      <DependentUpon>FrmPath.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPath.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="FrmAlertRemoveSymptom.resx">
@@ -164,6 +170,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSplashScreen.resx">
       <DependentUpon>FrmSplashScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPath.resx">
+      <DependentUpon>FrmPath.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
