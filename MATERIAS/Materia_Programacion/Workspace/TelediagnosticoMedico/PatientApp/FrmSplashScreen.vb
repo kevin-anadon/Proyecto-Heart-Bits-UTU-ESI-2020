@@ -14,7 +14,7 @@
             instancia += 1
         Else
             Timer1.Enabled = False
-            Me.Dispose() 'Este formulario "SplashScreen" se cierra.
+            Me.Hide() 'Este formulario "SplashScreen" se cierra.
             FrmLogin.Show() 'Este formulario se mostrará en pantalla.
         End If
 

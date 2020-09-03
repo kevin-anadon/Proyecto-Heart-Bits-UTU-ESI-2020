@@ -22,6 +22,9 @@ Public Class People
 
     Public Sub New()
 
+    End Sub
+    Public Sub New(ci As Integer)
+        Me.ci = ci
     End Sub 'Empty constructor (default)
 
     Public Sub New(ci As Integer, allowed As Boolean, fstName As String, scndName As String, fstSurname As String, scndSurname As String, genrePeople As Integer, dateBirth As Date, email As String, numPhone As String, street As String, numDoor As Integer, city As City)

@@ -128,19 +128,40 @@ Public Class ConnectionDB
         con.Close()
     End Sub
 
-    Public Function CheckLog(user As String, pass As String) As Boolean
+    Public Function CheckLog(user As String, pass As String, ci As String) As Object
         Dim con As Connection = connect()
-        Dim check As Boolean = False
-        Dim rs As Recordset
-        rs = con.Execute("SELECT ci FROM persona WHERE id_tipo=1 and usuario='" + user + "' and contrasena='" + pass + "';")
-        If rs.EOF Then
-            con.Close()
-            Return check
-        Else
-            check = True
-            con.Close()
-            Return check
+        Dim rs, rsMed As Recordset
+        Dim empleado As Employee = Nothing
+        Dim paciente As People = Nothing
+
+
+        If ci = Nothing Then 'Es empleado
+            rs = con.Execute("SELECT ci FROM persona WHERE id_tipo=1 and usuario='" + user + "' and contrasena='" + pass + "';")
+            If rs.EOF Then 'Si no es administrador verifica si es medico
+                rsMed = con.Execute("SELECT ci FROM persona WHERE id_tipo=2 and usuario='" + user + "' and contrasena='" + pass + "';")
+                If rsMed.EOF Then 'Si tampoco es médico
+                    con.Close()
+                    Return empleado
+                Else 'Si es médico
+                    con.Close()
+                    Return empleado
+                End If
+            Else 'En el caso que sea Administrador
+                con.Close()
+                Return empleado
+            End If
+        Else 'Es Paciente
+            rs = con.Execute("SELECT ci FROM persona WHERE id_tipo=3 and ci='" + ci + "';")
+            If rs.EOF Then
+                con.Close()
+                Return paciente
+            Else
+                Dim p As New People(ci)
+                con.Close()
+                Return p
+            End If
         End If
+
     End Function
 
     Public Function CheckPin(pin As String) As Boolean

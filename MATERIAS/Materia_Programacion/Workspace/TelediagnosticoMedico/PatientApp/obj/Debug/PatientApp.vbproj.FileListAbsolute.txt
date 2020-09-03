@@ -13,3 +13,27 @@ C:\Users\Yorel Acosta\Desktop\Workspace\TelediagnosticoMedico\PatientApp\obj\Deb
 C:\Users\Yorel Acosta\Desktop\Workspace\TelediagnosticoMedico\PatientApp\obj\Debug\PatientApp.pdb
 C:\Users\Yorel Acosta\Desktop\Workspace\TelediagnosticoMedico\PatientApp\obj\Debug\PatientApp.FrmLogin.resources
 C:\Users\Yorel Acosta\Desktop\Workspace\TelediagnosticoMedico\PatientApp\obj\Debug\PatientApp.FrmHome.resources
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\PatientApp\obj\Debug\PatientApp.vbprojAssemblyReference.cache
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\PatientApp\obj\Debug\PatientApp.FrmHome.resources
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\PatientApp\obj\Debug\PatientApp.FrmLogin.resources
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\PatientApp\obj\Debug\PatientApp.FrmSplashScreen.resources
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\PatientApp\obj\Debug\PatientApp.Resources.resources
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\PatientApp\obj\Debug\PatientApp.vbproj.GenerateResource.cache
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\PatientApp\obj\Debug\PatientApp.vbproj.CoreCompileInputs.cache
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\PatientApp\obj\Debug\PatientApp.exe
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\PatientApp\obj\Debug\PatientApp.xml
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\PatientApp\obj\Debug\PatientApp.pdb
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\PatientApp\bin\Debug\PatientApp.exe.config
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\PatientApp\bin\Debug\PatientApp.exe
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\PatientApp\bin\Debug\PatientApp.pdb
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\PatientApp\bin\Debug\PatientApp.xml
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\PatientApp\bin\Debug\Data.dll
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\PatientApp\bin\Debug\Logica.dll
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\PatientApp\bin\Debug\Persistencia.dll
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\PatientApp\bin\Debug\Data.pdb
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\PatientApp\bin\Debug\Data.xml
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\PatientApp\bin\Debug\Logica.pdb
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\PatientApp\bin\Debug\Logica.xml
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\PatientApp\bin\Debug\Persistencia.pdb
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\PatientApp\bin\Debug\Persistencia.xml
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\PatientApp\obj\Debug\PatientApp.vbproj.CopyComplete

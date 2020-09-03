@@ -1,9 +1,11 @@
 ﻿Imports System.Runtime.InteropServices
 Imports ADODB
 Imports Persistencia
+Imports Data
 
 Public Class FrmLogin
     Dim db As New ConnectionDB()
+    Dim ci As String = Nothing
 
     Private Sub Cerrar()
         If MsgBox("Está seguro que desea cerrar ?", MsgBoxStyle.YesNoCancel, "Cerrar Programa") = MsgBoxResult.Yes Then
@@ -27,8 +29,8 @@ Public Class FrmLogin
             MessageBox.Show("CAMPOS VACIOS!!")
         Else
             Try
-                Dim rslog As Boolean = db.CheckLog(TxtUser.Text.ToString(), TxtPass.Text.ToString())
-                If rslog = False Then
+                Dim rslog As Employee = db.CheckLog(TxtUser.Text.ToString(), TxtPass.Text.ToString(), ci)
+                If IsNothing(rslog) Then
                     Console.WriteLine("NO EXISTE")
                     MessageBox.Show("Usuario o Contraseña Equivocada!!")
                 Else
