@@ -1,0 +1,15 @@
+C:\Users\Yorel Acosta\Desktop\Workspace\TelediagnosticoMedico\PatientApp\bin\Debug\PatientApp.exe
+C:\Users\Yorel Acosta\Desktop\Workspace\TelediagnosticoMedico\PatientApp\bin\Debug\PatientApp.pdb
+C:\Users\Yorel Acosta\Desktop\Workspace\TelediagnosticoMedico\PatientApp\bin\Debug\PatientApp.xml
+C:\Users\Yorel Acosta\Desktop\Workspace\TelediagnosticoMedico\PatientApp\bin\Debug\Guna.UI2.dll
+C:\Users\Yorel Acosta\Desktop\Workspace\TelediagnosticoMedico\PatientApp\obj\Debug\PatientApp.vbprojAssemblyReference.cache
+C:\Users\Yorel Acosta\Desktop\Workspace\TelediagnosticoMedico\PatientApp\obj\Debug\PatientApp.FrmSplashScreen.resources
+C:\Users\Yorel Acosta\Desktop\Workspace\TelediagnosticoMedico\PatientApp\obj\Debug\PatientApp.Resources.resources
+C:\Users\Yorel Acosta\Desktop\Workspace\TelediagnosticoMedico\PatientApp\obj\Debug\PatientApp.vbproj.GenerateResource.cache
+C:\Users\Yorel Acosta\Desktop\Workspace\TelediagnosticoMedico\PatientApp\obj\Debug\PatientApp.vbproj.CoreCompileInputs.cache
+C:\Users\Yorel Acosta\Desktop\Workspace\TelediagnosticoMedico\PatientApp\obj\Debug\PatientApp.vbproj.CopyComplete
+C:\Users\Yorel Acosta\Desktop\Workspace\TelediagnosticoMedico\PatientApp\obj\Debug\PatientApp.exe
+C:\Users\Yorel Acosta\Desktop\Workspace\TelediagnosticoMedico\PatientApp\obj\Debug\PatientApp.xml
+C:\Users\Yorel Acosta\Desktop\Workspace\TelediagnosticoMedico\PatientApp\obj\Debug\PatientApp.pdb
+C:\Users\Yorel Acosta\Desktop\Workspace\TelediagnosticoMedico\PatientApp\obj\Debug\PatientApp.FrmLogin.resources
+C:\Users\Yorel Acosta\Desktop\Workspace\TelediagnosticoMedico\PatientApp\obj\Debug\PatientApp.FrmHome.resources
