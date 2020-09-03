@@ -87,10 +87,22 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmAddPath.Designer.vb">
+      <DependentUpon>FrmAddPath.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAddPath.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmAlertRemoveSymptom.Designer.vb">
       <DependentUpon>FrmAlertRemoveSymptom.vb</DependentUpon>
     </Compile>
     <Compile Include="FrmAlertRemoveSymptom.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmModPath.Designer.vb">
+      <DependentUpon>FrmModPath.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmModPath.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmModSympt.Designer.vb">
@@ -147,8 +159,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FrmAddPath.resx">
+      <DependentUpon>FrmAddPath.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmAlertRemoveSymptom.resx">
       <DependentUpon>FrmAlertRemoveSymptom.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmModPath.resx">
+      <DependentUpon>FrmModPath.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmModSympt.resx">
       <DependentUpon>FrmModSympt.vb</DependentUpon>
@@ -161,9 +179,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.vb</DependentUpon>

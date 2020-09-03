@@ -36,11 +36,11 @@ Partial Class FrmModSympt
         Me.Lblreg = New Guna.UI.WinForms.GunaLabel()
         Me.GunaLabel5 = New Guna.UI.WinForms.GunaLabel()
         Me.GunaLabel4 = New Guna.UI.WinForms.GunaLabel()
+        Me.ChkListPath = New System.Windows.Forms.CheckedListBox()
         Me.GunaLabel3 = New Guna.UI.WinForms.GunaLabel()
         Me.GunaSeparator1 = New Guna.UI.WinForms.GunaSeparator()
         Me.TxtDescr = New Guna.UI.WinForms.GunaTextBox()
         Me.GunaLabel2 = New Guna.UI.WinForms.GunaLabel()
-        Me.ChkListPath = New System.Windows.Forms.CheckedListBox()
         Me.PanelTop.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.PicLogo, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -254,6 +254,16 @@ Partial Class FrmModSympt
         Me.GunaLabel4.TabIndex = 37
         Me.GunaLabel4.Text = "Asociación a la región"
         '
+        'ChkListPath
+        '
+        Me.ChkListPath.CheckOnClick = True
+        Me.ChkListPath.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ChkListPath.FormattingEnabled = True
+        Me.ChkListPath.Location = New System.Drawing.Point(11, 104)
+        Me.ChkListPath.Name = "ChkListPath"
+        Me.ChkListPath.Size = New System.Drawing.Size(200, 94)
+        Me.ChkListPath.TabIndex = 36
+        '
         'GunaLabel3
         '
         Me.GunaLabel3.AutoSize = True
@@ -303,16 +313,6 @@ Partial Class FrmModSympt
         Me.GunaLabel2.Size = New System.Drawing.Size(121, 30)
         Me.GunaLabel2.TabIndex = 32
         Me.GunaLabel2.Text = "Descripción"
-        '
-        'ChkListPath
-        '
-        Me.ChkListPath.CheckOnClick = True
-        Me.ChkListPath.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ChkListPath.FormattingEnabled = True
-        Me.ChkListPath.Location = New System.Drawing.Point(11, 104)
-        Me.ChkListPath.Name = "ChkListPath"
-        Me.ChkListPath.Size = New System.Drawing.Size(200, 94)
-        Me.ChkListPath.TabIndex = 36
         '
         'FrmModSympt
         '

@@ -46,4 +46,19 @@ Public Class FrmPath
     Private Sub BtnClose_Click(sender As Object, e As EventArgs) Handles BtnClose.Click
         End
     End Sub
+
+    Private Sub BtnAddPat_Click(sender As Object, e As EventArgs) Handles BtnAddPat.Click
+        Dim frm As New FrmAddPath()
+        frm.ShowDialog()
+
+    End Sub
+
+    Private Sub TxtPat_TextChanged(sender As Object, e As EventArgs) Handles TxtPat.TextChanged
+        Dim rsearchpat As Recordset = db.SearchPath(TxtPat.Text)
+        Dim dasearch As New System.Data.OleDb.OleDbDataAdapter()
+        Dim dsearch = New DataSet
+        dasearch.Fill(dsearch, rsearchpat, "patologia")
+        DgvPat.DataSource = (dsearch.Tables("patologia"))
+        DgvPat.Refresh()
+    End Sub
 End Class

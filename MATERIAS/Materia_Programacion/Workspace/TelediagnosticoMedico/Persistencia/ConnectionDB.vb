@@ -8,6 +8,26 @@ Public Class ConnectionDB
         Return connection
     End Function
 
+    Public Sub InsertPath(name As String, desc As String, indiceM As Integer, Prior As Integer, treatments As List(Of Treatment))
+        Dim con As Connection = connect()
+        Dim treatname As String = Nothing
+        Dim treatdesc As String = Nothing
+        Dim treatkind As String = Nothing
+
+        Dim rsIinsert As Recordset = con.Execute("INSERT INTO patologia(id_prioridad,nombre,descripcion,indiceMortalidad) VALUES(" & Prior & "," + "'" & name & "','" & desc & "'," & indiceM & ");")
+        'Inserta en la tabla patología
+        Dim rsSelectIdPat As Recordset = con.Execute("SELECT id FROM patologia WHERE nombre='" + name + "';")
+        Dim idpat As Integer = DirectCast(rsSelectIdPat.Fields("id").Value, Integer)
+
+        For Each i As Treatment In treatments
+            treatname = i.name
+            treatdesc = i.description
+            treatkind = i.kind
+            Dim rsInsertTr As Recordset = con.Execute("INSERT INTO tratamiento(id_patologia, nombre, descripcion, tipo) VALUES(" & idpat & "," + "'" & treatname & "'" + "," + "'" & treatdesc & "'" + "," + "'" & treatkind & "');")
+        Next
+        con.Close()
+    End Sub
+
     Public Sub InsertSympt(sympt As String, region As String, Pat As List(Of String))
         Dim con As Connection = connect()
 
@@ -228,6 +248,12 @@ Public Class ConnectionDB
         Dim con As Connection = connect()
 
         Return con.Execute("Select s.descripcion As Síntoma,r.nombre As Región FROM sintoma s LEFT JOIN region r On(s.id_region=r.id) WHERE s.descripcion Like '" & nameDesc & "%' ORDER BY s.descripcion, r.nombre;")
+    End Function
+
+    Public Function SearchPath(namePat As String) As Recordset
+        Dim con As Connection = connect()
+
+        Return con.Execute("Select p.nombre As Patología,p.descripcion As Descripción,pr.nombre As Prioridad FROM patologia p JOIN prioridad pr On(p.id_prioridad=pr.id) WHERE p.nombre Like '" & namePat & "%' ORDER BY p.nombre,pr.id")
     End Function
 
     Public Function SearchRegion(nameRegion As String) As Recordset 'SIN UTILIZAR HASTA EL MOMENTO
