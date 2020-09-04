@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FrmLogin
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class FrmLogin
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmLogin))
@@ -30,12 +30,12 @@ Partial Class FrmLogin
         Me.LblTitle1 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PicbxLogin = New System.Windows.Forms.PictureBox()
-        Me.BtnForeText = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Guna2PictureBox2 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.BtnLogin = New Guna.UI2.WinForms.Guna2Button()
         Me.TxtCredential1 = New System.Windows.Forms.TextBox()
         Me.ToolTipMsgError = New Guna.UI2.WinForms.Guna2HtmlToolTip()
+        Me.BtnForeText1 = New Guna.UI2.WinForms.Guna2Button()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PicbxLogin, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -117,29 +117,6 @@ Partial Class FrmLogin
         Me.PicbxLogin.TabIndex = 11
         Me.PicbxLogin.TabStop = False
         '
-        'BtnForeText
-        '
-        Me.BtnForeText.AccessibleDescription = "BtnForeText"
-        Me.BtnForeText.AccessibleName = "BtnForeText"
-        Me.BtnForeText.BackColor = System.Drawing.Color.Transparent
-        Me.BtnForeText.BorderColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
-        Me.BtnForeText.BorderRadius = 10
-        Me.BtnForeText.BorderThickness = 2
-        Me.BtnForeText.CheckedState.Parent = Me.BtnForeText
-        Me.BtnForeText.CustomImages.Parent = Me.BtnForeText
-        Me.BtnForeText.FillColor = System.Drawing.Color.Transparent
-        Me.BtnForeText.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.BtnForeText.ForeColor = System.Drawing.Color.Transparent
-        Me.BtnForeText.HoverState.Parent = Me.BtnForeText
-        Me.BtnForeText.Location = New System.Drawing.Point(683, 410)
-        Me.BtnForeText.Name = "BtnForeText"
-        Me.BtnForeText.PressedColor = System.Drawing.Color.Transparent
-        Me.BtnForeText.ShadowDecoration.Enabled = True
-        Me.BtnForeText.ShadowDecoration.Parent = Me.BtnForeText
-        Me.BtnForeText.Size = New System.Drawing.Size(312, 45)
-        Me.BtnForeText.TabIndex = 16
-        Me.BtnForeText.UseTransparentBackground = True
-        '
         'Guna2PictureBox1
         '
         Me.Guna2PictureBox1.FillColor = System.Drawing.Color.Transparent
@@ -192,7 +169,7 @@ Partial Class FrmLogin
         Me.TxtCredential1.BackColor = System.Drawing.Color.White
         Me.TxtCredential1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TxtCredential1.Font = New System.Drawing.Font("Segoe UI Emoji", 10.2!)
-        Me.TxtCredential1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(181, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(181, Byte), Integer))
+        Me.TxtCredential1.ForeColor = System.Drawing.Color.Black
         Me.TxtCredential1.Location = New System.Drawing.Point(741, 424)
         Me.TxtCredential1.Name = "TxtCredential1"
         Me.TxtCredential1.Size = New System.Drawing.Size(242, 19)
@@ -208,6 +185,27 @@ Partial Class FrmLogin
         Me.ToolTipMsgError.ShowAlways = True
         Me.ToolTipMsgError.TitleForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
         '
+        'BtnForeText1
+        '
+        Me.BtnForeText1.AccessibleDescription = "BtnForeText"
+        Me.BtnForeText1.AccessibleName = "BtnForeText"
+        Me.BtnForeText1.BorderColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
+        Me.BtnForeText1.BorderRadius = 10
+        Me.BtnForeText1.BorderThickness = 2
+        Me.BtnForeText1.CheckedState.Parent = Me.BtnForeText1
+        Me.BtnForeText1.CustomImages.Parent = Me.BtnForeText1
+        Me.BtnForeText1.FillColor = System.Drawing.Color.Transparent
+        Me.BtnForeText1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.BtnForeText1.ForeColor = System.Drawing.Color.Transparent
+        Me.BtnForeText1.HoverState.FillColor = System.Drawing.Color.Transparent
+        Me.BtnForeText1.HoverState.Parent = Me.BtnForeText1
+        Me.BtnForeText1.Location = New System.Drawing.Point(684, 410)
+        Me.BtnForeText1.Name = "BtnForeText1"
+        Me.BtnForeText1.PressedDepth = 0
+        Me.BtnForeText1.ShadowDecoration.Parent = Me.BtnForeText1
+        Me.BtnForeText1.Size = New System.Drawing.Size(312, 45)
+        Me.BtnForeText1.TabIndex = 19
+        '
         'FrmLogin
         '
         Me.AccessibleDescription = "FrmLogin"
@@ -222,12 +220,12 @@ Partial Class FrmLogin
         Me.Controls.Add(Me.BtnLogin)
         Me.Controls.Add(Me.Guna2PictureBox2)
         Me.Controls.Add(Me.Guna2PictureBox1)
-        Me.Controls.Add(Me.BtnForeText)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.Lblbody)
         Me.Controls.Add(Me.LblTitle1)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.PicbxLogin)
+        Me.Controls.Add(Me.BtnForeText1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmLogin"
@@ -248,10 +246,10 @@ Partial Class FrmLogin
     Public WithEvents LblTitle1 As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents PicbxLogin As PictureBox
-    Friend WithEvents BtnForeText As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents TxtCredential1 As TextBox
     Friend WithEvents BtnLogin As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2PictureBox2 As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents ToolTipMsgError As Guna.UI2.WinForms.Guna2HtmlToolTip
+    Friend WithEvents BtnForeText1 As Guna.UI2.WinForms.Guna2Button
 End Class

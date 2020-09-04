@@ -8,27 +8,45 @@ PatientApp
 <members>
 <member name="T:PatientApp.My.Resources.Resources">
 <summary>
-  Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
+  A strongly-typed resource class, for looking up localized strings, etc.
 </summary>
 </member>
 <member name="P:PatientApp.My.Resources.Resources.ResourceManager">
 <summary>
-  Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
+  Returns the cached ResourceManager instance used by this class.
 </summary>
 </member>
 <member name="P:PatientApp.My.Resources.Resources.Culture">
 <summary>
-  Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
-  búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
 </summary>
 </member>
-<member name="M:PatientApp.FrmLogin.ToolTipSetMessage(Guna.UI2.WinForms.Guna2HtmlToolTip,Guna.UI2.WinForms.Guna2Button,System.Int16)">
+<member name="P:PatientApp.My.Resources.Resources.BarVertical_Green">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:PatientApp.My.Resources.Resources.BarVertical_Grey">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="M:PatientApp.FrmHome.VisualSettings(System.Int16,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
  <summary>
- Permite establecer un ToolTip a los Botones necesarios.
+ Preset precargado que ayuda a tratar la disposición de paneles y sus elementos.
  </summary>
- <param name="myToolTip">El ToolTip que usaremos para trabajar.</param>
- <param name="btnReference">El botón que tendrá el ToolTip.</param>
- <param name="num">Índice que permite escoger el Mensaje que se mostrará en el ToolTip.</param>
+ <param name="myConfigPreset">Selecciona un preset para Labels</param>
+ <param name="myBool1">Si es Visible BarVertical Pctbx1_Intro</param>
+ <param name="myBool2">Si es Visible BarVertical Pctbx2_Patient</param>
+ <param name="myBool3">Si es Visible BarVertical Pctbx3_Symptom</param>
+ <param name="myBool4">Si es Visible BarVertical Pctbx4_Result</param>
+ <param name="myBool5">Si es Visible BarVertical Pctbx5_Chat</param>
+ <param name="myBool6">Si es Visible Panel PnlIntro1</param>
+ <param name="myBool7">Si es Visible Panel PnlIntro2</param>
+ <param name="myBool8">Si es Visible Panel PnlPatient1</param>
+ <param name="myBool9">Si es Visible Panel PnlSymptom</param>
+ <param name="myBool10">Si es Visible Panel PnlResult</param>
 </member>
 </members>
 </doc>
