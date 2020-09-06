@@ -102,6 +102,12 @@ Public Class FrmSympt
         If TxtAddSympt.Text.Trim.Length = 0 Or TxtAddSympt.Text = "Ingrese nombre de nuevo síntoma" Or ChkList.CheckedItems.Count = 0 Then
             MessageBox.Show("CAMPOS VACIOS!!")
         Else
+            For rows As Integer = 0 To DgvSympt.Rows.Count - 1
+                If (CStr(DgvSympt.Rows(rows).Cells("Síntoma").Value) = TxtAddSympt.Text) Then
+                    MessageBox.Show("Síntoma ya existente!!")
+                    Return
+                End If
+            Next
             If Not ChkReg.Checked Then
                 Dim region As String = "NULL"
                 db.InsertSympt(TxtAddSympt.Text.ToString(), region, Pathologies)
@@ -144,17 +150,17 @@ Public Class FrmSympt
     End Sub
 
     Private Sub BtnDelSympt_Click(sender As Object, e As EventArgs) Handles BtnDelSympt.Click
-        Dim alerta As New FrmAlertRemoveSymptom()
+        Dim alerta As New FrmAlertRemove()
         row = DgvSympt.CurrentRow
         SymptSelected = CStr(row.Cells("Síntoma").Value)
         'Obtengo el síntoma seleccionado
         'Hago comprobación con PIN, mandó el sintoma que se desea borrar a un método de la clase FrmAlertRemoveSymptom
-        alerta.ObtainSympt(SymptSelected)
+        alerta.Obtain(SymptSelected, 0)
         alerta.ShowDialog()
         ReloadDgv(3)
     End Sub
 
-    Private Sub DgvSympt_CellContentDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgvSympt.CellContentDoubleClick
+    Private Sub DgvSympt_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgvSympt.CellDoubleClick
         Dim frmMod As New FrmModSympt()
         'Modificación de síntoma
 

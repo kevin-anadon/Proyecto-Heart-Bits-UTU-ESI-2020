@@ -58,6 +58,22 @@ Public Class ConnectionDB
         con.Close()
     End Sub
 
+    Public Sub UpdatePath(patname As String, patdesc As String, patmortality As Integer, idprior As Integer, treatments As List(Of Treatment), patnamebefore As String)
+        Dim con As Connection = connect()
+
+        Dim rsSelectIdPat As Recordset = con.Execute("SELECT id FROM patologia WHERE nombre='" + patnamebefore + "';")
+        Dim idpat As Integer = DirectCast(rsSelectIdPat.Fields("id").Value, Integer)
+        Dim rsInsert As Recordset = con.Execute("UPDATE patologia SET id_prioridad=" & idprior & ", nombre='" & patname & "', descripcion='" & patdesc & "', indiceMortalidad='" & patmortality & "' WHERE id=" & idpat & ";")
+        Dim rsDelTreat As Recordset = con.Execute("DELETE From tratamiento Where id_patologia =" & idpat & ";")
+
+
+        For Each treat As Treatment In treatments
+            Dim rsIinsertTreat As Recordset = con.Execute("INSERT INTO tratamiento(id_patologia, nombre, descripcion, tipo) VALUES(" & idpat & ",'" & treat.name & "','" & treat.description & "','" & treat.kind & "');")
+        Next
+        con.Close()
+    End Sub
+
+
     Public Sub UpdateSympt(sympt As String, region As String, symptbefore As String, patafter As List(Of String))
         Dim con As Connection = connect()
 
@@ -116,6 +132,19 @@ Public Class ConnectionDB
         con.Close()
     End Sub
 
+    Public Sub DelPath(pat As String)
+        Dim con As Connection = connect()
+
+        Dim rsSelectIdPat As Recordset = con.Execute("SELECT id FROM patologia WHERE nombre='" + pat + "';")
+        Dim idpat As Integer = DirectCast(rsSelectIdPat.Fields("id").Value, Integer)
+
+        Dim rsDelTratamiento As Recordset = con.Execute("DELETE FROM tratamiento WHERE id_patologia=" & idpat)
+        Dim rsDelPat As Recordset = con.Execute("DELETE FROM patologia WHERE id=" & idpat)
+        Console.WriteLine(pat + " Eliminado con exito, con sus tratamientos!!")
+        con.Close()
+    End Sub
+
+
     Public Sub DelSympt(sympt As String)
         Dim con As Connection = connect()
 
@@ -148,7 +177,8 @@ Public Class ConnectionDB
                 End If
             Else 'En el caso que sea Administrador
                 con.Close()
-                Return empleado
+                Dim e As New Employee(user, pass)
+                Return e
             End If
         Else 'Es Paciente
             rs = con.Execute("SELECT ci FROM persona WHERE id_tipo=3 and ci='" + ci + "';")
@@ -177,6 +207,34 @@ Public Class ConnectionDB
             con.Close()
             Return check
         End If
+    End Function
+
+    Public Function ObtainTreatments(pat As String) As List(Of Treatment)
+        Dim con As Connection = connect()
+        Dim treatments As New List(Of Treatment)
+
+        Dim rs As Recordset = con.Execute("SELECT t.nombre, t.descripcion, t.tipo FROM tratamiento t JOIN patologia p ON(t.id_patologia=p.id) WHERE p.nombre='" & pat & "' ORDER BY t.nombre;")
+
+        While (Not rs.EOF)
+            Dim name As String = TryCast(rs.Fields("nombre").Value, String)
+            Dim desc As String = TryCast(rs.Fields("descripcion").Value, String)
+            Dim kind As String = TryCast(rs.Fields("tipo").Value, String)
+
+            treatments.Add(New Treatment(name, desc, kind))
+            rs.MoveNext()
+        End While
+        con.Close()
+        Return treatments
+    End Function
+
+    Public Function ObtainMortalityPath(pat As String) As Integer
+        Dim con As Connection = connect()
+
+        Dim rsSelectMortality As Recordset = con.Execute("SELECT indiceMortalidad FROM patologia WHERE nombre='" + pat + "';")
+        Dim Mortality As Integer = DirectCast(rsSelectMortality.Fields("indiceMortalidad").Value, Integer)
+
+        con.Close()
+        Return Mortality
     End Function
 
     Public Function ObtainRegions() As List(Of Region)
@@ -275,11 +333,5 @@ Public Class ConnectionDB
         Dim con As Connection = connect()
 
         Return con.Execute("Select p.nombre As Patología,p.descripcion As Descripción,pr.nombre As Prioridad FROM patologia p JOIN prioridad pr On(p.id_prioridad=pr.id) WHERE p.nombre Like '" & namePat & "%' ORDER BY p.nombre,pr.id")
-    End Function
-
-    Public Function SearchRegion(nameRegion As String) As Recordset 'SIN UTILIZAR HASTA EL MOMENTO
-        Dim conreg As Connection = connect()
-
-        Return conreg.Execute("SELECT s.descripcion Síntoma,r.nombre Región FROM sintoma s LEFT JOIN region r ON(s.id_region=r.id) WHERE r.nombre ='" + nameRegion + "';")
     End Function
 End Class

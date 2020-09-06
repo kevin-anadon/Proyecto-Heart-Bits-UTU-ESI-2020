@@ -15,4 +15,13 @@ Public Class Controller
         Return db.ObtainPath()
     End Function
 
+    Public Function ObtainMortalityPath(pat As String) As Integer
+        Return db.ObtainMortalityPath(pat)
+    End Function
+
+    Public Function ObtainTreatments(pat As String) As List(Of Treatment)
+        Return db.ObtainTreatments(pat)
+    End Function
+
+
 End Class

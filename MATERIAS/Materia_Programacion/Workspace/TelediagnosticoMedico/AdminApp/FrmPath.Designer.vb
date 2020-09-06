@@ -580,6 +580,7 @@ Partial Class FrmPath
         Me.DgvPat.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.DgvPat.Location = New System.Drawing.Point(205, 324)
         Me.DgvPat.Name = "DgvPat"
+        Me.DgvPat.ReadOnly = True
         Me.DgvPat.RowHeadersVisible = False
         Me.DgvPat.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DgvPat.Size = New System.Drawing.Size(843, 297)
@@ -598,7 +599,7 @@ Partial Class FrmPath
         Me.DgvPat.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White
         Me.DgvPat.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
         Me.DgvPat.ThemeStyle.HeaderStyle.Height = 26
-        Me.DgvPat.ThemeStyle.ReadOnly = False
+        Me.DgvPat.ThemeStyle.ReadOnly = True
         Me.DgvPat.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White
         Me.DgvPat.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.DgvPat.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Segoe UI", 10.5!)

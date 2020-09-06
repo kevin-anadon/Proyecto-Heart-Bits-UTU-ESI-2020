@@ -93,10 +93,10 @@
     <Compile Include="FrmAddPath.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmAlertRemoveSymptom.Designer.vb">
-      <DependentUpon>FrmAlertRemoveSymptom.vb</DependentUpon>
+    <Compile Include="FrmAlertRemove.Designer.vb">
+      <DependentUpon>FrmAlertRemove.vb</DependentUpon>
     </Compile>
-    <Compile Include="FrmAlertRemoveSymptom.vb">
+    <Compile Include="FrmAlertRemove.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmModPath.Designer.vb">
@@ -162,8 +162,8 @@
     <EmbeddedResource Include="FrmAddPath.resx">
       <DependentUpon>FrmAddPath.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmAlertRemoveSymptom.resx">
-      <DependentUpon>FrmAlertRemoveSymptom.vb</DependentUpon>
+    <EmbeddedResource Include="FrmAlertRemove.resx">
+      <DependentUpon>FrmAlertRemove.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmModPath.resx">
       <DependentUpon>FrmModPath.vb</DependentUpon>

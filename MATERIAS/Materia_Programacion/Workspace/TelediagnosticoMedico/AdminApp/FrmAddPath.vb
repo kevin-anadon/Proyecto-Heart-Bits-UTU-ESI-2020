@@ -5,10 +5,26 @@ Imports ADODB
 Public Class FrmAddPath
     Dim db As New ConnectionDB()
     Dim log As New Controller()
+    Dim frm As New FrmPath()
 
     Dim Kind As String = Nothing
     Dim Exist As Boolean = False
     Dim row As DataGridViewRow
+    Dim listP As New List(Of String)
+
+    Public Sub ObtainExistingPaths(pats As List(Of String))
+        listP = pats
+    End Sub
+
+    Public Function CheckExist(name As String) As Boolean
+        Dim exist As Boolean = False
+        For Each pat As String In listP
+            If name.Equals(pat) Then
+                exist = True
+            End If
+        Next
+        Return exist
+    End Function
 
     Private Sub BtnAdd_Click(sender As Object, e As EventArgs) Handles BtnAdd.Click
 
@@ -18,15 +34,30 @@ Public Class FrmAddPath
             Dim indiceM As Integer = Spinner.Value
             Dim Prior As Integer = 0
             Dim treatments As New List(Of Treatment)
+            treatments.Clear()
             Dim treatname As String = Nothing
             Dim treatdesc As String = Nothing
             Dim treatkind As String = Nothing
 
+            If CheckExist(name) = True Then
+                MessageBox.Show("Patología ya existente!!")
+                Return
+            End If
+
+            If DgvTreat.Rows.Count - 1 = 0 Then
+                MessageBox.Show("Tratamientos vacios!!" & vbCrLf & "Debe almacenar uno por lo menos")
+                Return
+            End If
+
             For i As Integer = 0 To DgvTreat.Rows.Count - 1
-                treatname = CStr(DgvTreat.Rows(i).Cells("name").Value)
-                treatdesc = CStr(DgvTreat.Rows(i).Cells("desc").Value)
-                treatkind = CStr(DgvTreat.Rows(i).Cells("type").Value)
-                treatments.Add(New Treatment(treatname, treatdesc, treatkind))
+                If IsNothing(DgvTreat.Rows(i).Cells("name").Value) Then
+
+                Else
+                    treatname = CStr(DgvTreat.Rows(i).Cells("name").Value)
+                    treatdesc = CStr(DgvTreat.Rows(i).Cells("desc").Value)
+                    treatkind = CStr(DgvTreat.Rows(i).Cells("type").Value)
+                    treatments.Add(New Treatment(treatname, treatdesc, treatkind))
+                End If
             Next
             If indiceM <= 10 Then
                 Prior = 3
@@ -39,9 +70,10 @@ Public Class FrmAddPath
             db.InsertPath(name, desc, indiceM, Prior, treatments)
             MessageBox.Show("Patología insertada correctamente!!")
             Me.Close()
+        Else
+            MessageBox.Show("CAMPOS VACIOS!!")
         End If
-
-
+        Me.Close()
     End Sub
 
     Private Sub BtnClose_Click(sender As Object, e As EventArgs) Handles BtnClose.Click
@@ -103,6 +135,20 @@ Public Class FrmAddPath
         End If
     End Sub
 
+    Private Sub DgvTreat_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgvTreat.CellClick
+        row = DgvTreat.CurrentRow
+        TxtTreatName.Text = CStr(row.Cells("name").Value)
+        TxtTreatDesc.Text = CStr(row.Cells("desc").Value)
+        If IsNothing(row.Cells("type").Value) Then
+            Return
+        End If
+        If CStr(row.Cells("type").Value).Equals("Medicamento") Then
+            RbnMed.Checked = True
+        Else
+            RbnQ.Checked = True
+        End If
+    End Sub
+
     Private Sub BtnModTreat_Click(sender As Object, e As EventArgs) Handles BtnModTreat.Click
 
         If DgvTreat.Rows.Count - 1 > 0 Then
@@ -119,17 +165,6 @@ Public Class FrmAddPath
             row.SetValues(TxtTreatName.Text, TxtTreatDesc.Text, Kind)
         Else
             MessageBox.Show("No existen tratamientos que modificar!!")
-        End If
-    End Sub
-
-    Private Sub DgvTreat_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgvTreat.CellContentClick
-        row = DgvTreat.CurrentRow
-        TxtTreatName.Text = CStr(row.Cells("name").Value)
-        TxtTreatDesc.Text = CStr(row.Cells("desc").Value)
-        If CStr(row.Cells("type").Value).Equals("Medicamento") Then
-            RbnMed.Checked = True
-        Else
-            RbnQ.Checked = True
         End If
     End Sub
 
@@ -150,5 +185,4 @@ Public Class FrmAddPath
     Private Sub TxtDescr_Leave_1(sender As Object, e As EventArgs) Handles TxtDescr.Leave
         TxtDescr.ForeColor = Color.DarkGray
     End Sub
-
 End Class

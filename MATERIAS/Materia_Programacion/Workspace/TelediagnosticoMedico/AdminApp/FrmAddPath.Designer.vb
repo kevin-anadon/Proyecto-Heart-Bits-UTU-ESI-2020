@@ -57,6 +57,9 @@ Partial Class FrmAddPath
         Me.GunaLabel4 = New Guna.UI.WinForms.GunaLabel()
         Me.GunaLabel3 = New Guna.UI.WinForms.GunaLabel()
         Me.DgvTreat = New Guna.UI.WinForms.GunaDataGridView()
+        Me.name = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.desc = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.type = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.GunaLabel8 = New Guna.UI.WinForms.GunaLabel()
         Me.GunaLabel7 = New Guna.UI.WinForms.GunaLabel()
@@ -66,9 +69,6 @@ Partial Class FrmAddPath
         Me.GunaSeparator5 = New Guna.UI.WinForms.GunaSeparator()
         Me.TxtTreatDesc = New Guna.UI.WinForms.GunaTextBox()
         Me.PicPrior = New Guna.UI2.WinForms.Guna2PictureBox()
-        Me.name = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.desc = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.type = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PanelTop.SuspendLayout()
         CType(Me.Spinner, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelMain.SuspendLayout()
@@ -621,6 +621,24 @@ Partial Class FrmAddPath
         Me.DgvTreat.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.DgvTreat.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
         '
+        'name
+        '
+        Me.name.HeaderText = "Nombre"
+        Me.name.Name = "name"
+        Me.name.ReadOnly = True
+        '
+        'desc
+        '
+        Me.desc.HeaderText = "Descripción"
+        Me.desc.Name = "desc"
+        Me.desc.ReadOnly = True
+        '
+        'type
+        '
+        Me.type.HeaderText = "Tipo"
+        Me.type.Name = "type"
+        Me.type.ReadOnly = True
+        '
         'Guna2PictureBox1
         '
         Me.Guna2PictureBox1.Image = CType(resources.GetObject("Guna2PictureBox1.Image"), System.Drawing.Image)
@@ -720,24 +738,6 @@ Partial Class FrmAddPath
         Me.PicPrior.Size = New System.Drawing.Size(124, 19)
         Me.PicPrior.TabIndex = 56
         Me.PicPrior.TabStop = False
-        '
-        'name
-        '
-        Me.name.HeaderText = "Nombre"
-        Me.name.Name = "name"
-        Me.name.ReadOnly = True
-        '
-        'desc
-        '
-        Me.desc.HeaderText = "Descripción"
-        Me.desc.Name = "desc"
-        Me.desc.ReadOnly = True
-        '
-        'type
-        '
-        Me.type.HeaderText = "Tipo"
-        Me.type.Name = "type"
-        Me.type.ReadOnly = True
         '
         'FrmAddPath
         '

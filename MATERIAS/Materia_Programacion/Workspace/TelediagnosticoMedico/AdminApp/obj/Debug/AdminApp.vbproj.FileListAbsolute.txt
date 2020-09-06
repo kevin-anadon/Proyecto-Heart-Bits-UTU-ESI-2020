@@ -180,7 +180,6 @@ D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMe
 D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\AdminApp\obj\Debug\AdminApp.vbprojAssemblyReference.cache
 D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\AdminApp\obj\Debug\Interop.ADODB.dll
 D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\AdminApp\obj\Debug\AdminApp.vbproj.ResolveComReference.cache
-D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\AdminApp\obj\Debug\AdminApp.FrmAlertRemoveSymptom.resources
 D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\AdminApp\obj\Debug\AdminApp.FrmModSympt.resources
 D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\AdminApp\obj\Debug\AdminApp.FrmSympt.resources
 D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\AdminApp\obj\Debug\AdminApp.FrmHome.resources
@@ -196,3 +195,4 @@ D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMe
 D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\AdminApp\obj\Debug\AdminApp.FrmPath.resources
 D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\AdminApp\obj\Debug\AdminApp.FrmAddPath.resources
 D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\AdminApp\obj\Debug\AdminApp.FrmModPath.resources
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\AdminApp\obj\Debug\AdminApp.FrmAlertRemove.resources

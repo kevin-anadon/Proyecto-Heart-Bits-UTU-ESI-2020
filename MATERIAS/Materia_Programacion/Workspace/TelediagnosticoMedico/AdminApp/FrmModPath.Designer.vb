@@ -22,11 +22,17 @@ Partial Class FrmModPath
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmModPath))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmModPath))
         Me.PanelMain = New System.Windows.Forms.Panel()
+        Me.RbnQ = New Guna.UI2.WinForms.Guna2RadioButton()
+        Me.DgvTreat = New Guna.UI.WinForms.GunaDataGridView()
+        Me.name = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.desc = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.type = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.RbnMed = New Guna.UI2.WinForms.Guna2RadioButton()
         Me.BtnAdd = New Guna.UI.WinForms.GunaButton()
         Me.BtnModTreat = New Guna.UI.WinForms.GunaButton()
         Me.BtnDelTreat = New Guna.UI.WinForms.GunaButton()
@@ -34,7 +40,6 @@ Partial Class FrmModPath
         Me.Guna2PictureBox2 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.GunaLabel4 = New Guna.UI.WinForms.GunaLabel()
         Me.GunaLabel3 = New Guna.UI.WinForms.GunaLabel()
-        Me.DgvSympt = New Guna.UI.WinForms.GunaDataGridView()
         Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.GunaLabel8 = New Guna.UI.WinForms.GunaLabel()
         Me.GunaLabel7 = New Guna.UI.WinForms.GunaLabel()
@@ -63,12 +68,13 @@ Partial Class FrmModPath
         Me.TxtName = New Guna.UI.WinForms.GunaTextBox()
         Me.PicPrior = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.PanelTop = New System.Windows.Forms.Panel()
+        Me.LblPat = New Guna.UI.WinForms.GunaLabel()
         Me.LblPatTop = New Guna.UI.WinForms.GunaLabel()
         Me.BtnClose = New Guna.UI.WinForms.GunaButton()
         Me.LblPathTop = New Guna.UI.WinForms.GunaLabel()
         Me.PanelMain.SuspendLayout()
+        CType(Me.DgvTreat, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DgvSympt, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Spinner, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PicPrior, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -79,6 +85,9 @@ Partial Class FrmModPath
         '
         Me.PanelMain.BackColor = System.Drawing.Color.White
         Me.PanelMain.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PanelMain.Controls.Add(Me.RbnQ)
+        Me.PanelMain.Controls.Add(Me.DgvTreat)
+        Me.PanelMain.Controls.Add(Me.RbnMed)
         Me.PanelMain.Controls.Add(Me.BtnAdd)
         Me.PanelMain.Controls.Add(Me.BtnModTreat)
         Me.PanelMain.Controls.Add(Me.BtnDelTreat)
@@ -86,7 +95,6 @@ Partial Class FrmModPath
         Me.PanelMain.Controls.Add(Me.Guna2PictureBox2)
         Me.PanelMain.Controls.Add(Me.GunaLabel4)
         Me.PanelMain.Controls.Add(Me.GunaLabel3)
-        Me.PanelMain.Controls.Add(Me.DgvSympt)
         Me.PanelMain.Controls.Add(Me.Guna2PictureBox1)
         Me.PanelMain.Controls.Add(Me.GunaLabel8)
         Me.PanelMain.Controls.Add(Me.GunaLabel7)
@@ -119,6 +127,121 @@ Partial Class FrmModPath
         Me.PanelMain.Size = New System.Drawing.Size(927, 443)
         Me.PanelMain.TabIndex = 35
         '
+        'RbnQ
+        '
+        Me.RbnQ.AutoSize = True
+        Me.RbnQ.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.RbnQ.CheckedState.BorderThickness = 0
+        Me.RbnQ.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(246, Byte), Integer), CType(CType(135, Byte), Integer), CType(CType(124, Byte), Integer))
+        Me.RbnQ.CheckedState.InnerColor = System.Drawing.Color.FromArgb(CType(CType(246, Byte), Integer), CType(CType(135, Byte), Integer), CType(CType(124, Byte), Integer))
+        Me.RbnQ.CheckedState.InnerOffset = -4
+        Me.RbnQ.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RbnQ.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
+        Me.RbnQ.Location = New System.Drawing.Point(153, 407)
+        Me.RbnQ.Name = "RbnQ"
+        Me.RbnQ.Size = New System.Drawing.Size(80, 19)
+        Me.RbnQ.TabIndex = 82
+        Me.RbnQ.Text = "Quirurjico"
+        Me.RbnQ.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.RbnQ.UncheckedState.BorderThickness = 2
+        Me.RbnQ.UncheckedState.FillColor = System.Drawing.Color.Transparent
+        Me.RbnQ.UncheckedState.InnerColor = System.Drawing.Color.Transparent
+        '
+        'DgvTreat
+        '
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
+        Me.DgvTreat.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        Me.DgvTreat.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DgvTreat.BackgroundColor = System.Drawing.Color.White
+        Me.DgvTreat.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.DgvTreat.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
+        Me.DgvTreat.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DgvTreat.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        Me.DgvTreat.ColumnHeadersHeight = 26
+        Me.DgvTreat.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.name, Me.desc, Me.type})
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DgvTreat.DefaultCellStyle = DataGridViewCellStyle3
+        Me.DgvTreat.EnableHeadersVisualStyles = False
+        Me.DgvTreat.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.DgvTreat.Location = New System.Drawing.Point(423, 53)
+        Me.DgvTreat.Name = "DgvTreat"
+        Me.DgvTreat.ReadOnly = True
+        Me.DgvTreat.RowHeadersVisible = False
+        Me.DgvTreat.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DgvTreat.Size = New System.Drawing.Size(491, 317)
+        Me.DgvTreat.TabIndex = 79
+        Me.DgvTreat.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna
+        Me.DgvTreat.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
+        Me.DgvTreat.ThemeStyle.AlternatingRowsStyle.Font = Nothing
+        Me.DgvTreat.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty
+        Me.DgvTreat.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty
+        Me.DgvTreat.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty
+        Me.DgvTreat.ThemeStyle.BackColor = System.Drawing.Color.White
+        Me.DgvTreat.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.DgvTreat.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.DgvTreat.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        Me.DgvTreat.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        Me.DgvTreat.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White
+        Me.DgvTreat.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
+        Me.DgvTreat.ThemeStyle.HeaderStyle.Height = 26
+        Me.DgvTreat.ThemeStyle.ReadOnly = True
+        Me.DgvTreat.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White
+        Me.DgvTreat.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
+        Me.DgvTreat.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        Me.DgvTreat.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        Me.DgvTreat.ThemeStyle.RowsStyle.Height = 22
+        Me.DgvTreat.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.DgvTreat.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        '
+        'name
+        '
+        Me.name.HeaderText = "Nombre"
+        Me.name.Name = "name"
+        Me.name.ReadOnly = True
+        '
+        'desc
+        '
+        Me.desc.HeaderText = "Descripción"
+        Me.desc.Name = "desc"
+        Me.desc.ReadOnly = True
+        '
+        'type
+        '
+        Me.type.HeaderText = "Tipo"
+        Me.type.Name = "type"
+        Me.type.ReadOnly = True
+        '
+        'RbnMed
+        '
+        Me.RbnMed.AutoSize = True
+        Me.RbnMed.CheckedState.BorderThickness = 0
+        Me.RbnMed.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(246, Byte), Integer), CType(CType(135, Byte), Integer), CType(CType(124, Byte), Integer))
+        Me.RbnMed.CheckedState.InnerColor = System.Drawing.Color.FromArgb(CType(CType(246, Byte), Integer), CType(CType(135, Byte), Integer), CType(CType(124, Byte), Integer))
+        Me.RbnMed.CheckedState.InnerOffset = -4
+        Me.RbnMed.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RbnMed.Location = New System.Drawing.Point(18, 407)
+        Me.RbnMed.Name = "RbnMed"
+        Me.RbnMed.Size = New System.Drawing.Size(102, 19)
+        Me.RbnMed.TabIndex = 81
+        Me.RbnMed.Text = "Medicamento"
+        Me.RbnMed.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.RbnMed.UncheckedState.BorderThickness = 2
+        Me.RbnMed.UncheckedState.FillColor = System.Drawing.Color.Transparent
+        Me.RbnMed.UncheckedState.InnerColor = System.Drawing.Color.Transparent
+        '
         'BtnAdd
         '
         Me.BtnAdd.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -146,7 +269,7 @@ Partial Class FrmModPath
         Me.BtnAdd.Radius = 2
         Me.BtnAdd.Size = New System.Drawing.Size(150, 42)
         Me.BtnAdd.TabIndex = 78
-        Me.BtnAdd.Text = "Almacenar Patología"
+        Me.BtnAdd.Text = "Modificar Patología"
         Me.BtnAdd.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'BtnModTreat
@@ -268,64 +391,6 @@ Partial Class FrmModPath
         Me.GunaLabel3.Size = New System.Drawing.Size(120, 13)
         Me.GunaLabel3.TabIndex = 73
         Me.GunaLabel3.Text = "Campo Obligatorio [*]"
-        '
-        'DgvSympt
-        '
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
-        Me.DgvSympt.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-        Me.DgvSympt.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.DgvSympt.BackgroundColor = System.Drawing.Color.White
-        Me.DgvSympt.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.DgvSympt.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
-        Me.DgvSympt.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DgvSympt.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
-        Me.DgvSympt.ColumnHeadersHeight = 26
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DgvSympt.DefaultCellStyle = DataGridViewCellStyle3
-        Me.DgvSympt.EnableHeadersVisualStyles = False
-        Me.DgvSympt.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.DgvSympt.Location = New System.Drawing.Point(423, 53)
-        Me.DgvSympt.Name = "DgvSympt"
-        Me.DgvSympt.ReadOnly = True
-        Me.DgvSympt.RowHeadersVisible = False
-        Me.DgvSympt.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DgvSympt.Size = New System.Drawing.Size(491, 317)
-        Me.DgvSympt.TabIndex = 72
-        Me.DgvSympt.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna
-        Me.DgvSympt.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
-        Me.DgvSympt.ThemeStyle.AlternatingRowsStyle.Font = Nothing
-        Me.DgvSympt.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty
-        Me.DgvSympt.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty
-        Me.DgvSympt.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty
-        Me.DgvSympt.ThemeStyle.BackColor = System.Drawing.Color.White
-        Me.DgvSympt.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.DgvSympt.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.DgvSympt.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        Me.DgvSympt.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        Me.DgvSympt.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White
-        Me.DgvSympt.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
-        Me.DgvSympt.ThemeStyle.HeaderStyle.Height = 26
-        Me.DgvSympt.ThemeStyle.ReadOnly = True
-        Me.DgvSympt.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White
-        Me.DgvSympt.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
-        Me.DgvSympt.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        Me.DgvSympt.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        Me.DgvSympt.ThemeStyle.RowsStyle.Height = 22
-        Me.DgvSympt.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.DgvSympt.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
         '
         'Guna2PictureBox1
         '
@@ -658,6 +723,7 @@ Partial Class FrmModPath
         'PanelTop
         '
         Me.PanelTop.BackColor = System.Drawing.Color.LightGray
+        Me.PanelTop.Controls.Add(Me.LblPat)
         Me.PanelTop.Controls.Add(Me.LblPatTop)
         Me.PanelTop.Controls.Add(Me.BtnClose)
         Me.PanelTop.Controls.Add(Me.LblPathTop)
@@ -665,6 +731,16 @@ Partial Class FrmModPath
         Me.PanelTop.Name = "PanelTop"
         Me.PanelTop.Size = New System.Drawing.Size(927, 35)
         Me.PanelTop.TabIndex = 34
+        '
+        'LblPat
+        '
+        Me.LblPat.AutoSize = True
+        Me.LblPat.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblPat.ForeColor = System.Drawing.Color.FromArgb(CType(CType(246, Byte), Integer), CType(CType(135, Byte), Integer), CType(CType(124, Byte), Integer))
+        Me.LblPat.Location = New System.Drawing.Point(358, 0)
+        Me.LblPat.Name = "LblPat"
+        Me.LblPat.Size = New System.Drawing.Size(0, 30)
+        Me.LblPat.TabIndex = 30
         '
         'LblPatTop
         '
@@ -717,12 +793,13 @@ Partial Class FrmModPath
         Me.Controls.Add(Me.PanelMain)
         Me.Controls.Add(Me.PanelTop)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "FrmModPath"
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FrmModPath"
         Me.PanelMain.ResumeLayout(False)
         Me.PanelMain.PerformLayout()
+        CType(Me.DgvTreat, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DgvSympt, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Spinner, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PicPrior, System.ComponentModel.ISupportInitialize).EndInit()
@@ -740,7 +817,6 @@ Partial Class FrmModPath
     Friend WithEvents Guna2PictureBox2 As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents GunaLabel4 As Guna.UI.WinForms.GunaLabel
     Friend WithEvents GunaLabel3 As Guna.UI.WinForms.GunaLabel
-    Friend WithEvents DgvSympt As Guna.UI.WinForms.GunaDataGridView
     Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents GunaLabel8 As Guna.UI.WinForms.GunaLabel
     Friend WithEvents GunaLabel7 As Guna.UI.WinForms.GunaLabel
@@ -772,4 +848,11 @@ Partial Class FrmModPath
     Friend WithEvents BtnClose As Guna.UI.WinForms.GunaButton
     Friend WithEvents LblPathTop As Guna.UI.WinForms.GunaLabel
     Friend WithEvents LblPatTop As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents DgvTreat As Guna.UI.WinForms.GunaDataGridView
+    Friend WithEvents name As DataGridViewTextBoxColumn
+    Friend WithEvents desc As DataGridViewTextBoxColumn
+    Friend WithEvents type As DataGridViewTextBoxColumn
+    Friend WithEvents RbnQ As Guna.UI2.WinForms.Guna2RadioButton
+    Friend WithEvents RbnMed As Guna.UI2.WinForms.Guna2RadioButton
+    Friend WithEvents LblPat As Guna.UI.WinForms.GunaLabel
 End Class
