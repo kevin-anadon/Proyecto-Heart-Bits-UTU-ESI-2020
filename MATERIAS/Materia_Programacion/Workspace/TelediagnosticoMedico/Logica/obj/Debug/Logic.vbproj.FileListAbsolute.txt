@@ -1,0 +1,17 @@
+C:\Users\Yorel Acosta\Desktop\Study ESIMdeo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\Logica\bin\Debug\Logic.dll
+C:\Users\Yorel Acosta\Desktop\Study ESIMdeo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\Logica\bin\Debug\Logic.pdb
+C:\Users\Yorel Acosta\Desktop\Study ESIMdeo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\Logica\bin\Debug\Logic.xml
+C:\Users\Yorel Acosta\Desktop\Study ESIMdeo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\Logica\bin\Debug\Data.dll
+C:\Users\Yorel Acosta\Desktop\Study ESIMdeo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\Logica\bin\Debug\Persistencia.dll
+C:\Users\Yorel Acosta\Desktop\Study ESIMdeo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\Logica\bin\Debug\Data.pdb
+C:\Users\Yorel Acosta\Desktop\Study ESIMdeo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\Logica\bin\Debug\Data.xml
+C:\Users\Yorel Acosta\Desktop\Study ESIMdeo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\Logica\bin\Debug\Persistencia.pdb
+C:\Users\Yorel Acosta\Desktop\Study ESIMdeo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\Logica\bin\Debug\Persistencia.xml
+C:\Users\Yorel Acosta\Desktop\Study ESIMdeo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\Logica\obj\Debug\Logic.vbprojAssemblyReference.cache
+C:\Users\Yorel Acosta\Desktop\Study ESIMdeo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\Logica\obj\Debug\Logic.Resources.resources
+C:\Users\Yorel Acosta\Desktop\Study ESIMdeo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\Logica\obj\Debug\Logic.vbproj.GenerateResource.cache
+C:\Users\Yorel Acosta\Desktop\Study ESIMdeo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\Logica\obj\Debug\Logic.vbproj.CoreCompileInputs.cache
+C:\Users\Yorel Acosta\Desktop\Study ESIMdeo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\Logica\obj\Debug\Logic.vbproj.CopyComplete
+C:\Users\Yorel Acosta\Desktop\Study ESIMdeo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\Logica\obj\Debug\Logic.dll
+C:\Users\Yorel Acosta\Desktop\Study ESIMdeo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\Logica\obj\Debug\Logic.xml
+C:\Users\Yorel Acosta\Desktop\Study ESIMdeo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\Logica\obj\Debug\Logic.pdb

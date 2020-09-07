@@ -181,14 +181,14 @@ Public Class ConnectionDB
                 Return e
             End If
         Else 'Es Paciente
-            rs = con.Execute("SELECT ci FROM persona WHERE id_tipo=3 and ci='" + ci + "';")
+            rs = con.Execute("SELECT p.ci, p.id FROM persona p WHERE id_tipo=3 and ci='" + ci + "';")
             If rs.EOF Then
                 con.Close()
                 Return paciente
             Else
-                Dim p As New People(ci)
+                Dim patient As New People(ci)
                 con.Close()
-                Return p
+                Return patient
             End If
         End If
 
@@ -334,4 +334,42 @@ Public Class ConnectionDB
 
         Return con.Execute("Select p.nombre As Patología,p.descripcion As Descripción,pr.nombre As Prioridad FROM patologia p JOIN prioridad pr On(p.id_prioridad=pr.id) WHERE p.nombre Like '" & namePat & "%' ORDER BY p.nombre,pr.id")
     End Function
-End Class
+
+    Public Function matchPatientLoggedOn(ci As String) As Integer
+        Dim con As Connection = connect()
+        Dim rsSelectIdPatient As Recordset = con.Execute("SELECT id FROM persona pat WHERE ci='" + ci + "';")
+        Dim idPatientLoggedOn As Integer = DirectCast(rsSelectIdPatient.Fields("id").Value, Integer)
+        con.Close()
+
+        Return idPatientLoggedOn
+    End Function
+
+    Public Function ObtainSymptoms() As List(Of Symptom)
+        Dim con As Connection = connect()
+        Dim Symptoms As New List(Of Symptom)
+        Dim rsSelectSymptoms As Recordset = con.Execute("SELECT id, descripcion FROM sintoma;")
+        Dim S1 As New Symptom
+
+        While (Not rsSelectSymptoms.EOF)
+            Dim idSymptom As Integer = DirectCast(rsSelectSymptoms.Fields("id").Value, Integer)
+            Dim descSymptom As String = TryCast(rsSelectSymptoms.Fields("descripcion").Value, String)
+
+            'Symptoms.Add(S1)
+            Symptoms.Add(New Symptom(descSymptom))
+            rsSelectSymptoms.MoveNext()
+        End While
+
+        con.Close()
+        Return Symptoms
+    End Function
+
+    Public Sub SetPatientSufferSymp(idPatient As Integer, idSympSuffered As List(Of Integer))
+        Dim con As Connection = connect()
+
+        For Each e As Integer In idSympSuffered
+            Dim rsInsert As Recordset = con.Execute("INSERT INTO paciente_sufre(id_sintoma, id_paciente) VALUES(" & e & "," + "'" & idPatient & "');")
+        Next
+
+        con.Close()
+    End Sub
+End Class 'ConnectionDB

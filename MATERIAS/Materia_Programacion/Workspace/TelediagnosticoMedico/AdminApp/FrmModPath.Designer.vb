@@ -22,10 +22,10 @@ Partial Class FrmModPath
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmModPath))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmModPath))
         Me.PanelMain = New System.Windows.Forms.Panel()
         Me.RbnQ = New Guna.UI2.WinForms.Guna2RadioButton()
         Me.DgvTreat = New Guna.UI.WinForms.GunaDataGridView()
@@ -84,6 +84,7 @@ Partial Class FrmModPath
         'PanelMain
         '
         Me.PanelMain.BackColor = System.Drawing.Color.White
+        Me.PanelMain.BackgroundImage = CType(resources.GetObject("PanelMain.BackgroundImage"), System.Drawing.Image)
         Me.PanelMain.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PanelMain.Controls.Add(Me.RbnQ)
         Me.PanelMain.Controls.Add(Me.DgvTreat)
@@ -362,6 +363,7 @@ Partial Class FrmModPath
         '
         'Guna2PictureBox2
         '
+        Me.Guna2PictureBox2.BackColor = System.Drawing.Color.Transparent
         Me.Guna2PictureBox2.Image = CType(resources.GetObject("Guna2PictureBox2.Image"), System.Drawing.Image)
         Me.Guna2PictureBox2.Location = New System.Drawing.Point(423, 389)
         Me.Guna2PictureBox2.Name = "Guna2PictureBox2"
@@ -445,7 +447,7 @@ Partial Class FrmModPath
         '
         'TxtTreatType
         '
-        Me.TxtTreatType.BackColor = System.Drawing.Color.White
+        Me.TxtTreatType.BackColor = System.Drawing.Color.Transparent
         Me.TxtTreatType.BaseColor = System.Drawing.Color.Transparent
         Me.TxtTreatType.BorderColor = System.Drawing.Color.Transparent
         Me.TxtTreatType.BorderSize = 0
@@ -484,7 +486,7 @@ Partial Class FrmModPath
         '
         'TxtTreatDesc
         '
-        Me.TxtTreatDesc.BackColor = System.Drawing.Color.White
+        Me.TxtTreatDesc.BackColor = System.Drawing.Color.Transparent
         Me.TxtTreatDesc.BaseColor = System.Drawing.Color.Transparent
         Me.TxtTreatDesc.BorderColor = System.Drawing.Color.Transparent
         Me.TxtTreatDesc.BorderSize = 0
@@ -523,7 +525,7 @@ Partial Class FrmModPath
         '
         'TxtTreatName
         '
-        Me.TxtTreatName.BackColor = System.Drawing.Color.White
+        Me.TxtTreatName.BackColor = System.Drawing.Color.Transparent
         Me.TxtTreatName.BaseColor = System.Drawing.Color.Transparent
         Me.TxtTreatName.BorderColor = System.Drawing.Color.Transparent
         Me.TxtTreatName.BorderSize = 0
@@ -588,7 +590,7 @@ Partial Class FrmModPath
         Me.GunaLabel2.AutoSize = True
         Me.GunaLabel2.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GunaLabel2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(246, Byte), Integer), CType(CType(135, Byte), Integer), CType(CType(124, Byte), Integer))
-        Me.GunaLabel2.Location = New System.Drawing.Point(397, 81)
+        Me.GunaLabel2.Location = New System.Drawing.Point(387, 76)
         Me.GunaLabel2.Name = "GunaLabel2"
         Me.GunaLabel2.Size = New System.Drawing.Size(20, 25)
         Me.GunaLabel2.TabIndex = 54
@@ -632,7 +634,7 @@ Partial Class FrmModPath
         Me.GunaLabel1.AutoSize = True
         Me.GunaLabel1.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GunaLabel1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(246, Byte), Integer), CType(CType(135, Byte), Integer), CType(CType(124, Byte), Integer))
-        Me.GunaLabel1.Location = New System.Drawing.Point(397, 13)
+        Me.GunaLabel1.Location = New System.Drawing.Point(387, 13)
         Me.GunaLabel1.Name = "GunaLabel1"
         Me.GunaLabel1.Size = New System.Drawing.Size(20, 25)
         Me.GunaLabel1.TabIndex = 50
@@ -692,7 +694,7 @@ Partial Class FrmModPath
         '
         'TxtName
         '
-        Me.TxtName.BackColor = System.Drawing.Color.White
+        Me.TxtName.BackColor = System.Drawing.Color.Transparent
         Me.TxtName.BaseColor = System.Drawing.Color.Transparent
         Me.TxtName.BorderColor = System.Drawing.Color.Transparent
         Me.TxtName.BorderSize = 0
@@ -722,7 +724,7 @@ Partial Class FrmModPath
         '
         'PanelTop
         '
-        Me.PanelTop.BackColor = System.Drawing.Color.LightGray
+        Me.PanelTop.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.PanelTop.Controls.Add(Me.LblPat)
         Me.PanelTop.Controls.Add(Me.LblPatTop)
         Me.PanelTop.Controls.Add(Me.BtnClose)
@@ -794,6 +796,7 @@ Partial Class FrmModPath
         Me.Controls.Add(Me.PanelTop)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.name = "FrmModPath"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FrmModPath"
         Me.PanelMain.ResumeLayout(False)

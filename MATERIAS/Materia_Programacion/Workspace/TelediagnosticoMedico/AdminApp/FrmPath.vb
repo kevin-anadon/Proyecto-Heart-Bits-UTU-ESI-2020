@@ -1,4 +1,4 @@
-﻿Imports Logica
+﻿Imports Logic
 Imports Data
 Imports Persistencia
 Imports ADODB
@@ -117,4 +117,6 @@ Public Class FrmPath
         frmMod.ShowDialog()
         ReloadDgv(4)
     End Sub
+
+
 End Class

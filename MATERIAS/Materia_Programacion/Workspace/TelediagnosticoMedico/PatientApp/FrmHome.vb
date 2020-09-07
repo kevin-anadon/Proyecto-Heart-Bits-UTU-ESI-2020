@@ -1,7 +1,23 @@
-﻿Public Class FrmHome
-    'Resource Manager: Administrador de Recursos.
-    Private RM As Resources.ResourceManager = New Resources.ResourceManager("PatientApp.Resources", System.Reflection.Assembly.GetExecutingAssembly)
+﻿Imports Logic
+Imports Data
+Imports Persistencia
+Imports ADODB
 
+Public Class FrmHome
+    'Resource Manager: Administrador de Recursos propios del Proyecto 'PatientApp'.
+    Private ReadOnly RM As Resources.ResourceManager = New Resources.ResourceManager("PatientApp.Resources", System.Reflection.Assembly.GetExecutingAssembly)
+    'Atributos:
+    Public ciPatientLoggedOn As String
+    Private idPatientLoggedOn As Integer
+    Private patientLoggedOn As New Data.People
+    Private ReadOnly db As New Persistencia.ConnectionDB()
+    Private log As New Logic.Controller()
+
+    'Query's:
+    Public Symptoms As List(Of Data.Symptom)
+
+
+    'Comportamientos:
     ''' <summary>
     ''' Preset precargado que ayuda a tratar la disposición de paneles y sus elementos.
     ''' </summary>
@@ -126,6 +142,15 @@
         PnlSymptom1.Visible = myBool9
     End Sub
 
+    Public Sub GetIdPatientLoggedOn()
+        Me.idPatientLoggedOn = log.matchPatientLoggedOn(Me.ciPatientLoggedOn)
+    End Sub
+
+    Public Sub LoadSymptoms()
+        Me.Symptoms = log.ObtainSymptoms()
+    End Sub
+
+    'Eventos:
     Private Sub BtnNext_Intro2_Click(sender As Object, e As EventArgs) Handles BtnNext_Intro2.Click
         VisualSettings(1, True, False, False, False, False, False, True, False, False, False)
     End Sub
@@ -150,9 +175,33 @@
         VisualSettings(2, False, True, False, False, False, False, False, True, False, False)
     End Sub
 
+    Private Sub CbxSysSymptoms_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CbxSysSymptoms.SelectedIndexChanged
+
+    End Sub
+
     Private Sub FrmHome_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         VisualSettings(1, True, False, False, False, False, True, False, False, False, False)
+
+        'Opero con los Sintomas:
+        GetIdPatientLoggedOn()
+        LoadSymptoms()
+        CbxSysSymptoms.Items.Insert(0, "Buscar, p. ej. dolor de cabeza.")
+        For Each symp As Symptom In Symptoms
+            CbxSysSymptoms.Items.Add(symp.description)
+        Next
+
+        'Opero con DataGridView de los Sintomas que Sufre Paciente:
+        Dim btnDeleteRow As New DataGridViewButtonColumn()
+        Dim sympsSuffered As New DataGridViewColumn()
+        DgvPatientSymptoms.Rows.Clear()
+
+        sympsSuffered.Name = "Sintomas sufridos"
+
+        DgvPatientSymptoms.Columns.Insert(0, sympsSuffered)
+        DgvPatientSymptoms.Columns.Insert(1, btnDeleteRow)
+        btnDeleteRow.HeaderText = "ELIMINAR"
+        btnDeleteRow.Name = " "
     End Sub
 
 
-End Class
+End Class 'FrmHome

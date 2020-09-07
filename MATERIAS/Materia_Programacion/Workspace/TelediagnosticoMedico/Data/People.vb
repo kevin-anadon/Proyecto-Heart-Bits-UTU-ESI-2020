@@ -1,6 +1,7 @@
 ﻿Imports Data.City
 
 Public Class People
+    Protected Property id As Integer = Nothing
     Protected Property ci As Integer = 0
     Protected Property allowed As Boolean = False
     Protected Property fstName As String = Nothing
@@ -22,10 +23,10 @@ Public Class People
 
     Public Sub New()
 
-    End Sub
+    End Sub 'Empty constructor (default)
     Public Sub New(ci As Integer)
         Me.ci = ci
-    End Sub 'Empty constructor (default)
+    End Sub 'Necesary constructor
 
     Public Sub New(ci As Integer, allowed As Boolean, fstName As String, scndName As String, fstSurname As String, scndSurname As String, genrePeople As Integer, dateBirth As Date, email As String, numPhone As String, street As String, numDoor As Integer, city As City)
         Me.ci = ci

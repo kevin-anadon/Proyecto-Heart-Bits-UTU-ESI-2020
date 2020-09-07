@@ -2,7 +2,7 @@
 Imports ADODB
 Imports Data
 Imports Persistencia
-Imports Logica
+Imports Logic
 Public Class FrmModSympt
     Dim db As New ConnectionDB()
     Dim log As New Controller()

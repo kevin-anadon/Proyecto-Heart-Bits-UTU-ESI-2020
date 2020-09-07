@@ -1,7 +1,8 @@
 ﻿Imports Persistencia
 Imports Data
 Public Class Controller
-    Dim db As New ConnectionDB()
+    Private db As New ConnectionDB()
+    Private Property user As String
 
     Public Function ObtainPriorities() As List(Of Priority)
         Return db.ObtainPriorities()
@@ -23,5 +24,16 @@ Public Class Controller
         Return db.ObtainTreatments(pat)
     End Function
 
+    Public Function ObtainSymptoms() As List(Of Symptom)
+        Return db.ObtainSymptoms
+    End Function
 
-End Class
+    Public Function matchPatientLoggedOn(ci As String) As Integer
+        Return db.matchPatientLoggedOn(ci)
+    End Function
+
+    Public Sub SetPatientSufferSymp(idPatient As Integer, idSympSuffered As List(Of Integer))
+        db.SetPatientSufferSymp(idPatient, idSympSuffered)
+    End Sub
+
+End Class 'Data

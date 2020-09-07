@@ -1,4 +1,4 @@
-﻿Imports Logica
+﻿Imports Logic
 Imports Data
 Imports Persistencia
 Imports ADODB

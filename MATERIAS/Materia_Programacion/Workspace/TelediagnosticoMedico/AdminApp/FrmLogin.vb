@@ -20,7 +20,7 @@ Public Class FrmLogin
     Private Sub FrmLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
     End Sub
 
-    Private Sub BtnTopExit_Click(sender As Object, e As EventArgs) Handles BtnTopExit.Click
+    Private Sub BtnTopExit_Click(sender As Object, e As EventArgs)
         End
     End Sub
 

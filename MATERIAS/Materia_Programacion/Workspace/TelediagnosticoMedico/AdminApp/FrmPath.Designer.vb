@@ -48,7 +48,6 @@ Partial Class FrmPath
         Me.BtnPac = New Guna.UI.WinForms.GunaButton()
         Me.BtnHome = New Guna.UI.WinForms.GunaButton()
         Me.PicLogo = New System.Windows.Forms.PictureBox()
-        Me.PicFondo = New System.Windows.Forms.PictureBox()
         Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.TxtPat = New Guna.UI2.WinForms.Guna2TextBox()
         Me.DgvPat = New Guna.UI.WinForms.GunaDataGridView()
@@ -59,7 +58,6 @@ Partial Class FrmPath
         Me.PanelButtons.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PicLogo, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PicFondo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DgvPat, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -500,16 +498,6 @@ Partial Class FrmPath
         Me.PicLogo.TabIndex = 0
         Me.PicLogo.TabStop = False
         '
-        'PicFondo
-        '
-        Me.PicFondo.Image = CType(resources.GetObject("PicFondo.Image"), System.Drawing.Image)
-        Me.PicFondo.Location = New System.Drawing.Point(191, 0)
-        Me.PicFondo.Name = "PicFondo"
-        Me.PicFondo.Size = New System.Drawing.Size(869, 640)
-        Me.PicFondo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
-        Me.PicFondo.TabIndex = 32
-        Me.PicFondo.TabStop = False
-        '
         'Guna2PictureBox1
         '
         Me.Guna2PictureBox1.BackColor = System.Drawing.Color.Transparent
@@ -612,6 +600,7 @@ Partial Class FrmPath
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(1060, 640)
         Me.Controls.Add(Me.TxtPat)
         Me.Controls.Add(Me.Guna2PictureBox1)
@@ -626,7 +615,6 @@ Partial Class FrmPath
         Me.Controls.Add(Me.BtnMin)
         Me.Controls.Add(Me.BtnMax)
         Me.Controls.Add(Me.BtnClose)
-        Me.Controls.Add(Me.PicFondo)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmPath"
@@ -638,7 +626,6 @@ Partial Class FrmPath
         Me.PanelButtons.ResumeLayout(False)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PicLogo, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PicFondo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DgvPat, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -666,7 +653,6 @@ Partial Class FrmPath
     Friend WithEvents BtnPac As Guna.UI.WinForms.GunaButton
     Friend WithEvents BtnHome As Guna.UI.WinForms.GunaButton
     Friend WithEvents PicLogo As PictureBox
-    Friend WithEvents PicFondo As PictureBox
     Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents TxtPat As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents DgvPat As Guna.UI.WinForms.GunaDataGridView

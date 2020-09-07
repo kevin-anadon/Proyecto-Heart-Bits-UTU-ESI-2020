@@ -4,10 +4,10 @@
         Tentativo
         Definitivo
     End Enum
-    Public Property kindDiagnostic As Kind
-    Public Property patient As People
-    Public Property symptom As Symptom
-    Public Property dateD As Date
+    Public Property KindDiagnostic As Kind
+    Public Property Patient As People
+    Public Property Symptom As Symptom
+    Public Property DateD As Date
 
     Public Sub New()
 

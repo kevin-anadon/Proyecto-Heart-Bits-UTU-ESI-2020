@@ -1,5 +1,5 @@
 ﻿Imports System.Runtime.InteropServices
-Imports Logica
+Imports Logic
 Imports Data
 Imports Persistencia
 Imports ADODB

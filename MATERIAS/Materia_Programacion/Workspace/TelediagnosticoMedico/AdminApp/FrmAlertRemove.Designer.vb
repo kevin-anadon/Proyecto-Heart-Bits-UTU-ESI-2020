@@ -87,6 +87,7 @@ Partial Class FrmAlertRemove
         'PanelBody
         '
         Me.PanelBody.BackColor = System.Drawing.Color.White
+        Me.PanelBody.BackgroundImage = CType(resources.GetObject("PanelBody.BackgroundImage"), System.Drawing.Image)
         Me.PanelBody.Controls.Add(Me.GunaLabel6)
         Me.PanelBody.Controls.Add(Me.PicVector)
         Me.PanelBody.Controls.Add(Me.TxtPin)
@@ -223,7 +224,7 @@ Partial Class FrmAlertRemove
         Me.GunaLabel2.TabIndex = 1
         Me.GunaLabel2.Text = "ATENCIÓN"
         '
-        'FrmAlertRemoveSymptom
+        'FrmAlertRemove
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -232,7 +233,7 @@ Partial Class FrmAlertRemove
         Me.Controls.Add(Me.PanelTop)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Name = "FrmAlertRemoveSymptom"
+        Me.Name = "FrmAlertRemove"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.PanelTop.ResumeLayout(False)
         Me.PanelTop.PerformLayout()

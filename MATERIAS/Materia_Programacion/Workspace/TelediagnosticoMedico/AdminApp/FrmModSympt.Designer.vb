@@ -28,7 +28,6 @@ Partial Class FrmModSympt
         Me.BtnClose = New Guna.UI.WinForms.GunaButton()
         Me.GunaLabel1 = New Guna.UI.WinForms.GunaLabel()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.PicLogo = New Guna.UI.WinForms.GunaPictureBox()
         Me.ChkReg = New Guna.UI.WinForms.GunaCheckBox()
         Me.Cmbreg = New Guna.UI.WinForms.GunaComboBox()
         Me.BtnCancel = New Guna.UI.WinForms.GunaButton()
@@ -43,12 +42,11 @@ Partial Class FrmModSympt
         Me.GunaLabel2 = New Guna.UI.WinForms.GunaLabel()
         Me.PanelTop.SuspendLayout()
         Me.Panel1.SuspendLayout()
-        CType(Me.PicLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PanelTop
         '
-        Me.PanelTop.BackColor = System.Drawing.Color.LightGray
+        Me.PanelTop.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.PanelTop.Controls.Add(Me.LblSymptTop)
         Me.PanelTop.Controls.Add(Me.BtnClose)
         Me.PanelTop.Controls.Add(Me.GunaLabel1)
@@ -103,8 +101,8 @@ Partial Class FrmModSympt
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
+        Me.Panel1.BackgroundImage = CType(resources.GetObject("Panel1.BackgroundImage"), System.Drawing.Image)
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel1.Controls.Add(Me.PicLogo)
         Me.Panel1.Controls.Add(Me.ChkReg)
         Me.Panel1.Controls.Add(Me.Cmbreg)
         Me.Panel1.Controls.Add(Me.BtnCancel)
@@ -121,16 +119,6 @@ Partial Class FrmModSympt
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(671, 202)
         Me.Panel1.TabIndex = 32
-        '
-        'PicLogo
-        '
-        Me.PicLogo.BaseColor = System.Drawing.Color.White
-        Me.PicLogo.Image = CType(resources.GetObject("PicLogo.Image"), System.Drawing.Image)
-        Me.PicLogo.Location = New System.Drawing.Point(630, 151)
-        Me.PicLogo.Name = "PicLogo"
-        Me.PicLogo.Size = New System.Drawing.Size(39, 44)
-        Me.PicLogo.TabIndex = 45
-        Me.PicLogo.TabStop = False
         '
         'ChkReg
         '
@@ -151,6 +139,7 @@ Partial Class FrmModSympt
         Me.Cmbreg.BackColor = System.Drawing.Color.Transparent
         Me.Cmbreg.BaseColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
         Me.Cmbreg.BorderColor = System.Drawing.Color.Silver
+        Me.Cmbreg.BorderSize = 0
         Me.Cmbreg.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
         Me.Cmbreg.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.Cmbreg.FocusedColor = System.Drawing.Color.Empty
@@ -285,7 +274,7 @@ Partial Class FrmModSympt
         '
         'TxtDescr
         '
-        Me.TxtDescr.BackColor = System.Drawing.Color.White
+        Me.TxtDescr.BackColor = System.Drawing.Color.Transparent
         Me.TxtDescr.BaseColor = System.Drawing.Color.Transparent
         Me.TxtDescr.BorderColor = System.Drawing.Color.Transparent
         Me.TxtDescr.BorderSize = 0
@@ -295,12 +284,12 @@ Partial Class FrmModSympt
         Me.TxtDescr.FocusedForeColor = System.Drawing.SystemColors.ControlDarkDark
         Me.TxtDescr.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.TxtDescr.ForeColor = System.Drawing.Color.FromArgb(CType(CType(181, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(181, Byte), Integer))
-        Me.TxtDescr.Location = New System.Drawing.Point(2, 38)
+        Me.TxtDescr.Location = New System.Drawing.Point(11, 38)
         Me.TxtDescr.Multiline = True
         Me.TxtDescr.Name = "TxtDescr"
         Me.TxtDescr.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.TxtDescr.SelectedText = ""
-        Me.TxtDescr.Size = New System.Drawing.Size(204, 30)
+        Me.TxtDescr.Size = New System.Drawing.Size(650, 30)
         Me.TxtDescr.TabIndex = 33
         '
         'GunaLabel2
@@ -330,7 +319,6 @@ Partial Class FrmModSympt
         Me.PanelTop.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.PicLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -351,6 +339,5 @@ Partial Class FrmModSympt
     Friend WithEvents BtnCancel As Guna.UI.WinForms.GunaButton
     Friend WithEvents ChkReg As Guna.UI.WinForms.GunaCheckBox
     Friend WithEvents Cmbreg As Guna.UI.WinForms.GunaComboBox
-    Friend WithEvents PicLogo As Guna.UI.WinForms.GunaPictureBox
     Friend WithEvents ChkListPath As CheckedListBox
 End Class

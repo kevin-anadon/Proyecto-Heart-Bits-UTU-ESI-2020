@@ -45,7 +45,6 @@ Partial Class FrmSympt
         Me.PicTittle = New System.Windows.Forms.PictureBox()
         Me.DgvSympt = New Guna.UI.WinForms.GunaDataGridView()
         Me.PicListado = New System.Windows.Forms.PictureBox()
-        Me.PicFondo = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.TxtSympt = New Guna.UI.WinForms.GunaTextBox()
         Me.cmbregion = New Guna.UI.WinForms.GunaComboBox()
@@ -64,7 +63,6 @@ Partial Class FrmSympt
         CType(Me.PicTittle, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DgvSympt, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PicListado, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PicFondo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -467,16 +465,6 @@ Partial Class FrmSympt
         Me.PicListado.TabIndex = 12
         Me.PicListado.TabStop = False
         '
-        'PicFondo
-        '
-        Me.PicFondo.Image = CType(resources.GetObject("PicFondo.Image"), System.Drawing.Image)
-        Me.PicFondo.Location = New System.Drawing.Point(191, 0)
-        Me.PicFondo.Name = "PicFondo"
-        Me.PicFondo.Size = New System.Drawing.Size(869, 640)
-        Me.PicFondo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
-        Me.PicFondo.TabIndex = 10
-        Me.PicFondo.TabStop = False
-        '
         'PictureBox2
         '
         Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
@@ -689,6 +677,7 @@ Partial Class FrmSympt
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(1060, 640)
         Me.Controls.Add(Me.Guna2PictureBox1)
         Me.Controls.Add(Me.GunaLabel1)
@@ -708,7 +697,6 @@ Partial Class FrmSympt
         Me.Controls.Add(Me.PanelLeft)
         Me.Controls.Add(Me.MzButtonWindows3)
         Me.Controls.Add(Me.MzButtonWindows2)
-        Me.Controls.Add(Me.PicFondo)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmSympt"
@@ -720,7 +708,6 @@ Partial Class FrmSympt
         CType(Me.PicTittle, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DgvSympt, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PicListado, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PicFondo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -746,7 +733,6 @@ Partial Class FrmSympt
     Friend WithEvents PanelBody As Panel
     Friend WithEvents DgvSympt As Guna.UI.WinForms.GunaDataGridView
     Friend WithEvents PicListado As PictureBox
-    Friend WithEvents PicFondo As PictureBox
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents cmbregion As Guna.UI.WinForms.GunaComboBox
     Friend WithEvents TxtSympt As Guna.UI.WinForms.GunaTextBox

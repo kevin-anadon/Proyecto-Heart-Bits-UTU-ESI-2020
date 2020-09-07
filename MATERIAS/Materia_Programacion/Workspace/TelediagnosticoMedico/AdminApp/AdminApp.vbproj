@@ -211,9 +211,9 @@
       <Project>{b5ee54ef-54bf-45f3-b6a1-4bc72046bbbf}</Project>
       <Name>Data</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Logica\Logica.vbproj">
+    <ProjectReference Include="..\Logica\Logic.vbproj">
       <Project>{88d516f3-65b2-4627-ba85-47eba9843e5d}</Project>
-      <Name>Logica</Name>
+      <Name>Logic</Name>
     </ProjectReference>
     <ProjectReference Include="..\Persistencia\Persistencia.vbproj">
       <Project>{5430bbfa-d1a1-45f2-8c79-764e90d30510}</Project>
