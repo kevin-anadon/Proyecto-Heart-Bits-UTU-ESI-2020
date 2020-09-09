@@ -169,13 +169,20 @@ Public Class FrmHome
     End Sub
 
     Private Sub BtnNext_Result_Click(sender As Object, e As EventArgs) Handles BtnNext_Result.Click
-        For i As Integer = 0 To LbxSufferedPatient.Items.Count - 1
-            For n As Integer = 0 To Symptoms.Count
-                If CStr(LbxSufferedPatient.Items(i)).Equals(Symptoms.Item(n).Description) Then
-                    idSympSuffered.Add(Symptoms.Item(n).Id)
+        'Reconozco los Id de cada Sintoma que sufre el Paciente.
+        For Each symptomsSuffred In LbxSufferedPatient.Items
+            For Each symptom In Symptoms
+                If LbxSufferedPatient.Items(symptomsSuffred).ToString.Equals(symptom.Description.ToString) Then
+                    idSympSuffered.Add(symptom.Id)
                 End If
-            Next 'For [n] para cada Síntoma existente. 
-        Next 'For [i] para cada item del ListBox que contiene los Síntomas que Sufre el Paciente.
+            Next 'For [symptom] para cada Síntoma existente. 
+        Next 'For [symptomsSuffred] para cada item del ListBox que contiene los Síntomas que Sufre el Paciente.
+
+        'Almaceno en la Base de Datos los Sintomas que sufre el Paciente, y su Id para referenciarlo
+        log.SetPatientSufferSymp(idPatientLoggedOn, idSympSuffered)
+
+
+
     End Sub
 
     Private Sub BtnBack_Patient1_Click(sender As Object, e As EventArgs) Handles BtnBack_Patient1.Click
@@ -185,34 +192,47 @@ Public Class FrmHome
     Dim usedSymptoms As New List(Of String) 'Los Sintomas que se cargan al Listbox
 
     Private Sub CbxSysSymptoms_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CbxSysSymptoms.SelectedIndexChanged
-        Dim position As Integer = 1
+        Dim doesExistInTheLbx As Boolean
+        Dim a As Object = " "
+        Dim doesItemGhostExist As Boolean = False 'Existe ItemGhost?
 
-
-        Do While position <= LbxSufferedPatient.Items.Count
-            If CStr(LbxSufferedPatient.Items(position - 1)).Equals(" ") Then
-                'Quiere decir que GhostItem existe, y como solo existe al inicio o cuando Item de Lbx<1, hago:
-                LbxSufferedPatient.Items.Clear()
-                LbxSufferedPatient.Items.Add(CbxSysSymptoms.SelectedItem)
-
-            ElseIf Not usedSymptoms.Contains(CStr(CbxSysSymptoms.SelectedItem)) Then
-                usedSymptoms.Add(CStr(CbxSysSymptoms.SelectedItem))
-                LbxSufferedPatient.Items.Add(CbxSysSymptoms.SelectedItem)
+        For Each LbxItem In LbxSufferedPatient.Items
+            If LbxItem.ToString = a.ToString Then
+                doesItemGhostExist = True 'Existe el ItemGhost 
             End If
+        Next
 
-            position += 1
-        Loop
+        If doesItemGhostExist Then
+            LbxSufferedPatient.Items.Clear()
+            doesExistInTheLbx = False 'Misma accion de agregar. 
+        Else
+            For Each itemSelectedFormLbx In LbxSufferedPatient.Items
+                If CbxSysSymptoms.SelectedItem.ToString.Equals(itemSelectedFormLbx.ToString) Then
+                    doesExistInTheLbx = True 'Es decir, que ya existe en la lista
+                End If
+            Next
+        End If
+
+        If doesExistInTheLbx = False Then
+            LbxSufferedPatient.Items.Add(CbxSysSymptoms.SelectedItem)
+        End If
+
     End Sub
 
     Private Sub BtnDropPathology_Click(sender As Object, e As EventArgs) Handles BtnDropPathology.Click
+        'Quiero eliminar el GhostItem?
         If LbxSufferedPatient.Items.Count = 0 Then
             LbxSufferedPatient.Items.RemoveAt(LbxSufferedPatient.SelectedIndex)
             LbxSufferedPatient.Items.Add(" ")
         Else
+            'Intento borrar el item seleccionado, porque puede que no se haya seleccionado uno
             Try
                 LbxSufferedPatient.Items.RemoveAt(LbxSufferedPatient.SelectedIndex)
             Catch ex As Exception
                 'Debe de seleccionar un item para eliminarlo.
             End Try
+
+            'No hay ningun elemento en el Lbx: Porque se borró el último existente?
             If LbxSufferedPatient.Items.Count = 0 Then
                 LbxSufferedPatient.Items.Add(" ")
             End If
@@ -227,7 +247,6 @@ Public Class FrmHome
         'Este existe al inicio (instancia de FrmHome) y cada vez que Lbx se queda con 1 Item de Symptoms (Cmbx)
         LbxSufferedPatient.Items.Clear()
         LbxSufferedPatient.Items.Add(" ") 'Mi GhostItem del Lbx
-
 
         'Opero con los Sintomas:
         GetIdPatientLoggedOn()
