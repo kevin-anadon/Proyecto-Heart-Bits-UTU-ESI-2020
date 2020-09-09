@@ -348,14 +348,15 @@ Public Class ConnectionDB
         Dim con As Connection = connect()
         Dim Symptoms As New List(Of Symptom)
         Dim rsSelectSymptoms As Recordset = con.Execute("SELECT id, descripcion FROM sintoma;")
-        Dim S1 As New Symptom
+
 
         While (Not rsSelectSymptoms.EOF)
             Dim idSymptom As Integer = DirectCast(rsSelectSymptoms.Fields("id").Value, Integer)
             Dim descSymptom As String = TryCast(rsSelectSymptoms.Fields("descripcion").Value, String)
-
-            'Symptoms.Add(S1)
-            Symptoms.Add(New Symptom(descSymptom))
+            Dim S1 As New Symptom
+            S1.Id = idSymptom
+            S1.Description = descSymptom
+            Symptoms.Add(S1)
             rsSelectSymptoms.MoveNext()
         End While
 

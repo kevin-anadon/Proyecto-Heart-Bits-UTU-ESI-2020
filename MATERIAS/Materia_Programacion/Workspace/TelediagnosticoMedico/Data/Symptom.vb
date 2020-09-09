@@ -10,11 +10,6 @@ Public Class Symptom
 
     End Sub 'Empty Constructor (default)
 
-    Public Sub New(desc As String)
-        Me.Description = desc
-
-    End Sub
-
     Public Sub New(id As Integer, desc As String)
         Me.Id = id
         Me.Description = desc

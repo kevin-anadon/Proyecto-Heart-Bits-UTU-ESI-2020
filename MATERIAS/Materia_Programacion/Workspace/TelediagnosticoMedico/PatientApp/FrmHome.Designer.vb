@@ -24,10 +24,6 @@ Partial Class FrmHome
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmHome))
-        Dim DataGridViewCellStyle21 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle22 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle23 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle24 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.PnlLeft = New Guna.UI2.WinForms.Guna2Panel()
         Me.Pctbx5_Chat = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Pctbx4_Result = New Guna.UI2.WinForms.Guna2PictureBox()
@@ -100,7 +96,7 @@ Partial Class FrmHome
         Me.Rbtn1_Yes = New Guna.UI2.WinForms.Guna2RadioButton()
         Me.PnlSymptom1 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.DgvPatientSymptoms = New Guna.UI2.WinForms.Guna2DataGridView()
+        Me.LbxSufferedPatient = New System.Windows.Forms.ListBox()
         Me.BtnDropPathology = New Guna.UI2.WinForms.Guna2Button()
         Me.CbxSysSymptoms = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.BtnForeText1 = New Guna.UI2.WinForms.Guna2Button()
@@ -140,7 +136,6 @@ Partial Class FrmHome
         Me.Grpbx_Item1.SuspendLayout()
         Me.PnlSymptom1.SuspendLayout()
         Me.Guna2Panel1.SuspendLayout()
-        CType(Me.DgvPatientSymptoms, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PnlLeft
@@ -1386,89 +1381,27 @@ Partial Class FrmHome
         Me.Guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(CType(CType(118, Byte), Integer), CType(CType(118, Byte), Integer), CType(CType(118, Byte), Integer))
         Me.Guna2Panel1.BorderRadius = 10
         Me.Guna2Panel1.BorderThickness = 2
-        Me.Guna2Panel1.Controls.Add(Me.DgvPatientSymptoms)
+        Me.Guna2Panel1.Controls.Add(Me.LbxSufferedPatient)
         Me.Guna2Panel1.Location = New System.Drawing.Point(8, 169)
         Me.Guna2Panel1.Name = "Guna2Panel1"
         Me.Guna2Panel1.ShadowDecoration.Parent = Me.Guna2Panel1
         Me.Guna2Panel1.Size = New System.Drawing.Size(521, 487)
         Me.Guna2Panel1.TabIndex = 34
         '
-        'DgvPatientSymptoms
+        'LbxSufferedPatient
         '
-        Me.DgvPatientSymptoms.AccessibleDescription = "DgvPatientSymptoms"
-        Me.DgvPatientSymptoms.AccessibleName = "DgvPatientSymptoms"
-        Me.DgvPatientSymptoms.AllowUserToAddRows = False
-        Me.DgvPatientSymptoms.AllowUserToDeleteRows = False
-        Me.DgvPatientSymptoms.AllowUserToResizeColumns = False
-        Me.DgvPatientSymptoms.AllowUserToResizeRows = False
-        DataGridViewCellStyle21.BackColor = System.Drawing.Color.White
-        Me.DgvPatientSymptoms.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle21
-        Me.DgvPatientSymptoms.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.DgvPatientSymptoms.BackgroundColor = System.Drawing.Color.White
-        Me.DgvPatientSymptoms.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.DgvPatientSymptoms.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
-        Me.DgvPatientSymptoms.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle22.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle22.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle22.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle22.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DgvPatientSymptoms.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle22
-        Me.DgvPatientSymptoms.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.DgvPatientSymptoms.ColumnHeadersVisible = False
-        Me.DgvPatientSymptoms.Cursor = System.Windows.Forms.Cursors.Default
-        DataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle23.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle23.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle23.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle23.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DgvPatientSymptoms.DefaultCellStyle = DataGridViewCellStyle23
-        Me.DgvPatientSymptoms.EnableHeadersVisualStyles = False
-        Me.DgvPatientSymptoms.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.DgvPatientSymptoms.Location = New System.Drawing.Point(8, 9)
-        Me.DgvPatientSymptoms.Name = "DgvPatientSymptoms"
-        DataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle24.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle24.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle24.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
-        DataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.White
-        DataGridViewCellStyle24.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
-        DataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DgvPatientSymptoms.RowHeadersDefaultCellStyle = DataGridViewCellStyle24
-        Me.DgvPatientSymptoms.RowHeadersVisible = False
-        Me.DgvPatientSymptoms.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
-        Me.DgvPatientSymptoms.ShowCellErrors = False
-        Me.DgvPatientSymptoms.ShowCellToolTips = False
-        Me.DgvPatientSymptoms.ShowEditingIcon = False
-        Me.DgvPatientSymptoms.ShowRowErrors = False
-        Me.DgvPatientSymptoms.Size = New System.Drawing.Size(506, 470)
-        Me.DgvPatientSymptoms.TabIndex = 0
-        Me.DgvPatientSymptoms.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.[Default]
-        Me.DgvPatientSymptoms.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
-        Me.DgvPatientSymptoms.ThemeStyle.AlternatingRowsStyle.Font = Nothing
-        Me.DgvPatientSymptoms.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty
-        Me.DgvPatientSymptoms.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty
-        Me.DgvPatientSymptoms.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty
-        Me.DgvPatientSymptoms.ThemeStyle.BackColor = System.Drawing.Color.White
-        Me.DgvPatientSymptoms.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.DgvPatientSymptoms.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.DgvPatientSymptoms.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        Me.DgvPatientSymptoms.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        Me.DgvPatientSymptoms.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White
-        Me.DgvPatientSymptoms.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.DgvPatientSymptoms.ThemeStyle.HeaderStyle.Height = 23
-        Me.DgvPatientSymptoms.ThemeStyle.ReadOnly = False
-        Me.DgvPatientSymptoms.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White
-        Me.DgvPatientSymptoms.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
-        Me.DgvPatientSymptoms.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        Me.DgvPatientSymptoms.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        Me.DgvPatientSymptoms.ThemeStyle.RowsStyle.Height = 22
-        Me.DgvPatientSymptoms.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.DgvPatientSymptoms.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        Me.LbxSufferedPatient.AccessibleDescription = "LbxSufferedPatient"
+        Me.LbxSufferedPatient.AccessibleName = "LbxSufferedPatient"
+        Me.LbxSufferedPatient.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.LbxSufferedPatient.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.LbxSufferedPatient.ForeColor = System.Drawing.Color.FromArgb(CType(CType(118, Byte), Integer), CType(CType(118, Byte), Integer), CType(CType(118, Byte), Integer))
+        Me.LbxSufferedPatient.FormattingEnabled = True
+        Me.LbxSufferedPatient.ItemHeight = 17
+        Me.LbxSufferedPatient.Location = New System.Drawing.Point(8, 7)
+        Me.LbxSufferedPatient.Name = "LbxSufferedPatient"
+        Me.LbxSufferedPatient.Size = New System.Drawing.Size(506, 476)
+        Me.LbxSufferedPatient.Sorted = True
+        Me.LbxSufferedPatient.TabIndex = 0
         '
         'BtnDropPathology
         '
@@ -1526,6 +1459,7 @@ Partial Class FrmHome
         Me.CbxSysSymptoms.Name = "CbxSysSymptoms"
         Me.CbxSysSymptoms.ShadowDecoration.Parent = Me.CbxSysSymptoms
         Me.CbxSysSymptoms.Size = New System.Drawing.Size(511, 36)
+        Me.CbxSysSymptoms.Sorted = True
         Me.CbxSysSymptoms.TabIndex = 0
         '
         'BtnForeText1
@@ -1689,7 +1623,6 @@ Partial Class FrmHome
         Me.Grpbx_Item1.PerformLayout()
         Me.PnlSymptom1.ResumeLayout(False)
         Me.Guna2Panel1.ResumeLayout(False)
-        CType(Me.DgvPatientSymptoms, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1773,6 +1706,6 @@ Partial Class FrmHome
     Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents BtnForeText1 As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents CbxSysSymptoms As Guna.UI2.WinForms.Guna2ComboBox
-    Friend WithEvents DgvPatientSymptoms As Guna.UI2.WinForms.Guna2DataGridView
     Friend WithEvents BtnDropPathology As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents LbxSufferedPatient As ListBox
 End Class

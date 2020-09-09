@@ -47,15 +47,13 @@ Public Class People
 
     ''' <summary>
     '''     Función que identifica al género a asignar para la Persona
+    '''     Almacena a la Propiedad local, el tipo de Genero que posee la Persona.
     ''' </summary>
     ''' <param name="genrePeople">
     '''     El género a escoger. 
     '''     Valores posibles: 0:H, 1:M, 2:O.
     '''     Debe de ser número entero el parámetro.
     ''' </param>
-    ''' <returns>
-    '''     Almacena a la Propiedad local, el tipo de Genero que posee la Persona.
-    ''' </returns>
     Protected Sub IdentifyGenre(ByVal genrePeople As Integer)
         Select Case genrePeople
             Case 0

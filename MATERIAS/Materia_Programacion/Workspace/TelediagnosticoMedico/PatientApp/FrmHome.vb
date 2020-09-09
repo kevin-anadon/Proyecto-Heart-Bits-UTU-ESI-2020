@@ -14,7 +14,8 @@ Public Class FrmHome
     Private log As New Logic.Controller()
 
     'Query's:
-    Public Symptoms As List(Of Data.Symptom)
+    Private Symptoms As List(Of Data.Symptom)
+    Private idSympSuffered As New List(Of Integer)
 
 
     'Comportamientos:
@@ -168,39 +169,72 @@ Public Class FrmHome
     End Sub
 
     Private Sub BtnNext_Result_Click(sender As Object, e As EventArgs) Handles BtnNext_Result.Click
-
+        For i As Integer = 0 To LbxSufferedPatient.Items.Count - 1
+            For n As Integer = 0 To Symptoms.Count
+                If CStr(LbxSufferedPatient.Items(i)).Equals(Symptoms.Item(n).Description) Then
+                    idSympSuffered.Add(Symptoms.Item(n).Id)
+                End If
+            Next 'For [n] para cada Síntoma existente. 
+        Next 'For [i] para cada item del ListBox que contiene los Síntomas que Sufre el Paciente.
     End Sub
 
     Private Sub BtnBack_Patient1_Click(sender As Object, e As EventArgs) Handles BtnBack_Patient1.Click
         VisualSettings(2, False, True, False, False, False, False, False, True, False, False)
     End Sub
 
+    Dim usedSymptoms As New List(Of String) 'Los Sintomas que se cargan al Listbox
+
     Private Sub CbxSysSymptoms_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CbxSysSymptoms.SelectedIndexChanged
+        Dim position As Integer = 1
+
+
+        Do While position <= LbxSufferedPatient.Items.Count
+            If CStr(LbxSufferedPatient.Items(position - 1)).Equals(" ") Then
+                'Quiere decir que GhostItem existe, y como solo existe al inicio o cuando Item de Lbx<1, hago:
+                LbxSufferedPatient.Items.Clear()
+                LbxSufferedPatient.Items.Add(CbxSysSymptoms.SelectedItem)
+
+            ElseIf Not usedSymptoms.Contains(CStr(CbxSysSymptoms.SelectedItem)) Then
+                usedSymptoms.Add(CStr(CbxSysSymptoms.SelectedItem))
+                LbxSufferedPatient.Items.Add(CbxSysSymptoms.SelectedItem)
+            End If
+
+            position += 1
+        Loop
+    End Sub
+
+    Private Sub BtnDropPathology_Click(sender As Object, e As EventArgs) Handles BtnDropPathology.Click
+        If LbxSufferedPatient.Items.Count = 0 Then
+            LbxSufferedPatient.Items.RemoveAt(LbxSufferedPatient.SelectedIndex)
+            LbxSufferedPatient.Items.Add(" ")
+        Else
+            Try
+                LbxSufferedPatient.Items.RemoveAt(LbxSufferedPatient.SelectedIndex)
+            Catch ex As Exception
+                'Debe de seleccionar un item para eliminarlo.
+            End Try
+            If LbxSufferedPatient.Items.Count = 0 Then
+                LbxSufferedPatient.Items.Add(" ")
+            End If
+        End If
 
     End Sub
 
     Private Sub FrmHome_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         VisualSettings(1, True, False, False, False, False, True, False, False, False, False)
 
+        'GhostItem: Es mi elemento del Lbx que me permite utilizarlo (For, recorrer) cuando hay elemento != de Symptoms (Cmbx)
+        'Este existe al inicio (instancia de FrmHome) y cada vez que Lbx se queda con 1 Item de Symptoms (Cmbx)
+        LbxSufferedPatient.Items.Clear()
+        LbxSufferedPatient.Items.Add(" ") 'Mi GhostItem del Lbx
+
+
         'Opero con los Sintomas:
         GetIdPatientLoggedOn()
         LoadSymptoms()
-        CbxSysSymptoms.Items.Insert(0, "Buscar, p. ej. dolor de cabeza.")
         For Each symp As Symptom In Symptoms
             CbxSysSymptoms.Items.Add(symp.description)
         Next
-
-        'Opero con DataGridView de los Sintomas que Sufre Paciente:
-        Dim btnDeleteRow As New DataGridViewButtonColumn()
-        Dim sympsSuffered As New DataGridViewColumn()
-        DgvPatientSymptoms.Rows.Clear()
-
-        sympsSuffered.Name = "Sintomas sufridos"
-
-        DgvPatientSymptoms.Columns.Insert(0, sympsSuffered)
-        DgvPatientSymptoms.Columns.Insert(1, btnDeleteRow)
-        btnDeleteRow.HeaderText = "ELIMINAR"
-        btnDeleteRow.Name = " "
     End Sub
 
 

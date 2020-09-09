@@ -22,15 +22,13 @@
 
     ''' <summary>
     '''     Función que identifica al tipo a asignar para el Diagnóstico
+    '''     Almacena a la Propiedad local, el tipo de Diagnóstico.
     ''' </summary>
     ''' <param name="kindDiagnostic">
     '''     El Diagnóstico a escoger. 
     '''     Valores posibles: 0:Tentativo, 1:Definitivo.
     '''     Debe de ser número entero el parámetro.
     ''' </param>
-    ''' <returns>
-    '''     Almacena a la Propiedad local, el tipo de Diagnóstico.
-    ''' </returns>
     Private Sub IdentifyKindDiagnostic(ByVal kindDiagnostic As Integer)
         Select Case kindDiagnostic
             Case 0
