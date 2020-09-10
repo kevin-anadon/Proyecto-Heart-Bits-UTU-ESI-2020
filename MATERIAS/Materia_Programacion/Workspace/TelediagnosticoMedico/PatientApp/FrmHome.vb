@@ -139,8 +139,8 @@ Public Class FrmHome
         'Panel: El primero en visualizar.
         PnlIntro1.Visible = myBool6
         PnlIntro2.Visible = myBool7
-        PnlPatient1.Visible = myBool8
-        PnlSymptom1.Visible = myBool9
+        PnlPatient.Visible = myBool8
+        PnlSymptom.Visible = myBool9
     End Sub
 
     Public Sub GetIdPatientLoggedOn()

@@ -24,13 +24,11 @@ Public Class FrmLogin
             Try
                 Dim rslog As People = connectionDB.CheckLog(user, pass, TxtCredential1.Text)
                 If IsNothing(rslog) Then
-                    Console.WriteLine("Ci Erronea")
                     'Se trabaja con la UI.
                     Me.indicatorToolBtn = 0
                 Else
-                    Me.ciPatientLoggedOn = TxtCredential1.Text
-                    Console.WriteLine("Logueo exitoso")
                     Me.indicatorToolBtn = 2
+                    Me.ciPatientLoggedOn = TxtCredential1.Text
                     Me.Hide() 'Cierro el Frame de "Login".
                     FrmHome.ciPatientLoggedOn = Me.ciPatientLoggedOn 'Envío la CI del paciente que se logeó al atributo del FrmHome.
                     FrmHome.Show() 'Inicio el Frame "Pantalla Inicial".
@@ -62,7 +60,7 @@ Public Class FrmLogin
             Case 1 'Validando las Credenciales / En espera.
                 BtnForeText1.BorderColor = Color.FromArgb(255, 208, 52) 'Color Mostaza = En espera / Cuidado 
                 ToolTipMsgError.SetToolTip(BtnForeText1, "Validando credenciales.")
-            Case 2 'Error de Autenticación.
+            Case 2 'Logeo Exitoso.
                 BtnForeText1.BorderColor = Color.FromArgb(98, 186, 172) 'Color Turquesa = Correcto 
                 ToolTipMsgError.SetToolTip(BtnForeText1, "Logeo  exitoso.")
             Case 3 'Error de Conexión.
