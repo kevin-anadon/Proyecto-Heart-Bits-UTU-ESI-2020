@@ -302,6 +302,7 @@ Public Class FrmHome
         Next
         Dim col1, col2 As New DataGridViewTextBoxColumn
 
+        'Operar el Dgv Patologias
         DgvPhatologies.ReadOnly = True
         col1.Name = "Patología"
         col2.Name = "Evidencia"
@@ -309,4 +310,9 @@ Public Class FrmHome
         DgvPhatologies.Columns.Add(col2)
     End Sub
 
+    Private Sub BtnEnd_Click(sender As Object, e As EventArgs) Handles BtnEnd.Click
+        VisualSettings(1, True, False, False, False, False, True, False, False, False, False)
+        PatientApp.FrmLogin.Show()
+        Me.Close()
+    End Sub
 End Class 'FrmHome

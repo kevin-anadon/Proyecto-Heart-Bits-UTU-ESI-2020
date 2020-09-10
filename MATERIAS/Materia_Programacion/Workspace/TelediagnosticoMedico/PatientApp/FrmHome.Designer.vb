@@ -24,9 +24,9 @@ Partial Class FrmHome
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmHome))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.PnlLeft = New Guna.UI2.WinForms.Guna2Panel()
         Me.Pctbx5_Chat = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Pctbx4_Result = New Guna.UI2.WinForms.Guna2PictureBox()
@@ -1643,7 +1643,6 @@ Partial Class FrmHome
         Me.PnlResultItems.Location = New System.Drawing.Point(9, 12)
         Me.PnlResultItems.Name = "PnlResultItems"
         Me.PnlResultItems.ShadowDecoration.Enabled = True
-        Me.PnlResultItems.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
         Me.PnlResultItems.ShadowDecoration.Parent = Me.PnlResultItems
         Me.PnlResultItems.Size = New System.Drawing.Size(1046, 644)
         Me.PnlResultItems.TabIndex = 0
@@ -1782,40 +1781,40 @@ Partial Class FrmHome
         Me.DgvPhatologies.AllowUserToDeleteRows = False
         Me.DgvPhatologies.AllowUserToResizeColumns = False
         Me.DgvPhatologies.AllowUserToResizeRows = False
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
-        Me.DgvPhatologies.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.White
+        Me.DgvPhatologies.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4
         Me.DgvPhatologies.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DgvPhatologies.BackgroundColor = System.Drawing.Color.White
         Me.DgvPhatologies.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DgvPhatologies.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.DgvPhatologies.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DgvPhatologies.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DgvPhatologies.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
         Me.DgvPhatologies.ColumnHeadersHeight = 4
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DgvPhatologies.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DgvPhatologies.DefaultCellStyle = DataGridViewCellStyle6
         Me.DgvPhatologies.EnableHeadersVisualStyles = False
         Me.DgvPhatologies.GridColor = System.Drawing.Color.White
-        Me.DgvPhatologies.Location = New System.Drawing.Point(10, 40)
+        Me.DgvPhatologies.Location = New System.Drawing.Point(10, 44)
         Me.DgvPhatologies.Name = "DgvPhatologies"
         Me.DgvPhatologies.RowHeadersVisible = False
         Me.DgvPhatologies.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DgvPhatologies.ShowCellErrors = False
         Me.DgvPhatologies.ShowCellToolTips = False
         Me.DgvPhatologies.ShowRowErrors = False
-        Me.DgvPhatologies.Size = New System.Drawing.Size(772, 388)
+        Me.DgvPhatologies.Size = New System.Drawing.Size(772, 384)
         Me.DgvPhatologies.TabIndex = 1
         Me.DgvPhatologies.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.[Default]
         Me.DgvPhatologies.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
@@ -1864,11 +1863,11 @@ Partial Class FrmHome
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1299, 754)
         Me.ControlBox = False
+        Me.Controls.Add(Me.PnlResult)
         Me.Controls.Add(Me.PnlIntro1)
         Me.Controls.Add(Me.PnlIntro2)
         Me.Controls.Add(Me.PnlPatient)
         Me.Controls.Add(Me.PnlSymptom)
-        Me.Controls.Add(Me.PnlResult)
         Me.Controls.Add(Me.PnlLeft)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)

@@ -366,6 +366,12 @@ Public Class ConnectionDB
 
     Public Sub SetPatientSufferSymp(idPatient As Integer, idSympSuffered As List(Of Integer))
         Dim con As Connection = connect()
+        Dim rsIsThere As Recordset = con.Execute("SELECT id_sintoma FROM paciente_sufre WHERE id_paciente=" & idPatient)
+        If Not rsIsThere.EOF Then
+            Dim rsDelete As Recordset = con.Execute("DELETE FROM paciente_sufre WHERE id_paciente=" & idPatient)
+            rsIsThere.MoveNext()
+        End If
+
         For Each e As Integer In idSympSuffered
             Dim rsInsert As Recordset = con.Execute("INSERT INTO paciente_sufre(id_sintoma, id_paciente) VALUES(" & e & "," & idPatient & ");")
         Next
