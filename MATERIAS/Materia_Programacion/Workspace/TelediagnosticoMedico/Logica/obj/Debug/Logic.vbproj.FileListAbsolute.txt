@@ -15,3 +15,20 @@ C:\Users\Yorel Acosta\Desktop\Study ESIMdeo\Clase 3BB 2020\Proyecto-Heart-Bits-U
 C:\Users\Yorel Acosta\Desktop\Study ESIMdeo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\Logica\obj\Debug\Logic.dll
 C:\Users\Yorel Acosta\Desktop\Study ESIMdeo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\Logica\obj\Debug\Logic.xml
 C:\Users\Yorel Acosta\Desktop\Study ESIMdeo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\Logica\obj\Debug\Logic.pdb
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\Logica\bin\Debug\Logic.dll
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\Logica\bin\Debug\Logic.pdb
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\Logica\bin\Debug\Logic.xml
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\Logica\bin\Debug\Data.dll
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\Logica\bin\Debug\Persistencia.dll
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\Logica\bin\Debug\Data.pdb
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\Logica\bin\Debug\Data.xml
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\Logica\bin\Debug\Persistencia.pdb
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\Logica\bin\Debug\Persistencia.xml
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\Logica\obj\Debug\Logic.vbprojAssemblyReference.cache
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\Logica\obj\Debug\Logic.Resources.resources
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\Logica\obj\Debug\Logic.vbproj.GenerateResource.cache
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\Logica\obj\Debug\Logic.vbproj.CoreCompileInputs.cache
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\Logica\obj\Debug\Logic.vbproj.CopyComplete
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\Logica\obj\Debug\Logic.dll
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\Logica\obj\Debug\Logic.xml
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\Logica\obj\Debug\Logic.pdb

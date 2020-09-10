@@ -192,9 +192,8 @@ Public Class FrmHome
         Dim leve1 As Integer = Nothing
         Dim urgente2o3 As Integer = Nothing
 
+        chargePathology = New List(Of Pathology)
         For Each pathology As Pathology In PatholgiesSuffered
-            chargePathology = New List(Of Pathology)
-
             If pathology.priority.id > 1 Then
                 leve1 = leve1 + 1
             Else
@@ -225,6 +224,10 @@ Public Class FrmHome
 
         VisualSettings(4, False, False, False, True, False, False, False, False, False, True)
 
+        For Each pat As Pathology In chargePathology
+            DgvPhatologies.Rows.Add(pat.name, pat.evidence)
+        Next
+        DgvPhatologies.Refresh()
 
     End Sub
 
@@ -297,7 +300,13 @@ Public Class FrmHome
         For Each symp As Symptom In Symptoms
             CbxSysSymptoms.Items.Add(symp.description)
         Next
-    End Sub
+        Dim col1, col2 As New DataGridViewTextBoxColumn
 
+        DgvPhatologies.ReadOnly = True
+        col1.Name = "Patología"
+        col2.Name = "Evidencia"
+        DgvPhatologies.Columns.Add(col1)
+        DgvPhatologies.Columns.Add(col2)
+    End Sub
 
 End Class 'FrmHome

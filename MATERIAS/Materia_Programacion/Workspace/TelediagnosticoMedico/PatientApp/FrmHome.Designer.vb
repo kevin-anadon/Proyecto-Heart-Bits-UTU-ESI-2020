@@ -1452,7 +1452,7 @@ Partial Class FrmHome
         Me.BtnDropPathology.ShadowDecoration.Parent = Me.BtnDropPathology
         Me.BtnDropPathology.Size = New System.Drawing.Size(522, 60)
         Me.BtnDropPathology.TabIndex = 37
-        Me.BtnDropPathology.Text = "QUITAR PATOLOGÍA"
+        Me.BtnDropPathology.Text = "QUITAR SÍNTOMA"
         '
         'CbxSysSymptoms
         '
