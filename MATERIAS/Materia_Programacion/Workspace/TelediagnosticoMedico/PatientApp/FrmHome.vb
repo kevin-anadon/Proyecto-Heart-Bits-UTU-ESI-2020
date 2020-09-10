@@ -201,7 +201,13 @@ Public Class FrmHome
             ''Panel informativo de color Verde = Poco o Leve Riesgo de Salud
             ''No requiere valoración médica urgente
             PnlColorInfo.FillColor = Color.FromArgb(98, 186, 172)
-            LblResultUrgent.Text = "No requiere de una valoración médica urgente."
+            LblResultUrgent.Text = "No requiere de una valoración Médica urgente."
+
+        Else
+            ''Panel informativo de color Corál = Grave Riesgo de Salud
+            ''Requiere valoración médica urgente
+            PnlColorInfo.FillColor = Color.FromArgb(251, 136, 133)
+            LblResultUrgent.Text = "Requiere de una valoración Médica urgente."
         End If
 
 

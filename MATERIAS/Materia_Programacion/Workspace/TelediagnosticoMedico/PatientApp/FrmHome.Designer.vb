@@ -110,21 +110,21 @@ Partial Class FrmHome
         Me.Label7 = New System.Windows.Forms.Label()
         Me.PnlResult = New Guna.UI2.WinForms.Guna2Panel()
         Me.BtnEnd = New Guna.UI2.WinForms.Guna2Button()
-        Me.Guna2Elipse2 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.PnlResultItems = New Guna.UI2.WinForms.Guna2Panel()
         Me.PnlColorInfo = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2PictureBox8 = New Guna.UI2.WinForms.Guna2PictureBox()
-        Me.LblResultUrgent = New System.Windows.Forms.Label()
-        Me.LblChat = New System.Windows.Forms.Label()
-        Me.LblResults = New System.Windows.Forms.Label()
-        Me.LblResultInfoo = New System.Windows.Forms.Label()
         Me.Guna2PictureBox9 = New Guna.UI2.WinForms.Guna2PictureBox()
+        Me.LblResultInfoo = New System.Windows.Forms.Label()
+        Me.LblResults = New System.Windows.Forms.Label()
+        Me.LblChat = New System.Windows.Forms.Label()
+        Me.LblResultUrgent = New System.Windows.Forms.Label()
         Me.PnlSubPath = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Guna2Elipse3 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.PnlHeader = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Guna2Elipse4 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.Label8 = New System.Windows.Forms.Label()
         Me.DgvPhatologies = New Guna.UI2.WinForms.Guna2DataGridView()
+        Me.Guna2Elipse2 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
+        Me.Guna2Elipse3 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
+        Me.Guna2Elipse4 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.PnlLeft.SuspendLayout()
         CType(Me.Pctbx5_Chat, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Pctbx4_Result, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -1626,11 +1626,6 @@ Partial Class FrmHome
         Me.BtnEnd.TabIndex = 2
         Me.BtnEnd.Text = "FINALIZAR"
         '
-        'Guna2Elipse2
-        '
-        Me.Guna2Elipse2.BorderRadius = 20
-        Me.Guna2Elipse2.TargetControl = Me.PnlResultItems
-        '
         'PnlResultItems
         '
         Me.PnlResultItems.AccessibleDescription = "PnlResultItems"
@@ -1676,42 +1671,16 @@ Partial Class FrmHome
         Me.Guna2PictureBox8.TabIndex = 0
         Me.Guna2PictureBox8.TabStop = False
         '
-        'LblResultUrgent
+        'Guna2PictureBox9
         '
-        Me.LblResultUrgent.AccessibleDescription = "LblResultUrgent"
-        Me.LblResultUrgent.AccessibleName = "LblResultUrgent"
-        Me.LblResultUrgent.Font = New System.Drawing.Font("Calibri", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblResultUrgent.Location = New System.Drawing.Point(215, 9)
-        Me.LblResultUrgent.Name = "LblResultUrgent"
-        Me.LblResultUrgent.Size = New System.Drawing.Size(822, 50)
-        Me.LblResultUrgent.TabIndex = 2
-        Me.LblResultUrgent.Text = "No requiere de una valoración médica urgente."
-        Me.LblResultUrgent.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'LblChat
-        '
-        Me.LblChat.AccessibleDescription = "LblChat"
-        Me.LblChat.AccessibleName = "LblChat"
-        Me.LblChat.Font = New System.Drawing.Font("Calibri", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblChat.Location = New System.Drawing.Point(218, 53)
-        Me.LblChat.Name = "LblChat"
-        Me.LblChat.Size = New System.Drawing.Size(815, 30)
-        Me.LblChat.TabIndex = 3
-        Me.LblChat.Text = "En las próximas versiones de nuestro sitema, podrá consultar con un Médico."
-        Me.LblChat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'LblResults
-        '
-        Me.LblResults.AccessibleDescription = "LblResults"
-        Me.LblResults.AccessibleName = "LblResults"
-        Me.LblResults.Font = New System.Drawing.Font("Calibri", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblResults.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer))
-        Me.LblResults.Location = New System.Drawing.Point(216, 92)
-        Me.LblResults.Name = "LblResults"
-        Me.LblResults.Size = New System.Drawing.Size(822, 50)
-        Me.LblResults.TabIndex = 4
-        Me.LblResults.Text = "Resultados"
-        Me.LblResults.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Guna2PictureBox9.Image = CType(resources.GetObject("Guna2PictureBox9.Image"), System.Drawing.Image)
+        Me.Guna2PictureBox9.Location = New System.Drawing.Point(224, 87)
+        Me.Guna2PictureBox9.Name = "Guna2PictureBox9"
+        Me.Guna2PictureBox9.ShadowDecoration.Parent = Me.Guna2PictureBox9
+        Me.Guna2PictureBox9.Size = New System.Drawing.Size(763, 10)
+        Me.Guna2PictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.Guna2PictureBox9.TabIndex = 23
+        Me.Guna2PictureBox9.TabStop = False
         '
         'LblResultInfoo
         '
@@ -1727,16 +1696,42 @@ Partial Class FrmHome
     "ón proporcionada tiene una finalidad informativa y no se corresponde con una opi" &
     "nión médica real."
         '
-        'Guna2PictureBox9
+        'LblResults
         '
-        Me.Guna2PictureBox9.Image = CType(resources.GetObject("Guna2PictureBox9.Image"), System.Drawing.Image)
-        Me.Guna2PictureBox9.Location = New System.Drawing.Point(224, 87)
-        Me.Guna2PictureBox9.Name = "Guna2PictureBox9"
-        Me.Guna2PictureBox9.ShadowDecoration.Parent = Me.Guna2PictureBox9
-        Me.Guna2PictureBox9.Size = New System.Drawing.Size(763, 10)
-        Me.Guna2PictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
-        Me.Guna2PictureBox9.TabIndex = 23
-        Me.Guna2PictureBox9.TabStop = False
+        Me.LblResults.AccessibleDescription = "LblResults"
+        Me.LblResults.AccessibleName = "LblResults"
+        Me.LblResults.Font = New System.Drawing.Font("Calibri", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblResults.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer))
+        Me.LblResults.Location = New System.Drawing.Point(216, 92)
+        Me.LblResults.Name = "LblResults"
+        Me.LblResults.Size = New System.Drawing.Size(822, 50)
+        Me.LblResults.TabIndex = 4
+        Me.LblResults.Text = "Resultados"
+        Me.LblResults.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'LblChat
+        '
+        Me.LblChat.AccessibleDescription = "LblChat"
+        Me.LblChat.AccessibleName = "LblChat"
+        Me.LblChat.Font = New System.Drawing.Font("Calibri", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblChat.Location = New System.Drawing.Point(218, 53)
+        Me.LblChat.Name = "LblChat"
+        Me.LblChat.Size = New System.Drawing.Size(815, 30)
+        Me.LblChat.TabIndex = 3
+        Me.LblChat.Text = "En las próximas versiones de nuestro sitema, podrá consultar con un Médico."
+        Me.LblChat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'LblResultUrgent
+        '
+        Me.LblResultUrgent.AccessibleDescription = "LblResultUrgent"
+        Me.LblResultUrgent.AccessibleName = "LblResultUrgent"
+        Me.LblResultUrgent.Font = New System.Drawing.Font("Calibri", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblResultUrgent.Location = New System.Drawing.Point(215, 9)
+        Me.LblResultUrgent.Name = "LblResultUrgent"
+        Me.LblResultUrgent.Size = New System.Drawing.Size(822, 50)
+        Me.LblResultUrgent.TabIndex = 2
+        Me.LblResultUrgent.Text = "No requiere de una valoración médica urgente."
+        Me.LblResultUrgent.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'PnlSubPath
         '
@@ -1753,11 +1748,6 @@ Partial Class FrmHome
         Me.PnlSubPath.Size = New System.Drawing.Size(793, 440)
         Me.PnlSubPath.TabIndex = 24
         '
-        'Guna2Elipse3
-        '
-        Me.Guna2Elipse3.BorderRadius = 20
-        Me.Guna2Elipse3.TargetControl = Me.PnlSubPath
-        '
         'PnlHeader
         '
         Me.PnlHeader.AccessibleDescription = "PnlHeader"
@@ -1770,11 +1760,6 @@ Partial Class FrmHome
         Me.PnlHeader.ShadowDecoration.Parent = Me.PnlHeader
         Me.PnlHeader.Size = New System.Drawing.Size(793, 38)
         Me.PnlHeader.TabIndex = 0
-        '
-        'Guna2Elipse4
-        '
-        Me.Guna2Elipse4.BorderRadius = 15
-        Me.Guna2Elipse4.TargetControl = Me.PnlHeader
         '
         'Label8
         '
@@ -1812,7 +1797,7 @@ Partial Class FrmHome
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DgvPhatologies.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
-        Me.DgvPhatologies.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgvPhatologies.ColumnHeadersHeight = 4
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
         DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 10.5!)
@@ -1844,7 +1829,7 @@ Partial Class FrmHome
         Me.DgvPhatologies.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.DgvPhatologies.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Segoe UI", 10.5!)
         Me.DgvPhatologies.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White
-        Me.DgvPhatologies.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgvPhatologies.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
         Me.DgvPhatologies.ThemeStyle.HeaderStyle.Height = 4
         Me.DgvPhatologies.ThemeStyle.ReadOnly = False
         Me.DgvPhatologies.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White
@@ -1855,6 +1840,21 @@ Partial Class FrmHome
         Me.DgvPhatologies.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.DgvPhatologies.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
         '
+        'Guna2Elipse2
+        '
+        Me.Guna2Elipse2.BorderRadius = 20
+        Me.Guna2Elipse2.TargetControl = Me.PnlResultItems
+        '
+        'Guna2Elipse3
+        '
+        Me.Guna2Elipse3.BorderRadius = 20
+        Me.Guna2Elipse3.TargetControl = Me.PnlSubPath
+        '
+        'Guna2Elipse4
+        '
+        Me.Guna2Elipse4.BorderRadius = 15
+        Me.Guna2Elipse4.TargetControl = Me.PnlHeader
+        '
         'FrmHome
         '
         Me.AccessibleDescription = "FrmHome"
@@ -1864,11 +1864,11 @@ Partial Class FrmHome
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1299, 754)
         Me.ControlBox = False
-        Me.Controls.Add(Me.PnlResult)
-        Me.Controls.Add(Me.PnlSymptom)
         Me.Controls.Add(Me.PnlIntro1)
         Me.Controls.Add(Me.PnlIntro2)
         Me.Controls.Add(Me.PnlPatient)
+        Me.Controls.Add(Me.PnlSymptom)
+        Me.Controls.Add(Me.PnlResult)
         Me.Controls.Add(Me.PnlLeft)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
