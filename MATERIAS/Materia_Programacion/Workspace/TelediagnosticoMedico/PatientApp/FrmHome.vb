@@ -10,6 +10,7 @@ Public Class FrmHome
     Public ciPatientLoggedOn As String
     Private idPatientLoggedOn As Integer
     Private patientLoggedOn As New Data.People
+    Private chargePathology As List(Of Pathology)
     Private ReadOnly db As New Persistencia.ConnectionDB()
     Private log As New Logic.Controller()
 
@@ -141,6 +142,7 @@ Public Class FrmHome
         PnlIntro2.Visible = myBool7
         PnlPatient.Visible = myBool8
         PnlSymptom.Visible = myBool9
+        PnlResult.Visible = myBool10
     End Sub
 
     Public Sub GetIdPatientLoggedOn()
@@ -171,8 +173,8 @@ Public Class FrmHome
     Private Sub BtnNext_Result_Click(sender As Object, e As EventArgs) Handles BtnNext_Result.Click
         'Reconozco los Id de cada Sintoma que sufre el Paciente.
         For Each symptomsSuffred In LbxSufferedPatient.Items
-            For Each symptom In Symptoms
-                If LbxSufferedPatient.Items(symptomsSuffred).ToString.Equals(symptom.Description.ToString) Then
+            For Each symptom As Symptom In Symptoms
+                If symptom.Description.Equals(symptomsSuffred.ToString) Then
                     idSympSuffered.Add(symptom.Id)
                 End If
             Next 'For [symptom] para cada Síntoma existente. 
@@ -187,17 +189,28 @@ Public Class FrmHome
 
         'Trato el Panel con los Resultados
         ''Hago un diagnostico (resumen/media) de los datos de "id_prioridad" -> Me define el color y mensaje del header.
-        Dim leve1o2 As Integer = Nothing
-        Dim urgente3 As Integer = Nothing
-        For Each priorityPath As Pathology In PatholgiesSuffered
-            If priorityPath.priority.id < 3 Then
-                leve1o2 = leve1o2 + 1
+        Dim leve1 As Integer = Nothing
+        Dim urgente2o3 As Integer = Nothing
+
+        For Each pathology As Pathology In PatholgiesSuffered
+            chargePathology = New List(Of Pathology)
+
+            If pathology.priority.id > 1 Then
+                leve1 = leve1 + 1
             Else
-                urgente3 = urgente3 + 1
+                urgente2o3 = urgente2o3 + 1
+            End If
+
+            If pathology.mortalityIndex < 33 Then
+                chargePathology.Add(New Pathology(pathology.name, "EVIDENCIA BAJA"))
+            ElseIf pathology.mortalityIndex > 32 And pathology.mortalityIndex < 66 Then
+                chargePathology.Add(New Pathology(pathology.name, "EVIDENCIA MEDIA"))
+            ElseIf pathology.mortalityIndex > 65 Then
+                chargePathology.Add(New Pathology(pathology.name, "EVIDENCIA ALTA"))
             End If
         Next
 
-        If leve1o2 > urgente3 Then
+        If leve1 > urgente2o3 Then
             ''Panel informativo de color Verde = Poco o Leve Riesgo de Salud
             ''No requiere valoración médica urgente
             PnlColorInfo.FillColor = Color.FromArgb(98, 186, 172)
@@ -210,7 +223,7 @@ Public Class FrmHome
             LblResultUrgent.Text = "Requiere de una valoración Médica urgente."
         End If
 
-
+        VisualSettings(4, False, False, False, True, False, False, False, False, False, True)
 
 
     End Sub

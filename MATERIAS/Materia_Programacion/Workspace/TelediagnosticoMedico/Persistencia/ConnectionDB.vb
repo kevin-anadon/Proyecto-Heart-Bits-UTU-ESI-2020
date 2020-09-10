@@ -366,11 +366,9 @@ Public Class ConnectionDB
 
     Public Sub SetPatientSufferSymp(idPatient As Integer, idSympSuffered As List(Of Integer))
         Dim con As Connection = connect()
-
         For Each e As Integer In idSympSuffered
-            Dim rsInsert As Recordset = con.Execute("INSERT INTO paciente_sufre(id_sintoma, id_paciente) VALUES(" & e & "," + "'" & idPatient & "');")
+            Dim rsInsert As Recordset = con.Execute("INSERT INTO paciente_sufre(id_sintoma, id_paciente) VALUES(" & e & "," & idPatient & ");")
         Next
-
         con.Close()
     End Sub
 
@@ -389,6 +387,8 @@ Public Class ConnectionDB
             Pathologies.Add(New Pathology(idPathology, namePathology, indexMort, priority))
             rsPathologiesSuffered.MoveNext()
         End While
+
+        con.Close()
 
         Return Pathologies
     End Function
