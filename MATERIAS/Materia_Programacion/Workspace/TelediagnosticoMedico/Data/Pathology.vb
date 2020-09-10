@@ -9,6 +9,13 @@
 
     End Sub 'Empty Constructor (default)
 
+    Public Sub New(id As Integer, name As String, mortalityIndex As Integer, priority As Priority)
+        Me.id = id
+        Me.name = name
+        Me.mortalityIndex = mortalityIndex
+        Me.priority = priority
+    End Sub
+
     Public Sub New(id As Integer, priority As Priority, name As String, description As String, mortalityIndex As Integer)
         Me.id = id
         Me.priority = priority

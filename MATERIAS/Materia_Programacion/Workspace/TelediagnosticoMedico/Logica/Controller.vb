@@ -36,4 +36,7 @@ Public Class Controller
         db.SetPatientSufferSymp(idPatient, idSympSuffered)
     End Sub
 
+    Public Function ObtainPatholgiesSuffered() As List(Of Pathology)
+        Return db.ObtainPatholgiesSuffered()
+    End Function
 End Class 'Data

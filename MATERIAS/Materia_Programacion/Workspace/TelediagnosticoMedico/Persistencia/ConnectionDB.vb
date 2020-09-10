@@ -373,4 +373,23 @@ Public Class ConnectionDB
 
         con.Close()
     End Sub
+
+    Public Function ObtainPatholgiesSuffered() As List(Of Pathology)
+        Dim con As Connection = connect()
+        Dim Pathologies As New List(Of Pathology)
+        Dim rsPathologiesSuffered As Recordset = con.Execute("SELECT DISTINCT p.id, p.nombre, p.indiceMortalidad, p.id_prioridad FROM paciente_sufre ps JOIN sintoma s ON(ps.id_sintoma = s.id) JOIN sintoma_compone sc ON(s.id = sc.id_sintoma) JOIN patologia p ON(sc.id_patologia = p.id) WHERE ps.id_paciente=2 GROUP BY ps.id_sintoma ")
+
+        While (Not rsPathologiesSuffered.EOF)
+            Dim idPathology As Integer = DirectCast(rsPathologiesSuffered.Fields("id").Value, Integer)
+            Dim indexMort As Integer = DirectCast(rsPathologiesSuffered.Fields("indiceMortalidad").Value, Integer)
+            Dim idPriority As Integer = DirectCast(rsPathologiesSuffered.Fields("id_prioridad").Value, Integer)
+            Dim namePathology As String = TryCast(rsPathologiesSuffered.Fields("nombre").Value, String)
+
+            Dim priority As New Priority(idPriority)
+            Pathologies.Add(New Pathology(idPathology, namePathology, indexMort, priority))
+            rsPathologiesSuffered.MoveNext()
+        End While
+
+        Return Pathologies
+    End Function
 End Class 'ConnectionDB

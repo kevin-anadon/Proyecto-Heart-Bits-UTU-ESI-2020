@@ -6,6 +6,10 @@
 
     End Sub 'Empty Constructor (default)
 
+    Public Sub New(id As Integer)
+        Me.id = id
+    End Sub
+
     Public Sub New(id As Integer, name As String)
         Me.id = id
         Me.name = name

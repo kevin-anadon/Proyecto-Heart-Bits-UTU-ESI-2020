@@ -16,7 +16,7 @@ Public Class FrmHome
     'Query's:
     Private Symptoms As List(Of Data.Symptom)
     Private idSympSuffered As New List(Of Integer)
-
+    Private PatholgiesSuffered As List(Of Pathology)
 
     'Comportamientos:
     ''' <summary>
@@ -180,6 +180,30 @@ Public Class FrmHome
 
         'Almaceno en la Base de Datos los Sintomas que sufre el Paciente, y su Id para referenciarlo
         log.SetPatientSufferSymp(idPatientLoggedOn, idSympSuffered)
+
+        'Cargo las Patologias Sufridas en una Lista
+        PatholgiesSuffered = New List(Of Pathology)
+        Me.PatholgiesSuffered = log.ObtainPatholgiesSuffered
+
+        'Trato el Panel con los Resultados
+        ''Hago un diagnostico (resumen/media) de los datos de "id_prioridad" -> Me define el color y mensaje del header.
+        Dim leve1o2 As Integer = Nothing
+        Dim urgente3 As Integer = Nothing
+        For Each priorityPath As Pathology In PatholgiesSuffered
+            If priorityPath.priority.id < 3 Then
+                leve1o2 = leve1o2 + 1
+            Else
+                urgente3 = urgente3 + 1
+            End If
+        Next
+
+        If leve1o2 > urgente3 Then
+            ''Panel informativo de color Verde = Poco o Leve Riesgo de Salud
+            ''No requiere valoración médica urgente
+            PnlColorInfo.FillColor = Color.FromArgb(98, 186, 172)
+            LblResultUrgent.Text = "No requiere de una valoración médica urgente."
+        End If
+
 
 
 
