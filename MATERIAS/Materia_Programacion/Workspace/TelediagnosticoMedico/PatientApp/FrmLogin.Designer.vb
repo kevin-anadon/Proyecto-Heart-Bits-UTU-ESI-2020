@@ -66,7 +66,7 @@ Partial Class FrmLogin
         Me.Lblbody.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Lblbody.BackColor = System.Drawing.Color.Transparent
         Me.Lblbody.Cursor = System.Windows.Forms.Cursors.Default
-        Me.Lblbody.Font = New System.Drawing.Font("Segoe UI Emoji", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lblbody.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Lblbody.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
         Me.Lblbody.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.Lblbody.Location = New System.Drawing.Point(679, 223)
@@ -83,10 +83,10 @@ Partial Class FrmLogin
         Me.LblTitle1.AccessibleName = "LblTitle2"
         Me.LblTitle1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.LblTitle1.BackColor = System.Drawing.Color.Transparent
-        Me.LblTitle1.Font = New System.Drawing.Font("Microsoft YaHei UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblTitle1.Font = New System.Drawing.Font("Roboto", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblTitle1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.LblTitle1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.LblTitle1.Location = New System.Drawing.Point(679, 158)
+        Me.LblTitle1.Location = New System.Drawing.Point(677, 158)
         Me.LblTitle1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LblTitle1.Name = "LblTitle1"
         Me.LblTitle1.Size = New System.Drawing.Size(316, 65)
@@ -109,9 +109,9 @@ Partial Class FrmLogin
         '
         'PicbxLogin
         '
-        Me.PicbxLogin.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PicbxLogin.Dock = System.Windows.Forms.DockStyle.Left
         Me.PicbxLogin.Image = CType(resources.GetObject("PicbxLogin.Image"), System.Drawing.Image)
-        Me.PicbxLogin.Location = New System.Drawing.Point(-1, 0)
+        Me.PicbxLogin.Location = New System.Drawing.Point(0, 0)
         Me.PicbxLogin.Name = "PicbxLogin"
         Me.PicbxLogin.Size = New System.Drawing.Size(619, 640)
         Me.PicbxLogin.TabIndex = 11
@@ -171,6 +171,7 @@ Partial Class FrmLogin
         Me.TxtCredential1.Font = New System.Drawing.Font("Segoe UI Emoji", 10.2!)
         Me.TxtCredential1.ForeColor = System.Drawing.Color.Black
         Me.TxtCredential1.Location = New System.Drawing.Point(741, 423)
+        Me.TxtCredential1.MaxLength = 30
         Me.TxtCredential1.Name = "TxtCredential1"
         Me.TxtCredential1.Size = New System.Drawing.Size(242, 19)
         Me.TxtCredential1.TabIndex = 0
@@ -213,7 +214,7 @@ Partial Class FrmLogin
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImage = Global.PatientApp.My.Resources.Resources.Login__Type_2
         Me.ClientSize = New System.Drawing.Size(1060, 640)
         Me.ControlBox = False
         Me.Controls.Add(Me.TxtCredential1)

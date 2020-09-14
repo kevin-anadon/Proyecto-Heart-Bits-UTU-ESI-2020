@@ -221,6 +221,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Login_ Type 2.jpg" />
     <Content Include="TelediganosticoMedico_Logo.ico" />
   </ItemGroup>
   <ItemGroup>

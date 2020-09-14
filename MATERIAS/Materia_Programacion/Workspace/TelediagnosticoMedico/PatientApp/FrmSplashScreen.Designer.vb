@@ -196,6 +196,9 @@ Partial Class FrmSplashScreen
         Me.PrgbarLoadSplashScreen.UseTransparentBackground = True
         Me.PrgbarLoadSplashScreen.Value = 80
         '
+        'Timer1
+        '
+        '
         'FrmSplashScreen
         '
         Me.AccessibleDescription = "FrmSplashScreen"
@@ -203,7 +206,7 @@ Partial Class FrmSplashScreen
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImage = Global.PatientApp.My.Resources.Resources.Login__Type_2
         Me.ClientSize = New System.Drawing.Size(1060, 640)
         Me.ControlBox = False
         Me.Controls.Add(Me.PrgbarLoadSplashScreen)

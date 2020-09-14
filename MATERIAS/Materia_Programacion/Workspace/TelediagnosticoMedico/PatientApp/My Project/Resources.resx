@@ -124,4 +124,10 @@
   <data name="BarVertical_Grey" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BarVertical Grey.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Login__Type_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Login_ Type 2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Panel__Type_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Panel_ Type 1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
