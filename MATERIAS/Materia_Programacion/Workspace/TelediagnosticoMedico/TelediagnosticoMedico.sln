@@ -7,13 +7,13 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "AdminApp", "AdminApp\AdminA
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Logic", "Logica\Logic.vbproj", "{88D516F3-65B2-4627-BA85-47EBA9843E5D}"
 EndProject
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Persistencia", "Persistencia\Persistencia.vbproj", "{5430BBFA-D1A1-45F2-8C79-764E90D30510}"
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Persistence", "Persistencia\Persistence.vbproj", "{5430BBFA-D1A1-45F2-8C79-764E90D30510}"
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Data", "Data\Data.vbproj", "{B5EE54EF-54BF-45F3-B6A1-4BC72046BBBF}"
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "PatientApp", "PatientApp\PatientApp.vbproj", "{015F1C42-A980-43A3-8201-1C7D800EFED4}"
 EndProject
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Testing", "Testing\Testing.vbproj", "{32E1819B-6C05-42F8-81D1-033C9784EC12}"
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ComponentTesting", "Testing\ComponentTesting.vbproj", "{32E1819B-6C05-42F8-81D1-033C9784EC12}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
