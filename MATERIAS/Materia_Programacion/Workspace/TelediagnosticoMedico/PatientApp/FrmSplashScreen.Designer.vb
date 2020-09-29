@@ -25,7 +25,7 @@ Partial Class FrmSplashScreen
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmSplashScreen))
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.LblTitle4 = New System.Windows.Forms.Label()
         Me.LblTitle3 = New System.Windows.Forms.Label()
         Me.PicbxLogoCAS = New System.Windows.Forms.PictureBox()
         Me.LblInfo1 = New System.Windows.Forms.Label()
@@ -35,6 +35,7 @@ Partial Class FrmSplashScreen
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.PrgbarLoadSplashScreen = New Guna.UI2.WinForms.Guna2ProgressBar()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PicbxLogoCAS, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -50,22 +51,21 @@ Partial Class FrmSplashScreen
         Me.PictureBox1.TabIndex = 25
         Me.PictureBox1.TabStop = False
         '
-        'Label3
+        'LblTitle4
         '
-        Me.Label3.AccessibleDescription = "LblTitle3"
-        Me.Label3.AccessibleName = "LblTitle3"
-        Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.Cursor = System.Windows.Forms.Cursors.Default
-        Me.Label3.Font = New System.Drawing.Font("Segoe UI Emoji", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
-        Me.Label3.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label3.Location = New System.Drawing.Point(374, 360)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(513, 19)
-        Me.Label3.TabIndex = 24
-        Me.Label3.Text = "Conexión exitosa. Cargando formularios."
-        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LblTitle4.AccessibleDescription = "LblTitle4"
+        Me.LblTitle4.AccessibleName = "LblTitle4"
+        Me.LblTitle4.BackColor = System.Drawing.Color.Transparent
+        Me.LblTitle4.Cursor = System.Windows.Forms.Cursors.Default
+        Me.LblTitle4.Font = New System.Drawing.Font("Segoe UI Emoji", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblTitle4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
+        Me.LblTitle4.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.LblTitle4.Location = New System.Drawing.Point(374, 360)
+        Me.LblTitle4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.LblTitle4.Name = "LblTitle4"
+        Me.LblTitle4.Size = New System.Drawing.Size(513, 19)
+        Me.LblTitle4.TabIndex = 24
+        Me.LblTitle4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'LblTitle3
         '
@@ -198,6 +198,13 @@ Partial Class FrmSplashScreen
         '
         'Timer1
         '
+        Me.Timer1.Enabled = True
+        Me.Timer1.Interval = 40
+        '
+        'Timer2
+        '
+        Me.Timer2.Enabled = True
+        Me.Timer2.Interval = 40
         '
         'FrmSplashScreen
         '
@@ -211,7 +218,7 @@ Partial Class FrmSplashScreen
         Me.ControlBox = False
         Me.Controls.Add(Me.PrgbarLoadSplashScreen)
         Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.LblTitle4)
         Me.Controls.Add(Me.LblTitle3)
         Me.Controls.Add(Me.PicbxLogoCAS)
         Me.Controls.Add(Me.LblInfo1)
@@ -229,7 +236,7 @@ Partial Class FrmSplashScreen
     End Sub
 
     Friend WithEvents PictureBox1 As PictureBox
-    Public WithEvents Label3 As Label
+    Public WithEvents LblTitle4 As Label
     Public WithEvents LblTitle3 As Label
     Public WithEvents PicbxLogoCAS As PictureBox
     Public WithEvents LblInfo1 As Label
@@ -239,4 +246,5 @@ Partial Class FrmSplashScreen
     Friend WithEvents Guna2Elipse1 As Guna.UI2.WinForms.Guna2Elipse
     Friend WithEvents PrgbarLoadSplashScreen As Guna.UI2.WinForms.Guna2ProgressBar
     Friend WithEvents Timer1 As Timer
+    Friend WithEvents Timer2 As Timer
 End Class

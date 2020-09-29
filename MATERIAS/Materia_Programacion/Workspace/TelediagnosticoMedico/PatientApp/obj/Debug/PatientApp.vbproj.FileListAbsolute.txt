@@ -67,4 +67,3 @@ C:\Users\Yorel Acosta\Desktop\Study ESIMdeo\Clase 3BB 2020\Proyecto-Heart-Bits-U
 D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\PatientApp\bin\Debug\Logic.dll
 D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\PatientApp\bin\Debug\Logic.pdb
 D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\PatientApp\bin\Debug\Logic.xml
-C:\Users\Yorel Acosta\Desktop\Study ESIMdeo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\PatientApp\obj\Debug\PatientApp.Form1.resources

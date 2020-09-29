@@ -1,15 +1,35 @@
 ﻿Imports ADODB
 Imports Data
 Public Class ConnectionDB
-    Private Function connect() As Connection
+
+    'Herramientas de conexión
+    Private Function Connect() As Connection
         Dim connection As New Connection()
         connection.ConnectionString = "driver={MySql ODBC 8.0 Unicode Driver};server=127.0.0.1;port=3306;database=telediagnosticomedico_heartbits;uid=root;pwd=;"
         connection.Open()
         Return connection
     End Function
 
+    Public Function TryConnection() As Boolean
+        Dim con As New Connection()
+        Dim result As Boolean = False
+
+        Try
+            con = Me.Connect()
+            result = True
+            con.Close()
+        Catch ex As Exception
+            Console.WriteLine(ex)
+            result = False
+        End Try
+
+
+        Return result
+    End Function
+
+    'Consultas de AdminApp
     Public Sub InsertPath(name As String, desc As String, indiceM As Integer, Prior As Integer, treatments As List(Of Treatment))
-        Dim con As Connection = connect()
+        Dim con As Connection = Me.Connect()
         Dim treatname As String = Nothing
         Dim treatdesc As String = Nothing
         Dim treatkind As String = Nothing
@@ -29,7 +49,7 @@ Public Class ConnectionDB
     End Sub
 
     Public Sub InsertSympt(sympt As String, region As String, Pat As List(Of String))
-        Dim con As Connection = connect()
+        Dim con As Connection = Me.Connect()
 
         If region = "NULL" Then
             Dim rsIinsert As Recordset = con.Execute("INSERT INTO sintoma(descripcion) VALUES('" & sympt & "');")
@@ -59,7 +79,7 @@ Public Class ConnectionDB
     End Sub
 
     Public Sub UpdatePath(patname As String, patdesc As String, patmortality As Integer, idprior As Integer, treatments As List(Of Treatment), patnamebefore As String)
-        Dim con As Connection = connect()
+        Dim con As Connection = Me.Connect()
 
         Dim rsSelectIdPat As Recordset = con.Execute("SELECT id FROM patologia WHERE nombre='" + patnamebefore + "';")
         Dim idpat As Integer = DirectCast(rsSelectIdPat.Fields("id").Value, Integer)
@@ -75,7 +95,7 @@ Public Class ConnectionDB
 
 
     Public Sub UpdateSympt(sympt As String, region As String, symptbefore As String, patafter As List(Of String))
-        Dim con As Connection = connect()
+        Dim con As Connection = Me.Connect()
 
         If sympt.Equals("NULL") And Not region.Equals("NULL") Then 'Si el usuario solo modifico la región
 
@@ -133,7 +153,7 @@ Public Class ConnectionDB
     End Sub
 
     Public Sub DelPath(pat As String)
-        Dim con As Connection = connect()
+        Dim con As Connection = Me.Connect()
 
         Dim rsSelectIdPat As Recordset = con.Execute("SELECT id FROM patologia WHERE nombre='" + pat + "';")
         Dim idpat As Integer = DirectCast(rsSelectIdPat.Fields("id").Value, Integer)
@@ -146,7 +166,7 @@ Public Class ConnectionDB
 
 
     Public Sub DelSympt(sympt As String)
-        Dim con As Connection = connect()
+        Dim con As Connection = Me.Connect()
 
         Dim rsSelectIdSympt As Recordset = con.Execute("SELECT id FROM sintoma WHERE descripcion='" + sympt + "';")
         Dim idsympt As Integer = DirectCast(rsSelectIdSympt.Fields("id").Value, Integer)
@@ -158,7 +178,7 @@ Public Class ConnectionDB
     End Sub
 
     Public Function CheckLog(user As String, pass As String, ci As String) As Object
-        Dim con As Connection = connect()
+        Dim con As Connection = Me.Connect()
         Dim rs, rsMed As Recordset
         Dim empleado As Employee = Nothing
         Dim paciente As People = Nothing
@@ -195,7 +215,7 @@ Public Class ConnectionDB
     End Function
 
     Public Function CheckPin(pin As String) As Boolean
-        Dim con As Connection = connect()
+        Dim con As Connection = Me.Connect()
         Dim check As Boolean = False
         Dim rs As Recordset
         rs = con.Execute("SELECT ci FROM persona WHERE id_tipo=1 and pin='" + pin + "';")
@@ -210,7 +230,7 @@ Public Class ConnectionDB
     End Function
 
     Public Function ObtainTreatments(pat As String) As List(Of Treatment)
-        Dim con As Connection = connect()
+        Dim con As Connection = Me.Connect()
         Dim treatments As New List(Of Treatment)
 
         Dim rs As Recordset = con.Execute("SELECT t.nombre, t.descripcion, t.tipo FROM tratamiento t JOIN patologia p ON(t.id_patologia=p.id) WHERE p.nombre='" & pat & "' ORDER BY t.nombre;")
@@ -228,7 +248,7 @@ Public Class ConnectionDB
     End Function
 
     Public Function ObtainMortalityPath(pat As String) As Integer
-        Dim con As Connection = connect()
+        Dim con As Connection = Me.Connect()
 
         Dim rsSelectMortality As Recordset = con.Execute("SELECT indiceMortalidad FROM patologia WHERE nombre='" + pat + "';")
         Dim Mortality As Integer = DirectCast(rsSelectMortality.Fields("indiceMortalidad").Value, Integer)
@@ -238,7 +258,7 @@ Public Class ConnectionDB
     End Function
 
     Public Function ObtainRegions() As List(Of Region)
-        Dim con As Connection = connect()
+        Dim con As Connection = Me.Connect()
         Dim regions As New List(Of Region)
 
         Dim rs As Recordset = con.Execute("SELECT id, nombre FROM region ORDER BY id;")
@@ -254,7 +274,7 @@ Public Class ConnectionDB
     End Function
 
     Public Function ObtainPriorities() As List(Of Priority)
-        Dim con As Connection = connect()
+        Dim con As Connection = Me.Connect()
         Dim priorities As New List(Of Priority)
 
         Dim rs As Recordset = con.Execute("SELECT id, nombre FROM prioridad ORDER BY id;")
@@ -271,7 +291,7 @@ Public Class ConnectionDB
 
     Public Function ListPath(sympt As String) As List(Of String)
         Dim Pathologies As New List(Of String)
-        Dim con As Connection = connect()
+        Dim con As Connection = Me.Connect()
 
         Dim rsSelectIdSympt As Recordset = con.Execute("SELECT id FROM sintoma WHERE descripcion='" + sympt + "';")
         Dim idsympt As Integer = DirectCast(rsSelectIdSympt.Fields("id").Value, Integer)
@@ -288,7 +308,7 @@ Public Class ConnectionDB
 
     Public Function ObtainPath() As List(Of Pathology)
         Dim Pathologies As New List(Of Pathology)
-        Dim con As Connection = connect()
+        Dim con As Connection = Me.Connect()
 
         Dim rs As Recordset = con.Execute("SELECT id, nombre, descripcion, id_prioridad, indiceMortalidad FROM patologia ORDER BY nombre;")
 
@@ -307,7 +327,7 @@ Public Class ConnectionDB
     End Function
 
     Public Function ObtainTable(nameTable As String) As Recordset
-        Dim con As Connection = connect()
+        Dim con As Connection = Me.Connect()
         If nameTable = "sintoma" Then
             Return con.Execute("Select s.descripcion As Síntoma, r.nombre As Región FROM sintoma s LEFT JOIN region r On(s.id_region=r.id) ORDER BY s.descripcion, r.nombre;")
 
@@ -324,19 +344,19 @@ Public Class ConnectionDB
     End Function
 
     Public Function SearchSympt(nameDesc As String) As Recordset
-        Dim con As Connection = connect()
+        Dim con As Connection = Me.Connect()
 
         Return con.Execute("Select s.descripcion As Síntoma,r.nombre As Región FROM sintoma s LEFT JOIN region r On(s.id_region=r.id) WHERE s.descripcion Like '" & nameDesc & "%' ORDER BY s.descripcion, r.nombre;")
     End Function
 
     Public Function SearchPath(namePat As String) As Recordset
-        Dim con As Connection = connect()
+        Dim con As Connection = Me.Connect()
 
         Return con.Execute("Select p.nombre As Patología,p.descripcion As Descripción,pr.nombre As Prioridad FROM patologia p JOIN prioridad pr On(p.id_prioridad=pr.id) WHERE p.nombre Like '" & namePat & "%' ORDER BY p.nombre,pr.id")
     End Function
 
     Public Function matchPatientLoggedOn(ci As String) As Integer
-        Dim con As Connection = connect()
+        Dim con As Connection = Me.Connect()
         Dim rsSelectIdPatient As Recordset = con.Execute("SELECT id FROM persona pat WHERE ci='" + ci + "';")
         Dim idPatientLoggedOn As Integer = DirectCast(rsSelectIdPatient.Fields("id").Value, Integer)
         con.Close()
@@ -345,7 +365,7 @@ Public Class ConnectionDB
     End Function
 
     Public Function ObtainSymptoms() As List(Of Symptom)
-        Dim con As Connection = connect()
+        Dim con As Connection = Me.Connect()
         Dim Symptoms As New List(Of Symptom)
         Dim rsSelectSymptoms As Recordset = con.Execute("SELECT id, descripcion FROM sintoma;")
 
@@ -365,7 +385,7 @@ Public Class ConnectionDB
     End Function
 
     Public Sub SetPatientSufferSymp(idPatient As Integer, idSympSuffered As List(Of Integer))
-        Dim con As Connection = connect()
+        Dim con As Connection = Me.Connect()
         Dim rsIsThere As Recordset = con.Execute("SELECT id_sintoma FROM paciente_sufre WHERE id_paciente=" & idPatient)
         If Not rsIsThere.EOF Then
             Dim rsDelete As Recordset = con.Execute("DELETE FROM paciente_sufre WHERE id_paciente=" & idPatient)
@@ -379,7 +399,7 @@ Public Class ConnectionDB
     End Sub
 
     Public Function ObtainPatholgiesSuffered() As List(Of Pathology)
-        Dim con As Connection = connect()
+        Dim con As Connection = Me.Connect()
         Dim Pathologies As New List(Of Pathology)
         Dim rsPathologiesSuffered As Recordset = con.Execute("SELECT DISTINCT p.id, p.nombre, p.indiceMortalidad, p.id_prioridad FROM paciente_sufre ps JOIN sintoma s ON(ps.id_sintoma = s.id) JOIN sintoma_compone sc ON(s.id = sc.id_sintoma) JOIN patologia p ON(sc.id_patologia = p.id) WHERE ps.id_paciente=2 GROUP BY ps.id_sintoma ")
 

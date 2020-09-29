@@ -1,27 +1,21 @@
-﻿Imports System.Runtime.InteropServices
-Imports Persistencia
+﻿Imports Persistencia
 Imports Data
 
 Public Class FrmLogin
-    Private connectionDB As New ConnectionDB()
     Public ciPatientLoggedOn As String = Nothing
-    Private indicatorToolBtn As Short = 90 'Me define que Mensaje debo de utilizar en el ToolTip.
-    Private ReadOnly user As String = Nothing
-    Private ReadOnly pass As String = Nothing
+    Private indicatorToolBtn As Short = -1 'Me define que Mensaje debo de utilizar en el ToolTip.
 
     'Comportamenientos:
 
 
     'Eventos:
     Private Sub BtnLogin_Click(sender As Object, e As EventArgs) Handles BtnLogin.Click
-        If TxtCredential1.Text.Trim.Length = 0 Then
-            'Se trabaja con la UI.
-            Me.indicatorToolBtn = 0
-        Else
-            'Se trabaja con la UI.
-            Me.indicatorToolBtn = 1
+        If TxtCredential1.Text.Trim.Length = 0 Then 'Si hay algun espacio vacio
+            Me.indicatorToolBtn = 0 'Se trabaja con la UI.
+        Else 'No hay Espacio vacio
+            Me.indicatorToolBtn = 1 'Se trabaja con la UI.
             Try
-                Dim rslog As People = connectionDB.CheckLog(user, pass, TxtCredential1.Text)
+                Dim rslog As People = ConnectionDB.CheckLog(user, pass, TxtCredential1.Text)
                 If IsNothing(rslog) Then
                     'Se trabaja con la UI.
                     Me.indicatorToolBtn = 0

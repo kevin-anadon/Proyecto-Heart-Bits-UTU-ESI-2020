@@ -4,7 +4,7 @@ Imports Persistencia
 Imports ADODB
 Public Class FrmAddPath
     Dim db As New ConnectionDB()
-    Dim log As New Controller()
+    Dim log As New CommonQueries()
     Dim frm As New FrmPath()
 
     Dim Kind As String = Nothing

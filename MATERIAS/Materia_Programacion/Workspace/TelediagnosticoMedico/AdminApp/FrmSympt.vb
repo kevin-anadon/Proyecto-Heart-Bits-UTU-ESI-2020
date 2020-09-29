@@ -6,7 +6,7 @@ Imports ADODB
 
 Public Class FrmSympt
     Dim db As New ConnectionDB()
-    Dim log As New Controller()
+    Dim log As New CommonQueries()
 
     Dim row As DataGridViewRow
     Dim SymptSelected As String

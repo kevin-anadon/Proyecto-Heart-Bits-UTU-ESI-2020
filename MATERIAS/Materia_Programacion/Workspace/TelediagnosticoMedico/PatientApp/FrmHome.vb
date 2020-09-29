@@ -12,7 +12,7 @@ Public Class FrmHome
     Private patientLoggedOn As New Data.People
     Private chargePathology As List(Of Pathology)
     Private ReadOnly db As New Persistencia.ConnectionDB()
-    Private log As New Logic.Controller()
+    Private log As New Logic.CommonQueries()
 
     'Query's:
     Private Symptoms As List(Of Data.Symptom)
@@ -290,7 +290,7 @@ Public Class FrmHome
         VisualSettings(1, True, False, False, False, False, True, False, False, False, False)
 
         'GhostItem: Es mi elemento del Lbx que me permite utilizarlo (For, recorrer) cuando hay elemento != de Symptoms (Cmbx)
-        'Este existe al inicio (instancia de FrmHome) y cada vez que Lbx se queda con 1 Item de Symptoms (Cmbx)
+        'Este existe al inicio (record de FrmHome) y cada vez que Lbx se queda con 1 Item de Symptoms (Cmbx)
         LbxSufferedPatient.Items.Clear()
         LbxSufferedPatient.Items.Add(" ") 'Mi GhostItem del Lbx
 
