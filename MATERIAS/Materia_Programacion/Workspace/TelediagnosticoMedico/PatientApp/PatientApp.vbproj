@@ -163,9 +163,9 @@
       <Project>{88d516f3-65b2-4627-ba85-47eba9843e5d}</Project>
       <Name>Logic</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Persistencia\Persistence.vbproj">
+    <ProjectReference Include="..\Persistencia\Persistencia.vbproj">
       <Project>{5430bbfa-d1a1-45f2-8c79-764e90d30510}</Project>
-      <Name>Persistence</Name>
+      <Name>Persistencia</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

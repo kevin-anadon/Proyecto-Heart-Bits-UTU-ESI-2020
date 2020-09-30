@@ -5,7 +5,7 @@ Imports Persistencia
 Imports Logic
 Public Class FrmModSympt
     Dim db As New DataBaseConn()
-    Dim log As New CommonQueries()
+    Dim log As New Logic.Logica()
     Dim rreg As Recordset = db.ObtainTable("region")
 
     Dim PatAfter As New List(Of String)

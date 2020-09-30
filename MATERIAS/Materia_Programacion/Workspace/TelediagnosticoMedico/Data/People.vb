@@ -28,6 +28,11 @@ Public Class People
         Me.ci = ci
     End Sub 'Necesary constructor
 
+    Public Sub New(id As Integer, ci As Integer)
+        Me.id = id
+        Me.ci = ci
+    End Sub 'Necesary constructor
+
     Public Sub New(ci As Integer, allowed As Boolean, fstName As String, scndName As String, fstSurname As String, scndSurname As String, genrePeople As Integer, dateBirth As Date, email As String, numPhone As String, street As String, numDoor As Integer, city As City)
         Me.ci = ci
         Me.allowed = allowed

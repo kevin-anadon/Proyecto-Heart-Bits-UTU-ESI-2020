@@ -4,7 +4,7 @@ Imports Persistencia
 Imports ADODB
 Public Class FrmPath
     Dim db As New DataBaseConn()
-    Dim log As New CommonQueries()
+    Dim log As New Logic.Logica()
 
     Dim row As DataGridViewRow
     Dim PathSelected As String = Nothing

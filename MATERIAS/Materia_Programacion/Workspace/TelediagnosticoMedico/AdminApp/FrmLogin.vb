@@ -29,7 +29,7 @@ Public Class FrmLogin
             MessageBox.Show("CAMPOS VACIOS!!")
         Else
             Try
-                Dim rslog As Employee = db.CheckLog(TxtUser.Text.ToString(), TxtPass.Text.ToString(), ci)
+                Dim rslog As Employee = db.Login(TxtUser.Text.ToString(), TxtPass.Text.ToString(), ci)
                 If IsNothing(rslog) Then
                     Console.WriteLine("NO EXISTE")
                     MessageBox.Show("Usuario o Contraseña Equivocada!!")

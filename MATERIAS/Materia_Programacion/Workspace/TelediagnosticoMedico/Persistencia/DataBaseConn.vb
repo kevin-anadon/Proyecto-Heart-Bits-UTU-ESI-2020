@@ -4,10 +4,15 @@ Public Class DataBaseConn
 
     'Herramientas de conexión
     Private Function Connect() As Connection
-        Dim connection As New Connection()
-        connection.ConnectionString = "driver={MySql ODBC 8.0 Unicode Driver};server=127.0.0.1;port=3306;database=telediagnosticomedico_heartbits;uid=root;pwd=;"
-        connection.Open()
-        Return connection
+        Try
+            Dim connection As New Connection()
+            connection.ConnectionString = "driver={MySql ODBC 8.0 Unicode Driver};server=127.0.0.1;port=3306;database=telediagnosticomedico_heartbits;uid=root;pwd=;"
+            connection.Open()
+            Return connection
+        Catch ex As Exception
+            Console.WriteLine(ex)
+            Return Nothing
+        End Try
     End Function
     Public Function TryConnection() As Boolean
         Dim con As New Connection()
@@ -300,7 +305,6 @@ Public Class DataBaseConn
         Dim Symptoms As New List(Of Symptom)
         Dim rsSelectSymptoms As Recordset = con.Execute("SELECT id, descripcion FROM sintoma;")
 
-
         While (Not rsSelectSymptoms.EOF)
             Dim idSymptom As Integer = DirectCast(rsSelectSymptoms.Fields("id").Value, Integer)
             Dim descSymptom As String = TryCast(rsSelectSymptoms.Fields("descripcion").Value, String)
@@ -318,54 +322,83 @@ Public Class DataBaseConn
 
 
     'Query Personas
-    Public Function CheckLog(user As String, pass As String, ci As String) As Object
+    Public Function LoginEmployee(user As String, pass As String) As Object
         Dim con As Connection = Me.Connect()
-        Dim rs, rsMed As Recordset
+        Dim rsAdmin, rsMed As Recordset
         Dim empleado As Employee = Nothing
-        Dim paciente As People = Nothing
 
-
-        If ci = Nothing Then 'Es empleado
-            rs = con.Execute("SELECT ci FROM persona WHERE id_tipo=1 and usuario='" + user + "' and contrasena='" + pass + "';")
-            If rs.EOF Then 'Si no es administrador verifica si es medico
-                rsMed = con.Execute("SELECT ci FROM persona WHERE id_tipo=2 and usuario='" + user + "' and contrasena='" + pass + "';")
-                If rsMed.EOF Then 'Si tampoco es médico
-                    con.Close()
-                    Return empleado
-                Else 'Si es médico
-                    con.Close()
-                    Return empleado
-                End If
-            Else 'En el caso que sea Administrador
+        rsAdmin = con.Execute("SELECT ci FROM persona WHERE id_tipo=1 AND usuario='" + user + "' and contrasena='" + pass + "';")
+        If rsAdmin.EOF Then 'Si no es administrador verifica si es medico
+            rsMed = con.Execute("SELECT ci FROM persona WHERE id_tipo=2 and usuario='" + user + "' and contrasena='" + pass + "';")
+            If rsMed.EOF Then 'Si tampoco es médico
                 con.Close()
-                Dim e As New Employee(user, pass)
-                Return e
+                Return empleado
+            Else 'Si es médico
+                con.Close()
+                Return empleado
             End If
-        Else 'Es Paciente
-            rs = con.Execute("SELECT p.ci, p.id FROM persona p WHERE id_tipo=3 and ci='" + ci + "';")
-            If rs.EOF Then
-                con.Close()
-                Return paciente
+        Else 'En el caso que sea Administrador
+            con.Close()
+            Dim E1 As New Employee(user, pass)
+            Return E1
+        End If
+    End Function
+    Public Function PatientAllowed(ci As String) As Short
+        Dim con As Connection = Me.Connect
+
+        Try
+            Dim rsAllowed As Recordset = con.Execute("SELECT p.habilitado FROM persona p WHERE id_tipo='3' AND p.ci=" & Integer.Parse(ci))
+            Dim allowed As Integer = DirectCast(rsAllowed.Fields("habilitado").Value, Short)
+
+            If allowed = 1 Then '1 Significa True, 0 False
+                Return 2 'Habilidato
             Else
-                Dim patient As New People(ci)
-                con.Close()
-                Return patient
+                Return 5 'No habilitado
             End If
+        Catch ex As Exception
+            Console.WriteLine(ex)
+            'Este error se debe a que no está determinado el valor de "Habilitado", pues la CI usada no corresponde a una existente
+            Return 4 'Cédula de identidad errónea.
+        End Try
+
+        con.Close()
+    End Function
+    Public Function LoginPatient(ci As String) As Short
+        Dim allowed As Short = Me.PatientAllowed(ci)
+
+        Dim con As Connection = Me.Connect
+        Dim codeMsg As Short = allowed
+
+        If allowed = 2 Then
+            Try
+                Dim rsSelectPatientCi As Recordset = con.Execute("SELECT p.ci FROM persona p WHERE id_tipo=3 AND ci=" & Integer.Parse(ci))
+                If IsNothing(rsSelectPatientCi) Then
+                    'No se encuentra ningun Paciente con esta CI
+                    codeMsg = 4 'Cédula de identidad errónea.
+                Else
+                    codeMsg = 2 'Habilidato
+                End If
+            Catch ex As Exception
+                Console.WriteLine(ex)
+                codeMsg = 3 'Error de Conexión.
+            End Try
         End If
 
+        con.Close()
+        Return codeMsg
     End Function
     Public Function CheckPin(pin As String) As Boolean
         Dim con As Connection = Me.Connect()
-        Dim check As Boolean = False
-        Dim rs As Recordset
-        rs = con.Execute("SELECT ci FROM persona WHERE id_tipo=1 and pin='" + pin + "';")
-        If rs.EOF Then
+        Dim checked As Boolean = False
+        Dim rsSelectPin As Recordset
+        rsSelectPin = con.Execute("SELECT ci FROM persona WHERE id_tipo=1 and pin='" + pin + "';")
+        If rsSelectPin.EOF Then
             con.Close()
-            Return check
+            Return checked
         Else
-            check = True
+            checked = True
             con.Close()
-            Return check
+            Return checked
         End If
     End Function
     Public Function matchPatientLoggedOn(ci As String) As Integer
@@ -409,4 +442,7 @@ Public Class DataBaseConn
 
         Return Pathologies
     End Function
+
+
+
 End Class 'DataBaseConn

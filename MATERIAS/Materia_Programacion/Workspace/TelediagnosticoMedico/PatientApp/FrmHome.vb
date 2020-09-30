@@ -1,6 +1,6 @@
-﻿Imports Logic
+﻿Imports Persistencia
+Imports Logic
 Imports Data
-Imports Persistencia
 Imports ADODB
 
 Public Class FrmHome
@@ -11,10 +11,10 @@ Public Class FrmHome
     Private idPatientLoggedOn As Integer
     Private patientLoggedOn As New Data.People
     Private chargePathology As List(Of Pathology)
-    Private ReadOnly db As New Persistencia.ConnectionDB()
-    Private log As New Logic.CommonQueries()
+    Private ReadOnly DBConn As New DataBaseConn()
+    Private log As New Logic.Logica()
 
-    'Query's:
+    'Query:
     Private Symptoms As List(Of Data.Symptom)
     Private idSympSuffered As New List(Of Integer)
     Private PatholgiesSuffered As List(Of Pathology)
@@ -235,7 +235,7 @@ Public Class FrmHome
         VisualSettings(2, False, True, False, False, False, False, False, True, False, False)
     End Sub
 
-    Dim usedSymptoms As New List(Of String) 'Los Sintomas que se cargan al Listbox
+
 
     Private Sub CbxSysSymptoms_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CbxSysSymptoms.SelectedIndexChanged
         Dim doesExistInTheLbx As Boolean

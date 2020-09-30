@@ -2,7 +2,7 @@
 
 Public Class FrmSplashScreen
     Private record As Integer
-    Private LQuery As New Logic.CommonQueries()
+    Private LQuery As New Logic.Logica()
     Private resultConnection As Boolean = LQuery.TryConnection
     Private msgConnection As String = Nothing
 

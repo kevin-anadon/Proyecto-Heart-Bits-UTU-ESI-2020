@@ -64,9 +64,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LogicAdminApp.vb" />
-    <Compile Include="LogicPatientApp.vb" />
-    <Compile Include="CommonQueries.vb" />
+    <Compile Include="Logica.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -108,9 +106,9 @@
       <Project>{b5ee54ef-54bf-45f3-b6a1-4bc72046bbbf}</Project>
       <Name>Data</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Persistencia\Persistence.vbproj">
+    <ProjectReference Include="..\Persistencia\Persistencia.vbproj">
       <Project>{5430bbfa-d1a1-45f2-8c79-764e90d30510}</Project>
-      <Name>Persistence</Name>
+      <Name>Persistencia</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

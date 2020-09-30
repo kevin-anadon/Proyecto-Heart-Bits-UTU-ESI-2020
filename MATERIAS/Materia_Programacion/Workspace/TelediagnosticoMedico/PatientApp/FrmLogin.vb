@@ -1,36 +1,29 @@
-﻿Imports Persistencia
-Imports Data
+﻿Imports Data
+Imports Logic
 
 Public Class FrmLogin
-    Public ciPatientLoggedOn As String = Nothing
+    'Atributos
+    Private ReadOnly L1 As New Logica()
     Private indicatorToolBtn As Short = -1 'Me define que Mensaje debo de utilizar en el ToolTip.
+    Public ciPatientLoggedOn As String = Nothing
+
 
     'Comportamenientos:
 
 
     'Eventos:
     Private Sub BtnLogin_Click(sender As Object, e As EventArgs) Handles BtnLogin.Click
-        If TxtCredential1.Text.Trim.Length = 0 Then 'Si hay algun espacio vacio
+        If TxtCredential1.Text.Trim.Length = 0 Then 'Verifico si hay algun espacio vacio
             Me.indicatorToolBtn = 0 'Se trabaja con la UI.
         Else 'No hay Espacio vacio
-            Me.indicatorToolBtn = 1 'Se trabaja con la UI.
-            Try
-                Dim rslog As People = ConnectionDB.CheckLog(user, pass, TxtCredential1.Text)
-                If IsNothing(rslog) Then
-                    'Se trabaja con la UI.
-                    Me.indicatorToolBtn = 0
-                Else
-                    Me.indicatorToolBtn = 2
-                    Me.ciPatientLoggedOn = TxtCredential1.Text
-                    FrmHome.ciPatientLoggedOn = Me.ciPatientLoggedOn 'Envío la CI del paciente que se logeó al atributo del FrmHome.
-                    FrmHome.Show() 'Inicio el Frame "Pantalla Inicial".
-                    Me.Close() 'Cierro el Frame de "Login".
-                End If
+            Me.indicatorToolBtn = L1.LogginPatient(TxtCredential1.Text) 'Se trabaja con la UI.
 
-            Catch ex As Exception
-                Console.WriteLine("ERROR: " & ex.ToString())
-                Me.indicatorToolBtn = 3
-            End Try
+            If Me.indicatorToolBtn = 2 Then
+                Me.ciPatientLoggedOn = TxtCredential1.Text
+                FrmHome.ciPatientLoggedOn = Me.ciPatientLoggedOn 'Envío la CI del paciente que se logeó al atributo del FrmHome.
+                FrmHome.Show() 'Inicio el Frame "Pantalla Inicial".
+                Me.Close() 'Cierro el Frame de "LoginEmployee".
+            End If
         End If
     End Sub
 
