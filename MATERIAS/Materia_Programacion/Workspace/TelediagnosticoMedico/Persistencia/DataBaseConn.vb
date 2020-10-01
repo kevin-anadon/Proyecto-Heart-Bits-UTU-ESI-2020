@@ -387,6 +387,21 @@ Public Class DataBaseConn
         con.Close()
         Return codeMsg
     End Function
+    Public Function LoginAdmin(user As String, pass As String) As Admin
+        Dim con As Connection = Me.Connect()
+        Dim AdminLog As Admin = Nothing
+        Try
+            Dim rsSelectPatientCi As Recordset = con.Execute("SELECT * FROM vista_admin WHERE user=" & user & " AND contrasena=" & pass & ";")
+
+        Catch ex As Exception
+            Console.WriteLine(ex.ToString())
+            Throw New Exception("Usuario y/o Contraseña equivocado")
+        Finally
+            con.Close()
+        End Try
+
+        Return AdminLog
+    End Function
     Public Function CheckPin(pin As String) As Boolean
         Dim con As Connection = Me.Connect()
         Dim checked As Boolean = False

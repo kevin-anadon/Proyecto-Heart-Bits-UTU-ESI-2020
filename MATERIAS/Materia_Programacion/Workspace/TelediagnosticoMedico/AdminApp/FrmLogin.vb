@@ -1,10 +1,9 @@
 ﻿Imports System.Runtime.InteropServices
-Imports ADODB
-Imports Persistencia
+Imports Logic
 Imports Data
 
 Public Class FrmLogin
-    Dim db As New DataBaseConn()
+    Dim log As New Logica()
     Dim ci As String = Nothing
 
     Private Sub Cerrar()
@@ -29,16 +28,12 @@ Public Class FrmLogin
             MessageBox.Show("CAMPOS VACIOS!!")
         Else
             Try
-                Dim rslog As Employee = db.Login(TxtUser.Text.ToString(), TxtPass.Text.ToString(), ci)
-                If IsNothing(rslog) Then
-                    Console.WriteLine("NO EXISTE")
-                    MessageBox.Show("Usuario o Contraseña Equivocada!!")
-                Else
-                    Console.WriteLine("--------------------EXISTEEE------------------")
-                    Me.Hide()
-                    FrmHome.Show()
-                End If
+                Dim AdminLog As Admin = log.LoginAdmin(TxtUser.Text.ToString(), TxtPass.Text.ToString())
+                Console.WriteLine("--------------------EXISTEEE------------------")
+                Me.Hide()
+                FrmHome.Show()
             Catch ex As Exception
+                MessageBox.Show(ex.ToString())
                 Console.WriteLine("ERROR: " & ex.ToString())
             End Try
         End If

@@ -56,7 +56,9 @@ Public Class Logica
     Public Function LogginPatient(ci As String) As Short
         Return CQConnection.LoginPatient(ci)
     End Function
-
+    Public Function LoginAdmin(user As String, pass As String) As Admin
+        Return CQConnection.LoginAdmin(user, pass)
+    End Function
 
 
 

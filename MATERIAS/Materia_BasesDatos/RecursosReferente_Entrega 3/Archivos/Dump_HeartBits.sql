@@ -643,6 +643,89 @@ INSERT INTO `verifica` VALUES (4,1),(1,10),(2,11),(5,12),(3,13),(11,16),(6,17),(
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
+--
+-- Creating views
+--
+
+--
+-- CREATE VIEW vista_admin
+--
+
+CREATE VIEW `vista_admin` AS
+    SELECT 
+        `persona`.`id` AS `id`,
+        `persona`.`ci` AS `ci`,
+        `persona`.`primerNom` AS `primerNom`,
+        `persona`.`segundoNom` AS `segundoNom`,
+        `persona`.`primerApe` AS `primerApe`,
+        `persona`.`segundoApe` AS `segundoApe`,
+        `persona`.`genero` AS `genero`,
+        `persona`.`fechaNacimiento` AS `fechaNacimiento`,
+        `persona`.`email` AS `email`,
+        `persona`.`calle` AS `calle`,
+        `persona`.`npuerta` AS `npuerta`,
+        `persona`.`id_ciudad` AS `id_ciudad`,
+        `persona`.`usuario` AS `usuario`,
+        `persona`.`contrasena` AS `contrasena`,
+        `persona`.`pin` AS `pin`,
+        `persona`.`muerto` AS `muerto`
+    FROM
+        `persona`
+    WHERE
+        `persona`.`id_tipo` = 1;
+        
+--
+-- CREATE VIEW vista_paciente
+--
+
+	CREATE VIEW `vista_paciente` AS
+    SELECT 
+        `persona`.`id` AS `id`,
+        `persona`.`ci` AS `ci`,
+        `persona`.`primerNom` AS `primerNom`,
+        `persona`.`segundoNom` AS `segundoNom`,
+        `persona`.`primerApe` AS `primerApe`,
+        `persona`.`segundoApe` AS `segundoApe`,
+        `persona`.`genero` AS `genero`,
+        `persona`.`fechaNacimiento` AS `fechaNacimiento`,
+        `persona`.`email` AS `email`,
+        `persona`.`calle` AS `calle`,
+        `persona`.`npuerta` AS `npuerta`,
+        `persona`.`id_ciudad` AS `id_ciudad`,
+        `persona`.`habilitado` AS `habilitado`,
+        `persona`.`muerto` AS `muerto`
+    FROM
+        `persona`
+    WHERE
+        `persona`.`id_tipo` = 3;
+	      
+--
+-- CREATE VIEW vista_medico
+--
+
+    CREATE VIEW `vista_medico` AS
+    SELECT 
+        `persona`.`id` AS `id`,
+        `persona`.`ci` AS `ci`,
+        `persona`.`primerNom` AS `primerNom`,
+        `persona`.`segundoNom` AS `segundoNom`,
+        `persona`.`primerApe` AS `primerApe`,
+        `persona`.`segundoApe` AS `segundoApe`,
+        `persona`.`genero` AS `genero`,
+        `persona`.`fechaNacimiento` AS `fechaNacimiento`,
+        `persona`.`email` AS `email`,
+        `persona`.`calle` AS `calle`,
+        `persona`.`npuerta` AS `npuerta`,
+        `persona`.`id_ciudad` AS `id_ciudad`,
+        `persona`.`especialidad` AS `especialidad`,
+        `persona`.`usuario` AS `usuario`,
+        `persona`.`contrasena` AS `contrasena`,
+        `persona`.`muerto` AS `muerto`
+    FROM
+        `persona`
+    WHERE
+        `persona`.`id_tipo` = 2;
+    
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
 /*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
