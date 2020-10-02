@@ -4,6 +4,7 @@ Imports Data
 
 Public Class FrmLogin
     Dim log As New Logica()
+    Public Shared Property AdminLog As New Admin()
     Dim ci As String = Nothing
 
     Private Sub Cerrar()
@@ -28,12 +29,13 @@ Public Class FrmLogin
             MessageBox.Show("CAMPOS VACIOS!!")
         Else
             Try
-                Dim AdminLog As Admin = log.LoginAdmin(TxtUser.Text.ToString(), TxtPass.Text.ToString())
+                AdminLog = log.LoginAdmin(TxtUser.Text.ToString(), TxtPass.Text.ToString())
                 Console.WriteLine("--------------------EXISTEEE------------------")
+                Console.WriteLine("EDAD: " & AdminLog.CalcAge(AdminLog.dateBirth))
                 Me.Hide()
                 FrmHome.Show()
             Catch ex As Exception
-                MessageBox.Show(ex.ToString())
+                MessageBox.Show(ex.Message)
                 Console.WriteLine("ERROR: " & ex.ToString())
             End Try
         End If

@@ -1,6 +1,18 @@
 ﻿Imports System.Runtime.InteropServices
+Imports Data
 Public Class FrmHome
+    Dim AdminLog As New Admin()
     Private Sub FrmHome_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        AdminLog = FrmLogin.AdminLog
+
+        'Se actualizan los datos del administrador que se veran en pantalla utilizando el objeto AdminLog
+        'Lblname.Text=AdminLog.fstName & " " & AdminLog.scndName & " " & AdminLog.fstSurname & " " & AdminLog.scndSurname
+        'Lblci.Text=AdminLog.ci.ToString()
+        'Lblage.Text=AdminLog.CalcAge(AdminLog.dateBirth).ToString()
+        'Lblemail.Text=AdminLog.email
+        'Lblphone.Text=AdminLog.numPhone.ToString()
+        'Lblcon.Text=""
+
     End Sub
 
     Private Sub BtnSympt_Click(sender As Object, e As EventArgs) Handles BtnSympt.Click

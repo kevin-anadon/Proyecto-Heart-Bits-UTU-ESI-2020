@@ -322,27 +322,6 @@ Public Class DataBaseConn
 
 
     'Query Personas
-    Public Function LoginEmployee(user As String, pass As String) As Object
-        Dim con As Connection = Me.Connect()
-        Dim rsAdmin, rsMed As Recordset
-        Dim empleado As Employee = Nothing
-
-        rsAdmin = con.Execute("SELECT ci FROM persona WHERE id_tipo=1 AND usuario='" + user + "' and contrasena='" + pass + "';")
-        If rsAdmin.EOF Then 'Si no es administrador verifica si es medico
-            rsMed = con.Execute("SELECT ci FROM persona WHERE id_tipo=2 and usuario='" + user + "' and contrasena='" + pass + "';")
-            If rsMed.EOF Then 'Si tampoco es médico
-                con.Close()
-                Return empleado
-            Else 'Si es médico
-                con.Close()
-                Return empleado
-            End If
-        Else 'En el caso que sea Administrador
-            con.Close()
-            Dim E1 As New Employee(user, pass)
-            Return E1
-        End If
-    End Function
     Public Function PatientAllowed(ci As String) As Short
         Dim con As Connection = Me.Connect
 
@@ -389,10 +368,46 @@ Public Class DataBaseConn
     End Function
     Public Function LoginAdmin(user As String, pass As String) As Admin
         Dim con As Connection = Me.Connect()
-        Dim AdminLog As Admin = Nothing
         Try
-            Dim rsSelectPatientCi As Recordset = con.Execute("SELECT * FROM vista_admin WHERE user=" & user & " AND contrasena=" & pass & ";")
+            Dim rsSelectAdmin As Recordset = con.Execute("SELECT * FROM vista_admin WHERE usuario='" & user & "' AND contrasena='" & pass & "';")
 
+            Dim id As Integer = DirectCast(rsSelectAdmin.Fields("id").Value, Integer)
+            Dim ci As Integer = DirectCast(rsSelectAdmin.Fields("ci").Value, Integer)
+            Dim name1 As String = TryCast(rsSelectAdmin.Fields("primerNom").Value, String)
+            Dim name2 As String = TryCast(rsSelectAdmin.Fields("segundoNom").Value, String)
+            Dim surn1 As String = TryCast(rsSelectAdmin.Fields("primerApe").Value, String)
+            Dim surn2 As String = TryCast(rsSelectAdmin.Fields("segundoApe").Value, String)
+            Dim genre As String = TryCast(rsSelectAdmin.Fields("genero").Value, String)
+            Dim birthdate As Date = DirectCast(rsSelectAdmin.Fields("fechaNacimiento").Value, Date)
+            Dim email As String = TryCast(rsSelectAdmin.Fields("email").Value, String)
+            Dim street As String = TryCast(rsSelectAdmin.Fields("calle").Value, String)
+            Dim ndoor As Integer = DirectCast(rsSelectAdmin.Fields("npuerta").Value, Integer)
+            Dim userSelect As String = TryCast(rsSelectAdmin.Fields("usuario").Value, String)
+            Dim password As String = TryCast(rsSelectAdmin.Fields("contrasena").Value, String)
+            Dim pin As Integer = DirectCast(rsSelectAdmin.Fields("pin").Value, Integer)
+
+            Dim rsSelectCity_Dpto As Recordset = con.Execute("SELECT c.id As Idc,c.nombre As Cnombre,d.id As Idd,d.nombre As Dnombre FROM vista_admin va JOIN ciudad c ON(va.id_ciudad=c.id) JOIN departamento d ON(c.id_dpto=d.id) WHERE va.id=" & id & ";") 'Consulta para Obtenere Departamento y Ciudad
+
+            Dim rsSelectPhones As Recordset = con.Execute("SELECT group_concat(c.celular) As Celulares FROM vista_admin va JOIN cel_empleado c ON(va.id=c.id_empleado) WHERE va.id=" & id & ";") 'Consulta para Obtener celulares del Admin
+
+            Dim id_city As Integer = DirectCast(rsSelectCity_Dpto.Fields("Idc").Value, Integer)
+            Dim CityName As String = TryCast(rsSelectCity_Dpto.Fields("Cnombre").Value, String)
+            Dim id_dpto As Integer = DirectCast(rsSelectCity_Dpto.Fields("Idd").Value, Integer)
+            Dim DptoName As String = TryCast(rsSelectCity_Dpto.Fields("Dnombre").Value, String)
+            Dim Phones As String = TryCast(rsSelectPhones.Fields("Celulares").Value, String)
+
+            Dim Dpto As New Department(id_dpto, DptoName) 'Creo el objeto Departamento
+            Dim City As New City(id_city, Dpto, CityName) 'Creo el objeto Ciudad
+
+            Dim genrenumber As Integer = 0
+            If genre.Equals("M") Then
+                genrenumber = 1
+            Else
+                genrenumber = 0
+            End If
+
+            Dim AdminLog As New Admin(id, ci, name1, name2, surn1, surn2, genrenumber, birthdate, email, Phones, street, ndoor, City, userSelect, password, pin)
+            Return AdminLog
         Catch ex As Exception
             Console.WriteLine(ex.ToString())
             Throw New Exception("Usuario y/o Contraseña equivocado")
@@ -400,7 +415,7 @@ Public Class DataBaseConn
             con.Close()
         End Try
 
-        Return AdminLog
+        Return Nothing
     End Function
     Public Function CheckPin(pin As String) As Boolean
         Dim con As Connection = Me.Connect()
