@@ -25,7 +25,6 @@ Public Class FrmAlertRemove
                 Me.Close()
                 If id = 0 Then
                     Dim frm As New FrmSympt()
-                    frm.DeleteSympt(Nom)
                 Else
                     Dim frm As New FrmPath()
                     frm.DeletePath(Nom)

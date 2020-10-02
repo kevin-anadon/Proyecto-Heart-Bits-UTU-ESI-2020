@@ -14,23 +14,19 @@ Public Class DataBaseConn
             Return Nothing
         End Try
     End Function
-    Public Function TryConnection() As Boolean
+
+    Public Sub TryConnection()
         Dim con As New Connection()
-        Dim result As Boolean = False
 
         Try
-            con = Me.Connect()
-            result = True
-            con.Close()
+            con.ConnectionString = "driver={MySql ODBC 8.0 Unicode Driver};server=127.0.0.1;port=3306;database=telediagnosticomedico_heartbits;uid=root;pwd=;"
+            con.Open()
         Catch ex As Exception
             Console.WriteLine(ex)
-            result = False
+            Throw New Exception("No se pudo conectar. Inicie la aplicación nuevamente")
         End Try
 
-
-        Return result
-    End Function
-
+    End Sub
 
 
     'Query Otros
@@ -89,6 +85,23 @@ Public Class DataBaseConn
         End While
         con.Close()
         Return priorities
+    End Function
+    Public Function ObtainSymptomsDataSet() As DataSet
+        Dim con As Connection = Me.Connect()
+        Dim ds = New DataSet
+        Dim da As New System.Data.OleDb.OleDbDataAdapter
+        Try
+            Dim rsSelectSymptomsTable As Recordset = con.Execute("Select s.descripcion As Síntoma, r.nombre As Región FROM sintoma s LEFT JOIN region r On(s.id_region=r.id) ORDER BY s.descripcion, r.nombre;")
+            da.Fill(ds, rsSelectSymptomsTable, "Refresh")
+            Return ds
+        Catch ex As Exception
+            Console.WriteLine(ex.ToString())
+            Throw New Exception("Error al obtener la tabla de síntomas")
+        Finally
+            con.Close()
+        End Try
+
+        Return Nothing
     End Function
     Public Function ObtainTable(nameTable As String) As Recordset
         Dim con As Connection = Me.Connect()

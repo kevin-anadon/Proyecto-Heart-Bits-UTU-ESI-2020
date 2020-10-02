@@ -30,6 +30,13 @@ Public Class FrmLogin
                 AdminLog = log.LoginAdmin(TxtUser.Text.ToString(), TxtPass.Text.ToString())
                 Console.WriteLine("--------------------EXISTEEE------------------")
                 Me.Hide()
+                'Se actualizan los datos del administrador que se veran en pantalla utilizando el objeto AdminLog
+                FrmHome.AdmName = AdminLog.fstName & " " & AdminLog.scndName & " " & AdminLog.fstSurname & " " & AdminLog.scndSurname
+                FrmHome.Ci = AdminLog.CiScript(AdminLog.ci)
+                FrmHome.Age = AdminLog.CalcAge(AdminLog.dateBirth).ToString()
+                FrmHome.Email = AdminLog.email
+                FrmHome.Phone = AdminLog.numPhone.ToString()
+                FrmHome.Connect = "Usuario " & AdminLog.username & " conectado a las " & TimeOfDay.Hour.ToString() & ":" & TimeOfDay.Minute.ToString() & ":" & TimeOfDay.Millisecond.ToString() & "."
                 FrmHome.Show()
             Catch ex As Exception
                 MessageBox.Show(ex.Message)

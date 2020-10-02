@@ -1,39 +1,35 @@
 ﻿Imports System.Runtime.InteropServices
 Imports Logic
 Imports Data
-Imports Persistencia
 Imports ADODB
+Imports Persistencia
 
 Public Class FrmSympt
     Dim db As New DataBaseConn()
-    Dim log As New Logic.Logica()
+    Dim log As New Logica()
 
     Dim row As DataGridViewRow
     Dim SymptSelected As String
     Dim reg As String = Nothing
     Dim Pathologies As New List(Of String)
 
-
-    Dim rsympt As Recordset = db.ObtainTable("sintoma")
-    Dim rspath As Recordset = db.ObtainTable("patologia")
-    Dim rreg As Recordset = db.ObtainTable("region")
-
     Public Sub ReloadDgv(i As Integer)
         If i = 0 Then
             'Opción para el load
-            Dim daInsert As New System.Data.OleDb.OleDbDataAdapter()
-            Dim dsInsert = New DataSet
-            daInsert.Fill(dsInsert, rsympt, "Refresh")
-            DgvSympt.DataSource = (dsInsert.Tables("Refresh"))
-            DgvSympt.Refresh()
+            Try
+                DgvSympt.DataSource = log.ObtainSymptomsDataSet().Tables("Refresh")
+                DgvSympt.Refresh()
+            Catch ex As Exception
+                MessageBox.Show(ex.Message)
+            End Try
         Else
-            'Opcion para el btn refresh
-            Dim rsymptRef As Recordset = db.ObtainTable("sintoma")
-            Dim da As New System.Data.OleDb.OleDbDataAdapter()
-            Dim ds = New DataSet
-            da.Fill(ds, rsymptRef, "Refresh")
-            DgvSympt.DataSource = (ds.Tables("Refresh"))
-            DgvSympt.Refresh()
+            'Opcion para los demas
+            Try
+                DgvSympt.DataSource = log.ObtainSymptomsDataSet().Tables("Refresh")
+                DgvSympt.Refresh()
+            Catch ex As Exception
+                MessageBox.Show(ex.Message)
+            End Try
         End If
     End Sub
 
@@ -78,17 +74,12 @@ Public Class FrmSympt
     End Sub
 
     Private Sub BtnHome_Click_1(sender As Object, e As EventArgs) Handles BtnHome.Click
-        Dim frmhome As New FrmHome()
         Me.Dispose()
-        frmhome.Show()
+        FrmHome.Show()
     End Sub
 
     Private Sub TxtSympt_Enter(sender As Object, e As EventArgs) Handles TxtSympt.Enter
         TxtSympt.Clear()
-    End Sub
-
-    Private Sub BtnRefresh_Click(sender As Object, e As EventArgs) Handles BtnRefresh.Click
-        ReloadDgv(1)
     End Sub
 
     Private Sub BtnAddSympt_Click(sender As Object, e As EventArgs) Handles BtnAddSympt.Click
@@ -160,7 +151,11 @@ Public Class FrmSympt
         ReloadDgv(3)
     End Sub
 
-    Private Sub DgvSympt_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgvSympt.CellDoubleClick
+    Private Sub DgvSympt_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgvSympt.CellDoubleClick 'Una manera de acceder a las modificaciones, haciendo doble clic en la tabla.
+        ModSympt()
+    End Sub
+
+    Public Sub ModSympt()
         Dim frmMod As New FrmModSympt()
         'Modificación de síntoma
 
@@ -179,6 +174,10 @@ Public Class FrmSympt
         End Try
     End Sub
 
+    Private Sub BtnMod_Click(sender As Object, e As EventArgs) Handles BtnMod.Click
+        ModSympt()
+    End Sub
+
     Private Sub BtnLogout_Click(sender As Object, e As EventArgs) Handles BtnLogout.Click
         If MsgBox("Está seguro que desea cerrar sesión ?", MsgBoxStyle.YesNoCancel, "Cerrar Programa") = MsgBoxResult.Yes Then
             End
@@ -190,4 +189,5 @@ Public Class FrmSympt
         Me.Dispose()
         frm.Show()
     End Sub
+
 End Class

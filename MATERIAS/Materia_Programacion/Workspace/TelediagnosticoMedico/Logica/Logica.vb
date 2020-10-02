@@ -6,10 +6,13 @@ Public Class Logica
     Private ReadOnly CQConnection As New DataBaseConn()
 
     'Herramientas de conexión
-    Public Function TryConnection() As Boolean
-        Dim resultConnection As Boolean = CQConnection.TryConnection
-        Return resultConnection
-    End Function
+    Public Sub TryConnection()
+        Try
+            CQConnection.TryConnection()
+        Catch ex As Exception
+            Throw New Exception(ex.Message)
+        End Try
+    End Sub
 
 
 
@@ -39,6 +42,16 @@ Public Class Logica
     'Conexión Síntomas
     Public Function ObtainSymptoms() As List(Of Symptom)
         Return CQConnection.ObtainSymptoms
+    End Function
+    Public Function ObtainSymptomsDataSet() As DataSet
+        Dim ds As DataSet = New DataSet
+        Try
+            ds = CQConnection.ObtainSymptomsDataSet()
+            Return ds
+        Catch ex As Exception
+            Console.WriteLine(ex.ToString())
+        End Try
+        Return Nothing
     End Function
 
 
