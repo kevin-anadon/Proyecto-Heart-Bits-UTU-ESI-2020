@@ -6,12 +6,12 @@ Public Class FrmHome
         AdminLog = FrmLogin.AdminLog
 
         'Se actualizan los datos del administrador que se veran en pantalla utilizando el objeto AdminLog
-        'Lblname.Text=AdminLog.fstName & " " & AdminLog.scndName & " " & AdminLog.fstSurname & " " & AdminLog.scndSurname
-        'Lblci.Text=AdminLog.ci.ToString()
-        'Lblage.Text=AdminLog.CalcAge(AdminLog.dateBirth).ToString()
-        'Lblemail.Text=AdminLog.email
-        'Lblphone.Text=AdminLog.numPhone.ToString()
-        'Lblcon.Text=""
+        LblName.Text = AdminLog.fstName & " " & AdminLog.scndName & " " & AdminLog.fstSurname & " " & AdminLog.scndSurname
+        LblCi.Text = AdminLog.CiScript(AdminLog.ci)
+        LblAge.Text = AdminLog.CalcAge(AdminLog.dateBirth).ToString()
+        LblEmail.Text = AdminLog.email
+        LblPhone.Text = AdminLog.numPhone.ToString()
+        LblConnect.Text = "Usuario " & AdminLog.username & " conectado a las " & TimeOfDay.Hour.ToString() & ":" & TimeOfDay.Minute.ToString() & ":" & TimeOfDay.Millisecond.ToString() & "."
 
     End Sub
 

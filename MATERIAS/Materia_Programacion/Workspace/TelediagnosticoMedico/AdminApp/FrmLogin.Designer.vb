@@ -259,7 +259,7 @@ Partial Class FrmLogin
         '
         Me.PictureBox5.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PictureBox5.Image = CType(resources.GetObject("PictureBox5.Image"), System.Drawing.Image)
-        Me.PictureBox5.Location = New System.Drawing.Point(687, 370)
+        Me.PictureBox5.Location = New System.Drawing.Point(688, 370)
         Me.PictureBox5.Name = "PictureBox5"
         Me.PictureBox5.Size = New System.Drawing.Size(18, 18)
         Me.PictureBox5.TabIndex = 26
@@ -269,7 +269,7 @@ Partial Class FrmLogin
         '
         Me.PictureBox6.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PictureBox6.Image = CType(resources.GetObject("PictureBox6.Image"), System.Drawing.Image)
-        Me.PictureBox6.Location = New System.Drawing.Point(711, 377)
+        Me.PictureBox6.Location = New System.Drawing.Point(712, 377)
         Me.PictureBox6.Name = "PictureBox6"
         Me.PictureBox6.Size = New System.Drawing.Size(6, 6)
         Me.PictureBox6.TabIndex = 27

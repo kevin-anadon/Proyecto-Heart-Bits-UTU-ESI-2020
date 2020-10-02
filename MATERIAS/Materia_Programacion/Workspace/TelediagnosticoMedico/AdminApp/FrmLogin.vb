@@ -18,10 +18,8 @@ Public Class FrmLogin
     End Sub
 
     Private Sub FrmLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-    End Sub
+        'Establecer conexión a la base de datos
 
-    Private Sub BtnTopExit_Click(sender As Object, e As EventArgs)
-        End
     End Sub
 
     Private Sub BtnLogin_Click(sender As Object, e As EventArgs) Handles BtnLogin.Click
@@ -31,7 +29,6 @@ Public Class FrmLogin
             Try
                 AdminLog = log.LoginAdmin(TxtUser.Text.ToString(), TxtPass.Text.ToString())
                 Console.WriteLine("--------------------EXISTEEE------------------")
-                Console.WriteLine("EDAD: " & AdminLog.CalcAge(AdminLog.dateBirth))
                 Me.Hide()
                 FrmHome.Show()
             Catch ex As Exception
@@ -44,6 +41,15 @@ Public Class FrmLogin
     Private Sub TxtPass_KeyDown(sender As Object, e As KeyEventArgs) Handles TxtPass.KeyDown
         'Detectar si presiona enter, que accione el botón Iniciar Sesión
         If e.KeyCode = Keys.Enter Then
+            BtnLogin.PerformClick()
+        End If
+    End Sub
+
+    Private Sub TxtUser_KeyDown(sender As Object, e As KeyEventArgs) Handles TxtUser.KeyDown
+        'Utilizable a modo de pruebas, luego para la version final se quitará
+        If e.KeyCode = Keys.K AndAlso e.Modifiers = Keys.Control Then
+            TxtUser.Text = "mel64"
+            TxtPass.Text = "84ulkc"
             BtnLogin.PerformClick()
         End If
     End Sub

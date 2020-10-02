@@ -99,4 +99,10 @@ Public Class People
         Return age
     End Function
 
+    Public Function CiScript(ci As String) As String
+        Dim CiResult As String = ""
+        CiResult = ci.ToString().Substring(0, 6) + "-" + ci.ToString().Substring((ci.ToString().Length() - 2), 1)
+        Return CiResult
+    End Function
+
 End Class 'People
