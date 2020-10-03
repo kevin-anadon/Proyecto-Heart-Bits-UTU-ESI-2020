@@ -105,10 +105,10 @@
     <Compile Include="FrmModPath.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmModSympt.Designer.vb">
-      <DependentUpon>FrmModSympt.vb</DependentUpon>
+    <Compile Include="FrmAddModSympt.Designer.vb">
+      <DependentUpon>FrmAddModSympt.vb</DependentUpon>
     </Compile>
-    <Compile Include="FrmModSympt.vb">
+    <Compile Include="FrmAddModSympt.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmSplashScreen.Designer.vb">
@@ -168,8 +168,8 @@
     <EmbeddedResource Include="FrmModPath.resx">
       <DependentUpon>FrmModPath.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmModSympt.resx">
-      <DependentUpon>FrmModSympt.vb</DependentUpon>
+    <EmbeddedResource Include="FrmAddModSympt.resx">
+      <DependentUpon>FrmAddModSympt.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSplashScreen.resx">
       <DependentUpon>FrmSplashScreen.vb</DependentUpon>

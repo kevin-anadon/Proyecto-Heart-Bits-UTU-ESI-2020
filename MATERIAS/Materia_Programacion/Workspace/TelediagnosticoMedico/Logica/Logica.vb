@@ -36,6 +36,9 @@ Public Class Logica
     Public Function ObtainPath() As List(Of Pathology)
         Return CQConnection.ObtainPath()
     End Function
+    Public Function ObtainPathForSymptoms(Sympt As String) As List(Of Pathology)
+        Return CQConnection.ObtainPathForSymptoms(Sympt)
+    End Function
 
 
 
@@ -53,7 +56,37 @@ Public Class Logica
         End Try
         Return Nothing
     End Function
-
+    Public Sub AddSymptoms(Sympt As Symptom, Paths As List(Of Pathology))
+        Try
+            CQConnection.AddSymptoms(Sympt, Paths)
+        Catch ex As Exception
+            Throw New Exception(ex.Message)
+        End Try
+    End Sub
+    Public Sub UpdateSymptoms(Sympt As Symptom, Paths As List(Of Pathology))
+        Try
+            CQConnection.UpdateSymptoms(Sympt, Paths)
+        Catch ex As Exception
+            Throw New Exception(ex.Message)
+        End Try
+    End Sub
+    Public Sub DeleteSymptoms(idSympt As Integer)
+        Try
+            CQConnection.DeleteSymptoms(idSympt)
+        Catch ex As Exception
+            Throw New Exception(ex.Message)
+        End Try
+    End Sub
+    Public Function SearchSymptoms(Descr As String) As DataSet
+        Dim ds As DataSet = New DataSet
+        Try
+            ds = CQConnection.SearchSymptoms(Descr)
+            Return ds
+        Catch ex As Exception
+            Throw New Exception(ex.Message)
+        End Try
+        Return Nothing
+    End Function
 
 
     'Conexión Personas

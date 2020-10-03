@@ -177,7 +177,6 @@ D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMe
 D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\AdminApp\obj\Debug\AdminApp.vbprojAssemblyReference.cache
 D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\AdminApp\obj\Debug\Interop.ADODB.dll
 D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\AdminApp\obj\Debug\AdminApp.vbproj.ResolveComReference.cache
-D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\AdminApp\obj\Debug\AdminApp.FrmModSympt.resources
 D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\AdminApp\obj\Debug\AdminApp.FrmSympt.resources
 D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\AdminApp\obj\Debug\AdminApp.FrmHome.resources
 D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\AdminApp\obj\Debug\AdminApp.Resources.resources
@@ -229,3 +228,4 @@ C:\Users\Yorel Acosta\Desktop\Study ESIMdeo\Clase 3BB 2020\Proyecto-Heart-Bits-U
 D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\AdminApp\bin\Debug\Logic.dll
 D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\AdminApp\bin\Debug\Logic.pdb
 D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\AdminApp\bin\Debug\Logic.xml
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\AdminApp\obj\Debug\AdminApp.FrmAddModSympt.resources

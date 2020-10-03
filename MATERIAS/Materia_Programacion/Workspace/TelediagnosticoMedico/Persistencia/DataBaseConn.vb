@@ -22,7 +22,7 @@ Public Class DataBaseConn
             con.ConnectionString = "driver={MySql ODBC 8.0 Unicode Driver};server=127.0.0.1;port=3306;database=telediagnosticomedico_heartbits;uid=root;pwd=;"
             con.Open()
         Catch ex As Exception
-            Console.WriteLine(ex)
+            Console.WriteLine(ex.ToString())
             Throw New Exception("No se pudo conectar. Inicie la aplicación nuevamente")
         End Try
 
@@ -167,18 +167,22 @@ Public Class DataBaseConn
         Console.WriteLine(pat + " Eliminado con exito, con sus tratamientos!!")
         con.Close()
     End Sub
-    Public Function ListPath(sympt As String) As List(Of String)
-        Dim Pathologies As New List(Of String)
+    Public Function ObtainPathForSymptoms(sympt As String) As List(Of Pathology)
+        Dim Pathologies As New List(Of Pathology)
         Dim con As Connection = Me.Connect()
 
         Dim rsSelectIdSympt As Recordset = con.Execute("SELECT id FROM sintoma WHERE descripcion='" + sympt + "';")
         Dim idsympt As Integer = DirectCast(rsSelectIdSympt.Fields("id").Value, Integer)
-        Dim rs As Recordset = con.Execute("SELECT p.nombre FROM patologia p JOIN sintoma_compone sc ON(p.id=sc.id_patologia) WHERE sc.id_sintoma=" & idsympt & ";")
+        Dim rsSelectPath As Recordset = con.Execute("SELECT * FROM patologia p JOIN sintoma_compone sc ON(p.id=sc.id_patologia) WHERE sc.id_sintoma=" & idsympt & ";")
 
-        While (Not rs.EOF)
-            Dim name As String = TryCast(rs.Fields("nombre").Value, String)
-            Pathologies.Add(name)
-            rs.MoveNext()
+        While (Not rsSelectPath.EOF)
+            Dim id As Integer = DirectCast(rsSelectPath.Fields("id").Value, Integer)
+            Dim priority As Priority = TryCast(rsSelectPath.Fields("id_prioridad").Value, Priority)
+            Dim name As String = TryCast(rsSelectPath.Fields("nombre").Value, String)
+            Dim description As String = TryCast(rsSelectPath.Fields("descripcion").Value, String)
+            Dim mortalityIndex As Integer = DirectCast(rsSelectPath.Fields("indiceMortalidad").Value, Integer)
+            Pathologies.Add(New Pathology(id, priority, name, description, mortalityIndex))
+            rsSelectPath.MoveNext()
         End While
         con.Close()
         Return Pathologies
@@ -211,107 +215,80 @@ Public Class DataBaseConn
 
 
     'Query Sintomas
-    Public Sub InsertSympt(sympt As String, region As String, Pat As List(Of String))
+    Public Sub AddSymptoms(Sympt As Symptom, Paths As List(Of Pathology))
         Dim con As Connection = Me.Connect()
 
-        If region = "NULL" Then
-            Dim rsIinsert As Recordset = con.Execute("INSERT INTO sintoma(descripcion) VALUES('" & sympt & "');")
-            Dim rsSelectIdSympt As Recordset = con.Execute("SELECT id FROM sintoma WHERE descripcion='" + sympt + "';")
+        Try
+            If Sympt.Region.id = -1 Then 'En el caso de que haya añadido un síntoma sin región
+                Dim rsInsert As Recordset = con.Execute("INSERT INTO sintoma(descripcion) VALUES('" & Sympt.Description & "');")
+            Else
+                Dim rsInsert As Recordset = con.Execute("INSERT INTO sintoma(id_region,descripcion) VALUES(" & Sympt.Region.id & ",'" & Sympt.Description & "');")
+            End If
+            Dim rsSelectIdSympt As Recordset = con.Execute("SELECT id FROM sintoma WHERE descripcion='" + Sympt.Description + "';")
             Dim idsympt As Integer = DirectCast(rsSelectIdSympt.Fields("id").Value, Integer)
-            For Each name As String In Pat
-                Dim rsSelectIdPat As Recordset = con.Execute("SELECT id FROM patologia WHERE nombre='" + name + "';")
-                Dim idpat As Integer = DirectCast(rsSelectIdPat.Fields("id").Value, Integer)
-                Dim rsIinsertSC As Recordset = con.Execute("INSERT INTO sintoma_compone VALUES(" & idsympt & "," & idpat & ");")
+            For Each Pathologies As Pathology In Paths
+                Dim rsIinsertSC As Recordset = con.Execute("INSERT INTO sintoma_compone VALUES(" & idsympt & "," & Pathologies.id & ");")
             Next
-        Else
-            Dim rsSelectIdReg As Recordset = con.Execute("SELECT id FROM region WHERE nombre='" + region + "';")
-            Dim idreg As Integer = DirectCast(rsSelectIdReg.Fields("id").Value, Integer)
-            Dim rsIinsert As Recordset = con.Execute("INSERT INTO sintoma(id_region,descripcion) VALUES(" & idreg & "," + "'" & sympt & "');")
-            'Inserta en la tabla sintoma
-            Dim rsSelectIdSympt As Recordset = con.Execute("SELECT id FROM sintoma WHERE descripcion='" + sympt + "';")
-            Dim idsympt As Integer = DirectCast(rsSelectIdSympt.Fields("id").Value, Integer)
+        Catch ex As Exception
+            Console.WriteLine(ex.ToString())
+            Throw New Exception("Error al añadir Sintomas")
+        Finally
+            con.Close()
+        End Try
 
-            For Each name As String In Pat
-                Dim rsSelectIdPat As Recordset = con.Execute("SELECT id FROM patologia WHERE nombre='" + name + "';")
-                Dim idpat As Integer = DirectCast(rsSelectIdPat.Fields("id").Value, Integer)
-                Dim rsIinsertSC As Recordset = con.Execute("INSERT INTO sintoma_compone VALUES(" & idsympt & "," & idpat & ");")
-            Next
-
-        End If
-        con.Close()
     End Sub
-    Public Sub UpdateSympt(sympt As String, region As String, symptbefore As String, patafter As List(Of String))
+
+    Public Sub UpdateSymptoms(Sympt As Symptom, Paths As List(Of Pathology))
         Dim con As Connection = Me.Connect()
 
-        If sympt.Equals("NULL") And Not region.Equals("NULL") Then 'Si el usuario solo modifico la región
+        Try
+            If Sympt.Region.id = -1 Then 'En el caso de que haya modificado un síntoma y le haya sacado la region
+                Dim rsInsert As Recordset = con.Execute("UPDATE sintoma SET sintoma='" & Sympt.Description & "' WHERE id=" & Sympt.Id & ";")
+            Else
+                Dim rsInsert As Recordset = con.Execute("UPDATE sintoma SET id_region=" & Sympt.Region.id & ",descripcion='" & Sympt.Description & "' WHERE id=" & Sympt.Id & ";")
+            End If
+            Dim rsDelSintoma_Compone As Recordset = con.Execute("DELETE FROM sintoma_compone WHERE id_sintoma=" & Sympt.Id & ";")
 
-            Dim rsSelectIdReg As Recordset = con.Execute("SELECT id FROM region WHERE nombre='" + region + "';")
-            Dim idregion As Integer = DirectCast(rsSelectIdReg.Fields("id").Value, Integer)
-            Dim rsSelectIdSympt As Recordset = con.Execute("SELECT id FROM sintoma WHERE descripcion='" + symptbefore + "';")
-            Dim idsympt As Integer = DirectCast(rsSelectIdSympt.Fields("id").Value, Integer)
-            Dim rsDelPats As Recordset = con.Execute("DELETE FROM sintoma_compone WHERE id_sintoma=" & idsympt & ";")
-            For Each name As String In patafter
-                Dim rsSelectIdPat As Recordset = con.Execute("SELECT id FROM patologia WHERE nombre='" + name + "';")
-                Dim idpat As Integer = DirectCast(rsSelectIdPat.Fields("id").Value, Integer)
-                Dim rsInsert As Recordset = con.Execute("UPDATE sintoma SET id_region=" & idregion & " WHERE id=" & idsympt & ";")
-                Dim rsIinsertSC As Recordset = con.Execute("INSERT INTO sintoma_compone VALUES(" & idsympt & "," & idpat & ");")
+            For Each Pathologies As Pathology In Paths
+                Dim rsIinsertSC As Recordset = con.Execute("INSERT INTO sintoma_compone VALUES(" & Sympt.Id & "," & Pathologies.id & ");")
             Next
+        Catch ex As Exception
+            Console.WriteLine(ex.ToString())
+            Throw New Exception("Error al modificar Sintomas")
+        Finally
+            con.Close()
+        End Try
 
-        ElseIf region.Equals("NULL") And Not sympt.Equals("NULL") Then 'Si el usuario solo modifico la descripción
-
-            Dim rsSelectIdSympt As Recordset = con.Execute("SELECT id FROM sintoma WHERE descripcion='" + symptbefore + "';")
-            Dim idsympt As Integer = DirectCast(rsSelectIdSympt.Fields("id").Value, Integer)
-            Dim rsDelPats As Recordset = con.Execute("DELETE FROM sintoma_compone WHERE id_sintoma=" & idsympt & ";")
-            For Each name As String In patafter
-                Dim rsSelectIdPat As Recordset = con.Execute("SELECT id FROM patologia WHERE nombre='" + name + "';")
-                Dim idpat As Integer = DirectCast(rsSelectIdPat.Fields("id").Value, Integer)
-                Dim rsInsert As Recordset = con.Execute("UPDATE sintoma SET descripcion='" & sympt & "' WHERE id=" & idsympt & ";")
-                Dim rsIinsertSC As Recordset = con.Execute("INSERT INTO sintoma_compone VALUES(" & idsympt & "," & idpat & ");")
-            Next
-
-        ElseIf sympt.Equals("NULL") And region.Equals("NULL") Then 'Si el usuario únicamente modificó patología
-
-            Dim rsSelectIdSympt As Recordset = con.Execute("SELECT id FROM sintoma WHERE descripcion='" + symptbefore + "';")
-            Dim idsympt As Integer = DirectCast(rsSelectIdSympt.Fields("id").Value, Integer)
-            Dim rsDelPats As Recordset = con.Execute("DELETE FROM sintoma_compone WHERE id_sintoma=" & idsympt & ";")
-            For Each name As String In patafter
-                Dim rsSelectIdPat As Recordset = con.Execute("SELECT id FROM patologia WHERE nombre='" + name + "';")
-                Dim idpat As Integer = DirectCast(rsSelectIdPat.Fields("id").Value, Integer)
-                Dim rsIinsertSC As Recordset = con.Execute("INSERT INTO sintoma_compone VALUES(" & idsympt & "," & idpat & ");")
-
-            Next
-
-        Else 'Si el usuario modifico ambas
-            Dim rsSelectIdReg As Recordset = con.Execute("SELECT id FROM region WHERE nombre='" + region + "';")
-            Dim idregion As Integer = DirectCast(rsSelectIdReg.Fields("id").Value, Integer)
-            Dim rsSelectIdSympt As Recordset = con.Execute("SELECT id FROM sintoma WHERE descripcion='" + symptbefore + "';")
-            Dim idsympt As Integer = DirectCast(rsSelectIdSympt.Fields("id").Value, Integer)
-            Dim rsDelPats As Recordset = con.Execute("DELETE FROM sintoma_compone WHERE id_sintoma=" & idsympt & ";")
-            For Each name As String In patafter
-                Dim rsSelectIdPat As Recordset = con.Execute("SELECT id FROM patologia WHERE nombre='" + name + "';")
-                Dim idpat As Integer = DirectCast(rsSelectIdPat.Fields("id").Value, Integer)
-                Dim rsInsert As Recordset = con.Execute("UPDATE sintoma SET descripcion='" & sympt & "', id_region=" & idregion & " WHERE id=" & idsympt & ";")
-                Dim rsIinsertSC As Recordset = con.Execute("INSERT INTO sintoma_compone VALUES(" & idsympt & "," & idpat & ");")
-            Next
-        End If
-
-        con.Close()
     End Sub
-    Public Sub DelSympt(sympt As String)
+    Public Sub DeleteSymptoms(idSympt As Integer)
         Dim con As Connection = Me.Connect()
 
-        Dim rsSelectIdSympt As Recordset = con.Execute("SELECT id FROM sintoma WHERE descripcion='" + sympt + "';")
-        Dim idsympt As Integer = DirectCast(rsSelectIdSympt.Fields("id").Value, Integer)
+        Try
+            Dim rsDelSintomaCompone As Recordset = con.Execute("DELETE FROM sintoma_compone WHERE id_sintoma=" & idSympt)
+            Dim rsDel As Recordset = con.Execute("DELETE FROM sintoma WHERE id=" & idSympt)
+        Catch ex As Exception
+            Throw New Exception("Error al eliminar Síntoma")
+        Finally
+            con.Close()
+        End Try
 
-        Dim rsDelSintomaCompone As Recordset = con.Execute("DELETE FROM sintoma_compone WHERE id_sintoma=" & idsympt)
-        Dim rsDel As Recordset = con.Execute("DELETE FROM sintoma WHERE id=" & idsympt)
-        Console.WriteLine(sympt + " Eliminado con exito!!")
-        con.Close()
     End Sub
-    Public Function SearchSympt(nameDesc As String) As Recordset
+    Public Function SearchSymptoms(Desc As String) As DataSet
         Dim con As Connection = Me.Connect()
+        Dim ds = New DataSet
+        Dim da As New System.Data.OleDb.OleDbDataAdapter
 
-        Return con.Execute("Select s.descripcion As Síntoma,r.nombre As Región FROM sintoma s LEFT JOIN region r On(s.id_region=r.id) WHERE s.descripcion Like '" & nameDesc & "%' ORDER BY s.descripcion, r.nombre;")
+        Try
+            Dim rsSearchSympts As Recordset = con.Execute("Select s.descripcion As Síntoma,r.nombre As Región FROM sintoma s LEFT JOIN region r On(s.id_region=r.id) WHERE s.descripcion Like '" & Desc & "%' ORDER BY s.descripcion, r.nombre;")
+            da.Fill(ds, rsSearchSympts, "Search")
+            Return ds
+        Catch ex As Exception
+            Console.WriteLine(ex.ToString())
+            Throw New Exception("Error al buscar")
+        Finally
+            con.Close()
+        End Try
+
     End Function
     Public Function ObtainSymptoms() As List(Of Symptom)
         Dim con As Connection = Me.Connect()

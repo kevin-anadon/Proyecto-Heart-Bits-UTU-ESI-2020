@@ -44,13 +44,8 @@ Partial Class FrmSympt
         Me.PicLogo = New System.Windows.Forms.PictureBox()
         Me.DgvSympt = New Guna.UI.WinForms.GunaDataGridView()
         Me.TxtSympt = New Guna.UI.WinForms.GunaTextBox()
-        Me.cmbregion = New Guna.UI.WinForms.GunaComboBox()
         Me.BtnAddSympt = New Guna.UI.WinForms.GunaButton()
-        Me.TxtAddSympt = New Guna.UI.WinForms.GunaTextBox()
-        Me.ChkReg = New Guna.UI.WinForms.GunaCheckBox()
         Me.BtnDelSympt = New Guna.UI.WinForms.GunaButton()
-        Me.ChkList = New System.Windows.Forms.CheckedListBox()
-        Me.GunaLabel1 = New Guna.UI.WinForms.GunaLabel()
         Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.BtnMod = New Guna.UI.WinForms.GunaButton()
         Me.LblListado = New System.Windows.Forms.Label()
@@ -416,12 +411,12 @@ Partial Class FrmSympt
         Me.DgvSympt.DefaultCellStyle = DataGridViewCellStyle3
         Me.DgvSympt.EnableHeadersVisualStyles = False
         Me.DgvSympt.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.DgvSympt.Location = New System.Drawing.Point(205, 324)
+        Me.DgvSympt.Location = New System.Drawing.Point(205, 240)
         Me.DgvSympt.Name = "DgvSympt"
         Me.DgvSympt.ReadOnly = True
         Me.DgvSympt.RowHeadersVisible = False
         Me.DgvSympt.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DgvSympt.Size = New System.Drawing.Size(843, 297)
+        Me.DgvSympt.Size = New System.Drawing.Size(843, 381)
         Me.DgvSympt.TabIndex = 11
         Me.DgvSympt.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna
         Me.DgvSympt.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
@@ -469,27 +464,6 @@ Partial Class FrmSympt
         Me.TxtSympt.TabIndex = 14
         Me.TxtSympt.Text = "Realizar busqueda por síntoma"
         '
-        'cmbregion
-        '
-        Me.cmbregion.BackColor = System.Drawing.Color.Transparent
-        Me.cmbregion.BaseColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
-        Me.cmbregion.BorderColor = System.Drawing.Color.Silver
-        Me.cmbregion.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
-        Me.cmbregion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cmbregion.FocusedColor = System.Drawing.Color.Empty
-        Me.cmbregion.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.cmbregion.ForeColor = System.Drawing.Color.White
-        Me.cmbregion.FormattingEnabled = True
-        Me.cmbregion.Location = New System.Drawing.Point(832, 220)
-        Me.cmbregion.Name = "cmbregion"
-        Me.cmbregion.OnHoverItemBaseColor = System.Drawing.Color.Teal
-        Me.cmbregion.OnHoverItemForeColor = System.Drawing.Color.White
-        Me.cmbregion.Radius = 5
-        Me.cmbregion.Size = New System.Drawing.Size(203, 26)
-        Me.cmbregion.Sorted = True
-        Me.cmbregion.TabIndex = 15
-        Me.cmbregion.Visible = False
-        '
         'BtnAddSympt
         '
         Me.BtnAddSympt.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -507,7 +481,7 @@ Partial Class FrmSympt
         Me.BtnAddSympt.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.BtnAddSympt.ImageOffsetX = -10
         Me.BtnAddSympt.ImageSize = New System.Drawing.Size(20, 20)
-        Me.BtnAddSympt.Location = New System.Drawing.Point(897, 298)
+        Me.BtnAddSympt.Location = New System.Drawing.Point(897, 214)
         Me.BtnAddSympt.Name = "BtnAddSympt"
         Me.BtnAddSympt.OnHoverBaseColor = System.Drawing.Color.Teal
         Me.BtnAddSympt.OnHoverBorderColor = System.Drawing.Color.Black
@@ -518,41 +492,6 @@ Partial Class FrmSympt
         Me.BtnAddSympt.Size = New System.Drawing.Size(138, 20)
         Me.BtnAddSympt.TabIndex = 23
         Me.BtnAddSympt.Text = "NUEVO SÍNTOMA"
-        '
-        'TxtAddSympt
-        '
-        Me.TxtAddSympt.BackColor = System.Drawing.Color.Transparent
-        Me.TxtAddSympt.BaseColor = System.Drawing.Color.White
-        Me.TxtAddSympt.BorderColor = System.Drawing.Color.Silver
-        Me.TxtAddSympt.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.TxtAddSympt.FocusedBaseColor = System.Drawing.Color.White
-        Me.TxtAddSympt.FocusedBorderColor = System.Drawing.Color.Silver
-        Me.TxtAddSympt.FocusedForeColor = System.Drawing.SystemColors.ControlText
-        Me.TxtAddSympt.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.TxtAddSympt.ForeColor = System.Drawing.Color.FromArgb(CType(CType(55, Byte), Integer), CType(CType(55, Byte), Integer), CType(CType(55, Byte), Integer))
-        Me.TxtAddSympt.Location = New System.Drawing.Point(832, 252)
-        Me.TxtAddSympt.Multiline = True
-        Me.TxtAddSympt.Name = "TxtAddSympt"
-        Me.TxtAddSympt.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.TxtAddSympt.Radius = 8
-        Me.TxtAddSympt.SelectedText = ""
-        Me.TxtAddSympt.Size = New System.Drawing.Size(203, 30)
-        Me.TxtAddSympt.TabIndex = 24
-        Me.TxtAddSympt.Text = "Ingrese nombre de nuevo síntoma"
-        '
-        'ChkReg
-        '
-        Me.ChkReg.BackColor = System.Drawing.Color.White
-        Me.ChkReg.BaseColor = System.Drawing.Color.White
-        Me.ChkReg.CheckedOffColor = System.Drawing.SystemColors.Desktop
-        Me.ChkReg.CheckedOnColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
-        Me.ChkReg.FillColor = System.Drawing.Color.White
-        Me.ChkReg.Location = New System.Drawing.Point(832, 194)
-        Me.ChkReg.Name = "ChkReg"
-        Me.ChkReg.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.ChkReg.Size = New System.Drawing.Size(93, 20)
-        Me.ChkReg.TabIndex = 26
-        Me.ChkReg.Text = "Tiene región"
         '
         'BtnDelSympt
         '
@@ -571,7 +510,7 @@ Partial Class FrmSympt
         Me.BtnDelSympt.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.BtnDelSympt.ImageOffsetX = -10
         Me.BtnDelSympt.ImageSize = New System.Drawing.Size(20, 20)
-        Me.BtnDelSympt.Location = New System.Drawing.Point(738, 298)
+        Me.BtnDelSympt.Location = New System.Drawing.Point(738, 214)
         Me.BtnDelSympt.Name = "BtnDelSympt"
         Me.BtnDelSympt.OnHoverBaseColor = System.Drawing.Color.Teal
         Me.BtnDelSympt.OnHoverBorderColor = System.Drawing.Color.Black
@@ -582,27 +521,6 @@ Partial Class FrmSympt
         Me.BtnDelSympt.Size = New System.Drawing.Size(153, 20)
         Me.BtnDelSympt.TabIndex = 27
         Me.BtnDelSympt.Text = "ELIMINAR SÍNTOMA"
-        '
-        'ChkList
-        '
-        Me.ChkList.CheckOnClick = True
-        Me.ChkList.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ChkList.FormattingEnabled = True
-        Me.ChkList.Location = New System.Drawing.Point(688, 188)
-        Me.ChkList.Name = "ChkList"
-        Me.ChkList.Size = New System.Drawing.Size(138, 94)
-        Me.ChkList.TabIndex = 28
-        '
-        'GunaLabel1
-        '
-        Me.GunaLabel1.AutoSize = True
-        Me.GunaLabel1.BackColor = System.Drawing.Color.White
-        Me.GunaLabel1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.GunaLabel1.Location = New System.Drawing.Point(691, 166)
-        Me.GunaLabel1.Name = "GunaLabel1"
-        Me.GunaLabel1.Size = New System.Drawing.Size(132, 15)
-        Me.GunaLabel1.TabIndex = 29
-        Me.GunaLabel1.Text = "Asociación a patologías"
         '
         'Guna2PictureBox1
         '
@@ -633,7 +551,7 @@ Partial Class FrmSympt
         Me.BtnMod.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.BtnMod.ImageOffsetX = -10
         Me.BtnMod.ImageSize = New System.Drawing.Size(20, 20)
-        Me.BtnMod.Location = New System.Drawing.Point(570, 298)
+        Me.BtnMod.Location = New System.Drawing.Point(570, 214)
         Me.BtnMod.Name = "BtnMod"
         Me.BtnMod.OnHoverBaseColor = System.Drawing.Color.Teal
         Me.BtnMod.OnHoverBorderColor = System.Drawing.Color.Black
@@ -651,7 +569,7 @@ Partial Class FrmSympt
         Me.LblListado.AccessibleName = "LblResults"
         Me.LblListado.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblListado.ForeColor = System.Drawing.Color.FromArgb(CType(CType(181, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(181, Byte), Integer))
-        Me.LblListado.Location = New System.Drawing.Point(204, 288)
+        Me.LblListado.Location = New System.Drawing.Point(204, 204)
         Me.LblListado.Name = "LblListado"
         Me.LblListado.Size = New System.Drawing.Size(844, 37)
         Me.LblListado.TabIndex = 49
@@ -707,14 +625,9 @@ Partial Class FrmSympt
         Me.Controls.Add(Me.PnlTittle)
         Me.Controls.Add(Me.BtnMod)
         Me.Controls.Add(Me.Guna2PictureBox1)
-        Me.Controls.Add(Me.GunaLabel1)
-        Me.Controls.Add(Me.ChkList)
         Me.Controls.Add(Me.MzButtonWindows1)
         Me.Controls.Add(Me.BtnDelSympt)
-        Me.Controls.Add(Me.ChkReg)
-        Me.Controls.Add(Me.TxtAddSympt)
         Me.Controls.Add(Me.BtnAddSympt)
-        Me.Controls.Add(Me.cmbregion)
         Me.Controls.Add(Me.LblListado)
         Me.Controls.Add(Me.TxtSympt)
         Me.Controls.Add(Me.LblCrit)
@@ -734,7 +647,6 @@ Partial Class FrmSympt
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PnlTittle.ResumeLayout(False)
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
     Friend WithEvents MzButtonWindows1 As BWCMM.MZButtonWindows
@@ -754,14 +666,9 @@ Partial Class FrmSympt
     Friend WithEvents PicLogo As PictureBox
     Friend WithEvents PanelBody As Panel
     Friend WithEvents DgvSympt As Guna.UI.WinForms.GunaDataGridView
-    Friend WithEvents cmbregion As Guna.UI.WinForms.GunaComboBox
     Friend WithEvents TxtSympt As Guna.UI.WinForms.GunaTextBox
     Friend WithEvents BtnAddSympt As Guna.UI.WinForms.GunaButton
-    Friend WithEvents TxtAddSympt As Guna.UI.WinForms.GunaTextBox
-    Friend WithEvents ChkReg As Guna.UI.WinForms.GunaCheckBox
     Friend WithEvents BtnDelSympt As Guna.UI.WinForms.GunaButton
-    Friend WithEvents GunaLabel1 As Guna.UI.WinForms.GunaLabel
-    Friend WithEvents ChkList As CheckedListBox
     Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents BtnMod As Guna.UI.WinForms.GunaButton
     Friend WithEvents LblListado As Label

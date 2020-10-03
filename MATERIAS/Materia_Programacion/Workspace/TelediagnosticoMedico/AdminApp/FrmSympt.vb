@@ -1,11 +1,8 @@
 ﻿Imports System.Runtime.InteropServices
 Imports Logic
 Imports Data
-Imports ADODB
-Imports Persistencia
 
 Public Class FrmSympt
-    Dim db As New DataBaseConn()
     Dim log As New Logica()
 
     Dim row As DataGridViewRow
@@ -33,18 +30,6 @@ Public Class FrmSympt
         End If
     End Sub
 
-    Public Sub ReloadChkL()
-        For Each path As Pathology In log.ObtainPath()
-            ChkList.Items.Add(path.name)
-        Next
-    End Sub
-
-    Public Sub ReloadCmb()
-        For Each Region As Region In log.ObtainRegions()
-            cmbregion.Items.Add(Region.name)
-        Next
-    End Sub
-
     <DllImport("Gdi32.dll", EntryPoint:="CreateRoundRectRgn")>
     Private Shared Function CreateRoundRectRgn(LR As Integer, TR As Integer, RR As Integer, BR As Integer, WE As Integer, HE As Integer) As IntPtr
 
@@ -52,8 +37,6 @@ Public Class FrmSympt
     Private Sub FrmSympt_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width - 2, Height - 2, 15, 15))
         ReloadDgv(0)
-        ReloadChkL()
-        ReloadCmb()
     End Sub
 
     Private Sub MzButtonWindows1_Click(sender As Object, e As EventArgs) Handles MzButtonWindows1.Click
@@ -64,13 +47,17 @@ Public Class FrmSympt
         TxtSympt.Text = Nothing
     End Sub
 
-    Private Sub TxtSympt_TextChanged(sender As Object, e As EventArgs) Handles TxtSympt.TextChanged
-        Dim rsearchsympt As Recordset = db.SearchSympt(TxtSympt.Text)
-        Dim dasearch As New System.Data.OleDb.OleDbDataAdapter()
-        Dim dsearch = New DataSet
-        dasearch.Fill(dsearch, rsearchsympt, "sintoma")
-        DgvSympt.DataSource = (dsearch.Tables("sintoma"))
-        DgvSympt.Refresh()
+    Private Sub TxtSympt_TextChanged(sender As Object, e As EventArgs) Handles TxtSympt.TextChanged 'Buscar sintoma
+        If Not TxtSympt.Text.Equals("") Or Not TxtSympt.Text = Nothing Or Not TxtSympt.Text = "Realizar busqueda por síntoma" Then
+            Try
+                DgvSympt.DataSource = log.SearchSymptoms(TxtSympt.Text).Tables("Search")
+                DgvSympt.Refresh()
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            End Try
+        Else
+            ReloadDgv(2)
+        End If
     End Sub
 
     Private Sub BtnHome_Click_1(sender As Object, e As EventArgs) Handles BtnHome.Click
@@ -83,69 +70,22 @@ Public Class FrmSympt
     End Sub
 
     Private Sub BtnAddSympt_Click(sender As Object, e As EventArgs) Handles BtnAddSympt.Click
-        Pathologies.Clear()
-        Dim i As Integer
-        Dim Valor As String
-        For i = 0 To Me.ChkList.CheckedItems.Count - 1
-            Valor = ChkList.CheckedItems(i)
-            Pathologies.Add(Valor)
-        Next
-        If TxtAddSympt.Text.Trim.Length = 0 Or TxtAddSympt.Text = "Ingrese nombre de nuevo síntoma" Or ChkList.CheckedItems.Count = 0 Then
-            MessageBox.Show("CAMPOS VACIOS!!")
-        Else
-            For rows As Integer = 0 To DgvSympt.Rows.Count - 1
-                If (CStr(DgvSympt.Rows(rows).Cells("Síntoma").Value) = TxtAddSympt.Text) Then
-                    MessageBox.Show("Síntoma ya existente!!")
-                    Return
-                End If
-            Next
-            If Not ChkReg.Checked Then
-                Dim region As String = "NULL"
-                db.InsertSympt(TxtAddSympt.Text.ToString(), region, Pathologies)
-                MessageBox.Show("INGRESADO CON EXITO!!")
-                TxtAddSympt.Text = "Ingrese nombre de nuevo síntoma"
-                For patselected As Integer = 0 To ChkList.Items.Count - 1
-                    ChkList.SetItemChecked(patselected, False)
-                Next
-                ReloadDgv(2)
-            Else
-                If cmbregion.Text.Trim.Length() = 0 Then
-                    MessageBox.Show("INGRESE UNA REGIÓN!!")
-                Else
-                    db.InsertSympt(TxtAddSympt.Text.ToString(), cmbregion.Text.ToString(), Pathologies)
-                    MessageBox.Show("INGRESADO CON EXITO!!")
-                    TxtAddSympt.Text = "Ingrse nombre de nuevo síntoma"
-                    For patselected As Integer = 0 To ChkList.Items.Count - 1
-                        ChkList.SetItemChecked(patselected, False)
-                    Next
-                    ReloadDgv(2)
-                End If
-            End If
-        End If
-    End Sub
-
-    Private Sub TxtAddSympt_Enter(sender As Object, e As EventArgs) Handles TxtAddSympt.Enter
-        TxtAddSympt.Clear()
-    End Sub
-
-    Private Sub ChkReg_CheckedChanged(sender As Object, e As EventArgs) Handles ChkReg.CheckedChanged
-        If ChkReg.Checked Then
-            cmbregion.Show()
-        Else
-            cmbregion.Hide()
-        End If
-    End Sub
-
-    Public Sub DeleteSympt(Sympt As String)
-        db.DelSympt(Sympt)
+        Dim frmAdd As New FrmAddModSympt()
+        'Insercion de nuevo síntoma
+        frmAdd.AddSympt()
+        frmAdd.ShowDialog()
+        ReloadDgv(3)
     End Sub
 
     Private Sub BtnDelSympt_Click(sender As Object, e As EventArgs) Handles BtnDelSympt.Click
         Dim alerta As New FrmAlertRemove()
         row = DgvSympt.CurrentRow
-        SymptSelected = CStr(row.Cells("Síntoma").Value)
-        'Obtengo el síntoma seleccionado
-        'Hago comprobación con PIN, mandó el sintoma que se desea borrar a un método de la clase FrmAlertRemoveSymptom
+        SymptSelected = CStr(row.Cells("Síntoma").Value) 'Obtengo el síntoma seleccionado
+        For Each Sympt As Symptom In log.ObtainSymptoms()
+            If Sympt.Description.Equals(SymptSelected) Then
+                FrmAlertRemove.idSympt = Sympt.Id
+            End If
+        Next
         alerta.Obtain(SymptSelected, 0)
         alerta.ShowDialog()
         ReloadDgv(3)
@@ -156,7 +96,7 @@ Public Class FrmSympt
     End Sub
 
     Public Sub ModSympt()
-        Dim frmMod As New FrmModSympt()
+        Dim frmMod As New FrmAddModSympt()
         'Modificación de síntoma
 
         row = DgvSympt.CurrentRow
@@ -167,6 +107,7 @@ Public Class FrmSympt
             frmMod.ShowDialog()
             ReloadDgv(4)
         Catch ex As Exception
+            Console.WriteLine("Sintoma a modificar sin region")
             reg = "No tiene"
             frmMod.ObtainSympt(SymptSelected, reg)
             frmMod.ShowDialog()
@@ -174,7 +115,7 @@ Public Class FrmSympt
         End Try
     End Sub
 
-    Private Sub BtnMod_Click(sender As Object, e As EventArgs) Handles BtnMod.Click
+    Private Sub BtnMod_Click(sender As Object, e As EventArgs) Handles BtnMod.Click 'Otra manera de modificar un síntoma
         ModSympt()
     End Sub
 
@@ -189,5 +130,4 @@ Public Class FrmSympt
         Me.Dispose()
         frm.Show()
     End Sub
-
 End Class

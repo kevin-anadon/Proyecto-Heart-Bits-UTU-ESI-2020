@@ -1,34 +1,32 @@
 ﻿Imports System.Runtime.InteropServices
-Imports Persistencia
-
+Imports Data
+Imports Logic
 Public Class FrmAlertRemove
-    Dim Nom As String = Nothing
+    Dim log As New Logica
+    Dim Name As String = ""
     Dim id As Integer = 0
-    Dim db As New DataBaseConn()
+    Public Shared idSympt As Integer = 0
+    Public Shared idPath As Integer = 0
 
     Public Sub Obtain(s As String, i As Integer)
-        Nom = s
+        Name = s
         id = i
     End Sub
 
     Private Sub BtnPin_Click(sender As Object, e As EventArgs) Handles BtnPin.Click
         If TxtPin.Text.Trim.Length = 0 Then
-            MessageBox.Show("CAMPOS VACIOS!!")
+            MessageBox.Show("Campos vacios")
         Else
-            Dim rsPin As Boolean = db.CheckPin(TxtPin.Text.ToString())
-            If rsPin = False Then
-                Console.WriteLine("PIN INCORRECTO")
-                MessageBox.Show("PIN Incorrecto!!")
-            Else
-                Console.WriteLine("----------------PIN CORRECTO--------------")
-                MessageBox.Show("Eliminado con exito!!")
-                Me.Close()
+            If FrmLogin.AdminLog.pin.ToString().Equals(TxtPin.Text) Then
+                Console.WriteLine("----PIN CORRECTO----")
                 If id = 0 Then
-                    Dim frm As New FrmSympt()
+                    DeleteSymptom()
                 Else
-                    Dim frm As New FrmPath()
-                    frm.DeletePath(Nom)
+                    DeletePath()
                 End If
+            Else
+                Console.WriteLine("----PIN INCORRECTO----")
+                MessageBox.Show("Pin incorrecto")
             End If
         End If
     End Sub
@@ -38,6 +36,28 @@ Public Class FrmAlertRemove
     End Sub
 
     Private Sub FrmAlertRemoveSymptom_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        LblSympt.Text = Nom
+        LblSympt.Text = Name
+    End Sub
+
+    Public Sub DeleteSymptom()
+        Try
+            log.DeleteSymptoms(idSympt)
+            MessageBox.Show(Name & " eliminado con exito")
+            Me.Close()
+            Dim frm As New FrmSympt()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
+
+    Public Sub DeletePath()
+        Try
+
+            Me.Close()
+            Dim frm As New FrmPath()
+            frm.DeletePath(Name)
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
     End Sub
 End Class
