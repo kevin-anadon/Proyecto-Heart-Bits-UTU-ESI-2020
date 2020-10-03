@@ -1,5 +1,4 @@
-﻿Imports Persistencia
-Imports Logic
+﻿Imports Logic
 Imports Data
 Imports ADODB
 
@@ -11,8 +10,7 @@ Public Class FrmHome
     Private idPatientLoggedOn As Integer
     Private patientLoggedOn As New Data.People
     Private chargePathology As List(Of Pathology)
-    Private ReadOnly DBConn As New DataBaseConn()
-    Private log As New Logic.Logica()
+    Private L1 As New Logic.Logica()
 
     'Query:
     Private Symptoms As List(Of Data.Symptom)
@@ -146,11 +144,11 @@ Public Class FrmHome
     End Sub
 
     Public Sub GetIdPatientLoggedOn()
-        Me.idPatientLoggedOn = log.matchPatientLoggedOn(Me.ciPatientLoggedOn)
+        Me.idPatientLoggedOn = L1.matchPatientLoggedOn(Me.ciPatientLoggedOn)
     End Sub
 
     Public Sub LoadSymptoms()
-        Me.Symptoms = log.ObtainSymptoms()
+        Me.Symptoms = L1.ObtainSymptoms()
     End Sub
 
     'Eventos:
@@ -181,11 +179,11 @@ Public Class FrmHome
         Next 'For [symptomsSuffred] para cada item del ListBox que contiene los Síntomas que Sufre el Paciente.
 
         'Almaceno en la Base de Datos los Sintomas que sufre el Paciente, y su Id para referenciarlo
-        log.SetPatientSufferSymp(idPatientLoggedOn, idSympSuffered)
+        L1.SetPatientSufferSymp(idPatientLoggedOn, idSympSuffered)
 
         'Cargo las Patologias Sufridas en una Lista
         PatholgiesSuffered = New List(Of Pathology)
-        Me.PatholgiesSuffered = log.ObtainPatholgiesSuffered
+        Me.PatholgiesSuffered = L1.ObtainPatholgiesSuffered
 
         'Trato el Panel con los Resultados
         ''Hago un diagnostico (resumen/media) de los datos de "id_prioridad" -> Me define el color y mensaje del header.
