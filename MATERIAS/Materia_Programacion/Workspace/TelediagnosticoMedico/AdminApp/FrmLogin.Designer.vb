@@ -34,7 +34,7 @@ Partial Class FrmLogin
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.PicLogo = New System.Windows.Forms.PictureBox()
         Me.PicbxLogin = New System.Windows.Forms.PictureBox()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.PictureBox6 = New System.Windows.Forms.PictureBox()
@@ -42,7 +42,7 @@ Partial Class FrmLogin
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PicLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PicbxLogin, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -232,18 +232,18 @@ Partial Class FrmLogin
         Me.PictureBox2.TabIndex = 10
         Me.PictureBox2.TabStop = False
         '
-        'PictureBox1
+        'PicLogo
         '
-        Me.PictureBox1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.PicLogo.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(789, 26)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(97, 97)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
-        Me.PictureBox1.TabIndex = 2
-        Me.PictureBox1.TabStop = False
+        Me.PicLogo.Image = CType(resources.GetObject("PicLogo.Image"), System.Drawing.Image)
+        Me.PicLogo.Location = New System.Drawing.Point(789, 26)
+        Me.PicLogo.Name = "PicLogo"
+        Me.PicLogo.Size = New System.Drawing.Size(97, 97)
+        Me.PicLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.PicLogo.TabIndex = 2
+        Me.PicLogo.TabStop = False
         '
         'PicbxLogin
         '
@@ -259,7 +259,7 @@ Partial Class FrmLogin
         '
         Me.PictureBox5.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PictureBox5.Image = CType(resources.GetObject("PictureBox5.Image"), System.Drawing.Image)
-        Me.PictureBox5.Location = New System.Drawing.Point(687, 370)
+        Me.PictureBox5.Location = New System.Drawing.Point(688, 370)
         Me.PictureBox5.Name = "PictureBox5"
         Me.PictureBox5.Size = New System.Drawing.Size(18, 18)
         Me.PictureBox5.TabIndex = 26
@@ -269,7 +269,7 @@ Partial Class FrmLogin
         '
         Me.PictureBox6.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PictureBox6.Image = CType(resources.GetObject("PictureBox6.Image"), System.Drawing.Image)
-        Me.PictureBox6.Location = New System.Drawing.Point(711, 377)
+        Me.PictureBox6.Location = New System.Drawing.Point(712, 377)
         Me.PictureBox6.Name = "PictureBox6"
         Me.PictureBox6.Size = New System.Drawing.Size(6, 6)
         Me.PictureBox6.TabIndex = 27
@@ -290,6 +290,7 @@ Partial Class FrmLogin
         Me.BackgroundImage = Global.AdminApp.My.Resources.Resources.Login__Type_2
         Me.ClientSize = New System.Drawing.Size(1060, 640)
         Me.ControlBox = False
+        Me.Controls.Add(Me.PicLogo)
         Me.Controls.Add(Me.PictureBox6)
         Me.Controls.Add(Me.PictureBox5)
         Me.Controls.Add(Me.BtnExit)
@@ -302,7 +303,6 @@ Partial Class FrmLogin
         Me.Controls.Add(Me.Lblbody)
         Me.Controls.Add(Me.Lbltitle2)
         Me.Controls.Add(Me.LblTitle1)
-        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.PicbxLogin)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -312,7 +312,7 @@ Partial Class FrmLogin
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PicLogo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PicbxLogin, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
@@ -321,7 +321,7 @@ Partial Class FrmLogin
     End Sub
 
     Friend WithEvents PicbxLogin As PictureBox
-    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents PicLogo As PictureBox
     Public WithEvents LblTitle1 As Label
     Public WithEvents Lbltitle2 As Label
     Public WithEvents Lblbody As Label

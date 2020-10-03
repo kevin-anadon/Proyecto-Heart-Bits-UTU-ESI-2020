@@ -36,10 +36,22 @@ Partial Class FrmHome
         Me.BtnLogin = New Guna.UI.WinForms.GunaButton()
         Me.PicLogo = New System.Windows.Forms.PictureBox()
         Me.PanelHome = New System.Windows.Forms.Panel()
+        Me.LblConnect = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.LblPhone = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.LblEmail = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.LblAge = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.LblCi = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.LblName = New System.Windows.Forms.Label()
+        Me.LblTitle1 = New System.Windows.Forms.Label()
+        Me.Lblbody = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PicHome = New System.Windows.Forms.PictureBox()
         Me.PicSys = New System.Windows.Forms.PictureBox()
-        Me.PicAdmin = New System.Windows.Forms.PictureBox()
         Me.PanelLeft.SuspendLayout()
         Me.PanelButtons.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -48,7 +60,6 @@ Partial Class FrmHome
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PicHome, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PicSys, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PicAdmin, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PanelLeft
@@ -325,14 +336,266 @@ Partial Class FrmHome
         '
         Me.PanelHome.BackColor = System.Drawing.Color.Transparent
         Me.PanelHome.BackgroundImage = CType(resources.GetObject("PanelHome.BackgroundImage"), System.Drawing.Image)
+        Me.PanelHome.Controls.Add(Me.LblConnect)
+        Me.PanelHome.Controls.Add(Me.Label11)
+        Me.PanelHome.Controls.Add(Me.LblPhone)
+        Me.PanelHome.Controls.Add(Me.Label7)
+        Me.PanelHome.Controls.Add(Me.LblEmail)
+        Me.PanelHome.Controls.Add(Me.Label5)
+        Me.PanelHome.Controls.Add(Me.LblAge)
+        Me.PanelHome.Controls.Add(Me.Label3)
+        Me.PanelHome.Controls.Add(Me.LblCi)
+        Me.PanelHome.Controls.Add(Me.Label9)
+        Me.PanelHome.Controls.Add(Me.LblName)
+        Me.PanelHome.Controls.Add(Me.LblTitle1)
+        Me.PanelHome.Controls.Add(Me.Lblbody)
         Me.PanelHome.Controls.Add(Me.PictureBox2)
         Me.PanelHome.Controls.Add(Me.PicHome)
         Me.PanelHome.Controls.Add(Me.PicSys)
-        Me.PanelHome.Controls.Add(Me.PicAdmin)
+        Me.PanelHome.ForeColor = System.Drawing.Color.Transparent
         Me.PanelHome.Location = New System.Drawing.Point(188, 0)
         Me.PanelHome.Name = "PanelHome"
         Me.PanelHome.Size = New System.Drawing.Size(872, 640)
         Me.PanelHome.TabIndex = 5
+        '
+        'LblConnect
+        '
+        Me.LblConnect.AccessibleDescription = "LblTitle3"
+        Me.LblConnect.AccessibleName = "LblTitle3"
+        Me.LblConnect.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.LblConnect.AutoSize = True
+        Me.LblConnect.BackColor = System.Drawing.Color.Transparent
+        Me.LblConnect.Cursor = System.Windows.Forms.Cursors.Default
+        Me.LblConnect.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblConnect.ForeColor = System.Drawing.Color.DarkGray
+        Me.LblConnect.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.LblConnect.Location = New System.Drawing.Point(484, 602)
+        Me.LblConnect.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.LblConnect.Name = "LblConnect"
+        Me.LblConnect.Size = New System.Drawing.Size(51, 13)
+        Me.LblConnect.TabIndex = 33
+        Me.LblConnect.Text = "Conexion"
+        Me.LblConnect.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label11
+        '
+        Me.Label11.AccessibleDescription = "LblTitle3"
+        Me.Label11.AccessibleName = "LblTitle3"
+        Me.Label11.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label11.BackColor = System.Drawing.Color.Transparent
+        Me.Label11.Cursor = System.Windows.Forms.Cursors.Default
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.ForeColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.Label11.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label11.Location = New System.Drawing.Point(482, 585)
+        Me.Label11.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(217, 15)
+        Me.Label11.TabIndex = 32
+        Me.Label11.Text = "Conexión"
+        Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'LblPhone
+        '
+        Me.LblPhone.AccessibleDescription = "LblTitle3"
+        Me.LblPhone.AccessibleName = "LblTitle3"
+        Me.LblPhone.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.LblPhone.AutoSize = True
+        Me.LblPhone.BackColor = System.Drawing.Color.Transparent
+        Me.LblPhone.Cursor = System.Windows.Forms.Cursors.Default
+        Me.LblPhone.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblPhone.ForeColor = System.Drawing.Color.DarkGray
+        Me.LblPhone.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.LblPhone.Location = New System.Drawing.Point(487, 525)
+        Me.LblPhone.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.LblPhone.Name = "LblPhone"
+        Me.LblPhone.Size = New System.Drawing.Size(22, 13)
+        Me.LblPhone.TabIndex = 31
+        Me.LblPhone.Text = "Tel"
+        Me.LblPhone.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label7
+        '
+        Me.Label7.AccessibleDescription = "LblTitle3"
+        Me.Label7.AccessibleName = "LblTitle3"
+        Me.Label7.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label7.BackColor = System.Drawing.Color.Transparent
+        Me.Label7.Cursor = System.Windows.Forms.Cursors.Default
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.Label7.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label7.Location = New System.Drawing.Point(485, 508)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(217, 15)
+        Me.Label7.TabIndex = 30
+        Me.Label7.Text = "Número telefónico"
+        Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'LblEmail
+        '
+        Me.LblEmail.AccessibleDescription = "LblTitle3"
+        Me.LblEmail.AccessibleName = "LblTitle3"
+        Me.LblEmail.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.LblEmail.AutoSize = True
+        Me.LblEmail.BackColor = System.Drawing.Color.Transparent
+        Me.LblEmail.Cursor = System.Windows.Forms.Cursors.Default
+        Me.LblEmail.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblEmail.ForeColor = System.Drawing.Color.DarkGray
+        Me.LblEmail.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.LblEmail.Location = New System.Drawing.Point(486, 473)
+        Me.LblEmail.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.LblEmail.Name = "LblEmail"
+        Me.LblEmail.Size = New System.Drawing.Size(38, 13)
+        Me.LblEmail.TabIndex = 29
+        Me.LblEmail.Text = "Correo"
+        Me.LblEmail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label5
+        '
+        Me.Label5.AccessibleDescription = "LblTitle3"
+        Me.Label5.AccessibleName = "LblTitle3"
+        Me.Label5.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label5.BackColor = System.Drawing.Color.Transparent
+        Me.Label5.Cursor = System.Windows.Forms.Cursors.Default
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.Label5.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label5.Location = New System.Drawing.Point(484, 456)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(217, 15)
+        Me.Label5.TabIndex = 28
+        Me.Label5.Text = "Dirección de correo electrónico"
+        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'LblAge
+        '
+        Me.LblAge.AccessibleDescription = "LblTitle3"
+        Me.LblAge.AccessibleName = "LblTitle3"
+        Me.LblAge.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.LblAge.AutoSize = True
+        Me.LblAge.BackColor = System.Drawing.Color.Transparent
+        Me.LblAge.Cursor = System.Windows.Forms.Cursors.Default
+        Me.LblAge.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblAge.ForeColor = System.Drawing.Color.DarkGray
+        Me.LblAge.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.LblAge.Location = New System.Drawing.Point(485, 429)
+        Me.LblAge.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.LblAge.Name = "LblAge"
+        Me.LblAge.Size = New System.Drawing.Size(32, 13)
+        Me.LblAge.TabIndex = 27
+        Me.LblAge.Text = "Edad"
+        Me.LblAge.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label3
+        '
+        Me.Label3.AccessibleDescription = "LblTitle3"
+        Me.Label3.AccessibleName = "LblTitle3"
+        Me.Label3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Cursor = System.Windows.Forms.Cursors.Default
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.Label3.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label3.Location = New System.Drawing.Point(483, 412)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(166, 15)
+        Me.Label3.TabIndex = 26
+        Me.Label3.Text = "Edad"
+        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'LblCi
+        '
+        Me.LblCi.AccessibleDescription = "LblTitle3"
+        Me.LblCi.AccessibleName = "LblTitle3"
+        Me.LblCi.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.LblCi.AutoSize = True
+        Me.LblCi.BackColor = System.Drawing.Color.Transparent
+        Me.LblCi.Cursor = System.Windows.Forms.Cursors.Default
+        Me.LblCi.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblCi.ForeColor = System.Drawing.Color.DarkGray
+        Me.LblCi.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.LblCi.Location = New System.Drawing.Point(484, 386)
+        Me.LblCi.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.LblCi.Name = "LblCi"
+        Me.LblCi.Size = New System.Drawing.Size(57, 13)
+        Me.LblCi.TabIndex = 25
+        Me.LblCi.Text = "Credencial"
+        Me.LblCi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label9
+        '
+        Me.Label9.AccessibleDescription = "LblTitle3"
+        Me.Label9.AccessibleName = "LblTitle3"
+        Me.Label9.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label9.BackColor = System.Drawing.Color.Transparent
+        Me.Label9.Cursor = System.Windows.Forms.Cursors.Default
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.Label9.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label9.Location = New System.Drawing.Point(482, 369)
+        Me.Label9.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(166, 15)
+        Me.Label9.TabIndex = 24
+        Me.Label9.Text = "Documento o Credencial"
+        Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'LblName
+        '
+        Me.LblName.AccessibleDescription = "LblTitle3"
+        Me.LblName.AccessibleName = "LblTitle3"
+        Me.LblName.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.LblName.AutoSize = True
+        Me.LblName.BackColor = System.Drawing.Color.Transparent
+        Me.LblName.Cursor = System.Windows.Forms.Cursors.Default
+        Me.LblName.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblName.ForeColor = System.Drawing.Color.DarkGray
+        Me.LblName.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.LblName.Location = New System.Drawing.Point(483, 342)
+        Me.LblName.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.LblName.Name = "LblName"
+        Me.LblName.Size = New System.Drawing.Size(91, 13)
+        Me.LblName.TabIndex = 17
+        Me.LblName.Text = "Nombre Completo"
+        Me.LblName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'LblTitle1
+        '
+        Me.LblTitle1.AccessibleDescription = "LblTitle2"
+        Me.LblTitle1.AccessibleName = "LblTitle2"
+        Me.LblTitle1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.LblTitle1.BackColor = System.Drawing.Color.Transparent
+        Me.LblTitle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblTitle1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.LblTitle1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LblTitle1.Location = New System.Drawing.Point(567, 294)
+        Me.LblTitle1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.LblTitle1.Name = "LblTitle1"
+        Me.LblTitle1.Size = New System.Drawing.Size(215, 25)
+        Me.LblTitle1.TabIndex = 16
+        Me.LblTitle1.Text = "ACERCA DEL ADMINISTRADOR"
+        Me.LblTitle1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Lblbody
+        '
+        Me.Lblbody.AccessibleDescription = "LblTitle3"
+        Me.Lblbody.AccessibleName = "LblTitle3"
+        Me.Lblbody.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Lblbody.BackColor = System.Drawing.Color.Transparent
+        Me.Lblbody.Cursor = System.Windows.Forms.Cursors.Default
+        Me.Lblbody.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lblbody.ForeColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.Lblbody.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Lblbody.Location = New System.Drawing.Point(482, 325)
+        Me.Lblbody.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Lblbody.Name = "Lblbody"
+        Me.Lblbody.Size = New System.Drawing.Size(143, 15)
+        Me.Lblbody.TabIndex = 15
+        Me.Lblbody.Text = "Nombre Completo"
+        Me.Lblbody.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'PictureBox2
         '
@@ -363,16 +626,6 @@ Partial Class FrmHome
         Me.PicSys.TabIndex = 2
         Me.PicSys.TabStop = False
         '
-        'PicAdmin
-        '
-        Me.PicAdmin.BackColor = System.Drawing.Color.Transparent
-        Me.PicAdmin.Image = CType(resources.GetObject("PicAdmin.Image"), System.Drawing.Image)
-        Me.PicAdmin.Location = New System.Drawing.Point(440, 250)
-        Me.PicAdmin.Name = "PicAdmin"
-        Me.PicAdmin.Size = New System.Drawing.Size(427, 390)
-        Me.PicAdmin.TabIndex = 3
-        Me.PicAdmin.TabStop = False
-        '
         'FrmHome
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -380,8 +633,8 @@ Partial Class FrmHome
         Me.AutoSize = True
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.ClientSize = New System.Drawing.Size(1060, 640)
-        Me.Controls.Add(Me.PanelHome)
         Me.Controls.Add(Me.PanelLeft)
+        Me.Controls.Add(Me.PanelHome)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmHome"
@@ -392,10 +645,10 @@ Partial Class FrmHome
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PicLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelHome.ResumeLayout(False)
+        Me.PanelHome.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PicHome, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PicSys, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PicAdmin, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -413,7 +666,19 @@ Partial Class FrmHome
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents PanelHome As Panel
     Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents PicAdmin As PictureBox
     Friend WithEvents PicSys As PictureBox
     Friend WithEvents PicHome As PictureBox
+    Public WithEvents Lblbody As Label
+    Public WithEvents LblName As Label
+    Public WithEvents LblTitle1 As Label
+    Public WithEvents LblConnect As Label
+    Public WithEvents Label11 As Label
+    Public WithEvents LblPhone As Label
+    Public WithEvents Label7 As Label
+    Public WithEvents LblEmail As Label
+    Public WithEvents Label5 As Label
+    Public WithEvents LblAge As Label
+    Public WithEvents Label3 As Label
+    Public WithEvents LblCi As Label
+    Public WithEvents Label9 As Label
 End Class

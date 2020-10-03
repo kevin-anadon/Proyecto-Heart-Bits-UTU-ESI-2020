@@ -42,13 +42,9 @@ Partial Class FrmSympt
         Me.PanelLeft = New System.Windows.Forms.Panel()
         Me.PanelBody = New System.Windows.Forms.Panel()
         Me.PicLogo = New System.Windows.Forms.PictureBox()
-        Me.PicTittle = New System.Windows.Forms.PictureBox()
         Me.DgvSympt = New Guna.UI.WinForms.GunaDataGridView()
-        Me.PicListado = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.TxtSympt = New Guna.UI.WinForms.GunaTextBox()
         Me.cmbregion = New Guna.UI.WinForms.GunaComboBox()
-        Me.BtnRefresh = New Guna.UI.WinForms.GunaButton()
         Me.BtnAddSympt = New Guna.UI.WinForms.GunaButton()
         Me.TxtAddSympt = New Guna.UI.WinForms.GunaTextBox()
         Me.ChkReg = New Guna.UI.WinForms.GunaCheckBox()
@@ -56,15 +52,18 @@ Partial Class FrmSympt
         Me.ChkList = New System.Windows.Forms.CheckedListBox()
         Me.GunaLabel1 = New Guna.UI.WinForms.GunaLabel()
         Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
+        Me.BtnMod = New Guna.UI.WinForms.GunaButton()
+        Me.LblListado = New System.Windows.Forms.Label()
+        Me.LblCrit = New System.Windows.Forms.Label()
+        Me.PnlTittle = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.PanelButtons.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelLeft.SuspendLayout()
         CType(Me.PicLogo, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PicTittle, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DgvSympt, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PicListado, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PnlTittle.SuspendLayout()
         Me.SuspendLayout()
         '
         'MzButtonWindows1
@@ -364,8 +363,8 @@ Partial Class FrmSympt
         'PanelLeft
         '
         Me.PanelLeft.BackColor = System.Drawing.Color.White
-        Me.PanelLeft.Controls.Add(Me.PictureBox1)
         Me.PanelLeft.Controls.Add(Me.PanelBody)
+        Me.PanelLeft.Controls.Add(Me.PictureBox1)
         Me.PanelLeft.Controls.Add(Me.PanelButtons)
         Me.PanelLeft.Controls.Add(Me.PicLogo)
         Me.PanelLeft.Location = New System.Drawing.Point(1, 0)
@@ -388,15 +387,6 @@ Partial Class FrmSympt
         Me.PicLogo.Size = New System.Drawing.Size(77, 80)
         Me.PicLogo.TabIndex = 0
         Me.PicLogo.TabStop = False
-        '
-        'PicTittle
-        '
-        Me.PicTittle.Image = CType(resources.GetObject("PicTittle.Image"), System.Drawing.Image)
-        Me.PicTittle.Location = New System.Drawing.Point(198, 42)
-        Me.PicTittle.Name = "PicTittle"
-        Me.PicTittle.Size = New System.Drawing.Size(850, 51)
-        Me.PicTittle.TabIndex = 9
-        Me.PicTittle.TabStop = False
         '
         'DgvSympt
         '
@@ -456,24 +446,6 @@ Partial Class FrmSympt
         Me.DgvSympt.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.DgvSympt.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
         '
-        'PicListado
-        '
-        Me.PicListado.Image = CType(resources.GetObject("PicListado.Image"), System.Drawing.Image)
-        Me.PicListado.Location = New System.Drawing.Point(204, 288)
-        Me.PicListado.Name = "PicListado"
-        Me.PicListado.Size = New System.Drawing.Size(844, 37)
-        Me.PicListado.TabIndex = 12
-        Me.PicListado.TabStop = False
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(205, 108)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(843, 39)
-        Me.PictureBox2.TabIndex = 13
-        Me.PictureBox2.TabStop = False
-        '
         'TxtSympt
         '
         Me.TxtSympt.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
@@ -518,42 +490,13 @@ Partial Class FrmSympt
         Me.cmbregion.TabIndex = 15
         Me.cmbregion.Visible = False
         '
-        'BtnRefresh
-        '
-        Me.BtnRefresh.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnRefresh.Animated = True
-        Me.BtnRefresh.AnimationHoverSpeed = 0.07!
-        Me.BtnRefresh.AnimationSpeed = 0.03!
-        Me.BtnRefresh.BackColor = System.Drawing.Color.Transparent
-        Me.BtnRefresh.BaseColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
-        Me.BtnRefresh.BorderColor = System.Drawing.Color.Black
-        Me.BtnRefresh.DialogResult = System.Windows.Forms.DialogResult.None
-        Me.BtnRefresh.FocusedColor = System.Drawing.Color.Empty
-        Me.BtnRefresh.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnRefresh.ForeColor = System.Drawing.Color.White
-        Me.BtnRefresh.Image = CType(resources.GetObject("BtnRefresh.Image"), System.Drawing.Image)
-        Me.BtnRefresh.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right
-        Me.BtnRefresh.ImageOffsetX = -10
-        Me.BtnRefresh.ImageSize = New System.Drawing.Size(20, 20)
-        Me.BtnRefresh.Location = New System.Drawing.Point(733, 298)
-        Me.BtnRefresh.Name = "BtnRefresh"
-        Me.BtnRefresh.OnHoverBaseColor = System.Drawing.Color.Teal
-        Me.BtnRefresh.OnHoverBorderColor = System.Drawing.Color.Black
-        Me.BtnRefresh.OnHoverForeColor = System.Drawing.Color.White
-        Me.BtnRefresh.OnHoverImage = Nothing
-        Me.BtnRefresh.OnPressedColor = System.Drawing.Color.Black
-        Me.BtnRefresh.Radius = 11
-        Me.BtnRefresh.Size = New System.Drawing.Size(141, 20)
-        Me.BtnRefresh.TabIndex = 22
-        Me.BtnRefresh.Text = "REFRESCAR TABLA"
-        '
         'BtnAddSympt
         '
         Me.BtnAddSympt.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.BtnAddSympt.Animated = True
         Me.BtnAddSympt.AnimationHoverSpeed = 0.07!
         Me.BtnAddSympt.AnimationSpeed = 0.03!
-        Me.BtnAddSympt.BackColor = System.Drawing.Color.Transparent
+        Me.BtnAddSympt.BackColor = System.Drawing.SystemColors.Control
         Me.BtnAddSympt.BaseColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
         Me.BtnAddSympt.BorderColor = System.Drawing.Color.Black
         Me.BtnAddSympt.DialogResult = System.Windows.Forms.DialogResult.None
@@ -617,7 +560,7 @@ Partial Class FrmSympt
         Me.BtnDelSympt.Animated = True
         Me.BtnDelSympt.AnimationHoverSpeed = 0.07!
         Me.BtnDelSympt.AnimationSpeed = 0.03!
-        Me.BtnDelSympt.BackColor = System.Drawing.Color.Transparent
+        Me.BtnDelSympt.BackColor = System.Drawing.SystemColors.Control
         Me.BtnDelSympt.BaseColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
         Me.BtnDelSympt.BorderColor = System.Drawing.Color.Black
         Me.BtnDelSympt.DialogResult = System.Windows.Forms.DialogResult.None
@@ -628,7 +571,7 @@ Partial Class FrmSympt
         Me.BtnDelSympt.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.BtnDelSympt.ImageOffsetX = -10
         Me.BtnDelSympt.ImageSize = New System.Drawing.Size(20, 20)
-        Me.BtnDelSympt.Location = New System.Drawing.Point(569, 298)
+        Me.BtnDelSympt.Location = New System.Drawing.Point(738, 298)
         Me.BtnDelSympt.Name = "BtnDelSympt"
         Me.BtnDelSympt.OnHoverBaseColor = System.Drawing.Color.Teal
         Me.BtnDelSympt.OnHoverBorderColor = System.Drawing.Color.Black
@@ -673,12 +616,96 @@ Partial Class FrmSympt
         Me.Guna2PictureBox1.TabStop = False
         Me.Guna2PictureBox1.UseTransparentBackground = True
         '
+        'BtnMod
+        '
+        Me.BtnMod.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnMod.Animated = True
+        Me.BtnMod.AnimationHoverSpeed = 0.07!
+        Me.BtnMod.AnimationSpeed = 0.03!
+        Me.BtnMod.BackColor = System.Drawing.SystemColors.Control
+        Me.BtnMod.BaseColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.BtnMod.BorderColor = System.Drawing.Color.Black
+        Me.BtnMod.DialogResult = System.Windows.Forms.DialogResult.None
+        Me.BtnMod.FocusedColor = System.Drawing.Color.Empty
+        Me.BtnMod.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnMod.ForeColor = System.Drawing.Color.White
+        Me.BtnMod.Image = CType(resources.GetObject("BtnMod.Image"), System.Drawing.Image)
+        Me.BtnMod.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.BtnMod.ImageOffsetX = -10
+        Me.BtnMod.ImageSize = New System.Drawing.Size(20, 20)
+        Me.BtnMod.Location = New System.Drawing.Point(570, 298)
+        Me.BtnMod.Name = "BtnMod"
+        Me.BtnMod.OnHoverBaseColor = System.Drawing.Color.Teal
+        Me.BtnMod.OnHoverBorderColor = System.Drawing.Color.Black
+        Me.BtnMod.OnHoverForeColor = System.Drawing.Color.White
+        Me.BtnMod.OnHoverImage = Nothing
+        Me.BtnMod.OnPressedColor = System.Drawing.Color.Black
+        Me.BtnMod.Radius = 11
+        Me.BtnMod.Size = New System.Drawing.Size(162, 20)
+        Me.BtnMod.TabIndex = 47
+        Me.BtnMod.Text = "MODIFICAR SÍNTOMA"
+        '
+        'LblListado
+        '
+        Me.LblListado.AccessibleDescription = "LblResults"
+        Me.LblListado.AccessibleName = "LblResults"
+        Me.LblListado.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblListado.ForeColor = System.Drawing.Color.FromArgb(CType(CType(181, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(181, Byte), Integer))
+        Me.LblListado.Location = New System.Drawing.Point(204, 288)
+        Me.LblListado.Name = "LblListado"
+        Me.LblListado.Size = New System.Drawing.Size(844, 37)
+        Me.LblListado.TabIndex = 49
+        Me.LblListado.Text = "LISTADO SÍNTOMAS"
+        Me.LblListado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'LblCrit
+        '
+        Me.LblCrit.AccessibleDescription = "LblResults"
+        Me.LblCrit.AccessibleName = "LblResults"
+        Me.LblCrit.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblCrit.ForeColor = System.Drawing.Color.FromArgb(CType(CType(181, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(181, Byte), Integer))
+        Me.LblCrit.Location = New System.Drawing.Point(205, 108)
+        Me.LblCrit.Name = "LblCrit"
+        Me.LblCrit.Size = New System.Drawing.Size(843, 39)
+        Me.LblCrit.TabIndex = 50
+        Me.LblCrit.Text = "CRITERIOS DE BÚSQUEDA"
+        Me.LblCrit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'PnlTittle
+        '
+        Me.PnlTittle.AccessibleDescription = "PnlColorInfo"
+        Me.PnlTittle.AccessibleName = "PnlColorInfo"
+        Me.PnlTittle.BorderRadius = 11
+        Me.PnlTittle.Controls.Add(Me.Label1)
+        Me.PnlTittle.FillColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.PnlTittle.Location = New System.Drawing.Point(198, 42)
+        Me.PnlTittle.Name = "PnlTittle"
+        Me.PnlTittle.ShadowDecoration.Parent = Me.PnlTittle
+        Me.PnlTittle.Size = New System.Drawing.Size(850, 51)
+        Me.PnlTittle.TabIndex = 51
+        '
+        'Label1
+        '
+        Me.Label1.AccessibleDescription = "LblResults"
+        Me.Label1.AccessibleName = "LblResults"
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Calibri", 30.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(4, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(436, 51)
+        Me.Label1.TabIndex = 52
+        Me.Label1.Text = "GESTIÓN DE SÍNTOMAS"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
         'FrmSympt
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(1060, 640)
+        Me.Controls.Add(Me.PnlTittle)
+        Me.Controls.Add(Me.BtnMod)
         Me.Controls.Add(Me.Guna2PictureBox1)
         Me.Controls.Add(Me.GunaLabel1)
         Me.Controls.Add(Me.ChkList)
@@ -687,13 +714,11 @@ Partial Class FrmSympt
         Me.Controls.Add(Me.ChkReg)
         Me.Controls.Add(Me.TxtAddSympt)
         Me.Controls.Add(Me.BtnAddSympt)
-        Me.Controls.Add(Me.BtnRefresh)
         Me.Controls.Add(Me.cmbregion)
+        Me.Controls.Add(Me.LblListado)
         Me.Controls.Add(Me.TxtSympt)
-        Me.Controls.Add(Me.PictureBox2)
-        Me.Controls.Add(Me.PicListado)
+        Me.Controls.Add(Me.LblCrit)
         Me.Controls.Add(Me.DgvSympt)
-        Me.Controls.Add(Me.PicTittle)
         Me.Controls.Add(Me.PanelLeft)
         Me.Controls.Add(Me.MzButtonWindows3)
         Me.Controls.Add(Me.MzButtonWindows2)
@@ -705,11 +730,9 @@ Partial Class FrmSympt
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelLeft.ResumeLayout(False)
         CType(Me.PicLogo, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PicTittle, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DgvSympt, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PicListado, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.PnlTittle.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -729,14 +752,10 @@ Partial Class FrmSympt
     Friend WithEvents BtnPac As Guna.UI.WinForms.GunaButton
     Friend WithEvents BtnHome As Guna.UI.WinForms.GunaButton
     Friend WithEvents PicLogo As PictureBox
-    Friend WithEvents PicTittle As PictureBox
     Friend WithEvents PanelBody As Panel
     Friend WithEvents DgvSympt As Guna.UI.WinForms.GunaDataGridView
-    Friend WithEvents PicListado As PictureBox
-    Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents cmbregion As Guna.UI.WinForms.GunaComboBox
     Friend WithEvents TxtSympt As Guna.UI.WinForms.GunaTextBox
-    Friend WithEvents BtnRefresh As Guna.UI.WinForms.GunaButton
     Friend WithEvents BtnAddSympt As Guna.UI.WinForms.GunaButton
     Friend WithEvents TxtAddSympt As Guna.UI.WinForms.GunaTextBox
     Friend WithEvents ChkReg As Guna.UI.WinForms.GunaCheckBox
@@ -744,4 +763,9 @@ Partial Class FrmSympt
     Friend WithEvents GunaLabel1 As Guna.UI.WinForms.GunaLabel
     Friend WithEvents ChkList As CheckedListBox
     Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
+    Friend WithEvents BtnMod As Guna.UI.WinForms.GunaButton
+    Friend WithEvents LblListado As Label
+    Friend WithEvents LblCrit As Label
+    Friend WithEvents PnlTittle As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents Label1 As Label
 End Class

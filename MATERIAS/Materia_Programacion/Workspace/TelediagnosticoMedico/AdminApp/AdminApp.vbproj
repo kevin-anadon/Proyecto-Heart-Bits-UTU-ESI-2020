@@ -111,6 +111,12 @@
     <Compile Include="FrmModSympt.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmSplashScreen.Designer.vb">
+      <DependentUpon>FrmSplashScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSplashScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmSympt.Designer.vb">
       <DependentUpon>FrmSympt.vb</DependentUpon>
     </Compile>
@@ -145,12 +151,6 @@
     <Compile Include="FrmLogin.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmSplashScreen.Designer.vb">
-      <DependentUpon>FrmSplashScreen.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FrmSplashScreen.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="FrmPath.Designer.vb">
       <DependentUpon>FrmPath.vb</DependentUpon>
     </Compile>
@@ -171,6 +171,9 @@
     <EmbeddedResource Include="FrmModSympt.resx">
       <DependentUpon>FrmModSympt.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmSplashScreen.resx">
+      <DependentUpon>FrmSplashScreen.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmSympt.resx">
       <DependentUpon>FrmSympt.vb</DependentUpon>
     </EmbeddedResource>
@@ -185,9 +188,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmSplashScreen.resx">
-      <DependentUpon>FrmSplashScreen.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPath.resx">
       <DependentUpon>FrmPath.vb</DependentUpon>

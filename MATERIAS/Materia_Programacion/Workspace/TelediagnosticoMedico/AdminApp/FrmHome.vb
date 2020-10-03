@@ -1,6 +1,15 @@
 ﻿Imports System.Runtime.InteropServices
+Imports Data
 Public Class FrmHome
+    Public Shared AdmName = "", Ci = "", Age = "", Email = "", Phone = "", Connect = ""
+
     Private Sub FrmHome_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        LblName.Text = AdmName
+        LblCi.Text = Ci
+        LblAge.Text = Age
+        LblEmail.Text = Email
+        LblPhone.Text = Phone
+        LblConnect.Text = Connect
     End Sub
 
     Private Sub BtnSympt_Click(sender As Object, e As EventArgs) Handles BtnSympt.Click

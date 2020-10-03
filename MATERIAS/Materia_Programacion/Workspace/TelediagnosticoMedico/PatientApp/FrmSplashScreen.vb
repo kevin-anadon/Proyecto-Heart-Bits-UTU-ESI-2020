@@ -3,17 +3,19 @@
 Public Class FrmSplashScreen
     Private record As Integer
     Private LQuery As New Logic.Logica()
-    Private resultConnection As Boolean = LQuery.TryConnection
+    Private resultConnection As Boolean = False
     Private msgConnection As String = Nothing
 
     'Comportamientos
     Private Sub IdentifyMessage()
-        Select Case resultConnection
-            Case True
-                LblTitle4.Text = "Conexión exitosa. Iniciando el sistema."
-            Case False
-                LblTitle4.Text = "No se pudo conectar. Inicie la aplicación nuevamente"
-        End Select
+        Try
+            LQuery.TryConnection()
+            LblTitle4.Text = "Conexión exitosa. Iniciando el sistema."
+            resultConnection = True
+        Catch ex As Exception
+            Console.WriteLine(ex.Message)
+            LblTitle4.Text = ex.Message
+        End Try
     End Sub
 
     'Eventos
@@ -25,7 +27,7 @@ Public Class FrmSplashScreen
         Timer1.Enabled = True
     End Sub
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        If resultConnection Then
+        If resultConnection = True Then
             If record < 100 Then
                 PrgbarLoadSplashScreen.Value = record
                 record += 1
