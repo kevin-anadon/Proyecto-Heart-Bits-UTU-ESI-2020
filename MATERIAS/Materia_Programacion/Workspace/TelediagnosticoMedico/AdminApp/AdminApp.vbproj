@@ -87,22 +87,16 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FrmAddPath.Designer.vb">
-      <DependentUpon>FrmAddPath.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FrmAddPath.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="FrmAlertRemove.Designer.vb">
       <DependentUpon>FrmAlertRemove.vb</DependentUpon>
     </Compile>
     <Compile Include="FrmAlertRemove.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmModPath.Designer.vb">
-      <DependentUpon>FrmModPath.vb</DependentUpon>
+    <Compile Include="FrmAddModPath.Designer.vb">
+      <DependentUpon>FrmAddModPath.vb</DependentUpon>
     </Compile>
-    <Compile Include="FrmModPath.vb">
+    <Compile Include="FrmAddModPath.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmAddModSympt.Designer.vb">
@@ -159,14 +153,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="FrmAddPath.resx">
-      <DependentUpon>FrmAddPath.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FrmAlertRemove.resx">
       <DependentUpon>FrmAlertRemove.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmModPath.resx">
-      <DependentUpon>FrmModPath.vb</DependentUpon>
+    <EmbeddedResource Include="FrmAddModPath.resx">
+      <DependentUpon>FrmAddModPath.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmAddModSympt.resx">
       <DependentUpon>FrmAddModSympt.vb</DependentUpon>

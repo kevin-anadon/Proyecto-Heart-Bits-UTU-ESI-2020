@@ -69,6 +69,7 @@
     <Compile Include="Department.vb" />
     <Compile Include="Diagnostic.vb" />
     <Compile Include="Employee.vb" />
+    <Compile Include="KindPath.vb" />
     <Compile Include="Medic.vb" />
     <Compile Include="Pathology.vb" />
     <Compile Include="People.vb" />

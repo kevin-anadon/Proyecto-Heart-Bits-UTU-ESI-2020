@@ -31,10 +31,6 @@ Partial Class FrmPath
         Me.BtnMin = New BWCMM.MZButtonWindows()
         Me.BtnDelPat = New Guna.UI.WinForms.GunaButton()
         Me.BtnAddPat = New Guna.UI.WinForms.GunaButton()
-        Me.BtnRefresh = New Guna.UI.WinForms.GunaButton()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.PicListado = New System.Windows.Forms.PictureBox()
-        Me.PicTittle = New System.Windows.Forms.PictureBox()
         Me.PanelLeft = New System.Windows.Forms.Panel()
         Me.PanelBody = New System.Windows.Forms.Panel()
         Me.PanelButtons = New System.Windows.Forms.Panel()
@@ -48,18 +44,21 @@ Partial Class FrmPath
         Me.BtnPac = New Guna.UI.WinForms.GunaButton()
         Me.BtnHome = New Guna.UI.WinForms.GunaButton()
         Me.PicLogo = New System.Windows.Forms.PictureBox()
-        Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.TxtPat = New Guna.UI2.WinForms.Guna2TextBox()
         Me.DgvPat = New Guna.UI.WinForms.GunaDataGridView()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PicListado, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PicTittle, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PnlTittle = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.LblCrit = New System.Windows.Forms.Label()
+        Me.LblListado = New System.Windows.Forms.Label()
+        Me.BtnMod = New Guna.UI.WinForms.GunaButton()
+        Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.PanelLeft.SuspendLayout()
         Me.PanelButtons.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PicLogo, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DgvPat, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PnlTittle.SuspendLayout()
+        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'BtnClose
@@ -124,7 +123,7 @@ Partial Class FrmPath
         Me.BtnDelPat.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.BtnDelPat.ImageOffsetX = -10
         Me.BtnDelPat.ImageSize = New System.Drawing.Size(20, 20)
-        Me.BtnDelPat.Location = New System.Drawing.Point(582, 298)
+        Me.BtnDelPat.Location = New System.Drawing.Point(729, 214)
         Me.BtnDelPat.Name = "BtnDelPat"
         Me.BtnDelPat.OnHoverBaseColor = System.Drawing.Color.Teal
         Me.BtnDelPat.OnHoverBorderColor = System.Drawing.Color.Black
@@ -153,7 +152,7 @@ Partial Class FrmPath
         Me.BtnAddPat.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.BtnAddPat.ImageOffsetX = -10
         Me.BtnAddPat.ImageSize = New System.Drawing.Size(20, 20)
-        Me.BtnAddPat.Location = New System.Drawing.Point(897, 298)
+        Me.BtnAddPat.Location = New System.Drawing.Point(897, 214)
         Me.BtnAddPat.Name = "BtnAddPat"
         Me.BtnAddPat.OnHoverBaseColor = System.Drawing.Color.Teal
         Me.BtnAddPat.OnHoverBorderColor = System.Drawing.Color.Black
@@ -164,62 +163,6 @@ Partial Class FrmPath
         Me.BtnAddPat.Size = New System.Drawing.Size(145, 20)
         Me.BtnAddPat.TabIndex = 39
         Me.BtnAddPat.Text = "NUEVA PATOLOGÍA"
-        '
-        'BtnRefresh
-        '
-        Me.BtnRefresh.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnRefresh.Animated = True
-        Me.BtnRefresh.AnimationHoverSpeed = 0.07!
-        Me.BtnRefresh.AnimationSpeed = 0.03!
-        Me.BtnRefresh.BackColor = System.Drawing.Color.Transparent
-        Me.BtnRefresh.BaseColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
-        Me.BtnRefresh.BorderColor = System.Drawing.Color.Black
-        Me.BtnRefresh.DialogResult = System.Windows.Forms.DialogResult.None
-        Me.BtnRefresh.FocusedColor = System.Drawing.Color.Empty
-        Me.BtnRefresh.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnRefresh.ForeColor = System.Drawing.Color.White
-        Me.BtnRefresh.Image = CType(resources.GetObject("BtnRefresh.Image"), System.Drawing.Image)
-        Me.BtnRefresh.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right
-        Me.BtnRefresh.ImageOffsetX = -10
-        Me.BtnRefresh.ImageSize = New System.Drawing.Size(20, 20)
-        Me.BtnRefresh.Location = New System.Drawing.Point(750, 298)
-        Me.BtnRefresh.Name = "BtnRefresh"
-        Me.BtnRefresh.OnHoverBaseColor = System.Drawing.Color.Teal
-        Me.BtnRefresh.OnHoverBorderColor = System.Drawing.Color.Black
-        Me.BtnRefresh.OnHoverForeColor = System.Drawing.Color.White
-        Me.BtnRefresh.OnHoverImage = Nothing
-        Me.BtnRefresh.OnPressedColor = System.Drawing.Color.Black
-        Me.BtnRefresh.Radius = 11
-        Me.BtnRefresh.Size = New System.Drawing.Size(141, 20)
-        Me.BtnRefresh.TabIndex = 38
-        Me.BtnRefresh.Text = "REFRESCAR TABLA"
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(205, 108)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(843, 39)
-        Me.PictureBox2.TabIndex = 35
-        Me.PictureBox2.TabStop = False
-        '
-        'PicListado
-        '
-        Me.PicListado.Image = CType(resources.GetObject("PicListado.Image"), System.Drawing.Image)
-        Me.PicListado.Location = New System.Drawing.Point(204, 288)
-        Me.PicListado.Name = "PicListado"
-        Me.PicListado.Size = New System.Drawing.Size(844, 37)
-        Me.PicListado.TabIndex = 34
-        Me.PicListado.TabStop = False
-        '
-        'PicTittle
-        '
-        Me.PicTittle.Image = CType(resources.GetObject("PicTittle.Image"), System.Drawing.Image)
-        Me.PicTittle.Location = New System.Drawing.Point(198, 42)
-        Me.PicTittle.Name = "PicTittle"
-        Me.PicTittle.Size = New System.Drawing.Size(850, 51)
-        Me.PicTittle.TabIndex = 31
-        Me.PicTittle.TabStop = False
         '
         'PanelLeft
         '
@@ -498,18 +441,6 @@ Partial Class FrmPath
         Me.PicLogo.TabIndex = 0
         Me.PicLogo.TabStop = False
         '
-        'Guna2PictureBox1
-        '
-        Me.Guna2PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2PictureBox1.Image = CType(resources.GetObject("Guna2PictureBox1.Image"), System.Drawing.Image)
-        Me.Guna2PictureBox1.Location = New System.Drawing.Point(205, 158)
-        Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
-        Me.Guna2PictureBox1.ShadowDecoration.Parent = Me.Guna2PictureBox1
-        Me.Guna2PictureBox1.Size = New System.Drawing.Size(23, 23)
-        Me.Guna2PictureBox1.TabIndex = 45
-        Me.Guna2PictureBox1.TabStop = False
-        Me.Guna2PictureBox1.UseTransparentBackground = True
-        '
         'TxtPat
         '
         Me.TxtPat.BorderColor = System.Drawing.Color.DarkGray
@@ -566,12 +497,12 @@ Partial Class FrmPath
         Me.DgvPat.DefaultCellStyle = DataGridViewCellStyle3
         Me.DgvPat.EnableHeadersVisualStyles = False
         Me.DgvPat.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.DgvPat.Location = New System.Drawing.Point(205, 324)
+        Me.DgvPat.Location = New System.Drawing.Point(211, 238)
         Me.DgvPat.Name = "DgvPat"
         Me.DgvPat.ReadOnly = True
         Me.DgvPat.RowHeadersVisible = False
         Me.DgvPat.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DgvPat.Size = New System.Drawing.Size(843, 297)
+        Me.DgvPat.Size = New System.Drawing.Size(843, 381)
         Me.DgvPat.TabIndex = 33
         Me.DgvPat.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna
         Me.DgvPat.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
@@ -596,21 +527,115 @@ Partial Class FrmPath
         Me.DgvPat.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.DgvPat.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
         '
+        'PnlTittle
+        '
+        Me.PnlTittle.AccessibleDescription = "PnlColorInfo"
+        Me.PnlTittle.AccessibleName = "PnlColorInfo"
+        Me.PnlTittle.BorderRadius = 11
+        Me.PnlTittle.Controls.Add(Me.Label1)
+        Me.PnlTittle.FillColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.PnlTittle.Location = New System.Drawing.Point(204, 42)
+        Me.PnlTittle.Name = "PnlTittle"
+        Me.PnlTittle.ShadowDecoration.Parent = Me.PnlTittle
+        Me.PnlTittle.Size = New System.Drawing.Size(850, 51)
+        Me.PnlTittle.TabIndex = 52
+        '
+        'Label1
+        '
+        Me.Label1.AccessibleDescription = "LblResults"
+        Me.Label1.AccessibleName = "LblResults"
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Calibri", 30.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(4, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(460, 51)
+        Me.Label1.TabIndex = 52
+        Me.Label1.Text = "GESTIÓN DE PATOLOGÍAS"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'LblCrit
+        '
+        Me.LblCrit.AccessibleDescription = "LblResults"
+        Me.LblCrit.AccessibleName = "LblResults"
+        Me.LblCrit.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblCrit.ForeColor = System.Drawing.Color.FromArgb(CType(CType(181, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(181, Byte), Integer))
+        Me.LblCrit.Location = New System.Drawing.Point(206, 108)
+        Me.LblCrit.Name = "LblCrit"
+        Me.LblCrit.Size = New System.Drawing.Size(848, 39)
+        Me.LblCrit.TabIndex = 53
+        Me.LblCrit.Text = "CRITERIOS DE BÚSQUEDA"
+        Me.LblCrit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'LblListado
+        '
+        Me.LblListado.AccessibleDescription = "LblResults"
+        Me.LblListado.AccessibleName = "LblResults"
+        Me.LblListado.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblListado.ForeColor = System.Drawing.Color.FromArgb(CType(CType(181, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(181, Byte), Integer))
+        Me.LblListado.Location = New System.Drawing.Point(211, 204)
+        Me.LblListado.Name = "LblListado"
+        Me.LblListado.Size = New System.Drawing.Size(844, 37)
+        Me.LblListado.TabIndex = 54
+        Me.LblListado.Text = "LISTADO PATOLOGÍAS"
+        Me.LblListado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'BtnMod
+        '
+        Me.BtnMod.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnMod.Animated = True
+        Me.BtnMod.AnimationHoverSpeed = 0.07!
+        Me.BtnMod.AnimationSpeed = 0.03!
+        Me.BtnMod.BackColor = System.Drawing.Color.Transparent
+        Me.BtnMod.BaseColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.BtnMod.BorderColor = System.Drawing.Color.Black
+        Me.BtnMod.DialogResult = System.Windows.Forms.DialogResult.None
+        Me.BtnMod.FocusedColor = System.Drawing.Color.Empty
+        Me.BtnMod.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnMod.ForeColor = System.Drawing.Color.White
+        Me.BtnMod.Image = CType(resources.GetObject("BtnMod.Image"), System.Drawing.Image)
+        Me.BtnMod.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.BtnMod.ImageOffsetX = -10
+        Me.BtnMod.ImageSize = New System.Drawing.Size(20, 20)
+        Me.BtnMod.Location = New System.Drawing.Point(550, 214)
+        Me.BtnMod.Name = "BtnMod"
+        Me.BtnMod.OnHoverBaseColor = System.Drawing.Color.Teal
+        Me.BtnMod.OnHoverBorderColor = System.Drawing.Color.Black
+        Me.BtnMod.OnHoverForeColor = System.Drawing.Color.White
+        Me.BtnMod.OnHoverImage = Nothing
+        Me.BtnMod.OnPressedColor = System.Drawing.Color.Black
+        Me.BtnMod.Radius = 11
+        Me.BtnMod.Size = New System.Drawing.Size(173, 20)
+        Me.BtnMod.TabIndex = 55
+        Me.BtnMod.Text = "MODIFICAR PATOLOGÍA"
+        '
+        'Guna2PictureBox1
+        '
+        Me.Guna2PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2PictureBox1.Image = CType(resources.GetObject("Guna2PictureBox1.Image"), System.Drawing.Image)
+        Me.Guna2PictureBox1.Location = New System.Drawing.Point(205, 158)
+        Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
+        Me.Guna2PictureBox1.ShadowDecoration.Parent = Me.Guna2PictureBox1
+        Me.Guna2PictureBox1.Size = New System.Drawing.Size(23, 23)
+        Me.Guna2PictureBox1.TabIndex = 45
+        Me.Guna2PictureBox1.TabStop = False
+        Me.Guna2PictureBox1.UseTransparentBackground = True
+        '
         'FrmPath
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(1060, 640)
+        Me.Controls.Add(Me.LblCrit)
+        Me.Controls.Add(Me.PnlTittle)
         Me.Controls.Add(Me.TxtPat)
         Me.Controls.Add(Me.Guna2PictureBox1)
+        Me.Controls.Add(Me.BtnMod)
         Me.Controls.Add(Me.BtnDelPat)
         Me.Controls.Add(Me.BtnAddPat)
-        Me.Controls.Add(Me.BtnRefresh)
-        Me.Controls.Add(Me.PictureBox2)
-        Me.Controls.Add(Me.PicListado)
+        Me.Controls.Add(Me.LblListado)
         Me.Controls.Add(Me.DgvPat)
-        Me.Controls.Add(Me.PicTittle)
         Me.Controls.Add(Me.PanelLeft)
         Me.Controls.Add(Me.BtnMin)
         Me.Controls.Add(Me.BtnMax)
@@ -619,15 +644,13 @@ Partial Class FrmPath
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmPath"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PicListado, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PicTittle, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelLeft.ResumeLayout(False)
         Me.PanelButtons.ResumeLayout(False)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PicLogo, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DgvPat, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.PnlTittle.ResumeLayout(False)
+        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -636,10 +659,6 @@ Partial Class FrmPath
     Friend WithEvents BtnMax As BWCMM.MZButtonWindows
     Friend WithEvents BtnDelPat As Guna.UI.WinForms.GunaButton
     Friend WithEvents BtnAddPat As Guna.UI.WinForms.GunaButton
-    Friend WithEvents BtnRefresh As Guna.UI.WinForms.GunaButton
-    Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents PicListado As PictureBox
-    Friend WithEvents PicTittle As PictureBox
     Friend WithEvents PanelLeft As Panel
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents PanelBody As Panel
@@ -653,7 +672,12 @@ Partial Class FrmPath
     Friend WithEvents BtnPac As Guna.UI.WinForms.GunaButton
     Friend WithEvents BtnHome As Guna.UI.WinForms.GunaButton
     Friend WithEvents PicLogo As PictureBox
-    Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents TxtPat As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents DgvPat As Guna.UI.WinForms.GunaDataGridView
+    Friend WithEvents PnlTittle As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents Label1 As Label
+    Friend WithEvents LblCrit As Label
+    Friend WithEvents LblListado As Label
+    Friend WithEvents BtnMod As Guna.UI.WinForms.GunaButton
+    Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
 End Class

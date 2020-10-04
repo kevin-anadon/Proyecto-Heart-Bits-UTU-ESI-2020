@@ -10,6 +10,13 @@ Public Class FrmSympt
     Dim reg As String = Nothing
     Dim Pathologies As New List(Of String)
 
+    Private Sub FrmSympt_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ReloadDgv(0)
+        BtnAddSympt.BackColor = Color.FromArgb(240, 240, 240)
+        BtnMod.BackColor = Color.FromArgb(240, 240, 240)
+        BtnDelSympt.BackColor = Color.FromArgb(240, 240, 240)
+    End Sub
+
     Public Sub ReloadDgv(i As Integer)
         If i = 0 Then
             'Opción para el load
@@ -30,15 +37,6 @@ Public Class FrmSympt
         End If
     End Sub
 
-    <DllImport("Gdi32.dll", EntryPoint:="CreateRoundRectRgn")>
-    Private Shared Function CreateRoundRectRgn(LR As Integer, TR As Integer, RR As Integer, BR As Integer, WE As Integer, HE As Integer) As IntPtr
-
-    End Function
-    Private Sub FrmSympt_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width - 2, Height - 2, 15, 15))
-        ReloadDgv(0)
-    End Sub
-
     Private Sub MzButtonWindows1_Click(sender As Object, e As EventArgs) Handles MzButtonWindows1.Click
         End
     End Sub
@@ -48,7 +46,7 @@ Public Class FrmSympt
     End Sub
 
     Private Sub TxtSympt_TextChanged(sender As Object, e As EventArgs) Handles TxtSympt.TextChanged 'Buscar sintoma
-        If Not TxtSympt.Text.Equals("") Or Not TxtSympt.Text = Nothing Or Not TxtSympt.Text = "Realizar busqueda por síntoma" Then
+        If Not TxtSympt.Text.Equals("") Or Not TxtSympt.Text = Nothing Then
             Try
                 DgvSympt.DataSource = log.SearchSymptoms(TxtSympt.Text).Tables("Search")
                 DgvSympt.Refresh()
@@ -100,19 +98,23 @@ Public Class FrmSympt
         'Modificación de síntoma
 
         row = DgvSympt.CurrentRow
-        SymptSelected = CStr(row.Cells("Síntoma").Value)
-        Try
-            reg = CStr(row.Cells("Región").Value)
-            frmMod.ObtainSympt(SymptSelected, reg)
-            frmMod.ShowDialog()
-            ReloadDgv(4)
-        Catch ex As Exception
-            Console.WriteLine("Sintoma a modificar sin region")
-            reg = "No tiene"
-            frmMod.ObtainSympt(SymptSelected, reg)
-            frmMod.ShowDialog()
-            ReloadDgv(4)
-        End Try
+        If IsDBNull(row.Cells("Síntoma").Value) Then
+
+        Else
+            SymptSelected = CStr(row.Cells("Síntoma").Value)
+            Try
+                reg = CStr(row.Cells("Región").Value)
+                frmMod.ObtainSympt(SymptSelected, reg)
+                frmMod.ShowDialog()
+                ReloadDgv(4)
+            Catch ex As Exception
+                Console.WriteLine("Sintoma a modificar sin region")
+                reg = "No tiene"
+                frmMod.ObtainSympt(SymptSelected, reg)
+                frmMod.ShowDialog()
+                ReloadDgv(4)
+            End Try
+        End If
     End Sub
 
     Private Sub BtnMod_Click(sender As Object, e As EventArgs) Handles BtnMod.Click 'Otra manera de modificar un síntoma

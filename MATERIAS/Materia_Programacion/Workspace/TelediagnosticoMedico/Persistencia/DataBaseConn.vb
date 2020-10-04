@@ -47,6 +47,50 @@ Public Class DataBaseConn
         con.Close()
         Return treatments
     End Function
+    Public Function ObtainTreatmentsAll() As List(Of Treatment)
+        Dim con As Connection = Me.Connect()
+        Dim treatments As New List(Of Treatment)
+
+        Dim rs As Recordset = con.Execute("SELECT p.id As idPath,p.nombre namePath,t.nombre, t.descripcion, t.tipo FROM tratamiento t JOIN patologia p ON(t.id_patologia=p.id) ORDER BY t.nombre;")
+
+        While (Not rs.EOF)
+            Dim idPath As Integer = DirectCast(rs.Fields("idPath").Value, Integer)
+            Dim namePath As String = TryCast(rs.Fields("namePath").Value, String)
+            Dim Path As New Pathology(idPath, namePath)
+
+            Dim name As String = TryCast(rs.Fields("nombre").Value, String)
+            Dim desc As String = TryCast(rs.Fields("descripcion").Value, String)
+            Dim kind As String = TryCast(rs.Fields("tipo").Value, String)
+            treatments.Add(New Treatment(Path, name, desc, kind))
+            rs.MoveNext()
+        End While
+        con.Close()
+        Return treatments
+    End Function
+    Public Function ObtainTreatmentsForMod(idPath As Integer) As List(Of Treatment)
+        Dim con As Connection = Me.Connect()
+        Dim treatments As New List(Of Treatment)
+
+        Try
+            Dim rs As Recordset = con.Execute("SELECT t.nombre, t.descripcion, t.tipo FROM tratamiento t JOIN patologia p ON(t.id_patologia=p.id) WHERE p.id=" & idPath & " ORDER BY t.nombre;")
+
+            While (Not rs.EOF)
+                Dim name As String = TryCast(rs.Fields("nombre").Value, String)
+                Dim desc As String = TryCast(rs.Fields("descripcion").Value, String)
+                Dim kind As String = TryCast(rs.Fields("tipo").Value, String)
+
+                treatments.Add(New Treatment(name, desc, kind))
+                rs.MoveNext()
+            End While
+            Return treatments
+        Catch ex As Exception
+            Console.WriteLine(ex.ToString())
+            Throw New Exception("Error al obtener los tratamientos para modificar")
+        Finally
+            con.Close()
+        End Try
+
+    End Function
     Public Function ObtainMortalityPath(pat As String) As Integer
         Dim con As Connection = Me.Connect()
 
@@ -86,6 +130,28 @@ Public Class DataBaseConn
         con.Close()
         Return priorities
     End Function
+    Public Function ObtainKindPath() As List(Of KindPath)
+        Dim con As Connection = Me.Connect()
+        Dim kindPath As New List(Of KindPath)
+
+        Try
+            Dim rs As Recordset = con.Execute("SELECT id,nombre FROM tipo_patologia ORDER BY nombre;")
+
+            While (Not rs.EOF)
+                Dim id As Integer = DirectCast(rs.Fields("id").Value, Integer)
+                Dim name As String = TryCast(rs.Fields("nombre").Value, String)
+                kindPath.Add(New KindPath(id, name))
+                rs.MoveNext()
+            End While
+            Return kindPath
+        Catch ex As Exception
+            Console.WriteLine(ex.ToString())
+            Throw New Exception("Error al obtener los tipos de patologia")
+        Finally
+            con.Close()
+        End Try
+        Return Nothing
+    End Function
     Public Function ObtainSymptomsDataSet() As DataSet
         Dim con As Connection = Me.Connect()
         Dim ds = New DataSet
@@ -97,12 +163,30 @@ Public Class DataBaseConn
         Catch ex As Exception
             Console.WriteLine(ex.ToString())
             Throw New Exception("Error al obtener la tabla de síntomas")
+            Return Nothing
         Finally
             con.Close()
         End Try
 
-        Return Nothing
     End Function
+    Public Function ObtainPathsDataSet() As DataSet
+        Dim con As Connection = Me.Connect()
+        Dim ds = New DataSet
+        Dim da As New System.Data.OleDb.OleDbDataAdapter
+        Try
+            Dim rsSelectPathsTable As Recordset = con.Execute("Select p.nombre As Patología,p.descripcion As Descripción,pr.nombre As Prioridad FROM patologia p JOIN prioridad pr On(p.id_prioridad=pr.id) ORDER BY p.nombre, pr.id;")
+            da.Fill(ds, rsSelectPathsTable, "Refresh")
+            Return ds
+        Catch ex As Exception
+            Console.WriteLine(ex.ToString())
+            Throw New Exception("Error al obtener la tabla de patologías")
+            Return Nothing
+        Finally
+            con.Close()
+        End Try
+
+    End Function
+
     Public Function ObtainTable(nameTable As String) As Recordset
         Dim con As Connection = Me.Connect()
         If nameTable = "sintoma" Then
@@ -123,50 +207,113 @@ Public Class DataBaseConn
 
 
     'Query Patologias
-    Public Sub InsertPath(name As String, desc As String, indiceM As Integer, Prior As Integer, treatments As List(Of Treatment))
+    Public Sub AddPathology(Path As Pathology, Treatments As List(Of Treatment))
         Dim con As Connection = Me.Connect()
-        Dim treatname As String = Nothing
-        Dim treatdesc As String = Nothing
-        Dim treatkind As String = Nothing
+        Try
+            Dim rsInsertPath As Recordset = con.Execute("INSERT INTO patologia(id_prioridad,nombre,descripcion,indiceMortalidad,id_tipo) VALUES(" & Path.priority.id & ",'" & Path.name & "','" & Path.description & "'," & Path.mortalityIndex & "," & Path.kind.id & ");")
+            Dim rsSelectIdPath As Recordset = con.Execute("SELECT id FROM patologia WHERE nombre='" & Path.name & "';")
+            Dim idPath As Integer = DirectCast(rsSelectIdPath.Fields("id").Value, Integer)
 
-        Dim rsIinsert As Recordset = con.Execute("INSERT INTO patologia(id_prioridad,nombre,descripcion,indiceMortalidad) VALUES(" & Prior & "," + "'" & name & "','" & desc & "'," & indiceM & ");")
-        'Inserta en la tabla patología
-        Dim rsSelectIdPat As Recordset = con.Execute("SELECT id FROM patologia WHERE nombre='" + name + "';")
-        Dim idpat As Integer = DirectCast(rsSelectIdPat.Fields("id").Value, Integer)
+            For Each treat As Treatment In Treatments
+                Dim rsIinsertTreat As Recordset = con.Execute("INSERT INTO tratamiento(id_patologia, nombre, descripcion, tipo) VALUES(" & idPath & ",'" & treat.name & "','" & treat.description & "','" & treat.kind & "');")
+            Next
+        Catch ex As Exception
+            Console.WriteLine(ex.ToString())
+            Throw New Exception("Error al agregar la patología")
+        Finally
+            con.Close()
+        End Try
 
-        For Each i As Treatment In treatments
-            treatname = i.name
-            treatdesc = i.description
-            treatkind = i.kind
-            Dim rsInsertTr As Recordset = con.Execute("INSERT INTO tratamiento(id_patologia, nombre, descripcion, tipo) VALUES(" & idpat & "," + "'" & treatname & "'" + "," + "'" & treatdesc & "'" + "," + "'" & treatkind & "');")
-        Next
-        con.Close()
     End Sub
-    Public Sub UpdatePath(patname As String, patdesc As String, patmortality As Integer, idprior As Integer, treatments As List(Of Treatment), patnamebefore As String)
+    Public Sub UpdatePathology(Path As Pathology, Treatments As List(Of Treatment))
         Dim con As Connection = Me.Connect()
+        Try
+            Dim rsUpdatePath As Recordset = con.Execute("UPDATE patologia SET id_prioridad=" & Path.priority.id & ", nombre='" & Path.name & "', descripcion='" & Path.description & "', indiceMortalidad=" & Path.mortalityIndex & ",id_tipo=" & Path.kind.id & " WHERE id=" & Path.id & ";")
+            Dim rsDelTreat As Recordset = con.Execute("DELETE From tratamiento Where id_patologia =" & Path.id & ";")
+            For Each treat As Treatment In Treatments
+                Dim rsIinsertTreat As Recordset = con.Execute("INSERT INTO tratamiento(id_patologia, nombre, descripcion, tipo) VALUES(" & Path.id & ",'" & treat.name & "','" & treat.description & "','" & treat.kind & "');")
+            Next
+        Catch ex As Exception
+            Console.WriteLine(ex.ToString())
+            Throw New Exception("Error al modificar la patología")
+        Finally
+            con.Close()
+        End Try
 
-        Dim rsSelectIdPat As Recordset = con.Execute("SELECT id FROM patologia WHERE nombre='" + patnamebefore + "';")
-        Dim idpat As Integer = DirectCast(rsSelectIdPat.Fields("id").Value, Integer)
-        Dim rsInsert As Recordset = con.Execute("UPDATE patologia SET id_prioridad=" & idprior & ", nombre='" & patname & "', descripcion='" & patdesc & "', indiceMortalidad='" & patmortality & "' WHERE id=" & idpat & ";")
-        Dim rsDelTreat As Recordset = con.Execute("DELETE From tratamiento Where id_patologia =" & idpat & ";")
-
-
-        For Each treat As Treatment In treatments
-            Dim rsIinsertTreat As Recordset = con.Execute("INSERT INTO tratamiento(id_patologia, nombre, descripcion, tipo) VALUES(" & idpat & ",'" & treat.name & "','" & treat.description & "','" & treat.kind & "');")
-        Next
-        con.Close()
     End Sub
-    Public Sub DelPath(pat As String)
+    Public Sub DeletePathology(idPath As Integer)
         Dim con As Connection = Me.Connect()
+        Dim idDiag As Integer = 0
+        Try
+            Dim rsDelTreatment As Recordset = con.Execute("DELETE FROM tratamiento WHERE id_patologia=" & idPath & ";") 'Borro los tratamientos asociados
+            Dim rsDelSintomaCompone As Recordset = con.Execute("DELETE FROM sintoma_compone WHERE id_patologia=" & idPath & ";") 'Borro la asociación con los sintomas
 
-        Dim rsSelectIdPat As Recordset = con.Execute("SELECT id FROM patologia WHERE nombre='" + pat + "';")
-        Dim idpat As Integer = DirectCast(rsSelectIdPat.Fields("id").Value, Integer)
+            Dim rsSelectIdDiag As Recordset = con.Execute("SELECT id FROM diagnostico WHERE id_patologia=" & idPath & ";")
+            While (Not rsSelectIdDiag.EOF)
+                idDiag = DirectCast(rsSelectIdDiag.Fields("id").Value, Integer)
+                Dim rsDelVerifica As Recordset = con.Execute("DELETE FROM verifica WHERE id_tentativo=" & idDiag & ";") 'Borro la asociacion de médicos con diagnósticos
+                rsSelectIdDiag.MoveNext()
+            End While
 
-        Dim rsDelTratamiento As Recordset = con.Execute("DELETE FROM tratamiento WHERE id_patologia=" & idpat)
-        Dim rsDelPat As Recordset = con.Execute("DELETE FROM patologia WHERE id=" & idpat)
-        Console.WriteLine(pat + " Eliminado con exito, con sus tratamientos!!")
-        con.Close()
+            If rsSelectIdDiag.EOF Then 'En el caso de que todavia no exista ningun diagnostico que contenga esa Patología
+                Dim rsDelPath As Recordset = con.Execute("DELETE FROM patologia WHERE id=" & idPath & ";")
+            Else
+                Dim rsDelDiag As Recordset = con.Execute("DELETE FROM diagnostico WHERE id_patologia=" & idPath & ";")
+                Dim rsDelPath As Recordset = con.Execute("DELETE FROM patologia WHERE id=" & idPath & ";")
+            End If
+
+        Catch ex As Exception
+            Throw New Exception("Error al eliminar Patología")
+        Finally
+            con.Close()
+        End Try
+
     End Sub
+    Public Function SearchPathology(NamePath As String) As DataSet
+        Dim con As Connection = Me.Connect()
+        Dim ds = New DataSet
+        Dim da As New System.Data.OleDb.OleDbDataAdapter
+        Try
+            Dim rsSelectPathsTable As Recordset = con.Execute("Select p.nombre As Patología,p.descripcion As Descripción,pr.nombre As Prioridad FROM patologia p JOIN prioridad pr On(p.id_prioridad=pr.id) WHERE p.nombre Like '" & NamePath & "%' ORDER BY p.nombre,pr.id")
+            da.Fill(ds, rsSelectPathsTable, "Search")
+            Return ds
+        Catch ex As Exception
+            Console.WriteLine(ex.ToString())
+            Throw New Exception("Error al obtener la tabla de patologías")
+            Return Nothing
+        Finally
+            con.Close()
+        End Try
+
+    End Function
+    Public Function ObtainPathForMod(NamePath As String) As Pathology
+        Dim con As Connection = Me.Connect()
+        Dim Path As Pathology = Nothing
+
+        Try
+            Dim rsSelectPaths As Recordset = con.Execute("Select p.id As idPath,p.nombre As nomPath,p.descripcion,p.indiceMortalidad,pr.id As idPrior,pr.nombre As nomPrior,t.id As idTipo,t.nombre As nomTipo FROM patologia p JOIN prioridad pr On(p.id_prioridad=pr.id) JOIN tipo_patologia t ON(p.id_tipo=t.id) WHERE p.nombre='" & NamePath & "';")
+            Dim idPath As Integer = DirectCast(rsSelectPaths.Fields("idPath").Value, Integer)
+            Dim name As String = TryCast(rsSelectPaths.Fields("nomPath").Value, String)
+            Dim desc As String = TryCast(rsSelectPaths.Fields("descripcion").Value, String)
+            Dim indexM As Integer = DirectCast(rsSelectPaths.Fields("indiceMortalidad").Value, Integer)
+            Dim idPrior As Integer = DirectCast(rsSelectPaths.Fields("idPrior").Value, Integer)
+            Dim namePrior As String = TryCast(rsSelectPaths.Fields("nomPrior").Value, String)
+            Dim idKind As Integer = DirectCast(rsSelectPaths.Fields("idTipo").Value, Integer)
+            Dim nameKind As String = TryCast(rsSelectPaths.Fields("nomTipo").Value, String)
+
+            Dim Prior As New Priority(idPrior, namePrior)
+            Dim Kind As New KindPath(idKind, nameKind)
+            Path = New Pathology(idPath, Prior, name, desc, indexM, Kind)
+            Return Path
+        Catch ex As Exception
+            Console.WriteLine(ex.ToString())
+            Throw New Exception("Error al obtener la tabla de patologías")
+            Return Nothing
+        Finally
+            con.Close()
+        End Try
+
+    End Function
     Public Function ObtainPathForSymptoms(sympt As String) As List(Of Pathology)
         Dim Pathologies As New List(Of Pathology)
         Dim con As Connection = Me.Connect()
@@ -191,28 +338,26 @@ Public Class DataBaseConn
         Dim Pathologies As New List(Of Pathology)
         Dim con As Connection = Me.Connect()
 
-        Dim rs As Recordset = con.Execute("SELECT id, nombre, descripcion, id_prioridad, indiceMortalidad FROM patologia ORDER BY nombre;")
+        Dim rs As Recordset = con.Execute("SELECT p.id, p.nombre, p.descripcion, prior.id As idPrior,prior.nombre As nomPrior,p.indiceMortalidad, t.id As idTipo, t.nombre As nomTipo FROM patologia p JOIN tipo_patologia t ON(p.id_tipo=t.id) JOIN prioridad prior ON(p.id_prioridad=prior.id) ORDER BY nombre;")
 
         While (Not rs.EOF)
             Dim id As Integer = DirectCast(rs.Fields("id").Value, Integer)
-            Dim priority As Priority = TryCast(rs.Fields("id_prioridad").Value, Priority)
+            Dim idPrior As Integer = DirectCast(rs.Fields("idPrior").Value, Integer)
+            Dim namePrior As String = TryCast(rs.Fields("nomPrior").Value, String)
+            Dim priority As New Priority(idPrior, namePrior)
             Dim name As String = TryCast(rs.Fields("nombre").Value, String)
             Dim description As String = TryCast(rs.Fields("descripcion").Value, String)
             Dim mortalityIndex As Integer = DirectCast(rs.Fields("indiceMortalidad").Value, Integer)
+            Dim idKindPath As Integer = DirectCast(rs.Fields("idTipo").Value, Integer)
+            Dim nameKindPath As String = TryCast(rs.Fields("nomTipo").Value, String)
+            Dim kind As New KindPath(idKindPath, nameKindPath)
 
-            Pathologies.Add(New Pathology(id, priority, name, description, mortalityIndex))
+            Pathologies.Add(New Pathology(id, priority, name, description, mortalityIndex, kind))
             rs.MoveNext()
         End While
         con.Close()
         Return Pathologies
     End Function
-    Public Function SearchPath(namePat As String) As Recordset
-        Dim con As Connection = Me.Connect()
-
-        Return con.Execute("Select p.nombre As Patología,p.descripcion As Descripción,pr.nombre As Prioridad FROM patologia p JOIN prioridad pr On(p.id_prioridad=pr.id) WHERE p.nombre Like '" & namePat & "%' ORDER BY p.nombre,pr.id")
-    End Function
-
-
 
     'Query Sintomas
     Public Sub AddSymptoms(Sympt As Symptom, Paths As List(Of Pathology))

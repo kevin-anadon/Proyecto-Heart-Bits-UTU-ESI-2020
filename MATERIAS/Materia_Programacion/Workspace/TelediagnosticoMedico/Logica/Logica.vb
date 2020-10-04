@@ -23,11 +23,30 @@ Public Class Logica
     Public Function ObtainPriorities() As List(Of Priority)
         Return CQConnection.ObtainPriorities()
     End Function
+    Public Function ObtainKindPath() As List(Of KindPath)
+        Try
+            Return CQConnection.ObtainKindPath()
+        Catch ex As Exception
+            Throw New Exception(ex.Message)
+        End Try
+        Return Nothing
+    End Function
     Public Function ObtainMortalityPath(pat As String) As Integer
         Return CQConnection.ObtainMortalityPath(pat)
     End Function
     Public Function ObtainTreatments(pat As String) As List(Of Treatment)
         Return CQConnection.ObtainTreatments(pat)
+    End Function
+    Public Function ObtainTreatmentsAll() As List(Of Treatment)
+        Return CQConnection.ObtainTreatmentsAll()
+    End Function
+    Public Function ObtainTreatmentsForMod(idPath As Integer) As List(Of Treatment)
+        Try
+            Return CQConnection.ObtainTreatmentsForMod(idPath)
+        Catch ex As Exception
+            Throw New Exception(ex.Message)
+        End Try
+        Return Nothing
     End Function
 
 
@@ -39,7 +58,80 @@ Public Class Logica
     Public Function ObtainPathForSymptoms(Sympt As String) As List(Of Pathology)
         Return CQConnection.ObtainPathForSymptoms(Sympt)
     End Function
+    Public Function ObtainPathsDataSet() As DataSet
+        Try
+            Return CQConnection.ObtainPathsDataSet()
+        Catch ex As Exception
+            Console.WriteLine(ex.ToString())
+        End Try
+        Return Nothing
+    End Function
+    Public Function ObtainPathForMod(NamePath As String) As Pathology
+        Try
+            Return CQConnection.ObtainPathForMod(NamePath)
+        Catch ex As Exception
+            Console.WriteLine(ex.ToString())
+        End Try
+        Return Nothing
+    End Function
+    Public Sub AddPathology(Path As Pathology, Treatments As List(Of Treatment))
+        Try
+            CQConnection.AddPathology(Path, Treatments)
+        Catch ex As Exception
+            Throw New Exception(ex.Message)
+        End Try
+    End Sub
+    Public Sub DeletePathology(idPath As Integer)
+        Try
+            CQConnection.DeletePathology(idPath)
+        Catch ex As Exception
+            Throw New Exception(ex.Message)
+        End Try
+    End Sub
+    Public Function SearchPathology(NamePath As String) As DataSet
+        Try
+            Return CQConnection.SearchPathology(NamePath)
+        Catch ex As Exception
+            Console.WriteLine(ex.ToString())
+        End Try
+        Return Nothing
+    End Function
+    Public Function CheckUpdatePathology(Path As Pathology, Treatments As List(Of Treatment)) As Integer
+        Dim checkPat As Boolean = False
+        Dim checkTreat As Boolean = False
+        Dim check As Integer = 0
 
+        For Each pat As Pathology In ObtainPath()
+            If pat.name.Equals(Path.name) And Not pat.id = Path.id Then 'Comprueba si el nuevo nombre ya existe
+                checkPat = True
+            End If
+        Next
+        For Each treats As Treatment In ObtainTreatmentsAll()
+            For Each treatmentsmod As Treatment In Treatments
+                If treats.name.Equals(treatmentsmod.name) And Not treats.pathology.id = treatmentsmod.pathology.id Then 'Comprueba si el nuevo nombre ya existe en los tratamientos
+                    checkTreat = True
+                End If
+            Next
+        Next
+
+
+        If checkPat = True And checkTreat = True Then
+            check = 4
+        ElseIf checkPat = True And checkTreat = False Then
+            check = 1
+        ElseIf checkPat = False And checkTreat = True Then
+            check = 3
+        End If
+
+        Return check
+    End Function
+    Public Sub UpdatePathology(Path As Pathology, Treatments As List(Of Treatment))
+        Try
+            CQConnection.UpdatePathology(Path, Treatments)
+        Catch ex As Exception
+            Throw New Exception(ex.Message)
+        End Try
+    End Sub
 
 
     'Conexión Síntomas
@@ -47,10 +139,8 @@ Public Class Logica
         Return CQConnection.ObtainSymptoms
     End Function
     Public Function ObtainSymptomsDataSet() As DataSet
-        Dim ds As DataSet = New DataSet
         Try
-            ds = CQConnection.ObtainSymptomsDataSet()
-            Return ds
+            Return CQConnection.ObtainSymptomsDataSet()
         Catch ex As Exception
             Console.WriteLine(ex.ToString())
         End Try
@@ -78,10 +168,8 @@ Public Class Logica
         End Try
     End Sub
     Public Function SearchSymptoms(Descr As String) As DataSet
-        Dim ds As DataSet = New DataSet
         Try
-            ds = CQConnection.SearchSymptoms(Descr)
-            Return ds
+            Return CQConnection.SearchSymptoms(Descr)
         Catch ex As Exception
             Throw New Exception(ex.Message)
         End Try

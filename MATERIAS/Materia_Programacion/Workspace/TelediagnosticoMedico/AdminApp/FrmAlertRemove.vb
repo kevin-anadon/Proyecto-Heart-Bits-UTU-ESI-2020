@@ -44,7 +44,6 @@ Public Class FrmAlertRemove
             log.DeleteSymptoms(idSympt)
             MessageBox.Show(Name & " eliminado con exito")
             Me.Close()
-            Dim frm As New FrmSympt()
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
@@ -52,10 +51,9 @@ Public Class FrmAlertRemove
 
     Public Sub DeletePath()
         Try
-
+            log.DeletePathology(idPath)
+            MessageBox.Show(Name & " eliminado con exito")
             Me.Close()
-            Dim frm As New FrmPath()
-            frm.DeletePath(Name)
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
