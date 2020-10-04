@@ -87,40 +87,46 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FrmAlertRemove.Designer.vb">
+    <Compile Include="FrmPeople\FrmAdmin.Designer.vb">
+      <DependentUpon>FrmAdmin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPeople\FrmAdmin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmShared\FrmAlertRemove.Designer.vb">
       <DependentUpon>FrmAlertRemove.vb</DependentUpon>
     </Compile>
-    <Compile Include="FrmAlertRemove.vb">
+    <Compile Include="FrmShared\FrmAlertRemove.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmAddModPath.Designer.vb">
+    <Compile Include="FrmPathologys\FrmAddModPath.Designer.vb">
       <DependentUpon>FrmAddModPath.vb</DependentUpon>
     </Compile>
-    <Compile Include="FrmAddModPath.vb">
+    <Compile Include="FrmPathologys\FrmAddModPath.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmAddModSympt.Designer.vb">
+    <Compile Include="FrmSymptoms\FrmAddModSympt.Designer.vb">
       <DependentUpon>FrmAddModSympt.vb</DependentUpon>
     </Compile>
-    <Compile Include="FrmAddModSympt.vb">
+    <Compile Include="FrmSymptoms\FrmAddModSympt.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmSplashScreen.Designer.vb">
+    <Compile Include="FrmBeginning\FrmSplashScreen.Designer.vb">
       <DependentUpon>FrmSplashScreen.vb</DependentUpon>
     </Compile>
-    <Compile Include="FrmSplashScreen.vb">
+    <Compile Include="FrmBeginning\FrmSplashScreen.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmSympt.Designer.vb">
+    <Compile Include="FrmSymptoms\FrmSympt.Designer.vb">
       <DependentUpon>FrmSympt.vb</DependentUpon>
     </Compile>
-    <Compile Include="FrmSympt.vb">
+    <Compile Include="FrmSymptoms\FrmSympt.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmHome.Designer.vb">
+    <Compile Include="FrmBeginning\FrmHome.Designer.vb">
       <DependentUpon>FrmHome.vb</DependentUpon>
     </Compile>
-    <Compile Include="FrmHome.vb">
+    <Compile Include="FrmBeginning\FrmHome.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -139,36 +145,39 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="FrmLogin.Designer.vb">
+    <Compile Include="FrmBeginning\FrmLogin.Designer.vb">
       <DependentUpon>FrmLogin.vb</DependentUpon>
     </Compile>
-    <Compile Include="FrmLogin.vb">
+    <Compile Include="FrmBeginning\FrmLogin.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmPath.Designer.vb">
+    <Compile Include="FrmPathologys\FrmPath.Designer.vb">
       <DependentUpon>FrmPath.vb</DependentUpon>
     </Compile>
-    <Compile Include="FrmPath.vb">
+    <Compile Include="FrmPathologys\FrmPath.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="FrmAlertRemove.resx">
+    <EmbeddedResource Include="FrmPeople\FrmAdmin.resx">
+      <DependentUpon>FrmAdmin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmShared\FrmAlertRemove.resx">
       <DependentUpon>FrmAlertRemove.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmAddModPath.resx">
+    <EmbeddedResource Include="FrmPathologys\FrmAddModPath.resx">
       <DependentUpon>FrmAddModPath.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmAddModSympt.resx">
+    <EmbeddedResource Include="FrmSymptoms\FrmAddModSympt.resx">
       <DependentUpon>FrmAddModSympt.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmSplashScreen.resx">
+    <EmbeddedResource Include="FrmBeginning\FrmSplashScreen.resx">
       <DependentUpon>FrmSplashScreen.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmSympt.resx">
+    <EmbeddedResource Include="FrmSymptoms\FrmSympt.resx">
       <DependentUpon>FrmSympt.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmHome.resx">
+    <EmbeddedResource Include="FrmBeginning\FrmHome.resx">
       <DependentUpon>FrmHome.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -177,10 +186,10 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmLogin.resx">
+    <EmbeddedResource Include="FrmBeginning\FrmLogin.resx">
       <DependentUpon>FrmLogin.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmPath.resx">
+    <EmbeddedResource Include="FrmPathologys\FrmPath.resx">
       <DependentUpon>FrmPath.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
@@ -226,5 +235,6 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

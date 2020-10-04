@@ -552,6 +552,31 @@ Public Class DataBaseConn
 
         Return Nothing
     End Function
+    Public Function ObtainAdmins() As DataSet
+        Dim con As Connection = Me.Connect()
+        Dim ds = New DataSet
+        Dim da As New System.Data.OleDb.OleDbDataAdapter
+
+        Try
+            Dim rsSelectAdmin As Recordset = con.Execute(
+            "SELECT ci As Ci,concat_ws(' ',primerNom, segundoNom, primerApe, segundoApe) As Nombre,
+            YEAR(CURDATE())-YEAR(va.fechaNacimiento) + IF(DATE_FORMAT(CURDATE(),'%m-%d') > 
+            DATE_FORMAT(va.fechaNacimiento,'%m-%d'), 0 , -1 ) AS Edad,
+            group_concat(c.celular) As Celular, email As Email
+            FROM vista_admin va JOIN cel_empleado c ON(va.id=c.id_empleado)
+            GROUP BY va.id;")
+
+            da.Fill(ds, rsSelectAdmin, "Refresh")
+            Return ds
+        Catch ex As Exception
+            Console.WriteLine(ex.ToString())
+            Throw New Exception("Error al cargar la tabla de administradores")
+        Finally
+            con.Close()
+        End Try
+
+        Return Nothing
+    End Function
     Public Function CheckPin(pin As String) As Boolean
         Dim con As Connection = Me.Connect()
         Dim checked As Boolean = False

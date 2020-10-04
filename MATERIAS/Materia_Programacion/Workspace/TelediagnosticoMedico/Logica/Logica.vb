@@ -193,6 +193,9 @@ Public Class Logica
     Public Function LoginAdmin(user As String, pass As String) As Admin
         Return CQConnection.LoginAdmin(user, pass)
     End Function
+    Public Function ObtainAdmins() As DataSet
+        Return CQConnection.ObtainAdmins()
+    End Function
 
 
 
