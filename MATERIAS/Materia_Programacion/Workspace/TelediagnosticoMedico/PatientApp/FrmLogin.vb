@@ -3,7 +3,7 @@ Imports Logic
 
 Public Class FrmLogin
     'Atributos
-    Private ReadOnly L1 As New Logica()
+    Private ReadOnly L1 As New Logic.Logic()
     Private indicatorToolBtn As Short = -1 'Me define que Mensaje debo de utilizar en el ToolTip.
     Public ciPatientLoggedOn As String = Nothing
 

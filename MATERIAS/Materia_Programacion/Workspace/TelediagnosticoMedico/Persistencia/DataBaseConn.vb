@@ -186,10 +186,9 @@ Public Class DataBaseConn
         End Try
 
     End Function
-
     Public Function ObtainTable(nameTable As String) As Recordset
         Dim con As Connection = Me.Connect()
-        If nameTable = "sintoma" Then
+        If nameTable = "sintoma" Then 'Sentencia "Slect Case" mas favorable para estos casos...
             Return con.Execute("Select s.descripcion As Síntoma, r.nombre As Región FROM sintoma s LEFT JOIN region r On(s.id_region=r.id) ORDER BY s.descripcion, r.nombre;")
 
         ElseIf nameTable = "region" Then
@@ -359,6 +358,8 @@ Public Class DataBaseConn
         Return Pathologies
     End Function
 
+
+
     'Query Sintomas
     Public Sub AddSymptoms(Sympt As Symptom, Paths As List(Of Pathology))
         Dim con As Connection = Me.Connect()
@@ -382,7 +383,6 @@ Public Class DataBaseConn
         End Try
 
     End Sub
-
     Public Sub UpdateSymptoms(Sympt As Symptom, Paths As List(Of Pathology))
         Dim con As Connection = Me.Connect()
 
@@ -438,20 +438,31 @@ Public Class DataBaseConn
     Public Function ObtainSymptoms() As List(Of Symptom)
         Dim con As Connection = Me.Connect()
         Dim Symptoms As New List(Of Symptom)
-        Dim rsSelectSymptoms As Recordset = con.Execute("SELECT id, descripcion FROM sintoma;")
 
-        While (Not rsSelectSymptoms.EOF)
-            Dim idSymptom As Integer = DirectCast(rsSelectSymptoms.Fields("id").Value, Integer)
-            Dim descSymptom As String = TryCast(rsSelectSymptoms.Fields("descripcion").Value, String)
-            Dim S1 As New Symptom
-            S1.Id = idSymptom
-            S1.Description = descSymptom
-            Symptoms.Add(S1)
-            rsSelectSymptoms.MoveNext()
-        End While
+        Try
+            Dim rsSelectSymptoms As Recordset = con.Execute("SELECT id, descripcion FROM sintoma;")
 
-        con.Close()
-        Return Symptoms
+            While (Not rsSelectSymptoms.EOF)
+                Dim idSymptom As Integer = DirectCast(rsSelectSymptoms.Fields("id").Value, Integer)
+                Dim descSymptom As String = TryCast(rsSelectSymptoms.Fields("descripcion").Value, String)
+                Dim S1 As New Symptom
+                S1.Id = idSymptom
+                S1.Description = descSymptom
+                Symptoms.Add(S1)
+                rsSelectSymptoms.MoveNext()
+            End While
+
+            Return Symptoms
+        Catch ex As Exception
+            Console.WriteLine(ex)
+            Throw New Exception("Error al obtener sintomas")
+        Finally
+            con.Close()
+        End Try
+
+
+
+
     End Function
 
 
@@ -593,45 +604,99 @@ Public Class DataBaseConn
     End Function
     Public Function matchPatientLoggedOn(ci As String) As Integer
         Dim con As Connection = Me.Connect()
-        Dim rsSelectIdPatient As Recordset = con.Execute("SELECT id FROM persona pat WHERE ci='" + ci + "';")
-        Dim idPatientLoggedOn As Integer = DirectCast(rsSelectIdPatient.Fields("id").Value, Integer)
-        con.Close()
-
-        Return idPatientLoggedOn
+        Try
+            Dim rsSelectIdPatient As Recordset = con.Execute("SELECT id FROM persona pat WHERE ci='" + ci + "';")
+            Dim idPatientLoggedOn As Integer = DirectCast(rsSelectIdPatient.Fields("id").Value, Integer)
+            Return idPatientLoggedOn
+        Catch ex As Exception
+            Console.WriteLine(ex)
+            Return Nothing
+        Finally
+            con.Close()
+        End Try
     End Function
     Public Sub SetPatientSufferSymp(idPatient As Integer, idSympSuffered As List(Of Integer))
         Dim con As Connection = Me.Connect()
-        Dim rsIsThere As Recordset = con.Execute("SELECT id_sintoma FROM paciente_sufre WHERE id_paciente=" & idPatient)
-        If Not rsIsThere.EOF Then
-            Dim rsDelete As Recordset = con.Execute("DELETE FROM paciente_sufre WHERE id_paciente=" & idPatient)
-            rsIsThere.MoveNext()
-        End If
 
-        For Each e As Integer In idSympSuffered
-            Dim rsInsert As Recordset = con.Execute("INSERT INTO paciente_sufre(id_sintoma, id_paciente) VALUES(" & e & "," & idPatient & ");")
-        Next
-        con.Close()
+        Try
+            Dim rsIsThere As Recordset = con.Execute("SELECT id_sintoma FROM paciente_sufre WHERE id_paciente=" & idPatient)
+            If Not rsIsThere.EOF Then
+                Dim rsDelete As Recordset = con.Execute("DELETE FROM paciente_sufre WHERE id_paciente=" & idPatient)
+                rsIsThere.MoveNext()
+            End If
+
+            For Each e As Integer In idSympSuffered
+                Dim rsInsert As Recordset = con.Execute("INSERT INTO paciente_sufre(id_sintoma, id_paciente) VALUES(" & e & "," & idPatient & ");")
+            Next
+        Catch ex As Exception
+            Console.WriteLine(ex)
+        Finally
+            con.Close()
+        End Try
     End Sub
-    Public Function ObtainPatholgiesSuffered() As List(Of Pathology)
+    Public Function ObtainPatholgiesSuffered(idPatient As Integer) As List(Of Pathology)
         Dim con As Connection = Me.Connect()
         Dim Pathologies As New List(Of Pathology)
-        Dim rsPathologiesSuffered As Recordset = con.Execute("SELECT DISTINCT p.id, p.nombre, p.indiceMortalidad, p.id_prioridad FROM paciente_sufre ps JOIN sintoma s ON(ps.id_sintoma = s.id) JOIN sintoma_compone sc ON(s.id = sc.id_sintoma) JOIN patologia p ON(sc.id_patologia = p.id) WHERE ps.id_paciente=2 GROUP BY ps.id_sintoma ")
+        Try
+            Dim rsPathologiesSuffered As Recordset = con.Execute("SELECT DISTINCT p.id, p.nombre, p.indiceMortalidad, p.id_prioridad FROM paciente_sufre ps JOIN sintoma s ON(ps.id_sintoma = s.id) JOIN sintoma_compone sc ON(s.id = sc.id_sintoma) JOIN patologia p ON(sc.id_patologia = p.id) WHERE ps.id_paciente=" & idPatient)
 
-        While (Not rsPathologiesSuffered.EOF)
-            Dim idPathology As Integer = DirectCast(rsPathologiesSuffered.Fields("id").Value, Integer)
-            Dim indexMort As Integer = DirectCast(rsPathologiesSuffered.Fields("indiceMortalidad").Value, Integer)
-            Dim idPriority As Integer = DirectCast(rsPathologiesSuffered.Fields("id_prioridad").Value, Integer)
-            Dim namePathology As String = TryCast(rsPathologiesSuffered.Fields("nombre").Value, String)
+            While (Not rsPathologiesSuffered.EOF)
+                Dim idPathology As Integer = DirectCast(rsPathologiesSuffered.Fields("id").Value, Integer)
+                Dim indexMort As Integer = DirectCast(rsPathologiesSuffered.Fields("indiceMortalidad").Value, Integer)
+                Dim idPriority As Integer = DirectCast(rsPathologiesSuffered.Fields("id_prioridad").Value, Integer)
+                Dim namePathology As String = TryCast(rsPathologiesSuffered.Fields("nombre").Value, String)
 
-            Dim priority As New Priority(idPriority)
-            Pathologies.Add(New Pathology(idPathology, namePathology, indexMort, priority))
-            rsPathologiesSuffered.MoveNext()
-        End While
-
-        con.Close()
-
-        Return Pathologies
+                Dim priority As New Priority(idPriority)
+                Pathologies.Add(New Pathology(idPathology, namePathology, indexMort, priority))
+                rsPathologiesSuffered.MoveNext()
+            End While
+            Return Pathologies
+        Catch ex As Exception
+            Console.WriteLine(ex)
+            Return Nothing
+        Finally
+            con.Close()
+        End Try
     End Function
+    Public Sub UnsuscribePatient(idPatient As Integer)
+        Dim con As Connection = Me.Connect
+        Dim rsUpdate As Recordset = con.Execute("UPDATE persona  SET habilitado=false WHERE ci=" & idPatient)
+        con.Close()
+    End Sub
+    Public Function MakePetition(idPatient As Integer, motive As String, datetI As String, datetF As String) As Boolean
+        Dim con As Connection = Me.Connect
+        Try
+            Dim rsInsertPetition As Recordset = con.Execute("INSERT INTO peticion (id_paciente, estado, motivo, fechaHoraInicio, fechaHoraFin) VALUES (" & idPatient & "," & 1 & ",'" + motive + "','" + datetI + "','" + datetF + "')")
+            Return True
+        Catch ex As Exception
+            Console.WriteLine(ex)
+            Return False
+        Finally
+            con.Close()
+        End Try
+    End Function
+    Public Function StopPetition(idPatient As Integer, motive As String, datetI As String, datetF As String) As Boolean
+        Dim con As Connection = Me.Connect
+        Try
+            Dim rsSearchPetition As Recordset = con.Execute("SELECT p.id FROM peticion p WHERE id_paciente=" & idPatient & " AND fechaHoraInicio='" + datetI + "'")
+            If rsSearchPetition.EOF Then
+                Console.WriteLine("No existe tal petición.")
+                Return False
+            Else
+                Dim rsIdPetition As Integer = DirectCast(rsSearchPetition.Fields("id").Value, Integer)
+                Dim rsStopPetitionA As Recordset = con.Execute("UPDATE peticion p SET p.estado=" & 0 & " WHERE p.id=" & rsIdPetition)
+                Dim rsStopPetitionB As Recordset = con.Execute("UPDATE peticion p SET p.motivo='" + motive + "' WHERE p.id=" & rsIdPetition)
+                Dim rsStopPetitionC As Recordset = con.Execute("UPDATE peticion p SET p.fechaHoraFin='" + datetF + "' WHERE p.id=" & rsIdPetition)
+                Return True
+            End If
+        Catch ex As Exception
+            Console.WriteLine(ex)
+            Return Nothing
+        Finally
+            con.Close()
+        End Try
+    End Function
+
 
 
 

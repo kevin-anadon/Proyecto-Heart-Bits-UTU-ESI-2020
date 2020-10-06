@@ -5,17 +5,24 @@ Imports ADODB
 Public Class FrmHome
     'Resource Manager: Administrador de Recursos propios del Proyecto 'PatientApp'.
     Private ReadOnly RM As Resources.ResourceManager = New Resources.ResourceManager("PatientApp.Resources", System.Reflection.Assembly.GetExecutingAssembly)
+
+
     'Atributos:
     Public ciPatientLoggedOn As String
     Private idPatientLoggedOn As Integer
+    Dim dateRhtNow As String = Nothing
     Private patientLoggedOn As New Data.People
     Private chargePathology As List(Of Pathology)
-    Private L1 As New Logic.Logica()
+    Private L1 As New Logic.Logic()
+
+    
 
     'Query:
     Private Symptoms As List(Of Data.Symptom)
     Private idSympSuffered As New List(Of Integer)
     Private PatholgiesSuffered As List(Of Pathology)
+
+
 
     'Comportamientos:
     ''' <summary>
@@ -32,7 +39,7 @@ Public Class FrmHome
     ''' <param name="myBool8">Si es Visible Panel PnlPatient1</param>
     ''' <param name="myBool9">Si es Visible Panel PnlSymptom</param>
     ''' <param name="myBool10">Si es Visible Panel PnlResult</param>
-    Public Sub VisualSettings(myConfigPreset As Short, myBool1 As Boolean, myBool2 As Boolean, myBool3 As Boolean, myBool4 As Boolean, myBool5 As Boolean, myBool6 As Boolean, myBool7 As Boolean, myBool8 As Boolean, myBool9 As Boolean, myBool10 As Boolean)
+    Private Sub VisualSettings(myConfigPreset As Short, myBool1 As Boolean, myBool2 As Boolean, myBool3 As Boolean, myBool4 As Boolean, myBool5 As Boolean, myBool6 As Boolean, myBool7 As Boolean, myBool8 As Boolean, myBool9 As Boolean, myBool10 As Boolean)
         'Label: Me centro en los atributos variantes para cada Panel.
         Select Case myConfigPreset
             Case 1 '1 = Stage Intro
@@ -142,99 +149,138 @@ Public Class FrmHome
         PnlSymptom.Visible = myBool9
         PnlResult.Visible = myBool10
     End Sub
+    Private Sub VisualSettingPetition(info As String, image As String, b1 As Boolean, b2 As Boolean, b3 As Boolean, b4 As Boolean, b5 As Boolean, b6 As Boolean, b7 As Boolean, b8 As Boolean)
+        BtnSendChatP.Visible = b1
+        BtnSendChatP.Enabled = b2
+        BtnEnd.Visible = b3
+        BtnEnd.Enabled = b4
+        PnlPetition.Visible = b5
+        PnlPetition.Enabled = b6
+        BtnCancelPetition.Visible = b7
+        BtnCancelPetition.Enabled = b8
+        LblPetitionInfo.Text = info
+        PctbxPetition.Image = RM.GetObject(image)
 
+    End Sub
     Public Sub GetIdPatientLoggedOn()
         Me.idPatientLoggedOn = L1.matchPatientLoggedOn(Me.ciPatientLoggedOn)
     End Sub
-
     Public Sub LoadSymptoms()
         Me.Symptoms = L1.ObtainSymptoms()
     End Sub
+
+
 
     'Eventos:
     Private Sub BtnNext_Intro2_Click(sender As Object, e As EventArgs) Handles BtnNext_Intro2.Click
         VisualSettings(1, True, False, False, False, False, False, True, False, False, False)
     End Sub
-
     Private Sub BtnNext_Patient_Click(sender As Object, e As EventArgs) Handles BtnNext_Patient.Click
         VisualSettings(2, False, True, False, False, False, False, False, True, False, False)
     End Sub
-
     Private Sub BtnNext_Symptom1_Click(sender As Object, e As EventArgs) Handles BtnNext_Symptom1.Click
         VisualSettings(3, False, False, True, False, False, False, False, False, True, False)
     End Sub
-
     Private Sub BtnBack_Intro2_Click(sender As Object, e As EventArgs) Handles BtnBack_Intro2.Click
         VisualSettings(1, True, False, False, False, False, False, True, False, False, False)
     End Sub
-
     Private Sub BtnNext_Result_Click(sender As Object, e As EventArgs) Handles BtnNext_Result.Click
-        'Reconozco los Id de cada Sintoma que sufre el Paciente.
-        For Each symptomsSuffred In LbxSufferedPatient.Items
-            For Each symptom As Symptom In Symptoms
-                If symptom.Description.Equals(symptomsSuffred.ToString) Then
-                    idSympSuffered.Add(symptom.Id)
-                End If
-            Next 'For [symptom] para cada Síntoma existente. 
-        Next 'For [symptomsSuffred] para cada item del ListBox que contiene los Síntomas que Sufre el Paciente.
-
-        'Almaceno en la Base de Datos los Sintomas que sufre el Paciente, y su Id para referenciarlo
-        L1.SetPatientSufferSymp(idPatientLoggedOn, idSympSuffered)
-
-        'Cargo las Patologias Sufridas en una Lista
-        PatholgiesSuffered = New List(Of Pathology)
-        Me.PatholgiesSuffered = L1.ObtainPatholgiesSuffered
-
-        'Trato el Panel con los Resultados
-        ''Hago un diagnostico (resumen/media) de los datos de "id_prioridad" -> Me define el color y mensaje del header.
-        Dim leve1 As Integer = Nothing
-        Dim urgente2o3 As Integer = Nothing
-
-        chargePathology = New List(Of Pathology)
-        For Each pathology As Pathology In PatholgiesSuffered
-            If pathology.priority.id > 1 Then
-                leve1 = leve1 + 1
-            Else
-                urgente2o3 = urgente2o3 + 1
-            End If
-
-            If pathology.mortalityIndex < 33 Then
-                chargePathology.Add(New Pathology(pathology.name, "EVIDENCIA BAJA"))
-            ElseIf pathology.mortalityIndex > 32 And pathology.mortalityIndex < 66 Then
-                chargePathology.Add(New Pathology(pathology.name, "EVIDENCIA MEDIA"))
-            ElseIf pathology.mortalityIndex > 65 Then
-                chargePathology.Add(New Pathology(pathology.name, "EVIDENCIA ALTA"))
-            End If
-        Next
-
-        If leve1 > urgente2o3 Then
-            ''Panel informativo de color Verde = Poco o Leve Riesgo de Salud
-            ''No requiere valoración médica urgente
-            PnlColorInfo.FillColor = Color.FromArgb(98, 186, 172)
-            LblResultUrgent.Text = "No requiere de una valoración Médica urgente."
-
+        If LbxSufferedPatient.Items.Contains(" ") Then
+            Console.WriteLine("No se asignaron sintomas para proceder.")
         Else
-            ''Panel informativo de color Corál = Grave Riesgo de Salud
-            ''Requiere valoración médica urgente
-            PnlColorInfo.FillColor = Color.FromArgb(251, 136, 133)
-            LblResultUrgent.Text = "Requiere de una valoración Médica urgente."
+            VisualSettings(4, False, False, False, True, False, False, False, False, False, True)
+            'Reconozco los Id de cada Sintoma que sufre el Paciente.
+            For Each symptomsSuffred In LbxSufferedPatient.Items
+                For Each symptom As Symptom In Symptoms
+                    If symptom.Description.Equals(symptomsSuffred.ToString) Then
+                        idSympSuffered.Add(symptom.Id)
+                    End If
+                Next 'For [symptom] para cada Síntoma existente. 
+            Next 'For [symptomsSuffred] para cada item del ListBox que contiene los Síntomas que Sufre el Paciente.
+
+            'Almaceno en la Base de Datos los Sintomas que sufre el Paciente, y su Id para referenciarlo
+            L1.SetPatientSufferSymp(idPatientLoggedOn, idSympSuffered)
+
+            'Cargo las Patologias Sufridas en una Lista
+            PatholgiesSuffered = New List(Of Pathology)
+            Me.PatholgiesSuffered = L1.ObtainPatholgiesSuffered(idPatientLoggedOn)
+
+            'Trato el Panel con los Resultados
+            'Hago un diagnostico (resumen/media) de los datos de "id_prioridad" -> Me define el color y mensaje del header.
+            Dim qtyLeve As Integer = Nothing
+            Dim qtyMedia As Integer = Nothing
+            Dim qtyUrgente As Integer = Nothing
+
+            chargePathology = New List(Of Pathology)
+            Dim evidences As New List(Of String)
+            evidences.Add("EVIDENCIA ALTA")
+            evidences.Add("EVIDENCIA MEDIA")
+            evidences.Add("EVIDENCIA BAJA")
+            Dim orderedChargePathology As New List(Of Pathology)
+
+            For Each pathology As Pathology In PatholgiesSuffered
+                'Analizo mis cantidades de tipos de prioridades.
+                Select Case pathology.priority.id
+                    Case 1 'Prioridad = 1 "Alta"
+                        qtyUrgente = qtyUrgente + 1
+                    Case 2 'Prioridad = 2 "Media"
+                        qtyMedia = qtyMedia + 1
+                    Case 3 'Prioridad = 3 "Baja"
+                        qtyLeve = qtyLeve + 1
+                End Select
+
+                'Analizo las evidencias para cada patologia obtenida.
+                If pathology.mortalityIndex < 33 Then
+                    chargePathology.Add(New Pathology(pathology.name, "EVIDENCIA BAJA"))
+                ElseIf pathology.mortalityIndex > 32 And pathology.mortalityIndex < 66 Then
+                    chargePathology.Add(New Pathology(pathology.name, "EVIDENCIA MEDIA"))
+                ElseIf pathology.mortalityIndex > 65 Then
+                    chargePathology.Add(New Pathology(pathology.name, "EVIDENCIA ALTA"))
+                End If
+            Next
+
+            'Defino el resultado general.
+            If qtyLeve > qtyMedia And qtyLeve > qtyUrgente Then
+                'Panel informativo de color Verde = Poco o Leve Riesgo de Salud
+                'No requiere valoración médica urgente
+                PnlColorInfo.FillColor = Color.FromArgb(98, 186, 172)
+                LblResultUrgent.Text = "No requiere de una valoración médica urgente."
+
+            ElseIf qtyMedia > qtyUrgente Then
+                'Panel informativo de color Ambar = Riesgo de Salud
+                'Requiere valoración médica urgente
+                PnlColorInfo.FillColor = Color.FromArgb(255, 208, 52)
+                LblResultUrgent.Text = "Requiere de una pronta valoración médica."
+            Else
+                'Panel informativo de color Corál = Grave Riesgo de Salud
+                'Requiere valoración médica urgente
+                PnlColorInfo.FillColor = Color.FromArgb(251, 136, 133)
+                LblResultUrgent.Text = "Requiere de una valoración médica urgente."
+            End If
+
+            'Ordeno por Evidencia la lista a cargar de patologias sufridas. Se ordena de mas alto a mas bajo las evidencias de las patologias
+            For Each evidencess In evidences
+                For Each path In chargePathology
+                    If path.evidence.Equals(evidencess) Then
+                        orderedChargePathology.Add(path)
+                    End If
+                Next
+            Next
+
+            For Each pat As Pathology In orderedChargePathology
+                DgvPhatologies.Rows.Add(pat.name, pat.evidence)
+            Next
+            DgvPhatologies.Refresh()
+
         End If
 
-        VisualSettings(4, False, False, False, True, False, False, False, False, False, True)
 
-        For Each pat As Pathology In chargePathology
-            DgvPhatologies.Rows.Add(pat.name, pat.evidence)
-        Next
-        DgvPhatologies.Refresh()
+
 
     End Sub
-
     Private Sub BtnBack_Patient1_Click(sender As Object, e As EventArgs) Handles BtnBack_Patient1.Click
         VisualSettings(2, False, True, False, False, False, False, False, True, False, False)
     End Sub
-
-
-
     Private Sub CbxSysSymptoms_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CbxSysSymptoms.SelectedIndexChanged
         Dim doesExistInTheLbx As Boolean
         Dim a As Object = " "
@@ -262,7 +308,6 @@ Public Class FrmHome
         End If
 
     End Sub
-
     Private Sub BtnDropPathology_Click(sender As Object, e As EventArgs) Handles BtnDropPathology.Click
         'Quiero eliminar el GhostItem?
         If LbxSufferedPatient.Items.Count = 0 Then
@@ -270,11 +315,12 @@ Public Class FrmHome
             LbxSufferedPatient.Items.Add(" ")
         Else
             'Intento borrar el item seleccionado, porque puede que no se haya seleccionado uno
-            Try
+
+            If LbxSufferedPatient.SelectedIndex = -1 Then
+                Console.WriteLine("Debe de seleccionar un ítem para eliminarlo.")
+            Else
                 LbxSufferedPatient.Items.RemoveAt(LbxSufferedPatient.SelectedIndex)
-            Catch ex As Exception
-                'Debe de seleccionar un item para eliminarlo.
-            End Try
+            End If
 
             'No hay ningun elemento en el Lbx: Porque se borró el último existente?
             If LbxSufferedPatient.Items.Count = 0 Then
@@ -283,9 +329,9 @@ Public Class FrmHome
         End If
 
     End Sub
-
     Private Sub FrmHome_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         VisualSettings(1, True, False, False, False, False, True, False, False, False, False)
+        VisualSettingPetition("GENERANDO PETICIÓN", "loading", True, True, True, True, False, False, False, False)
 
         'GhostItem: Es mi elemento del Lbx que me permite utilizarlo (For, recorrer) cuando hay elemento != de Symptoms (Cmbx)
         'Este existe al inicio (record de FrmHome) y cada vez que Lbx se queda con 1 Item de Symptoms (Cmbx)
@@ -307,10 +353,43 @@ Public Class FrmHome
         DgvPhatologies.Columns.Add(col1)
         DgvPhatologies.Columns.Add(col2)
     End Sub
-
     Private Sub BtnEnd_Click(sender As Object, e As EventArgs) Handles BtnEnd.Click
+        L1.UnsuscribePatient(idPatientLoggedOn)
         VisualSettings(1, True, False, False, False, False, True, False, False, False, False)
         PatientApp.FrmLogin.Show()
         Me.Close()
+    End Sub
+
+    Private Sub BtnSendChatP_Click(sender As Object, e As EventArgs) Handles BtnSendChatP.Click
+        Dim d2 As String = DateTime.Now.Year
+        Dim d3 As String = DateTime.Now.Month
+        Dim d4 As String = DateTime.Now.Day
+        Dim d5 As String = DateTime.Now.Hour
+        Dim d6 As String = DateTime.Now.Minute
+        Dim d7 As String = DateTime.Now.Second
+        Me.dateRhtNow = d2 + "-" + d3 + "-" + d4 + " " + d5 + ":" + d6 + ":" + d7
+
+        VisualSettingPetition("GENERANDO PETICIÓN", "loading", False, False, False, False, True, True, True, True)
+        Dim a As Boolean = L1.MakePetition(idPatientLoggedOn, "Kjgkhchjccnbcv", Me.dateRhtNow, Me.dateRhtNow)
+        If a Then
+            VisualSettingPetition("PETICIÓN GENERADA CORRECTAMENTE", "check", False, False, False, False, True, True, True, True)
+        Else
+            VisualSettingPetition("GENERANDO PETICIÓN", "loading", True, True, True, True, False, False, False, False)
+        End If
+    End Sub
+
+    Private Sub BtnCancelPetition_Click(sender As Object, e As EventArgs) Handles BtnCancelPetition.Click
+        Dim dateRhtNowCancel As String = Nothing
+        Dim d2 As String = DateTime.Now.Year
+        Dim d3 As String = DateTime.Now.Month
+        Dim d4 As String = DateTime.Now.Day
+        Dim d5 As String = DateTime.Now.Hour
+        Dim d6 As String = DateTime.Now.Minute
+        Dim d7 As String = DateTime.Now.Second
+        dateRhtNowCancel = d2 + "-" + d3 + "-" + d4 + " " + d5 + ":" + d6 + ":" + d7
+        Dim a As Boolean = L1.StopPetition(idPatientLoggedOn, "Se canceló la petición por parte del Paciente", Me.dateRhtNow, dateRhtNowCancel)
+        If a Then
+            VisualSettingPetition("GENERANDO PETICIÓN", "loading", True, True, True, True, False, False, False, False)
+        End If
     End Sub
 End Class 'FrmHome

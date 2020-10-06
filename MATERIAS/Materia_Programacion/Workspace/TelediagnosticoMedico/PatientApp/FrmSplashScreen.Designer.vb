@@ -110,12 +110,12 @@ Partial Class FrmSplashScreen
         Me.LblInfo1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(181, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(181, Byte), Integer))
         Me.LblInfo1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.LblInfo1.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.LblInfo1.Location = New System.Drawing.Point(820, 586)
+        Me.LblInfo1.Location = New System.Drawing.Point(11, 586)
         Me.LblInfo1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LblInfo1.Name = "LblInfo1"
-        Me.LblInfo1.Size = New System.Drawing.Size(224, 22)
+        Me.LblInfo1.Size = New System.Drawing.Size(1033, 22)
         Me.LblInfo1.TabIndex = 19
-        Me.LblInfo1.Text = "Versión del Sistema: V1.0.1 Alpha."
+        Me.LblInfo1.Text = "Versión del Sistema: V1.0.33 Alpha."
         Me.LblInfo1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'LblInfo2
@@ -128,10 +128,10 @@ Partial Class FrmSplashScreen
         Me.LblInfo2.Font = New System.Drawing.Font("Microsoft YaHei UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblInfo2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(181, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(181, Byte), Integer))
         Me.LblInfo2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.LblInfo2.Location = New System.Drawing.Point(704, 608)
+        Me.LblInfo2.Location = New System.Drawing.Point(15, 608)
         Me.LblInfo2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LblInfo2.Name = "LblInfo2"
-        Me.LblInfo2.Size = New System.Drawing.Size(340, 22)
+        Me.LblInfo2.Size = New System.Drawing.Size(1029, 22)
         Me.LblInfo2.TabIndex = 18
         Me.LblInfo2.Text = "Sistema: Sistema de Cliente para Pacientes."
         Me.LblInfo2.TextAlign = System.Drawing.ContentAlignment.MiddleRight

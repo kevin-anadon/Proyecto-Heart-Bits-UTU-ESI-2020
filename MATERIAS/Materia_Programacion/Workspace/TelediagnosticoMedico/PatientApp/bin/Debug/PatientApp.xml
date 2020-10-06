@@ -32,6 +32,26 @@ PatientApp
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:PatientApp.My.Resources.Resources.check">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:PatientApp.My.Resources.Resources.infoFiled">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:PatientApp.My.Resources.Resources.infoOutLine">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:PatientApp.My.Resources.Resources.loading">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:PatientApp.My.Resources.Resources.Login__Type_2">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.

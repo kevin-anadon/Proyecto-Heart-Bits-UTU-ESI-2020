@@ -195,5 +195,17 @@
   <ItemGroup>
     <None Include="Resources\Panel_ Type 1.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\infoFiled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\infoOutLine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loading.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

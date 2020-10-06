@@ -171,7 +171,7 @@ Partial Class FrmLogin
         Me.TxtCredential1.Font = New System.Drawing.Font("Segoe UI Emoji", 10.2!)
         Me.TxtCredential1.ForeColor = System.Drawing.Color.Black
         Me.TxtCredential1.Location = New System.Drawing.Point(741, 423)
-        Me.TxtCredential1.MaxLength = 30
+        Me.TxtCredential1.MaxLength = 8
         Me.TxtCredential1.Name = "TxtCredential1"
         Me.TxtCredential1.Size = New System.Drawing.Size(242, 19)
         Me.TxtCredential1.TabIndex = 0
