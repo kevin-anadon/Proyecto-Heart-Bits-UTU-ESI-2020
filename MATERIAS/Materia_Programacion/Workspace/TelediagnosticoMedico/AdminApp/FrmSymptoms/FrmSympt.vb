@@ -2,7 +2,7 @@
 Imports Data
 
 Public Class FrmSympt
-    Dim log As New Logica()
+    Dim log As New Logic.Logic()
 
     Dim row As DataGridViewRow
     Dim SymptSelected As String
@@ -137,8 +137,7 @@ Public Class FrmSympt
         Me.Dispose()
         frm.Show()
     End Sub
-
-    Private Sub BtnClose_Click(sender As Object, e As EventArgs) Handles BtnClose.Click
+    Private Sub Guna2ControlBox1_Click(sender As Object, e As EventArgs) Handles Guna2ControlBox1.Click
         End
     End Sub
 End Class

@@ -1,7 +1,7 @@
 ﻿Imports Logic
 Imports Data
 Public Class FrmAddModPath
-    Dim log As New Logica()
+    Dim log As New Logic.Logic()
     Dim row As DataGridViewRow
     Dim KindPath As New List(Of KindPath)
     Dim Kind As String = Nothing

@@ -1,9 +1,8 @@
-﻿Imports System.Runtime.InteropServices
-Imports Logic
+﻿Imports Logic
 Imports Data
 
 Public Class FrmLogin
-    Dim log As New Logica()
+    Dim log As New Logic.Logic()
     Public Shared Property AdminLog As New Admin()
     Dim ci As String = Nothing
 

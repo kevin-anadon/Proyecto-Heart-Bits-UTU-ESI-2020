@@ -1,7 +1,7 @@
 ﻿Imports Data
 Imports Logic
 Public Class FrmAddModAdmin
-    Dim log As New Logica()
+    Dim log As New Logic.Logic()
 
     Dim BtnM As Boolean = False
     Dim BtnW As Boolean = False

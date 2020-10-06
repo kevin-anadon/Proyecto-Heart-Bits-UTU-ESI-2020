@@ -49,8 +49,8 @@ Partial Class FrmPath
         Me.LblListado = New System.Windows.Forms.Label()
         Me.BtnMod = New Guna.UI.WinForms.GunaButton()
         Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
-        Me.BtnMin = New Guna.UI.WinForms.GunaButton()
-        Me.BtnClose = New Guna.UI.WinForms.GunaButton()
+        Me.Guna2ControlBox2 = New Guna.UI2.WinForms.Guna2ControlBox()
+        Me.Guna2ControlBox1 = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.PanelLeft.SuspendLayout()
         Me.PanelButtons.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -575,52 +575,34 @@ Partial Class FrmPath
         Me.Guna2PictureBox1.TabStop = False
         Me.Guna2PictureBox1.UseTransparentBackground = True
         '
-        'BtnMin
+        'Guna2ControlBox2
         '
-        Me.BtnMin.AnimationHoverSpeed = 0.07!
-        Me.BtnMin.AnimationSpeed = 0.03!
-        Me.BtnMin.BackColor = System.Drawing.Color.Transparent
-        Me.BtnMin.BaseColor = System.Drawing.Color.Transparent
-        Me.BtnMin.BorderColor = System.Drawing.Color.Black
-        Me.BtnMin.DialogResult = System.Windows.Forms.DialogResult.None
-        Me.BtnMin.FocusedColor = System.Drawing.Color.Empty
-        Me.BtnMin.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.BtnMin.ForeColor = System.Drawing.Color.White
-        Me.BtnMin.Image = CType(resources.GetObject("BtnMin.Image"), System.Drawing.Image)
-        Me.BtnMin.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.BtnMin.ImageSize = New System.Drawing.Size(20, 20)
-        Me.BtnMin.Location = New System.Drawing.Point(987, 0)
-        Me.BtnMin.Name = "BtnMin"
-        Me.BtnMin.OnHoverBaseColor = System.Drawing.Color.Transparent
-        Me.BtnMin.OnHoverBorderColor = System.Drawing.Color.Transparent
-        Me.BtnMin.OnHoverForeColor = System.Drawing.Color.White
-        Me.BtnMin.OnHoverImage = Nothing
-        Me.BtnMin.OnPressedColor = System.Drawing.Color.Black
-        Me.BtnMin.Size = New System.Drawing.Size(40, 24)
-        Me.BtnMin.TabIndex = 59
+        Me.Guna2ControlBox2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Guna2ControlBox2.BackColor = System.Drawing.Color.White
+        Me.Guna2ControlBox2.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.Guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox
+        Me.Guna2ControlBox2.FillColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.Guna2ControlBox2.HoverState.Parent = Me.Guna2ControlBox2
+        Me.Guna2ControlBox2.IconColor = System.Drawing.Color.WhiteSmoke
+        Me.Guna2ControlBox2.Location = New System.Drawing.Point(968, 0)
+        Me.Guna2ControlBox2.Name = "Guna2ControlBox2"
+        Me.Guna2ControlBox2.ShadowDecoration.Parent = Me.Guna2ControlBox2
+        Me.Guna2ControlBox2.Size = New System.Drawing.Size(45, 29)
+        Me.Guna2ControlBox2.TabIndex = 63
         '
-        'BtnClose
+        'Guna2ControlBox1
         '
-        Me.BtnClose.AnimationHoverSpeed = 0.07!
-        Me.BtnClose.AnimationSpeed = 0.03!
-        Me.BtnClose.BackColor = System.Drawing.Color.Transparent
-        Me.BtnClose.BaseColor = System.Drawing.Color.Transparent
-        Me.BtnClose.BorderColor = System.Drawing.Color.Black
-        Me.BtnClose.DialogResult = System.Windows.Forms.DialogResult.None
-        Me.BtnClose.FocusedColor = System.Drawing.Color.Empty
-        Me.BtnClose.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.BtnClose.ForeColor = System.Drawing.Color.White
-        Me.BtnClose.Image = CType(resources.GetObject("BtnClose.Image"), System.Drawing.Image)
-        Me.BtnClose.ImageSize = New System.Drawing.Size(20, 20)
-        Me.BtnClose.Location = New System.Drawing.Point(1020, 0)
-        Me.BtnClose.Name = "BtnClose"
-        Me.BtnClose.OnHoverBaseColor = System.Drawing.Color.Transparent
-        Me.BtnClose.OnHoverBorderColor = System.Drawing.Color.Transparent
-        Me.BtnClose.OnHoverForeColor = System.Drawing.Color.White
-        Me.BtnClose.OnHoverImage = Nothing
-        Me.BtnClose.OnPressedColor = System.Drawing.Color.Black
-        Me.BtnClose.Size = New System.Drawing.Size(40, 24)
-        Me.BtnClose.TabIndex = 58
+        Me.Guna2ControlBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Guna2ControlBox1.BackColor = System.Drawing.Color.White
+        Me.Guna2ControlBox1.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.Guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.Guna2ControlBox1.HoverState.Parent = Me.Guna2ControlBox1
+        Me.Guna2ControlBox1.IconColor = System.Drawing.Color.WhiteSmoke
+        Me.Guna2ControlBox1.Location = New System.Drawing.Point(1015, 0)
+        Me.Guna2ControlBox1.Name = "Guna2ControlBox1"
+        Me.Guna2ControlBox1.ShadowDecoration.Parent = Me.Guna2ControlBox1
+        Me.Guna2ControlBox1.Size = New System.Drawing.Size(45, 29)
+        Me.Guna2ControlBox1.TabIndex = 62
         '
         'FrmPath
         '
@@ -628,8 +610,8 @@ Partial Class FrmPath
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(1060, 640)
-        Me.Controls.Add(Me.BtnMin)
-        Me.Controls.Add(Me.BtnClose)
+        Me.Controls.Add(Me.Guna2ControlBox2)
+        Me.Controls.Add(Me.Guna2ControlBox1)
         Me.Controls.Add(Me.LblCrit)
         Me.Controls.Add(Me.PnlTittle)
         Me.Controls.Add(Me.TxtPat)
@@ -677,6 +659,6 @@ Partial Class FrmPath
     Friend WithEvents LblListado As Label
     Friend WithEvents BtnMod As Guna.UI.WinForms.GunaButton
     Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
-    Friend WithEvents BtnMin As Guna.UI.WinForms.GunaButton
-    Friend WithEvents BtnClose As Guna.UI.WinForms.GunaButton
+    Friend WithEvents Guna2ControlBox2 As Guna.UI2.WinForms.Guna2ControlBox
+    Friend WithEvents Guna2ControlBox1 As Guna.UI2.WinForms.Guna2ControlBox
 End Class

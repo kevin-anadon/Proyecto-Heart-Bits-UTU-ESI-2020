@@ -1,7 +1,7 @@
 ﻿Imports Logic
 Imports Data
 Public Class FrmAdmin
-    Dim log As New Logica()
+    Dim log As New Logic.Logic
 
     Dim SelectedAdmin As Admin = Nothing
     Dim row As DataGridViewRow
@@ -127,7 +127,7 @@ Public Class FrmAdmin
         End If
     End Sub
 
-    Private Sub BtnClose_Click(sender As Object, e As EventArgs) Handles BtnClose.Click
+    Private Sub Guna2ControlBox1_Click(sender As Object, e As EventArgs) Handles Guna2ControlBox1.Click
         End
     End Sub
 End Class

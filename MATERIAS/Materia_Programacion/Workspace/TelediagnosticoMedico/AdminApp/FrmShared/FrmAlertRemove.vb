@@ -1,19 +1,19 @@
 ﻿Imports Data
 Imports Logic
 Public Class FrmAlertRemove
-    Dim log As New Logica
-    Dim Name As String = ""
+    Dim log As New Logic.Logic
+    Dim NameX As String = ""
     Dim id As Integer = 0
     Public Shared idSympt As Integer = 0
     Public Shared idPath As Integer = 0
     Public Shared idAdmin As Integer = 0
 
     Public Sub Obtain(s As String, i As Integer)
-        Name = s
+        NameX = s
         id = i
     End Sub
     Private Sub FrmAlertRemoveSymptom_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        LblSympt.Text = Name
+        LblSympt.Text = NameX
     End Sub
 
     Private Sub BtnPin_Click(sender As Object, e As EventArgs) Handles BtnPin.Click
@@ -39,7 +39,7 @@ Public Class FrmAlertRemove
     Public Sub DeleteAdmin()
         Try
             log.DeleteAdmin(idAdmin)
-            MessageBox.Show(Name & " eliminado con exito")
+            MessageBox.Show(NameX & " eliminado con exito")
             Me.Close()
         Catch ex As Exception
             MessageBox.Show(ex.Message)
@@ -48,7 +48,7 @@ Public Class FrmAlertRemove
     Public Sub DeleteSymptom()
         Try
             log.DeleteSymptoms(idSympt)
-            MessageBox.Show(Name & " eliminado con exito")
+            MessageBox.Show(NameX & " eliminado con exito")
             Me.Close()
         Catch ex As Exception
             MessageBox.Show(ex.Message)
@@ -57,7 +57,7 @@ Public Class FrmAlertRemove
     Public Sub DeletePath()
         Try
             log.DeletePathology(idPath)
-            MessageBox.Show(Name & " eliminado con exito")
+            MessageBox.Show(NameX & " eliminado con exito")
             Me.Close()
         Catch ex As Exception
             MessageBox.Show(ex.Message)
