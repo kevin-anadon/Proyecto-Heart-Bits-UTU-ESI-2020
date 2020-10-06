@@ -229,3 +229,4 @@ D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMe
 D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\AdminApp\obj\Debug\AdminApp.FrmAddModSympt.resources
 D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\AdminApp\obj\Debug\AdminApp.FrmAddModPath.resources
 D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\AdminApp\obj\Debug\AdminApp.FrmAdmin.resources
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\AdminApp\obj\Debug\AdminApp.FrmAddModAdmin.resources

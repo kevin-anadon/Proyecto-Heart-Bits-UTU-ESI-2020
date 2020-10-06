@@ -44,11 +44,12 @@ Partial Class FrmAlertRemove
         'PanelTop
         '
         Me.PanelTop.BackColor = System.Drawing.Color.LightGray
+        Me.PanelTop.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PanelTop.Controls.Add(Me.BtnClose)
         Me.PanelTop.Controls.Add(Me.LblEliminar)
         Me.PanelTop.Location = New System.Drawing.Point(0, 0)
         Me.PanelTop.Name = "PanelTop"
-        Me.PanelTop.Size = New System.Drawing.Size(433, 32)
+        Me.PanelTop.Size = New System.Drawing.Size(433, 33)
         Me.PanelTop.TabIndex = 1
         '
         'BtnClose
@@ -88,6 +89,7 @@ Partial Class FrmAlertRemove
         '
         Me.PanelBody.BackColor = System.Drawing.Color.White
         Me.PanelBody.BackgroundImage = CType(resources.GetObject("PanelBody.BackgroundImage"), System.Drawing.Image)
+        Me.PanelBody.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PanelBody.Controls.Add(Me.GunaLabel6)
         Me.PanelBody.Controls.Add(Me.PicVector)
         Me.PanelBody.Controls.Add(Me.TxtPin)
@@ -99,7 +101,7 @@ Partial Class FrmAlertRemove
         Me.PanelBody.Controls.Add(Me.GunaLabel2)
         Me.PanelBody.Location = New System.Drawing.Point(0, 33)
         Me.PanelBody.Name = "PanelBody"
-        Me.PanelBody.Size = New System.Drawing.Size(433, 124)
+        Me.PanelBody.Size = New System.Drawing.Size(433, 123)
         Me.PanelBody.TabIndex = 2
         '
         'GunaLabel6
@@ -157,7 +159,7 @@ Partial Class FrmAlertRemove
         Me.BtnPin.ForeColor = System.Drawing.Color.Black
         Me.BtnPin.Image = Nothing
         Me.BtnPin.ImageSize = New System.Drawing.Size(20, 20)
-        Me.BtnPin.Location = New System.Drawing.Point(129, 81)
+        Me.BtnPin.Location = New System.Drawing.Point(127, 78)
         Me.BtnPin.Name = "BtnPin"
         Me.BtnPin.OnHoverBaseColor = System.Drawing.Color.Silver
         Me.BtnPin.OnHoverBorderColor = System.Drawing.Color.Black

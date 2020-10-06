@@ -87,6 +87,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmPeople\FrmAddModAdmin.Designer.vb">
+      <DependentUpon>FrmAddModAdmin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPeople\FrmAddModAdmin.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmPeople\FrmAdmin.Designer.vb">
       <DependentUpon>FrmAdmin.vb</DependentUpon>
     </Compile>
@@ -159,6 +165,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FrmPeople\FrmAddModAdmin.resx">
+      <DependentUpon>FrmAddModAdmin.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmPeople\FrmAdmin.resx">
       <DependentUpon>FrmAdmin.vb</DependentUpon>
     </EmbeddedResource>
