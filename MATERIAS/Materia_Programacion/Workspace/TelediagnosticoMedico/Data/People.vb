@@ -101,7 +101,7 @@ Public Class People
 
     Public Function CiScript(ci As String) As String
         Dim CiResult As String = ""
-        CiResult = ci.ToString().Substring(0, 6) + "-" + ci.ToString().Substring((ci.ToString().Length() - 2), 1)
+        CiResult = ci.ToString().Substring(0, 7) + "-" + ci.ToString().Substring((ci.ToString().Length() - 1), 1)
         Return CiResult
     End Function
 

@@ -24,7 +24,7 @@ Partial Class FrmAddModAdmin
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmAddModAdmin))
         Me.PanelTop = New System.Windows.Forms.Panel()
-        Me.LblSymptTop = New Guna.UI.WinForms.GunaLabel()
+        Me.LblCiTop = New Guna.UI.WinForms.GunaLabel()
         Me.BtnClose = New Guna.UI.WinForms.GunaButton()
         Me.LblTittle = New Guna.UI.WinForms.GunaLabel()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -100,7 +100,7 @@ Partial Class FrmAddModAdmin
         '
         Me.PanelTop.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.PanelTop.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PanelTop.Controls.Add(Me.LblSymptTop)
+        Me.PanelTop.Controls.Add(Me.LblCiTop)
         Me.PanelTop.Controls.Add(Me.BtnClose)
         Me.PanelTop.Controls.Add(Me.LblTittle)
         Me.PanelTop.Location = New System.Drawing.Point(0, 0)
@@ -108,15 +108,15 @@ Partial Class FrmAddModAdmin
         Me.PanelTop.Size = New System.Drawing.Size(950, 35)
         Me.PanelTop.TabIndex = 3
         '
-        'LblSymptTop
+        'LblCiTop
         '
-        Me.LblSymptTop.AutoSize = True
-        Me.LblSymptTop.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblSymptTop.ForeColor = System.Drawing.Color.FromArgb(CType(CType(246, Byte), Integer), CType(CType(135, Byte), Integer), CType(CType(124, Byte), Integer))
-        Me.LblSymptTop.Location = New System.Drawing.Point(326, 0)
-        Me.LblSymptTop.Name = "LblSymptTop"
-        Me.LblSymptTop.Size = New System.Drawing.Size(0, 30)
-        Me.LblSymptTop.TabIndex = 29
+        Me.LblCiTop.AutoSize = True
+        Me.LblCiTop.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblCiTop.ForeColor = System.Drawing.Color.FromArgb(CType(CType(246, Byte), Integer), CType(CType(135, Byte), Integer), CType(CType(124, Byte), Integer))
+        Me.LblCiTop.Location = New System.Drawing.Point(325, 1)
+        Me.LblCiTop.Name = "LblCiTop"
+        Me.LblCiTop.Size = New System.Drawing.Size(0, 30)
+        Me.LblCiTop.TabIndex = 29
         '
         'BtnClose
         '
@@ -1076,7 +1076,7 @@ Partial Class FrmAddModAdmin
     End Sub
 
     Friend WithEvents PanelTop As Panel
-    Friend WithEvents LblSymptTop As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents LblCiTop As Guna.UI.WinForms.GunaLabel
     Friend WithEvents BtnClose As Guna.UI.WinForms.GunaButton
     Friend WithEvents LblTittle As Guna.UI.WinForms.GunaLabel
     Friend WithEvents Panel1 As Panel

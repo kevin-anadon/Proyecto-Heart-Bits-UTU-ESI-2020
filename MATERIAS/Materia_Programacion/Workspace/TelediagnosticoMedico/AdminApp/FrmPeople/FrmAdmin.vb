@@ -47,6 +47,9 @@ Public Class FrmAdmin
 
         Try
             FrmAddModAdmin.Admin = SelectedAdmin
+            frm.LblTittle.Text = "MODIFICAR ADMINISTRADOR "
+            frm.LblCiTop.Text = CStr(row.Cells("Nombre").Value)
+            frm.BtnAdd.Text = "MODIFICAR"
             frm.ShowDialog()
             ReloadDgv()
         Catch ex As Exception
@@ -55,6 +58,7 @@ Public Class FrmAdmin
     End Sub
 
     Private Sub BtnModAdmin_Click(sender As Object, e As EventArgs) Handles BtnModAdmin.Click 'Una manera de modificar
+        ObtainSelectedAdmin()
         ModAdmin()
     End Sub
 
@@ -108,11 +112,12 @@ Public Class FrmAdmin
             e.Handled = True
         End If
     End Sub
-    Private Sub TxtCi_Click(sender As Object, e As EventArgs) Handles TxtCi.Click
-        TxtCi.Text = ""
-    End Sub
 
     Private Sub DgvAdmin_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgvAdmin.CellClick
+        ObtainSelectedAdmin()
+    End Sub
+
+    Public Sub ObtainSelectedAdmin()
         row = DgvAdmin.CurrentRow
         If IsDBNull(row.Cells("Ci").Value) Then
 
@@ -127,7 +132,12 @@ Public Class FrmAdmin
         End If
     End Sub
 
+
     Private Sub Guna2ControlBox1_Click(sender As Object, e As EventArgs) Handles Guna2ControlBox1.Click
         End
+    End Sub
+
+    Private Sub TxtCi_MouseClick(sender As Object, e As MouseEventArgs) Handles TxtCi.MouseClick
+        TxtCi.Text = ""
     End Sub
 End Class
