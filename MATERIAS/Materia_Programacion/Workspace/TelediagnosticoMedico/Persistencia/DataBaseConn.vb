@@ -563,7 +563,93 @@ Public Class DataBaseConn
 
         Return Nothing
     End Function
-    Public Function ObtainAdmins() As DataSet
+    Public Function ObtainAdmins() As List(Of Admin)
+        Dim con As Connection = Me.Connect()
+        Dim ListAdmins As New List(Of Admin)
+
+        Try
+            Dim rsSelectAdmin As Recordset = con.Execute("SELECT * FROM vista_admin;")
+
+            While Not rsSelectAdmin.EOF
+
+                Dim id As Integer = DirectCast(rsSelectAdmin.Fields("id").Value, Integer)
+                Dim ci As Integer = DirectCast(rsSelectAdmin.Fields("ci").Value, Integer)
+                Dim name1 As String = TryCast(rsSelectAdmin.Fields("primerNom").Value, String)
+                Dim name2 As String = TryCast(rsSelectAdmin.Fields("segundoNom").Value, String)
+                Dim surn1 As String = TryCast(rsSelectAdmin.Fields("primerApe").Value, String)
+                Dim surn2 As String = TryCast(rsSelectAdmin.Fields("segundoApe").Value, String)
+                Dim genre As String = TryCast(rsSelectAdmin.Fields("genero").Value, String)
+                Dim birthdate As Date = DirectCast(rsSelectAdmin.Fields("fechaNacimiento").Value, Date)
+                Dim email As String = TryCast(rsSelectAdmin.Fields("email").Value, String)
+                Dim street As String = TryCast(rsSelectAdmin.Fields("calle").Value, String)
+                Dim ndoor As Integer = DirectCast(rsSelectAdmin.Fields("npuerta").Value, Integer)
+                Dim userSelect As String = TryCast(rsSelectAdmin.Fields("usuario").Value, String)
+                Dim password As String = TryCast(rsSelectAdmin.Fields("contrasena").Value, String)
+                Dim pin As Integer = DirectCast(rsSelectAdmin.Fields("pin").Value, Integer)
+
+                Dim rsSelectCity_Dpto As Recordset = con.Execute("SELECT c.id As Idc,c.nombre As Cnombre,d.id As Idd,d.nombre As Dnombre FROM vista_admin va JOIN ciudad c ON(va.id_ciudad=c.id) JOIN departamento d ON(c.id_dpto=d.id) WHERE va.id=" & id & ";") 'Consulta para Obtener Departamento y Ciudad
+
+                Dim rsSelectPhones As Recordset = con.Execute("SELECT group_concat(c.celular) As Celulares FROM vista_admin va JOIN cel_empleado c ON(va.id=c.id_empleado) WHERE id_empleado=" & id & ";") 'Consulta para Obtener celulares del Admin
+
+                Dim id_city As Integer = DirectCast(rsSelectCity_Dpto.Fields("Idc").Value, Integer)
+                Dim CityName As String = TryCast(rsSelectCity_Dpto.Fields("Cnombre").Value, String)
+                Dim id_dpto As Integer = DirectCast(rsSelectCity_Dpto.Fields("Idd").Value, Integer)
+                Dim DptoName As String = TryCast(rsSelectCity_Dpto.Fields("Dnombre").Value, String)
+                Dim Phones As String = TryCast(rsSelectPhones.Fields("Celulares").Value, String)
+
+                Dim Dpto As New Department(id_dpto, DptoName) 'Creo el objeto Departamento
+                Dim City As New City(id_city, Dpto, CityName) 'Creo el objeto Ciudad
+
+                Dim genrenumber As Integer = 0
+                If genre.Equals("M") Then
+                    genrenumber = 1
+                Else
+                    genrenumber = 0
+                End If
+
+                Dim AdminLog As New Admin(id, ci, name1, name2, surn1, surn2, genrenumber, birthdate, email, Phones, street, ndoor, City, userSelect, password, pin)
+                ListAdmins.Add(AdminLog)
+                rsSelectAdmin.MoveNext()
+                rsSelectCity_Dpto.MoveNext()
+                rsSelectPhones.MoveNext()
+            End While
+
+            Return ListAdmins
+        Catch ex As Exception
+            Console.WriteLine(ex.ToString())
+            Throw New Exception("Error al obtener lista de Admins")
+        Finally
+            con.Close()
+        End Try
+
+        Return Nothing
+    End Function
+    Public Function SearchAdmin(Ci As Integer) As DataSet
+        Dim con As Connection = Me.Connect()
+        Dim ds = New DataSet
+        Dim da As New System.Data.OleDb.OleDbDataAdapter
+
+        Try
+            Dim rsSelectAdmin As Recordset = con.Execute(
+            "SELECT ci As Ci,concat_ws(' ',primerNom, segundoNom, primerApe, segundoApe) As Nombre,
+            YEAR(CURDATE())-YEAR(va.fechaNacimiento) + IF(DATE_FORMAT(CURDATE(),'%m-%d') > 
+            DATE_FORMAT(va.fechaNacimiento,'%m-%d'), 0 , -1 ) AS Edad,
+            group_concat(c.celular) As Celular, email As Email
+            FROM vista_admin va JOIN cel_empleado c ON(va.id=c.id_empleado)
+            GROUP BY va.id HAVING va.ci Like '" & Ci & "%';")
+
+            da.Fill(ds, rsSelectAdmin, "Search")
+            Return ds
+        Catch ex As Exception
+            Console.WriteLine(ex.ToString())
+            Throw New Exception("Error al buscar administradores")
+        Finally
+            con.Close()
+        End Try
+
+        Return Nothing
+    End Function
+    Public Function ObtainAdminsDataSet() As DataSet
         Dim con As Connection = Me.Connect()
         Dim ds = New DataSet
         Dim da As New System.Data.OleDb.OleDbDataAdapter
@@ -588,20 +674,61 @@ Public Class DataBaseConn
 
         Return Nothing
     End Function
-    Public Function CheckPin(pin As String) As Boolean
+    Public Sub DeleteAdmin(idAdmin As Integer)
         Dim con As Connection = Me.Connect()
-        Dim checked As Boolean = False
-        Dim rsSelectPin As Recordset
-        rsSelectPin = con.Execute("SELECT ci FROM persona WHERE id_tipo=1 and pin='" + pin + "';")
-        If rsSelectPin.EOF Then
-            con.Close()
-            Return checked
-        Else
-            checked = True
-            con.Close()
-            Return checked
-        End If
-    End Function
+
+        Try
+            Dim rsDeleteAdminCel As Recordset = con.Execute("DELETE FROM cel_empleado WHERE id_empleado=" & idAdmin & ";")
+            Dim rsDeleteAdmin As Recordset = con.Execute("DELETE FROM persona WHERE id_tipo=1 AND id=" & idAdmin & ";")
+        Catch ex As Exception
+            Console.WriteLine(ex.ToString())
+            Throw New Exception("Error al eliminar el Administrador")
+        End Try
+
+    End Sub
+    Public Sub AddAdmin(Admin As Admin)
+        Dim con As Connection = Me.Connect()
+        Dim genre As Char = ""
+
+        Try
+            If Admin.genrePeople = 0 Then
+                genre = "H"
+            Else
+                genre = "M"
+            End If
+            Dim BirthdateString As String = Admin.dateBirth.ToString("yyy-MM-dd")
+
+            Dim rsAddAdmin As Recordset = con.Execute("INSERT INTO persona(ci,primerNom,segundoNom,primerApe,segundoApe,genero,fechaNacimiento,email,calle,npuerta,id_ciudad,id_tipo,usuario,contrasena,pin) VALUES(" & Admin.ci & ",'" & Admin.fstName & "','" & Admin.scndName & "','" & Admin.fstSurname & "','" & Admin.scndSurname & "','" & genre & "','" & BirthdateString & "','" & Admin.email & "','" & Admin.street & "'," & Admin.numDoor & "," & Admin.city.Id & ",1,'" & Admin.username & "','" & Admin.password & "'," & Admin.pin & ");")
+            Dim rsSelectId As Recordset = con.Execute("SELECT id FROM persona WHERE ci=" & Admin.ci & ";")
+            Dim id As Integer = DirectCast(rsSelectId.Fields("id").Value, Integer)
+
+            Dim rsAddPhone As Recordset = con.Execute("INSERT INTO cel_empleado VALUES(" & id & ",'" & Admin.numPhone & "');")
+        Catch ex As Exception
+            Console.WriteLine(ex.ToString())
+            Throw New Exception("Error al añadir el Administrador")
+        End Try
+
+    End Sub
+    Public Sub UpdateAdmin(Admin As Admin)
+        Dim con As Connection = Me.Connect()
+        Dim genre As Char = ""
+
+        Try
+            If Admin.genrePeople = 0 Then
+                genre = "H"
+            Else
+                genre = "M"
+            End If
+            Dim BirthdateString As String = Admin.dateBirth.ToString("yyy-MM-dd")
+
+            Dim rsUpdateAdmin As Recordset = con.Execute("UPDATE persona SET primerNom='" & Admin.fstName & "',segundoNom='" & Admin.scndName & "',primerApe='" & Admin.fstSurname & "',segundoApe='" & Admin.scndSurname & "',genero='" & genre & "',fechaNacimiento='" & BirthdateString & "',email='" & Admin.email & "',calle='" & Admin.street & "',npuerta=" & Admin.numDoor & ",id_ciudad=" & Admin.city.Id & ",usuario='" & Admin.username & "',contrasena='" & Admin.password & "',pin=" & Admin.pin & " WHERE id=" & Admin.id & ";")
+            Dim rsUpdatePhone As Recordset = con.Execute("UPDATE cel_empleado SET celular='" & Admin.numPhone & "' WHERE id_empleado=" & Admin.id & ";")
+        Catch ex As Exception
+            Console.WriteLine(ex.ToString())
+            Throw New Exception("Error al modificar el Administrador")
+        End Try
+
+    End Sub
     Public Function matchPatientLoggedOn(ci As String) As Integer
         Dim con As Connection = Me.Connect()
         Try
@@ -695,6 +822,33 @@ Public Class DataBaseConn
         Finally
             con.Close()
         End Try
+    End Function
+
+    Public Function ObtainCities() As List(Of City)
+        Dim con As Connection = Me.Connect()
+        Dim ListCitys As New List(Of City)
+
+        Try
+            Dim rsSelectCitysDeps As Recordset = con.Execute("SELECT d.id As idDep, d.nombre As nomDep, c.id As idCity, c.nombre As nomCity 
+            FROM departamento d JOIN ciudad c ON(d.id=c.id_dpto)")
+            While Not rsSelectCitysDeps.EOF
+                Dim idDpto As Integer = DirectCast(rsSelectCitysDeps.Fields("idDep").Value, Integer)
+                Dim nameDpto As String = TryCast(rsSelectCitysDeps.Fields("nomDep").Value, String)
+                Dim Dpto As New Department(idDpto, nameDpto)
+
+                Dim idCity As Integer = DirectCast(rsSelectCitysDeps.Fields("idCity").Value, Integer)
+                Dim nameCity As String = TryCast(rsSelectCitysDeps.Fields("nomCity").Value, String)
+                Dim City As New City(idCity, Dpto, nameCity)
+
+                ListCitys.Add(City)
+                rsSelectCitysDeps.MoveNext()
+            End While
+            Return ListCitys
+        Catch ex As Exception
+            Console.WriteLine(ex.ToString())
+            Throw New Exception("Error al obtener las ciudades")
+        End Try
+        Return Nothing
     End Function
 
 

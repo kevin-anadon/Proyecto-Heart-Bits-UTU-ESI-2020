@@ -236,7 +236,6 @@ Partial Class FrmHome
         Me.BtnAdmin.Size = New System.Drawing.Size(146, 30)
         Me.BtnAdmin.TabIndex = 25
         Me.BtnAdmin.Text = "Administradores"
-        Me.BtnAdmin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.BtnAdmin.TextOffsetX = 2
         '
         'BtnMed

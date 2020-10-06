@@ -1,5 +1,4 @@
-﻿Imports System.Runtime.InteropServices
-Imports Data
+﻿Imports Data
 Imports Logic
 Public Class FrmAlertRemove
     Dim log As New Logica
@@ -7,10 +6,14 @@ Public Class FrmAlertRemove
     Dim id As Integer = 0
     Public Shared idSympt As Integer = 0
     Public Shared idPath As Integer = 0
+    Public Shared idAdmin As Integer = 0
 
     Public Sub Obtain(s As String, i As Integer)
         Name = s
         id = i
+    End Sub
+    Private Sub FrmAlertRemoveSymptom_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        LblSympt.Text = Name
     End Sub
 
     Private Sub BtnPin_Click(sender As Object, e As EventArgs) Handles BtnPin.Click
@@ -21,8 +24,10 @@ Public Class FrmAlertRemove
                 Console.WriteLine("----PIN CORRECTO----")
                 If id = 0 Then
                     DeleteSymptom()
-                Else
+                ElseIf id = 1 Then
                     DeletePath()
+                ElseIf id = 2 Then
+                    DeleteAdmin()
                 End If
             Else
                 Console.WriteLine("----PIN INCORRECTO----")
@@ -31,14 +36,15 @@ Public Class FrmAlertRemove
         End If
     End Sub
 
-    Private Sub GunaButton1_Click(sender As Object, e As EventArgs) Handles BtnClose.Click
-        Me.Close()
+    Public Sub DeleteAdmin()
+        Try
+            log.DeleteAdmin(idAdmin)
+            MessageBox.Show(Name & " eliminado con exito")
+            Me.Close()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
     End Sub
-
-    Private Sub FrmAlertRemoveSymptom_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        LblSympt.Text = Name
-    End Sub
-
     Public Sub DeleteSymptom()
         Try
             log.DeleteSymptoms(idSympt)
@@ -48,7 +54,6 @@ Public Class FrmAlertRemove
             MessageBox.Show(ex.Message)
         End Try
     End Sub
-
     Public Sub DeletePath()
         Try
             log.DeletePathology(idPath)
@@ -57,5 +62,15 @@ Public Class FrmAlertRemove
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
+    End Sub
+
+    Private Sub BtnClose_Click(sender As Object, e As EventArgs) Handles BtnClose.Click
+        Me.Close()
+    End Sub
+
+    Private Sub TxtPin_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtPin.KeyPress
+        If Not Char.IsDigit(e.KeyChar) And e.KeyChar <> vbBack Then
+            e.Handled = True
+        End If
     End Sub
 End Class

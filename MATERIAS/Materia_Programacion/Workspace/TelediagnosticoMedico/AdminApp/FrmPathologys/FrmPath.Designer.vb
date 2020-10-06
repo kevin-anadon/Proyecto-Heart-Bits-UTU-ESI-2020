@@ -26,9 +26,6 @@ Partial Class FrmPath
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Me.BtnClose = New BWCMM.MZButtonWindows()
-        Me.BtnMax = New BWCMM.MZButtonWindows()
-        Me.BtnMin = New BWCMM.MZButtonWindows()
         Me.BtnDelPat = New Guna.UI.WinForms.GunaButton()
         Me.BtnAddPat = New Guna.UI.WinForms.GunaButton()
         Me.PanelLeft = New System.Windows.Forms.Panel()
@@ -52,6 +49,8 @@ Partial Class FrmPath
         Me.LblListado = New System.Windows.Forms.Label()
         Me.BtnMod = New Guna.UI.WinForms.GunaButton()
         Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
+        Me.BtnMin = New Guna.UI.WinForms.GunaButton()
+        Me.BtnClose = New Guna.UI.WinForms.GunaButton()
         Me.PanelLeft.SuspendLayout()
         Me.PanelButtons.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -60,51 +59,6 @@ Partial Class FrmPath
         Me.PnlTittle.SuspendLayout()
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'BtnClose
-        '
-        Me.BtnClose.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnClose.BackColor = System.Drawing.Color.White
-        Me.BtnClose.BackgroundImage = CType(resources.GetObject("BtnClose.BackgroundImage"), System.Drawing.Image)
-        Me.BtnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.BtnClose.Cursor = System.Windows.Forms.Cursors.Default
-        Me.BtnClose.EstiloButton = BWCMM.MZButtonWindows.EstiloDeButton.Windows
-        Me.BtnClose.Location = New System.Drawing.Point(1020, 0)
-        Me.BtnClose.Name = "BtnClose"
-        Me.BtnClose.ParentControl = Me
-        Me.BtnClose.Size = New System.Drawing.Size(40, 24)
-        Me.BtnClose.TabIndex = 13
-        Me.BtnClose.TipoButton = BWCMM.MZButtonWindows.ModeButton.Close
-        '
-        'BtnMax
-        '
-        Me.BtnMax.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnMax.BackColor = System.Drawing.Color.White
-        Me.BtnMax.BackgroundImage = CType(resources.GetObject("BtnMax.BackgroundImage"), System.Drawing.Image)
-        Me.BtnMax.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.BtnMax.Cursor = System.Windows.Forms.Cursors.Default
-        Me.BtnMax.EstiloButton = BWCMM.MZButtonWindows.EstiloDeButton.Windows
-        Me.BtnMax.Location = New System.Drawing.Point(980, 0)
-        Me.BtnMax.Name = "BtnMax"
-        Me.BtnMax.ParentControl = Me
-        Me.BtnMax.Size = New System.Drawing.Size(40, 24)
-        Me.BtnMax.TabIndex = 14
-        Me.BtnMax.TipoButton = BWCMM.MZButtonWindows.ModeButton.Maximize
-        '
-        'BtnMin
-        '
-        Me.BtnMin.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnMin.BackColor = System.Drawing.Color.White
-        Me.BtnMin.BackgroundImage = CType(resources.GetObject("BtnMin.BackgroundImage"), System.Drawing.Image)
-        Me.BtnMin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.BtnMin.Cursor = System.Windows.Forms.Cursors.Default
-        Me.BtnMin.EstiloButton = BWCMM.MZButtonWindows.EstiloDeButton.Windows
-        Me.BtnMin.Location = New System.Drawing.Point(940, 0)
-        Me.BtnMin.Name = "BtnMin"
-        Me.BtnMin.ParentControl = Me
-        Me.BtnMin.Size = New System.Drawing.Size(40, 24)
-        Me.BtnMin.TabIndex = 15
-        Me.BtnMin.TipoButton = BWCMM.MZButtonWindows.ModeButton.Minimize
         '
         'BtnDelPat
         '
@@ -346,7 +300,6 @@ Partial Class FrmPath
         Me.BtnAdmin.Size = New System.Drawing.Size(146, 30)
         Me.BtnAdmin.TabIndex = 25
         Me.BtnAdmin.Text = "Administradores"
-        Me.BtnAdmin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.BtnAdmin.TextOffsetX = 2
         '
         'BtnMed
@@ -622,12 +575,61 @@ Partial Class FrmPath
         Me.Guna2PictureBox1.TabStop = False
         Me.Guna2PictureBox1.UseTransparentBackground = True
         '
+        'BtnMin
+        '
+        Me.BtnMin.AnimationHoverSpeed = 0.07!
+        Me.BtnMin.AnimationSpeed = 0.03!
+        Me.BtnMin.BackColor = System.Drawing.Color.Transparent
+        Me.BtnMin.BaseColor = System.Drawing.Color.Transparent
+        Me.BtnMin.BorderColor = System.Drawing.Color.Black
+        Me.BtnMin.DialogResult = System.Windows.Forms.DialogResult.None
+        Me.BtnMin.FocusedColor = System.Drawing.Color.Empty
+        Me.BtnMin.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.BtnMin.ForeColor = System.Drawing.Color.White
+        Me.BtnMin.Image = CType(resources.GetObject("BtnMin.Image"), System.Drawing.Image)
+        Me.BtnMin.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.BtnMin.ImageSize = New System.Drawing.Size(20, 20)
+        Me.BtnMin.Location = New System.Drawing.Point(987, 0)
+        Me.BtnMin.Name = "BtnMin"
+        Me.BtnMin.OnHoverBaseColor = System.Drawing.Color.Transparent
+        Me.BtnMin.OnHoverBorderColor = System.Drawing.Color.Transparent
+        Me.BtnMin.OnHoverForeColor = System.Drawing.Color.White
+        Me.BtnMin.OnHoverImage = Nothing
+        Me.BtnMin.OnPressedColor = System.Drawing.Color.Black
+        Me.BtnMin.Size = New System.Drawing.Size(40, 24)
+        Me.BtnMin.TabIndex = 59
+        '
+        'BtnClose
+        '
+        Me.BtnClose.AnimationHoverSpeed = 0.07!
+        Me.BtnClose.AnimationSpeed = 0.03!
+        Me.BtnClose.BackColor = System.Drawing.Color.Transparent
+        Me.BtnClose.BaseColor = System.Drawing.Color.Transparent
+        Me.BtnClose.BorderColor = System.Drawing.Color.Black
+        Me.BtnClose.DialogResult = System.Windows.Forms.DialogResult.None
+        Me.BtnClose.FocusedColor = System.Drawing.Color.Empty
+        Me.BtnClose.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.BtnClose.ForeColor = System.Drawing.Color.White
+        Me.BtnClose.Image = CType(resources.GetObject("BtnClose.Image"), System.Drawing.Image)
+        Me.BtnClose.ImageSize = New System.Drawing.Size(20, 20)
+        Me.BtnClose.Location = New System.Drawing.Point(1020, 0)
+        Me.BtnClose.Name = "BtnClose"
+        Me.BtnClose.OnHoverBaseColor = System.Drawing.Color.Transparent
+        Me.BtnClose.OnHoverBorderColor = System.Drawing.Color.Transparent
+        Me.BtnClose.OnHoverForeColor = System.Drawing.Color.White
+        Me.BtnClose.OnHoverImage = Nothing
+        Me.BtnClose.OnPressedColor = System.Drawing.Color.Black
+        Me.BtnClose.Size = New System.Drawing.Size(40, 24)
+        Me.BtnClose.TabIndex = 58
+        '
         'FrmPath
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(1060, 640)
+        Me.Controls.Add(Me.BtnMin)
+        Me.Controls.Add(Me.BtnClose)
         Me.Controls.Add(Me.LblCrit)
         Me.Controls.Add(Me.PnlTittle)
         Me.Controls.Add(Me.TxtPat)
@@ -638,9 +640,6 @@ Partial Class FrmPath
         Me.Controls.Add(Me.LblListado)
         Me.Controls.Add(Me.DgvPat)
         Me.Controls.Add(Me.PanelLeft)
-        Me.Controls.Add(Me.BtnMin)
-        Me.Controls.Add(Me.BtnMax)
-        Me.Controls.Add(Me.BtnClose)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmPath"
@@ -655,9 +654,6 @@ Partial Class FrmPath
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents BtnClose As BWCMM.MZButtonWindows
-    Friend WithEvents BtnMin As BWCMM.MZButtonWindows
-    Friend WithEvents BtnMax As BWCMM.MZButtonWindows
     Friend WithEvents BtnDelPat As Guna.UI.WinForms.GunaButton
     Friend WithEvents BtnAddPat As Guna.UI.WinForms.GunaButton
     Friend WithEvents PanelLeft As Panel
@@ -681,4 +677,6 @@ Partial Class FrmPath
     Friend WithEvents LblListado As Label
     Friend WithEvents BtnMod As Guna.UI.WinForms.GunaButton
     Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
+    Friend WithEvents BtnMin As Guna.UI.WinForms.GunaButton
+    Friend WithEvents BtnClose As Guna.UI.WinForms.GunaButton
 End Class

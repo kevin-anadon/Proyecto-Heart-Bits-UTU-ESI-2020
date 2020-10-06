@@ -36,7 +36,7 @@ Public Class FrmSympt
         End If
     End Sub
 
-    Private Sub MzButtonWindows1_Click(sender As Object, e As EventArgs) Handles MzButtonWindows1.Click
+    Private Sub MzButtonWindows1_Click(sender As Object, e As EventArgs)
         End
     End Sub
 
@@ -136,5 +136,9 @@ Public Class FrmSympt
         Dim frm As New FrmAdmin()
         Me.Dispose()
         frm.Show()
+    End Sub
+
+    Private Sub BtnClose_Click(sender As Object, e As EventArgs) Handles BtnClose.Click
+        End
     End Sub
 End Class

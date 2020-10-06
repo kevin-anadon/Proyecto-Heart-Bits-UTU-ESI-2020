@@ -20,6 +20,9 @@ Public Class Logic
     Public Function ObtainRegions() As List(Of Region)
         Return CQConnection.ObtainRegions()
     End Function
+    Public Function ObtainCities() As List(Of City)
+        Return CQConnection.ObtainCities()
+    End Function
     Public Function ObtainPriorities() As List(Of Priority)
         Return CQConnection.ObtainPriorities()
     End Function
@@ -196,24 +199,44 @@ Public Class Logic
     Public Function LoginAdmin(user As String, pass As String) As Admin
         Return CQConnection.LoginAdmin(user, pass)
     End Function
-    Public Function ObtainAdmins() As DataSet
+    Public Function SearchAdmin(Ci As Integer) As DataSet
+        Return CQConnection.SearchAdmin(Ci)
+    End Function
+    Public Function ObtainAdmins() As List(Of Admin)
         Return CQConnection.ObtainAdmins()
     End Function
+
+
+    Public Function ObtainAdminsDataSet() As DataSet
+        Return CQConnection.ObtainAdminsDataSet()
+    End Function
+    Public Sub DeleteAdmin(idAdmin As Integer)
+        Try
+            CQConnection.DeleteAdmin(idAdmin)
+        Catch ex As Exception
+            Throw New Exception(ex.Message)
+        End Try
+    End Sub
+    Public Sub AddAdmin(Admin As Admin)
+        Try
+            CQConnection.AddAdmin(Admin)
+        Catch ex As Exception
+            Throw New Exception(ex.Message)
+        End Try
+    End Sub
+    Public Sub UpdateAdmin(Admin As Admin)
+        Try
+            CQConnection.UpdateAdmin(Admin)
+        Catch ex As Exception
+            Throw New Exception(ex.Message)
+        End Try
+    End Sub
     Public Function MakePetition(idPatient As Integer, motive As String, datetI As String, datetF As String) As Boolean
         Return CQConnection.MakePetition(idPatient, motive, datetI, datetF)
     End Function
     Public Function StopPetition(idPatient As Integer, motive As String, datetI As String, datetF As String) As Boolean
         Return CQConnection.StopPetition(idPatient, motive, datetI, datetF)
     End Function
-
-
-
-
-
-
-
-
-
 
 
 

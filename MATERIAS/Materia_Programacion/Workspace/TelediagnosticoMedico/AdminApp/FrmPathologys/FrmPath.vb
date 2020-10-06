@@ -59,19 +59,6 @@ Public Class FrmPath
         ReloadDgv(1)
     End Sub
 
-    Private Sub TxtPat_TextChanged(sender As Object, e As EventArgs) Handles TxtPat.TextChanged
-        If Not TxtPat.Text.Equals("") Or Not TxtPat.Text = Nothing Then
-            Try
-                DgvPat.DataSource = log.SearchPathology(TxtPat.Text).Tables("Search")
-                DgvPat.Refresh()
-            Catch ex As Exception
-                MsgBox(ex.Message)
-            End Try
-        Else
-            ReloadDgv(2)
-        End If
-    End Sub
-
     Public Sub ModPath()
         Dim frmMod As New FrmAddModPath()
         Dim Pathmod As Pathology = Nothing
@@ -93,11 +80,11 @@ Public Class FrmPath
 
     End Sub
 
-    Private Sub DgvPat_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgvPat.CellDoubleClick 'Una forma de modificar una patología
+    Private Sub DgvPat_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgvPat.CellDoubleClick  'Una forma de modificar una patología
         ModPath()
     End Sub
 
-    Private Sub BtnMod_Click(sender As Object, e As EventArgs) Handles BtnMod.Click 'Otra manera de modificar una patología
+    Private Sub BtnMod_Click(sender As Object, e As EventArgs) Handles BtnMod.Click  'Otra manera de modificar una patología
         ModPath()
     End Sub
 
@@ -123,7 +110,7 @@ Public Class FrmPath
         TxtPat.Clear()
     End Sub
 
-    Private Sub BtnClose_Click(sender As Object, e As EventArgs) Handles BtnClose.Click
+    Private Sub BtnClose_Click(sender As Object, e As EventArgs)
         End
     End Sub
 
@@ -131,5 +118,22 @@ Public Class FrmPath
         Dim frm As New FrmAdmin()
         Me.Dispose()
         frm.Show()
+    End Sub
+
+    Private Sub TxtPat_TextChanged(sender As Object, e As EventArgs) Handles TxtPat.TextChanged
+        If Not TxtPat.Text.Equals("") Or Not TxtPat.Text = Nothing Then
+            Try
+                DgvPat.DataSource = log.SearchPathology(TxtPat.Text).Tables("Search")
+                DgvPat.Refresh()
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            End Try
+        Else
+            ReloadDgv(3)
+        End If
+    End Sub
+
+    Private Sub BtnClose_Click_1(sender As Object, e As EventArgs) Handles BtnClose.Click
+        End
     End Sub
 End Class

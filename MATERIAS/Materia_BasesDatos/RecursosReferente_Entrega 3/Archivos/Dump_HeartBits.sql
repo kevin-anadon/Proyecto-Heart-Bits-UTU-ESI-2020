@@ -315,7 +315,6 @@ CREATE TABLE `persona` (
   UNIQUE KEY `ci` (`ci`),
   UNIQUE KEY `email` (`email`),
   UNIQUE KEY `usuario` (`usuario`),
-  UNIQUE KEY `contrasena` (`contrasena`),
   KEY `id_tipo` (`id_tipo`),
   KEY `id_ciudad` (`id_ciudad`),
   CONSTRAINT `persona_ibfk_1` FOREIGN KEY (`id_tipo`) REFERENCES `tipo_persona` (`id`),
