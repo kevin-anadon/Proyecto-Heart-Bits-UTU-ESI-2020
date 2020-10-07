@@ -22,6 +22,7 @@ Partial Class FrmHome
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmHome))
         Me.PanelLeft = New System.Windows.Forms.Panel()
         Me.PanelButtons = New System.Windows.Forms.Panel()
@@ -52,6 +53,7 @@ Partial Class FrmHome
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PicHome = New System.Windows.Forms.PictureBox()
         Me.PicSys = New System.Windows.Forms.PictureBox()
+        Me.DragCtrl = New Guna.UI2.WinForms.Guna2DragControl(Me.components)
         Me.PanelLeft.SuspendLayout()
         Me.PanelButtons.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -626,6 +628,10 @@ Partial Class FrmHome
         Me.PicSys.TabIndex = 2
         Me.PicSys.TabStop = False
         '
+        'DragCtrl
+        '
+        Me.DragCtrl.TargetControl = Me.PanelHome
+        '
         'FrmHome
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -681,4 +687,5 @@ Partial Class FrmHome
     Public WithEvents Label3 As Label
     Public WithEvents LblCi As Label
     Public WithEvents Label9 As Label
+    Friend WithEvents DragCtrl As Guna.UI2.WinForms.Guna2DragControl
 End Class

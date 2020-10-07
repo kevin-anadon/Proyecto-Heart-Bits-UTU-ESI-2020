@@ -231,6 +231,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Login_ Type 2.jpg" />
+    <None Include="Resources\AdminWhite.png" />
+    <None Include="Resources\GreenPerson.png" />
     <Content Include="TelediganosticoMedico_Logo.ico" />
   </ItemGroup>
   <ItemGroup>

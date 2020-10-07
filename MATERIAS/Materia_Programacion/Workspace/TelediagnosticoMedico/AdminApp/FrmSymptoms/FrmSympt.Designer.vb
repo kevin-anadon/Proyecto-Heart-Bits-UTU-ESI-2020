@@ -22,6 +22,7 @@ Partial Class FrmSympt
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmSympt))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -51,6 +52,7 @@ Partial Class FrmSympt
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Guna2ControlBox2 = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.Guna2ControlBox1 = New Guna.UI2.WinForms.Guna2ControlBox()
+        Me.DragCtrl = New Guna.UI2.WinForms.Guna2DragControl(Me.components)
         Me.PanelButtons.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelLeft.SuspendLayout()
@@ -599,6 +601,10 @@ Partial Class FrmSympt
         Me.Guna2ControlBox1.Size = New System.Drawing.Size(45, 29)
         Me.Guna2ControlBox1.TabIndex = 60
         '
+        'DragCtrl
+        '
+        Me.DragCtrl.TargetControl = Me
+        '
         'FrmSympt
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -656,4 +662,5 @@ Partial Class FrmSympt
     Friend WithEvents Label1 As Label
     Friend WithEvents Guna2ControlBox2 As Guna.UI2.WinForms.Guna2ControlBox
     Friend WithEvents Guna2ControlBox1 As Guna.UI2.WinForms.Guna2ControlBox
+    Friend WithEvents DragCtrl As Guna.UI2.WinForms.Guna2DragControl
 End Class
