@@ -24,13 +24,13 @@ Partial Class FrmAdmin
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmAdmin))
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.PanelLeft = New System.Windows.Forms.Panel()
         Me.PanelButtons = New System.Windows.Forms.Panel()
-        Me.DragCtrl = New Guna.UI2.WinForms.Guna2DragControl(Me.components)
         Me.BtnFaq = New Guna.UI.WinForms.GunaButton()
+        Me.PicBar = New System.Windows.Forms.PictureBox()
         Me.BtnLogout = New Guna.UI.WinForms.GunaButton()
         Me.BtnPath = New Guna.UI.WinForms.GunaButton()
         Me.BtnSympt = New Guna.UI.WinForms.GunaButton()
@@ -39,6 +39,7 @@ Partial Class FrmAdmin
         Me.BtnPac = New Guna.UI.WinForms.GunaButton()
         Me.BtnHome = New Guna.UI.WinForms.GunaButton()
         Me.PicLogo = New System.Windows.Forms.PictureBox()
+        Me.DragCtrl = New Guna.UI2.WinForms.Guna2DragControl(Me.components)
         Me.PnlBod = New Guna.UI.WinForms.GunaPanel()
         Me.Guna2ControlBox2 = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.Guna2ControlBox1 = New Guna.UI2.WinForms.Guna2ControlBox()
@@ -52,15 +53,16 @@ Partial Class FrmAdmin
         Me.LblCrit = New System.Windows.Forms.Label()
         Me.PnlTittle = New Guna.UI2.WinForms.Guna2Panel()
         Me.LblTittle = New System.Windows.Forms.Label()
-        Me.PicBar = New System.Windows.Forms.PictureBox()
+        Me.Elipse = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
+        Me.BtnAllow = New Guna.UI.WinForms.GunaButton()
         Me.PanelLeft.SuspendLayout()
         Me.PanelButtons.SuspendLayout()
+        CType(Me.PicBar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PicLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PnlBod.SuspendLayout()
         CType(Me.DgvAdmin, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PicBusqueda, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PnlTittle.SuspendLayout()
-        CType(Me.PicBar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PanelLeft
@@ -89,10 +91,6 @@ Partial Class FrmAdmin
         Me.PanelButtons.Size = New System.Drawing.Size(166, 515)
         Me.PanelButtons.TabIndex = 1
         '
-        'DragCtrl
-        '
-        Me.DragCtrl.TargetControl = Me.PnlBod
-        '
         'BtnFaq
         '
         Me.BtnFaq.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -120,6 +118,16 @@ Partial Class FrmAdmin
         Me.BtnFaq.TabIndex = 29
         Me.BtnFaq.Text = "FAQ"
         Me.BtnFaq.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'PicBar
+        '
+        Me.PicBar.BackColor = System.Drawing.Color.Transparent
+        Me.PicBar.Image = CType(resources.GetObject("PicBar.Image"), System.Drawing.Image)
+        Me.PicBar.Location = New System.Drawing.Point(159, 130)
+        Me.PicBar.Name = "PicBar"
+        Me.PicBar.Size = New System.Drawing.Size(10, 30)
+        Me.PicBar.TabIndex = 30
+        Me.PicBar.TabStop = False
         '
         'BtnLogout
         '
@@ -325,9 +333,14 @@ Partial Class FrmAdmin
         Me.PicLogo.TabIndex = 0
         Me.PicLogo.TabStop = False
         '
+        'DragCtrl
+        '
+        Me.DragCtrl.TargetControl = Me.PnlBod
+        '
         'PnlBod
         '
         Me.PnlBod.BackgroundImage = CType(resources.GetObject("PnlBod.BackgroundImage"), System.Drawing.Image)
+        Me.PnlBod.Controls.Add(Me.BtnAllow)
         Me.PnlBod.Controls.Add(Me.Guna2ControlBox2)
         Me.PnlBod.Controls.Add(Me.Guna2ControlBox1)
         Me.PnlBod.Controls.Add(Me.BtnModAdmin)
@@ -475,30 +488,30 @@ Partial Class FrmAdmin
         '
         'DgvAdmin
         '
-        DataGridViewCellStyle10.BackColor = System.Drawing.Color.White
-        Me.DgvAdmin.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle10
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
+        Me.DgvAdmin.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.DgvAdmin.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DgvAdmin.BackgroundColor = System.Drawing.Color.White
         Me.DgvAdmin.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.DgvAdmin.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.DgvAdmin.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle11.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle11.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DgvAdmin.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle11
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DgvAdmin.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.DgvAdmin.ColumnHeadersHeight = 26
-        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle12.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle12.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DgvAdmin.DefaultCellStyle = DataGridViewCellStyle12
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DgvAdmin.DefaultCellStyle = DataGridViewCellStyle3
         Me.DgvAdmin.EnableHeadersVisualStyles = False
         Me.DgvAdmin.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.DgvAdmin.Location = New System.Drawing.Point(13, 240)
@@ -606,15 +619,40 @@ Partial Class FrmAdmin
         Me.LblTittle.Text = "GESTIÓN DE ADMINISTRADORES"
         Me.LblTittle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'PicBar
+        'Elipse
         '
-        Me.PicBar.BackColor = System.Drawing.Color.Transparent
-        Me.PicBar.Image = CType(resources.GetObject("PicBar.Image"), System.Drawing.Image)
-        Me.PicBar.Location = New System.Drawing.Point(159, 130)
-        Me.PicBar.Name = "PicBar"
-        Me.PicBar.Size = New System.Drawing.Size(10, 30)
-        Me.PicBar.TabIndex = 30
-        Me.PicBar.TabStop = False
+        Me.Elipse.BorderRadius = 10
+        Me.Elipse.TargetControl = Me
+        '
+        'BtnAllow
+        '
+        Me.BtnAllow.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnAllow.Animated = True
+        Me.BtnAllow.AnimationHoverSpeed = 0.07!
+        Me.BtnAllow.AnimationSpeed = 0.03!
+        Me.BtnAllow.BackColor = System.Drawing.Color.Transparent
+        Me.BtnAllow.BaseColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.BtnAllow.BorderColor = System.Drawing.Color.Black
+        Me.BtnAllow.DialogResult = System.Windows.Forms.DialogResult.None
+        Me.BtnAllow.FocusedColor = System.Drawing.Color.Empty
+        Me.BtnAllow.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnAllow.ForeColor = System.Drawing.Color.White
+        Me.BtnAllow.Image = CType(resources.GetObject("BtnAllow.Image"), System.Drawing.Image)
+        Me.BtnAllow.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.BtnAllow.ImageOffsetX = -4
+        Me.BtnAllow.ImageSize = New System.Drawing.Size(13, 11)
+        Me.BtnAllow.Location = New System.Drawing.Point(270, 214)
+        Me.BtnAllow.Name = "BtnAllow"
+        Me.BtnAllow.OnHoverBaseColor = System.Drawing.Color.Teal
+        Me.BtnAllow.OnHoverBorderColor = System.Drawing.Color.Black
+        Me.BtnAllow.OnHoverForeColor = System.Drawing.Color.White
+        Me.BtnAllow.OnHoverImage = Nothing
+        Me.BtnAllow.OnPressedColor = System.Drawing.Color.Black
+        Me.BtnAllow.Radius = 11
+        Me.BtnAllow.Size = New System.Drawing.Size(96, 20)
+        Me.BtnAllow.TabIndex = 60
+        Me.BtnAllow.Text = "HABILITAR"
+        Me.BtnAllow.Visible = False
         '
         'FrmAdmin
         '
@@ -630,12 +668,12 @@ Partial Class FrmAdmin
         Me.Text = "FrmAdmin"
         Me.PanelLeft.ResumeLayout(False)
         Me.PanelButtons.ResumeLayout(False)
+        CType(Me.PicBar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PicLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PnlBod.ResumeLayout(False)
         CType(Me.DgvAdmin, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PicBusqueda, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PnlTittle.ResumeLayout(False)
-        CType(Me.PicBar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -665,4 +703,6 @@ Partial Class FrmAdmin
     Friend WithEvents Guna2ControlBox1 As Guna.UI2.WinForms.Guna2ControlBox
     Friend WithEvents DragCtrl As Guna.UI2.WinForms.Guna2DragControl
     Friend WithEvents PicBar As PictureBox
+    Friend WithEvents Elipse As Guna.UI2.WinForms.Guna2Elipse
+    Friend WithEvents BtnAllow As Guna.UI.WinForms.GunaButton
 End Class

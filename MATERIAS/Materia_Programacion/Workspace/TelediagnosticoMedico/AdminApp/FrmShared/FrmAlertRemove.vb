@@ -7,6 +7,8 @@ Public Class FrmAlertRemove
     Public Shared idSympt As Integer = 0
     Public Shared idPath As Integer = 0
     Public Shared idAdmin As Integer = 0
+    Public Shared idMedic As Integer = 0
+    Public Shared idPatient As Integer = 0
 
     Public Sub Obtain(s As String, i As Integer)
         NameX = s
@@ -28,6 +30,10 @@ Public Class FrmAlertRemove
                     DeletePath()
                 ElseIf id = 2 Then
                     DeleteAdmin()
+                ElseIf id = 3 Then
+                    DeleteMedic()
+                ElseIf id = 4 Then
+                    DeletePatient()
                 End If
             Else
                 Console.WriteLine("----PIN INCORRECTO----")
@@ -39,6 +45,24 @@ Public Class FrmAlertRemove
     Public Sub DeleteAdmin()
         Try
             log.DeleteAdmin(idAdmin)
+            MessageBox.Show(NameX & " eliminado con exito")
+            Me.Close()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
+    Public Sub DeleteMedic()
+        Try
+            log.DeleteMedic(idMedic)
+            MessageBox.Show(NameX & " eliminado con exito")
+            Me.Close()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
+    Public Sub DeletePatient()
+        Try
+            log.DeletePatient(idPatient)
             MessageBox.Show(NameX & " eliminado con exito")
             Me.Close()
         Catch ex As Exception

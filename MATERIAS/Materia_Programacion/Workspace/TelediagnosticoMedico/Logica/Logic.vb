@@ -37,6 +37,9 @@ Public Class Logic
     Public Function ObtainMortalityPath(pat As String) As Integer
         Return CQConnection.ObtainMortalityPath(pat)
     End Function
+    Public Function ObtainSpecialities() As List(Of String)
+        Return CQConnection.ObtainSpecialities()
+    End Function
     Public Function ObtainTreatments(pat As String) As List(Of Treatment)
         Return CQConnection.ObtainTreatments(pat)
     End Function
@@ -205,8 +208,6 @@ Public Class Logic
     Public Function ObtainAdmins() As List(Of Admin)
         Return CQConnection.ObtainAdmins()
     End Function
-
-
     Public Function ObtainAdminsDataSet() As DataSet
         Return CQConnection.ObtainAdminsDataSet()
     End Function
@@ -231,6 +232,72 @@ Public Class Logic
             Throw New Exception(ex.Message)
         End Try
     End Sub
+    Public Function ObtainMedics() As List(Of Medic)
+        Return CQConnection.ObtainMedics()
+    End Function
+    Public Function ObtainMedicsDataSet() As DataSet
+        Return CQConnection.ObtainMedicsDataSet()
+    End Function
+    Public Sub AddMedic(Medic As Medic)
+        Try
+            CQConnection.AddMedic(Medic)
+        Catch ex As Exception
+            Throw New Exception(ex.Message)
+        End Try
+    End Sub
+    Public Sub UpdateMedic(Medic As Medic)
+        Try
+            CQConnection.UpdateMedic(Medic)
+        Catch ex As Exception
+            Throw New Exception(ex.Message)
+        End Try
+    End Sub
+    Public Sub DeleteMedic(idMedic As Integer)
+        Try
+            CQConnection.DeleteMedic(idMedic)
+        Catch ex As Exception
+            Throw New Exception(ex.Message)
+        End Try
+    End Sub
+    Public Function SearchMedic(Ci As Integer) As DataSet
+        Return CQConnection.SearchMedic(Ci)
+    End Function
+    Public Function ObtainPatients() As List(Of People)
+        Return CQConnection.ObtainPatients()
+    End Function
+    Public Function ObtainPatientsDataSet() As DataSet
+        Return CQConnection.ObtainPatientsDataSet()
+    End Function
+    Public Sub AddPatient(Patient As People)
+        Try
+            CQConnection.AddPatient(Patient)
+        Catch ex As Exception
+            Throw New Exception(ex.Message)
+        End Try
+    End Sub
+    Public Sub UpdatePatient(Patient As People)
+        Try
+            CQConnection.UpdatePatient(Patient)
+        Catch ex As Exception
+            Throw New Exception(ex.Message)
+        End Try
+    End Sub
+    Public Sub DeletePatient(idPatient As Integer)
+        Try
+            CQConnection.DeletePatient(idPatient)
+        Catch ex As Exception
+            Throw New Exception(ex.Message)
+        End Try
+    End Sub
+    Public Sub AllowPatient(idPatient As Integer)
+        CQConnection.AllowPatient(idPatient)
+    End Sub
+    Public Sub DisablePatient(idPatient As Integer)
+        CQConnection.DisablePatient(idPatient)
+    End Sub
+    Public Function SearchPatient(Ci As Integer) As DataSet
+        Return CQConnection.SearchPatient(Ci)
+    End Function
     Public Function MakePetition(idPatient As Integer, motive As String, datetI As String, datetF As String) As Boolean
         Return CQConnection.MakePetition(idPatient, motive, datetI, datetF)
     End Function

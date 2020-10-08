@@ -54,6 +54,7 @@ Partial Class FrmHome
         Me.PicHome = New System.Windows.Forms.PictureBox()
         Me.PicSys = New System.Windows.Forms.PictureBox()
         Me.DragCtrl = New Guna.UI2.WinForms.Guna2DragControl(Me.components)
+        Me.Elipse = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.PanelLeft.SuspendLayout()
         Me.PanelButtons.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -632,6 +633,11 @@ Partial Class FrmHome
         '
         Me.DragCtrl.TargetControl = Me.PanelHome
         '
+        'Elipse
+        '
+        Me.Elipse.BorderRadius = 10
+        Me.Elipse.TargetControl = Me
+        '
         'FrmHome
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -688,4 +694,5 @@ Partial Class FrmHome
     Public WithEvents LblCi As Label
     Public WithEvents Label9 As Label
     Friend WithEvents DragCtrl As Guna.UI2.WinForms.Guna2DragControl
+    Friend WithEvents Elipse As Guna.UI2.WinForms.Guna2Elipse
 End Class

@@ -53,6 +53,7 @@ Partial Class FrmPath
         Me.Guna2ControlBox2 = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.Guna2ControlBox1 = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.DragCtrl = New Guna.UI2.WinForms.Guna2DragControl(Me.components)
+        Me.Elipse = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.PanelLeft.SuspendLayout()
         Me.PanelButtons.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -610,6 +611,11 @@ Partial Class FrmPath
         '
         Me.DragCtrl.TargetControl = Me
         '
+        'Elipse
+        '
+        Me.Elipse.BorderRadius = 10
+        Me.Elipse.TargetControl = Me
+        '
         'FrmPath
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -668,4 +674,5 @@ Partial Class FrmPath
     Friend WithEvents Guna2ControlBox2 As Guna.UI2.WinForms.Guna2ControlBox
     Friend WithEvents Guna2ControlBox1 As Guna.UI2.WinForms.Guna2ControlBox
     Friend WithEvents DragCtrl As Guna.UI2.WinForms.Guna2DragControl
+    Friend WithEvents Elipse As Guna.UI2.WinForms.Guna2Elipse
 End Class

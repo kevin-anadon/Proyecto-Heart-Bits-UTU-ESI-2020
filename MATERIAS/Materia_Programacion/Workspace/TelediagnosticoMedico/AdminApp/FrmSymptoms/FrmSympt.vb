@@ -135,6 +135,20 @@ Public Class FrmSympt
     Private Sub BtnAdmin_Click(sender As Object, e As EventArgs) Handles BtnAdmin.Click
         Dim frm As New FrmAdmin()
         Me.Dispose()
+        frm.IdentifyPeople(2)
+        frm.Show()
+    End Sub
+    Private Sub BtnPac_Click(sender As Object, e As EventArgs) Handles BtnPac.Click
+        Dim frm As New FrmAdmin()
+        Me.Dispose()
+        frm.IdentifyPeople(1)
+        frm.Show()
+    End Sub
+
+    Private Sub BtnMed_Click(sender As Object, e As EventArgs) Handles BtnMed.Click
+        Dim frm As New FrmAdmin()
+        Me.Dispose()
+        frm.IdentifyPeople(0)
         frm.Show()
     End Sub
     Private Sub Guna2ControlBox1_Click(sender As Object, e As EventArgs) Handles Guna2ControlBox1.Click
