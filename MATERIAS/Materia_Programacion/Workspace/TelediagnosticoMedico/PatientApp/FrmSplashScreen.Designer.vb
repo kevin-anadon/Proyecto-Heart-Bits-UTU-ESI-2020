@@ -229,6 +229,7 @@ Partial Class FrmSplashScreen
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmSplashScreen"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Telediagnóstico Médico: PatientApp."
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PicbxLogoCAS, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

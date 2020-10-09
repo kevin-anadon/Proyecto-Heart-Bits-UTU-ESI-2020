@@ -13,6 +13,8 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Data", "Data\Data.vbproj", 
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "PatientApp", "PatientApp\PatientApp.vbproj", "{015F1C42-A980-43A3-8201-1C7D800EFED4}"
 EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "MedicApp", "MedicApp\MedicApp.vbproj", "{0AEEB590-CEF5-44B4-A05F-625A86E769DC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{015F1C42-A980-43A3-8201-1C7D800EFED4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{015F1C42-A980-43A3-8201-1C7D800EFED4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{015F1C42-A980-43A3-8201-1C7D800EFED4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0AEEB590-CEF5-44B4-A05F-625A86E769DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AEEB590-CEF5-44B4-A05F-625A86E769DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AEEB590-CEF5-44B4-A05F-625A86E769DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AEEB590-CEF5-44B4-A05F-625A86E769DC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

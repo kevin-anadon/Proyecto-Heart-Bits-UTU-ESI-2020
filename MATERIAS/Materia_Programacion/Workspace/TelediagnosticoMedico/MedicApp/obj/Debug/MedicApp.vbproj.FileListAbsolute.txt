@@ -1,0 +1,14 @@
+C:\Users\Yorel Acosta\Desktop\Study ESIMdeo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\MedicApp\bin\Debug\MedicApp.exe
+C:\Users\Yorel Acosta\Desktop\Study ESIMdeo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\MedicApp\bin\Debug\MedicApp.pdb
+C:\Users\Yorel Acosta\Desktop\Study ESIMdeo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\MedicApp\bin\Debug\MedicApp.xml
+C:\Users\Yorel Acosta\Desktop\Study ESIMdeo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\MedicApp\bin\Debug\Guna.UI2.dll
+C:\Users\Yorel Acosta\Desktop\Study ESIMdeo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\MedicApp\obj\Debug\MedicApp.vbprojAssemblyReference.cache
+C:\Users\Yorel Acosta\Desktop\Study ESIMdeo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\MedicApp\obj\Debug\MedicApp.FrmLogin.resources
+C:\Users\Yorel Acosta\Desktop\Study ESIMdeo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\MedicApp\obj\Debug\MedicApp.FrmSplashScreen.resources
+C:\Users\Yorel Acosta\Desktop\Study ESIMdeo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\MedicApp\obj\Debug\MedicApp.Resources.resources
+C:\Users\Yorel Acosta\Desktop\Study ESIMdeo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\MedicApp\obj\Debug\MedicApp.vbproj.GenerateResource.cache
+C:\Users\Yorel Acosta\Desktop\Study ESIMdeo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\MedicApp\obj\Debug\MedicApp.vbproj.CoreCompileInputs.cache
+C:\Users\Yorel Acosta\Desktop\Study ESIMdeo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\MedicApp\obj\Debug\MedicApp.vbproj.CopyComplete
+C:\Users\Yorel Acosta\Desktop\Study ESIMdeo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\MedicApp\obj\Debug\MedicApp.exe
+C:\Users\Yorel Acosta\Desktop\Study ESIMdeo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\MedicApp\obj\Debug\MedicApp.xml
+C:\Users\Yorel Acosta\Desktop\Study ESIMdeo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\MedicApp\obj\Debug\MedicApp.pdb

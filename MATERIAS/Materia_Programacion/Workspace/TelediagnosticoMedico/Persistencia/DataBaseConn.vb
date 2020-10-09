@@ -6,7 +6,7 @@ Public Class DataBaseConn
     Private Function Connect() As Connection
         Try
             Dim connection As New Connection()
-            connection.ConnectionString = "driver={MySql ODBC 8.0 Unicode Driver};server=127.0.0.1;port=3306;database=telediagnosticomedico_heartbits;uid=root;pwd=;"
+            connection.ConnectionString = "driver={MySql ODBC 8.0 Unicode Driver};server=vdo.dyndns.org;port=3306;database=telediagnosticomedico_heartbits;uid=heartbits;pwd=h34rtbits;"
             connection.Open()
             Return connection
         Catch ex As Exception
@@ -19,7 +19,7 @@ Public Class DataBaseConn
         Dim con As New Connection()
 
         Try
-            con.ConnectionString = "driver={MySql ODBC 8.0 Unicode Driver};server=127.0.0.1;port=3306;database=telediagnosticomedico_heartbits;uid=root;pwd=;"
+            con.ConnectionString = "driver={MySql ODBC 8.0 Unicode Driver};server=vdo.dyndns.org;port=3306;database=telediagnosticomedico_heartbits;uid=heartbits;pwd=h34rtbits;"
             con.Open()
         Catch ex As Exception
             Console.WriteLine(ex.ToString())
@@ -1147,7 +1147,7 @@ Public Class DataBaseConn
             End If
 
             For Each e As Integer In idSympSuffered
-                Dim rsInsert As Recordset = con.Execute("INSERT INTO paciente_sufre(id_sintoma, id_paciente) VALUES(" & e & "," & idPatient & ");")
+                Dim rsInsert As Recordset = con.Execute("INSERT INTO paciente_sufre(id_sintoma, id_paciente,fecha) VALUES(" & e & "," & idPatient & ",'" & "2020" & "');")
             Next
         Catch ex As Exception
             Console.WriteLine(ex)
@@ -1181,7 +1181,7 @@ Public Class DataBaseConn
     End Function
     Public Sub UnsuscribePatient(idPatient As Integer)
         Dim con As Connection = Me.Connect
-        Dim rsUpdate As Recordset = con.Execute("UPDATE persona  SET habilitado=false WHERE ci=" & idPatient)
+        Dim rsUpdate As Recordset = con.Execute("UPDATE persona SET habilitado=false WHERE ci=" & idPatient)
         con.Close()
     End Sub
     Public Function MakePetition(idPatient As Integer, motive As String, datetI As String, datetF As String) As Boolean

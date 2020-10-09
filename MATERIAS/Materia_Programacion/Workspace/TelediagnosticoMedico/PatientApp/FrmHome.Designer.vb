@@ -2064,6 +2064,7 @@ Partial Class FrmHome
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmHome"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Telediagnóstico Médico: PatientApp."
         Me.PnlLeft.ResumeLayout(False)
         Me.PnlLeft.PerformLayout()
         CType(Me.Pctbx5_Chat, System.ComponentModel.ISupportInitialize).EndInit()
