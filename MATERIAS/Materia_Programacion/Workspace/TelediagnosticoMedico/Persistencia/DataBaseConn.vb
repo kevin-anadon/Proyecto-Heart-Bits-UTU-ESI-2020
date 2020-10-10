@@ -6,7 +6,8 @@ Public Class DataBaseConn
     Private Function Connect() As Connection
         Try
             Dim connection As New Connection()
-            connection.ConnectionString = "driver={MySql ODBC 8.0 Unicode Driver};server=vdo.dyndns.org;port=3306;database=telediagnosticomedico_heartbits;uid=heartbits;pwd=h34rtbits;"
+            'connection.ConnectionString = "driver={MySql ODBC 8.0 Unicode Driver};server=vdo.dyndns.org;port=3306;database=telediagnosticomedico_heartbits;uid=heartbits;pwd=h34rtbits;"
+            connection.ConnectionString = "driver={MySql ODBC 8.0 Unicode Driver};server=127.17.0.0;port=3306;database=telediagnosticomedico_heartbits;uid=root;pwd=;"
             connection.Open()
             Return connection
         Catch ex As Exception
@@ -19,7 +20,9 @@ Public Class DataBaseConn
         Dim con As New Connection()
 
         Try
-            con.ConnectionString = "driver={MySql ODBC 8.0 Unicode Driver};server=vdo.dyndns.org;port=3306;database=telediagnosticomedico_heartbits;uid=heartbits;pwd=h34rtbits;"
+            'con.ConnectionString = "driver={MySql ODBC 8.0 Unicode Driver};server=vdo.dyndns.org;port=3306;database=telediagnosticomedico_heartbits;uid=heartbits;pwd=h34rtbits;"
+            con.ConnectionString = "driver={MySql ODBC 8.0 Unicode Driver};server=127.17.0.0;port=3306;database=telediagnosticomedico_heartbits;uid=root;pwd=;"
+
             con.Open()
         Catch ex As Exception
             Console.WriteLine(ex.ToString())
@@ -1126,17 +1129,17 @@ Public Class DataBaseConn
     Public Function matchPatientLoggedOn(ci As String) As Integer
         Dim con As Connection = Me.Connect()
         Try
-            Dim rsSelectIdPatient As Recordset = con.Execute("SELECT id FROM persona pat WHERE ci='" + ci + "';")
+            Dim rsSelectIdPatient As Recordset = con.Execute("SELECT id FROM persona WHERE ci='" + ci + "';")
             Dim idPatientLoggedOn As Integer = DirectCast(rsSelectIdPatient.Fields("id").Value, Integer)
             Return idPatientLoggedOn
         Catch ex As Exception
-            Console.WriteLine(ex)
+            Console.WriteLine(ex.Message)
             Return Nothing
         Finally
             con.Close()
         End Try
     End Function
-    Public Sub SetPatientSufferSymp(idPatient As Integer, idSympSuffered As List(Of Integer))
+    Public Sub SetPatientSufferSymp(idPatient As Integer, idSympSuffered As List(Of Integer), nowDate As String)
         Dim con As Connection = Me.Connect()
 
         Try
@@ -1147,7 +1150,7 @@ Public Class DataBaseConn
             End If
 
             For Each e As Integer In idSympSuffered
-                Dim rsInsert As Recordset = con.Execute("INSERT INTO paciente_sufre(id_sintoma, id_paciente,fecha) VALUES(" & e & "," & idPatient & ",'" & "2020" & "');")
+                Dim rsInsert As Recordset = con.Execute("INSERT INTO paciente_sufre(id_sintoma, id_paciente,fecha) VALUES(" & e & "," & idPatient & ",'" & nowDate & "');")
             Next
         Catch ex As Exception
             Console.WriteLine(ex)
@@ -1217,7 +1220,6 @@ Public Class DataBaseConn
             con.Close()
         End Try
     End Function
-
     Public Function ObtainCities() As List(Of City)
         Dim con As Connection = Me.Connect()
         Dim ListCitys As New List(Of City)

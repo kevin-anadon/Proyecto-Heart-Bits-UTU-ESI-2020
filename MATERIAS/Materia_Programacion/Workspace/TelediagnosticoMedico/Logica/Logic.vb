@@ -184,11 +184,42 @@ Public Class Logic
 
 
     'Conexión Personas
+    Public Sub LoadSympSuffred(idPatientLoggedOn As Integer, sympSuffred As List(Of String))
+        Dim symptoms As New List(Of Data.Symptom)
+        Dim idSympSuffered As New List(Of Integer)
+
+        For Each symptomsSuffred In sympSuffred
+            For Each symptom As Symptom In symptoms
+                If symptom.Description.Equals(symptomsSuffred.ToString) Then
+                    idSympSuffered.Add(symptom.Id) 'Reconozco los Id de cada Sintoma que sufre el Paciente.
+                End If
+            Next 'For [symptom] para cada Síntoma existente. 
+        Next 'For [symptomsSuffred] para cada item del ListBox que contiene los Síntomas que Sufre el Paciente.
+
+        'Almaceno en la Base de Datos los Sintomas que sufre el Paciente, y su Id para referenciarlo
+        Me.SetPatientSufferSymp(idPatientLoggedOn, idSympSuffered, Me.GetNowDateTime(3))
+
+    End Sub
+    Public Function GetNowDateTime(prefix As Short)
+        Select Case prefix
+            Case 1 'Devuelve 'YYYY-MM-DD HH:MM:SS'
+                Dim nowDate As String = Now.ToString("yyy-MM-dd")
+                Dim nowHMS As String = Now.ToLongTimeString
+                Return nowDate + " " + nowHMS
+            Case 2 'Devuelve 'YYYY-MM-DD'
+                Return Now.ToString("yyy-MM-dd")
+            Case 3
+                Return Now.ToString("yyy")
+            Case Else
+                Return Nothing
+        End Select
+    End Function
+
     Public Function matchPatientLoggedOn(ci As String) As Integer
         Return CQConnection.matchPatientLoggedOn(ci)
     End Function
-    Public Sub SetPatientSufferSymp(idPatient As Integer, idSympSuffered As List(Of Integer))
-        CQConnection.SetPatientSufferSymp(idPatient, idSympSuffered)
+    Public Sub SetPatientSufferSymp(idPatient As Integer, idSympSuffered As List(Of Integer), nowDate As String)
+        CQConnection.SetPatientSufferSymp(idPatient, idSympSuffered, nowDate)
     End Sub
     Public Sub UnsuscribePatient(idPatient As Integer)
         CQConnection.UnsuscribePatient(idPatient)

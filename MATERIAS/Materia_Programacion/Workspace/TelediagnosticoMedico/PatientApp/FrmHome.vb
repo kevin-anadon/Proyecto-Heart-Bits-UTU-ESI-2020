@@ -1,6 +1,5 @@
 ﻿Imports Logic
 Imports Data
-Imports ADODB
 
 Public Class FrmHome
     'Resource Manager: Administrador de Recursos propios del Proyecto 'PatientApp'.
@@ -8,18 +7,15 @@ Public Class FrmHome
 
 
     'Atributos:
+    Private ReadOnly L1 As New Logic.Logic()
     Public ciPatientLoggedOn As String
-    Private idPatientLoggedOn As Integer
-    Dim dateRhtNow As String = Nothing
+    Private idPatientLoggedOn As Integer '= LoadIdPatientLoggedOn()
     Private patientLoggedOn As New Data.People
+    Private dateTimeMadePetition As String
     Private chargePathology As List(Of Pathology)
-    Private L1 As New Logic.Logic()
 
-    
 
     'Query:
-    Private Symptoms As List(Of Data.Symptom)
-    Private idSympSuffered As New List(Of Integer)
     Private PatholgiesSuffered As List(Of Pathology)
 
 
@@ -162,14 +158,24 @@ Public Class FrmHome
         PctbxPetition.Image = RM.GetObject(image)
 
     End Sub
-    Public Sub GetIdPatientLoggedOn()
+    Private Function ObtainSymptoms()
+        Return L1.ObtainSymptoms()
+    End Function
+    Private Sub LoadIdPatientLoggedOn()
         Me.idPatientLoggedOn = L1.matchPatientLoggedOn(Me.ciPatientLoggedOn)
     End Sub
-    Public Sub LoadSymptoms()
-        Me.Symptoms = L1.ObtainSymptoms()
+    Private Sub LoadSympSuffred(lbxSuffredPatient As System.Windows.Forms.ListBox)
+        Dim sympSuffred As New List(Of String)
+
+        For Each lbxSympSuffred In lbxSuffredPatient.Items
+            sympSuffred.Add(lbxSympSuffred.ToString)
+        Next
+
+        L1.LoadSympSuffred(Me.idPatientLoggedOn, sympSuffred)
     End Sub
-
-
+    Private Function GetNowDateTime(prefix As Short) As String
+        Return L1.GetNowDateTime(prefix)
+    End Function
 
     'Eventos:
     Private Sub BtnNext_Intro2_Click(sender As Object, e As EventArgs) Handles BtnNext_Intro2.Click
@@ -189,17 +195,8 @@ Public Class FrmHome
             Console.WriteLine("No se asignaron sintomas para proceder.")
         Else
             VisualSettings(4, False, False, False, True, False, False, False, False, False, True)
-            'Reconozco los Id de cada Sintoma que sufre el Paciente.
-            For Each symptomsSuffred In LbxSufferedPatient.Items
-                For Each symptom As Symptom In Symptoms
-                    If symptom.Description.Equals(symptomsSuffred.ToString) Then
-                        idSympSuffered.Add(symptom.Id)
-                    End If
-                Next 'For [symptom] para cada Síntoma existente. 
-            Next 'For [symptomsSuffred] para cada item del ListBox que contiene los Síntomas que Sufre el Paciente.
 
-            'Almaceno en la Base de Datos los Sintomas que sufre el Paciente, y su Id para referenciarlo
-            L1.SetPatientSufferSymp(idPatientLoggedOn, idSympSuffered)
+            Me.LoadSympSuffred(LbxSufferedPatient)
 
             'Cargo las Patologias Sufridas en una Lista
             PatholgiesSuffered = New List(Of Pathology)
@@ -273,10 +270,6 @@ Public Class FrmHome
             DgvPhatologies.Refresh()
 
         End If
-
-
-
-
     End Sub
     Private Sub BtnBack_Patient1_Click(sender As Object, e As EventArgs) Handles BtnBack_Patient1.Click
         VisualSettings(2, False, True, False, False, False, False, False, True, False, False)
@@ -332,6 +325,7 @@ Public Class FrmHome
     Private Sub FrmHome_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         VisualSettings(1, True, False, False, False, False, True, False, False, False, False)
         VisualSettingPetition("GENERANDO PETICIÓN", "loading", True, True, True, True, False, False, False, False)
+        LoadIdPatientLoggedOn()
 
         'GhostItem: Es mi elemento del Lbx que me permite utilizarlo (For, recorrer) cuando hay elemento != de Symptoms (Cmbx)
         'Este existe al inicio (record de FrmHome) y cada vez que Lbx se queda con 1 Item de Symptoms (Cmbx)
@@ -339,14 +333,13 @@ Public Class FrmHome
         LbxSufferedPatient.Items.Add(" ") 'Mi GhostItem del Lbx
 
         'Opero con los Sintomas:
-        GetIdPatientLoggedOn()
-        LoadSymptoms()
-        For Each symp As Symptom In Symptoms
-            CbxSysSymptoms.Items.Add(symp.description)
+        Dim symptoms As List(Of Symptom) = Me.ObtainSymptoms
+        For Each symp As Symptom In symptoms
+            CbxSysSymptoms.Items.Add(symp.Description)
         Next
-        Dim col1, col2 As New DataGridViewTextBoxColumn
 
         'Operar el Dgv Patologias
+        Dim col1, col2 As New DataGridViewTextBoxColumn
         DgvPhatologies.ReadOnly = True
         col1.Name = "Patología"
         col2.Name = "Evidencia"
@@ -359,19 +352,13 @@ Public Class FrmHome
         PatientApp.FrmLogin.Show()
         Me.Close()
     End Sub
-
     Private Sub BtnSendChatP_Click(sender As Object, e As EventArgs) Handles BtnSendChatP.Click
-        Dim d2 As String = DateTime.Now.Year
-        Dim d3 As String = DateTime.Now.Month
-        Dim d4 As String = DateTime.Now.Day
-        Dim d5 As String = DateTime.Now.Hour
-        Dim d6 As String = DateTime.Now.Minute
-        Dim d7 As String = DateTime.Now.Second
-        Me.dateRhtNow = d2 + "-" + d3 + "-" + d4 + " " + d5 + ":" + d6 + ":" + d7
-
         VisualSettingPetition("GENERANDO PETICIÓN", "loading", False, False, False, False, True, True, True, True)
-        Dim a As Boolean = L1.MakePetition(idPatientLoggedOn, "Kjgkhchjccnbcv", Me.dateRhtNow, Me.dateRhtNow)
-        If a Then
+
+        Me.dateTimeMadePetition = Me.GetNowDateTime(1)
+        Dim validate As Boolean = L1.MakePetition(idPatientLoggedOn, "Empty", Me.dateTimeMadePetition0, Me.GetNowDateTime(1))
+
+        If validate Then
             VisualSettingPetition("PETICIÓN GENERADA CORRECTAMENTE", "check", False, False, False, False, True, True, True, True)
         Else
             VisualSettingPetition("GENERANDO PETICIÓN", "loading", True, True, True, True, False, False, False, False)
@@ -379,16 +366,9 @@ Public Class FrmHome
     End Sub
 
     Private Sub BtnCancelPetition_Click(sender As Object, e As EventArgs) Handles BtnCancelPetition.Click
-        Dim dateRhtNowCancel As String = Nothing
-        Dim d2 As String = DateTime.Now.Year
-        Dim d3 As String = DateTime.Now.Month
-        Dim d4 As String = DateTime.Now.Day
-        Dim d5 As String = DateTime.Now.Hour
-        Dim d6 As String = DateTime.Now.Minute
-        Dim d7 As String = DateTime.Now.Second
-        dateRhtNowCancel = d2 + "-" + d3 + "-" + d4 + " " + d5 + ":" + d6 + ":" + d7
-        Dim a As Boolean = L1.StopPetition(idPatientLoggedOn, "Se canceló la petición por parte del Paciente", Me.dateRhtNow, dateRhtNowCancel)
-        If a Then
+        Dim validate As Boolean = L1.StopPetition(idPatientLoggedOn, "Paciente solicitó cancelar la petición.", Me.dateTimeMadePetition, Me.GetNowDateTime(1))
+
+        If validate Then
             VisualSettingPetition("GENERANDO PETICIÓN", "loading", True, True, True, True, False, False, False, False)
         End If
     End Sub
