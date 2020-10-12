@@ -356,7 +356,7 @@ Public Class FrmHome
         VisualSettingPetition("GENERANDO PETICIÓN", "loading", False, False, False, False, True, True, True, True)
 
         Me.dateTimeMadePetition = Me.GetNowDateTime(1)
-        Dim validate As Boolean = L1.MakePetition(idPatientLoggedOn, "Empty", Me.dateTimeMadePetition0, Me.GetNowDateTime(1))
+        Dim validate As Boolean = L1.MakePetition(idPatientLoggedOn, "Empty", Me.dateTimeMadePetition, Me.GetNowDateTime(1))
 
         If validate Then
             VisualSettingPetition("PETICIÓN GENERADA CORRECTAMENTE", "check", False, False, False, False, True, True, True, True)
@@ -364,7 +364,6 @@ Public Class FrmHome
             VisualSettingPetition("GENERANDO PETICIÓN", "loading", True, True, True, True, False, False, False, False)
         End If
     End Sub
-
     Private Sub BtnCancelPetition_Click(sender As Object, e As EventArgs) Handles BtnCancelPetition.Click
         Dim validate As Boolean = L1.StopPetition(idPatientLoggedOn, "Paciente solicitó cancelar la petición.", Me.dateTimeMadePetition, Me.GetNowDateTime(1))
 

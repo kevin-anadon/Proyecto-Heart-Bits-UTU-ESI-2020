@@ -17,6 +17,12 @@ Public Class Logic
 
 
     'Conexión Otros
+    Public Function MakePetition(idPatient As Integer, motive As String, datetI As String, datetF As String) As Boolean
+        Return CQConnection.MakePetition(idPatient, motive, datetI, datetF)
+    End Function
+    Public Function StopPetition(idPatient As Integer, motive As String, datetI As String, datetF As String) As Boolean
+        Return CQConnection.StopPetition(idPatient, motive, datetI, datetF)
+    End Function
     Public Function ObtainRegions() As List(Of Region)
         Return CQConnection.ObtainRegions()
     End Function
@@ -214,7 +220,6 @@ Public Class Logic
                 Return Nothing
         End Select
     End Function
-
     Public Function matchPatientLoggedOn(ci As String) As Integer
         Return CQConnection.matchPatientLoggedOn(ci)
     End Function
@@ -329,12 +334,7 @@ Public Class Logic
     Public Function SearchPatient(Ci As Integer) As DataSet
         Return CQConnection.SearchPatient(Ci)
     End Function
-    Public Function MakePetition(idPatient As Integer, motive As String, datetI As String, datetF As String) As Boolean
-        Return CQConnection.MakePetition(idPatient, motive, datetI, datetF)
-    End Function
-    Public Function StopPetition(idPatient As Integer, motive As String, datetI As String, datetF As String) As Boolean
-        Return CQConnection.StopPetition(idPatient, motive, datetI, datetF)
-    End Function
+
 
 
 
