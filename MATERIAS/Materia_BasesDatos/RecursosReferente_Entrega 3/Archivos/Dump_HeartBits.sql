@@ -19,9 +19,9 @@
 -- Current Database: `TelediagnosticoMedico_HeartBits`
 --
 
-CREATE DATABASE /*!32312 IF NOT EXISTS*/ `TelediagnosticoMedico_HeartBits` /*!40100 DEFAULT CHARACTER SET latin1 */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/ `telediagnosticomedico_heartbits` /*!40100 DEFAULT CHARACTER SET latin1 */;
 
-USE `TelediagnosticoMedico_HeartBits`;
+USE `telediagnosticomedico_heartbits`;
 
 --
 -- Table structure for table `acepta`
@@ -695,154 +695,84 @@ UNLOCK TABLES;
 -- Temporary table structure for view `vista_admin`
 --
 
-DROP TABLE IF EXISTS `vista_admin`;
-/*!50001 DROP VIEW IF EXISTS `vista_admin`*/;
-SET @saved_cs_client     = @@character_set_client;
-SET character_set_client = utf8;
-/*!50001 CREATE TABLE `vista_admin` (
-  `id` tinyint NOT NULL,
-  `ci` tinyint NOT NULL,
-  `primerNom` tinyint NOT NULL,
-  `segundoNom` tinyint NOT NULL,
-  `primerApe` tinyint NOT NULL,
-  `segundoApe` tinyint NOT NULL,
-  `genero` tinyint NOT NULL,
-  `fechaNacimiento` tinyint NOT NULL,
-  `email` tinyint NOT NULL,
-  `calle` tinyint NOT NULL,
-  `npuerta` tinyint NOT NULL,
-  `id_ciudad` tinyint NOT NULL,
-  `usuario` tinyint NOT NULL,
-  `contrasena` tinyint NOT NULL,
-  `pin` tinyint NOT NULL,
-  `muerto` tinyint NOT NULL
-) ENGINE=MyISAM */;
-SET character_set_client = @saved_cs_client;
+DROP VIEW IF EXISTS `vista_admin`;
+CREATE 
+VIEW `vista_admin` AS
+    SELECT 
+        `persona`.`id` AS `id`,
+        `persona`.`ci` AS `ci`,
+        `persona`.`primerNom` AS `primerNom`,
+        `persona`.`segundoNom` AS `segundoNom`,
+        `persona`.`primerApe` AS `primerApe`,
+        `persona`.`segundoApe` AS `segundoApe`,
+        `persona`.`genero` AS `genero`,
+        `persona`.`fechaNacimiento` AS `fechaNacimiento`,
+        `persona`.`email` AS `email`,
+        `persona`.`calle` AS `calle`,
+        `persona`.`npuerta` AS `npuerta`,
+        `persona`.`id_ciudad` AS `id_ciudad`,
+        `persona`.`usuario` AS `usuario`,
+        `persona`.`contrasena` AS `contrasena`,
+        `persona`.`pin` AS `pin`,
+        `persona`.`muerto` AS `muerto`
+    FROM
+        `persona`
+    WHERE
+        `persona`.`id_tipo` = 1;
 
 --
 -- Temporary table structure for view `vista_medico`
 --
 
-DROP TABLE IF EXISTS `vista_medico`;
-/*!50001 DROP VIEW IF EXISTS `vista_medico`*/;
-SET @saved_cs_client     = @@character_set_client;
-SET character_set_client = utf8;
-/*!50001 CREATE TABLE `vista_medico` (
-  `id` tinyint NOT NULL,
-  `ci` tinyint NOT NULL,
-  `primerNom` tinyint NOT NULL,
-  `segundoNom` tinyint NOT NULL,
-  `primerApe` tinyint NOT NULL,
-  `segundoApe` tinyint NOT NULL,
-  `genero` tinyint NOT NULL,
-  `fechaNacimiento` tinyint NOT NULL,
-  `email` tinyint NOT NULL,
-  `calle` tinyint NOT NULL,
-  `npuerta` tinyint NOT NULL,
-  `id_ciudad` tinyint NOT NULL,
-  `especialidad` tinyint NOT NULL,
-  `usuario` tinyint NOT NULL,
-  `contrasena` tinyint NOT NULL,
-  `muerto` tinyint NOT NULL
-) ENGINE=MyISAM */;
-SET character_set_client = @saved_cs_client;
+DROP VIEW IF EXISTS `vista_medico`;
+CREATE 
+VIEW `vista_medico` AS
+    SELECT 
+        `persona`.`id` AS `id`,
+        `persona`.`ci` AS `ci`,
+        `persona`.`primerNom` AS `primerNom`,
+        `persona`.`segundoNom` AS `segundoNom`,
+        `persona`.`primerApe` AS `primerApe`,
+        `persona`.`segundoApe` AS `segundoApe`,
+        `persona`.`genero` AS `genero`,
+        `persona`.`fechaNacimiento` AS `fechaNacimiento`,
+        `persona`.`email` AS `email`,
+        `persona`.`calle` AS `calle`,
+        `persona`.`npuerta` AS `npuerta`,
+        `persona`.`id_ciudad` AS `id_ciudad`,
+        `persona`.`especialidad` AS `especialidad`,
+        `persona`.`usuario` AS `usuario`,
+        `persona`.`contrasena` AS `contrasena`,
+        `persona`.`muerto` AS `muerto`
+    FROM
+        `persona`
+    WHERE
+        `persona`.`id_tipo` = 2;
 
 --
 -- Temporary table structure for view `vista_paciente`
 --
 
-DROP TABLE IF EXISTS `vista_paciente`;
-/*!50001 DROP VIEW IF EXISTS `vista_paciente`*/;
-SET @saved_cs_client     = @@character_set_client;
-SET character_set_client = utf8;
-/*!50001 CREATE TABLE `vista_paciente` (
-  `id` tinyint NOT NULL,
-  `ci` tinyint NOT NULL,
-  `primerNom` tinyint NOT NULL,
-  `segundoNom` tinyint NOT NULL,
-  `primerApe` tinyint NOT NULL,
-  `segundoApe` tinyint NOT NULL,
-  `genero` tinyint NOT NULL,
-  `fechaNacimiento` tinyint NOT NULL,
-  `email` tinyint NOT NULL,
-  `calle` tinyint NOT NULL,
-  `npuerta` tinyint NOT NULL,
-  `id_ciudad` tinyint NOT NULL,
-  `habilitado` tinyint NOT NULL,
-  `muerto` tinyint NOT NULL
-) ENGINE=MyISAM */;
-SET character_set_client = @saved_cs_client;
-
---
--- Current Database: `TelediagnosticoMedico_HeartBits`
---
-
-USE `TelediagnosticoMedico_HeartBits`;
-
---
--- Final view structure for view `vista_admin`
---
-
-/*!50001 DROP TABLE IF EXISTS `vista_admin`*/;
-/*!50001 DROP VIEW IF EXISTS `vista_admin`*/;
-/*!50001 SET @saved_cs_client          = @@character_set_client */;
-/*!50001 SET @saved_cs_results         = @@character_set_results */;
-/*!50001 SET @saved_col_connection     = @@collation_connection */;
-/*!50001 SET character_set_client      = utf8 */;
-/*!50001 SET character_set_results     = utf8 */;
-/*!50001 SET collation_connection      = utf8_general_ci */;
-/*!50001 CREATE ALGORITHM=UNDEFINED */
-/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
-/*!50001 VIEW `vista_admin` AS select `persona`.`id` AS `id`,`persona`.`ci` AS `ci`,`persona`.`primerNom` AS `primerNom`,`persona`.`segundoNom` AS `segundoNom`,`persona`.`primerApe` AS `primerApe`,`persona`.`segundoApe` AS `segundoApe`,`persona`.`genero` AS `genero`,`persona`.`fechaNacimiento` AS `fechaNacimiento`,`persona`.`email` AS `email`,`persona`.`calle` AS `calle`,`persona`.`npuerta` AS `npuerta`,`persona`.`id_ciudad` AS `id_ciudad`,`persona`.`usuario` AS `usuario`,`persona`.`contrasena` AS `contrasena`,`persona`.`pin` AS `pin`,`persona`.`muerto` AS `muerto` from `persona` where (`persona`.`id_tipo` = 1) */;
-/*!50001 SET character_set_client      = @saved_cs_client */;
-/*!50001 SET character_set_results     = @saved_cs_results */;
-/*!50001 SET collation_connection      = @saved_col_connection */;
-
---
--- Final view structure for view `vista_medico`
---
-
-/*!50001 DROP TABLE IF EXISTS `vista_medico`*/;
-/*!50001 DROP VIEW IF EXISTS `vista_medico`*/;
-/*!50001 SET @saved_cs_client          = @@character_set_client */;
-/*!50001 SET @saved_cs_results         = @@character_set_results */;
-/*!50001 SET @saved_col_connection     = @@collation_connection */;
-/*!50001 SET character_set_client      = utf8 */;
-/*!50001 SET character_set_results     = utf8 */;
-/*!50001 SET collation_connection      = utf8_general_ci */;
-/*!50001 CREATE ALGORITHM=UNDEFINED */
-/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
-/*!50001 VIEW `vista_medico` AS select `persona`.`id` AS `id`,`persona`.`ci` AS `ci`,`persona`.`primerNom` AS `primerNom`,`persona`.`segundoNom` AS `segundoNom`,`persona`.`primerApe` AS `primerApe`,`persona`.`segundoApe` AS `segundoApe`,`persona`.`genero` AS `genero`,`persona`.`fechaNacimiento` AS `fechaNacimiento`,`persona`.`email` AS `email`,`persona`.`calle` AS `calle`,`persona`.`npuerta` AS `npuerta`,`persona`.`id_ciudad` AS `id_ciudad`,`persona`.`especialidad` AS `especialidad`,`persona`.`usuario` AS `usuario`,`persona`.`contrasena` AS `contrasena`,`persona`.`muerto` AS `muerto` from `persona` where (`persona`.`id_tipo` = 2) */;
-/*!50001 SET character_set_client      = @saved_cs_client */;
-/*!50001 SET character_set_results     = @saved_cs_results */;
-/*!50001 SET collation_connection      = @saved_col_connection */;
-
---
--- Final view structure for view `vista_paciente`
---
-
-/*!50001 DROP TABLE IF EXISTS `vista_paciente`*/;
-/*!50001 DROP VIEW IF EXISTS `vista_paciente`*/;
-/*!50001 SET @saved_cs_client          = @@character_set_client */;
-/*!50001 SET @saved_cs_results         = @@character_set_results */;
-/*!50001 SET @saved_col_connection     = @@collation_connection */;
-/*!50001 SET character_set_client      = utf8 */;
-/*!50001 SET character_set_results     = utf8 */;
-/*!50001 SET collation_connection      = utf8_general_ci */;
-/*!50001 CREATE ALGORITHM=UNDEFINED */
-/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
-/*!50001 VIEW `vista_paciente` AS select `persona`.`id` AS `id`,`persona`.`ci` AS `ci`,`persona`.`primerNom` AS `primerNom`,`persona`.`segundoNom` AS `segundoNom`,`persona`.`primerApe` AS `primerApe`,`persona`.`segundoApe` AS `segundoApe`,`persona`.`genero` AS `genero`,`persona`.`fechaNacimiento` AS `fechaNacimiento`,`persona`.`email` AS `email`,`persona`.`calle` AS `calle`,`persona`.`npuerta` AS `npuerta`,`persona`.`id_ciudad` AS `id_ciudad`,`persona`.`habilitado` AS `habilitado`,`persona`.`muerto` AS `muerto` from `persona` where (`persona`.`id_tipo` = 3) */;
-/*!50001 SET character_set_client      = @saved_cs_client */;
-/*!50001 SET character_set_results     = @saved_cs_results */;
-/*!50001 SET collation_connection      = @saved_col_connection */;
-/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
-
-/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
-/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
-/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+DROP VIEW IF EXISTS `vista_paciente`;
+CREATE VIEW `vista_paciente` AS
+    SELECT 
+        `persona`.`id` AS `id`,
+        `persona`.`ci` AS `ci`,
+        `persona`.`primerNom` AS `primerNom`,
+        `persona`.`segundoNom` AS `segundoNom`,
+        `persona`.`primerApe` AS `primerApe`,
+        `persona`.`segundoApe` AS `segundoApe`,
+        `persona`.`genero` AS `genero`,
+        `persona`.`fechaNacimiento` AS `fechaNacimiento`,
+        `persona`.`email` AS `email`,
+        `persona`.`calle` AS `calle`,
+        `persona`.`npuerta` AS `npuerta`,
+        `persona`.`id_ciudad` AS `id_ciudad`,
+        `persona`.`habilitado` AS `habilitado`,
+        `persona`.`muerto` AS `muerto`
+    FROM
+        `persona`
+    WHERE
+        `persona`.`id_tipo` = 3
 
 -- Dump completed on 2020-10-09 18:27:49
