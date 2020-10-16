@@ -26,6 +26,8 @@ iptables −A INPUT −s 192.168.1.0 −p tcp −dport 20:21 −j ACCEPT
 iptables −A INPUT −s 192.168.1.0 −p tcp −dport 2222 −j ACCEPT
 # A un colega le dejamos usar el PROXY
 iptables −A INPUT −s 192.168.1.0 −p tcp −dport 3128 −j ACCEPT
+# Deshabilitamos las peticiones icmp, para evitar posibles ataques DDOS.
+iptables −A INPUT −p icmp -j DROP
 # Cerramos rango de los puertos privilegiados. Cuidado con este tipo de
 # barreras, antes hay que abrir a los que si tienen acceso.
 iptables −A INPUT −p tcp −−dport 1:1024
