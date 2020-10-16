@@ -25,6 +25,7 @@ echo 1")" Comprobar conexion a internet
 echo 2")" Ver reglas del firewall
 echo 3")" Bloquear una ip
 echo 4")" Desbloquear una ip
+echo 5")" Cargar reglas
 echo 0")" Salir	
 echo ""
 read -p "Seleccione una opcion: " op
@@ -33,6 +34,10 @@ case $op in
 2)sh reglas.sh;;
 3)sh bloquear.sh;;
 4)sh desbloquear.sh;;
+5)sh cargarreglas.sh
+echo "Reglas actualizadas"
+sleep 1.5
+menu;;
 0)salir;;
 *)echo -e "\e[1;31mOpcion Incorrecta!!\e[0m"
 sleep 2
