@@ -2054,8 +2054,8 @@ Partial Class FrmHome
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1299, 754)
         Me.ControlBox = False
-        Me.Controls.Add(Me.PnlSymptom)
         Me.Controls.Add(Me.PnlResult)
+        Me.Controls.Add(Me.PnlSymptom)
         Me.Controls.Add(Me.PnlPatient)
         Me.Controls.Add(Me.PnlIntro2)
         Me.Controls.Add(Me.PnlIntro1)

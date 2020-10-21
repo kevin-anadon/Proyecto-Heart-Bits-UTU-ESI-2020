@@ -9,7 +9,7 @@ Public Class FrmHome
     'Atributos:
     Private ReadOnly L1 As New Logic.Logic()
     Public ciPatientLoggedOn As String
-    Private idPatientLoggedOn As Integer '= LoadIdPatientLoggedOn()
+    Private idPatientLoggedOn As Integer
     Private patientLoggedOn As New Data.People
     Private dateTimeMadePetition As String
     Private chargePathology As List(Of Pathology)
@@ -17,7 +17,6 @@ Public Class FrmHome
 
     'Query:
     Private PatholgiesSuffered As List(Of Pathology)
-
 
 
     'Comportamientos:
@@ -177,6 +176,7 @@ Public Class FrmHome
         Return L1.GetNowDateTime(prefix)
     End Function
 
+
     'Eventos:
     Private Sub BtnNext_Intro2_Click(sender As Object, e As EventArgs) Handles BtnNext_Intro2.Click
         VisualSettings(1, True, False, False, False, False, False, True, False, False, False)
@@ -277,7 +277,7 @@ Public Class FrmHome
     Private Sub CbxSysSymptoms_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CbxSysSymptoms.SelectedIndexChanged
         Dim doesExistInTheLbx As Boolean
         Dim a As Object = " "
-        Dim doesItemGhostExist As Boolean = False 'Existe ItemGhost?
+        Dim doesItemGhostExist As Boolean = False
 
         For Each LbxItem In LbxSufferedPatient.Items
             If LbxItem.ToString = a.ToString Then
@@ -371,4 +371,6 @@ Public Class FrmHome
             VisualSettingPetition("GENERANDO PETICIÓN", "loading", True, True, True, True, False, False, False, False)
         End If
     End Sub
+
+
 End Class 'FrmHome

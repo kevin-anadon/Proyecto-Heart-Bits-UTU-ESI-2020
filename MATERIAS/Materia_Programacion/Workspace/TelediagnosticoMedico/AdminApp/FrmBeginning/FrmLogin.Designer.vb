@@ -26,7 +26,7 @@ Partial Class FrmLogin
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmLogin))
         Me.LblTitle1 = New System.Windows.Forms.Label()
         Me.Lbltitle2 = New System.Windows.Forms.Label()
-        Me.Lblbody = New System.Windows.Forms.Label()
+        Me.LblInfoText1 = New System.Windows.Forms.Label()
         Me.TxtUser = New Guna.UI.WinForms.GunaTextBox()
         Me.TxtPass = New Guna.UI.WinForms.GunaTextBox()
         Me.BtnLogin = New Guna.UI.WinForms.GunaButton()
@@ -50,14 +50,14 @@ Partial Class FrmLogin
         '
         'LblTitle1
         '
-        Me.LblTitle1.AccessibleDescription = "LblTitle2"
-        Me.LblTitle1.AccessibleName = "LblTitle2"
+        Me.LblTitle1.AccessibleDescription = "LblTitle1"
+        Me.LblTitle1.AccessibleName = "LblTitle1"
         Me.LblTitle1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.LblTitle1.BackColor = System.Drawing.Color.Transparent
         Me.LblTitle1.Font = New System.Drawing.Font("Microsoft YaHei UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblTitle1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.LblTitle1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.LblTitle1.Location = New System.Drawing.Point(678, 176)
+        Me.LblTitle1.Location = New System.Drawing.Point(678, 143)
         Me.LblTitle1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LblTitle1.Name = "LblTitle1"
         Me.LblTitle1.Size = New System.Drawing.Size(316, 27)
@@ -74,7 +74,7 @@ Partial Class FrmLogin
         Me.Lbltitle2.Font = New System.Drawing.Font("Microsoft YaHei UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Lbltitle2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Lbltitle2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Lbltitle2.Location = New System.Drawing.Point(678, 207)
+        Me.Lbltitle2.Location = New System.Drawing.Point(678, 174)
         Me.Lbltitle2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Lbltitle2.Name = "Lbltitle2"
         Me.Lbltitle2.Size = New System.Drawing.Size(316, 27)
@@ -82,25 +82,25 @@ Partial Class FrmLogin
         Me.Lbltitle2.Text = "NUEVAMENTE."
         Me.Lbltitle2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Lblbody
+        'LblInfoText1
         '
-        Me.Lblbody.AccessibleDescription = "LblTitle3"
-        Me.Lblbody.AccessibleName = "LblTitle3"
-        Me.Lblbody.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Lblbody.BackColor = System.Drawing.Color.Transparent
-        Me.Lblbody.Cursor = System.Windows.Forms.Cursors.Default
-        Me.Lblbody.Font = New System.Drawing.Font("Segoe UI Emoji", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Lblbody.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
-        Me.Lblbody.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Lblbody.Location = New System.Drawing.Point(680, 238)
-        Me.Lblbody.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Lblbody.Name = "Lblbody"
-        Me.Lblbody.Size = New System.Drawing.Size(316, 83)
-        Me.Lblbody.TabIndex = 9
-        Me.Lblbody.Text = "Ingrese su usuario y contraseña " & Global.Microsoft.VisualBasic.ChrW(10) & "para autenticar y verificar sus credenciales." & Global.Microsoft.VisualBasic.ChrW(10) & "Es" &
+        Me.LblInfoText1.AccessibleDescription = "LblInfoText1"
+        Me.LblInfoText1.AccessibleName = "LblInfoText1"
+        Me.LblInfoText1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.LblInfoText1.BackColor = System.Drawing.Color.Transparent
+        Me.LblInfoText1.Cursor = System.Windows.Forms.Cursors.Default
+        Me.LblInfoText1.Font = New System.Drawing.Font("Segoe UI Emoji", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblInfoText1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
+        Me.LblInfoText1.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.LblInfoText1.Location = New System.Drawing.Point(680, 201)
+        Me.LblInfoText1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.LblInfoText1.Name = "LblInfoText1"
+        Me.LblInfoText1.Size = New System.Drawing.Size(316, 120)
+        Me.LblInfoText1.TabIndex = 9
+        Me.LblInfoText1.Text = "Ingrese su usuario y contraseña " & Global.Microsoft.VisualBasic.ChrW(10) & "para autenticar y verificar sus credenciales." & Global.Microsoft.VisualBasic.ChrW(10) & "Es" &
     "te Software le permitirá gestionar al Personal, a los Pacientes, los Síntomas y " &
     "sus Patologías asociadas."
-        Me.Lblbody.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LblInfoText1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'TxtUser
         '
@@ -225,7 +225,7 @@ Partial Class FrmLogin
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(684, 323)
+        Me.PictureBox2.Location = New System.Drawing.Point(684, 332)
         Me.PictureBox2.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(140, 8)
@@ -300,7 +300,7 @@ Partial Class FrmLogin
         Me.Controls.Add(Me.TxtPass)
         Me.Controls.Add(Me.TxtUser)
         Me.Controls.Add(Me.PictureBox2)
-        Me.Controls.Add(Me.Lblbody)
+        Me.Controls.Add(Me.LblInfoText1)
         Me.Controls.Add(Me.Lbltitle2)
         Me.Controls.Add(Me.LblTitle1)
         Me.Controls.Add(Me.PicbxLogin)
@@ -324,7 +324,7 @@ Partial Class FrmLogin
     Friend WithEvents PicLogo As PictureBox
     Public WithEvents LblTitle1 As Label
     Public WithEvents Lbltitle2 As Label
-    Public WithEvents Lblbody As Label
+    Public WithEvents LblInfoText1 As Label
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents TxtUser As Guna.UI.WinForms.GunaTextBox
     Friend WithEvents TxtPass As Guna.UI.WinForms.GunaTextBox

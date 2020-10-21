@@ -187,25 +187,6 @@ Public Class Logic
             Return Nothing
         End Try
     End Function
-
-
-    'Conexión Personas
-    Public Sub LoadSympSuffred(idPatientLoggedOn As Integer, sympSuffred As List(Of String))
-        Dim symptoms As New List(Of Data.Symptom)
-        Dim idSympSuffered As New List(Of Integer)
-
-        For Each symptomsSuffred In sympSuffred
-            For Each symptom As Symptom In symptoms
-                If symptom.Description.Equals(symptomsSuffred.ToString) Then
-                    idSympSuffered.Add(symptom.Id) 'Reconozco los Id de cada Sintoma que sufre el Paciente.
-                End If
-            Next 'For [symptom] para cada Síntoma existente. 
-        Next 'For [symptomsSuffred] para cada item del ListBox que contiene los Síntomas que Sufre el Paciente.
-
-        'Almaceno en la Base de Datos los Sintomas que sufre el Paciente, y su Id para referenciarlo
-        Me.SetPatientSufferSymp(idPatientLoggedOn, idSympSuffered, Me.GetNowDateTime(3))
-
-    End Sub
     Public Function GetNowDateTime(prefix As Short)
         Select Case prefix
             Case 1 'Devuelve 'YYYY-MM-DD HH:MM:SS'
@@ -220,6 +201,25 @@ Public Class Logic
                 Return Nothing
         End Select
     End Function
+
+
+    'Conexión Personas
+    Public Sub LoadSympSuffred(idPatientLoggedOn As Integer, sympSuffred As List(Of String))
+        Dim symptoms As List(Of Data.Symptom) = Me.ObtainSymptoms()
+        Dim idSympSuffered As New List(Of Integer)
+
+        For Each symptomsSuffred In sympSuffred
+            For Each symptom As Data.Symptom In symptoms
+                If symptom.Description.Equals(symptomsSuffred.ToString) Then
+                    idSympSuffered.Add(symptom.Id) 'Reconozco los Id de cada Sintoma que sufre el Paciente.
+                End If
+            Next 'For [symptom] para cada Síntoma existente. 
+        Next 'For [symptomsSuffred] para cada item del ListBox que contiene los Síntomas que Sufre el Paciente.
+
+        'Almaceno en la Base de Datos los Sintomas que sufre el Paciente, y su Id para referenciarlo
+        Me.SetPatientSufferSymp(idPatientLoggedOn, idSympSuffered, Me.GetNowDateTime(3))
+
+    End Sub
     Public Function matchPatientLoggedOn(ci As String) As Integer
         Return CQConnection.matchPatientLoggedOn(ci)
     End Function

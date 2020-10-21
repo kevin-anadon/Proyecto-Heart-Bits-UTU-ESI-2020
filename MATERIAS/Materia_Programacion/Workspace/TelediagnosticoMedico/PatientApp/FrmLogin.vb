@@ -4,21 +4,39 @@ Imports Logic
 Public Class FrmLogin
     'Atributos
     Private ReadOnly L1 As New Logic.Logic()
-    Private indicatorToolBtn As Short = -1 'Me define que Mensaje debo de utilizar en el ToolTip.
     Public ciPatientLoggedOn As String = Nothing
 
 
     'Comportamenientos:
-
+    Private Sub ShowNotification(msj As String, red As Integer, green As Integer, blue As Integer)
+        PnlInfo.BorderColor = Color.FromArgb(red, green, blue)
+        LblNotification.Text = msj
+    End Sub
+    Private Sub IdentifyPreset(preset As Integer)
+        Select Case preset
+            Case 1 'Validando las Credenciales / En espera.
+                ShowNotification("Validando C.I.", 255, 208, 52)
+            Case 2 'Logeo Exitoso.
+                ShowNotification("Inicio de sesión exitoso.", 98, 186, 172)
+            Case 3 'Error de Conexión.
+                ShowNotification("Conexión fallida. Intentado recopilar datos...", 251, 136, 133)
+            Case 4 'Cédula de identidad errónea.
+                ShowNotification("Cédula de identidad errónea.", 251, 136, 133)
+            Case 5 'Paciente inhabilitado.
+                ShowNotification("No se encuentra habilitado.", 255, 208, 52)
+        End Select
+    End Sub
 
     'Eventos:
     Private Sub BtnLogin_Click(sender As Object, e As EventArgs) Handles BtnLogin.Click
+        PnlInfo.Visible = True
         If TxtCredential1.Text.Trim.Length = 0 Then 'Verifico si hay algun espacio vacio
-            Me.indicatorToolBtn = 0 'Se trabaja con la UI.
+            Me.ShowNotification("Hay algún campo vacío. Ingrese alguna C.I.", 255, 208, 52) 'Notifico al usuario.
         Else 'No hay Espacio vacio
-            Me.indicatorToolBtn = L1.LogginPatient(TxtCredential1.Text) 'Se trabaja con la UI.
+            Dim preset As Short = L1.LogginPatient(TxtCredential1.Text)
+            IdentifyPreset(preset) 'Notifico al usuario.
 
-            If Me.indicatorToolBtn = 2 Then
+            If preset = 2 Then
                 Me.ciPatientLoggedOn = TxtCredential1.Text
                 FrmHome.ciPatientLoggedOn = Me.ciPatientLoggedOn 'Envío la CI del paciente que se logeó al atributo del FrmHome.
                 FrmHome.Show() 'Inicio el Frame "Pantalla Inicial".
@@ -28,8 +46,9 @@ Public Class FrmLogin
     End Sub
 
     Private Sub FrmLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        BtnForeText1.Enabled = True 'El Boton permanece encendido.
-        BtnForeText1.BorderColor = Color.FromArgb(97, 97, 97) 'Color Gris Mate = Default
+        PnlInfo.Visible = False
+        LblNotification.Text = " "
+        PnlInfo.BorderColor = Color.FromArgb(97, 97, 97) 'Color Gris Mate = Default
     End Sub
 
     Private Sub TxtCredential1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtCredential1.KeyPress
@@ -49,32 +68,8 @@ Public Class FrmLogin
         TxtCredential1.Clear()
     End Sub
 
-    Private Sub BtnForeText1_MouseEnter(sender As Object, e As EventArgs) Handles BtnForeText1.MouseEnter
-        Select Case indicatorToolBtn 'Controlo los mensajes que puedo mostrar en mi ToolTip.
-            Case 0 'Error de Campo vacío.
-                BtnForeText1.BorderColor = Color.FromArgb(255, 208, 52) 'Color Mostaza = En espera / Cuidado 
-                ToolTipMsgError.SetToolTip(BtnForeText1, "Hay algún campo vacío. Ingrese alguna C.I.")
-            Case 1 'Validando las Credenciales / En espera.
-                BtnForeText1.BorderColor = Color.FromArgb(255, 208, 52) 'Color Mostaza = En espera / Cuidado 
-                ToolTipMsgError.SetToolTip(BtnForeText1, "Validando C.I.")
-            Case 2 'Logeo Exitoso.
-                BtnForeText1.BorderColor = Color.FromArgb(98, 186, 172) 'Color Turquesa = Correcto 
-                ToolTipMsgError.SetToolTip(BtnForeText1, "Inicio de sesión exitoso.")
-            Case 3 'Error de Conexión.
-                BtnForeText1.BorderColor = Color.FromArgb(251, 136, 133) 'Color Corál = Error
-                ToolTipMsgError.SetToolTip(BtnForeText1, "Conexión fallida. Intentado recopilar datos...")
-            Case 4 'Cédula de identidad errónea.
-                BtnForeText1.BorderColor = Color.FromArgb(251, 136, 133) 'Color Corál = Error
-                ToolTipMsgError.SetToolTip(BtnForeText1, "Cédula de identidad errónea.")
-            Case 5 'Paciente inhabilitado.
-                BtnForeText1.BorderColor = Color.FromArgb(255, 208, 52) 'Color Mostaza = En espera / Cuidado
-                ToolTipMsgError.SetToolTip(BtnForeText1, "No se encuentra habilitado.")
-            Case Else
-                BtnForeText1.BorderColor = Color.FromArgb(97, 97, 97) 'Color Gris Mate = Default
-                ToolTipMsgError.SetToolTip(BtnForeText1, "Introduzca su credencial.")
-        End Select
+    Private Sub BtnCloseInfo_Click(sender As Object, e As EventArgs) Handles BtnCloseInfo.Click
+        PnlInfo.Visible = False
     End Sub
-
-
 End Class 'FrmLogin
 

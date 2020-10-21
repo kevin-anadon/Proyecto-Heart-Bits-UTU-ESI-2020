@@ -195,7 +195,7 @@
         AH8dNABQAUAFABQAUAFABQAA/9k=
 </value>
   </data>
-  <data name="Lblbody.Text" xml:space="preserve">
+  <data name="LblInfoText1.Text" xml:space="preserve">
     <value>Ingrese su Cédula de Identidad para autenticar y  verificar sus credenciales. 
 Este Software le permitirá realizar Diagnósticos Primarios y en base de ellos decidirá si quiere iniciar una conversación con un Médico Especialista.</value>
   </data>
@@ -12064,7 +12064,4 @@ Este Software le permitirá realizar Diagnósticos Primarios y en base de ellos 
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=
 </value>
   </data>
-  <metadata name="ToolTipMsgError.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>142, 17</value>
-  </metadata>
 </root>

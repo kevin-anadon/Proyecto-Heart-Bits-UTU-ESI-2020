@@ -1184,8 +1184,13 @@ Public Class DataBaseConn
     End Function
     Public Sub UnsuscribePatient(idPatient As Integer)
         Dim con As Connection = Me.Connect
-        Dim rsUpdate As Recordset = con.Execute("UPDATE persona SET habilitado=false WHERE ci=" & idPatient)
-        con.Close()
+        Try
+            Dim rsUpdate As Recordset = con.Execute("UPDATE persona SET habilitado='" & 0 & "' WHERE id=" & idPatient)
+        Catch ex As Exception
+            Console.WriteLine(ex.Message)
+        Finally
+            con.Close()
+        End Try
     End Sub
     Public Function MakePetition(idPatient As Integer, motive As String, datetI As String, datetF As String) As Boolean
         Dim con As Connection = Me.Connect
