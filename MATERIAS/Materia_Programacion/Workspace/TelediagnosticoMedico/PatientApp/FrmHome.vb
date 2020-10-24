@@ -149,9 +149,13 @@ Public Class FrmHome
                 Lbl5_Chat.ForeColor = Color.Black
                 Lbl5_Chat.Font = New Font(Lbl2_Patient.Font, FontStyle.Bold)
 
-                talkingMed = L1.ObtainTalkingMed(idPatientLoggedOn, dateTimeMadePetition)
-                LblMedic.Text = talkingMed.fstName + " " + talkingMed.scndName + " " + talkingMed.fstSurname + " " + talkingMed.scndSurname
-                idRoom = Controller.Instance.idRoom
+                Try
+                    talkingMed = L1.ObtainTalkingMed(idPatientLoggedOn, dateTimeMadePetition)
+                    LblMedic.Text = talkingMed.fstName + " " + talkingMed.scndName + " " + talkingMed.fstSurname + " " + talkingMed.scndSurname
+                    idRoom = Controller.Instance.ObtainRoomMed()
+                Catch ex As Exception
+
+                End Try
                 TxtChatSend.Focus()
                 TimerChat.Start()
 

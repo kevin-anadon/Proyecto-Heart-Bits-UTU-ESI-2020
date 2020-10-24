@@ -1332,6 +1332,24 @@ Public Class DataBaseConn
         End Try
 
     End Function
+    Public Function ObtainRoomMed()
+        Dim con As Connection = Me.Connect()
+        Dim idRoom As Integer = 0
+        Try
+            Dim dateToday As String = Date.Now.ToString("yyy-MM-dd")
+            Dim hora As Integer = Now.Hour
+            Dim rsSelectRoom As Recordset = con.Execute("SELECT s.id FROM salachat s WHERE date(s.fechaHoraInicio)='" & dateToday & "' AND hour(s.fechaHoraInicio) = " & hora & " ORDER BY s.id DESC LIMIT 1;")
+            If Not rsSelectRoom.EOF Then
+                idRoom = DirectCast(rsSelectRoom.Fields("id").Value, Integer)
+            Else
+                Throw New Exception("Sala no encontrada")
+            End If
+            Return idRoom
+        Catch ex As Exception
+            Throw New Exception("Error al obtener la sala")
+        End Try
+
+    End Function
     Public Sub AcceptRequest(idMed As Integer, idPatient As Integer, datetI As String, dateF As String)
         Dim con As Connection = Me.Connect()
 

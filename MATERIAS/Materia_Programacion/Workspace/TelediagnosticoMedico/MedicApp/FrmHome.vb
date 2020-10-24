@@ -20,8 +20,8 @@ Public Class FrmHome
     Public Sub JoinRoom()
         Try
             'Creo una sala para que conversen
-            idRoom = log.CreateRoom()
-            Controller.Instance.idRoom = idRoom
+            Controller.Instance.SetRoom(log.CreateRoom())
+            idRoom = Controller.Instance.ObtainRoom()
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try

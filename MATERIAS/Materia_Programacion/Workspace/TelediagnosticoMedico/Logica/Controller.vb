@@ -4,8 +4,8 @@ Imports Data
 Public Class Controller
     'Atributos
     Private ReadOnly CQConnection As New DataBaseConn()
-    Public Shared Property Instance As New Controller()
-    Public Property idRoom As Integer = 0
+    Public Shared Property Instance As New Controller
+    Private Property idRoom As Integer = 0
     'Herramientas de conexión
     Public Sub TryConnection()
         Try
@@ -16,13 +16,19 @@ Public Class Controller
     End Sub
 
 
-
     'Conexión Otros
     Public Sub SetRoom(id As Integer)
         idRoom = id
     End Sub
     Public Function ObtainRoom() As Integer
         Return idRoom
+    End Function
+    Public Function ObtainRoomMed() As Integer
+        Try
+            Return CQConnection.ObtainRoomMed()
+        Catch ex As Exception
+            Throw New Exception(ex.Message)
+        End Try
     End Function
     Public Function CreateRoom() As Integer
         Try
