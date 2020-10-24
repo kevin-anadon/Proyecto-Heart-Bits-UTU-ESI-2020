@@ -23,15 +23,16 @@ Partial Class FrmHome
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmHome))
         Me.PanelLeft = New System.Windows.Forms.Panel()
         Me.PanelButtons = New System.Windows.Forms.Panel()
         Me.DragCtrl = New Guna.UI2.WinForms.Guna2DragControl(Me.components)
         Me.Elipse = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.TimerRequests = New System.Windows.Forms.Timer(Me.components)
+        Me.TimerChat = New System.Windows.Forms.Timer(Me.components)
         Me.PnlChat = New System.Windows.Forms.Panel()
         Me.TxtChatSend = New System.Windows.Forms.TextBox()
         Me.BtnSend = New Guna.UI2.WinForms.Guna2Button()
@@ -70,7 +71,6 @@ Partial Class FrmHome
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PicHome = New System.Windows.Forms.PictureBox()
         Me.PicSys = New System.Windows.Forms.PictureBox()
-        Me.TimerChat = New System.Windows.Forms.Timer(Me.components)
         Me.PanelLeft.SuspendLayout()
         Me.PanelButtons.SuspendLayout()
         Me.PnlChat.SuspendLayout()
@@ -121,6 +121,10 @@ Partial Class FrmHome
         '
         Me.TimerRequests.Interval = 1000
         '
+        'TimerChat
+        '
+        Me.TimerChat.Interval = 1000
+        '
         'PnlChat
         '
         Me.PnlChat.BackColor = System.Drawing.Color.Transparent
@@ -169,6 +173,7 @@ Partial Class FrmHome
         Me.BtnSend.HoverState.FillColor = System.Drawing.Color.Transparent
         Me.BtnSend.HoverState.Parent = Me.BtnSend
         Me.BtnSend.Image = Global.MedicApp.My.Resources.Resources.mdi_send
+        Me.BtnSend.ImageOffset = New System.Drawing.Point(1, 0)
         Me.BtnSend.Location = New System.Drawing.Point(807, 570)
         Me.BtnSend.Name = "BtnSend"
         Me.BtnSend.PressedDepth = 0
@@ -336,30 +341,30 @@ Partial Class FrmHome
         '
         'DgvRequests
         '
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.White
-        Me.DgvRequests.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
+        Me.DgvRequests.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.DgvRequests.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DgvRequests.BackgroundColor = System.Drawing.Color.White
         Me.DgvRequests.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.DgvRequests.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.DgvRequests.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DgvRequests.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DgvRequests.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.DgvRequests.ColumnHeadersHeight = 4
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DgvRequests.DefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DgvRequests.DefaultCellStyle = DataGridViewCellStyle3
         Me.DgvRequests.EnableHeadersVisualStyles = False
         Me.DgvRequests.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.DgvRequests.Location = New System.Drawing.Point(18, 128)
@@ -810,10 +815,6 @@ Partial Class FrmHome
         Me.PicSys.Size = New System.Drawing.Size(408, 390)
         Me.PicSys.TabIndex = 2
         Me.PicSys.TabStop = False
-        '
-        'TimerChat
-        '
-        Me.TimerChat.Interval = 1000
         '
         'FrmHome
         '

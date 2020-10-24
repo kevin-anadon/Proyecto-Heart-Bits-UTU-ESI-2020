@@ -1,7 +1,7 @@
 ﻿Imports Data
 Imports Logic
 Public Class FrmAlertRemove
-    Dim log As New Logic.Logic
+    Dim log As New Logic.Controller
     Dim NameX As String = ""
     Dim id As Integer = 0
     Public Shared idSympt As Integer = 0

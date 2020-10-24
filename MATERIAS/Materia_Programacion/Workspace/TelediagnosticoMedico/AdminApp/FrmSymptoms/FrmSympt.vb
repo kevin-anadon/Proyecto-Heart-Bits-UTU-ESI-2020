@@ -2,7 +2,7 @@
 Imports Data
 
 Public Class FrmSympt
-    Dim log As New Logic.Logic()
+    Dim log As New Logic.Controller()
 
     Dim row As DataGridViewRow
     Dim SymptSelected As String

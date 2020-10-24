@@ -3,7 +3,7 @@ Imports Logic
 
 Public Class FrmLogin
     'Atributos
-    Private ReadOnly L1 As New Logic.Logic()
+    Private ReadOnly L1 As New Logic.Controller()
     Public ciPatientLoggedOn As String = Nothing
 
 

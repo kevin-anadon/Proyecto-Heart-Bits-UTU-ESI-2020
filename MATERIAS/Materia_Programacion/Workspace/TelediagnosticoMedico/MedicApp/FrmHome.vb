@@ -4,10 +4,12 @@ Public Class FrmHome
     Dim time As Integer = 0
     Public Shared MedicName = "", Ci = "", Age = "", Email = "", Phone = "", Connect = ""
     Dim PatientName As String = ""
-    Dim log As New Logic.Logic
+    Dim log As New Logic.Controller
     Dim Medic As New Medic()
     Dim idRoom As Integer = 0
     Dim chat As String = Nothing
+    Dim row As DataGridViewRow
+
     Private Sub BtnHome_Click(sender As Object, e As EventArgs) Handles BtnHome.Click
         ChangePanels(1)
     End Sub
@@ -19,6 +21,7 @@ Public Class FrmHome
         Try
             'Creo una sala para que conversen
             idRoom = log.CreateRoom()
+            Controller.Instance.idRoom = idRoom
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
@@ -96,19 +99,15 @@ Public Class FrmHome
     Private Sub TimerChat_Tick(sender As Object, e As EventArgs) Handles TimerChat.Tick
         time = time + 1
         If time > 4 Then
-            ObtainMsg()
-            time = 0
+            Try
+                ObtainMsg()
+                time = 0
+            Catch ex As Exception
+                MessageBox.Show(ex.Message)
+            End Try
         End If
     End Sub
 
-    Private Sub DgvRequests_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgvRequests.CellContentClick
-        Dim row As DataGridViewRow
-        row = DgvRequests.CurrentRow
-        If e.ColumnIndex = 0 Then
-            PatientName = CStr(row.Cells("Nombre").Value)
-            ChangePanels(2)
-        End If
-    End Sub
     Private Sub BtnSend_Click(sender As Object, e As EventArgs) Handles BtnSend.Click
         Try
             log.SendMessage(Medic.id, idRoom, TxtChatSend.Text, DateTime.Now.ToString("HH:mm:ss"))
@@ -123,18 +122,23 @@ Public Class FrmHome
 
     Public Sub ObtainMsg()
         chat = Nothing
-        For Each msg As Message In log.ObtainMessages(Medic.id, idRoom)
-            If chat = Nothing And msg.idP = Medic.id Then
-                chat = "Tú: " + msg.message + vbTab + msg.hour.Hour.ToString() + ":" + msg.hour.Minute.ToString()
-            ElseIf chat = Nothing And msg.idP <> Medic.id Then
-                chat = PatientName + ": " + msg.message + vbTab + msg.hour.Hour.ToString() + ":" + msg.hour.Minute.ToString()
-            ElseIf msg.idP = Medic.id Then
-                chat = chat + vbCrLf + "Tú: " + msg.message + vbTab + msg.hour.Hour.ToString() + ":" + msg.hour.Minute.ToString()
-            Else
-                chat = chat + vbCrLf + PatientName + ": " + msg.message + vbTab + msg.hour.Hour.ToString() + ":" + msg.hour.Minute.ToString()
-            End If
-        Next
-        TxtChat.Text = chat
+        Try
+            For Each msg As Message In log.ObtainMessages(Medic.id, idRoom)
+                If chat = Nothing And msg.idP = Medic.id Then
+                    chat = "Tú: " + msg.message + vbTab + msg.hour.Hour.ToString() + ":" + msg.hour.Minute.ToString()
+                ElseIf chat = Nothing And msg.idP <> Medic.id Then
+                    chat = PatientName + ": " + msg.message + vbTab + msg.hour.Hour.ToString() + ":" + msg.hour.Minute.ToString()
+                ElseIf msg.idP = Medic.id Then
+                    chat = chat + vbCrLf + "Tú: " + msg.message + vbTab + msg.hour.Hour.ToString() + ":" + msg.hour.Minute.ToString()
+                Else
+                    chat = chat + vbCrLf + PatientName + ": " + msg.message + vbTab + msg.hour.Hour.ToString() + ":" + msg.hour.Minute.ToString()
+                End If
+            Next
+            TxtChat.Text = chat
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+
     End Sub
 
     Private Sub TxtChatSend_KeyDown(sender As Object, e As KeyEventArgs) Handles TxtChatSend.KeyDown
@@ -152,6 +156,46 @@ Public Class FrmHome
         LblPhone.Text = Phone
         LblConnect.Text = Connect
     End Sub
+    Private Sub DgvRequests_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgvRequests.CellContentClick
+        row = DgvRequests.CurrentRow
+        If e.ColumnIndex = 0 Then 'Boton aceptar
+            PatientName = CStr(row.Cells("Nombre").Value)
+            Try
+                Dim Patient As People = ObtainPatientAccepted()
+                Dim dateI As Date = CDate(row.Cells("Fecha").Value)
+                Dim timeI As TimeSpan = row.Cells("Hora").Value
+                Dim dateTimeRequestI As String = dateI.ToString("yyy-MM-dd") + " " + CDate(timeI.ToString()).ToString("HH:mm:ss")
+                Dim dateTimeRequestF As String = Me.GetNowDateTime(1)
+
+                log.AcceptRequest(Medic.id, Patient.id, dateTimeRequestI, dateTimeRequestF)
+                ChangePanels(2)
+            Catch ex As Exception
+                MessageBox.Show(ex.Message)
+            End Try
+        End If
+    End Sub
+    Private Function ObtainPatientAccepted() As People
+        Dim Patient As New People()
+        Dim NameComplete As String = CStr(row.Cells("Nombre").Value)
+
+        For Each Patients As People In log.ObtainPatients()
+            Dim NameComplete2 As String = ""
+            If Patients.scndName = "" Then
+                NameComplete2 = Patients.fstName + " " + Patients.fstSurname + " " + Patients.scndSurname
+            Else
+                NameComplete2 = Patients.fstName + " " + Patients.scndName + " " + Patients.fstSurname + " " + Patients.scndSurname
+            End If
+            If NameComplete.Equals(NameComplete2) Then
+                Patient = Patients
+            End If
+        Next
+
+        Return Patient
+    End Function
+
+    Private Function GetNowDateTime(prefix As Short) As String
+        Return log.GetNowDateTime(prefix)
+    End Function
 
     Private Sub BtnLogOut_Click(sender As Object, e As EventArgs) Handles BtnLogOut.Click
         If MsgBox("Está seguro que desea cerrar sesión ?", MsgBoxStyle.YesNoCancel, "Cerrar Programa") = MsgBoxResult.Yes Then

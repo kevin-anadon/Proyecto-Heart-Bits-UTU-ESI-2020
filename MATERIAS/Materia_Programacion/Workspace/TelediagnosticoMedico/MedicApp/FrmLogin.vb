@@ -1,7 +1,7 @@
 ﻿Imports Logic
 Imports Data
 Public Class FrmLogin
-    Dim log As New Logic.Logic()
+    Dim log As New Logic.Controller()
     Public Shared Property MedicLog As New Medic()
     Dim ci As String = Nothing
 

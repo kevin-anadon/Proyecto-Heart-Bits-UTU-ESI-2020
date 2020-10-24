@@ -2,7 +2,7 @@
 Imports Data
 Imports Logic
 Public Class FrmAddModSympt
-    Dim log As New Logic.Logic()
+    Dim log As New Logic.Controller()
 
     Dim PatAfter As New List(Of Pathology)
     Dim PathBefore As New List(Of Pathology)

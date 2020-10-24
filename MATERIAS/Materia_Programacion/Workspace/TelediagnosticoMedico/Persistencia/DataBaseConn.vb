@@ -1332,6 +1332,70 @@ Public Class DataBaseConn
         End Try
 
     End Function
+    Public Sub AcceptRequest(idMed As Integer, idPatient As Integer, datetI As String, dateF As String)
+        Dim con As Connection = Me.Connect()
+
+        Try
+            Dim rsSearchRequest As Recordset = con.Execute("SELECT id FROM peticion WHERE id_paciente=" & idPatient & " AND fechaHoraInicio='" + datetI + "'")
+            If rsSearchRequest.EOF Then
+                Throw New Exception("No existe la peticion")
+            Else
+                Dim IdRequest As Integer = DirectCast(rsSearchRequest.Fields("id").Value, Integer)
+                Dim rsAcceptRequestA As Recordset = con.Execute("UPDATE peticion p SET p.estado=" & 0 & " WHERE p.id=" & IdRequest)
+                Dim rsStopPetitionB As Recordset = con.Execute("UPDATE peticion p SET p.motivo='" + "Peticion aceptada" + "' WHERE p.id=" & IdRequest)
+                Dim rsStopPetitionC As Recordset = con.Execute("UPDATE peticion p SET p.fechaHoraFin='" + dateF + "' WHERE p.id=" & IdRequest)
+                Dim rsInsertAcepta As Recordset = con.Execute("INSERT INTO acepta VALUES(" & idMed & "," & IdRequest & ");")
+            End If
+        Catch ex As Exception
+            Console.WriteLine(ex.ToString())
+            Throw New Exception("Error al aceptar la peticion")
+        Finally
+            con.Close()
+        End Try
+
+    End Sub
+    Public Sub WaitingAccept(idPatient As Integer, datetI As String)
+        Dim con As Connection = Me.Connect()
+
+        Try
+            Dim rsSearchPetition As Recordset = con.Execute("SELECT p.id FROM peticion p WHERE id_paciente=" & idPatient & " AND fechaHoraInicio='" + datetI + "' AND estado=0;")
+            If rsSearchPetition.EOF Then
+                Throw New Exception("La peticion todavia no fue aceptada")
+            End If
+        Catch ex As Exception
+            Console.WriteLine(ex.ToString())
+            Throw New Exception("Error al obtener las peticiones")
+        Finally
+            con.Close()
+        End Try
+
+    End Sub
+    Public Function ObtainTalkingMed(idPatient As Integer, datetI As String) As Medic
+        Dim con As Connection = Me.Connect()
+        Dim TalkingMed As New Medic()
+        Try
+            Dim rsSearchPetition As Recordset = con.Execute("SELECT p.id FROM peticion p WHERE id_paciente=" & idPatient & " AND fechaHoraInicio='" + datetI + "' AND estado=0;")
+            If rsSearchPetition.EOF Then
+                Throw New Exception("La peticion no existe")
+            Else
+                Dim idRequest As Integer = DirectCast(rsSearchPetition.Fields("id").Value, Integer)
+                Dim rsSelectMedicId As Recordset = con.Execute("SELECT ac.id_medico As Id FROM peticion p JOIN acepta ac ON(p.id=ac.id_peticion) WHERE p.id=" & idRequest & ";")
+                Dim idMedic As Integer = DirectCast(rsSelectMedicId.Fields("Id").Value, Integer)
+                For Each medic As Medic In ObtainMedics()
+                    If medic.id = idMedic Then
+                        TalkingMed = medic
+                    End If
+                Next
+                Return TalkingMed
+            End If
+        Catch ex As Exception
+            Console.WriteLine(ex.ToString())
+            Throw New Exception("Error al obtener el médico a charlar")
+        Finally
+            con.Close()
+        End Try
+
+    End Function
     Public Function MakePetition(idPatient As Integer, motive As String, datetI As String, datetF As String) As Boolean
         Dim con As Connection = Me.Connect
         Try

@@ -1,7 +1,7 @@
 ﻿Imports Logic
 Imports Data
 Public Class FrmAdmin
-    Dim log As New Logic.Logic
+    Dim log As New Logic.Controller
 
     Dim SelectedAdmin As Admin = Nothing
     Dim SelectedMedic As Medic = Nothing

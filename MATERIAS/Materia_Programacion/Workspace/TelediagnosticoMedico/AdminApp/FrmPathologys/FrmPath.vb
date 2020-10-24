@@ -1,7 +1,7 @@
 ﻿Imports Logic
 Imports Data
 Public Class FrmPath
-    Dim log As New Logic.Logic()
+    Dim log As New Logic.Controller()
 
     Dim row As DataGridViewRow
     Dim PathSelected As String = Nothing
