@@ -25,7 +25,6 @@ Partial Class FrmSplashScreen
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmSplashScreen))
         Me.PrgbarLoadSplashScreen = New Guna.UI2.WinForms.Guna2ProgressBar()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.LblTitle4 = New System.Windows.Forms.Label()
         Me.LblTitle3 = New System.Windows.Forms.Label()
         Me.PicbxLogoCAS = New System.Windows.Forms.PictureBox()
@@ -35,7 +34,6 @@ Partial Class FrmSplashScreen
         Me.LblTitle2 = New System.Windows.Forms.Label()
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PicbxLogoCAS, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -61,17 +59,6 @@ Partial Class FrmSplashScreen
         Me.PrgbarLoadSplashScreen.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
         Me.PrgbarLoadSplashScreen.UseTransparentBackground = True
         Me.PrgbarLoadSplashScreen.Value = 80
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.MedicApp.My.Resources.Resources.Lines
-        Me.PictureBox1.Location = New System.Drawing.Point(366, 378)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(117, 8)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
-        Me.PictureBox1.TabIndex = 34
-        Me.PictureBox1.TabStop = False
         '
         'LblTitle4
         '
@@ -203,7 +190,6 @@ Partial Class FrmSplashScreen
         Me.BackgroundImage = Global.MedicApp.My.Resources.Resources.Panel__Type_1
         Me.ClientSize = New System.Drawing.Size(1044, 601)
         Me.Controls.Add(Me.PrgbarLoadSplashScreen)
-        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.LblTitle4)
         Me.Controls.Add(Me.LblTitle3)
         Me.Controls.Add(Me.PicbxLogoCAS)
@@ -216,14 +202,12 @@ Partial Class FrmSplashScreen
         Me.Name = "FrmSplashScreen"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Telediagnóstico Médico: MedicApp."
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PicbxLogoCAS, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents PrgbarLoadSplashScreen As Guna.UI2.WinForms.Guna2ProgressBar
-    Friend WithEvents PictureBox1 As PictureBox
     Public WithEvents LblTitle4 As Label
     Public WithEvents LblTitle3 As Label
     Public WithEvents PicbxLogoCAS As PictureBox

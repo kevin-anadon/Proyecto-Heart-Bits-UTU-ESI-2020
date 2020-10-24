@@ -1,37 +1,44 @@
-﻿Public Class FrmSplashScreen
-    Private Sub PrgbarLoadSplashScreen_ValueChanged(sender As Object, e As EventArgs) Handles PrgbarLoadSplashScreen.ValueChanged
+﻿Imports Logic
 
+Public Class FrmSplashScreen
+    Private record As Integer
+    Private LQuery As New Logic.Logic()
+    Private resultConnection As Boolean = False
+    Private msgConnection As String = Nothing
+
+    'Comportamientos
+    Private Sub IdentifyMessage()
+        Try
+            LQuery.TryConnection()
+            LblTitle4.Text = "Conexión exitosa. Iniciando el sistema."
+            resultConnection = True
+        Catch ex As Exception
+            Console.WriteLine(ex.Message)
+            LblTitle4.Text = ex.Message
+        End Try
     End Sub
 
-    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
-
+    'Eventos
+    Private Sub FrmSplashScreen_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        IdentifyMessage()
+        PrgbarLoadSplashScreen.Value = 0.0
+        PrgbarLoadSplashScreen.Maximum = 100
+        Timer1.Interval = 40
+        Timer1.Enabled = True
+    End Sub
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        If resultConnection = True Then
+            If record < 100 Then
+                PrgbarLoadSplashScreen.Value = record
+                record += 1
+            Else
+                Timer1.Enabled = False
+                Me.Hide() 'Este formulario "SplashScreen" se cierra.
+                FrmLogin.Show() 'Este formulario se mostrará en pantalla.
+            End If
+        End If
     End Sub
 
-    Private Sub LblTitle4_Click(sender As Object, e As EventArgs) Handles LblTitle4.Click
 
-    End Sub
 
-    Private Sub LblTitle3_Click(sender As Object, e As EventArgs) Handles LblTitle3.Click
-
-    End Sub
-
-    Private Sub PicbxLogoCAS_Click(sender As Object, e As EventArgs) Handles PicbxLogoCAS.Click
-
-    End Sub
-
-    Private Sub LblInfo1_Click(sender As Object, e As EventArgs) Handles LblInfo1.Click
-
-    End Sub
-
-    Private Sub LblInfo2_Click(sender As Object, e As EventArgs) Handles LblInfo2.Click
-
-    End Sub
-
-    Private Sub LblTitle1_Click(sender As Object, e As EventArgs) Handles LblTitle1.Click
-
-    End Sub
-
-    Private Sub LblTitle2_Click(sender As Object, e As EventArgs) Handles LblTitle2.Click
-
-    End Sub
-End Class
+End Class 'FrmSplashScreen

@@ -12,3 +12,29 @@ C:\Users\Yorel Acosta\Desktop\Study ESIMdeo\Clase 3BB 2020\Proyecto-Heart-Bits-U
 C:\Users\Yorel Acosta\Desktop\Study ESIMdeo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\MedicApp\obj\Debug\MedicApp.exe
 C:\Users\Yorel Acosta\Desktop\Study ESIMdeo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\MedicApp\obj\Debug\MedicApp.xml
 C:\Users\Yorel Acosta\Desktop\Study ESIMdeo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\MedicApp\obj\Debug\MedicApp.pdb
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\MedicApp\bin\Debug\MedicApp.exe.config
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\MedicApp\bin\Debug\MedicApp.exe
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\MedicApp\bin\Debug\MedicApp.pdb
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\MedicApp\bin\Debug\MedicApp.xml
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\MedicApp\bin\Debug\Data.dll
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\MedicApp\bin\Debug\Guna.UI2.dll
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\MedicApp\bin\Debug\Logic.dll
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\MedicApp\bin\Debug\Persistencia.dll
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\MedicApp\bin\Debug\Data.pdb
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\MedicApp\bin\Debug\Data.xml
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\MedicApp\bin\Debug\Logic.pdb
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\MedicApp\bin\Debug\Logic.xml
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\MedicApp\bin\Debug\Persistencia.pdb
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\MedicApp\bin\Debug\Persistencia.xml
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\MedicApp\obj\Debug\MedicApp.vbprojAssemblyReference.cache
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\MedicApp\obj\Debug\MedicApp.FrmHome.resources
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\MedicApp\obj\Debug\MedicApp.FrmLogin.resources
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\MedicApp\obj\Debug\MedicApp.FrmSplashScreen.resources
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\MedicApp\obj\Debug\MedicApp.Resources.resources
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\MedicApp\obj\Debug\MedicApp.vbproj.GenerateResource.cache
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\MedicApp\obj\Debug\MedicApp.vbproj.CoreCompileInputs.cache
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\MedicApp\obj\Debug\MedicApp.vbproj.CopyComplete
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\MedicApp\obj\Debug\MedicApp.exe
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\MedicApp\obj\Debug\MedicApp.xml
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\MedicApp\obj\Debug\MedicApp.pdb
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\MedicApp\bin\Debug\Guna.UI.dll

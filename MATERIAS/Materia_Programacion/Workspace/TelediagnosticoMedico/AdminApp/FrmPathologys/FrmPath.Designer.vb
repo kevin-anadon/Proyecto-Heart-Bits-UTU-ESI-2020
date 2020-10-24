@@ -455,6 +455,7 @@ Partial Class FrmPath
         Me.DgvPat.EnableHeadersVisualStyles = False
         Me.DgvPat.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.DgvPat.Location = New System.Drawing.Point(211, 238)
+        Me.DgvPat.MultiSelect = False
         Me.DgvPat.Name = "DgvPat"
         Me.DgvPat.ReadOnly = True
         Me.DgvPat.RowHeadersVisible = False

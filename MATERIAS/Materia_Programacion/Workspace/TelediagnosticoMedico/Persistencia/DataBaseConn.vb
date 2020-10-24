@@ -488,14 +488,63 @@ Public Class DataBaseConn
 
     End Function
 
+    'Query Chat
+    Public Function CreateRoom() As Integer
+        Dim con As Connection = Me.Connect
 
+        Try
+            Dim fecha As String = DateTime.Now.ToString("yyy-MM-dd HH:mm:ss")
+            Dim rsAllowed As Recordset = con.Execute("INSERT INTO salaChat(estado,fechaHoraInicio) VALUES(1,'" & fecha & "');")
+            Dim rsSelectIdRoom As Recordset = con.Execute("SELECT id FROM salaChat WHERE fechaHoraInicio='" + fecha + "';")
+            Dim idRoom As Integer = DirectCast(rsSelectIdRoom.Fields("id").Value, Integer)
+            Return idRoom
+        Catch ex As Exception
+            Console.WriteLine(ex.ToString())
+            Throw New Exception("Error al crear la Sala de chat")
+        Finally
+            con.Close()
+        End Try
+
+    End Function
+
+    Public Sub SendMessage(id As Integer, idRoom As Integer, msg As String, Hour As String)
+        Dim con As Connection = Me.Connect
+
+        Try
+            Dim rsSendMessage As Recordset = con.Execute("INSERT INTO conversa VALUES(" & id & "," & idRoom & ",'" & msg & "','" & Hour & "');")
+        Catch ex As Exception
+            Console.WriteLine(ex.ToString())
+            Throw New Exception("Error al enviar el mensaje")
+        Finally
+            con.Close()
+        End Try
+    End Sub
+
+    Public Function ObtainMessages(id As Integer, idRoom As Integer) As List(Of Message)
+        Dim con As Connection = Me.Connect
+        Dim Msgs As New List(Of Message)
+
+        Try
+            Dim rsObtainMessage As Recordset = con.Execute("SELECT mensaje,id_persona,hora FROM conversa WHERE id_sala=" & idRoom & " ORDER BY hora asc;")
+            While Not rsObtainMessage.EOF
+                Dim Msg As String = TryCast(rsObtainMessage.Fields("mensaje").Value, String)
+                Dim idP As Integer = DirectCast(rsObtainMessage.Fields("id_persona").Value, Integer)
+                Dim hour As DateTime = DirectCast(rsObtainMessage.Fields("hora").Value, DateTime)
+                Msgs.Add(New Message(Msg, idP, hour))
+                rsObtainMessage.MoveNext()
+            End While
+            Return Msgs
+        Catch ex As Exception
+            Throw New Exception(ex.Message)
+        End Try
+    End Function
 
     'Query Personas
     Public Function PatientAllowed(ci As String) As Short
         Dim con As Connection = Me.Connect
 
         Try
-            Dim rsAllowed As Recordset = con.Execute("SELECT p.habilitado FROM persona p WHERE id_tipo='3' AND p.ci=" & Integer.Parse(ci))
+            Dim rsAllowed As Recordset = con.Execute("Select p.habilitado FROM persona p WHERE id_tipo='3' AND p.ci=" & Integer.Parse(ci))
             Dim allowed As Integer = DirectCast(rsAllowed.Fields("habilitado").Value, Short)
 
             If allowed = 1 Then '1 Significa True, 0 False
@@ -807,6 +856,57 @@ Public Class DataBaseConn
         Catch ex As Exception
             Console.WriteLine(ex.ToString())
             Throw New Exception("Error al obtener lista de Médicos")
+        Finally
+            con.Close()
+        End Try
+
+        Return Nothing
+    End Function
+    Public Function LoginMedic(user As String, pass As String) As Medic
+        Dim con As Connection = Me.Connect()
+        Try
+            Dim rsSelectMedic As Recordset = con.Execute("SELECT * FROM vista_medico WHERE usuario='" & user & "' AND contrasena='" & pass & "';")
+
+            Dim id As Integer = DirectCast(rsSelectMedic.Fields("id").Value, Integer)
+            Dim ci As Integer = DirectCast(rsSelectMedic.Fields("ci").Value, Integer)
+            Dim name1 As String = TryCast(rsSelectMedic.Fields("primerNom").Value, String)
+            Dim name2 As String = TryCast(rsSelectMedic.Fields("segundoNom").Value, String)
+            Dim surn1 As String = TryCast(rsSelectMedic.Fields("primerApe").Value, String)
+            Dim surn2 As String = TryCast(rsSelectMedic.Fields("segundoApe").Value, String)
+            Dim genre As String = TryCast(rsSelectMedic.Fields("genero").Value, String)
+            Dim birthdate As Date = DirectCast(rsSelectMedic.Fields("fechaNacimiento").Value, Date)
+            Dim email As String = TryCast(rsSelectMedic.Fields("email").Value, String)
+            Dim street As String = TryCast(rsSelectMedic.Fields("calle").Value, String)
+            Dim ndoor As Integer = DirectCast(rsSelectMedic.Fields("npuerta").Value, Integer)
+            Dim speciality As String = TryCast(rsSelectMedic.Fields("especialidad").Value, String)
+            Dim userSelect As String = TryCast(rsSelectMedic.Fields("usuario").Value, String)
+            Dim password As String = TryCast(rsSelectMedic.Fields("contrasena").Value, String)
+
+            Dim rsSelectCity_Dpto As Recordset = con.Execute("SELECT c.id As Idc,c.nombre As Cnombre,d.id As Idd,d.nombre As Dnombre FROM vista_medico vm JOIN ciudad c ON(vm.id_ciudad=c.id) JOIN departamento d ON(c.id_dpto=d.id) WHERE vm.id=" & id & ";") 'Consulta para Obtener Departamento y Ciudad
+
+            Dim rsSelectPhones As Recordset = con.Execute("SELECT group_concat(c.celular) As Celulares FROM vista_medico vm JOIN cel_empleado c ON(vm.id=c.id_empleado) WHERE vm.id=" & id & ";") 'Consulta para Obtener celulares del Médico
+
+            Dim id_city As Integer = DirectCast(rsSelectCity_Dpto.Fields("Idc").Value, Integer)
+            Dim CityName As String = TryCast(rsSelectCity_Dpto.Fields("Cnombre").Value, String)
+            Dim id_dpto As Integer = DirectCast(rsSelectCity_Dpto.Fields("Idd").Value, Integer)
+            Dim DptoName As String = TryCast(rsSelectCity_Dpto.Fields("Dnombre").Value, String)
+            Dim Phones As String = TryCast(rsSelectPhones.Fields("Celulares").Value, String)
+
+            Dim Dpto As New Department(id_dpto, DptoName) 'Creo el objeto Departamento
+            Dim City As New City(id_city, Dpto, CityName) 'Creo el objeto Ciudad
+
+            Dim genrenumber As Integer = 0
+            If genre.Equals("M") Then
+                genrenumber = 1
+            Else
+                genrenumber = 0
+            End If
+
+            Dim MedicLog As New Medic(id, ci, name1, name2, surn1, surn2, genrenumber, birthdate, email, Phones, street, ndoor, City, userSelect, password, speciality)
+            Return MedicLog
+        Catch ex As Exception
+            Console.WriteLine(ex.ToString())
+            Throw New Exception("Usuario y/o Contraseña equivocado")
         Finally
             con.Close()
         End Try
@@ -1174,6 +1274,21 @@ Public Class DataBaseConn
                 Pathologies.Add(New Pathology(idPathology, namePathology, indexMort, priority))
                 rsPathologiesSuffered.MoveNext()
             End While
+
+            Dim idPathEvidenceHigh As Integer = 0
+            Dim fecha As String = Date.Now.ToString("yyy-MM-dd")
+            For Each Path As Pathology In Pathologies
+                For Each Path2 As Pathology In Pathologies
+                    If Path.mortalityIndex > Path2.mortalityIndex And Path.id <> Path2.id Then
+                        idPathEvidenceHigh = Path.id
+                    ElseIf Path.mortalityIndex < Path2.mortalityIndex And Path.id <> Path2.id Then
+                        idPathEvidenceHigh = Path2.id
+                    End If
+                Next
+            Next
+
+            Dim rsInsertDiagnostic As Recordset = con.Execute("INSERT INTO diagnostico(id_tipo,id_paciente,id_patologia,fecha) VALUES(1," & idPatient & "," & idPathEvidenceHigh & ",'" & fecha & "');")
+
             Return Pathologies
         Catch ex As Exception
             Console.WriteLine(ex)
@@ -1192,10 +1307,35 @@ Public Class DataBaseConn
             con.Close()
         End Try
     End Sub
+    Public Function ObtainRequestsDataSet() As DataSet
+        Dim con As Connection = Me.Connect()
+        Dim ds = New DataSet
+        Dim da As New System.Data.OleDb.OleDbDataAdapter
+        Try
+            Dim rsSelectRequestsTable As Recordset = con.Execute("SELECT CONCAT('Prioridad ',prior.nombre) As Prioridad, date(pet.fechaHoraInicio) As Fecha,time(pet.fechaHoraInicio) As Hora,
+            CONCAT_WS(' ',pac.primerNom,pac.segundoNom,pac.primerApe,pac.segundoApe) As Nombre,
+            CONCAT(year(curdate())-year(pac.fechaNacimiento) + IF(DATE_FORMAT(CURDATE(),'%m-%d') > 
+            DATE_FORMAT(pac.fechaNacimiento,'%m-%d'),0,-1),' años') As Edad
+            FROM prioridad prior JOIN patologia pat ON(prior.id=pat.id_prioridad) JOIN diagnostico diag
+            ON(pat.id=diag.id_patologia) JOIN persona pac ON(diag.id_paciente=pac.id) JOIN peticion pet
+            ON(pac.id=pet.id_paciente)
+            WHERE pet.estado=True
+            GROUP BY pet.id
+            ORDER BY prior.id;")
+            da.Fill(ds, rsSelectRequestsTable, "Refresh")
+            Return ds
+        Catch ex As Exception
+            Console.WriteLine(ex.ToString())
+            Throw New Exception("Error al obtener la tabla de peticion")
+        Finally
+            con.Close()
+        End Try
+
+    End Function
     Public Function MakePetition(idPatient As Integer, motive As String, datetI As String, datetF As String) As Boolean
         Dim con As Connection = Me.Connect
         Try
-            Dim rsInsertPetition As Recordset = con.Execute("INSERT INTO peticion (id_paciente, estado, motivo, fechaHoraInicio, fechaHoraFin) VALUES (" & idPatient & "," & 1 & ",'" + motive + "','" + datetI + "','" + datetF + "')")
+            Dim rsInsertPetition As Recordset = con.Execute("INSERT INTO peticion (id_paciente, estado, fechaHoraInicio) VALUES (" & idPatient & "," & 1 & ",'" + datetI + "')")
             Return True
         Catch ex As Exception
             Console.WriteLine(ex)

@@ -200,7 +200,11 @@ Public Class FrmHome
 
             'Cargo las Patologias Sufridas en una Lista
             PatholgiesSuffered = New List(Of Pathology)
-            Me.PatholgiesSuffered = L1.ObtainPatholgiesSuffered(idPatientLoggedOn)
+            Try
+                Me.PatholgiesSuffered = L1.ObtainPatholgiesSuffered(idPatientLoggedOn)
+            Catch ex As Exception
+                MessageBox.Show(ex.Message)
+            End Try
 
             'Trato el Panel con los Resultados
             'Hago un diagnostico (resumen/media) de los datos de "id_prioridad" -> Me define el color y mensaje del header.

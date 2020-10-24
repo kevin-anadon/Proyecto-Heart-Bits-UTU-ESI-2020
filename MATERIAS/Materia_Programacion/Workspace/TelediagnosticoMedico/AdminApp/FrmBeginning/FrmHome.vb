@@ -1,5 +1,4 @@
-﻿Imports System.Runtime.InteropServices
-Imports Data
+﻿Imports Data
 Public Class FrmHome
     Public Shared AdmName = "", Ci = "", Age = "", Email = "", Phone = "", Connect = ""
 

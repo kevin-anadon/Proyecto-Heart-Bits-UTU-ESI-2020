@@ -17,6 +17,34 @@ Public Class Logic
 
 
     'Conexión Otros
+    Public Function CreateRoom() As Integer
+        Try
+            Return CQConnection.CreateRoom()
+        Catch ex As Exception
+            Throw New Exception(ex.Message)
+        End Try
+    End Function
+    Public Sub SendMessage(id As Integer, idRoom As Integer, msg As String, Hour As String)
+        Try
+            CQConnection.SendMessage(id, idRoom, msg, Hour)
+        Catch ex As Exception
+            Throw New Exception(ex.Message)
+        End Try
+    End Sub
+    Public Function ObtainMessages(id As Integer, idRoom As Integer) As List(Of Message)
+        Try
+            Return CQConnection.ObtainMessages(id, idRoom)
+        Catch ex As Exception
+            Throw New Exception(ex.Message)
+        End Try
+    End Function
+    Public Function ObtainRequestsDataSet() As DataSet
+        Try
+            Return CQConnection.ObtainRequestsDataSet()
+        Catch ex As Exception
+            Throw New Exception(ex.Message)
+        End Try
+    End Function
     Public Function MakePetition(idPatient As Integer, motive As String, datetI As String, datetF As String) As Boolean
         Return CQConnection.MakePetition(idPatient, motive, datetI, datetF)
     End Function
@@ -218,7 +246,6 @@ Public Class Logic
 
         'Almaceno en la Base de Datos los Sintomas que sufre el Paciente, y su Id para referenciarlo
         Me.SetPatientSufferSymp(idPatientLoggedOn, idSympSuffered, Me.GetNowDateTime(3))
-
     End Sub
     Public Function matchPatientLoggedOn(ci As String) As Integer
         Return CQConnection.matchPatientLoggedOn(ci)
@@ -268,6 +295,13 @@ Public Class Logic
             Throw New Exception(ex.Message)
         End Try
     End Sub
+    Public Function LoginMedic(user As String, pass As String) As Medic
+        Try
+            Return CQConnection.LoginMedic(user, pass)
+        Catch ex As Exception
+            Throw New Exception(ex.Message)
+        End Try
+    End Function
     Public Function ObtainMedics() As List(Of Medic)
         Return CQConnection.ObtainMedics()
     End Function

@@ -23,7 +23,7 @@ Public Class FrmLogin
 
     Private Sub BtnLogin_Click(sender As Object, e As EventArgs) Handles BtnLogin.Click
         If TxtUser.Text.Trim.Length = 0 Or TxtPass.Text.Trim.Length = 0 Then
-            MessageBox.Show("CAMPOS VACIOS!!")
+            MessageBox.Show("Campos vacios!")
         Else
             Try
                 AdminLog = log.LoginAdmin(TxtUser.Text.ToString(), TxtPass.Text.ToString())

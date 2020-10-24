@@ -28,6 +28,7 @@ Public Class FrmAdmin
 
     Private Sub FrmAdmin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ReloadDgv()
+        ObtainSelected()
         BtnAddAdmin.BackColor = Color.FromArgb(240, 240, 240)
         BtnModAdmin.BackColor = Color.FromArgb(240, 240, 240)
         BtnDelAdmin.BackColor = Color.FromArgb(240, 240, 240)
@@ -346,6 +347,7 @@ Public Class FrmAdmin
                 log.DisablePatient(SelectedPatient.id)
             End If
             ReloadDgv()
+            ObtainSelected()
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
