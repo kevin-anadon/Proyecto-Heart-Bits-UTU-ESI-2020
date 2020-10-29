@@ -33,11 +33,53 @@ Public Class DataBaseConn
 
 
     'Query Otros
+    Public Function ObtainSymptomsSuffered(idPatient As Integer, DateNow As String) As List(Of Symptom)
+        Dim con As Connection = Me.Connect()
+        Dim Symptoms As New List(Of Symptom)
+
+        Try
+            Dim rsSelectSymptomsSuffered As Recordset = con.Execute("SELECT s.id, s.descripcion FROM sintoma s JOIN paciente_sufre ps ON(s.id=ps.id_sintoma) WHERE ps.id_paciente=" & idPatient & " AND ps.fecha='" + DateNow + "';")
+
+            While (Not rsSelectSymptomsSuffered.EOF)
+                Dim idSymptom As Integer = DirectCast(rsSelectSymptomsSuffered.Fields("id").Value, Integer)
+                Dim descSymptom As String = TryCast(rsSelectSymptomsSuffered.Fields("descripcion").Value, String)
+                Dim S1 As New Symptom
+                S1.Id = idSymptom
+                S1.Description = descSymptom
+                Symptoms.Add(S1)
+                rsSelectSymptomsSuffered.MoveNext()
+            End While
+
+            Return Symptoms
+        Catch ex As Exception
+            Console.WriteLine(ex.ToString())
+            Throw New Exception("Error al obtener los síntomas seleccionados")
+        Finally
+            con.Close()
+        End Try
+
+    End Function
+    Public Function ObtainTentativeDiagnosticDataSet(idPatient As Integer, DateNow As String) As DataSet
+        Dim con As Connection = Me.Connect()
+
+        Dim ds = New DataSet
+        Dim da As New System.Data.OleDb.OleDbDataAdapter
+        Try
+            Dim rsSelectTentativeDiagnostic As Recordset = con.Execute("SELECT p.nombre,prior.nombre FROM diagnostico d JOIN patologia p ON(d.id_patologia=p.id) JOIN prioridad prior ON(p.id_prioridad=prior.id) WHERE d.id_paciente=" & idPatient & " AND d.fecha='" + DateNow + "';")
+            da.Fill(ds, rsSelectTentativeDiagnostic, "Diagnostic")
+            Return ds
+        Catch ex As Exception
+            Console.WriteLine(ex.ToString())
+            Throw New Exception("Error al obtener la patología diagnosticada")
+        Finally
+            con.Close()
+        End Try
+    End Function
     Public Function ObtainTreatments(pat As String) As List(Of Treatment)
         Dim con As Connection = Me.Connect()
         Dim treatments As New List(Of Treatment)
 
-        Dim rs As Recordset = con.Execute("SELECT t.nombre, t.descripcion, t.tipo FROM tratamiento t JOIN patologia p ON(t.id_patologia=p.id) WHERE p.nombre='" & pat & "' ORDER BY t.nombre;")
+        Dim rs As Recordset = con.Execute("SELECT t.nombre, t.descripcion, t.tipo FROM tratamiento t JOIN patologia p On(t.id_patologia=p.id) WHERE p.nombre='" & pat & "' ORDER BY t.nombre;")
 
         While (Not rs.EOF)
             Dim name As String = TryCast(rs.Fields("nombre").Value, String)
@@ -506,6 +548,33 @@ Public Class DataBaseConn
         End Try
 
     End Function
+    Public Sub LeaveRoom(idRoom As Integer, DateNow As String)
+        Dim con As Connection = Me.Connect
+
+        Try
+            Dim rsLeaveRoom As Recordset = con.Execute("UPDATE salaChat SET estado=0,motivo='El médico finalizó el chat',fechaHoraFin='" + DateNow + "' WHERE id=" & idRoom & ";")
+        Catch ex As Exception
+            Console.WriteLine(ex.ToString())
+            Throw New Exception("Error al finalizar la Sala de Chat")
+        Finally
+            con.Close()
+        End Try
+    End Sub
+    Public Sub CheckStateRoom(idRoom As Integer)
+        Dim con As Connection = Me.Connect
+
+        Try
+            Dim rsLeaveRoom As Recordset = con.Execute("SELECT * FROM salaChat WHERE id=" & idRoom & " AND estado=1;")
+            If rsLeaveRoom.EOF Then
+                Throw New Exception("La sala ya finalizó")
+            End If
+        Catch ex As Exception
+            Console.WriteLine(ex.ToString())
+            Throw New Exception("Error al obtener el estado de la sala")
+        Finally
+            con.Close()
+        End Try
+    End Sub
 
     Public Sub SendMessage(id As Integer, idRoom As Integer, msg As String, Hour As String)
         Dim con As Connection = Me.Connect
@@ -1239,6 +1308,7 @@ Public Class DataBaseConn
             con.Close()
         End Try
     End Function
+
     Public Sub SetPatientSufferSymp(idPatient As Integer, idSympSuffered As List(Of Integer), nowDate As String)
         Dim con As Connection = Me.Connect()
 

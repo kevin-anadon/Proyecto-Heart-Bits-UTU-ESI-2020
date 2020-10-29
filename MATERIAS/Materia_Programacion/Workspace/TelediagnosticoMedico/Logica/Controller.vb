@@ -249,7 +249,7 @@ Public Class Controller
             Return Nothing
         End Try
     End Function
-    Public Function GetNowDateTime(prefix As Short)
+    Public Function GetNowDateTime(prefix As Short) As String
         Select Case prefix
             Case 1 'Devuelve 'YYYY-MM-DD HH:MM:SS'
                 Dim nowDate As String = Now.ToString("yyy-MM-dd")
@@ -266,6 +266,34 @@ Public Class Controller
 
 
     'Conexión Personas
+    Public Function ObtainSymptomsSuffered(idPatient As Integer, DateNow As String) As List(Of Symptom)
+        Try
+            Return CQConnection.ObtainSymptomsSuffered(idPatient, DateNow)
+        Catch ex As Exception
+            Throw New Exception(ex.Message)
+        End Try
+    End Function
+    Public Function ObtainTentativeDiagnosticDataSet(idPatient As Integer, DateNow As String) As DataSet
+        Try
+            Return CQConnection.ObtainTentativeDiagnosticDataSet(idPatient, DateNow)
+        Catch ex As Exception
+            Throw New Exception(ex.Message)
+        End Try
+    End Function
+    Public Sub LeaveRoom(idRoom As Integer, DateNow As String)
+        Try
+            CQConnection.LeaveRoom(idRoom, DateNow)
+        Catch ex As Exception
+            Throw New Exception(ex.Message)
+        End Try
+    End Sub
+    Public Sub CheckStateRoom(idRoom As Integer)
+        Try
+            CQConnection.CheckStateRoom(idRoom)
+        Catch ex As Exception
+            Throw New Exception(ex.Message)
+        End Try
+    End Sub
     Public Sub LoadSympSuffred(idPatientLoggedOn As Integer, sympSuffred As List(Of String))
         Dim symptoms As List(Of Data.Symptom) = Me.ObtainSymptoms()
         Dim idSympSuffered As New List(Of Integer)
@@ -279,7 +307,7 @@ Public Class Controller
         Next 'For [symptomsSuffred] para cada item del ListBox que contiene los Síntomas que Sufre el Paciente.
 
         'Almaceno en la Base de Datos los Sintomas que sufre el Paciente, y su Id para referenciarlo
-        Me.SetPatientSufferSymp(idPatientLoggedOn, idSympSuffered, Me.GetNowDateTime(3))
+        Me.SetPatientSufferSymp(idPatientLoggedOn, idSympSuffered, Me.GetNowDateTime(2))
     End Sub
     Public Function matchPatientLoggedOn(ci As String) As Integer
         Return CQConnection.matchPatientLoggedOn(ci)

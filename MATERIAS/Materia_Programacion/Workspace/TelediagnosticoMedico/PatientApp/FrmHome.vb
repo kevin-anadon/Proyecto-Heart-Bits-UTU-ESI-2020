@@ -418,15 +418,17 @@ Public Class FrmHome
 
     'Chat
     Private Sub BtnSend_Click(sender As Object, e As EventArgs) Handles BtnSend.Click
-        Try
-            L1.SendMessage(idPatientLoggedOn, idRoom, TxtChatSend.Text, DateTime.Now.ToString("HH:mm:ss"))
-            ObtainMsg()
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-        End Try
+        If Not TxtChatSend.Text.Trim.Length = 0 Then
+            Try
+                L1.SendMessage(idPatientLoggedOn, idRoom, TxtChatSend.Text, DateTime.Now.ToString("HH:mm:ss"))
+                ObtainMsg()
+            Catch ex As Exception
+                MessageBox.Show(ex.Message)
+            End Try
 
-        TxtChatSend.Clear()
-        TxtChatSend.Focus()
+            TxtChatSend.Clear()
+            TxtChatSend.Focus()
+        End If
     End Sub
 
     Public Sub ObtainMsg()
@@ -456,12 +458,27 @@ Public Class FrmHome
             BtnSend.PerformClick()
         End If
     End Sub
+    Private Function CheckStateRoom() As Integer
+        Try
+            L1.CheckStateRoom(idRoom)
+            Return 0
+        Catch ex As Exception
+            Return 1
+        End Try
+    End Function
     Private Sub TimerChat_Tick(sender As Object, e As EventArgs) Handles TimerChat.Tick
         time = time + 1
         If time > 4 Then
             Try
-                ObtainMsg()
-                time = 0
+                If CheckStateRoom() = 0 Then
+                    ObtainMsg()
+                    time = 0
+                Else
+                    TimerChat.Stop()
+                    MessageBox.Show("El chat ha finalizado!")
+                    FrmLogin.Show()
+                    Me.Close()
+                End If
             Catch ex As Exception
                 MessageBox.Show(ex.Message)
             End Try

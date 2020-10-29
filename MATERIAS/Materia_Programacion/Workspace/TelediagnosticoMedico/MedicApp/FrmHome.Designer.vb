@@ -23,12 +23,23 @@ Partial Class FrmHome
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmHome))
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.PanelLeft = New System.Windows.Forms.Panel()
         Me.PanelButtons = New System.Windows.Forms.Panel()
+        Me.BtnLogOut = New Guna.UI2.WinForms.Guna2Button()
+        Me.BtnRequest = New Guna.UI2.WinForms.Guna2Button()
+        Me.BtnHome = New Guna.UI2.WinForms.Guna2Button()
+        Me.PicBar = New System.Windows.Forms.PictureBox()
+        Me.PicLogo = New System.Windows.Forms.PictureBox()
         Me.DragCtrl = New Guna.UI2.WinForms.Guna2DragControl(Me.components)
         Me.Elipse = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.TimerRequests = New System.Windows.Forms.Timer(Me.components)
@@ -39,6 +50,38 @@ Partial Class FrmHome
         Me.BtnMore = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
         Me.PnlChatBack = New Guna.UI2.WinForms.Guna2Panel()
+        Me.PnlViewPatientInfo = New Guna.UI2.WinForms.Guna2Panel()
+        Me.BtnInfoClose = New Guna.UI.WinForms.GunaButton()
+        Me.Guna2Panel15 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.GunaLabel2 = New Guna.UI.WinForms.GunaLabel()
+        Me.Guna2Panel14 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.DgvInfoPatientPaths = New Guna.UI.WinForms.GunaDataGridView()
+        Me.Guna2Panel12 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.GunaLabel1 = New Guna.UI.WinForms.GunaLabel()
+        Me.Guna2Panel13 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.DgvInfoPatientSympts = New Guna.UI.WinForms.GunaDataGridView()
+        Me.Guna2VSeparator1 = New Guna.UI2.WinForms.Guna2VSeparator()
+        Me.LblInfoPatientAge = New System.Windows.Forms.Label()
+        Me.Guna2Separator2 = New Guna.UI2.WinForms.Guna2Separator()
+        Me.LblInfoPatientSurn = New System.Windows.Forms.Label()
+        Me.LblInfoPatientName = New System.Windows.Forms.Label()
+        Me.Guna2Separator1 = New Guna.UI2.WinForms.Guna2Separator()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Guna2Panel10 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Guna2Panel11 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.PnlMoreInfo = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Guna2Panel9 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Guna2Panel8 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Guna2Panel7 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Guna2Panel6 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Guna2Panel5 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Guna2Panel4 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.BtnPatientInfo = New Guna.UI2.WinForms.Guna2Button()
+        Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Guna2Panel3 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.BtnEndChat = New Guna.UI2.WinForms.Guna2Button()
         Me.TxtChat = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.PnlTittleChat = New Guna.UI2.WinForms.Guna2Panel()
@@ -49,11 +92,6 @@ Partial Class FrmHome
         Me.PnlTittle = New Guna.UI2.WinForms.Guna2Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.LblListado = New System.Windows.Forms.Label()
-        Me.BtnLogOut = New Guna.UI2.WinForms.Guna2Button()
-        Me.BtnRequest = New Guna.UI2.WinForms.Guna2Button()
-        Me.BtnHome = New Guna.UI2.WinForms.Guna2Button()
-        Me.PicBar = New System.Windows.Forms.PictureBox()
-        Me.PicLogo = New System.Windows.Forms.PictureBox()
         Me.PanelHome = New System.Windows.Forms.Panel()
         Me.LblConnect = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
@@ -73,14 +111,27 @@ Partial Class FrmHome
         Me.PicSys = New System.Windows.Forms.PictureBox()
         Me.PanelLeft.SuspendLayout()
         Me.PanelButtons.SuspendLayout()
+        CType(Me.PicBar, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PicLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PnlChat.SuspendLayout()
         Me.PnlChatBack.SuspendLayout()
+        Me.PnlViewPatientInfo.SuspendLayout()
+        Me.Guna2Panel15.SuspendLayout()
+        Me.Guna2Panel14.SuspendLayout()
+        CType(Me.DgvInfoPatientPaths, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Guna2Panel12.SuspendLayout()
+        Me.Guna2Panel13.SuspendLayout()
+        CType(Me.DgvInfoPatientSympts, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Guna2Panel10.SuspendLayout()
+        Me.PnlMoreInfo.SuspendLayout()
+        Me.Guna2Panel2.SuspendLayout()
+        Me.Guna2Panel4.SuspendLayout()
+        Me.Guna2Panel1.SuspendLayout()
+        Me.Guna2Panel3.SuspendLayout()
         Me.PnlTittleChat.SuspendLayout()
         Me.PnlRequest.SuspendLayout()
         CType(Me.DgvRequests, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PnlTittle.SuspendLayout()
-        CType(Me.PicBar, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PicLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelHome.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PicHome, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -107,6 +158,89 @@ Partial Class FrmHome
         Me.PanelButtons.Name = "PanelButtons"
         Me.PanelButtons.Size = New System.Drawing.Size(166, 515)
         Me.PanelButtons.TabIndex = 1
+        '
+        'BtnLogOut
+        '
+        Me.BtnLogOut.AccessibleDescription = "BtnLogin"
+        Me.BtnLogOut.AccessibleName = "BtnLogin"
+        Me.BtnLogOut.Animated = True
+        Me.BtnLogOut.BorderRadius = 6
+        Me.BtnLogOut.CheckedState.Parent = Me.BtnLogOut
+        Me.BtnLogOut.CustomImages.Parent = Me.BtnLogOut
+        Me.BtnLogOut.FillColor = System.Drawing.Color.White
+        Me.BtnLogOut.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnLogOut.ForeColor = System.Drawing.Color.Black
+        Me.BtnLogOut.HoverState.Parent = Me.BtnLogOut
+        Me.BtnLogOut.Image = CType(resources.GetObject("BtnLogOut.Image"), System.Drawing.Image)
+        Me.BtnLogOut.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.BtnLogOut.Location = New System.Drawing.Point(8, 482)
+        Me.BtnLogOut.Name = "BtnLogOut"
+        Me.BtnLogOut.ShadowDecoration.Parent = Me.BtnLogOut
+        Me.BtnLogOut.Size = New System.Drawing.Size(146, 30)
+        Me.BtnLogOut.TabIndex = 33
+        Me.BtnLogOut.Text = "Cerrar Sesión"
+        Me.BtnLogOut.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        '
+        'BtnRequest
+        '
+        Me.BtnRequest.AccessibleDescription = "BtnLogin"
+        Me.BtnRequest.AccessibleName = "BtnLogin"
+        Me.BtnRequest.Animated = True
+        Me.BtnRequest.BorderRadius = 6
+        Me.BtnRequest.CheckedState.Parent = Me.BtnRequest
+        Me.BtnRequest.CustomImages.Parent = Me.BtnRequest
+        Me.BtnRequest.FillColor = System.Drawing.Color.White
+        Me.BtnRequest.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnRequest.ForeColor = System.Drawing.Color.Black
+        Me.BtnRequest.HoverState.Parent = Me.BtnRequest
+        Me.BtnRequest.Image = CType(resources.GetObject("BtnRequest.Image"), System.Drawing.Image)
+        Me.BtnRequest.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.BtnRequest.Location = New System.Drawing.Point(8, 58)
+        Me.BtnRequest.Name = "BtnRequest"
+        Me.BtnRequest.ShadowDecoration.Parent = Me.BtnRequest
+        Me.BtnRequest.Size = New System.Drawing.Size(146, 30)
+        Me.BtnRequest.TabIndex = 32
+        Me.BtnRequest.Text = "Peticiones"
+        Me.BtnRequest.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        '
+        'BtnHome
+        '
+        Me.BtnHome.AccessibleDescription = "BtnLogin"
+        Me.BtnHome.AccessibleName = "BtnLogin"
+        Me.BtnHome.Animated = True
+        Me.BtnHome.BorderRadius = 6
+        Me.BtnHome.CheckedState.Parent = Me.BtnHome
+        Me.BtnHome.CustomImages.Parent = Me.BtnHome
+        Me.BtnHome.FillColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.BtnHome.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnHome.ForeColor = System.Drawing.Color.White
+        Me.BtnHome.HoverState.Parent = Me.BtnHome
+        Me.BtnHome.Image = CType(resources.GetObject("BtnHome.Image"), System.Drawing.Image)
+        Me.BtnHome.Location = New System.Drawing.Point(8, 22)
+        Me.BtnHome.Name = "BtnHome"
+        Me.BtnHome.ShadowDecoration.Parent = Me.BtnHome
+        Me.BtnHome.Size = New System.Drawing.Size(146, 30)
+        Me.BtnHome.TabIndex = 31
+        Me.BtnHome.Text = "Página principal"
+        '
+        'PicBar
+        '
+        Me.PicBar.BackColor = System.Drawing.Color.Transparent
+        Me.PicBar.Image = CType(resources.GetObject("PicBar.Image"), System.Drawing.Image)
+        Me.PicBar.Location = New System.Drawing.Point(160, 22)
+        Me.PicBar.Name = "PicBar"
+        Me.PicBar.Size = New System.Drawing.Size(10, 30)
+        Me.PicBar.TabIndex = 30
+        Me.PicBar.TabStop = False
+        '
+        'PicLogo
+        '
+        Me.PicLogo.Image = CType(resources.GetObject("PicLogo.Image"), System.Drawing.Image)
+        Me.PicLogo.Location = New System.Drawing.Point(19, 13)
+        Me.PicLogo.Name = "PicLogo"
+        Me.PicLogo.Size = New System.Drawing.Size(77, 80)
+        Me.PicLogo.TabIndex = 0
+        Me.PicLogo.TabStop = False
         '
         'DragCtrl
         '
@@ -196,6 +330,7 @@ Partial Class FrmHome
         Me.BtnMore.HoverState.FillColor = System.Drawing.Color.Transparent
         Me.BtnMore.HoverState.Parent = Me.BtnMore
         Me.BtnMore.Image = Global.MedicApp.My.Resources.Resources.Vector1
+        Me.BtnMore.ImageOffset = New System.Drawing.Point(1, 0)
         Me.BtnMore.Location = New System.Drawing.Point(752, 570)
         Me.BtnMore.Name = "BtnMore"
         Me.BtnMore.PressedDepth = 0
@@ -231,6 +366,8 @@ Partial Class FrmHome
         Me.PnlChatBack.BorderColor = System.Drawing.Color.DimGray
         Me.PnlChatBack.BorderRadius = 6
         Me.PnlChatBack.BorderThickness = 1
+        Me.PnlChatBack.Controls.Add(Me.PnlViewPatientInfo)
+        Me.PnlChatBack.Controls.Add(Me.PnlMoreInfo)
         Me.PnlChatBack.Controls.Add(Me.TxtChat)
         Me.PnlChatBack.Controls.Add(Me.Label4)
         Me.PnlChatBack.FillColor = System.Drawing.Color.White
@@ -239,6 +376,573 @@ Partial Class FrmHome
         Me.PnlChatBack.ShadowDecoration.Parent = Me.PnlChatBack
         Me.PnlChatBack.Size = New System.Drawing.Size(849, 480)
         Me.PnlChatBack.TabIndex = 57
+        '
+        'PnlViewPatientInfo
+        '
+        Me.PnlViewPatientInfo.AccessibleDescription = "PnlColorInfo"
+        Me.PnlViewPatientInfo.AccessibleName = "PnlColorInfo"
+        Me.PnlViewPatientInfo.BackColor = System.Drawing.Color.Transparent
+        Me.PnlViewPatientInfo.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.PnlViewPatientInfo.BorderRadius = 11
+        Me.PnlViewPatientInfo.BorderThickness = 1
+        Me.PnlViewPatientInfo.Controls.Add(Me.BtnInfoClose)
+        Me.PnlViewPatientInfo.Controls.Add(Me.Guna2Panel15)
+        Me.PnlViewPatientInfo.Controls.Add(Me.Guna2Panel14)
+        Me.PnlViewPatientInfo.Controls.Add(Me.Guna2Panel12)
+        Me.PnlViewPatientInfo.Controls.Add(Me.Guna2Panel13)
+        Me.PnlViewPatientInfo.Controls.Add(Me.Guna2VSeparator1)
+        Me.PnlViewPatientInfo.Controls.Add(Me.LblInfoPatientAge)
+        Me.PnlViewPatientInfo.Controls.Add(Me.Guna2Separator2)
+        Me.PnlViewPatientInfo.Controls.Add(Me.LblInfoPatientSurn)
+        Me.PnlViewPatientInfo.Controls.Add(Me.LblInfoPatientName)
+        Me.PnlViewPatientInfo.Controls.Add(Me.Guna2Separator1)
+        Me.PnlViewPatientInfo.Controls.Add(Me.Label8)
+        Me.PnlViewPatientInfo.Controls.Add(Me.Guna2Panel10)
+        Me.PnlViewPatientInfo.FillColor = System.Drawing.Color.White
+        Me.PnlViewPatientInfo.Location = New System.Drawing.Point(30, 8)
+        Me.PnlViewPatientInfo.Name = "PnlViewPatientInfo"
+        Me.PnlViewPatientInfo.ShadowDecoration.Parent = Me.PnlViewPatientInfo
+        Me.PnlViewPatientInfo.Size = New System.Drawing.Size(768, 401)
+        Me.PnlViewPatientInfo.TabIndex = 60
+        Me.PnlViewPatientInfo.Visible = False
+        '
+        'BtnInfoClose
+        '
+        Me.BtnInfoClose.AnimationHoverSpeed = 0.07!
+        Me.BtnInfoClose.AnimationSpeed = 0.03!
+        Me.BtnInfoClose.BaseColor = System.Drawing.Color.Transparent
+        Me.BtnInfoClose.BorderColor = System.Drawing.Color.Black
+        Me.BtnInfoClose.DialogResult = System.Windows.Forms.DialogResult.None
+        Me.BtnInfoClose.FocusedColor = System.Drawing.Color.Empty
+        Me.BtnInfoClose.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.BtnInfoClose.ForeColor = System.Drawing.Color.White
+        Me.BtnInfoClose.Image = CType(resources.GetObject("BtnInfoClose.Image"), System.Drawing.Image)
+        Me.BtnInfoClose.ImageSize = New System.Drawing.Size(20, 20)
+        Me.BtnInfoClose.Location = New System.Drawing.Point(728, 0)
+        Me.BtnInfoClose.Name = "BtnInfoClose"
+        Me.BtnInfoClose.OnHoverBaseColor = System.Drawing.Color.Transparent
+        Me.BtnInfoClose.OnHoverBorderColor = System.Drawing.Color.Transparent
+        Me.BtnInfoClose.OnHoverForeColor = System.Drawing.Color.White
+        Me.BtnInfoClose.OnHoverImage = Nothing
+        Me.BtnInfoClose.OnPressedColor = System.Drawing.Color.Black
+        Me.BtnInfoClose.Size = New System.Drawing.Size(37, 24)
+        Me.BtnInfoClose.TabIndex = 72
+        '
+        'Guna2Panel15
+        '
+        Me.Guna2Panel15.AccessibleDescription = "PnlColorInfo"
+        Me.Guna2Panel15.AccessibleName = "PnlColorInfo"
+        Me.Guna2Panel15.BorderColor = System.Drawing.Color.Black
+        Me.Guna2Panel15.BorderRadius = 10
+        Me.Guna2Panel15.Controls.Add(Me.GunaLabel2)
+        Me.Guna2Panel15.FillColor = System.Drawing.SystemColors.Control
+        Me.Guna2Panel15.Location = New System.Drawing.Point(351, 205)
+        Me.Guna2Panel15.Name = "Guna2Panel15"
+        Me.Guna2Panel15.ShadowDecoration.Parent = Me.Guna2Panel15
+        Me.Guna2Panel15.Size = New System.Drawing.Size(384, 29)
+        Me.Guna2Panel15.TabIndex = 70
+        '
+        'GunaLabel2
+        '
+        Me.GunaLabel2.AutoSize = True
+        Me.GunaLabel2.BackColor = System.Drawing.Color.Transparent
+        Me.GunaLabel2.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold)
+        Me.GunaLabel2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(181, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(181, Byte), Integer))
+        Me.GunaLabel2.Location = New System.Drawing.Point(3, 1)
+        Me.GunaLabel2.Name = "GunaLabel2"
+        Me.GunaLabel2.Size = New System.Drawing.Size(241, 26)
+        Me.GunaLabel2.TabIndex = 69
+        Me.GunaLabel2.Text = "PATOLOGÍA IDENTIFICADA"
+        '
+        'Guna2Panel14
+        '
+        Me.Guna2Panel14.AccessibleDescription = "PnlColorInfo"
+        Me.Guna2Panel14.AccessibleName = "PnlColorInfo"
+        Me.Guna2Panel14.BorderColor = System.Drawing.SystemColors.Control
+        Me.Guna2Panel14.BorderRadius = 10
+        Me.Guna2Panel14.BorderThickness = 2
+        Me.Guna2Panel14.Controls.Add(Me.DgvInfoPatientPaths)
+        Me.Guna2Panel14.FillColor = System.Drawing.Color.White
+        Me.Guna2Panel14.Location = New System.Drawing.Point(351, 228)
+        Me.Guna2Panel14.Name = "Guna2Panel14"
+        Me.Guna2Panel14.ShadowDecoration.Parent = Me.Guna2Panel14
+        Me.Guna2Panel14.Size = New System.Drawing.Size(384, 136)
+        Me.Guna2Panel14.TabIndex = 71
+        '
+        'DgvInfoPatientPaths
+        '
+        DataGridViewCellStyle10.BackColor = System.Drawing.Color.White
+        Me.DgvInfoPatientPaths.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle10
+        Me.DgvInfoPatientPaths.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DgvInfoPatientPaths.BackgroundColor = System.Drawing.Color.White
+        Me.DgvInfoPatientPaths.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.DgvInfoPatientPaths.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
+        Me.DgvInfoPatientPaths.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle11.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle11.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DgvInfoPatientPaths.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle11
+        Me.DgvInfoPatientPaths.ColumnHeadersHeight = 4
+        Me.DgvInfoPatientPaths.ColumnHeadersVisible = False
+        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle12.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle12.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle12.ForeColor = System.Drawing.Color.Transparent
+        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DgvInfoPatientPaths.DefaultCellStyle = DataGridViewCellStyle12
+        Me.DgvInfoPatientPaths.EnableHeadersVisualStyles = False
+        Me.DgvInfoPatientPaths.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.DgvInfoPatientPaths.Location = New System.Drawing.Point(3, 11)
+        Me.DgvInfoPatientPaths.Name = "DgvInfoPatientPaths"
+        Me.DgvInfoPatientPaths.ReadOnly = True
+        Me.DgvInfoPatientPaths.RowHeadersVisible = False
+        Me.DgvInfoPatientPaths.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DgvInfoPatientPaths.Size = New System.Drawing.Size(378, 122)
+        Me.DgvInfoPatientPaths.TabIndex = 58
+        Me.DgvInfoPatientPaths.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna
+        Me.DgvInfoPatientPaths.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
+        Me.DgvInfoPatientPaths.ThemeStyle.AlternatingRowsStyle.Font = Nothing
+        Me.DgvInfoPatientPaths.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty
+        Me.DgvInfoPatientPaths.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty
+        Me.DgvInfoPatientPaths.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty
+        Me.DgvInfoPatientPaths.ThemeStyle.BackColor = System.Drawing.Color.White
+        Me.DgvInfoPatientPaths.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.DgvInfoPatientPaths.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.DgvInfoPatientPaths.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.DgvInfoPatientPaths.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        Me.DgvInfoPatientPaths.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White
+        Me.DgvInfoPatientPaths.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
+        Me.DgvInfoPatientPaths.ThemeStyle.HeaderStyle.Height = 4
+        Me.DgvInfoPatientPaths.ThemeStyle.ReadOnly = True
+        Me.DgvInfoPatientPaths.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White
+        Me.DgvInfoPatientPaths.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
+        Me.DgvInfoPatientPaths.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        Me.DgvInfoPatientPaths.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Transparent
+        Me.DgvInfoPatientPaths.ThemeStyle.RowsStyle.Height = 22
+        Me.DgvInfoPatientPaths.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.DgvInfoPatientPaths.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        '
+        'Guna2Panel12
+        '
+        Me.Guna2Panel12.AccessibleDescription = "PnlColorInfo"
+        Me.Guna2Panel12.AccessibleName = "PnlColorInfo"
+        Me.Guna2Panel12.BorderColor = System.Drawing.Color.Black
+        Me.Guna2Panel12.BorderRadius = 10
+        Me.Guna2Panel12.Controls.Add(Me.GunaLabel1)
+        Me.Guna2Panel12.FillColor = System.Drawing.SystemColors.Control
+        Me.Guna2Panel12.Location = New System.Drawing.Point(351, 27)
+        Me.Guna2Panel12.Name = "Guna2Panel12"
+        Me.Guna2Panel12.ShadowDecoration.Parent = Me.Guna2Panel12
+        Me.Guna2Panel12.Size = New System.Drawing.Size(384, 29)
+        Me.Guna2Panel12.TabIndex = 63
+        '
+        'GunaLabel1
+        '
+        Me.GunaLabel1.AutoSize = True
+        Me.GunaLabel1.BackColor = System.Drawing.Color.Transparent
+        Me.GunaLabel1.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold)
+        Me.GunaLabel1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(181, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(181, Byte), Integer))
+        Me.GunaLabel1.Location = New System.Drawing.Point(3, 1)
+        Me.GunaLabel1.Name = "GunaLabel1"
+        Me.GunaLabel1.Size = New System.Drawing.Size(200, 26)
+        Me.GunaLabel1.TabIndex = 69
+        Me.GunaLabel1.Text = "SÍNTOMAS SUFRIDOS"
+        '
+        'Guna2Panel13
+        '
+        Me.Guna2Panel13.AccessibleDescription = "PnlColorInfo"
+        Me.Guna2Panel13.AccessibleName = "PnlColorInfo"
+        Me.Guna2Panel13.BorderColor = System.Drawing.SystemColors.Control
+        Me.Guna2Panel13.BorderRadius = 10
+        Me.Guna2Panel13.BorderThickness = 2
+        Me.Guna2Panel13.Controls.Add(Me.DgvInfoPatientSympts)
+        Me.Guna2Panel13.FillColor = System.Drawing.Color.White
+        Me.Guna2Panel13.Location = New System.Drawing.Point(351, 49)
+        Me.Guna2Panel13.Name = "Guna2Panel13"
+        Me.Guna2Panel13.ShadowDecoration.Parent = Me.Guna2Panel13
+        Me.Guna2Panel13.Size = New System.Drawing.Size(384, 136)
+        Me.Guna2Panel13.TabIndex = 70
+        '
+        'DgvInfoPatientSympts
+        '
+        DataGridViewCellStyle13.BackColor = System.Drawing.Color.White
+        Me.DgvInfoPatientSympts.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle13
+        Me.DgvInfoPatientSympts.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DgvInfoPatientSympts.BackgroundColor = System.Drawing.Color.White
+        Me.DgvInfoPatientSympts.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.DgvInfoPatientSympts.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
+        Me.DgvInfoPatientSympts.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle14.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle14.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DgvInfoPatientSympts.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle14
+        Me.DgvInfoPatientSympts.ColumnHeadersHeight = 4
+        Me.DgvInfoPatientSympts.ColumnHeadersVisible = False
+        DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle15.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle15.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DgvInfoPatientSympts.DefaultCellStyle = DataGridViewCellStyle15
+        Me.DgvInfoPatientSympts.EnableHeadersVisualStyles = False
+        Me.DgvInfoPatientSympts.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.DgvInfoPatientSympts.Location = New System.Drawing.Point(3, 8)
+        Me.DgvInfoPatientSympts.Name = "DgvInfoPatientSympts"
+        Me.DgvInfoPatientSympts.ReadOnly = True
+        Me.DgvInfoPatientSympts.RowHeadersVisible = False
+        Me.DgvInfoPatientSympts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DgvInfoPatientSympts.Size = New System.Drawing.Size(378, 125)
+        Me.DgvInfoPatientSympts.TabIndex = 58
+        Me.DgvInfoPatientSympts.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna
+        Me.DgvInfoPatientSympts.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
+        Me.DgvInfoPatientSympts.ThemeStyle.AlternatingRowsStyle.Font = Nothing
+        Me.DgvInfoPatientSympts.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty
+        Me.DgvInfoPatientSympts.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty
+        Me.DgvInfoPatientSympts.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty
+        Me.DgvInfoPatientSympts.ThemeStyle.BackColor = System.Drawing.Color.White
+        Me.DgvInfoPatientSympts.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.DgvInfoPatientSympts.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.DgvInfoPatientSympts.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.DgvInfoPatientSympts.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        Me.DgvInfoPatientSympts.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White
+        Me.DgvInfoPatientSympts.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
+        Me.DgvInfoPatientSympts.ThemeStyle.HeaderStyle.Height = 4
+        Me.DgvInfoPatientSympts.ThemeStyle.ReadOnly = True
+        Me.DgvInfoPatientSympts.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White
+        Me.DgvInfoPatientSympts.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
+        Me.DgvInfoPatientSympts.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        Me.DgvInfoPatientSympts.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        Me.DgvInfoPatientSympts.ThemeStyle.RowsStyle.Height = 22
+        Me.DgvInfoPatientSympts.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.DgvInfoPatientSympts.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        '
+        'Guna2VSeparator1
+        '
+        Me.Guna2VSeparator1.FillColor = System.Drawing.Color.FromArgb(CType(CType(246, Byte), Integer), CType(CType(135, Byte), Integer), CType(CType(124, Byte), Integer))
+        Me.Guna2VSeparator1.Location = New System.Drawing.Point(323, 24)
+        Me.Guna2VSeparator1.Name = "Guna2VSeparator1"
+        Me.Guna2VSeparator1.Size = New System.Drawing.Size(10, 346)
+        Me.Guna2VSeparator1.TabIndex = 67
+        '
+        'LblInfoPatientAge
+        '
+        Me.LblInfoPatientAge.AccessibleDescription = "LblResults"
+        Me.LblInfoPatientAge.AccessibleName = "LblResults"
+        Me.LblInfoPatientAge.BackColor = System.Drawing.Color.Transparent
+        Me.LblInfoPatientAge.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblInfoPatientAge.ForeColor = System.Drawing.Color.Black
+        Me.LblInfoPatientAge.Location = New System.Drawing.Point(153, 324)
+        Me.LblInfoPatientAge.Name = "LblInfoPatientAge"
+        Me.LblInfoPatientAge.Size = New System.Drawing.Size(74, 22)
+        Me.LblInfoPatientAge.TabIndex = 66
+        Me.LblInfoPatientAge.Text = "Edad"
+        Me.LblInfoPatientAge.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Guna2Separator2
+        '
+        Me.Guna2Separator2.FillColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.Guna2Separator2.Location = New System.Drawing.Point(152, 305)
+        Me.Guna2Separator2.Name = "Guna2Separator2"
+        Me.Guna2Separator2.Size = New System.Drawing.Size(59, 10)
+        Me.Guna2Separator2.TabIndex = 65
+        '
+        'LblInfoPatientSurn
+        '
+        Me.LblInfoPatientSurn.AccessibleDescription = "LblResults"
+        Me.LblInfoPatientSurn.AccessibleName = "LblResults"
+        Me.LblInfoPatientSurn.BackColor = System.Drawing.Color.Transparent
+        Me.LblInfoPatientSurn.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblInfoPatientSurn.ForeColor = System.Drawing.Color.Black
+        Me.LblInfoPatientSurn.Location = New System.Drawing.Point(123, 271)
+        Me.LblInfoPatientSurn.Name = "LblInfoPatientSurn"
+        Me.LblInfoPatientSurn.Size = New System.Drawing.Size(135, 22)
+        Me.LblInfoPatientSurn.TabIndex = 64
+        Me.LblInfoPatientSurn.Text = "APELLIDOS"
+        Me.LblInfoPatientSurn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'LblInfoPatientName
+        '
+        Me.LblInfoPatientName.AccessibleDescription = "LblResults"
+        Me.LblInfoPatientName.AccessibleName = "LblResults"
+        Me.LblInfoPatientName.BackColor = System.Drawing.Color.Transparent
+        Me.LblInfoPatientName.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblInfoPatientName.ForeColor = System.Drawing.Color.Black
+        Me.LblInfoPatientName.Location = New System.Drawing.Point(123, 249)
+        Me.LblInfoPatientName.Name = "LblInfoPatientName"
+        Me.LblInfoPatientName.Size = New System.Drawing.Size(135, 22)
+        Me.LblInfoPatientName.TabIndex = 63
+        Me.LblInfoPatientName.Text = "NOMBRES"
+        Me.LblInfoPatientName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Guna2Separator1
+        '
+        Me.Guna2Separator1.FillColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.Guna2Separator1.Location = New System.Drawing.Point(152, 225)
+        Me.Guna2Separator1.Name = "Guna2Separator1"
+        Me.Guna2Separator1.Size = New System.Drawing.Size(59, 10)
+        Me.Guna2Separator1.TabIndex = 62
+        '
+        'Label8
+        '
+        Me.Label8.AccessibleDescription = "LblResults"
+        Me.Label8.AccessibleName = "LblResults"
+        Me.Label8.BackColor = System.Drawing.Color.Transparent
+        Me.Label8.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.Color.DimGray
+        Me.Label8.Location = New System.Drawing.Point(139, 202)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(91, 22)
+        Me.Label8.TabIndex = 60
+        Me.Label8.Text = "PACIENTE"
+        Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Guna2Panel10
+        '
+        Me.Guna2Panel10.AccessibleDescription = "PnlColorInfo"
+        Me.Guna2Panel10.AccessibleName = "PnlColorInfo"
+        Me.Guna2Panel10.BorderColor = System.Drawing.Color.Black
+        Me.Guna2Panel10.BorderRadius = 10
+        Me.Guna2Panel10.Controls.Add(Me.Guna2Panel11)
+        Me.Guna2Panel10.FillColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.Guna2Panel10.Location = New System.Drawing.Point(99, 44)
+        Me.Guna2Panel10.Name = "Guna2Panel10"
+        Me.Guna2Panel10.ShadowDecoration.Parent = Me.Guna2Panel10
+        Me.Guna2Panel10.Size = New System.Drawing.Size(155, 155)
+        Me.Guna2Panel10.TabIndex = 61
+        '
+        'Guna2Panel11
+        '
+        Me.Guna2Panel11.AccessibleDescription = "PnlColorInfo"
+        Me.Guna2Panel11.AccessibleName = "PnlColorInfo"
+        Me.Guna2Panel11.BackColor = System.Drawing.Color.White
+        Me.Guna2Panel11.BackgroundImage = Global.MedicApp.My.Resources.Resources.UserInfoo
+        Me.Guna2Panel11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.Guna2Panel11.BorderColor = System.Drawing.Color.Black
+        Me.Guna2Panel11.BorderRadius = 10
+        Me.Guna2Panel11.FillColor = System.Drawing.Color.Transparent
+        Me.Guna2Panel11.Location = New System.Drawing.Point(44, 38)
+        Me.Guna2Panel11.Name = "Guna2Panel11"
+        Me.Guna2Panel11.ShadowDecoration.Parent = Me.Guna2Panel11
+        Me.Guna2Panel11.Size = New System.Drawing.Size(71, 71)
+        Me.Guna2Panel11.TabIndex = 62
+        '
+        'PnlMoreInfo
+        '
+        Me.PnlMoreInfo.AccessibleDescription = "PnlColorInfo"
+        Me.PnlMoreInfo.AccessibleName = "PnlColorInfo"
+        Me.PnlMoreInfo.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.PnlMoreInfo.BorderRadius = 11
+        Me.PnlMoreInfo.BorderThickness = 2
+        Me.PnlMoreInfo.Controls.Add(Me.Guna2Panel2)
+        Me.PnlMoreInfo.Controls.Add(Me.Guna2Panel1)
+        Me.PnlMoreInfo.FillColor = System.Drawing.Color.Transparent
+        Me.PnlMoreInfo.Location = New System.Drawing.Point(548, 356)
+        Me.PnlMoreInfo.Name = "PnlMoreInfo"
+        Me.PnlMoreInfo.ShadowDecoration.Parent = Me.PnlMoreInfo
+        Me.PnlMoreInfo.Size = New System.Drawing.Size(250, 110)
+        Me.PnlMoreInfo.TabIndex = 57
+        Me.PnlMoreInfo.Visible = False
+        '
+        'Guna2Panel2
+        '
+        Me.Guna2Panel2.AccessibleDescription = "PnlColorInfo"
+        Me.Guna2Panel2.AccessibleName = "PnlColorInfo"
+        Me.Guna2Panel2.BorderColor = System.Drawing.Color.Black
+        Me.Guna2Panel2.BorderRadius = 10
+        Me.Guna2Panel2.Controls.Add(Me.Guna2Panel9)
+        Me.Guna2Panel2.Controls.Add(Me.Guna2Panel8)
+        Me.Guna2Panel2.Controls.Add(Me.Guna2Panel7)
+        Me.Guna2Panel2.Controls.Add(Me.Guna2Panel6)
+        Me.Guna2Panel2.Controls.Add(Me.Guna2Panel5)
+        Me.Guna2Panel2.Controls.Add(Me.Guna2Panel4)
+        Me.Guna2Panel2.FillColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.Guna2Panel2.Location = New System.Drawing.Point(99, 8)
+        Me.Guna2Panel2.Name = "Guna2Panel2"
+        Me.Guna2Panel2.ShadowDecoration.Parent = Me.Guna2Panel2
+        Me.Guna2Panel2.Size = New System.Drawing.Size(142, 91)
+        Me.Guna2Panel2.TabIndex = 59
+        '
+        'Guna2Panel9
+        '
+        Me.Guna2Panel9.AccessibleDescription = "PnlColorInfo"
+        Me.Guna2Panel9.AccessibleName = "PnlColorInfo"
+        Me.Guna2Panel9.BorderColor = System.Drawing.Color.Black
+        Me.Guna2Panel9.BorderRadius = 6
+        Me.Guna2Panel9.FillColor = System.Drawing.Color.White
+        Me.Guna2Panel9.Location = New System.Drawing.Point(87, 69)
+        Me.Guna2Panel9.Name = "Guna2Panel9"
+        Me.Guna2Panel9.ShadowDecoration.Parent = Me.Guna2Panel9
+        Me.Guna2Panel9.Size = New System.Drawing.Size(52, 6)
+        Me.Guna2Panel9.TabIndex = 64
+        '
+        'Guna2Panel8
+        '
+        Me.Guna2Panel8.AccessibleDescription = "PnlColorInfo"
+        Me.Guna2Panel8.AccessibleName = "PnlColorInfo"
+        Me.Guna2Panel8.BorderColor = System.Drawing.Color.Black
+        Me.Guna2Panel8.BorderRadius = 6
+        Me.Guna2Panel8.FillColor = System.Drawing.Color.White
+        Me.Guna2Panel8.Location = New System.Drawing.Point(87, 51)
+        Me.Guna2Panel8.Name = "Guna2Panel8"
+        Me.Guna2Panel8.ShadowDecoration.Parent = Me.Guna2Panel8
+        Me.Guna2Panel8.Size = New System.Drawing.Size(52, 3)
+        Me.Guna2Panel8.TabIndex = 63
+        '
+        'Guna2Panel7
+        '
+        Me.Guna2Panel7.AccessibleDescription = "PnlColorInfo"
+        Me.Guna2Panel7.AccessibleName = "PnlColorInfo"
+        Me.Guna2Panel7.BorderColor = System.Drawing.Color.Black
+        Me.Guna2Panel7.BorderRadius = 6
+        Me.Guna2Panel7.FillColor = System.Drawing.Color.White
+        Me.Guna2Panel7.Location = New System.Drawing.Point(87, 42)
+        Me.Guna2Panel7.Name = "Guna2Panel7"
+        Me.Guna2Panel7.ShadowDecoration.Parent = Me.Guna2Panel7
+        Me.Guna2Panel7.Size = New System.Drawing.Size(52, 3)
+        Me.Guna2Panel7.TabIndex = 62
+        '
+        'Guna2Panel6
+        '
+        Me.Guna2Panel6.AccessibleDescription = "PnlColorInfo"
+        Me.Guna2Panel6.AccessibleName = "PnlColorInfo"
+        Me.Guna2Panel6.BorderColor = System.Drawing.Color.Black
+        Me.Guna2Panel6.BorderRadius = 6
+        Me.Guna2Panel6.FillColor = System.Drawing.Color.White
+        Me.Guna2Panel6.Location = New System.Drawing.Point(87, 29)
+        Me.Guna2Panel6.Name = "Guna2Panel6"
+        Me.Guna2Panel6.ShadowDecoration.Parent = Me.Guna2Panel6
+        Me.Guna2Panel6.Size = New System.Drawing.Size(52, 3)
+        Me.Guna2Panel6.TabIndex = 62
+        '
+        'Guna2Panel5
+        '
+        Me.Guna2Panel5.AccessibleDescription = "PnlColorInfo"
+        Me.Guna2Panel5.AccessibleName = "PnlColorInfo"
+        Me.Guna2Panel5.BorderColor = System.Drawing.Color.Black
+        Me.Guna2Panel5.BorderRadius = 6
+        Me.Guna2Panel5.FillColor = System.Drawing.Color.White
+        Me.Guna2Panel5.Location = New System.Drawing.Point(87, 20)
+        Me.Guna2Panel5.Name = "Guna2Panel5"
+        Me.Guna2Panel5.ShadowDecoration.Parent = Me.Guna2Panel5
+        Me.Guna2Panel5.Size = New System.Drawing.Size(52, 3)
+        Me.Guna2Panel5.TabIndex = 61
+        '
+        'Guna2Panel4
+        '
+        Me.Guna2Panel4.AccessibleDescription = "PnlColorInfo"
+        Me.Guna2Panel4.AccessibleName = "PnlColorInfo"
+        Me.Guna2Panel4.BorderColor = System.Drawing.Color.Black
+        Me.Guna2Panel4.BorderRadius = 10
+        Me.Guna2Panel4.Controls.Add(Me.BtnPatientInfo)
+        Me.Guna2Panel4.FillColor = System.Drawing.Color.White
+        Me.Guna2Panel4.Location = New System.Drawing.Point(13, 20)
+        Me.Guna2Panel4.Name = "Guna2Panel4"
+        Me.Guna2Panel4.ShadowDecoration.Parent = Me.Guna2Panel4
+        Me.Guna2Panel4.Size = New System.Drawing.Size(55, 55)
+        Me.Guna2Panel4.TabIndex = 60
+        '
+        'BtnPatientInfo
+        '
+        Me.BtnPatientInfo.AccessibleDescription = "BtnForeText"
+        Me.BtnPatientInfo.AccessibleName = "BtnForeText"
+        Me.BtnPatientInfo.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.BtnPatientInfo.BorderRadius = 10
+        Me.BtnPatientInfo.BorderThickness = 1
+        Me.BtnPatientInfo.CheckedState.Parent = Me.BtnPatientInfo
+        Me.BtnPatientInfo.CustomImages.Parent = Me.BtnPatientInfo
+        Me.BtnPatientInfo.FillColor = System.Drawing.Color.Transparent
+        Me.BtnPatientInfo.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.BtnPatientInfo.ForeColor = System.Drawing.Color.Transparent
+        Me.BtnPatientInfo.HoverState.FillColor = System.Drawing.Color.Transparent
+        Me.BtnPatientInfo.HoverState.Parent = Me.BtnPatientInfo
+        Me.BtnPatientInfo.Image = Global.MedicApp.My.Resources.Resources.UserInfo
+        Me.BtnPatientInfo.ImageOffset = New System.Drawing.Point(1, 0)
+        Me.BtnPatientInfo.ImageSize = New System.Drawing.Size(23, 23)
+        Me.BtnPatientInfo.Location = New System.Drawing.Point(-1, 0)
+        Me.BtnPatientInfo.Name = "BtnPatientInfo"
+        Me.BtnPatientInfo.PressedDepth = 0
+        Me.BtnPatientInfo.ShadowDecoration.Parent = Me.BtnPatientInfo
+        Me.BtnPatientInfo.Size = New System.Drawing.Size(56, 54)
+        Me.BtnPatientInfo.TabIndex = 63
+        '
+        'Guna2Panel1
+        '
+        Me.Guna2Panel1.AccessibleDescription = "PnlColorInfo"
+        Me.Guna2Panel1.AccessibleName = "PnlColorInfo"
+        Me.Guna2Panel1.BorderColor = System.Drawing.Color.Black
+        Me.Guna2Panel1.BorderRadius = 10
+        Me.Guna2Panel1.Controls.Add(Me.Label6)
+        Me.Guna2Panel1.Controls.Add(Me.Guna2Panel3)
+        Me.Guna2Panel1.FillColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.Guna2Panel1.Location = New System.Drawing.Point(15, 8)
+        Me.Guna2Panel1.Name = "Guna2Panel1"
+        Me.Guna2Panel1.ShadowDecoration.Parent = Me.Guna2Panel1
+        Me.Guna2Panel1.Size = New System.Drawing.Size(70, 91)
+        Me.Guna2Panel1.TabIndex = 58
+        '
+        'Label6
+        '
+        Me.Label6.AccessibleDescription = "LblResults"
+        Me.Label6.AccessibleName = "LblResults"
+        Me.Label6.BackColor = System.Drawing.Color.Transparent
+        Me.Label6.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.White
+        Me.Label6.Location = New System.Drawing.Point(17, 68)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(38, 22)
+        Me.Label6.TabIndex = 54
+        Me.Label6.Text = "FIN"
+        Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Guna2Panel3
+        '
+        Me.Guna2Panel3.AccessibleDescription = "PnlColorInfo"
+        Me.Guna2Panel3.AccessibleName = "PnlColorInfo"
+        Me.Guna2Panel3.BorderColor = System.Drawing.Color.Black
+        Me.Guna2Panel3.BorderRadius = 10
+        Me.Guna2Panel3.Controls.Add(Me.BtnEndChat)
+        Me.Guna2Panel3.FillColor = System.Drawing.Color.White
+        Me.Guna2Panel3.Location = New System.Drawing.Point(8, 11)
+        Me.Guna2Panel3.Name = "Guna2Panel3"
+        Me.Guna2Panel3.ShadowDecoration.Parent = Me.Guna2Panel3
+        Me.Guna2Panel3.Size = New System.Drawing.Size(55, 55)
+        Me.Guna2Panel3.TabIndex = 59
+        '
+        'BtnEndChat
+        '
+        Me.BtnEndChat.AccessibleDescription = "BtnForeText"
+        Me.BtnEndChat.AccessibleName = "BtnForeText"
+        Me.BtnEndChat.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.BtnEndChat.BorderRadius = 10
+        Me.BtnEndChat.BorderThickness = 1
+        Me.BtnEndChat.CheckedState.Parent = Me.BtnEndChat
+        Me.BtnEndChat.CustomImages.Parent = Me.BtnEndChat
+        Me.BtnEndChat.FillColor = System.Drawing.Color.Transparent
+        Me.BtnEndChat.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.BtnEndChat.ForeColor = System.Drawing.Color.Transparent
+        Me.BtnEndChat.HoverState.FillColor = System.Drawing.Color.Transparent
+        Me.BtnEndChat.HoverState.Parent = Me.BtnEndChat
+        Me.BtnEndChat.Image = CType(resources.GetObject("BtnEndChat.Image"), System.Drawing.Image)
+        Me.BtnEndChat.ImageOffset = New System.Drawing.Point(1, 0)
+        Me.BtnEndChat.ImageSize = New System.Drawing.Size(24, 34)
+        Me.BtnEndChat.Location = New System.Drawing.Point(-1, 0)
+        Me.BtnEndChat.Name = "BtnEndChat"
+        Me.BtnEndChat.PressedDepth = 0
+        Me.BtnEndChat.ShadowDecoration.Parent = Me.BtnEndChat
+        Me.BtnEndChat.Size = New System.Drawing.Size(56, 54)
+        Me.BtnEndChat.TabIndex = 62
         '
         'TxtChat
         '
@@ -264,7 +968,7 @@ Partial Class FrmHome
         Me.TxtChat.ReadOnly = True
         Me.TxtChat.SelectedText = ""
         Me.TxtChat.ShadowDecoration.Parent = Me.TxtChat
-        Me.TxtChat.Size = New System.Drawing.Size(843, 404)
+        Me.TxtChat.Size = New System.Drawing.Size(843, 445)
         Me.TxtChat.TabIndex = 55
         '
         'Label4
@@ -341,30 +1045,30 @@ Partial Class FrmHome
         '
         'DgvRequests
         '
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
-        Me.DgvRequests.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle16.BackColor = System.Drawing.Color.White
+        Me.DgvRequests.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle16
         Me.DgvRequests.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DgvRequests.BackgroundColor = System.Drawing.Color.White
         Me.DgvRequests.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.DgvRequests.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.DgvRequests.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DgvRequests.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle17.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle17.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DgvRequests.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle17
         Me.DgvRequests.ColumnHeadersHeight = 4
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DgvRequests.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle18.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle18.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle18.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DgvRequests.DefaultCellStyle = DataGridViewCellStyle18
         Me.DgvRequests.EnableHeadersVisualStyles = False
         Me.DgvRequests.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.DgvRequests.Location = New System.Drawing.Point(18, 128)
@@ -437,89 +1141,6 @@ Partial Class FrmHome
         Me.LblListado.TabIndex = 56
         Me.LblListado.Text = "LISTADO DE PETICIONES"
         Me.LblListado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'BtnLogOut
-        '
-        Me.BtnLogOut.AccessibleDescription = "BtnLogin"
-        Me.BtnLogOut.AccessibleName = "BtnLogin"
-        Me.BtnLogOut.Animated = True
-        Me.BtnLogOut.BorderRadius = 6
-        Me.BtnLogOut.CheckedState.Parent = Me.BtnLogOut
-        Me.BtnLogOut.CustomImages.Parent = Me.BtnLogOut
-        Me.BtnLogOut.FillColor = System.Drawing.Color.White
-        Me.BtnLogOut.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnLogOut.ForeColor = System.Drawing.Color.Black
-        Me.BtnLogOut.HoverState.Parent = Me.BtnLogOut
-        Me.BtnLogOut.Image = CType(resources.GetObject("BtnLogOut.Image"), System.Drawing.Image)
-        Me.BtnLogOut.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.BtnLogOut.Location = New System.Drawing.Point(8, 482)
-        Me.BtnLogOut.Name = "BtnLogOut"
-        Me.BtnLogOut.ShadowDecoration.Parent = Me.BtnLogOut
-        Me.BtnLogOut.Size = New System.Drawing.Size(146, 30)
-        Me.BtnLogOut.TabIndex = 33
-        Me.BtnLogOut.Text = "Cerrar Sesión"
-        Me.BtnLogOut.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
-        '
-        'BtnRequest
-        '
-        Me.BtnRequest.AccessibleDescription = "BtnLogin"
-        Me.BtnRequest.AccessibleName = "BtnLogin"
-        Me.BtnRequest.Animated = True
-        Me.BtnRequest.BorderRadius = 6
-        Me.BtnRequest.CheckedState.Parent = Me.BtnRequest
-        Me.BtnRequest.CustomImages.Parent = Me.BtnRequest
-        Me.BtnRequest.FillColor = System.Drawing.Color.White
-        Me.BtnRequest.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnRequest.ForeColor = System.Drawing.Color.Black
-        Me.BtnRequest.HoverState.Parent = Me.BtnRequest
-        Me.BtnRequest.Image = CType(resources.GetObject("BtnRequest.Image"), System.Drawing.Image)
-        Me.BtnRequest.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.BtnRequest.Location = New System.Drawing.Point(8, 58)
-        Me.BtnRequest.Name = "BtnRequest"
-        Me.BtnRequest.ShadowDecoration.Parent = Me.BtnRequest
-        Me.BtnRequest.Size = New System.Drawing.Size(146, 30)
-        Me.BtnRequest.TabIndex = 32
-        Me.BtnRequest.Text = "Peticiones"
-        Me.BtnRequest.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
-        '
-        'BtnHome
-        '
-        Me.BtnHome.AccessibleDescription = "BtnLogin"
-        Me.BtnHome.AccessibleName = "BtnLogin"
-        Me.BtnHome.Animated = True
-        Me.BtnHome.BorderRadius = 6
-        Me.BtnHome.CheckedState.Parent = Me.BtnHome
-        Me.BtnHome.CustomImages.Parent = Me.BtnHome
-        Me.BtnHome.FillColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
-        Me.BtnHome.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnHome.ForeColor = System.Drawing.Color.White
-        Me.BtnHome.HoverState.Parent = Me.BtnHome
-        Me.BtnHome.Image = CType(resources.GetObject("BtnHome.Image"), System.Drawing.Image)
-        Me.BtnHome.Location = New System.Drawing.Point(8, 22)
-        Me.BtnHome.Name = "BtnHome"
-        Me.BtnHome.ShadowDecoration.Parent = Me.BtnHome
-        Me.BtnHome.Size = New System.Drawing.Size(146, 30)
-        Me.BtnHome.TabIndex = 31
-        Me.BtnHome.Text = "Página principal"
-        '
-        'PicBar
-        '
-        Me.PicBar.BackColor = System.Drawing.Color.Transparent
-        Me.PicBar.Image = CType(resources.GetObject("PicBar.Image"), System.Drawing.Image)
-        Me.PicBar.Location = New System.Drawing.Point(160, 22)
-        Me.PicBar.Name = "PicBar"
-        Me.PicBar.Size = New System.Drawing.Size(10, 30)
-        Me.PicBar.TabIndex = 30
-        Me.PicBar.TabStop = False
-        '
-        'PicLogo
-        '
-        Me.PicLogo.Image = CType(resources.GetObject("PicLogo.Image"), System.Drawing.Image)
-        Me.PicLogo.Location = New System.Drawing.Point(19, 13)
-        Me.PicLogo.Name = "PicLogo"
-        Me.PicLogo.Size = New System.Drawing.Size(77, 80)
-        Me.PicLogo.TabIndex = 0
-        Me.PicLogo.TabStop = False
         '
         'PanelHome
         '
@@ -833,15 +1454,30 @@ Partial Class FrmHome
         Me.Text = "Telediagnóstico Médico: MedicApp."
         Me.PanelLeft.ResumeLayout(False)
         Me.PanelButtons.ResumeLayout(False)
+        CType(Me.PicBar, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PicLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PnlChat.ResumeLayout(False)
         Me.PnlChat.PerformLayout()
         Me.PnlChatBack.ResumeLayout(False)
+        Me.PnlViewPatientInfo.ResumeLayout(False)
+        Me.Guna2Panel15.ResumeLayout(False)
+        Me.Guna2Panel15.PerformLayout()
+        Me.Guna2Panel14.ResumeLayout(False)
+        CType(Me.DgvInfoPatientPaths, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Guna2Panel12.ResumeLayout(False)
+        Me.Guna2Panel12.PerformLayout()
+        Me.Guna2Panel13.ResumeLayout(False)
+        CType(Me.DgvInfoPatientSympts, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Guna2Panel10.ResumeLayout(False)
+        Me.PnlMoreInfo.ResumeLayout(False)
+        Me.Guna2Panel2.ResumeLayout(False)
+        Me.Guna2Panel4.ResumeLayout(False)
+        Me.Guna2Panel1.ResumeLayout(False)
+        Me.Guna2Panel3.ResumeLayout(False)
         Me.PnlTittleChat.ResumeLayout(False)
         Me.PnlRequest.ResumeLayout(False)
         CType(Me.DgvRequests, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PnlTittle.ResumeLayout(False)
-        CType(Me.PicBar, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PicLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelHome.ResumeLayout(False)
         Me.PanelHome.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -895,4 +1531,36 @@ Partial Class FrmHome
     Friend WithEvents BtnMore As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents TxtChatSend As TextBox
     Friend WithEvents TimerChat As Timer
+    Friend WithEvents PnlMoreInfo As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents Guna2Panel2 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents Guna2Panel4 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Guna2Panel9 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents Guna2Panel8 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents Guna2Panel7 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents Guna2Panel6 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents Guna2Panel5 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents BtnPatientInfo As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents Guna2Panel3 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents BtnEndChat As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents PnlViewPatientInfo As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents Guna2Panel10 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents Guna2Panel11 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents Guna2Separator1 As Guna.UI2.WinForms.Guna2Separator
+    Friend WithEvents Label8 As Label
+    Friend WithEvents LblInfoPatientSurn As Label
+    Friend WithEvents LblInfoPatientName As Label
+    Friend WithEvents LblInfoPatientAge As Label
+    Friend WithEvents Guna2Separator2 As Guna.UI2.WinForms.Guna2Separator
+    Friend WithEvents Guna2VSeparator1 As Guna.UI2.WinForms.Guna2VSeparator
+    Friend WithEvents Guna2Panel13 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents DgvInfoPatientSympts As Guna.UI.WinForms.GunaDataGridView
+    Friend WithEvents Guna2Panel15 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents GunaLabel2 As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents Guna2Panel14 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents DgvInfoPatientPaths As Guna.UI.WinForms.GunaDataGridView
+    Friend WithEvents Guna2Panel12 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents GunaLabel1 As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents BtnInfoClose As Guna.UI.WinForms.GunaButton
 End Class

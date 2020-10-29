@@ -202,6 +202,9 @@
     <None Include="Resources\mdi_send.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\ChatFinish.png" />
+    <None Include="Resources\UserInfo.png" />
+    <None Include="Resources\UserInfoo.png" />
     <Content Include="TelediganosticoMedico_Logo.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

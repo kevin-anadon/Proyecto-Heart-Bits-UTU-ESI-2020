@@ -32,6 +32,11 @@ MedicApp
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:MedicApp.My.Resources.Resources.ChatFinish">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:MedicApp.My.Resources.Resources.GreenPerson">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
@@ -78,6 +83,16 @@ MedicApp
 </summary>
 </member>
 <member name="P:MedicApp.My.Resources.Resources.User">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:MedicApp.My.Resources.Resources.UserInfo">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:MedicApp.My.Resources.Resources.UserInfoo">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>

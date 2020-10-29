@@ -9,6 +9,7 @@ Public Class FrmHome
     Dim idRoom As Integer = 0
     Dim chat As String = Nothing
     Dim row As DataGridViewRow
+    Dim PatientSelected As People
 
     Private Sub BtnHome_Click(sender As Object, e As EventArgs) Handles BtnHome.Click
         ChangePanels(1)
@@ -61,6 +62,7 @@ Public Class FrmHome
                 BtnHome.Font = New Font(BtnRequest.Font, FontStyle.Bold)
                 BtnHome.Image = My.Resources.mdi_home_white
             Case 2 'Chat
+                TimerRequests.Stop()
                 JoinRoom()
                 PnlRequest.Visible = False
                 PnlChat.Visible = True
@@ -83,25 +85,94 @@ Public Class FrmHome
                 btn.UseColumnTextForButtonValue = True
                 TimerRequests.Start()
             End If
+            For Each row As DataGridViewRow In DgvRequests.Rows
+                If Not IsNothing(row.Cells(1).Value) Then
+                    If row.Cells(1).Value.ToString() = "Prioridad Alta" Then
+                        row.DefaultCellStyle.ForeColor = Color.FromArgb(246, 135, 124)
+                    ElseIf row.Cells(1).Value.ToString() = "Prioridad Media" Then
+                        row.DefaultCellStyle.ForeColor = Color.FromArgb(232, 235, 90)
+                    ElseIf row.Cells(1).Value.ToString() = "Prioridad Baja" Then
+                        row.DefaultCellStyle.ForeColor = Color.FromArgb(98, 186, 172)
+                    End If
+                End If
+            Next
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
     End Sub
 
-    Private Sub Timer_Tick(sender As Object, e As EventArgs) Handles TimerRequests.Tick
+    Private Sub BtnMore_Click(sender As Object, e As EventArgs) Handles BtnMore.Click
+        If PnlMoreInfo.Visible = True Then
+            PnlMoreInfo.Visible = False
+        ElseIf PnlMoreInfo.Visible = False And PnlViewPatientInfo.Visible = False Then
+            PnlMoreInfo.Visible = True
+        End If
+    End Sub
+    Public Sub LeaveRoom()
+        log.LeaveRoom(idRoom, GetNowDateTime(1))
+        ChangePanels(0)
+        TimerChat.Stop()
+    End Sub
+    Private Sub BtnEndChat_Click(sender As Object, e As EventArgs) Handles BtnEndChat.Click
+        If MsgBox("Está seguro que desea finalizar el chat ?", MsgBoxStyle.YesNoCancel, "Cerrar Programa") = MsgBoxResult.Yes Then
+            LeaveRoom()
+        End If
+    End Sub
+
+    Private Sub BtnPatientInfo_Click(sender As Object, e As EventArgs) Handles BtnPatientInfo.Click
+        PnlMoreInfo.Visible = False
+        PnlViewPatientInfo.Visible = True
+        LoadPatientInfo()
+    End Sub
+    Private Sub LoadPatientInfo()
+        LblInfoPatientName.Text = PatientSelected.fstName + " " + PatientSelected.scndName
+        LblInfoPatientSurn.Text = PatientSelected.fstSurname + " " + PatientSelected.scndSurname
+        LblInfoPatientAge.Text = PatientSelected.CalcAge(PatientSelected.dateBirth).ToString() + " Años"
+        Try
+            DgvInfoPatientSympts.Columns.Add("Sympt", "")
+            Dim DateNow As String = GetNowDateTime(2)
+            For Each Sympt As Symptom In log.ObtainSymptomsSuffered(PatientSelected.id, DateNow)
+                DgvInfoPatientSympts.Rows.Add(Sympt.Description)
+            Next
+            DgvInfoPatientPaths.DataSource = log.ObtainTentativeDiagnosticDataSet(PatientSelected.id, DateNow).Tables("Diagnostic")
+            DgvInfoPatientPaths.Refresh()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+
+    End Sub
+    Private Sub BtnInfoClose_Click(sender As Object, e As EventArgs) Handles BtnInfoClose.Click
+        PnlViewPatientInfo.Visible = False
+        PnlChat.Enabled = True
+    End Sub
+    Private Sub TimerRequests_Tick(sender As Object, e As EventArgs) Handles TimerRequests.Tick
         time = time + 1
         If time > 4 Then
             ReloadDgv()
             time = 0
         End If
     End Sub
+    Private Function CheckStateRoom() As Integer
+        Try
+            log.CheckStateRoom(idRoom)
+            Return 0
+        Catch ex As Exception
+            Return 1
+        End Try
+    End Function
 
     Private Sub TimerChat_Tick(sender As Object, e As EventArgs) Handles TimerChat.Tick
         time = time + 1
         If time > 4 Then
             Try
-                ObtainMsg()
-                time = 0
+                If CheckStateRoom() = 0 Then
+                    ObtainMsg()
+                    time = 0
+                Else
+                    TimerChat.Stop()
+                    MessageBox.Show("El chat ha finalizado!")
+                    ChangePanels(0)
+                End If
             Catch ex As Exception
                 MessageBox.Show(ex.Message)
             End Try
@@ -109,15 +180,18 @@ Public Class FrmHome
     End Sub
 
     Private Sub BtnSend_Click(sender As Object, e As EventArgs) Handles BtnSend.Click
-        Try
-            log.SendMessage(Medic.id, idRoom, TxtChatSend.Text, DateTime.Now.ToString("HH:mm:ss"))
-            ObtainMsg()
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-        End Try
+        If Not TxtChatSend.Text.Trim.Length = 0 Then
+            Try
 
-        TxtChatSend.Clear()
-        TxtChatSend.Focus()
+                log.SendMessage(Medic.id, idRoom, TxtChatSend.Text, DateTime.Now.ToString("HH:mm:ss"))
+                ObtainMsg()
+            Catch ex As Exception
+                MessageBox.Show(ex.Message)
+            End Try
+
+            TxtChatSend.Clear()
+            TxtChatSend.Focus()
+        End If
     End Sub
 
     Public Sub ObtainMsg()
@@ -161,13 +235,13 @@ Public Class FrmHome
         If e.ColumnIndex = 0 Then 'Boton aceptar
             PatientName = CStr(row.Cells("Nombre").Value)
             Try
-                Dim Patient As People = ObtainPatientAccepted()
+                PatientSelected = ObtainPatientAccepted()
                 Dim dateI As Date = CDate(row.Cells("Fecha").Value)
                 Dim timeI As TimeSpan = row.Cells("Hora").Value
                 Dim dateTimeRequestI As String = dateI.ToString("yyy-MM-dd") + " " + CDate(timeI.ToString()).ToString("HH:mm:ss")
                 Dim dateTimeRequestF As String = Me.GetNowDateTime(1)
 
-                log.AcceptRequest(Medic.id, Patient.id, dateTimeRequestI, dateTimeRequestF)
+                log.AcceptRequest(Medic.id, PatientSelected.id, dateTimeRequestI, dateTimeRequestF)
                 ChangePanels(2)
             Catch ex As Exception
                 MessageBox.Show(ex.Message)
@@ -192,7 +266,6 @@ Public Class FrmHome
 
         Return Patient
     End Function
-
     Private Function GetNowDateTime(prefix As Short) As String
         Return log.GetNowDateTime(prefix)
     End Function
