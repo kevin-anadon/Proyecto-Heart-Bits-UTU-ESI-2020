@@ -77,7 +77,6 @@ Partial Class FrmHome
 
         Me.TxtChatSend = New System.Windows.Forms.TextBox()
         Me.BtnSend = New Guna.UI2.WinForms.Guna2Button()
-        Me.BtnMore = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
         Me.PnlChatBack = New Guna.UI2.WinForms.Guna2Panel()
         Me.TxtChat = New Guna.UI2.WinForms.Guna2TextBox()
@@ -776,7 +775,6 @@ Partial Class FrmHome
         Me.PnlChat.Controls.Add(Me.PnlTittleChat)
         Me.PnlChat.Controls.Add(Me.TxtChatSend)
         Me.PnlChat.Controls.Add(Me.BtnSend)
-        Me.PnlChat.Controls.Add(Me.BtnMore)
         Me.PnlChat.Controls.Add(Me.Guna2Button1)
         Me.PnlChat.Controls.Add(Me.PnlChatBack)
         Me.PnlChat.Location = New System.Drawing.Point(234, 0)
@@ -870,28 +868,6 @@ Partial Class FrmHome
         Me.BtnSend.ShadowDecoration.Parent = Me.BtnSend
         Me.BtnSend.Size = New System.Drawing.Size(53, 45)
         Me.BtnSend.TabIndex = 66
-        '
-        'BtnMore
-        '
-        Me.BtnMore.AccessibleDescription = "BtnForeText"
-        Me.BtnMore.AccessibleName = "BtnForeText"
-        Me.BtnMore.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
-        Me.BtnMore.BorderRadius = 10
-        Me.BtnMore.BorderThickness = 2
-        Me.BtnMore.CheckedState.Parent = Me.BtnMore
-        Me.BtnMore.CustomImages.Parent = Me.BtnMore
-        Me.BtnMore.FillColor = System.Drawing.Color.Transparent
-        Me.BtnMore.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.BtnMore.ForeColor = System.Drawing.Color.Transparent
-        Me.BtnMore.HoverState.FillColor = System.Drawing.Color.Transparent
-        Me.BtnMore.HoverState.Parent = Me.BtnMore
-        Me.BtnMore.Image = Global.PatientApp.My.Resources.Resources.Vector
-        Me.BtnMore.Location = New System.Drawing.Point(930, 649)
-        Me.BtnMore.Name = "BtnMore"
-        Me.BtnMore.PressedDepth = 0
-        Me.BtnMore.ShadowDecoration.Parent = Me.BtnMore
-        Me.BtnMore.Size = New System.Drawing.Size(53, 45)
-        Me.BtnMore.TabIndex = 65
 
         '
         'Guna2Button1

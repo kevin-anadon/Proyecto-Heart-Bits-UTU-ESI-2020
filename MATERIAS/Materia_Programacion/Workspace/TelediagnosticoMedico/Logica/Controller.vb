@@ -94,9 +94,21 @@ Public Class Controller 'Logic
         Catch ex As Exception
             Throw ex
         End Try
-
     End Function
-
+    Public Function ObtainTentativeDiagnostic(Patient As People, DateI As String) As Diagnostic
+        Try
+            Return CQConnection.ObtainTentativeDiagnostic(Patient, DateI)
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Function
+    Public Sub VerifyDiagnostic(idMed As Integer, idDiag As Integer)
+        Try
+            CQConnection.VerifyDiagnostic(idMed, idDiag)
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Sub
 
     'Conexión Otros
     Public Function GetNowDateTime(prefix As Short) As String
@@ -352,13 +364,6 @@ Public Class Controller 'Logic
     Public Function ObtainSymptomsSuffered(idPatient As Integer, DateNow As String) As List(Of Symptom)
         Try
             Return CQConnection.ObtainSymptomsSuffered(idPatient, DateNow)
-        Catch ex As Exception
-            Throw New Exception(ex.Message)
-        End Try
-    End Function
-    Public Function ObtainTentativeDiagnosticDataSet(idPatient As Integer, DateNow As String) As DataSet
-        Try
-            Return CQConnection.ObtainTentativeDiagnosticDataSet(idPatient, DateNow)
         Catch ex As Exception
             Throw New Exception(ex.Message)
         End Try

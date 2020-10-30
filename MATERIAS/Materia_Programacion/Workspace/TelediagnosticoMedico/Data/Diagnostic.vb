@@ -4,20 +4,23 @@
         Tentativo
         Definitivo
     End Enum
+
+    Public Property Id As Integer
     Public Property KindDiagnostic As Kind
     Public Property Patient As People
-    Public Property Symptom As Symptom
+    Public Property Pathology As Pathology
     Public Property DateD As Date
 
     Public Sub New()
 
     End Sub 'Empty Constructor (default)
 
-    Public Sub New(kindDiagnostic As Integer, patient As People, symptom As Symptom, dateD As Date)
+    Public Sub New(id As Integer, kindDiagnostic As Integer, patient As People, pathology As Pathology, dateD As Date)
+        Me.Id = id
         IdentifyKindDiagnostic(kindDiagnostic)
-        Me.patient = patient
-        Me.symptom = symptom
-        Me.dateD = dateD
+        Me.Patient = patient
+        Me.Pathology = pathology
+        Me.DateD = dateD
     End Sub 'Full Constructor
 
     ''' <summary>

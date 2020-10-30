@@ -56,27 +56,53 @@ Public Class DataBaseConn
         End Try
 
     End Function
-    Public Function ObtainTentativeDiagnosticDataSet(idPatient As Integer, DateNow As String) As DataSet
+    Public Function ObtainTentativeDiagnostic(Patient As People, DateNow As String) As Diagnostic
         Dim con As Connection = Me.Connect()
+        Dim Diag As Diagnostic
 
-        Dim ds = New DataSet
-        Dim da As New System.Data.OleDb.OleDbDataAdapter
         Try
-            Dim rsSelectTentativeDiagnostic As Recordset = con.Execute("SELECT p.nombre,prior.nombre FROM diagnostico d JOIN patologia p ON(d.id_patologia=p.id) JOIN prioridad prior ON(p.id_prioridad=prior.id) WHERE d.id_paciente=" & idPatient & " AND d.fecha='" + DateNow + "';")
-            da.Fill(ds, rsSelectTentativeDiagnostic, "Diagnostic")
-            Return ds
+            Dim rsSelectTentativeDiagnostic As Recordset = con.Execute("SELECT id IdDiag,id_tipo, id_patologia IdPat FROM diagnostico WHERE id_paciente=" & Patient.id & " AND fecha='" + DateNow + "';")
+            Dim idDiag As Integer = DirectCast(rsSelectTentativeDiagnostic.Fields("IdDiag").Value, Integer)
+            Dim idKindDiag As Integer = DirectCast(rsSelectTentativeDiagnostic.Fields("id_tipo").Value, Integer)
+            Dim idPathDiag As Integer = DirectCast(rsSelectTentativeDiagnostic.Fields("idPat").Value, Integer)
+
+            Dim rsSelectPaths As Recordset = con.Execute("Select p.id As idPath,p.nombre As nomPath,p.descripcion,p.indiceMortalidad,pr.id As idPrior,pr.nombre As nomPrior,t.id As idTipo,t.nombre As nomTipo FROM patologia p JOIN prioridad pr On(p.id_prioridad=pr.id) JOIN tipo_patologia t ON(p.id_tipo=t.id) WHERE p.id='" & idPathDiag & "';")
+            Dim idPath As Integer = DirectCast(rsSelectPaths.Fields("idPath").Value, Integer)
+            Dim name As String = TryCast(rsSelectPaths.Fields("nomPath").Value, String)
+            Dim desc As String = TryCast(rsSelectPaths.Fields("descripcion").Value, String)
+            Dim indexM As Integer = DirectCast(rsSelectPaths.Fields("indiceMortalidad").Value, Integer)
+            Dim idPrior As Integer = DirectCast(rsSelectPaths.Fields("idPrior").Value, Integer)
+            Dim namePrior As String = TryCast(rsSelectPaths.Fields("nomPrior").Value, String)
+            Dim idKind As Integer = DirectCast(rsSelectPaths.Fields("idTipo").Value, Integer)
+            Dim nameKind As String = TryCast(rsSelectPaths.Fields("nomTipo").Value, String)
+
+            Dim Prior As New Priority(idPrior, namePrior)
+            Dim Kind As New KindPath(idKind, nameKind)
+            Dim Path = New Pathology(idPath, Prior, name, desc, indexM, Kind)
+
+            Diag = New Diagnostic(idDiag, idKind, Patient, Path, CDate(DateNow))
+            Return Diag
         Catch ex As Exception
             Console.WriteLine(ex.ToString())
-            Throw New Exception("Error al obtener la patología diagnosticada")
+            Throw New Exception("Error al obtener el diagnóstico")
         Finally
             con.Close()
         End Try
     End Function
+    Public Sub VerifyDiagnostic(idMed As Integer, idDiag As Integer)
+        Dim con As Connection = Me.Connect()
+
+        Try
+            Dim rsInsertVerification As Recordset = con.Execute("INSERT INTO verifica VALUES(" & idDiag & "," & idMed & ");")
+        Catch ex As Exception
+            Throw New Exception("")
+        End Try
+    End Sub
     Public Function ObtainTreatments(pat As String) As List(Of Treatment)
         Dim con As Connection = Me.Connect()
         Dim treatments As New List(Of Treatment)
 
-        Dim rs As Recordset = con.Execute("SELECT t.nombre, t.descripcion, t.tipo FROM tratamiento t JOIN patologia p On(t.id_patologia=p.id) WHERE p.nombre='" & pat & "' ORDER BY t.nombre;")
+        Dim rs As Recordset = con.Execute("Select t.nombre, t.descripcion, t.tipo FROM tratamiento t JOIN patologia p On(t.id_patologia=p.id) WHERE p.nombre='" & pat & "' ORDER BY t.nombre;")
 
         While (Not rs.EOF)
             Dim name As String = TryCast(rs.Fields("nombre").Value, String)
@@ -1179,6 +1205,7 @@ Public Class DataBaseConn
                 End If
 
                 Dim Patient As New People(id, ci, name1, name2, surn1, surn2, genrenumber, birthdate, email, Phones, street, ndoor, City)
+
                 ListPatient.Add(Patient)
                 rsSelectPatient.MoveNext()
                 rsSelectCity_Dpto.MoveNext()
