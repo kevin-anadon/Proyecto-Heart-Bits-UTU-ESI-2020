@@ -51,3 +51,5 @@ C:\Users\Yorel Acosta\Desktop\Workspace\TelediagnosticoMedico\Logica\obj\Debug\L
 C:\Users\Yorel Acosta\Desktop\Workspace\TelediagnosticoMedico\Logica\obj\Debug\Logic.pdb
 C:\Users\Yorel Acosta\Desktop\Study ESIMdeo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\Logica\bin\Debug\Guna.UI2.dll
 D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\Logica\bin\Debug\Guna.UI2.dll
+C:\Users\Yorel Acosta\Desktop\Study ESIMdeo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\Logica\obj\Debug\Logic.English.resources
+C:\Users\Yorel Acosta\Desktop\Study ESIMdeo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\Logica\obj\Debug\Logic.Spanish.resources

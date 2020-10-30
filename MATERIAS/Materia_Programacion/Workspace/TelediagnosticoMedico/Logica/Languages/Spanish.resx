@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BtnBack_Intro2_P_H" xml:space="preserve">
+    <value>ATRAS</value>
+    <comment>Patient. Home. Boton. Title.</comment>
+  </data>
+  <data name="BtnBack_Patient1_P_H" xml:space="preserve">
+    <value>ATRAS</value>
+    <comment>Patient. Home. Boton. Title.</comment>
+  </data>
+  <data name="BtnDropPathology_P_H" xml:space="preserve">
+    <value>QUITAR SÍNTOMA</value>
+    <comment>Patient. Home. Boton. Title.</comment>
+  </data>
+  <data name="BtnEnd_P_H" xml:space="preserve">
+    <value>FINALIZAR</value>
+    <comment>Patient. Home. Boton. Title.</comment>
+  </data>
+  <data name="BtnLogin_P_L" xml:space="preserve">
+    <value>INICIAR SESIÓN</value>
+    <comment>Patient. Login. Boton. Titulo.</comment>
+  </data>
+  <data name="BtnNext_Intro2_P_H" xml:space="preserve">
+    <value>EMPEZAR</value>
+    <comment>Patient. Home. Boton. Titulo.</comment>
+  </data>
+  <data name="BtnNext_Patient_P_H" xml:space="preserve">
+    <value>SIGUIENTE</value>
+    <comment>Patient. Home. Boton. Titulo.</comment>
+  </data>
+  <data name="BtnNext_Result_P_H" xml:space="preserve">
+    <value>SIGUIENTE</value>
+    <comment>Patient. Home. Boton. Title.</comment>
+  </data>
+  <data name="BtnNext_Symptom1_P_H" xml:space="preserve">
+    <value>SIGUIENTE</value>
+    <comment>Patient. Home. Boton. Title.</comment>
+  </data>
+  <data name="BtnSendChatP_P_H" xml:space="preserve">
+    <value>SOLICITAR CHAT</value>
+    <comment>Patient. Home. Boton. Title.</comment>
+  </data>
+  <data name="Lbl1_Intro_P_H" xml:space="preserve">
+    <value>Introducción</value>
+    <comment>Patient. Home. Label. Title.</comment>
+  </data>
+  <data name="Lbl2_Patient_P_H" xml:space="preserve">
+    <value>Paciente</value>
+    <comment>Patient. Home. Label. Title.</comment>
+  </data>
+  <data name="Lbl3_Symptom_P_H" xml:space="preserve">
+    <value>Síntomas</value>
+    <comment>Patient. Home. Label. Title.</comment>
+  </data>
+  <data name="Lbl4_Result_P_H" xml:space="preserve">
+    <value>Resultados</value>
+    <comment>Patient. Home. Label. Title.</comment>
+  </data>
+  <data name="Lbl5_Chat_P_H" xml:space="preserve">
+    <value>Chat</value>
+    <comment>Patient. Home. Label. Title.</comment>
+  </data>
+  <data name="LblChat_P_H" xml:space="preserve">
+    <value>En las próximas versiones de nuestro sistema, podrá consultar con un Médico.</value>
+    <comment>Patient. Home. Label. SubTitulo 1.</comment>
+  </data>
+  <data name="LblInfo1Intro1_P_H" xml:space="preserve">
+    <value>Está a punto de realizar un chequeo médico breve (3 min), seguro y anónimo. Sus respuestas serán analizadas cuidadosamente y se le dirá las posibles causas de sus síntomas a salvo. La información que usted proporcione es anónima y no será compartida con nadie.</value>
+    <comment>Patient. Home. Label. Info 1.</comment>
+  </data>
+  <data name="LblInfo1Intro2_P_H" xml:space="preserve">
+    <value>Antes de utilizar esta herramienta, por favor, lea los términos del servicio. 
+
+Recuerde que:
+El chequeo tiene finalidad informativa y no sustituye la opinión de un médico.
+No usar en caso de emergencias. En caso de una emergencia de salud, llame a su número de emergencias locales inmediatamente. Sus datos están a salvo. La información que usted proporcione es anónima y no será compartida con nadie.</value>
+    <comment>Patient. Home. Label. Info 1.</comment>
+  </data>
+  <data name="LblInfo1_P_SS" xml:space="preserve">
+    <value>Generando conexión con la Base de Datos.</value>
+    <comment>Patient. FrmSplashScreen. Label.</comment>
+  </data>
+  <data name="LblInfo2Intro1_P_H" xml:space="preserve">
+    <value>Este Sistema Médico fué creado con el propósito de cumplir las expecativas de un Programa Asistente, el cual lo guiará a usted a lo largo de su diagnóstico de patológias que pueda sufrir. Al ser este un Asistente, ustéd podrá conocer sus Patologías de la forma más ágil y simple.
+
+Que disfrute de nuestro servicio. Toque el botón debajo para empezar el diagnóstico.anónima y no será compartida con nadie.</value>
+    <comment>Patient. Home. Label. Info 2.</comment>
+  </data>
+  <data name="LblInfoText_P_L" xml:space="preserve">
+    <value>Ingrese su Cédula de Identidad para autenticar y  verificar sus credenciales. Este Software le permitirá realizar Diagnósticos Primarios y en base de ellos decidirá si quiere iniciar una conversación con un Médico Especialista.</value>
+    <comment>Patient. Login. Label. Info.</comment>
+  </data>
+  <data name="LblPetitionInfo_P_H" xml:space="preserve">
+    <value>GENERANDO PETICIÓN</value>
+    <comment>Patient. Home. Label. SubTitulo 4.</comment>
+  </data>
+  <data name="LblResultInfoo_P_H" xml:space="preserve">
+    <value>Por favor, tenga en cuenta que la lista podría no ser completa y que la información proporcionada tiene una finalidad informativa y no se corresponde con una opinión médica real.</value>
+    <comment>Patient. Home. Label. SubTitulo 3.</comment>
+  </data>
+  <data name="LblResultsTitle_P_H" xml:space="preserve">
+    <value>PATOLOGÍAS SUFRIDAS</value>
+    <comment>Patient. Home. Label. SubTitulo 3.</comment>
+  </data>
+  <data name="LblResults_P_H" xml:space="preserve">
+    <value>Resultados</value>
+    <comment>Patient. Home. Label. SubTitulo 2.</comment>
+  </data>
+  <data name="LblSubTitle1Patient_P_H" xml:space="preserve">
+    <value>Escoja una respuesta en cada fila.</value>
+    <comment>Patient. Home. Label. SubTitulo.</comment>
+  </data>
+  <data name="LblSubTitle1Symp_P_H" xml:space="preserve">
+    <value>Por favor, escoja los síntomas desde la lista desplegable.</value>
+    <comment>Patient. Home. Label. SubTitulo 1. </comment>
+  </data>
+  <data name="LblSubTitle2Symp_P_H" xml:space="preserve">
+    <value>Seleccione un ítem para eliminarlo</value>
+    <comment>Patient. Home. Label. SubTitulo 2.</comment>
+  </data>
+  <data name="LblTitle1Patient_P_H" xml:space="preserve">
+    <value>Por favor, seleccione todas las afirmaciones 
+que se apliquen a usted.</value>
+    <comment>Patient. Home. Label. Titulo.</comment>
+  </data>
+  <data name="LblTitle1Symp_P_H" xml:space="preserve">
+    <value>Añada sus síntomas a la lista.</value>
+    <comment>Patient. Home. Label. Titulo 1.</comment>
+  </data>
+  <data name="LblTitle1_P_L" xml:space="preserve">
+    <value>GUSTO EN VERLO</value>
+    <comment>Patient. Login. Label. Titulo1.</comment>
+  </data>
+  <data name="LblTitle2Symp_P_H" xml:space="preserve">
+    <value>Síntomas que padece.</value>
+    <comment>Patient. Home. Label. Titulo 2.</comment>
+  </data>
+  <data name="LblTitle2_P_L" xml:space="preserve">
+    <value>NUEVAMENTE</value>
+    <comment>Patient. Login. Label. Titulo2.</comment>
+  </data>
+  <data name="LblTitleIntro2_P_H" xml:space="preserve">
+    <value>Términos de licencia.</value>
+    <comment>Patient. Home. Label. Titulo.</comment>
+  </data>
+  <data name="LblTitleIntro_P_H" xml:space="preserve">
+    <value>¡Hola!</value>
+    <comment>Patient. Home. Label. Titulo.</comment>
+  </data>
+  <data name="LblTxt1_Info_P_H" xml:space="preserve">
+    <value>Tengo sobrepeso, o estoy obeso.</value>
+    <comment>Patient. Home. Label. Info 1.</comment>
+  </data>
+  <data name="LblTxt2_Info_P_H" xml:space="preserve">
+    <value>Fumo cigarrillos.</value>
+    <comment>Patient. Home. Label. Info 2.</comment>
+  </data>
+  <data name="LblTxt3_Info_P_H" xml:space="preserve">
+    <value>He sufrido una lesión recientemente.</value>
+    <comment>Patient. Home. Label. Info 3.</comment>
+  </data>
+  <data name="LblTxt4_Info_P_H" xml:space="preserve">
+    <value>Tengo el colesterol alto.</value>
+    <comment>Patient. Home. Label. Info 4.</comment>
+  </data>
+  <data name="LblTxt5_Info_P_H" xml:space="preserve">
+    <value>Tengo hipertensión.</value>
+    <comment>Patient. Home. Label. Info 5.</comment>
+  </data>
+  <data name="LblTxt6_Info_P_H" xml:space="preserve">
+    <value>Tengo diabétes.</value>
+    <comment>Patient. Home. Label. Info 6.</comment>
+  </data>
+  <data name="Rbtn1_Idk_P_H" xml:space="preserve">
+    <value>No lo sé.</value>
+    <comment>Patient. Home. RadioBtn 3. Title.</comment>
+  </data>
+  <data name="Rbtn1_No_P_H" xml:space="preserve">
+    <value>No.</value>
+    <comment>Patient. Home. RadioBtn 2. Title.</comment>
+  </data>
+  <data name="Rbtn1_Yes_P_H" xml:space="preserve">
+    <value>Si.</value>
+    <comment>Patient. Home. RadioBtn 1. Title.</comment>
+  </data>
+</root>

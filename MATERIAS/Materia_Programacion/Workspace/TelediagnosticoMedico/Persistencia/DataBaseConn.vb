@@ -1,11 +1,11 @@
 ﻿Imports ADODB
 Imports Data
 Public Class DataBaseConn
-
     'Herramientas de conexión
     Private Function Connect() As Connection
         Try
             Dim connection As New Connection()
+            'connection.ConnectionString = "driver={MySql ODBC 8.0 Unicode Driver};server=192.168.5.50;port=3306;database=kevin_anadon;uid=kevin.anadon;pwd=52108971"
             'connection.ConnectionString = "driver={MySql ODBC 8.0 Unicode Driver};server=vdo.dyndns.org;port=3306;database=telediagnosticomedico_heartbits;uid=heartbits;pwd=h34rtbits;"
             connection.ConnectionString = "driver={MySql ODBC 8.0 Unicode Driver};server=127.17.0.0;port=3306;database=telediagnosticomedico_heartbits;uid=root;pwd=;"
             connection.Open()
@@ -15,20 +15,17 @@ Public Class DataBaseConn
             Return Nothing
         End Try
     End Function
-
     Public Sub TryConnection()
-        Dim con As New Connection()
-
+        Dim connnection As New Connection()
         Try
-            'con.ConnectionString = "driver={MySql ODBC 8.0 Unicode Driver};server=vdo.dyndns.org;port=3306;database=telediagnosticomedico_heartbits;uid=heartbits;pwd=h34rtbits;"
-            con.ConnectionString = "driver={MySql ODBC 8.0 Unicode Driver};server=127.17.0.0;port=3306;database=telediagnosticomedico_heartbits;uid=root;pwd=;"
-
-            con.Open()
+            'connection.ConnectionString = "driver={MySql ODBC 8.0 Unicode Driver};server=192.168.5.50;port=3306;database=kevin_anadon;uid=kevin.anadon;pwd=52108971"
+            'connection.ConnectionString = "driver={MySql ODBC 8.0 Unicode Driver};server=vdo.dyndns.org;port=3306;database=telediagnosticomedico_heartbits;uid=heartbits;pwd=h34rtbits;"
+            connnection.ConnectionString = "driver={MySql ODBC 8.0 Unicode Driver};server=127.17.0.0;port=3306;database=telediagnosticomedico_heartbits;uid=root;pwd=;"
+            connnection.Open()
         Catch ex As Exception
             Console.WriteLine(ex.ToString())
             Throw New Exception("No se pudo conectar. Inicie la aplicación nuevamente")
         End Try
-
     End Sub
 
 
@@ -424,8 +421,31 @@ Public Class DataBaseConn
     End Function
 
 
-
     'Query Sintomas
+    Public Function ObtainIdSymptoms(desc As List(Of String), idPathology As Integer) As List(Of String)
+        Dim con As Connection = Me.Connect()
+        Dim descSymptoms As New List(Of String)
+        Dim rsSelectSymptoms As Recordset
+
+        Try
+            rsSelectSymptoms = con.Execute("SELECT s.descripcion FROM sintoma_compone sc JOIN sintoma s ON(sc.id_sintoma = s.id)WHERE sc.id_patologia='" & idPathology & "';")
+
+            While (Not rsSelectSymptoms.EOF)
+                Dim rsDescSymptom As String = TryCast(rsSelectSymptoms.Fields("descripcion").Value, String)
+
+                descSymptoms.Add(rsDescSymptom)
+
+                rsSelectSymptoms.MoveNext()
+            End While
+
+            Return descSymptoms
+        Catch ex As Exception
+            Console.WriteLine(ex.Message)
+            Throw New Exception("Error al obtener sintomas")
+        Finally
+            con.Close()
+        End Try
+    End Function
     Public Sub AddSymptoms(Sympt As Symptom, Paths As List(Of Pathology))
         Dim con As Connection = Me.Connect()
 
@@ -500,7 +520,7 @@ Public Class DataBaseConn
         End Try
 
     End Function
-    Public Function ObtainSymptoms() As List(Of Symptom)
+    Public Function ObtainSymptoms() As List(Of Data.Symptom)
         Dim con As Connection = Me.Connect()
         Dim Symptoms As New List(Of Symptom)
 
@@ -530,6 +550,7 @@ Public Class DataBaseConn
 
     End Function
 
+
     'Query Chat
     Public Function CreateRoom() As Integer
         Dim con As Connection = Me.Connect
@@ -548,6 +569,7 @@ Public Class DataBaseConn
         End Try
 
     End Function
+
     Public Sub LeaveRoom(idRoom As Integer, DateNow As String)
         Dim con As Connection = Me.Connect
 
@@ -560,6 +582,7 @@ Public Class DataBaseConn
             con.Close()
         End Try
     End Sub
+
     Public Sub CheckStateRoom(idRoom As Integer)
         Dim con As Connection = Me.Connect
 
@@ -576,6 +599,7 @@ Public Class DataBaseConn
         End Try
     End Sub
 
+
     Public Sub SendMessage(id As Integer, idRoom As Integer, msg As String, Hour As String)
         Dim con As Connection = Me.Connect
 
@@ -588,7 +612,6 @@ Public Class DataBaseConn
             con.Close()
         End Try
     End Sub
-
     Public Function ObtainMessages(id As Integer, idRoom As Integer) As List(Of Message)
         Dim con As Connection = Me.Connect
         Dim Msgs As New List(Of Message)
@@ -607,6 +630,7 @@ Public Class DataBaseConn
             Throw New Exception(ex.Message)
         End Try
     End Function
+
 
     'Query Personas
     Public Function PatientAllowed(ci As String) As Short
@@ -642,7 +666,7 @@ Public Class DataBaseConn
                     'No se encuentra ningun Paciente con esta CI
                     codeMsg = 4 'Cédula de identidad errónea.
                 Else
-                    codeMsg = 2 'Habilidato
+                    codeMsg = 2 'Habilitado
                 End If
             Catch ex As Exception
                 Console.WriteLine(ex)
@@ -673,7 +697,7 @@ Public Class DataBaseConn
             Dim password As String = TryCast(rsSelectAdmin.Fields("contrasena").Value, String)
             Dim pin As Integer = DirectCast(rsSelectAdmin.Fields("pin").Value, Integer)
 
-            Dim rsSelectCity_Dpto As Recordset = con.Execute("SELECT c.id As Idc,c.nombre As Cnombre,d.id As Idd,d.nombre As Dnombre FROM vista_admin va JOIN ciudad c ON(va.id_ciudad=c.id) JOIN departamento d ON(c.id_dpto=d.id) WHERE va.id=" & id & ";") 'Consulta para Obtenere Departamento y Ciudad
+            Dim rsSelectCity_Dpto As Recordset = con.Execute("SELECT c.id As Idc,c.nombre As Cnombre,d.id As Idd,d.nombre As Dnombre FROM vista_admin va JOIN ciudad c ON(va.id_ciudad=c.id) JOIN departamento d ON(c.id_dpto=d.id) WHERE va.id=" & id & ";") 'Consulta para Obtener el Departamento y Ciudad
 
             Dim rsSelectPhones As Recordset = con.Execute("SELECT group_concat(c.celular) As Celulares FROM vista_admin va JOIN cel_empleado c ON(va.id=c.id_empleado) WHERE va.id=" & id & ";") 'Consulta para Obtener celulares del Admin
 
@@ -931,10 +955,10 @@ Public Class DataBaseConn
 
         Return Nothing
     End Function
-    Public Function LoginMedic(user As String, pass As String) As Medic
+    Public Function LoginMedic(user As String, passwd As String) As Medic
         Dim con As Connection = Me.Connect()
         Try
-            Dim rsSelectMedic As Recordset = con.Execute("SELECT * FROM vista_medico WHERE usuario='" & user & "' AND contrasena='" & pass & "';")
+            Dim rsSelectMedic As Recordset = con.Execute("SELECT * FROM vista_medico WHERE usuario='" & user & "' AND contrasena='" & passwd & "';")
 
             Dim id As Integer = DirectCast(rsSelectMedic.Fields("id").Value, Integer)
             Dim ci As Integer = DirectCast(rsSelectMedic.Fields("ci").Value, Integer)
@@ -981,6 +1005,29 @@ Public Class DataBaseConn
         End Try
 
         Return Nothing
+    End Function
+    Public Function InfoEmployeeLogged(user As String, passwd As String) As Short
+        Dim con As Connection = Me.Connect
+        Dim codeMsg As Short = 4
+        Dim rsSelectMedic As Recordset
+
+        Try
+            rsSelectMedic = con.Execute("SELECT * FROM vista_medico WHERE usuario='" & user & "' AND contrasena='" & passwd & "';")
+            If IsNothing(rsSelectMedic) Or rsSelectMedic.EOF Then
+                'No se encuentra ningun Empleado con estos campos.
+                codeMsg = 4 'Usuario y/o Contraseña erroneos.
+            Else
+                codeMsg = 2 'Inicio de sesión exitoso.
+            End If
+        Catch ex As Exception
+            Console.WriteLine(ex)
+            Throw New Exception("Error de conexión: " & ex.Message)
+            codeMsg = 3 'Error de Conexión.
+        Finally
+            con.Close()
+        End Try
+
+        Return codeMsg
     End Function
     Public Function ObtainMedicsDataSet() As DataSet
         Dim con As Connection = Me.Connect()
@@ -1319,8 +1366,8 @@ Public Class DataBaseConn
                 rsIsThere.MoveNext()
             End If
 
-            For Each e As Integer In idSympSuffered
-                Dim rsInsert As Recordset = con.Execute("INSERT INTO paciente_sufre(id_sintoma, id_paciente,fecha) VALUES(" & e & "," & idPatient & ",'" & nowDate & "');")
+            For Each id As Integer In idSympSuffered
+                Dim rsInsert As Recordset = con.Execute("INSERT INTO paciente_sufre(id_sintoma, id_paciente,fecha) VALUES(" & id & "," & idPatient & ",'" & nowDate & "');")
             Next
         Catch ex As Exception
             Console.WriteLine(ex)
@@ -1332,7 +1379,7 @@ Public Class DataBaseConn
         Dim con As Connection = Me.Connect()
         Dim Pathologies As New List(Of Pathology)
         Try
-            Dim rsPathologiesSuffered As Recordset = con.Execute("SELECT DISTINCT p.id, p.nombre, p.indiceMortalidad, p.id_prioridad FROM paciente_sufre ps JOIN sintoma s ON(ps.id_sintoma = s.id) JOIN sintoma_compone sc ON(s.id = sc.id_sintoma) JOIN patologia p ON(sc.id_patologia = p.id) WHERE ps.id_paciente=" & idPatient)
+            Dim rsPathologiesSuffered As Recordset = con.Execute("SELECT DISTINCT p.id, p.nombre, p.indiceMortalidad, p.id_prioridad FROM paciente_sufre ps JOIN sintoma s ON(ps.id_sintoma = s.id) JOIN sintoma_compone sc ON(s.id = sc.id_sintoma) JOIN patologia p ON(sc.id_patologia = p.id) WHERE ps.id_paciente=" & idPatient & " ORDER BY p.indiceMortalidad DESC;")
 
             While (Not rsPathologiesSuffered.EOF)
                 Dim idPathology As Integer = DirectCast(rsPathologiesSuffered.Fields("id").Value, Integer)
@@ -1346,15 +1393,13 @@ Public Class DataBaseConn
             End While
 
             Dim idPathEvidenceHigh As Integer = 0
+            Dim laMayor As Integer = 0
             Dim fecha As String = Date.Now.ToString("yyy-MM-dd")
             For Each Path As Pathology In Pathologies
-                For Each Path2 As Pathology In Pathologies
-                    If Path.mortalityIndex > Path2.mortalityIndex And Path.id <> Path2.id Then
-                        idPathEvidenceHigh = Path.id
-                    ElseIf Path.mortalityIndex < Path2.mortalityIndex And Path.id <> Path2.id Then
-                        idPathEvidenceHigh = Path2.id
-                    End If
-                Next
+                If Path.mortalityIndex > laMayor Then
+                    laMayor = Path.mortalityIndex
+                    idPathEvidenceHigh = Path.id
+                End If
             Next
 
             Dim rsInsertDiagnostic As Recordset = con.Execute("INSERT INTO diagnostico(id_tipo,id_paciente,id_patologia,fecha) VALUES(1," & idPatient & "," & idPathEvidenceHigh & ",'" & fecha & "');")
@@ -1362,7 +1407,7 @@ Public Class DataBaseConn
             Return Pathologies
         Catch ex As Exception
             Console.WriteLine(ex)
-            Return Nothing
+            Throw New Exception(ex.Message)
         Finally
             con.Close()
         End Try
@@ -1543,8 +1588,6 @@ Public Class DataBaseConn
         End Try
         Return Nothing
     End Function
-
-
 
 
 End Class 'DataBaseConn

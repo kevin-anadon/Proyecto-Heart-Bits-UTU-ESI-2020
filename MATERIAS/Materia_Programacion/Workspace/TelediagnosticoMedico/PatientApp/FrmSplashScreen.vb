@@ -1,6 +1,6 @@
 ﻿Imports Logic
 
-Public Class FrmSplashScreen
+Public Class FrmSplashScreen 'Paciente
     Private record As Integer
     Private LQuery As New Logic.Controller()
     Private resultConnection As Boolean = False
@@ -10,11 +10,10 @@ Public Class FrmSplashScreen
     Private Sub IdentifyMessage()
         Try
             LQuery.TryConnection()
-            LblTitle4.Text = "Conexión exitosa. Iniciando el sistema."
+            LblPInfo2.Text = "Conexión exitosa. Iniciando el sistema."
             resultConnection = True
         Catch ex As Exception
-            Console.WriteLine(ex.Message)
-            LblTitle4.Text = ex.Message
+            LblPInfo2.Text = ex.Message
         End Try
     End Sub
 

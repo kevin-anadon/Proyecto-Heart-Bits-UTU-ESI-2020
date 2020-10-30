@@ -6,7 +6,7 @@
     Public Property mortalityIndex As Integer = 0
     Public Property kind As KindPath
     Public Property evidence As String = Nothing
-
+    Public Property probability As Double = Nothing
     Public Sub New()
 
     End Sub 'Empty Constructor (default)
@@ -39,9 +39,6 @@
     Public Sub New(id As Integer, priority As Priority, name As String, description As String, mortalityIndex As Integer, kind As KindPath)
         Me.New(id, priority, name, description, mortalityIndex)
         Me.kind = kind
-    End Sub
-
-
-    'Full Constructor
+    End Sub 'Full Constructor
 
 End Class

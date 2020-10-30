@@ -195,9 +195,8 @@
         AH8dNABQAUAFABQAUAFABQAA/9k=
 </value>
   </data>
-  <data name="LblInfoText1.Text" xml:space="preserve">
-    <value>Ingrese su Cédula de Identidad para autenticar y  verificar sus credenciales. 
-Este Software le permitirá realizar Diagnósticos Primarios y en base de ellos decidirá si quiere iniciar una conversación con un Médico Especialista.</value>
+  <data name="LblInfoText_P_L.Text" xml:space="preserve">
+    <value>Ingrese su Cédula de Identidad para autenticar y  verificar sus credenciales. Este Software le permitirá realizar Diagnósticos Primarios y en base de ellos decidirá si quiere iniciar una conversación con un Médico Especialista.</value>
   </data>
   <data name="PictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

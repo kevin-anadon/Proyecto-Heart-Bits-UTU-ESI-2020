@@ -33,29 +33,33 @@ Partial Class FrmHome
         Me.Pctbx3_Symptom = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Pctbx2_Patient = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Line5_Chat = New Guna.UI2.WinForms.Guna2PictureBox()
-        Me.Lbl5_Chat = New Guna.UI2.WinForms.Guna2HtmlLabel()
+
+        Me.Lbl5_Chat_P_H = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.Line4_Result = New Guna.UI2.WinForms.Guna2PictureBox()
-        Me.Lbl4_Result = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.Lbl4_Result_P_H = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.Line3_Symptom = New Guna.UI2.WinForms.Guna2PictureBox()
-        Me.Lbl3_Symptom = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.Lbl3_Symptom_P_H = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.Pctbx1_Intro = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Line1_Intro = New Guna.UI2.WinForms.Guna2PictureBox()
-        Me.Lbl1_Intro = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.Lbl1_Intro_P_H = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Line2_Patient = New Guna.UI2.WinForms.Guna2PictureBox()
-        Me.Lbl2_Patient = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.Lbl2_Patient_P_H = New Guna.UI2.WinForms.Guna2HtmlLabel()
+
         Me.ElipseHome = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.ElipsePnlResult = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.PnlResultItems = New Guna.UI2.WinForms.Guna2Panel()
         Me.PnlColorInfo = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2PictureBox8 = New Guna.UI2.WinForms.Guna2PictureBox()
-        Me.LblResultInfoo = New System.Windows.Forms.Label()
-        Me.LblResults = New System.Windows.Forms.Label()
-        Me.LblChat = New System.Windows.Forms.Label()
+
+        Me.LblResultInfoo_P_H = New System.Windows.Forms.Label()
+        Me.LblResults_P_H = New System.Windows.Forms.Label()
+        Me.LblChat_P_H = New System.Windows.Forms.Label()
         Me.LblResultUrgent = New System.Windows.Forms.Label()
         Me.PnlSubPath = New Guna.UI2.WinForms.Guna2Panel()
         Me.PnlHeader = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Label8 = New System.Windows.Forms.Label()
+        Me.LblResultsTitle_P_H = New System.Windows.Forms.Label()
+
         Me.DgvPhatologies = New Guna.UI2.WinForms.Guna2DataGridView()
         Me.ElipsePnlSubPath = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.PnlHead = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
@@ -64,91 +68,98 @@ Partial Class FrmHome
         Me.ElipsePnlRequest = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.PnlPetition = New Guna.UI2.WinForms.Guna2Panel()
         Me.PctbxPetition = New Guna.UI2.WinForms.Guna2PictureBox()
-        Me.LblPetitionInfo = New System.Windows.Forms.Label()
+
+        Me.LblPetitionInfo_P_H = New System.Windows.Forms.Label()
         Me.PnlChat = New Guna.UI2.WinForms.Guna2Panel()
         Me.PnlTittleChat = New Guna.UI2.WinForms.Guna2Panel()
         Me.LblMedic = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
+        Me.LblTitleNameMedic_P_H = New System.Windows.Forms.Label()
+
         Me.TxtChatSend = New System.Windows.Forms.TextBox()
         Me.BtnSend = New Guna.UI2.WinForms.Guna2Button()
+        Me.BtnMore = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
         Me.PnlChatBack = New Guna.UI2.WinForms.Guna2Panel()
         Me.TxtChat = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.ElipseChat = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
-        Me.TimerRequest = New System.Windows.Forms.Timer(Me.components)
-        Me.TimerChat = New System.Windows.Forms.Timer(Me.components)
+
         Me.PnlResult = New Guna.UI2.WinForms.Guna2Panel()
-        Me.BtnSendChatP = New Guna.UI2.WinForms.Guna2Button()
-        Me.BtnEnd = New Guna.UI2.WinForms.Guna2Button()
+        Me.BtnSendChatP_P_H = New Guna.UI2.WinForms.Guna2Button()
+        Me.BtnEnd_P_H = New Guna.UI2.WinForms.Guna2Button()
+
         Me.BtnCancelPetition = New Guna.UI2.WinForms.Guna2Button()
         Me.PnlSymptom = New Guna.UI2.WinForms.Guna2Panel()
         Me.CbxSysSymptoms = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.Guna2PictureBox11 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Guna2PictureBox10 = New Guna.UI2.WinForms.Guna2PictureBox()
-        Me.Label10 = New System.Windows.Forms.Label()
+        Me.LblSubTitle2Symp_P_H = New System.Windows.Forms.Label()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
         Me.LbxSufferedPatient = New System.Windows.Forms.ListBox()
-        Me.BtnDropPathology = New Guna.UI2.WinForms.Guna2Button()
+        Me.BtnDropPathology_P_H = New Guna.UI2.WinForms.Guna2Button()
         Me.BtnForeText1 = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.BtnBack_Patient1 = New Guna.UI2.WinForms.Guna2Button()
-        Me.BtnNext_Result = New Guna.UI2.WinForms.Guna2Button()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
+        Me.BtnBack_Patient1_P_H = New Guna.UI2.WinForms.Guna2Button()
+        Me.BtnNext_Result_P_H = New Guna.UI2.WinForms.Guna2Button()
+        Me.LblSubTitle1Symp_P_H = New System.Windows.Forms.Label()
+        Me.LblTitle1Symp_P_H = New System.Windows.Forms.Label()
+        Me.LblTitle2Symp_P_H = New System.Windows.Forms.Label()
         Me.PnlPatient = New Guna.UI2.WinForms.Guna2Panel()
-        Me.BtnBack_Intro2 = New Guna.UI2.WinForms.Guna2Button()
-        Me.BtnNext_Symptom1 = New Guna.UI2.WinForms.Guna2Button()
+        Me.BtnBack_Intro2_P_H = New Guna.UI2.WinForms.Guna2Button()
+        Me.BtnNext_Symptom1_P_H = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2PictureBox7 = New Guna.UI2.WinForms.Guna2PictureBox()
-        Me.LblTxt6_Info = New System.Windows.Forms.Label()
+        Me.LblTxt6_Info_P_H = New System.Windows.Forms.Label()
         Me.Grpbx_Item6 = New Guna.UI2.WinForms.Guna2GroupBox()
-        Me.Rbtn6_Idk = New Guna.UI2.WinForms.Guna2RadioButton()
+        Me.Rbtn6_Idk_P_H = New Guna.UI2.WinForms.Guna2RadioButton()
         Me.Rbtn6_No = New Guna.UI2.WinForms.Guna2RadioButton()
-        Me.Rbtn6_Yes = New Guna.UI2.WinForms.Guna2RadioButton()
+        Me.Rbtn6_Yes_P_H = New Guna.UI2.WinForms.Guna2RadioButton()
         Me.Guna2PictureBox6 = New Guna.UI2.WinForms.Guna2PictureBox()
-        Me.LblTxt5_Info = New System.Windows.Forms.Label()
+        Me.LblTxt5_Info_P_H = New System.Windows.Forms.Label()
         Me.Grpbx_Item5 = New Guna.UI2.WinForms.Guna2GroupBox()
-        Me.Rbtn5_Idk = New Guna.UI2.WinForms.Guna2RadioButton()
-        Me.Rbtn5_No = New Guna.UI2.WinForms.Guna2RadioButton()
-        Me.Rbtn5_Yes = New Guna.UI2.WinForms.Guna2RadioButton()
+        Me.Rbtn5_Idk_P_H = New Guna.UI2.WinForms.Guna2RadioButton()
+        Me.Rbtn5_No_P_H = New Guna.UI2.WinForms.Guna2RadioButton()
+        Me.Rbtn5_Yes_P_H = New Guna.UI2.WinForms.Guna2RadioButton()
         Me.Guna2PictureBox5 = New Guna.UI2.WinForms.Guna2PictureBox()
-        Me.LblTxt4_Info = New System.Windows.Forms.Label()
+        Me.LblTxt4_Info_P_H = New System.Windows.Forms.Label()
         Me.Grpbx_Item4 = New Guna.UI2.WinForms.Guna2GroupBox()
-        Me.Rbtn4_Idk = New Guna.UI2.WinForms.Guna2RadioButton()
-        Me.Rbtn4_No = New Guna.UI2.WinForms.Guna2RadioButton()
-        Me.Rbtn4_Yes = New Guna.UI2.WinForms.Guna2RadioButton()
+        Me.Rbtn4_Idk_P_H = New Guna.UI2.WinForms.Guna2RadioButton()
+        Me.Rbtn4_No_P_H = New Guna.UI2.WinForms.Guna2RadioButton()
+        Me.Rbtn4_Yes_P_H = New Guna.UI2.WinForms.Guna2RadioButton()
         Me.Guna2PictureBox4 = New Guna.UI2.WinForms.Guna2PictureBox()
-        Me.LblTxt3_Info = New System.Windows.Forms.Label()
+        Me.LblTxt3_Info_P_H = New System.Windows.Forms.Label()
         Me.Grpbx_Item3 = New Guna.UI2.WinForms.Guna2GroupBox()
-        Me.Rbtn3_Idk = New Guna.UI2.WinForms.Guna2RadioButton()
-        Me.Rbtn3_No = New Guna.UI2.WinForms.Guna2RadioButton()
-        Me.Rbtn3_Yes = New Guna.UI2.WinForms.Guna2RadioButton()
+        Me.Rbtn3_Idk_P_H = New Guna.UI2.WinForms.Guna2RadioButton()
+        Me.Rbtn3_No_P_H = New Guna.UI2.WinForms.Guna2RadioButton()
+        Me.Rbtn3_Yes_P_H = New Guna.UI2.WinForms.Guna2RadioButton()
         Me.Guna2PictureBox3 = New Guna.UI2.WinForms.Guna2PictureBox()
-        Me.LblTxt2_Info = New System.Windows.Forms.Label()
+        Me.LblTxt2_Info_P_H = New System.Windows.Forms.Label()
         Me.Grpbx_Item2 = New Guna.UI2.WinForms.Guna2GroupBox()
-        Me.Rbtn2_Idk = New Guna.UI2.WinForms.Guna2RadioButton()
-        Me.Rbtn2_No = New Guna.UI2.WinForms.Guna2RadioButton()
-        Me.Rbtn2_Yes = New Guna.UI2.WinForms.Guna2RadioButton()
+        Me.Rbtn2_Idk_P_H = New Guna.UI2.WinForms.Guna2RadioButton()
+        Me.Rbtn2_No_P_H = New Guna.UI2.WinForms.Guna2RadioButton()
+        Me.Rbtn2_Yes_P_H = New Guna.UI2.WinForms.Guna2RadioButton()
         Me.Guna2PictureBox2 = New Guna.UI2.WinForms.Guna2PictureBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.LblTxt1_Info = New System.Windows.Forms.Label()
+        Me.LblSubTitle1Patient_P_H = New System.Windows.Forms.Label()
+        Me.LblTitle1Patient_P_H = New System.Windows.Forms.Label()
+        Me.LblTxt1_Info_P_H = New System.Windows.Forms.Label()
         Me.Grpbx_Item1 = New Guna.UI2.WinForms.Guna2GroupBox()
-        Me.Rbtn1_Idk = New Guna.UI2.WinForms.Guna2RadioButton()
-        Me.Rbtn1_No = New Guna.UI2.WinForms.Guna2RadioButton()
-        Me.Rbtn1_Yes = New Guna.UI2.WinForms.Guna2RadioButton()
+        Me.Rbtn1_Idk_P_H = New Guna.UI2.WinForms.Guna2RadioButton()
+        Me.Rbtn1_No_P_H = New Guna.UI2.WinForms.Guna2RadioButton()
+        Me.Rbtn1_Yes_P_H = New Guna.UI2.WinForms.Guna2RadioButton()
         Me.PnlIntro2 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.BtnNext_Patient = New Guna.UI2.WinForms.Guna2Button()
+        Me.LblTitleIntro2_P_H = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.LblInfo1Intro2_P_H = New System.Windows.Forms.Label()
+        Me.BtnNext_Patient_P_H = New Guna.UI2.WinForms.Guna2Button()
         Me.PctbxTerms = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.PnlIntro1 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Me.BtnNext_Intro2 = New Guna.UI2.WinForms.Guna2Button()
+        Me.LblInfo2Intro1_P_H = New System.Windows.Forms.Label()
+        Me.LblInfo1Intro1_P_H = New System.Windows.Forms.Label()
+        Me.LblTitleIntro_P_H = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.BtnNext_Intro2_P_H = New Guna.UI2.WinForms.Guna2Button()
         Me.PctbxWelcome = New Guna.UI2.WinForms.Guna2PictureBox()
+
+        Me.TimerRequest = New System.Windows.Forms.Timer(Me.components)
+        Me.TimerChat = New System.Windows.Forms.Timer(Me.components)
+
         Me.PnlLeft.SuspendLayout()
         CType(Me.Pctbx5_Chat, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Pctbx4_Result, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -205,17 +216,17 @@ Partial Class FrmHome
         Me.PnlLeft.Controls.Add(Me.Pctbx3_Symptom)
         Me.PnlLeft.Controls.Add(Me.Pctbx2_Patient)
         Me.PnlLeft.Controls.Add(Me.Line5_Chat)
-        Me.PnlLeft.Controls.Add(Me.Lbl5_Chat)
+        Me.PnlLeft.Controls.Add(Me.Lbl5_Chat_P_H)
         Me.PnlLeft.Controls.Add(Me.Line4_Result)
-        Me.PnlLeft.Controls.Add(Me.Lbl4_Result)
+        Me.PnlLeft.Controls.Add(Me.Lbl4_Result_P_H)
         Me.PnlLeft.Controls.Add(Me.Line3_Symptom)
-        Me.PnlLeft.Controls.Add(Me.Lbl3_Symptom)
+        Me.PnlLeft.Controls.Add(Me.Lbl3_Symptom_P_H)
         Me.PnlLeft.Controls.Add(Me.Pctbx1_Intro)
         Me.PnlLeft.Controls.Add(Me.Line1_Intro)
-        Me.PnlLeft.Controls.Add(Me.Lbl1_Intro)
+        Me.PnlLeft.Controls.Add(Me.Lbl1_Intro_P_H)
         Me.PnlLeft.Controls.Add(Me.Guna2PictureBox1)
         Me.PnlLeft.Controls.Add(Me.Line2_Patient)
-        Me.PnlLeft.Controls.Add(Me.Lbl2_Patient)
+        Me.PnlLeft.Controls.Add(Me.Lbl2_Patient_P_H)
         Me.PnlLeft.Dock = System.Windows.Forms.DockStyle.Left
         Me.PnlLeft.Location = New System.Drawing.Point(0, 0)
         Me.PnlLeft.Name = "PnlLeft"
@@ -278,6 +289,7 @@ Partial Class FrmHome
         Me.Pctbx2_Patient.TabIndex = 12
         Me.Pctbx2_Patient.TabStop = False
         Me.Pctbx2_Patient.Visible = False
+
         '
         'Line5_Chat
         '
@@ -294,22 +306,23 @@ Partial Class FrmHome
         Me.Line5_Chat.TabIndex = 10
         Me.Line5_Chat.TabStop = False
         '
-        'Lbl5_Chat
+        'Lbl5_Chat_P_H
         '
-        Me.Lbl5_Chat.AccessibleDescription = "Lbl5_Chat"
-        Me.Lbl5_Chat.AccessibleName = "Lbl5_Chat"
-        Me.Lbl5_Chat.AutoSize = False
-        Me.Lbl5_Chat.BackColor = System.Drawing.Color.Transparent
-        Me.Lbl5_Chat.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Lbl5_Chat.ForeColor = System.Drawing.Color.FromArgb(CType(CType(181, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(181, Byte), Integer))
-        Me.Lbl5_Chat.ImeMode = System.Windows.Forms.ImeMode.Disable
-        Me.Lbl5_Chat.IsSelectionEnabled = False
-        Me.Lbl5_Chat.Location = New System.Drawing.Point(42, 297)
-        Me.Lbl5_Chat.Name = "Lbl5_Chat"
-        Me.Lbl5_Chat.Size = New System.Drawing.Size(171, 40)
-        Me.Lbl5_Chat.TabIndex = 11
-        Me.Lbl5_Chat.Text = "Chat"
-        Me.Lbl5_Chat.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Lbl5_Chat_P_H.AccessibleDescription = "Lbl5_Chat_P_H"
+        Me.Lbl5_Chat_P_H.AccessibleName = "Lbl5_Chat_P_H"
+        Me.Lbl5_Chat_P_H.AutoSize = False
+        Me.Lbl5_Chat_P_H.BackColor = System.Drawing.Color.Transparent
+        Me.Lbl5_Chat_P_H.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lbl5_Chat_P_H.ForeColor = System.Drawing.Color.FromArgb(CType(CType(181, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(181, Byte), Integer))
+        Me.Lbl5_Chat_P_H.ImeMode = System.Windows.Forms.ImeMode.Disable
+        Me.Lbl5_Chat_P_H.IsSelectionEnabled = False
+        Me.Lbl5_Chat_P_H.Location = New System.Drawing.Point(42, 297)
+        Me.Lbl5_Chat_P_H.Name = "Lbl5_Chat_P_H"
+        Me.Lbl5_Chat_P_H.Size = New System.Drawing.Size(171, 40)
+        Me.Lbl5_Chat_P_H.TabIndex = 11
+        Me.Lbl5_Chat_P_H.Text = "Chat"
+        Me.Lbl5_Chat_P_H.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft
+
         '
         'Line4_Result
         '
@@ -325,23 +338,25 @@ Partial Class FrmHome
         Me.Line4_Result.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
         Me.Line4_Result.TabIndex = 8
         Me.Line4_Result.TabStop = False
+
         '
-        'Lbl4_Result
+        'Lbl4_Result_P_H
         '
-        Me.Lbl4_Result.AccessibleDescription = "Lbl4_Result"
-        Me.Lbl4_Result.AccessibleName = "Lbl4_Result"
-        Me.Lbl4_Result.AutoSize = False
-        Me.Lbl4_Result.BackColor = System.Drawing.Color.Transparent
-        Me.Lbl4_Result.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Lbl4_Result.ForeColor = System.Drawing.Color.FromArgb(CType(CType(181, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(181, Byte), Integer))
-        Me.Lbl4_Result.ImeMode = System.Windows.Forms.ImeMode.Disable
-        Me.Lbl4_Result.IsSelectionEnabled = False
-        Me.Lbl4_Result.Location = New System.Drawing.Point(42, 259)
-        Me.Lbl4_Result.Name = "Lbl4_Result"
-        Me.Lbl4_Result.Size = New System.Drawing.Size(171, 40)
-        Me.Lbl4_Result.TabIndex = 9
-        Me.Lbl4_Result.Text = "Resultados"
-        Me.Lbl4_Result.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Lbl4_Result_P_H.AccessibleDescription = "Lbl4_Result_P_H"
+        Me.Lbl4_Result_P_H.AccessibleName = "Lbl4_Result_P_H"
+        Me.Lbl4_Result_P_H.AutoSize = False
+        Me.Lbl4_Result_P_H.BackColor = System.Drawing.Color.Transparent
+        Me.Lbl4_Result_P_H.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lbl4_Result_P_H.ForeColor = System.Drawing.Color.FromArgb(CType(CType(181, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(181, Byte), Integer))
+        Me.Lbl4_Result_P_H.ImeMode = System.Windows.Forms.ImeMode.Disable
+        Me.Lbl4_Result_P_H.IsSelectionEnabled = False
+        Me.Lbl4_Result_P_H.Location = New System.Drawing.Point(42, 259)
+        Me.Lbl4_Result_P_H.Name = "Lbl4_Result_P_H"
+        Me.Lbl4_Result_P_H.Size = New System.Drawing.Size(171, 40)
+        Me.Lbl4_Result_P_H.TabIndex = 9
+        Me.Lbl4_Result_P_H.Text = "Resultados"
+        Me.Lbl4_Result_P_H.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft
+
         '
         'Line3_Symptom
         '
@@ -357,23 +372,25 @@ Partial Class FrmHome
         Me.Line3_Symptom.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
         Me.Line3_Symptom.TabIndex = 6
         Me.Line3_Symptom.TabStop = False
+
         '
-        'Lbl3_Symptom
+        'Lbl3_Symptom_P_H
         '
-        Me.Lbl3_Symptom.AccessibleDescription = "Lbl3_Symptom"
-        Me.Lbl3_Symptom.AccessibleName = "Lbl3_Symptom"
-        Me.Lbl3_Symptom.AutoSize = False
-        Me.Lbl3_Symptom.BackColor = System.Drawing.Color.Transparent
-        Me.Lbl3_Symptom.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Lbl3_Symptom.ForeColor = System.Drawing.Color.FromArgb(CType(CType(181, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(181, Byte), Integer))
-        Me.Lbl3_Symptom.ImeMode = System.Windows.Forms.ImeMode.Disable
-        Me.Lbl3_Symptom.IsSelectionEnabled = False
-        Me.Lbl3_Symptom.Location = New System.Drawing.Point(42, 219)
-        Me.Lbl3_Symptom.Name = "Lbl3_Symptom"
-        Me.Lbl3_Symptom.Size = New System.Drawing.Size(171, 40)
-        Me.Lbl3_Symptom.TabIndex = 7
-        Me.Lbl3_Symptom.Text = "Síntomas"
-        Me.Lbl3_Symptom.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Lbl3_Symptom_P_H.AccessibleDescription = "Lbl3_Symptom_P_H"
+        Me.Lbl3_Symptom_P_H.AccessibleName = "Lbl3_Symptom_P_H"
+        Me.Lbl3_Symptom_P_H.AutoSize = False
+        Me.Lbl3_Symptom_P_H.BackColor = System.Drawing.Color.Transparent
+        Me.Lbl3_Symptom_P_H.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lbl3_Symptom_P_H.ForeColor = System.Drawing.Color.FromArgb(CType(CType(181, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(181, Byte), Integer))
+        Me.Lbl3_Symptom_P_H.ImeMode = System.Windows.Forms.ImeMode.Disable
+        Me.Lbl3_Symptom_P_H.IsSelectionEnabled = False
+        Me.Lbl3_Symptom_P_H.Location = New System.Drawing.Point(42, 219)
+        Me.Lbl3_Symptom_P_H.Name = "Lbl3_Symptom_P_H"
+        Me.Lbl3_Symptom_P_H.Size = New System.Drawing.Size(171, 40)
+        Me.Lbl3_Symptom_P_H.TabIndex = 7
+        Me.Lbl3_Symptom_P_H.Text = "Síntomas"
+        Me.Lbl3_Symptom_P_H.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft
+
         '
         'Pctbx1_Intro
         '
@@ -402,23 +419,25 @@ Partial Class FrmHome
         Me.Line1_Intro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
         Me.Line1_Intro.TabIndex = 1
         Me.Line1_Intro.TabStop = False
+
+
+        'Lbl1_Intro_P_H
         '
-        'Lbl1_Intro
-        '
-        Me.Lbl1_Intro.AccessibleDescription = "Lbl1_Intro"
-        Me.Lbl1_Intro.AccessibleName = "Lbl1_Intro"
-        Me.Lbl1_Intro.AutoSize = False
-        Me.Lbl1_Intro.BackColor = System.Drawing.Color.Transparent
-        Me.Lbl1_Intro.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Lbl1_Intro.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer))
-        Me.Lbl1_Intro.ImeMode = System.Windows.Forms.ImeMode.Disable
-        Me.Lbl1_Intro.IsSelectionEnabled = False
-        Me.Lbl1_Intro.Location = New System.Drawing.Point(42, 141)
-        Me.Lbl1_Intro.Name = "Lbl1_Intro"
-        Me.Lbl1_Intro.Size = New System.Drawing.Size(171, 40)
-        Me.Lbl1_Intro.TabIndex = 2
-        Me.Lbl1_Intro.Text = "Introducción"
-        Me.Lbl1_Intro.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Lbl1_Intro_P_H.AccessibleDescription = "Lbl1_Intro_P_H"
+        Me.Lbl1_Intro_P_H.AccessibleName = "Lbl1_Intro_P_H"
+        Me.Lbl1_Intro_P_H.AutoSize = False
+        Me.Lbl1_Intro_P_H.BackColor = System.Drawing.Color.Transparent
+        Me.Lbl1_Intro_P_H.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lbl1_Intro_P_H.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer))
+        Me.Lbl1_Intro_P_H.ImeMode = System.Windows.Forms.ImeMode.Disable
+        Me.Lbl1_Intro_P_H.IsSelectionEnabled = False
+        Me.Lbl1_Intro_P_H.Location = New System.Drawing.Point(42, 141)
+        Me.Lbl1_Intro_P_H.Name = "Lbl1_Intro_P_H"
+        Me.Lbl1_Intro_P_H.Size = New System.Drawing.Size(171, 40)
+        Me.Lbl1_Intro_P_H.TabIndex = 2
+        Me.Lbl1_Intro_P_H.Text = "Introducción"
+        Me.Lbl1_Intro_P_H.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft
+
         '
         'Guna2PictureBox1
         '
@@ -445,23 +464,25 @@ Partial Class FrmHome
         Me.Line2_Patient.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
         Me.Line2_Patient.TabIndex = 4
         Me.Line2_Patient.TabStop = False
+
         '
-        'Lbl2_Patient
+        'Lbl2_Patient_P_H
         '
-        Me.Lbl2_Patient.AccessibleDescription = "Lbl2_Patient"
-        Me.Lbl2_Patient.AccessibleName = "Lbl2_Patient"
-        Me.Lbl2_Patient.AutoSize = False
-        Me.Lbl2_Patient.BackColor = System.Drawing.Color.Transparent
-        Me.Lbl2_Patient.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Lbl2_Patient.ForeColor = System.Drawing.Color.FromArgb(CType(CType(181, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(181, Byte), Integer))
-        Me.Lbl2_Patient.ImeMode = System.Windows.Forms.ImeMode.Disable
-        Me.Lbl2_Patient.IsSelectionEnabled = False
-        Me.Lbl2_Patient.Location = New System.Drawing.Point(42, 181)
-        Me.Lbl2_Patient.Name = "Lbl2_Patient"
-        Me.Lbl2_Patient.Size = New System.Drawing.Size(171, 40)
-        Me.Lbl2_Patient.TabIndex = 5
-        Me.Lbl2_Patient.Text = "Paciente"
-        Me.Lbl2_Patient.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Lbl2_Patient_P_H.AccessibleDescription = "Lbl2_Patient_P_H"
+        Me.Lbl2_Patient_P_H.AccessibleName = "Lbl2_Patient_P_H"
+        Me.Lbl2_Patient_P_H.AutoSize = False
+        Me.Lbl2_Patient_P_H.BackColor = System.Drawing.Color.Transparent
+        Me.Lbl2_Patient_P_H.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lbl2_Patient_P_H.ForeColor = System.Drawing.Color.FromArgb(CType(CType(181, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(181, Byte), Integer))
+        Me.Lbl2_Patient_P_H.ImeMode = System.Windows.Forms.ImeMode.Disable
+        Me.Lbl2_Patient_P_H.IsSelectionEnabled = False
+        Me.Lbl2_Patient_P_H.Location = New System.Drawing.Point(42, 181)
+        Me.Lbl2_Patient_P_H.Name = "Lbl2_Patient_P_H"
+        Me.Lbl2_Patient_P_H.Size = New System.Drawing.Size(171, 40)
+        Me.Lbl2_Patient_P_H.TabIndex = 5
+        Me.Lbl2_Patient_P_H.Text = "Paciente"
+        Me.Lbl2_Patient_P_H.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft
+
         '
         'ElipseHome
         '
@@ -480,9 +501,9 @@ Partial Class FrmHome
         Me.PnlResultItems.BackColor = System.Drawing.Color.Transparent
         Me.PnlResultItems.BorderRadius = 20
         Me.PnlResultItems.Controls.Add(Me.PnlColorInfo)
-        Me.PnlResultItems.Controls.Add(Me.LblResultInfoo)
-        Me.PnlResultItems.Controls.Add(Me.LblResults)
-        Me.PnlResultItems.Controls.Add(Me.LblChat)
+        Me.PnlResultItems.Controls.Add(Me.LblResultInfoo_P_H)
+        Me.PnlResultItems.Controls.Add(Me.LblResults_P_H)
+        Me.PnlResultItems.Controls.Add(Me.LblChat_P_H)
         Me.PnlResultItems.Controls.Add(Me.LblResultUrgent)
         Me.PnlResultItems.Controls.Add(Me.PnlSubPath)
         Me.PnlResultItems.FillColor = System.Drawing.Color.White
@@ -516,45 +537,45 @@ Partial Class FrmHome
         Me.Guna2PictureBox8.TabIndex = 0
         Me.Guna2PictureBox8.TabStop = False
         '
-        'LblResultInfoo
+        'LblResultInfoo_P_H
         '
-        Me.LblResultInfoo.AccessibleDescription = "LblResultInfoo"
-        Me.LblResultInfoo.AccessibleName = "LblResultInfoo"
-        Me.LblResultInfoo.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblResultInfoo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(118, Byte), Integer), CType(CType(118, Byte), Integer), CType(CType(118, Byte), Integer))
-        Me.LblResultInfoo.Location = New System.Drawing.Point(222, 133)
-        Me.LblResultInfoo.Name = "LblResultInfoo"
-        Me.LblResultInfoo.Size = New System.Drawing.Size(812, 50)
-        Me.LblResultInfoo.TabIndex = 5
-        Me.LblResultInfoo.Text = "Por favor, tenga en cuenta que la lista podría no ser completa y que la informaci" &
+        Me.LblResultInfoo_P_H.AccessibleDescription = "LblResultInfoo_P_H"
+        Me.LblResultInfoo_P_H.AccessibleName = "LblResultInfoo_P_H"
+        Me.LblResultInfoo_P_H.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblResultInfoo_P_H.ForeColor = System.Drawing.Color.FromArgb(CType(CType(118, Byte), Integer), CType(CType(118, Byte), Integer), CType(CType(118, Byte), Integer))
+        Me.LblResultInfoo_P_H.Location = New System.Drawing.Point(222, 133)
+        Me.LblResultInfoo_P_H.Name = "LblResultInfoo_P_H"
+        Me.LblResultInfoo_P_H.Size = New System.Drawing.Size(812, 50)
+        Me.LblResultInfoo_P_H.TabIndex = 5
+        Me.LblResultInfoo_P_H.Text = "Por favor, tenga en cuenta que la lista podría no ser completa y que la informaci" &
     "ón proporcionada tiene una finalidad informativa y no se corresponde con una opi" &
     "nión médica real."
         '
-        'LblResults
+        'LblResults_P_H
         '
-        Me.LblResults.AccessibleDescription = "LblResults"
-        Me.LblResults.AccessibleName = "LblResults"
-        Me.LblResults.Font = New System.Drawing.Font("Calibri", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblResults.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer))
-        Me.LblResults.Location = New System.Drawing.Point(216, 92)
-        Me.LblResults.Name = "LblResults"
-        Me.LblResults.Size = New System.Drawing.Size(822, 50)
-        Me.LblResults.TabIndex = 4
-        Me.LblResults.Text = "Resultados"
-        Me.LblResults.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LblResults_P_H.AccessibleDescription = "LblResults_P_H"
+        Me.LblResults_P_H.AccessibleName = "LblResults_P_H"
+        Me.LblResults_P_H.Font = New System.Drawing.Font("Calibri", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblResults_P_H.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer))
+        Me.LblResults_P_H.Location = New System.Drawing.Point(216, 92)
+        Me.LblResults_P_H.Name = "LblResults_P_H"
+        Me.LblResults_P_H.Size = New System.Drawing.Size(822, 50)
+        Me.LblResults_P_H.TabIndex = 4
+        Me.LblResults_P_H.Text = "Resultados"
+        Me.LblResults_P_H.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'LblChat
+        'LblChat_P_H
         '
-        Me.LblChat.AccessibleDescription = "LblChat"
-        Me.LblChat.AccessibleName = "LblChat"
-        Me.LblChat.Font = New System.Drawing.Font("Calibri", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblChat.ForeColor = System.Drawing.Color.FromArgb(CType(CType(118, Byte), Integer), CType(CType(118, Byte), Integer), CType(CType(118, Byte), Integer))
-        Me.LblChat.Location = New System.Drawing.Point(218, 53)
-        Me.LblChat.Name = "LblChat"
-        Me.LblChat.Size = New System.Drawing.Size(815, 30)
-        Me.LblChat.TabIndex = 3
-        Me.LblChat.Text = "En las próximas versiones de nuestro sitema, podrá consultar con un Médico."
-        Me.LblChat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LblChat_P_H.AccessibleDescription = "LblChat_P_H"
+        Me.LblChat_P_H.AccessibleName = "LblChat_P_H"
+        Me.LblChat_P_H.Font = New System.Drawing.Font("Calibri", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblChat_P_H.ForeColor = System.Drawing.Color.FromArgb(CType(CType(118, Byte), Integer), CType(CType(118, Byte), Integer), CType(CType(118, Byte), Integer))
+        Me.LblChat_P_H.Location = New System.Drawing.Point(218, 53)
+        Me.LblChat_P_H.Name = "LblChat_P_H"
+        Me.LblChat_P_H.Size = New System.Drawing.Size(815, 30)
+        Me.LblChat_P_H.TabIndex = 3
+        Me.LblChat_P_H.Text = "En las próximas versiones de nuestro sitema, podrá consultar con un Médico."
+        Me.LblChat_P_H.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'LblResultUrgent
         '
@@ -587,7 +608,7 @@ Partial Class FrmHome
         '
         Me.PnlHeader.AccessibleDescription = "PnlHeader"
         Me.PnlHeader.AccessibleName = "PnlHeader"
-        Me.PnlHeader.Controls.Add(Me.Label8)
+        Me.PnlHeader.Controls.Add(Me.LblResultsTitle_P_H)
         Me.PnlHeader.Dock = System.Windows.Forms.DockStyle.Top
         Me.PnlHeader.FillColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.PnlHeader.Location = New System.Drawing.Point(0, 0)
@@ -596,18 +617,18 @@ Partial Class FrmHome
         Me.PnlHeader.Size = New System.Drawing.Size(793, 38)
         Me.PnlHeader.TabIndex = 0
         '
-        'Label8
+        'LblResultsTitle_P_H
         '
-        Me.Label8.AccessibleDescription = "LblResults"
-        Me.Label8.AccessibleName = "LblResults"
-        Me.Label8.Font = New System.Drawing.Font("Calibri", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(181, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(181, Byte), Integer))
-        Me.Label8.Location = New System.Drawing.Point(0, -2)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(778, 38)
-        Me.Label8.TabIndex = 25
-        Me.Label8.Text = "PATOLOGÍAS SUFRIDAS"
-        Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LblResultsTitle_P_H.AccessibleDescription = "LblResultsTitle_P_H"
+        Me.LblResultsTitle_P_H.AccessibleName = "LblResultsTitle_P_H"
+        Me.LblResultsTitle_P_H.Font = New System.Drawing.Font("Calibri", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblResultsTitle_P_H.ForeColor = System.Drawing.Color.FromArgb(CType(CType(181, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(181, Byte), Integer))
+        Me.LblResultsTitle_P_H.Location = New System.Drawing.Point(0, -2)
+        Me.LblResultsTitle_P_H.Name = "LblResultsTitle_P_H"
+        Me.LblResultsTitle_P_H.Size = New System.Drawing.Size(778, 38)
+        Me.LblResultsTitle_P_H.TabIndex = 25
+        Me.LblResultsTitle_P_H.Text = "PATOLOGÍAS SUFRIDAS"
+        Me.LblResultsTitle_P_H.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'DgvPhatologies
         '
@@ -704,10 +725,12 @@ Partial Class FrmHome
         Me.PnlPetition.AccessibleDescription = "PnlPetition"
         Me.PnlPetition.AccessibleName = "PnlPetition"
         Me.PnlPetition.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
-        Me.PnlPetition.BorderRadius = 2
-        Me.PnlPetition.BorderThickness = 2
+
+        Me.PnlPetition.BorderRadius = 20
+        Me.PnlPetition.BorderThickness = 6
         Me.PnlPetition.Controls.Add(Me.PctbxPetition)
-        Me.PnlPetition.Controls.Add(Me.LblPetitionInfo)
+        Me.PnlPetition.Controls.Add(Me.LblPetitionInfo_P_H)
+
         Me.PnlPetition.Enabled = False
         Me.PnlPetition.Location = New System.Drawing.Point(9, 674)
         Me.PnlPetition.Name = "PnlPetition"
@@ -728,19 +751,22 @@ Partial Class FrmHome
         Me.PctbxPetition.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PctbxPetition.TabIndex = 26
         Me.PctbxPetition.TabStop = False
+
         '
-        'LblPetitionInfo
+        'LblPetitionInfo_P_H
         '
-        Me.LblPetitionInfo.AccessibleDescription = "LblPetitionInfo"
-        Me.LblPetitionInfo.AccessibleName = "LblPetitionInfo"
-        Me.LblPetitionInfo.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblPetitionInfo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
-        Me.LblPetitionInfo.Location = New System.Drawing.Point(6, 12)
-        Me.LblPetitionInfo.Name = "LblPetitionInfo"
-        Me.LblPetitionInfo.Size = New System.Drawing.Size(655, 36)
-        Me.LblPetitionInfo.TabIndex = 25
-        Me.LblPetitionInfo.Text = "GENERANDO PETICIÓN"
-        Me.LblPetitionInfo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LblPetitionInfo_P_H.AccessibleDescription = "LblPetitionInfo_P_H"
+        Me.LblPetitionInfo_P_H.AccessibleName = "LblPetitionInfo_P_H"
+        Me.LblPetitionInfo_P_H.BackColor = System.Drawing.Color.Transparent
+        Me.LblPetitionInfo_P_H.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblPetitionInfo_P_H.ForeColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.LblPetitionInfo_P_H.Location = New System.Drawing.Point(13, 12)
+        Me.LblPetitionInfo_P_H.Name = "LblPetitionInfo_P_H"
+        Me.LblPetitionInfo_P_H.Size = New System.Drawing.Size(637, 36)
+        Me.LblPetitionInfo_P_H.TabIndex = 25
+        Me.LblPetitionInfo_P_H.Text = "GENERANDO PETICIÓN"
+        Me.LblPetitionInfo_P_H.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+
         '
         'PnlChat
         '
@@ -750,6 +776,7 @@ Partial Class FrmHome
         Me.PnlChat.Controls.Add(Me.PnlTittleChat)
         Me.PnlChat.Controls.Add(Me.TxtChatSend)
         Me.PnlChat.Controls.Add(Me.BtnSend)
+        Me.PnlChat.Controls.Add(Me.BtnMore)
         Me.PnlChat.Controls.Add(Me.Guna2Button1)
         Me.PnlChat.Controls.Add(Me.PnlChatBack)
         Me.PnlChat.Location = New System.Drawing.Point(234, 0)
@@ -765,7 +792,7 @@ Partial Class FrmHome
         Me.PnlTittleChat.AccessibleName = "PnlColorInfo"
         Me.PnlTittleChat.BorderRadius = 11
         Me.PnlTittleChat.Controls.Add(Me.LblMedic)
-        Me.PnlTittleChat.Controls.Add(Me.Label12)
+        Me.PnlTittleChat.Controls.Add(Me.LblTitleNameMedic_P_H)
         Me.PnlTittleChat.FillColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
         Me.PnlTittleChat.Location = New System.Drawing.Point(33, 21)
         Me.PnlTittleChat.Name = "PnlTittleChat"
@@ -786,22 +813,23 @@ Partial Class FrmHome
         Me.LblMedic.TabIndex = 53
         Me.LblMedic.Text = "Medico"
         Me.LblMedic.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+
         '
-        'Label12
+        'LblTitleNameMedic_P_H
         '
-        Me.Label12.AccessibleDescription = "LblResults"
-        Me.Label12.AccessibleName = "LblResults"
-        Me.Label12.BackColor = System.Drawing.Color.Transparent
-        Me.Label12.Font = New System.Drawing.Font("Calibri", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.ForeColor = System.Drawing.Color.White
-        Me.Label12.Image = CType(resources.GetObject("Label12.Image"), System.Drawing.Image)
-        Me.Label12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label12.Location = New System.Drawing.Point(6, 0)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(443, 51)
-        Me.Label12.TabIndex = 52
-        Me.Label12.Text = "En una conversación con el Médico: "
-        Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.LblTitleNameMedic_P_H.AccessibleDescription = "LblTitleNameMedic_P_H"
+        Me.LblTitleNameMedic_P_H.AccessibleName = "LblTitleNameMedic_P_H"
+        Me.LblTitleNameMedic_P_H.BackColor = System.Drawing.Color.Transparent
+        Me.LblTitleNameMedic_P_H.Font = New System.Drawing.Font("Calibri", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblTitleNameMedic_P_H.ForeColor = System.Drawing.Color.White
+        Me.LblTitleNameMedic_P_H.Image = CType(resources.GetObject("LblTitleNameMedic_P_H.Image"), System.Drawing.Image)
+        Me.LblTitleNameMedic_P_H.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LblTitleNameMedic_P_H.Location = New System.Drawing.Point(6, 0)
+        Me.LblTitleNameMedic_P_H.Name = "LblTitleNameMedic_P_H"
+        Me.LblTitleNameMedic_P_H.Size = New System.Drawing.Size(443, 51)
+        Me.LblTitleNameMedic_P_H.TabIndex = 52
+        Me.LblTitleNameMedic_P_H.Text = "En una conversación con el Médico: "
+        Me.LblTitleNameMedic_P_H.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'TxtChatSend
         '
@@ -812,35 +840,59 @@ Partial Class FrmHome
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TxtChatSend.BackColor = System.Drawing.Color.White
         Me.TxtChatSend.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TxtChatSend.Font = New System.Drawing.Font("Segoe UI Emoji", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+
+        Me.TxtChatSend.Font = New System.Drawing.Font("Segoe UI Emoji", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtChatSend.ForeColor = System.Drawing.Color.Black
         Me.TxtChatSend.Location = New System.Drawing.Point(52, 665)
         Me.TxtChatSend.Name = "TxtChatSend"
-        Me.TxtChatSend.Size = New System.Drawing.Size(860, 32)
+        Me.TxtChatSend.Size = New System.Drawing.Size(862, 22)
         Me.TxtChatSend.TabIndex = 61
         '
         'BtnSend
         '
         Me.BtnSend.AccessibleDescription = "BtnForeText"
         Me.BtnSend.AccessibleName = "BtnForeText"
-        Me.BtnSend.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.BtnSend.BorderColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
         Me.BtnSend.BorderRadius = 10
         Me.BtnSend.BorderThickness = 2
         Me.BtnSend.CheckedState.Parent = Me.BtnSend
         Me.BtnSend.CustomImages.Parent = Me.BtnSend
-        Me.BtnSend.FillColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
-        Me.BtnSend.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnSend.ForeColor = System.Drawing.Color.White
-        Me.BtnSend.HoverState.FillColor = System.Drawing.Color.Teal
+        Me.BtnSend.FillColor = System.Drawing.Color.Transparent
+        Me.BtnSend.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.BtnSend.ForeColor = System.Drawing.Color.Transparent
+        Me.BtnSend.HoverState.FillColor = System.Drawing.Color.Transparent
         Me.BtnSend.HoverState.Parent = Me.BtnSend
+        Me.BtnSend.Image = Global.PatientApp.My.Resources.Resources.mdi_send
         Me.BtnSend.ImageOffset = New System.Drawing.Point(1, 0)
-        Me.BtnSend.Location = New System.Drawing.Point(933, 651)
+        Me.BtnSend.Location = New System.Drawing.Point(989, 649)
         Me.BtnSend.Name = "BtnSend"
         Me.BtnSend.PressedDepth = 0
         Me.BtnSend.ShadowDecoration.Parent = Me.BtnSend
-        Me.BtnSend.Size = New System.Drawing.Size(114, 58)
-        Me.BtnSend.TabIndex = 65
-        Me.BtnSend.Text = "ENVIAR"
+        Me.BtnSend.Size = New System.Drawing.Size(53, 45)
+        Me.BtnSend.TabIndex = 66
+        '
+        'BtnMore
+        '
+        Me.BtnMore.AccessibleDescription = "BtnForeText"
+        Me.BtnMore.AccessibleName = "BtnForeText"
+        Me.BtnMore.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.BtnMore.BorderRadius = 10
+        Me.BtnMore.BorderThickness = 2
+        Me.BtnMore.CheckedState.Parent = Me.BtnMore
+        Me.BtnMore.CustomImages.Parent = Me.BtnMore
+        Me.BtnMore.FillColor = System.Drawing.Color.Transparent
+        Me.BtnMore.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.BtnMore.ForeColor = System.Drawing.Color.Transparent
+        Me.BtnMore.HoverState.FillColor = System.Drawing.Color.Transparent
+        Me.BtnMore.HoverState.Parent = Me.BtnMore
+        Me.BtnMore.Image = Global.PatientApp.My.Resources.Resources.Vector
+        Me.BtnMore.Location = New System.Drawing.Point(930, 649)
+        Me.BtnMore.Name = "BtnMore"
+        Me.BtnMore.PressedDepth = 0
+        Me.BtnMore.ShadowDecoration.Parent = Me.BtnMore
+        Me.BtnMore.Size = New System.Drawing.Size(53, 45)
+        Me.BtnMore.TabIndex = 65
+
         '
         'Guna2Button1
         '
@@ -860,7 +912,7 @@ Partial Class FrmHome
         Me.Guna2Button1.Name = "Guna2Button1"
         Me.Guna2Button1.PressedDepth = 0
         Me.Guna2Button1.ShadowDecoration.Parent = Me.Guna2Button1
-        Me.Guna2Button1.Size = New System.Drawing.Size(888, 58)
+        Me.Guna2Button1.Size = New System.Drawing.Size(890, 45)
         Me.Guna2Button1.TabIndex = 64
         '
         'PnlChatBack
@@ -925,22 +977,15 @@ Partial Class FrmHome
         Me.ElipseChat.BorderRadius = 20
         Me.ElipseChat.TargetControl = Me.PnlChat
         '
-        'TimerRequest
-        '
-        Me.TimerRequest.Interval = 1000
-        '
-        'TimerChat
-        '
-        Me.TimerChat.Interval = 1000
-        '
         'PnlResult
         '
         Me.PnlResult.AccessibleDescription = "PnlResult"
         Me.PnlResult.AccessibleName = "PnlResult"
         Me.PnlResult.BackgroundImage = Global.PatientApp.My.Resources.Resources.Panel__Type_1
-        Me.PnlResult.Controls.Add(Me.BtnSendChatP)
+
+        Me.PnlResult.Controls.Add(Me.BtnSendChatP_P_H)
         Me.PnlResult.Controls.Add(Me.PnlResultItems)
-        Me.PnlResult.Controls.Add(Me.BtnEnd)
+        Me.PnlResult.Controls.Add(Me.BtnEnd_P_H)
         Me.PnlResult.Controls.Add(Me.BtnCancelPetition)
         Me.PnlResult.Controls.Add(Me.PnlPetition)
         Me.PnlResult.Location = New System.Drawing.Point(234, 0)
@@ -949,50 +994,51 @@ Partial Class FrmHome
         Me.PnlResult.Size = New System.Drawing.Size(1064, 753)
         Me.PnlResult.TabIndex = 6
         '
-        'BtnSendChatP
+
+        'BtnSendChatP_P_H
         '
-        Me.BtnSendChatP.AccessibleDescription = "BtnSendChatP"
-        Me.BtnSendChatP.AccessibleName = "BtnSendChatP"
-        Me.BtnSendChatP.Animated = True
-        Me.BtnSendChatP.BackColor = System.Drawing.Color.White
-        Me.BtnSendChatP.BorderRadius = 15
-        Me.BtnSendChatP.CheckedState.Parent = Me.BtnSendChatP
-        Me.BtnSendChatP.CustomImages.Parent = Me.BtnSendChatP
-        Me.BtnSendChatP.FillColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
-        Me.BtnSendChatP.Font = New System.Drawing.Font("Microsoft YaHei UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnSendChatP.ForeColor = System.Drawing.Color.White
-        Me.BtnSendChatP.HoverState.Parent = Me.BtnSendChatP
-        Me.BtnSendChatP.Location = New System.Drawing.Point(676, 674)
-        Me.BtnSendChatP.Name = "BtnSendChatP"
-        Me.BtnSendChatP.ShadowDecoration.Parent = Me.BtnSendChatP
-        Me.BtnSendChatP.Size = New System.Drawing.Size(180, 60)
-        Me.BtnSendChatP.TabIndex = 3
-        Me.BtnSendChatP.Text = "SOLICITAR CHAT"
+        Me.BtnSendChatP_P_H.AccessibleDescription = "BtnSendChatP_P_H"
+        Me.BtnSendChatP_P_H.AccessibleName = "BtnSendChatP_P_H"
+        Me.BtnSendChatP_P_H.Animated = True
+        Me.BtnSendChatP_P_H.BackColor = System.Drawing.Color.White
+        Me.BtnSendChatP_P_H.BorderRadius = 15
+        Me.BtnSendChatP_P_H.CheckedState.Parent = Me.BtnSendChatP_P_H
+        Me.BtnSendChatP_P_H.CustomImages.Parent = Me.BtnSendChatP_P_H
+        Me.BtnSendChatP_P_H.FillColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.BtnSendChatP_P_H.Font = New System.Drawing.Font("Microsoft YaHei UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnSendChatP_P_H.ForeColor = System.Drawing.Color.White
+        Me.BtnSendChatP_P_H.HoverState.Parent = Me.BtnSendChatP_P_H
+        Me.BtnSendChatP_P_H.Location = New System.Drawing.Point(676, 674)
+        Me.BtnSendChatP_P_H.Name = "BtnSendChatP_P_H"
+        Me.BtnSendChatP_P_H.ShadowDecoration.Parent = Me.BtnSendChatP_P_H
+        Me.BtnSendChatP_P_H.Size = New System.Drawing.Size(180, 60)
+        Me.BtnSendChatP_P_H.TabIndex = 3
+        Me.BtnSendChatP_P_H.Text = "SOLICITAR CHAT"
         '
-        'BtnEnd
+        'BtnEnd_P_H
         '
-        Me.BtnEnd.AccessibleDescription = "BtnEnd"
-        Me.BtnEnd.AccessibleName = "BtnEnd"
-        Me.BtnEnd.Animated = True
-        Me.BtnEnd.BackColor = System.Drawing.Color.White
-        Me.BtnEnd.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
-        Me.BtnEnd.BorderRadius = 15
-        Me.BtnEnd.BorderThickness = 2
-        Me.BtnEnd.CheckedState.Parent = Me.BtnEnd
-        Me.BtnEnd.CustomImages.Parent = Me.BtnEnd
-        Me.BtnEnd.FillColor = System.Drawing.Color.White
-        Me.BtnEnd.Font = New System.Drawing.Font("Microsoft YaHei UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnEnd.ForeColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
-        Me.BtnEnd.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
-        Me.BtnEnd.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
-        Me.BtnEnd.HoverState.ForeColor = System.Drawing.Color.White
-        Me.BtnEnd.HoverState.Parent = Me.BtnEnd
-        Me.BtnEnd.Location = New System.Drawing.Point(865, 674)
-        Me.BtnEnd.Name = "BtnEnd"
-        Me.BtnEnd.ShadowDecoration.Parent = Me.BtnEnd
-        Me.BtnEnd.Size = New System.Drawing.Size(180, 60)
-        Me.BtnEnd.TabIndex = 2
-        Me.BtnEnd.Text = "FINALIZAR"
+        Me.BtnEnd_P_H.AccessibleDescription = "BtnEnd_P_H"
+        Me.BtnEnd_P_H.AccessibleName = "BtnEnd_P_H"
+        Me.BtnEnd_P_H.Animated = True
+        Me.BtnEnd_P_H.BackColor = System.Drawing.Color.White
+        Me.BtnEnd_P_H.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.BtnEnd_P_H.BorderRadius = 15
+        Me.BtnEnd_P_H.BorderThickness = 2
+        Me.BtnEnd_P_H.CheckedState.Parent = Me.BtnEnd_P_H
+        Me.BtnEnd_P_H.CustomImages.Parent = Me.BtnEnd_P_H
+        Me.BtnEnd_P_H.FillColor = System.Drawing.Color.White
+        Me.BtnEnd_P_H.Font = New System.Drawing.Font("Microsoft YaHei UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnEnd_P_H.ForeColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.BtnEnd_P_H.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.BtnEnd_P_H.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.BtnEnd_P_H.HoverState.ForeColor = System.Drawing.Color.White
+        Me.BtnEnd_P_H.HoverState.Parent = Me.BtnEnd_P_H
+        Me.BtnEnd_P_H.Location = New System.Drawing.Point(865, 674)
+        Me.BtnEnd_P_H.Name = "BtnEnd_P_H"
+        Me.BtnEnd_P_H.ShadowDecoration.Parent = Me.BtnEnd_P_H
+        Me.BtnEnd_P_H.Size = New System.Drawing.Size(180, 60)
+        Me.BtnEnd_P_H.TabIndex = 2
+        Me.BtnEnd_P_H.Text = "FINALIZAR"
         '
         'BtnCancelPetition
         '
@@ -1026,16 +1072,16 @@ Partial Class FrmHome
         Me.PnlSymptom.Controls.Add(Me.CbxSysSymptoms)
         Me.PnlSymptom.Controls.Add(Me.Guna2PictureBox11)
         Me.PnlSymptom.Controls.Add(Me.Guna2PictureBox10)
-        Me.PnlSymptom.Controls.Add(Me.Label10)
+        Me.PnlSymptom.Controls.Add(Me.LblSubTitle2Symp_P_H)
         Me.PnlSymptom.Controls.Add(Me.Guna2Panel1)
-        Me.PnlSymptom.Controls.Add(Me.BtnDropPathology)
+        Me.PnlSymptom.Controls.Add(Me.BtnDropPathology_P_H)
         Me.PnlSymptom.Controls.Add(Me.BtnForeText1)
         Me.PnlSymptom.Controls.Add(Me.Guna2Panel2)
-        Me.PnlSymptom.Controls.Add(Me.BtnBack_Patient1)
-        Me.PnlSymptom.Controls.Add(Me.BtnNext_Result)
-        Me.PnlSymptom.Controls.Add(Me.Label6)
-        Me.PnlSymptom.Controls.Add(Me.Label7)
-        Me.PnlSymptom.Controls.Add(Me.Label9)
+        Me.PnlSymptom.Controls.Add(Me.BtnBack_Patient1_P_H)
+        Me.PnlSymptom.Controls.Add(Me.BtnNext_Result_P_H)
+        Me.PnlSymptom.Controls.Add(Me.LblSubTitle1Symp_P_H)
+        Me.PnlSymptom.Controls.Add(Me.LblTitle1Symp_P_H)
+        Me.PnlSymptom.Controls.Add(Me.LblTitle2Symp_P_H)
         Me.PnlSymptom.Location = New System.Drawing.Point(234, 0)
         Me.PnlSymptom.Name = "PnlSymptom"
         Me.PnlSymptom.ShadowDecoration.Parent = Me.PnlSymptom
@@ -1100,17 +1146,19 @@ Partial Class FrmHome
         Me.Guna2PictureBox10.TabIndex = 40
         Me.Guna2PictureBox10.TabStop = False
         '
-        'Label10
+        'LblSubTitle2Symp_P_H
         '
-        Me.Label10.BackColor = System.Drawing.Color.Transparent
-        Me.Label10.Font = New System.Drawing.Font("Segoe UI Emoji", 14.25!)
-        Me.Label10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(118, Byte), Integer), CType(CType(118, Byte), Integer), CType(CType(118, Byte), Integer))
-        Me.Label10.Location = New System.Drawing.Point(569, 66)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(473, 31)
-        Me.Label10.TabIndex = 39
-        Me.Label10.Text = "Seleccione un ítem para eliminarlo"
-        Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LblSubTitle2Symp_P_H.AccessibleDescription = "LblSubTitle2Symp_P_H"
+        Me.LblSubTitle2Symp_P_H.AccessibleName = "LblSubTitle2Symp_P_H"
+        Me.LblSubTitle2Symp_P_H.BackColor = System.Drawing.Color.Transparent
+        Me.LblSubTitle2Symp_P_H.Font = New System.Drawing.Font("Segoe UI Emoji", 14.25!)
+        Me.LblSubTitle2Symp_P_H.ForeColor = System.Drawing.Color.FromArgb(CType(CType(118, Byte), Integer), CType(CType(118, Byte), Integer), CType(CType(118, Byte), Integer))
+        Me.LblSubTitle2Symp_P_H.Location = New System.Drawing.Point(569, 66)
+        Me.LblSubTitle2Symp_P_H.Name = "LblSubTitle2Symp_P_H"
+        Me.LblSubTitle2Symp_P_H.Size = New System.Drawing.Size(473, 31)
+        Me.LblSubTitle2Symp_P_H.TabIndex = 39
+        Me.LblSubTitle2Symp_P_H.Text = "Seleccione un ítem para eliminarlo"
+        Me.LblSubTitle2Symp_P_H.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Guna2Panel1
         '
@@ -1141,30 +1189,30 @@ Partial Class FrmHome
         Me.LbxSufferedPatient.Sorted = True
         Me.LbxSufferedPatient.TabIndex = 0
         '
-        'BtnDropPathology
+        'BtnDropPathology_P_H
         '
-        Me.BtnDropPathology.AccessibleDescription = "BtnDropPathology"
-        Me.BtnDropPathology.AccessibleName = "BtnDropPathology"
-        Me.BtnDropPathology.Animated = True
-        Me.BtnDropPathology.BackColor = System.Drawing.Color.White
-        Me.BtnDropPathology.BorderColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer))
-        Me.BtnDropPathology.BorderRadius = 15
-        Me.BtnDropPathology.BorderThickness = 2
-        Me.BtnDropPathology.CheckedState.Parent = Me.BtnDropPathology
-        Me.BtnDropPathology.CustomImages.Parent = Me.BtnDropPathology
-        Me.BtnDropPathology.FillColor = System.Drawing.Color.Transparent
-        Me.BtnDropPathology.Font = New System.Drawing.Font("Microsoft YaHei UI", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.BtnDropPathology.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer))
-        Me.BtnDropPathology.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
-        Me.BtnDropPathology.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
-        Me.BtnDropPathology.HoverState.ForeColor = System.Drawing.Color.White
-        Me.BtnDropPathology.HoverState.Parent = Me.BtnDropPathology
-        Me.BtnDropPathology.Location = New System.Drawing.Point(546, 596)
-        Me.BtnDropPathology.Name = "BtnDropPathology"
-        Me.BtnDropPathology.ShadowDecoration.Parent = Me.BtnDropPathology
-        Me.BtnDropPathology.Size = New System.Drawing.Size(496, 60)
-        Me.BtnDropPathology.TabIndex = 2
-        Me.BtnDropPathology.Text = "QUITAR SÍNTOMA"
+        Me.BtnDropPathology_P_H.AccessibleDescription = "BtnDropPathology_P_H"
+        Me.BtnDropPathology_P_H.AccessibleName = "BtnDropPathology_P_H"
+        Me.BtnDropPathology_P_H.Animated = True
+        Me.BtnDropPathology_P_H.BackColor = System.Drawing.Color.White
+        Me.BtnDropPathology_P_H.BorderColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer))
+        Me.BtnDropPathology_P_H.BorderRadius = 15
+        Me.BtnDropPathology_P_H.BorderThickness = 2
+        Me.BtnDropPathology_P_H.CheckedState.Parent = Me.BtnDropPathology_P_H
+        Me.BtnDropPathology_P_H.CustomImages.Parent = Me.BtnDropPathology_P_H
+        Me.BtnDropPathology_P_H.FillColor = System.Drawing.Color.Transparent
+        Me.BtnDropPathology_P_H.Font = New System.Drawing.Font("Microsoft YaHei UI", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.BtnDropPathology_P_H.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer))
+        Me.BtnDropPathology_P_H.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.BtnDropPathology_P_H.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.BtnDropPathology_P_H.HoverState.ForeColor = System.Drawing.Color.White
+        Me.BtnDropPathology_P_H.HoverState.Parent = Me.BtnDropPathology_P_H
+        Me.BtnDropPathology_P_H.Location = New System.Drawing.Point(546, 596)
+        Me.BtnDropPathology_P_H.Name = "BtnDropPathology_P_H"
+        Me.BtnDropPathology_P_H.ShadowDecoration.Parent = Me.BtnDropPathology_P_H
+        Me.BtnDropPathology_P_H.Size = New System.Drawing.Size(496, 60)
+        Me.BtnDropPathology_P_H.TabIndex = 2
+        Me.BtnDropPathology_P_H.Text = "QUITAR SÍNTOMA"
         '
         'BtnForeText1
         '
@@ -1204,116 +1252,122 @@ Partial Class FrmHome
         Me.Guna2Panel2.Size = New System.Drawing.Size(517, 555)
         Me.Guna2Panel2.TabIndex = 35
         '
-        'BtnBack_Patient1
+        'BtnBack_Patient1_P_H
         '
-        Me.BtnBack_Patient1.AccessibleDescription = "BtnBack_Patient1"
-        Me.BtnBack_Patient1.AccessibleName = "BtnBack_Patient1"
-        Me.BtnBack_Patient1.Animated = True
-        Me.BtnBack_Patient1.BackColor = System.Drawing.Color.White
-        Me.BtnBack_Patient1.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
-        Me.BtnBack_Patient1.BorderRadius = 15
-        Me.BtnBack_Patient1.BorderThickness = 2
-        Me.BtnBack_Patient1.CheckedState.Parent = Me.BtnBack_Patient1
-        Me.BtnBack_Patient1.CustomImages.Parent = Me.BtnBack_Patient1
-        Me.BtnBack_Patient1.FillColor = System.Drawing.Color.Transparent
-        Me.BtnBack_Patient1.Font = New System.Drawing.Font("Microsoft YaHei UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnBack_Patient1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
-        Me.BtnBack_Patient1.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
-        Me.BtnBack_Patient1.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
-        Me.BtnBack_Patient1.HoverState.ForeColor = System.Drawing.Color.White
-        Me.BtnBack_Patient1.HoverState.Parent = Me.BtnBack_Patient1
-        Me.BtnBack_Patient1.Location = New System.Drawing.Point(546, 662)
-        Me.BtnBack_Patient1.Name = "BtnBack_Patient1"
-        Me.BtnBack_Patient1.ShadowDecoration.Parent = Me.BtnBack_Patient1
-        Me.BtnBack_Patient1.Size = New System.Drawing.Size(180, 60)
-        Me.BtnBack_Patient1.TabIndex = 3
-        Me.BtnBack_Patient1.Text = "ATRAS"
+        Me.BtnBack_Patient1_P_H.AccessibleDescription = "BtnBack_Patient1_P_H"
+        Me.BtnBack_Patient1_P_H.AccessibleName = "BtnBack_Patient1_P_H"
+        Me.BtnBack_Patient1_P_H.Animated = True
+        Me.BtnBack_Patient1_P_H.BackColor = System.Drawing.Color.White
+        Me.BtnBack_Patient1_P_H.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.BtnBack_Patient1_P_H.BorderRadius = 15
+        Me.BtnBack_Patient1_P_H.BorderThickness = 2
+        Me.BtnBack_Patient1_P_H.CheckedState.Parent = Me.BtnBack_Patient1_P_H
+        Me.BtnBack_Patient1_P_H.CustomImages.Parent = Me.BtnBack_Patient1_P_H
+        Me.BtnBack_Patient1_P_H.FillColor = System.Drawing.Color.Transparent
+        Me.BtnBack_Patient1_P_H.Font = New System.Drawing.Font("Microsoft YaHei UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnBack_Patient1_P_H.ForeColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.BtnBack_Patient1_P_H.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.BtnBack_Patient1_P_H.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.BtnBack_Patient1_P_H.HoverState.ForeColor = System.Drawing.Color.White
+        Me.BtnBack_Patient1_P_H.HoverState.Parent = Me.BtnBack_Patient1_P_H
+        Me.BtnBack_Patient1_P_H.Location = New System.Drawing.Point(546, 662)
+        Me.BtnBack_Patient1_P_H.Name = "BtnBack_Patient1_P_H"
+        Me.BtnBack_Patient1_P_H.ShadowDecoration.Parent = Me.BtnBack_Patient1_P_H
+        Me.BtnBack_Patient1_P_H.Size = New System.Drawing.Size(180, 60)
+        Me.BtnBack_Patient1_P_H.TabIndex = 3
+        Me.BtnBack_Patient1_P_H.Text = "ATRAS"
         '
-        'BtnNext_Result
+        'BtnNext_Result_P_H
         '
-        Me.BtnNext_Result.AccessibleDescription = "BtnNext_Result"
-        Me.BtnNext_Result.AccessibleName = "BtnNext_Result"
-        Me.BtnNext_Result.Animated = True
-        Me.BtnNext_Result.BackColor = System.Drawing.Color.White
-        Me.BtnNext_Result.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
-        Me.BtnNext_Result.BorderRadius = 15
-        Me.BtnNext_Result.BorderThickness = 2
-        Me.BtnNext_Result.CheckedState.Parent = Me.BtnNext_Result
-        Me.BtnNext_Result.CustomImages.Parent = Me.BtnNext_Result
-        Me.BtnNext_Result.FillColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
-        Me.BtnNext_Result.Font = New System.Drawing.Font("Microsoft YaHei UI", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.BtnNext_Result.ForeColor = System.Drawing.Color.White
-        Me.BtnNext_Result.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
-        Me.BtnNext_Result.HoverState.FillColor = System.Drawing.Color.White
-        Me.BtnNext_Result.HoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
-        Me.BtnNext_Result.HoverState.Parent = Me.BtnNext_Result
-        Me.BtnNext_Result.Location = New System.Drawing.Point(732, 662)
-        Me.BtnNext_Result.Name = "BtnNext_Result"
-        Me.BtnNext_Result.ShadowDecoration.Parent = Me.BtnNext_Result
-        Me.BtnNext_Result.Size = New System.Drawing.Size(310, 60)
-        Me.BtnNext_Result.TabIndex = 8
-        Me.BtnNext_Result.Text = "SIGUIENTE"
+        Me.BtnNext_Result_P_H.AccessibleDescription = "BtnNext_Result_P_H"
+        Me.BtnNext_Result_P_H.AccessibleName = "BtnNext_Result_P_H"
+        Me.BtnNext_Result_P_H.Animated = True
+        Me.BtnNext_Result_P_H.BackColor = System.Drawing.Color.White
+        Me.BtnNext_Result_P_H.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.BtnNext_Result_P_H.BorderRadius = 15
+        Me.BtnNext_Result_P_H.BorderThickness = 2
+        Me.BtnNext_Result_P_H.CheckedState.Parent = Me.BtnNext_Result_P_H
+        Me.BtnNext_Result_P_H.CustomImages.Parent = Me.BtnNext_Result_P_H
+        Me.BtnNext_Result_P_H.FillColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.BtnNext_Result_P_H.Font = New System.Drawing.Font("Microsoft YaHei UI", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.BtnNext_Result_P_H.ForeColor = System.Drawing.Color.White
+        Me.BtnNext_Result_P_H.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.BtnNext_Result_P_H.HoverState.FillColor = System.Drawing.Color.White
+        Me.BtnNext_Result_P_H.HoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.BtnNext_Result_P_H.HoverState.Parent = Me.BtnNext_Result_P_H
+        Me.BtnNext_Result_P_H.Location = New System.Drawing.Point(732, 662)
+        Me.BtnNext_Result_P_H.Name = "BtnNext_Result_P_H"
+        Me.BtnNext_Result_P_H.ShadowDecoration.Parent = Me.BtnNext_Result_P_H
+        Me.BtnNext_Result_P_H.Size = New System.Drawing.Size(310, 60)
+        Me.BtnNext_Result_P_H.TabIndex = 8
+        Me.BtnNext_Result_P_H.Text = "SIGUIENTE"
         '
-        'Label6
+        'LblSubTitle1Symp_P_H
         '
-        Me.Label6.BackColor = System.Drawing.Color.Transparent
-        Me.Label6.Font = New System.Drawing.Font("Segoe UI Emoji", 14.25!)
-        Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(118, Byte), Integer), CType(CType(118, Byte), Integer), CType(CType(118, Byte), Integer))
-        Me.Label6.Location = New System.Drawing.Point(33, 63)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(494, 36)
-        Me.Label6.TabIndex = 30
-        Me.Label6.Text = "Por favor, escoga los síntomas desde la lista desplegable."
-        Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LblSubTitle1Symp_P_H.AccessibleDescription = "LblSubTitle1Symp_P_H"
+        Me.LblSubTitle1Symp_P_H.AccessibleName = "LblSubTitle1Symp_P_H"
+        Me.LblSubTitle1Symp_P_H.BackColor = System.Drawing.Color.Transparent
+        Me.LblSubTitle1Symp_P_H.Font = New System.Drawing.Font("Segoe UI Emoji", 14.25!)
+        Me.LblSubTitle1Symp_P_H.ForeColor = System.Drawing.Color.FromArgb(CType(CType(118, Byte), Integer), CType(CType(118, Byte), Integer), CType(CType(118, Byte), Integer))
+        Me.LblSubTitle1Symp_P_H.Location = New System.Drawing.Point(33, 63)
+        Me.LblSubTitle1Symp_P_H.Name = "LblSubTitle1Symp_P_H"
+        Me.LblSubTitle1Symp_P_H.Size = New System.Drawing.Size(494, 36)
+        Me.LblSubTitle1Symp_P_H.TabIndex = 30
+        Me.LblSubTitle1Symp_P_H.Text = "Por favor, escoga los síntomas desde la lista desplegable."
+        Me.LblSubTitle1Symp_P_H.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label7
+        'LblTitle1Symp_P_H
         '
-        Me.Label7.BackColor = System.Drawing.Color.Transparent
-        Me.Label7.Font = New System.Drawing.Font("Segoe UI", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer))
-        Me.Label7.Location = New System.Drawing.Point(7, 23)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(520, 51)
-        Me.Label7.TabIndex = 31
-        Me.Label7.Text = "Añada sus síntomas a la lista."
+        Me.LblTitle1Symp_P_H.AccessibleDescription = "LblTitle1Symp_P_H"
+        Me.LblTitle1Symp_P_H.AccessibleName = "LblTitle1Symp_P_H"
+        Me.LblTitle1Symp_P_H.BackColor = System.Drawing.Color.Transparent
+        Me.LblTitle1Symp_P_H.Font = New System.Drawing.Font("Segoe UI", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblTitle1Symp_P_H.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer))
+        Me.LblTitle1Symp_P_H.Location = New System.Drawing.Point(7, 23)
+        Me.LblTitle1Symp_P_H.Name = "LblTitle1Symp_P_H"
+        Me.LblTitle1Symp_P_H.Size = New System.Drawing.Size(520, 51)
+        Me.LblTitle1Symp_P_H.TabIndex = 31
+        Me.LblTitle1Symp_P_H.Text = "Añada sus síntomas a la lista."
         '
-        'Label9
+        'LblTitle2Symp_P_H
         '
-        Me.Label9.BackColor = System.Drawing.Color.Transparent
-        Me.Label9.Font = New System.Drawing.Font("Segoe UI", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer))
-        Me.Label9.Location = New System.Drawing.Point(541, 23)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(502, 48)
-        Me.Label9.TabIndex = 38
-        Me.Label9.Text = "Síntomas que padece."
+        Me.LblTitle2Symp_P_H.AccessibleDescription = "LblTitle2Symp_P_H"
+        Me.LblTitle2Symp_P_H.AccessibleName = "LblTitle2Symp_P_H"
+        Me.LblTitle2Symp_P_H.BackColor = System.Drawing.Color.Transparent
+        Me.LblTitle2Symp_P_H.Font = New System.Drawing.Font("Segoe UI", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblTitle2Symp_P_H.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer))
+        Me.LblTitle2Symp_P_H.Location = New System.Drawing.Point(541, 23)
+        Me.LblTitle2Symp_P_H.Name = "LblTitle2Symp_P_H"
+        Me.LblTitle2Symp_P_H.Size = New System.Drawing.Size(502, 48)
+        Me.LblTitle2Symp_P_H.TabIndex = 38
+        Me.LblTitle2Symp_P_H.Text = "Síntomas que padece."
         '
         'PnlPatient
         '
         Me.PnlPatient.AccessibleDescription = "PnlPatient"
         Me.PnlPatient.AccessibleName = "PnlPatient"
         Me.PnlPatient.BackgroundImage = Global.PatientApp.My.Resources.Resources.Panel__Type_1
-        Me.PnlPatient.Controls.Add(Me.BtnBack_Intro2)
-        Me.PnlPatient.Controls.Add(Me.BtnNext_Symptom1)
+        Me.PnlPatient.Controls.Add(Me.BtnBack_Intro2_P_H)
+        Me.PnlPatient.Controls.Add(Me.BtnNext_Symptom1_P_H)
         Me.PnlPatient.Controls.Add(Me.Guna2PictureBox7)
-        Me.PnlPatient.Controls.Add(Me.LblTxt6_Info)
+        Me.PnlPatient.Controls.Add(Me.LblTxt6_Info_P_H)
         Me.PnlPatient.Controls.Add(Me.Grpbx_Item6)
         Me.PnlPatient.Controls.Add(Me.Guna2PictureBox6)
-        Me.PnlPatient.Controls.Add(Me.LblTxt5_Info)
+        Me.PnlPatient.Controls.Add(Me.LblTxt5_Info_P_H)
         Me.PnlPatient.Controls.Add(Me.Grpbx_Item5)
         Me.PnlPatient.Controls.Add(Me.Guna2PictureBox5)
-        Me.PnlPatient.Controls.Add(Me.LblTxt4_Info)
+        Me.PnlPatient.Controls.Add(Me.LblTxt4_Info_P_H)
         Me.PnlPatient.Controls.Add(Me.Grpbx_Item4)
         Me.PnlPatient.Controls.Add(Me.Guna2PictureBox4)
-        Me.PnlPatient.Controls.Add(Me.LblTxt3_Info)
+        Me.PnlPatient.Controls.Add(Me.LblTxt3_Info_P_H)
         Me.PnlPatient.Controls.Add(Me.Grpbx_Item3)
         Me.PnlPatient.Controls.Add(Me.Guna2PictureBox3)
-        Me.PnlPatient.Controls.Add(Me.LblTxt2_Info)
+        Me.PnlPatient.Controls.Add(Me.LblTxt2_Info_P_H)
         Me.PnlPatient.Controls.Add(Me.Grpbx_Item2)
         Me.PnlPatient.Controls.Add(Me.Guna2PictureBox2)
-        Me.PnlPatient.Controls.Add(Me.Label4)
-        Me.PnlPatient.Controls.Add(Me.Label5)
-        Me.PnlPatient.Controls.Add(Me.LblTxt1_Info)
+        Me.PnlPatient.Controls.Add(Me.LblSubTitle1Patient_P_H)
+        Me.PnlPatient.Controls.Add(Me.LblTitle1Patient_P_H)
+        Me.PnlPatient.Controls.Add(Me.LblTxt1_Info_P_H)
         Me.PnlPatient.Controls.Add(Me.Grpbx_Item1)
         Me.PnlPatient.Location = New System.Drawing.Point(234, 0)
         Me.PnlPatient.Name = "PnlPatient"
@@ -1321,55 +1375,55 @@ Partial Class FrmHome
         Me.PnlPatient.Size = New System.Drawing.Size(1064, 753)
         Me.PnlPatient.TabIndex = 6
         '
-        'BtnBack_Intro2
+        'BtnBack_Intro2_P_H
         '
-        Me.BtnBack_Intro2.AccessibleDescription = "BtnBack_Intro2"
-        Me.BtnBack_Intro2.AccessibleName = "BtnBack_Intro2"
-        Me.BtnBack_Intro2.Animated = True
-        Me.BtnBack_Intro2.BackColor = System.Drawing.Color.White
-        Me.BtnBack_Intro2.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
-        Me.BtnBack_Intro2.BorderRadius = 15
-        Me.BtnBack_Intro2.BorderThickness = 2
-        Me.BtnBack_Intro2.CheckedState.Parent = Me.BtnBack_Intro2
-        Me.BtnBack_Intro2.CustomImages.Parent = Me.BtnBack_Intro2
-        Me.BtnBack_Intro2.FillColor = System.Drawing.Color.Transparent
-        Me.BtnBack_Intro2.Font = New System.Drawing.Font("Microsoft YaHei UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnBack_Intro2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
-        Me.BtnBack_Intro2.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
-        Me.BtnBack_Intro2.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
-        Me.BtnBack_Intro2.HoverState.ForeColor = System.Drawing.Color.White
-        Me.BtnBack_Intro2.HoverState.Parent = Me.BtnBack_Intro2
-        Me.BtnBack_Intro2.Location = New System.Drawing.Point(676, 674)
-        Me.BtnBack_Intro2.Name = "BtnBack_Intro2"
-        Me.BtnBack_Intro2.ShadowDecoration.Parent = Me.BtnBack_Intro2
-        Me.BtnBack_Intro2.Size = New System.Drawing.Size(180, 60)
-        Me.BtnBack_Intro2.TabIndex = 29
-        Me.BtnBack_Intro2.Text = "ATRAS"
+        Me.BtnBack_Intro2_P_H.AccessibleDescription = "BtnBack_Intro2_P_H"
+        Me.BtnBack_Intro2_P_H.AccessibleName = "BtnBack_Intro2_P_H"
+        Me.BtnBack_Intro2_P_H.Animated = True
+        Me.BtnBack_Intro2_P_H.BackColor = System.Drawing.Color.White
+        Me.BtnBack_Intro2_P_H.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.BtnBack_Intro2_P_H.BorderRadius = 15
+        Me.BtnBack_Intro2_P_H.BorderThickness = 2
+        Me.BtnBack_Intro2_P_H.CheckedState.Parent = Me.BtnBack_Intro2_P_H
+        Me.BtnBack_Intro2_P_H.CustomImages.Parent = Me.BtnBack_Intro2_P_H
+        Me.BtnBack_Intro2_P_H.FillColor = System.Drawing.Color.Transparent
+        Me.BtnBack_Intro2_P_H.Font = New System.Drawing.Font("Microsoft YaHei UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnBack_Intro2_P_H.ForeColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.BtnBack_Intro2_P_H.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.BtnBack_Intro2_P_H.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.BtnBack_Intro2_P_H.HoverState.ForeColor = System.Drawing.Color.White
+        Me.BtnBack_Intro2_P_H.HoverState.Parent = Me.BtnBack_Intro2_P_H
+        Me.BtnBack_Intro2_P_H.Location = New System.Drawing.Point(676, 674)
+        Me.BtnBack_Intro2_P_H.Name = "BtnBack_Intro2_P_H"
+        Me.BtnBack_Intro2_P_H.ShadowDecoration.Parent = Me.BtnBack_Intro2_P_H
+        Me.BtnBack_Intro2_P_H.Size = New System.Drawing.Size(180, 60)
+        Me.BtnBack_Intro2_P_H.TabIndex = 29
+        Me.BtnBack_Intro2_P_H.Text = "ATRAS"
         '
-        'BtnNext_Symptom1
+        'BtnNext_Symptom1_P_H
         '
-        Me.BtnNext_Symptom1.AccessibleDescription = "BtnNext_Symptom1"
-        Me.BtnNext_Symptom1.AccessibleName = "BtnNext_Symptom1"
-        Me.BtnNext_Symptom1.Animated = True
-        Me.BtnNext_Symptom1.BackColor = System.Drawing.Color.White
-        Me.BtnNext_Symptom1.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
-        Me.BtnNext_Symptom1.BorderRadius = 15
-        Me.BtnNext_Symptom1.BorderThickness = 2
-        Me.BtnNext_Symptom1.CheckedState.Parent = Me.BtnNext_Symptom1
-        Me.BtnNext_Symptom1.CustomImages.Parent = Me.BtnNext_Symptom1
-        Me.BtnNext_Symptom1.FillColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
-        Me.BtnNext_Symptom1.Font = New System.Drawing.Font("Microsoft YaHei UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnNext_Symptom1.ForeColor = System.Drawing.Color.White
-        Me.BtnNext_Symptom1.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
-        Me.BtnNext_Symptom1.HoverState.FillColor = System.Drawing.Color.White
-        Me.BtnNext_Symptom1.HoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
-        Me.BtnNext_Symptom1.HoverState.Parent = Me.BtnNext_Symptom1
-        Me.BtnNext_Symptom1.Location = New System.Drawing.Point(862, 674)
-        Me.BtnNext_Symptom1.Name = "BtnNext_Symptom1"
-        Me.BtnNext_Symptom1.ShadowDecoration.Parent = Me.BtnNext_Symptom1
-        Me.BtnNext_Symptom1.Size = New System.Drawing.Size(180, 60)
-        Me.BtnNext_Symptom1.TabIndex = 28
-        Me.BtnNext_Symptom1.Text = "SIGUIENTE"
+        Me.BtnNext_Symptom1_P_H.AccessibleDescription = "BtnNext_Symptom1_P_H"
+        Me.BtnNext_Symptom1_P_H.AccessibleName = "BtnNext_Symptom1_P_H"
+        Me.BtnNext_Symptom1_P_H.Animated = True
+        Me.BtnNext_Symptom1_P_H.BackColor = System.Drawing.Color.White
+        Me.BtnNext_Symptom1_P_H.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.BtnNext_Symptom1_P_H.BorderRadius = 15
+        Me.BtnNext_Symptom1_P_H.BorderThickness = 2
+        Me.BtnNext_Symptom1_P_H.CheckedState.Parent = Me.BtnNext_Symptom1_P_H
+        Me.BtnNext_Symptom1_P_H.CustomImages.Parent = Me.BtnNext_Symptom1_P_H
+        Me.BtnNext_Symptom1_P_H.FillColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.BtnNext_Symptom1_P_H.Font = New System.Drawing.Font("Microsoft YaHei UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnNext_Symptom1_P_H.ForeColor = System.Drawing.Color.White
+        Me.BtnNext_Symptom1_P_H.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.BtnNext_Symptom1_P_H.HoverState.FillColor = System.Drawing.Color.White
+        Me.BtnNext_Symptom1_P_H.HoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.BtnNext_Symptom1_P_H.HoverState.Parent = Me.BtnNext_Symptom1_P_H
+        Me.BtnNext_Symptom1_P_H.Location = New System.Drawing.Point(862, 674)
+        Me.BtnNext_Symptom1_P_H.Name = "BtnNext_Symptom1_P_H"
+        Me.BtnNext_Symptom1_P_H.ShadowDecoration.Parent = Me.BtnNext_Symptom1_P_H
+        Me.BtnNext_Symptom1_P_H.Size = New System.Drawing.Size(180, 60)
+        Me.BtnNext_Symptom1_P_H.TabIndex = 28
+        Me.BtnNext_Symptom1_P_H.Text = "SIGUIENTE"
         '
         'Guna2PictureBox7
         '
@@ -1382,19 +1436,19 @@ Partial Class FrmHome
         Me.Guna2PictureBox7.TabIndex = 25
         Me.Guna2PictureBox7.TabStop = False
         '
-        'LblTxt6_Info
+        'LblTxt6_Info_P_H
         '
-        Me.LblTxt6_Info.AccessibleDescription = "LblTxt6_Info"
-        Me.LblTxt6_Info.AccessibleName = "LblTxt6_Info"
-        Me.LblTxt6_Info.BackColor = System.Drawing.Color.Transparent
-        Me.LblTxt6_Info.Font = New System.Drawing.Font("Segoe UI Emoji", 14.25!)
-        Me.LblTxt6_Info.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer))
-        Me.LblTxt6_Info.Location = New System.Drawing.Point(16, 534)
-        Me.LblTxt6_Info.Name = "LblTxt6_Info"
-        Me.LblTxt6_Info.Size = New System.Drawing.Size(506, 52)
-        Me.LblTxt6_Info.TabIndex = 26
-        Me.LblTxt6_Info.Text = "Tengo diabétes."
-        Me.LblTxt6_Info.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LblTxt6_Info_P_H.AccessibleDescription = "LblTxt6_Info_P_H"
+        Me.LblTxt6_Info_P_H.AccessibleName = "LblTxt6_Info_P_H"
+        Me.LblTxt6_Info_P_H.BackColor = System.Drawing.Color.Transparent
+        Me.LblTxt6_Info_P_H.Font = New System.Drawing.Font("Segoe UI Emoji", 14.25!)
+        Me.LblTxt6_Info_P_H.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer))
+        Me.LblTxt6_Info_P_H.Location = New System.Drawing.Point(16, 534)
+        Me.LblTxt6_Info_P_H.Name = "LblTxt6_Info_P_H"
+        Me.LblTxt6_Info_P_H.Size = New System.Drawing.Size(506, 52)
+        Me.LblTxt6_Info_P_H.TabIndex = 26
+        Me.LblTxt6_Info_P_H.Text = "Tengo diabétes."
+        Me.LblTxt6_Info_P_H.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Grpbx_Item6
         '
@@ -1403,9 +1457,9 @@ Partial Class FrmHome
         Me.Grpbx_Item6.BackColor = System.Drawing.Color.Transparent
         Me.Grpbx_Item6.BorderColor = System.Drawing.Color.Transparent
         Me.Grpbx_Item6.BorderThickness = 0
-        Me.Grpbx_Item6.Controls.Add(Me.Rbtn6_Idk)
+        Me.Grpbx_Item6.Controls.Add(Me.Rbtn6_Idk_P_H)
         Me.Grpbx_Item6.Controls.Add(Me.Rbtn6_No)
-        Me.Grpbx_Item6.Controls.Add(Me.Rbtn6_Yes)
+        Me.Grpbx_Item6.Controls.Add(Me.Rbtn6_Yes_P_H)
         Me.Grpbx_Item6.CustomBorderColor = System.Drawing.Color.Transparent
         Me.Grpbx_Item6.CustomBorderThickness = New System.Windows.Forms.Padding(0)
         Me.Grpbx_Item6.FillColor = System.Drawing.Color.Transparent
@@ -1417,28 +1471,28 @@ Partial Class FrmHome
         Me.Grpbx_Item6.Size = New System.Drawing.Size(381, 28)
         Me.Grpbx_Item6.TabIndex = 27
         '
-        'Rbtn6_Idk
+        'Rbtn6_Idk_P_H
         '
-        Me.Rbtn6_Idk.AccessibleDescription = "Rbtn6_Idk"
-        Me.Rbtn6_Idk.AccessibleName = "Rbtn6_Idk"
-        Me.Rbtn6_Idk.Animated = True
-        Me.Rbtn6_Idk.AutoSize = True
-        Me.Rbtn6_Idk.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(133, Byte), Integer))
-        Me.Rbtn6_Idk.CheckedState.BorderThickness = 0
-        Me.Rbtn6_Idk.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(133, Byte), Integer))
-        Me.Rbtn6_Idk.CheckedState.InnerColor = System.Drawing.Color.White
-        Me.Rbtn6_Idk.CheckedState.InnerOffset = -4
-        Me.Rbtn6_Idk.Font = New System.Drawing.Font("Segoe UI Emoji", 14.25!)
-        Me.Rbtn6_Idk.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer))
-        Me.Rbtn6_Idk.Location = New System.Drawing.Point(277, 0)
-        Me.Rbtn6_Idk.Name = "Rbtn6_Idk"
-        Me.Rbtn6_Idk.Size = New System.Drawing.Size(103, 30)
-        Me.Rbtn6_Idk.TabIndex = 2
-        Me.Rbtn6_Idk.Text = "No lo sé."
-        Me.Rbtn6_Idk.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
-        Me.Rbtn6_Idk.UncheckedState.BorderThickness = 3
-        Me.Rbtn6_Idk.UncheckedState.FillColor = System.Drawing.Color.White
-        Me.Rbtn6_Idk.UncheckedState.InnerColor = System.Drawing.Color.White
+        Me.Rbtn6_Idk_P_H.AccessibleDescription = "Rbtn6_Idk_P_H"
+        Me.Rbtn6_Idk_P_H.AccessibleName = "Rbtn6_Idk_P_H"
+        Me.Rbtn6_Idk_P_H.Animated = True
+        Me.Rbtn6_Idk_P_H.AutoSize = True
+        Me.Rbtn6_Idk_P_H.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(133, Byte), Integer))
+        Me.Rbtn6_Idk_P_H.CheckedState.BorderThickness = 0
+        Me.Rbtn6_Idk_P_H.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(133, Byte), Integer))
+        Me.Rbtn6_Idk_P_H.CheckedState.InnerColor = System.Drawing.Color.White
+        Me.Rbtn6_Idk_P_H.CheckedState.InnerOffset = -4
+        Me.Rbtn6_Idk_P_H.Font = New System.Drawing.Font("Segoe UI Emoji", 14.25!)
+        Me.Rbtn6_Idk_P_H.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer))
+        Me.Rbtn6_Idk_P_H.Location = New System.Drawing.Point(277, 0)
+        Me.Rbtn6_Idk_P_H.Name = "Rbtn6_Idk_P_H"
+        Me.Rbtn6_Idk_P_H.Size = New System.Drawing.Size(103, 30)
+        Me.Rbtn6_Idk_P_H.TabIndex = 2
+        Me.Rbtn6_Idk_P_H.Text = "No lo sé."
+        Me.Rbtn6_Idk_P_H.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.Rbtn6_Idk_P_H.UncheckedState.BorderThickness = 3
+        Me.Rbtn6_Idk_P_H.UncheckedState.FillColor = System.Drawing.Color.White
+        Me.Rbtn6_Idk_P_H.UncheckedState.InnerColor = System.Drawing.Color.White
         '
         'Rbtn6_No
         '
@@ -1463,28 +1517,28 @@ Partial Class FrmHome
         Me.Rbtn6_No.UncheckedState.FillColor = System.Drawing.Color.White
         Me.Rbtn6_No.UncheckedState.InnerColor = System.Drawing.Color.White
         '
-        'Rbtn6_Yes
+        'Rbtn6_Yes_P_H
         '
-        Me.Rbtn6_Yes.AccessibleDescription = "Rbtn6_Yes"
-        Me.Rbtn6_Yes.AccessibleName = "Rbtn6_Yes"
-        Me.Rbtn6_Yes.Animated = True
-        Me.Rbtn6_Yes.AutoSize = True
-        Me.Rbtn6_Yes.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(133, Byte), Integer))
-        Me.Rbtn6_Yes.CheckedState.BorderThickness = 0
-        Me.Rbtn6_Yes.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(133, Byte), Integer))
-        Me.Rbtn6_Yes.CheckedState.InnerColor = System.Drawing.Color.White
-        Me.Rbtn6_Yes.CheckedState.InnerOffset = -4
-        Me.Rbtn6_Yes.Font = New System.Drawing.Font("Segoe UI Emoji", 14.25!)
-        Me.Rbtn6_Yes.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer))
-        Me.Rbtn6_Yes.Location = New System.Drawing.Point(82, 2)
-        Me.Rbtn6_Yes.Name = "Rbtn6_Yes"
-        Me.Rbtn6_Yes.Size = New System.Drawing.Size(54, 30)
-        Me.Rbtn6_Yes.TabIndex = 0
-        Me.Rbtn6_Yes.Text = " Si."
-        Me.Rbtn6_Yes.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
-        Me.Rbtn6_Yes.UncheckedState.BorderThickness = 3
-        Me.Rbtn6_Yes.UncheckedState.FillColor = System.Drawing.Color.White
-        Me.Rbtn6_Yes.UncheckedState.InnerColor = System.Drawing.Color.White
+        Me.Rbtn6_Yes_P_H.AccessibleDescription = "Rbtn6_Yes_P_H"
+        Me.Rbtn6_Yes_P_H.AccessibleName = "Rbtn6_Yes_P_H"
+        Me.Rbtn6_Yes_P_H.Animated = True
+        Me.Rbtn6_Yes_P_H.AutoSize = True
+        Me.Rbtn6_Yes_P_H.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(133, Byte), Integer))
+        Me.Rbtn6_Yes_P_H.CheckedState.BorderThickness = 0
+        Me.Rbtn6_Yes_P_H.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(133, Byte), Integer))
+        Me.Rbtn6_Yes_P_H.CheckedState.InnerColor = System.Drawing.Color.White
+        Me.Rbtn6_Yes_P_H.CheckedState.InnerOffset = -4
+        Me.Rbtn6_Yes_P_H.Font = New System.Drawing.Font("Segoe UI Emoji", 14.25!)
+        Me.Rbtn6_Yes_P_H.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer))
+        Me.Rbtn6_Yes_P_H.Location = New System.Drawing.Point(82, 2)
+        Me.Rbtn6_Yes_P_H.Name = "Rbtn6_Yes_P_H"
+        Me.Rbtn6_Yes_P_H.Size = New System.Drawing.Size(54, 30)
+        Me.Rbtn6_Yes_P_H.TabIndex = 0
+        Me.Rbtn6_Yes_P_H.Text = " Si."
+        Me.Rbtn6_Yes_P_H.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.Rbtn6_Yes_P_H.UncheckedState.BorderThickness = 3
+        Me.Rbtn6_Yes_P_H.UncheckedState.FillColor = System.Drawing.Color.White
+        Me.Rbtn6_Yes_P_H.UncheckedState.InnerColor = System.Drawing.Color.White
         '
         'Guna2PictureBox6
         '
@@ -1497,19 +1551,19 @@ Partial Class FrmHome
         Me.Guna2PictureBox6.TabIndex = 22
         Me.Guna2PictureBox6.TabStop = False
         '
-        'LblTxt5_Info
+        'LblTxt5_Info_P_H
         '
-        Me.LblTxt5_Info.AccessibleDescription = "LblTxt5_Info"
-        Me.LblTxt5_Info.AccessibleName = "LblTxt5_Info"
-        Me.LblTxt5_Info.BackColor = System.Drawing.Color.Transparent
-        Me.LblTxt5_Info.Font = New System.Drawing.Font("Segoe UI Emoji", 14.25!)
-        Me.LblTxt5_Info.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer))
-        Me.LblTxt5_Info.Location = New System.Drawing.Point(16, 479)
-        Me.LblTxt5_Info.Name = "LblTxt5_Info"
-        Me.LblTxt5_Info.Size = New System.Drawing.Size(506, 52)
-        Me.LblTxt5_Info.TabIndex = 23
-        Me.LblTxt5_Info.Text = "Tengo hipertensión."
-        Me.LblTxt5_Info.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LblTxt5_Info_P_H.AccessibleDescription = "LblTxt5_Info_P_H"
+        Me.LblTxt5_Info_P_H.AccessibleName = "LblTxt5_Info_P_H"
+        Me.LblTxt5_Info_P_H.BackColor = System.Drawing.Color.Transparent
+        Me.LblTxt5_Info_P_H.Font = New System.Drawing.Font("Segoe UI Emoji", 14.25!)
+        Me.LblTxt5_Info_P_H.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer))
+        Me.LblTxt5_Info_P_H.Location = New System.Drawing.Point(16, 479)
+        Me.LblTxt5_Info_P_H.Name = "LblTxt5_Info_P_H"
+        Me.LblTxt5_Info_P_H.Size = New System.Drawing.Size(506, 52)
+        Me.LblTxt5_Info_P_H.TabIndex = 23
+        Me.LblTxt5_Info_P_H.Text = "Tengo hipertensión."
+        Me.LblTxt5_Info_P_H.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Grpbx_Item5
         '
@@ -1518,9 +1572,9 @@ Partial Class FrmHome
         Me.Grpbx_Item5.BackColor = System.Drawing.Color.Transparent
         Me.Grpbx_Item5.BorderColor = System.Drawing.Color.Transparent
         Me.Grpbx_Item5.BorderThickness = 0
-        Me.Grpbx_Item5.Controls.Add(Me.Rbtn5_Idk)
-        Me.Grpbx_Item5.Controls.Add(Me.Rbtn5_No)
-        Me.Grpbx_Item5.Controls.Add(Me.Rbtn5_Yes)
+        Me.Grpbx_Item5.Controls.Add(Me.Rbtn5_Idk_P_H)
+        Me.Grpbx_Item5.Controls.Add(Me.Rbtn5_No_P_H)
+        Me.Grpbx_Item5.Controls.Add(Me.Rbtn5_Yes_P_H)
         Me.Grpbx_Item5.CustomBorderColor = System.Drawing.Color.Transparent
         Me.Grpbx_Item5.CustomBorderThickness = New System.Windows.Forms.Padding(0)
         Me.Grpbx_Item5.FillColor = System.Drawing.Color.Transparent
@@ -1532,74 +1586,74 @@ Partial Class FrmHome
         Me.Grpbx_Item5.Size = New System.Drawing.Size(381, 28)
         Me.Grpbx_Item5.TabIndex = 24
         '
-        'Rbtn5_Idk
+        'Rbtn5_Idk_P_H
         '
-        Me.Rbtn5_Idk.AccessibleDescription = "Rbtn5_Idk"
-        Me.Rbtn5_Idk.AccessibleName = "Rbtn5_Idk"
-        Me.Rbtn5_Idk.Animated = True
-        Me.Rbtn5_Idk.AutoSize = True
-        Me.Rbtn5_Idk.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(133, Byte), Integer))
-        Me.Rbtn5_Idk.CheckedState.BorderThickness = 0
-        Me.Rbtn5_Idk.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(133, Byte), Integer))
-        Me.Rbtn5_Idk.CheckedState.InnerColor = System.Drawing.Color.White
-        Me.Rbtn5_Idk.CheckedState.InnerOffset = -4
-        Me.Rbtn5_Idk.Font = New System.Drawing.Font("Segoe UI Emoji", 14.25!)
-        Me.Rbtn5_Idk.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer))
-        Me.Rbtn5_Idk.Location = New System.Drawing.Point(277, 0)
-        Me.Rbtn5_Idk.Name = "Rbtn5_Idk"
-        Me.Rbtn5_Idk.Size = New System.Drawing.Size(103, 30)
-        Me.Rbtn5_Idk.TabIndex = 2
-        Me.Rbtn5_Idk.Text = "No lo sé."
-        Me.Rbtn5_Idk.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
-        Me.Rbtn5_Idk.UncheckedState.BorderThickness = 3
-        Me.Rbtn5_Idk.UncheckedState.FillColor = System.Drawing.Color.White
-        Me.Rbtn5_Idk.UncheckedState.InnerColor = System.Drawing.Color.White
+        Me.Rbtn5_Idk_P_H.AccessibleDescription = "Rbtn5_Idk_P_H"
+        Me.Rbtn5_Idk_P_H.AccessibleName = "Rbtn5_Idk_P_H"
+        Me.Rbtn5_Idk_P_H.Animated = True
+        Me.Rbtn5_Idk_P_H.AutoSize = True
+        Me.Rbtn5_Idk_P_H.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(133, Byte), Integer))
+        Me.Rbtn5_Idk_P_H.CheckedState.BorderThickness = 0
+        Me.Rbtn5_Idk_P_H.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(133, Byte), Integer))
+        Me.Rbtn5_Idk_P_H.CheckedState.InnerColor = System.Drawing.Color.White
+        Me.Rbtn5_Idk_P_H.CheckedState.InnerOffset = -4
+        Me.Rbtn5_Idk_P_H.Font = New System.Drawing.Font("Segoe UI Emoji", 14.25!)
+        Me.Rbtn5_Idk_P_H.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer))
+        Me.Rbtn5_Idk_P_H.Location = New System.Drawing.Point(277, 0)
+        Me.Rbtn5_Idk_P_H.Name = "Rbtn5_Idk_P_H"
+        Me.Rbtn5_Idk_P_H.Size = New System.Drawing.Size(103, 30)
+        Me.Rbtn5_Idk_P_H.TabIndex = 2
+        Me.Rbtn5_Idk_P_H.Text = "No lo sé."
+        Me.Rbtn5_Idk_P_H.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.Rbtn5_Idk_P_H.UncheckedState.BorderThickness = 3
+        Me.Rbtn5_Idk_P_H.UncheckedState.FillColor = System.Drawing.Color.White
+        Me.Rbtn5_Idk_P_H.UncheckedState.InnerColor = System.Drawing.Color.White
         '
-        'Rbtn5_No
+        'Rbtn5_No_P_H
         '
-        Me.Rbtn5_No.AccessibleDescription = "Rbtn5_No"
-        Me.Rbtn5_No.AccessibleName = "Rbtn5_No"
-        Me.Rbtn5_No.Animated = True
-        Me.Rbtn5_No.AutoSize = True
-        Me.Rbtn5_No.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(133, Byte), Integer))
-        Me.Rbtn5_No.CheckedState.BorderThickness = 0
-        Me.Rbtn5_No.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(133, Byte), Integer))
-        Me.Rbtn5_No.CheckedState.InnerColor = System.Drawing.Color.White
-        Me.Rbtn5_No.CheckedState.InnerOffset = -4
-        Me.Rbtn5_No.Font = New System.Drawing.Font("Segoe UI Emoji", 14.25!)
-        Me.Rbtn5_No.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer))
-        Me.Rbtn5_No.Location = New System.Drawing.Point(176, 0)
-        Me.Rbtn5_No.Name = "Rbtn5_No"
-        Me.Rbtn5_No.Size = New System.Drawing.Size(64, 30)
-        Me.Rbtn5_No.TabIndex = 1
-        Me.Rbtn5_No.Text = " No."
-        Me.Rbtn5_No.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
-        Me.Rbtn5_No.UncheckedState.BorderThickness = 3
-        Me.Rbtn5_No.UncheckedState.FillColor = System.Drawing.Color.White
-        Me.Rbtn5_No.UncheckedState.InnerColor = System.Drawing.Color.White
+        Me.Rbtn5_No_P_H.AccessibleDescription = "Rbtn5_No_P_H"
+        Me.Rbtn5_No_P_H.AccessibleName = "Rbtn5_No_P_H"
+        Me.Rbtn5_No_P_H.Animated = True
+        Me.Rbtn5_No_P_H.AutoSize = True
+        Me.Rbtn5_No_P_H.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(133, Byte), Integer))
+        Me.Rbtn5_No_P_H.CheckedState.BorderThickness = 0
+        Me.Rbtn5_No_P_H.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(133, Byte), Integer))
+        Me.Rbtn5_No_P_H.CheckedState.InnerColor = System.Drawing.Color.White
+        Me.Rbtn5_No_P_H.CheckedState.InnerOffset = -4
+        Me.Rbtn5_No_P_H.Font = New System.Drawing.Font("Segoe UI Emoji", 14.25!)
+        Me.Rbtn5_No_P_H.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer))
+        Me.Rbtn5_No_P_H.Location = New System.Drawing.Point(176, 0)
+        Me.Rbtn5_No_P_H.Name = "Rbtn5_No_P_H"
+        Me.Rbtn5_No_P_H.Size = New System.Drawing.Size(64, 30)
+        Me.Rbtn5_No_P_H.TabIndex = 1
+        Me.Rbtn5_No_P_H.Text = " No."
+        Me.Rbtn5_No_P_H.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.Rbtn5_No_P_H.UncheckedState.BorderThickness = 3
+        Me.Rbtn5_No_P_H.UncheckedState.FillColor = System.Drawing.Color.White
+        Me.Rbtn5_No_P_H.UncheckedState.InnerColor = System.Drawing.Color.White
         '
-        'Rbtn5_Yes
+        'Rbtn5_Yes_P_H
         '
-        Me.Rbtn5_Yes.AccessibleDescription = "Rbtn5_Yes"
-        Me.Rbtn5_Yes.AccessibleName = "Rbtn5_Yes"
-        Me.Rbtn5_Yes.Animated = True
-        Me.Rbtn5_Yes.AutoSize = True
-        Me.Rbtn5_Yes.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(133, Byte), Integer))
-        Me.Rbtn5_Yes.CheckedState.BorderThickness = 0
-        Me.Rbtn5_Yes.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(133, Byte), Integer))
-        Me.Rbtn5_Yes.CheckedState.InnerColor = System.Drawing.Color.White
-        Me.Rbtn5_Yes.CheckedState.InnerOffset = -4
-        Me.Rbtn5_Yes.Font = New System.Drawing.Font("Segoe UI Emoji", 14.25!)
-        Me.Rbtn5_Yes.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer))
-        Me.Rbtn5_Yes.Location = New System.Drawing.Point(82, 2)
-        Me.Rbtn5_Yes.Name = "Rbtn5_Yes"
-        Me.Rbtn5_Yes.Size = New System.Drawing.Size(54, 30)
-        Me.Rbtn5_Yes.TabIndex = 0
-        Me.Rbtn5_Yes.Text = " Si."
-        Me.Rbtn5_Yes.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
-        Me.Rbtn5_Yes.UncheckedState.BorderThickness = 3
-        Me.Rbtn5_Yes.UncheckedState.FillColor = System.Drawing.Color.White
-        Me.Rbtn5_Yes.UncheckedState.InnerColor = System.Drawing.Color.White
+        Me.Rbtn5_Yes_P_H.AccessibleDescription = "Rbtn5_Yes_P_H"
+        Me.Rbtn5_Yes_P_H.AccessibleName = "Rbtn5_Yes_P_H"
+        Me.Rbtn5_Yes_P_H.Animated = True
+        Me.Rbtn5_Yes_P_H.AutoSize = True
+        Me.Rbtn5_Yes_P_H.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(133, Byte), Integer))
+        Me.Rbtn5_Yes_P_H.CheckedState.BorderThickness = 0
+        Me.Rbtn5_Yes_P_H.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(133, Byte), Integer))
+        Me.Rbtn5_Yes_P_H.CheckedState.InnerColor = System.Drawing.Color.White
+        Me.Rbtn5_Yes_P_H.CheckedState.InnerOffset = -4
+        Me.Rbtn5_Yes_P_H.Font = New System.Drawing.Font("Segoe UI Emoji", 14.25!)
+        Me.Rbtn5_Yes_P_H.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer))
+        Me.Rbtn5_Yes_P_H.Location = New System.Drawing.Point(82, 2)
+        Me.Rbtn5_Yes_P_H.Name = "Rbtn5_Yes_P_H"
+        Me.Rbtn5_Yes_P_H.Size = New System.Drawing.Size(54, 30)
+        Me.Rbtn5_Yes_P_H.TabIndex = 0
+        Me.Rbtn5_Yes_P_H.Text = " Si."
+        Me.Rbtn5_Yes_P_H.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.Rbtn5_Yes_P_H.UncheckedState.BorderThickness = 3
+        Me.Rbtn5_Yes_P_H.UncheckedState.FillColor = System.Drawing.Color.White
+        Me.Rbtn5_Yes_P_H.UncheckedState.InnerColor = System.Drawing.Color.White
         '
         'Guna2PictureBox5
         '
@@ -1612,19 +1666,19 @@ Partial Class FrmHome
         Me.Guna2PictureBox5.TabIndex = 19
         Me.Guna2PictureBox5.TabStop = False
         '
-        'LblTxt4_Info
+        'LblTxt4_Info_P_H
         '
-        Me.LblTxt4_Info.AccessibleDescription = "LblTxt4_Info"
-        Me.LblTxt4_Info.AccessibleName = "LblTxt4_Info"
-        Me.LblTxt4_Info.BackColor = System.Drawing.Color.Transparent
-        Me.LblTxt4_Info.Font = New System.Drawing.Font("Segoe UI Emoji", 14.25!)
-        Me.LblTxt4_Info.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer))
-        Me.LblTxt4_Info.Location = New System.Drawing.Point(16, 424)
-        Me.LblTxt4_Info.Name = "LblTxt4_Info"
-        Me.LblTxt4_Info.Size = New System.Drawing.Size(506, 52)
-        Me.LblTxt4_Info.TabIndex = 20
-        Me.LblTxt4_Info.Text = "Tengo el colesterol alto."
-        Me.LblTxt4_Info.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LblTxt4_Info_P_H.AccessibleDescription = "LblTxt4_Info_P_H"
+        Me.LblTxt4_Info_P_H.AccessibleName = "LblTxt4_Info_P_H"
+        Me.LblTxt4_Info_P_H.BackColor = System.Drawing.Color.Transparent
+        Me.LblTxt4_Info_P_H.Font = New System.Drawing.Font("Segoe UI Emoji", 14.25!)
+        Me.LblTxt4_Info_P_H.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer))
+        Me.LblTxt4_Info_P_H.Location = New System.Drawing.Point(16, 424)
+        Me.LblTxt4_Info_P_H.Name = "LblTxt4_Info_P_H"
+        Me.LblTxt4_Info_P_H.Size = New System.Drawing.Size(506, 52)
+        Me.LblTxt4_Info_P_H.TabIndex = 20
+        Me.LblTxt4_Info_P_H.Text = "Tengo el colesterol alto."
+        Me.LblTxt4_Info_P_H.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Grpbx_Item4
         '
@@ -1633,9 +1687,9 @@ Partial Class FrmHome
         Me.Grpbx_Item4.BackColor = System.Drawing.Color.Transparent
         Me.Grpbx_Item4.BorderColor = System.Drawing.Color.Transparent
         Me.Grpbx_Item4.BorderThickness = 0
-        Me.Grpbx_Item4.Controls.Add(Me.Rbtn4_Idk)
-        Me.Grpbx_Item4.Controls.Add(Me.Rbtn4_No)
-        Me.Grpbx_Item4.Controls.Add(Me.Rbtn4_Yes)
+        Me.Grpbx_Item4.Controls.Add(Me.Rbtn4_Idk_P_H)
+        Me.Grpbx_Item4.Controls.Add(Me.Rbtn4_No_P_H)
+        Me.Grpbx_Item4.Controls.Add(Me.Rbtn4_Yes_P_H)
         Me.Grpbx_Item4.CustomBorderColor = System.Drawing.Color.Transparent
         Me.Grpbx_Item4.CustomBorderThickness = New System.Windows.Forms.Padding(0)
         Me.Grpbx_Item4.FillColor = System.Drawing.Color.Transparent
@@ -1647,74 +1701,74 @@ Partial Class FrmHome
         Me.Grpbx_Item4.Size = New System.Drawing.Size(381, 28)
         Me.Grpbx_Item4.TabIndex = 21
         '
-        'Rbtn4_Idk
+        'Rbtn4_Idk_P_H
         '
-        Me.Rbtn4_Idk.AccessibleDescription = "Rbtn4_Idk"
-        Me.Rbtn4_Idk.AccessibleName = "Rbtn4_Idk"
-        Me.Rbtn4_Idk.Animated = True
-        Me.Rbtn4_Idk.AutoSize = True
-        Me.Rbtn4_Idk.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(133, Byte), Integer))
-        Me.Rbtn4_Idk.CheckedState.BorderThickness = 0
-        Me.Rbtn4_Idk.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(133, Byte), Integer))
-        Me.Rbtn4_Idk.CheckedState.InnerColor = System.Drawing.Color.White
-        Me.Rbtn4_Idk.CheckedState.InnerOffset = -4
-        Me.Rbtn4_Idk.Font = New System.Drawing.Font("Segoe UI Emoji", 14.25!)
-        Me.Rbtn4_Idk.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer))
-        Me.Rbtn4_Idk.Location = New System.Drawing.Point(277, 0)
-        Me.Rbtn4_Idk.Name = "Rbtn4_Idk"
-        Me.Rbtn4_Idk.Size = New System.Drawing.Size(103, 30)
-        Me.Rbtn4_Idk.TabIndex = 2
-        Me.Rbtn4_Idk.Text = "No lo sé."
-        Me.Rbtn4_Idk.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
-        Me.Rbtn4_Idk.UncheckedState.BorderThickness = 3
-        Me.Rbtn4_Idk.UncheckedState.FillColor = System.Drawing.Color.White
-        Me.Rbtn4_Idk.UncheckedState.InnerColor = System.Drawing.Color.White
+        Me.Rbtn4_Idk_P_H.AccessibleDescription = "Rbtn4_Idk_P_H"
+        Me.Rbtn4_Idk_P_H.AccessibleName = "Rbtn4_Idk_P_H"
+        Me.Rbtn4_Idk_P_H.Animated = True
+        Me.Rbtn4_Idk_P_H.AutoSize = True
+        Me.Rbtn4_Idk_P_H.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(133, Byte), Integer))
+        Me.Rbtn4_Idk_P_H.CheckedState.BorderThickness = 0
+        Me.Rbtn4_Idk_P_H.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(133, Byte), Integer))
+        Me.Rbtn4_Idk_P_H.CheckedState.InnerColor = System.Drawing.Color.White
+        Me.Rbtn4_Idk_P_H.CheckedState.InnerOffset = -4
+        Me.Rbtn4_Idk_P_H.Font = New System.Drawing.Font("Segoe UI Emoji", 14.25!)
+        Me.Rbtn4_Idk_P_H.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer))
+        Me.Rbtn4_Idk_P_H.Location = New System.Drawing.Point(277, 0)
+        Me.Rbtn4_Idk_P_H.Name = "Rbtn4_Idk_P_H"
+        Me.Rbtn4_Idk_P_H.Size = New System.Drawing.Size(103, 30)
+        Me.Rbtn4_Idk_P_H.TabIndex = 2
+        Me.Rbtn4_Idk_P_H.Text = "No lo sé."
+        Me.Rbtn4_Idk_P_H.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.Rbtn4_Idk_P_H.UncheckedState.BorderThickness = 3
+        Me.Rbtn4_Idk_P_H.UncheckedState.FillColor = System.Drawing.Color.White
+        Me.Rbtn4_Idk_P_H.UncheckedState.InnerColor = System.Drawing.Color.White
         '
-        'Rbtn4_No
+        'Rbtn4_No_P_H
         '
-        Me.Rbtn4_No.AccessibleDescription = "Rbtn4_No"
-        Me.Rbtn4_No.AccessibleName = "Rbtn4_No"
-        Me.Rbtn4_No.Animated = True
-        Me.Rbtn4_No.AutoSize = True
-        Me.Rbtn4_No.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(133, Byte), Integer))
-        Me.Rbtn4_No.CheckedState.BorderThickness = 0
-        Me.Rbtn4_No.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(133, Byte), Integer))
-        Me.Rbtn4_No.CheckedState.InnerColor = System.Drawing.Color.White
-        Me.Rbtn4_No.CheckedState.InnerOffset = -4
-        Me.Rbtn4_No.Font = New System.Drawing.Font("Segoe UI Emoji", 14.25!)
-        Me.Rbtn4_No.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer))
-        Me.Rbtn4_No.Location = New System.Drawing.Point(176, 0)
-        Me.Rbtn4_No.Name = "Rbtn4_No"
-        Me.Rbtn4_No.Size = New System.Drawing.Size(64, 30)
-        Me.Rbtn4_No.TabIndex = 1
-        Me.Rbtn4_No.Text = " No."
-        Me.Rbtn4_No.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
-        Me.Rbtn4_No.UncheckedState.BorderThickness = 3
-        Me.Rbtn4_No.UncheckedState.FillColor = System.Drawing.Color.White
-        Me.Rbtn4_No.UncheckedState.InnerColor = System.Drawing.Color.White
+        Me.Rbtn4_No_P_H.AccessibleDescription = "Rbtn4_No_P_H"
+        Me.Rbtn4_No_P_H.AccessibleName = "Rbtn4_No_P_H"
+        Me.Rbtn4_No_P_H.Animated = True
+        Me.Rbtn4_No_P_H.AutoSize = True
+        Me.Rbtn4_No_P_H.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(133, Byte), Integer))
+        Me.Rbtn4_No_P_H.CheckedState.BorderThickness = 0
+        Me.Rbtn4_No_P_H.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(133, Byte), Integer))
+        Me.Rbtn4_No_P_H.CheckedState.InnerColor = System.Drawing.Color.White
+        Me.Rbtn4_No_P_H.CheckedState.InnerOffset = -4
+        Me.Rbtn4_No_P_H.Font = New System.Drawing.Font("Segoe UI Emoji", 14.25!)
+        Me.Rbtn4_No_P_H.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer))
+        Me.Rbtn4_No_P_H.Location = New System.Drawing.Point(176, 0)
+        Me.Rbtn4_No_P_H.Name = "Rbtn4_No_P_H"
+        Me.Rbtn4_No_P_H.Size = New System.Drawing.Size(64, 30)
+        Me.Rbtn4_No_P_H.TabIndex = 1
+        Me.Rbtn4_No_P_H.Text = " No."
+        Me.Rbtn4_No_P_H.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.Rbtn4_No_P_H.UncheckedState.BorderThickness = 3
+        Me.Rbtn4_No_P_H.UncheckedState.FillColor = System.Drawing.Color.White
+        Me.Rbtn4_No_P_H.UncheckedState.InnerColor = System.Drawing.Color.White
         '
-        'Rbtn4_Yes
+        'Rbtn4_Yes_P_H
         '
-        Me.Rbtn4_Yes.AccessibleDescription = "Rbtn4_Yes"
-        Me.Rbtn4_Yes.AccessibleName = "Rbtn4_Yes"
-        Me.Rbtn4_Yes.Animated = True
-        Me.Rbtn4_Yes.AutoSize = True
-        Me.Rbtn4_Yes.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(133, Byte), Integer))
-        Me.Rbtn4_Yes.CheckedState.BorderThickness = 0
-        Me.Rbtn4_Yes.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(133, Byte), Integer))
-        Me.Rbtn4_Yes.CheckedState.InnerColor = System.Drawing.Color.White
-        Me.Rbtn4_Yes.CheckedState.InnerOffset = -4
-        Me.Rbtn4_Yes.Font = New System.Drawing.Font("Segoe UI Emoji", 14.25!)
-        Me.Rbtn4_Yes.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer))
-        Me.Rbtn4_Yes.Location = New System.Drawing.Point(82, 2)
-        Me.Rbtn4_Yes.Name = "Rbtn4_Yes"
-        Me.Rbtn4_Yes.Size = New System.Drawing.Size(54, 30)
-        Me.Rbtn4_Yes.TabIndex = 0
-        Me.Rbtn4_Yes.Text = " Si."
-        Me.Rbtn4_Yes.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
-        Me.Rbtn4_Yes.UncheckedState.BorderThickness = 3
-        Me.Rbtn4_Yes.UncheckedState.FillColor = System.Drawing.Color.White
-        Me.Rbtn4_Yes.UncheckedState.InnerColor = System.Drawing.Color.White
+        Me.Rbtn4_Yes_P_H.AccessibleDescription = "Rbtn4_Yes_P_H"
+        Me.Rbtn4_Yes_P_H.AccessibleName = "Rbtn4_Yes_P_H"
+        Me.Rbtn4_Yes_P_H.Animated = True
+        Me.Rbtn4_Yes_P_H.AutoSize = True
+        Me.Rbtn4_Yes_P_H.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(133, Byte), Integer))
+        Me.Rbtn4_Yes_P_H.CheckedState.BorderThickness = 0
+        Me.Rbtn4_Yes_P_H.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(133, Byte), Integer))
+        Me.Rbtn4_Yes_P_H.CheckedState.InnerColor = System.Drawing.Color.White
+        Me.Rbtn4_Yes_P_H.CheckedState.InnerOffset = -4
+        Me.Rbtn4_Yes_P_H.Font = New System.Drawing.Font("Segoe UI Emoji", 14.25!)
+        Me.Rbtn4_Yes_P_H.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer))
+        Me.Rbtn4_Yes_P_H.Location = New System.Drawing.Point(82, 2)
+        Me.Rbtn4_Yes_P_H.Name = "Rbtn4_Yes_P_H"
+        Me.Rbtn4_Yes_P_H.Size = New System.Drawing.Size(54, 30)
+        Me.Rbtn4_Yes_P_H.TabIndex = 0
+        Me.Rbtn4_Yes_P_H.Text = " Si."
+        Me.Rbtn4_Yes_P_H.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.Rbtn4_Yes_P_H.UncheckedState.BorderThickness = 3
+        Me.Rbtn4_Yes_P_H.UncheckedState.FillColor = System.Drawing.Color.White
+        Me.Rbtn4_Yes_P_H.UncheckedState.InnerColor = System.Drawing.Color.White
         '
         'Guna2PictureBox4
         '
@@ -1727,19 +1781,19 @@ Partial Class FrmHome
         Me.Guna2PictureBox4.TabIndex = 16
         Me.Guna2PictureBox4.TabStop = False
         '
-        'LblTxt3_Info
+        'LblTxt3_Info_P_H
         '
-        Me.LblTxt3_Info.AccessibleDescription = "LblTxt3_Info"
-        Me.LblTxt3_Info.AccessibleName = "LblTxt3_Info"
-        Me.LblTxt3_Info.BackColor = System.Drawing.Color.Transparent
-        Me.LblTxt3_Info.Font = New System.Drawing.Font("Segoe UI Emoji", 14.25!)
-        Me.LblTxt3_Info.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer))
-        Me.LblTxt3_Info.Location = New System.Drawing.Point(16, 369)
-        Me.LblTxt3_Info.Name = "LblTxt3_Info"
-        Me.LblTxt3_Info.Size = New System.Drawing.Size(506, 52)
-        Me.LblTxt3_Info.TabIndex = 17
-        Me.LblTxt3_Info.Text = "He sufrido una lesión recientemente."
-        Me.LblTxt3_Info.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LblTxt3_Info_P_H.AccessibleDescription = "LblTxt3_Info_P_H"
+        Me.LblTxt3_Info_P_H.AccessibleName = "LblTxt3_Info_P_H"
+        Me.LblTxt3_Info_P_H.BackColor = System.Drawing.Color.Transparent
+        Me.LblTxt3_Info_P_H.Font = New System.Drawing.Font("Segoe UI Emoji", 14.25!)
+        Me.LblTxt3_Info_P_H.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer))
+        Me.LblTxt3_Info_P_H.Location = New System.Drawing.Point(16, 369)
+        Me.LblTxt3_Info_P_H.Name = "LblTxt3_Info_P_H"
+        Me.LblTxt3_Info_P_H.Size = New System.Drawing.Size(506, 52)
+        Me.LblTxt3_Info_P_H.TabIndex = 17
+        Me.LblTxt3_Info_P_H.Text = "He sufrido una lesión recientemente."
+        Me.LblTxt3_Info_P_H.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Grpbx_Item3
         '
@@ -1748,9 +1802,9 @@ Partial Class FrmHome
         Me.Grpbx_Item3.BackColor = System.Drawing.Color.Transparent
         Me.Grpbx_Item3.BorderColor = System.Drawing.Color.Transparent
         Me.Grpbx_Item3.BorderThickness = 0
-        Me.Grpbx_Item3.Controls.Add(Me.Rbtn3_Idk)
-        Me.Grpbx_Item3.Controls.Add(Me.Rbtn3_No)
-        Me.Grpbx_Item3.Controls.Add(Me.Rbtn3_Yes)
+        Me.Grpbx_Item3.Controls.Add(Me.Rbtn3_Idk_P_H)
+        Me.Grpbx_Item3.Controls.Add(Me.Rbtn3_No_P_H)
+        Me.Grpbx_Item3.Controls.Add(Me.Rbtn3_Yes_P_H)
         Me.Grpbx_Item3.CustomBorderColor = System.Drawing.Color.Transparent
         Me.Grpbx_Item3.CustomBorderThickness = New System.Windows.Forms.Padding(0)
         Me.Grpbx_Item3.FillColor = System.Drawing.Color.Transparent
@@ -1762,74 +1816,74 @@ Partial Class FrmHome
         Me.Grpbx_Item3.Size = New System.Drawing.Size(381, 28)
         Me.Grpbx_Item3.TabIndex = 18
         '
-        'Rbtn3_Idk
+        'Rbtn3_Idk_P_H
         '
-        Me.Rbtn3_Idk.AccessibleDescription = "Rbtn3_Idk"
-        Me.Rbtn3_Idk.AccessibleName = "Rbtn3_Idk"
-        Me.Rbtn3_Idk.Animated = True
-        Me.Rbtn3_Idk.AutoSize = True
-        Me.Rbtn3_Idk.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(133, Byte), Integer))
-        Me.Rbtn3_Idk.CheckedState.BorderThickness = 0
-        Me.Rbtn3_Idk.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(133, Byte), Integer))
-        Me.Rbtn3_Idk.CheckedState.InnerColor = System.Drawing.Color.White
-        Me.Rbtn3_Idk.CheckedState.InnerOffset = -4
-        Me.Rbtn3_Idk.Font = New System.Drawing.Font("Segoe UI Emoji", 14.25!)
-        Me.Rbtn3_Idk.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer))
-        Me.Rbtn3_Idk.Location = New System.Drawing.Point(277, 0)
-        Me.Rbtn3_Idk.Name = "Rbtn3_Idk"
-        Me.Rbtn3_Idk.Size = New System.Drawing.Size(103, 30)
-        Me.Rbtn3_Idk.TabIndex = 2
-        Me.Rbtn3_Idk.Text = "No lo sé."
-        Me.Rbtn3_Idk.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
-        Me.Rbtn3_Idk.UncheckedState.BorderThickness = 3
-        Me.Rbtn3_Idk.UncheckedState.FillColor = System.Drawing.Color.White
-        Me.Rbtn3_Idk.UncheckedState.InnerColor = System.Drawing.Color.White
+        Me.Rbtn3_Idk_P_H.AccessibleDescription = "Rbtn3_Idk_P_H"
+        Me.Rbtn3_Idk_P_H.AccessibleName = "Rbtn3_Idk_P_H"
+        Me.Rbtn3_Idk_P_H.Animated = True
+        Me.Rbtn3_Idk_P_H.AutoSize = True
+        Me.Rbtn3_Idk_P_H.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(133, Byte), Integer))
+        Me.Rbtn3_Idk_P_H.CheckedState.BorderThickness = 0
+        Me.Rbtn3_Idk_P_H.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(133, Byte), Integer))
+        Me.Rbtn3_Idk_P_H.CheckedState.InnerColor = System.Drawing.Color.White
+        Me.Rbtn3_Idk_P_H.CheckedState.InnerOffset = -4
+        Me.Rbtn3_Idk_P_H.Font = New System.Drawing.Font("Segoe UI Emoji", 14.25!)
+        Me.Rbtn3_Idk_P_H.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer))
+        Me.Rbtn3_Idk_P_H.Location = New System.Drawing.Point(277, 0)
+        Me.Rbtn3_Idk_P_H.Name = "Rbtn3_Idk_P_H"
+        Me.Rbtn3_Idk_P_H.Size = New System.Drawing.Size(103, 30)
+        Me.Rbtn3_Idk_P_H.TabIndex = 2
+        Me.Rbtn3_Idk_P_H.Text = "No lo sé."
+        Me.Rbtn3_Idk_P_H.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.Rbtn3_Idk_P_H.UncheckedState.BorderThickness = 3
+        Me.Rbtn3_Idk_P_H.UncheckedState.FillColor = System.Drawing.Color.White
+        Me.Rbtn3_Idk_P_H.UncheckedState.InnerColor = System.Drawing.Color.White
         '
-        'Rbtn3_No
+        'Rbtn3_No_P_H
         '
-        Me.Rbtn3_No.AccessibleDescription = "Rbtn3_No"
-        Me.Rbtn3_No.AccessibleName = "Rbtn3_No"
-        Me.Rbtn3_No.Animated = True
-        Me.Rbtn3_No.AutoSize = True
-        Me.Rbtn3_No.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(133, Byte), Integer))
-        Me.Rbtn3_No.CheckedState.BorderThickness = 0
-        Me.Rbtn3_No.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(133, Byte), Integer))
-        Me.Rbtn3_No.CheckedState.InnerColor = System.Drawing.Color.White
-        Me.Rbtn3_No.CheckedState.InnerOffset = -4
-        Me.Rbtn3_No.Font = New System.Drawing.Font("Segoe UI Emoji", 14.25!)
-        Me.Rbtn3_No.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer))
-        Me.Rbtn3_No.Location = New System.Drawing.Point(176, 0)
-        Me.Rbtn3_No.Name = "Rbtn3_No"
-        Me.Rbtn3_No.Size = New System.Drawing.Size(64, 30)
-        Me.Rbtn3_No.TabIndex = 1
-        Me.Rbtn3_No.Text = " No."
-        Me.Rbtn3_No.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
-        Me.Rbtn3_No.UncheckedState.BorderThickness = 3
-        Me.Rbtn3_No.UncheckedState.FillColor = System.Drawing.Color.White
-        Me.Rbtn3_No.UncheckedState.InnerColor = System.Drawing.Color.White
+        Me.Rbtn3_No_P_H.AccessibleDescription = "Rbtn3_No_P_H"
+        Me.Rbtn3_No_P_H.AccessibleName = "Rbtn3_No_P_H"
+        Me.Rbtn3_No_P_H.Animated = True
+        Me.Rbtn3_No_P_H.AutoSize = True
+        Me.Rbtn3_No_P_H.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(133, Byte), Integer))
+        Me.Rbtn3_No_P_H.CheckedState.BorderThickness = 0
+        Me.Rbtn3_No_P_H.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(133, Byte), Integer))
+        Me.Rbtn3_No_P_H.CheckedState.InnerColor = System.Drawing.Color.White
+        Me.Rbtn3_No_P_H.CheckedState.InnerOffset = -4
+        Me.Rbtn3_No_P_H.Font = New System.Drawing.Font("Segoe UI Emoji", 14.25!)
+        Me.Rbtn3_No_P_H.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer))
+        Me.Rbtn3_No_P_H.Location = New System.Drawing.Point(176, 0)
+        Me.Rbtn3_No_P_H.Name = "Rbtn3_No_P_H"
+        Me.Rbtn3_No_P_H.Size = New System.Drawing.Size(64, 30)
+        Me.Rbtn3_No_P_H.TabIndex = 1
+        Me.Rbtn3_No_P_H.Text = " No."
+        Me.Rbtn3_No_P_H.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.Rbtn3_No_P_H.UncheckedState.BorderThickness = 3
+        Me.Rbtn3_No_P_H.UncheckedState.FillColor = System.Drawing.Color.White
+        Me.Rbtn3_No_P_H.UncheckedState.InnerColor = System.Drawing.Color.White
         '
-        'Rbtn3_Yes
+        'Rbtn3_Yes_P_H
         '
-        Me.Rbtn3_Yes.AccessibleDescription = "Rbtn3_Yes"
-        Me.Rbtn3_Yes.AccessibleName = "Rbtn3_Yes"
-        Me.Rbtn3_Yes.Animated = True
-        Me.Rbtn3_Yes.AutoSize = True
-        Me.Rbtn3_Yes.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(133, Byte), Integer))
-        Me.Rbtn3_Yes.CheckedState.BorderThickness = 0
-        Me.Rbtn3_Yes.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(133, Byte), Integer))
-        Me.Rbtn3_Yes.CheckedState.InnerColor = System.Drawing.Color.White
-        Me.Rbtn3_Yes.CheckedState.InnerOffset = -4
-        Me.Rbtn3_Yes.Font = New System.Drawing.Font("Segoe UI Emoji", 14.25!)
-        Me.Rbtn3_Yes.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer))
-        Me.Rbtn3_Yes.Location = New System.Drawing.Point(82, 2)
-        Me.Rbtn3_Yes.Name = "Rbtn3_Yes"
-        Me.Rbtn3_Yes.Size = New System.Drawing.Size(54, 30)
-        Me.Rbtn3_Yes.TabIndex = 0
-        Me.Rbtn3_Yes.Text = " Si."
-        Me.Rbtn3_Yes.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
-        Me.Rbtn3_Yes.UncheckedState.BorderThickness = 3
-        Me.Rbtn3_Yes.UncheckedState.FillColor = System.Drawing.Color.White
-        Me.Rbtn3_Yes.UncheckedState.InnerColor = System.Drawing.Color.White
+        Me.Rbtn3_Yes_P_H.AccessibleDescription = "Rbtn3_Yes_P_H"
+        Me.Rbtn3_Yes_P_H.AccessibleName = "Rbtn3_Yes_P_H"
+        Me.Rbtn3_Yes_P_H.Animated = True
+        Me.Rbtn3_Yes_P_H.AutoSize = True
+        Me.Rbtn3_Yes_P_H.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(133, Byte), Integer))
+        Me.Rbtn3_Yes_P_H.CheckedState.BorderThickness = 0
+        Me.Rbtn3_Yes_P_H.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(133, Byte), Integer))
+        Me.Rbtn3_Yes_P_H.CheckedState.InnerColor = System.Drawing.Color.White
+        Me.Rbtn3_Yes_P_H.CheckedState.InnerOffset = -4
+        Me.Rbtn3_Yes_P_H.Font = New System.Drawing.Font("Segoe UI Emoji", 14.25!)
+        Me.Rbtn3_Yes_P_H.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer))
+        Me.Rbtn3_Yes_P_H.Location = New System.Drawing.Point(82, 2)
+        Me.Rbtn3_Yes_P_H.Name = "Rbtn3_Yes_P_H"
+        Me.Rbtn3_Yes_P_H.Size = New System.Drawing.Size(54, 30)
+        Me.Rbtn3_Yes_P_H.TabIndex = 0
+        Me.Rbtn3_Yes_P_H.Text = " Si."
+        Me.Rbtn3_Yes_P_H.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.Rbtn3_Yes_P_H.UncheckedState.BorderThickness = 3
+        Me.Rbtn3_Yes_P_H.UncheckedState.FillColor = System.Drawing.Color.White
+        Me.Rbtn3_Yes_P_H.UncheckedState.InnerColor = System.Drawing.Color.White
         '
         'Guna2PictureBox3
         '
@@ -1842,19 +1896,19 @@ Partial Class FrmHome
         Me.Guna2PictureBox3.TabIndex = 13
         Me.Guna2PictureBox3.TabStop = False
         '
-        'LblTxt2_Info
+        'LblTxt2_Info_P_H
         '
-        Me.LblTxt2_Info.AccessibleDescription = "LblTxt2_Info"
-        Me.LblTxt2_Info.AccessibleName = "LblTxt2_Info"
-        Me.LblTxt2_Info.BackColor = System.Drawing.Color.Transparent
-        Me.LblTxt2_Info.Font = New System.Drawing.Font("Segoe UI Emoji", 14.25!)
-        Me.LblTxt2_Info.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer))
-        Me.LblTxt2_Info.Location = New System.Drawing.Point(16, 314)
-        Me.LblTxt2_Info.Name = "LblTxt2_Info"
-        Me.LblTxt2_Info.Size = New System.Drawing.Size(506, 52)
-        Me.LblTxt2_Info.TabIndex = 14
-        Me.LblTxt2_Info.Text = "Fumo cigarrillos."
-        Me.LblTxt2_Info.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LblTxt2_Info_P_H.AccessibleDescription = "LblTxt2_Info_P_H"
+        Me.LblTxt2_Info_P_H.AccessibleName = "LblTxt2_Info_P_H"
+        Me.LblTxt2_Info_P_H.BackColor = System.Drawing.Color.Transparent
+        Me.LblTxt2_Info_P_H.Font = New System.Drawing.Font("Segoe UI Emoji", 14.25!)
+        Me.LblTxt2_Info_P_H.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer))
+        Me.LblTxt2_Info_P_H.Location = New System.Drawing.Point(16, 314)
+        Me.LblTxt2_Info_P_H.Name = "LblTxt2_Info_P_H"
+        Me.LblTxt2_Info_P_H.Size = New System.Drawing.Size(506, 52)
+        Me.LblTxt2_Info_P_H.TabIndex = 14
+        Me.LblTxt2_Info_P_H.Text = "Fumo cigarrillos."
+        Me.LblTxt2_Info_P_H.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Grpbx_Item2
         '
@@ -1863,9 +1917,9 @@ Partial Class FrmHome
         Me.Grpbx_Item2.BackColor = System.Drawing.Color.Transparent
         Me.Grpbx_Item2.BorderColor = System.Drawing.Color.Transparent
         Me.Grpbx_Item2.BorderThickness = 0
-        Me.Grpbx_Item2.Controls.Add(Me.Rbtn2_Idk)
-        Me.Grpbx_Item2.Controls.Add(Me.Rbtn2_No)
-        Me.Grpbx_Item2.Controls.Add(Me.Rbtn2_Yes)
+        Me.Grpbx_Item2.Controls.Add(Me.Rbtn2_Idk_P_H)
+        Me.Grpbx_Item2.Controls.Add(Me.Rbtn2_No_P_H)
+        Me.Grpbx_Item2.Controls.Add(Me.Rbtn2_Yes_P_H)
         Me.Grpbx_Item2.CustomBorderColor = System.Drawing.Color.Transparent
         Me.Grpbx_Item2.CustomBorderThickness = New System.Windows.Forms.Padding(0)
         Me.Grpbx_Item2.FillColor = System.Drawing.Color.Transparent
@@ -1877,74 +1931,74 @@ Partial Class FrmHome
         Me.Grpbx_Item2.Size = New System.Drawing.Size(381, 28)
         Me.Grpbx_Item2.TabIndex = 15
         '
-        'Rbtn2_Idk
+        'Rbtn2_Idk_P_H
         '
-        Me.Rbtn2_Idk.AccessibleDescription = "Rbtn2_Idk"
-        Me.Rbtn2_Idk.AccessibleName = "Rbtn2_Idk"
-        Me.Rbtn2_Idk.Animated = True
-        Me.Rbtn2_Idk.AutoSize = True
-        Me.Rbtn2_Idk.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(133, Byte), Integer))
-        Me.Rbtn2_Idk.CheckedState.BorderThickness = 0
-        Me.Rbtn2_Idk.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(133, Byte), Integer))
-        Me.Rbtn2_Idk.CheckedState.InnerColor = System.Drawing.Color.White
-        Me.Rbtn2_Idk.CheckedState.InnerOffset = -4
-        Me.Rbtn2_Idk.Font = New System.Drawing.Font("Segoe UI Emoji", 14.25!)
-        Me.Rbtn2_Idk.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer))
-        Me.Rbtn2_Idk.Location = New System.Drawing.Point(277, 0)
-        Me.Rbtn2_Idk.Name = "Rbtn2_Idk"
-        Me.Rbtn2_Idk.Size = New System.Drawing.Size(103, 30)
-        Me.Rbtn2_Idk.TabIndex = 2
-        Me.Rbtn2_Idk.Text = "No lo sé."
-        Me.Rbtn2_Idk.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
-        Me.Rbtn2_Idk.UncheckedState.BorderThickness = 3
-        Me.Rbtn2_Idk.UncheckedState.FillColor = System.Drawing.Color.White
-        Me.Rbtn2_Idk.UncheckedState.InnerColor = System.Drawing.Color.White
+        Me.Rbtn2_Idk_P_H.AccessibleDescription = "Rbtn2_Idk_P_H"
+        Me.Rbtn2_Idk_P_H.AccessibleName = "Rbtn2_Idk_P_H"
+        Me.Rbtn2_Idk_P_H.Animated = True
+        Me.Rbtn2_Idk_P_H.AutoSize = True
+        Me.Rbtn2_Idk_P_H.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(133, Byte), Integer))
+        Me.Rbtn2_Idk_P_H.CheckedState.BorderThickness = 0
+        Me.Rbtn2_Idk_P_H.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(133, Byte), Integer))
+        Me.Rbtn2_Idk_P_H.CheckedState.InnerColor = System.Drawing.Color.White
+        Me.Rbtn2_Idk_P_H.CheckedState.InnerOffset = -4
+        Me.Rbtn2_Idk_P_H.Font = New System.Drawing.Font("Segoe UI Emoji", 14.25!)
+        Me.Rbtn2_Idk_P_H.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer))
+        Me.Rbtn2_Idk_P_H.Location = New System.Drawing.Point(277, 0)
+        Me.Rbtn2_Idk_P_H.Name = "Rbtn2_Idk_P_H"
+        Me.Rbtn2_Idk_P_H.Size = New System.Drawing.Size(103, 30)
+        Me.Rbtn2_Idk_P_H.TabIndex = 2
+        Me.Rbtn2_Idk_P_H.Text = "No lo sé."
+        Me.Rbtn2_Idk_P_H.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.Rbtn2_Idk_P_H.UncheckedState.BorderThickness = 3
+        Me.Rbtn2_Idk_P_H.UncheckedState.FillColor = System.Drawing.Color.White
+        Me.Rbtn2_Idk_P_H.UncheckedState.InnerColor = System.Drawing.Color.White
         '
-        'Rbtn2_No
+        'Rbtn2_No_P_H
         '
-        Me.Rbtn2_No.AccessibleDescription = "Rbtn2_No"
-        Me.Rbtn2_No.AccessibleName = "Rbtn2_No"
-        Me.Rbtn2_No.Animated = True
-        Me.Rbtn2_No.AutoSize = True
-        Me.Rbtn2_No.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(133, Byte), Integer))
-        Me.Rbtn2_No.CheckedState.BorderThickness = 0
-        Me.Rbtn2_No.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(133, Byte), Integer))
-        Me.Rbtn2_No.CheckedState.InnerColor = System.Drawing.Color.White
-        Me.Rbtn2_No.CheckedState.InnerOffset = -4
-        Me.Rbtn2_No.Font = New System.Drawing.Font("Segoe UI Emoji", 14.25!)
-        Me.Rbtn2_No.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer))
-        Me.Rbtn2_No.Location = New System.Drawing.Point(176, 0)
-        Me.Rbtn2_No.Name = "Rbtn2_No"
-        Me.Rbtn2_No.Size = New System.Drawing.Size(64, 30)
-        Me.Rbtn2_No.TabIndex = 1
-        Me.Rbtn2_No.Text = " No."
-        Me.Rbtn2_No.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
-        Me.Rbtn2_No.UncheckedState.BorderThickness = 3
-        Me.Rbtn2_No.UncheckedState.FillColor = System.Drawing.Color.White
-        Me.Rbtn2_No.UncheckedState.InnerColor = System.Drawing.Color.White
+        Me.Rbtn2_No_P_H.AccessibleDescription = "Rbtn2_No_P_H"
+        Me.Rbtn2_No_P_H.AccessibleName = "Rbtn2_No_P_H"
+        Me.Rbtn2_No_P_H.Animated = True
+        Me.Rbtn2_No_P_H.AutoSize = True
+        Me.Rbtn2_No_P_H.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(133, Byte), Integer))
+        Me.Rbtn2_No_P_H.CheckedState.BorderThickness = 0
+        Me.Rbtn2_No_P_H.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(133, Byte), Integer))
+        Me.Rbtn2_No_P_H.CheckedState.InnerColor = System.Drawing.Color.White
+        Me.Rbtn2_No_P_H.CheckedState.InnerOffset = -4
+        Me.Rbtn2_No_P_H.Font = New System.Drawing.Font("Segoe UI Emoji", 14.25!)
+        Me.Rbtn2_No_P_H.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer))
+        Me.Rbtn2_No_P_H.Location = New System.Drawing.Point(176, 0)
+        Me.Rbtn2_No_P_H.Name = "Rbtn2_No_P_H"
+        Me.Rbtn2_No_P_H.Size = New System.Drawing.Size(64, 30)
+        Me.Rbtn2_No_P_H.TabIndex = 1
+        Me.Rbtn2_No_P_H.Text = " No."
+        Me.Rbtn2_No_P_H.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.Rbtn2_No_P_H.UncheckedState.BorderThickness = 3
+        Me.Rbtn2_No_P_H.UncheckedState.FillColor = System.Drawing.Color.White
+        Me.Rbtn2_No_P_H.UncheckedState.InnerColor = System.Drawing.Color.White
         '
-        'Rbtn2_Yes
+        'Rbtn2_Yes_P_H
         '
-        Me.Rbtn2_Yes.AccessibleDescription = "Rbtn2_Yes"
-        Me.Rbtn2_Yes.AccessibleName = "Rbtn2_Yes"
-        Me.Rbtn2_Yes.Animated = True
-        Me.Rbtn2_Yes.AutoSize = True
-        Me.Rbtn2_Yes.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(133, Byte), Integer))
-        Me.Rbtn2_Yes.CheckedState.BorderThickness = 0
-        Me.Rbtn2_Yes.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(133, Byte), Integer))
-        Me.Rbtn2_Yes.CheckedState.InnerColor = System.Drawing.Color.White
-        Me.Rbtn2_Yes.CheckedState.InnerOffset = -4
-        Me.Rbtn2_Yes.Font = New System.Drawing.Font("Segoe UI Emoji", 14.25!)
-        Me.Rbtn2_Yes.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer))
-        Me.Rbtn2_Yes.Location = New System.Drawing.Point(82, 2)
-        Me.Rbtn2_Yes.Name = "Rbtn2_Yes"
-        Me.Rbtn2_Yes.Size = New System.Drawing.Size(54, 30)
-        Me.Rbtn2_Yes.TabIndex = 0
-        Me.Rbtn2_Yes.Text = " Si."
-        Me.Rbtn2_Yes.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
-        Me.Rbtn2_Yes.UncheckedState.BorderThickness = 3
-        Me.Rbtn2_Yes.UncheckedState.FillColor = System.Drawing.Color.White
-        Me.Rbtn2_Yes.UncheckedState.InnerColor = System.Drawing.Color.White
+        Me.Rbtn2_Yes_P_H.AccessibleDescription = "Rbtn2_Yes_P_H"
+        Me.Rbtn2_Yes_P_H.AccessibleName = "Rbtn2_Yes_P_H"
+        Me.Rbtn2_Yes_P_H.Animated = True
+        Me.Rbtn2_Yes_P_H.AutoSize = True
+        Me.Rbtn2_Yes_P_H.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(133, Byte), Integer))
+        Me.Rbtn2_Yes_P_H.CheckedState.BorderThickness = 0
+        Me.Rbtn2_Yes_P_H.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(133, Byte), Integer))
+        Me.Rbtn2_Yes_P_H.CheckedState.InnerColor = System.Drawing.Color.White
+        Me.Rbtn2_Yes_P_H.CheckedState.InnerOffset = -4
+        Me.Rbtn2_Yes_P_H.Font = New System.Drawing.Font("Segoe UI Emoji", 14.25!)
+        Me.Rbtn2_Yes_P_H.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer))
+        Me.Rbtn2_Yes_P_H.Location = New System.Drawing.Point(82, 2)
+        Me.Rbtn2_Yes_P_H.Name = "Rbtn2_Yes_P_H"
+        Me.Rbtn2_Yes_P_H.Size = New System.Drawing.Size(54, 30)
+        Me.Rbtn2_Yes_P_H.TabIndex = 0
+        Me.Rbtn2_Yes_P_H.Text = " Si."
+        Me.Rbtn2_Yes_P_H.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.Rbtn2_Yes_P_H.UncheckedState.BorderThickness = 3
+        Me.Rbtn2_Yes_P_H.UncheckedState.FillColor = System.Drawing.Color.White
+        Me.Rbtn2_Yes_P_H.UncheckedState.InnerColor = System.Drawing.Color.White
         '
         'Guna2PictureBox2
         '
@@ -1957,43 +2011,47 @@ Partial Class FrmHome
         Me.Guna2PictureBox2.TabIndex = 7
         Me.Guna2PictureBox2.TabStop = False
         '
-        'Label4
+        'LblSubTitle1Patient_P_H
         '
-        Me.Label4.BackColor = System.Drawing.Color.Transparent
-        Me.Label4.Font = New System.Drawing.Font("Segoe UI Emoji", 14.25!)
-        Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(181, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(181, Byte), Integer))
-        Me.Label4.Location = New System.Drawing.Point(3, 146)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(1061, 35)
-        Me.Label4.TabIndex = 5
-        Me.Label4.Text = "Escoja una respuesta en cada fila." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
-        Me.Label4.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.LblSubTitle1Patient_P_H.AccessibleDescription = "LblSubTitle1Patient_P_H"
+        Me.LblSubTitle1Patient_P_H.AccessibleName = "LblSubTitle1Patient_P_H"
+        Me.LblSubTitle1Patient_P_H.BackColor = System.Drawing.Color.Transparent
+        Me.LblSubTitle1Patient_P_H.Font = New System.Drawing.Font("Segoe UI Emoji", 14.25!)
+        Me.LblSubTitle1Patient_P_H.ForeColor = System.Drawing.Color.FromArgb(CType(CType(181, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(181, Byte), Integer))
+        Me.LblSubTitle1Patient_P_H.Location = New System.Drawing.Point(3, 146)
+        Me.LblSubTitle1Patient_P_H.Name = "LblSubTitle1Patient_P_H"
+        Me.LblSubTitle1Patient_P_H.Size = New System.Drawing.Size(1061, 35)
+        Me.LblSubTitle1Patient_P_H.TabIndex = 5
+        Me.LblSubTitle1Patient_P_H.Text = "Escoja una respuesta en cada fila." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.LblSubTitle1Patient_P_H.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
-        'Label5
+        'LblTitle1Patient_P_H
         '
-        Me.Label5.BackColor = System.Drawing.Color.Transparent
-        Me.Label5.Font = New System.Drawing.Font("Segoe UI", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(0, 43)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(1064, 104)
-        Me.Label5.TabIndex = 6
-        Me.Label5.Text = "Por favor, seleccione todas las afirmaciones " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "que se apliquen a usted." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
-        Me.Label5.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.LblTitle1Patient_P_H.AccessibleDescription = "LblTitle1Patient_P_H"
+        Me.LblTitle1Patient_P_H.AccessibleName = "LblTitle1Patient_P_H"
+        Me.LblTitle1Patient_P_H.BackColor = System.Drawing.Color.Transparent
+        Me.LblTitle1Patient_P_H.Font = New System.Drawing.Font("Segoe UI", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblTitle1Patient_P_H.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer))
+        Me.LblTitle1Patient_P_H.Location = New System.Drawing.Point(0, 43)
+        Me.LblTitle1Patient_P_H.Name = "LblTitle1Patient_P_H"
+        Me.LblTitle1Patient_P_H.Size = New System.Drawing.Size(1064, 104)
+        Me.LblTitle1Patient_P_H.TabIndex = 6
+        Me.LblTitle1Patient_P_H.Text = "Por favor, seleccione todas las afirmaciones " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "que se apliquen a usted." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.LblTitle1Patient_P_H.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
-        'LblTxt1_Info
+        'LblTxt1_Info_P_H
         '
-        Me.LblTxt1_Info.AccessibleDescription = "LblTxt1_Info"
-        Me.LblTxt1_Info.AccessibleName = "LblTxt1_Info"
-        Me.LblTxt1_Info.BackColor = System.Drawing.Color.Transparent
-        Me.LblTxt1_Info.Font = New System.Drawing.Font("Segoe UI Emoji", 14.25!)
-        Me.LblTxt1_Info.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer))
-        Me.LblTxt1_Info.Location = New System.Drawing.Point(16, 259)
-        Me.LblTxt1_Info.Name = "LblTxt1_Info"
-        Me.LblTxt1_Info.Size = New System.Drawing.Size(506, 52)
-        Me.LblTxt1_Info.TabIndex = 8
-        Me.LblTxt1_Info.Text = "Tengo sobrepeso, o estoy obeso."
-        Me.LblTxt1_Info.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LblTxt1_Info_P_H.AccessibleDescription = "LblTxt1_Info_P_H"
+        Me.LblTxt1_Info_P_H.AccessibleName = "LblTxt1_Info_P_H"
+        Me.LblTxt1_Info_P_H.BackColor = System.Drawing.Color.Transparent
+        Me.LblTxt1_Info_P_H.Font = New System.Drawing.Font("Segoe UI Emoji", 14.25!)
+        Me.LblTxt1_Info_P_H.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer))
+        Me.LblTxt1_Info_P_H.Location = New System.Drawing.Point(16, 259)
+        Me.LblTxt1_Info_P_H.Name = "LblTxt1_Info_P_H"
+        Me.LblTxt1_Info_P_H.Size = New System.Drawing.Size(506, 52)
+        Me.LblTxt1_Info_P_H.TabIndex = 8
+        Me.LblTxt1_Info_P_H.Text = "Tengo sobrepeso, o estoy obeso."
+        Me.LblTxt1_Info_P_H.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Grpbx_Item1
         '
@@ -2002,9 +2060,9 @@ Partial Class FrmHome
         Me.Grpbx_Item1.BackColor = System.Drawing.Color.Transparent
         Me.Grpbx_Item1.BorderColor = System.Drawing.Color.Transparent
         Me.Grpbx_Item1.BorderThickness = 0
-        Me.Grpbx_Item1.Controls.Add(Me.Rbtn1_Idk)
-        Me.Grpbx_Item1.Controls.Add(Me.Rbtn1_No)
-        Me.Grpbx_Item1.Controls.Add(Me.Rbtn1_Yes)
+        Me.Grpbx_Item1.Controls.Add(Me.Rbtn1_Idk_P_H)
+        Me.Grpbx_Item1.Controls.Add(Me.Rbtn1_No_P_H)
+        Me.Grpbx_Item1.Controls.Add(Me.Rbtn1_Yes_P_H)
         Me.Grpbx_Item1.CustomBorderColor = System.Drawing.Color.Transparent
         Me.Grpbx_Item1.CustomBorderThickness = New System.Windows.Forms.Padding(0)
         Me.Grpbx_Item1.FillColor = System.Drawing.Color.Transparent
@@ -2016,83 +2074,83 @@ Partial Class FrmHome
         Me.Grpbx_Item1.Size = New System.Drawing.Size(381, 28)
         Me.Grpbx_Item1.TabIndex = 12
         '
-        'Rbtn1_Idk
+        'Rbtn1_Idk_P_H
         '
-        Me.Rbtn1_Idk.AccessibleDescription = "Rbtn1_Idk"
-        Me.Rbtn1_Idk.AccessibleName = "Rbtn1_Idk"
-        Me.Rbtn1_Idk.Animated = True
-        Me.Rbtn1_Idk.AutoSize = True
-        Me.Rbtn1_Idk.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(133, Byte), Integer))
-        Me.Rbtn1_Idk.CheckedState.BorderThickness = 0
-        Me.Rbtn1_Idk.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(133, Byte), Integer))
-        Me.Rbtn1_Idk.CheckedState.InnerColor = System.Drawing.Color.White
-        Me.Rbtn1_Idk.CheckedState.InnerOffset = -4
-        Me.Rbtn1_Idk.Font = New System.Drawing.Font("Segoe UI Emoji", 14.25!)
-        Me.Rbtn1_Idk.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer))
-        Me.Rbtn1_Idk.Location = New System.Drawing.Point(277, 0)
-        Me.Rbtn1_Idk.Name = "Rbtn1_Idk"
-        Me.Rbtn1_Idk.Size = New System.Drawing.Size(103, 30)
-        Me.Rbtn1_Idk.TabIndex = 2
-        Me.Rbtn1_Idk.Text = "No lo sé."
-        Me.Rbtn1_Idk.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
-        Me.Rbtn1_Idk.UncheckedState.BorderThickness = 3
-        Me.Rbtn1_Idk.UncheckedState.FillColor = System.Drawing.Color.White
-        Me.Rbtn1_Idk.UncheckedState.InnerColor = System.Drawing.Color.White
+        Me.Rbtn1_Idk_P_H.AccessibleDescription = "Rbtn1_Idk_P_H"
+        Me.Rbtn1_Idk_P_H.AccessibleName = "Rbtn1_Idk_P_H"
+        Me.Rbtn1_Idk_P_H.Animated = True
+        Me.Rbtn1_Idk_P_H.AutoSize = True
+        Me.Rbtn1_Idk_P_H.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(133, Byte), Integer))
+        Me.Rbtn1_Idk_P_H.CheckedState.BorderThickness = 0
+        Me.Rbtn1_Idk_P_H.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(133, Byte), Integer))
+        Me.Rbtn1_Idk_P_H.CheckedState.InnerColor = System.Drawing.Color.White
+        Me.Rbtn1_Idk_P_H.CheckedState.InnerOffset = -4
+        Me.Rbtn1_Idk_P_H.Font = New System.Drawing.Font("Segoe UI Emoji", 14.25!)
+        Me.Rbtn1_Idk_P_H.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer))
+        Me.Rbtn1_Idk_P_H.Location = New System.Drawing.Point(277, 0)
+        Me.Rbtn1_Idk_P_H.Name = "Rbtn1_Idk_P_H"
+        Me.Rbtn1_Idk_P_H.Size = New System.Drawing.Size(103, 30)
+        Me.Rbtn1_Idk_P_H.TabIndex = 2
+        Me.Rbtn1_Idk_P_H.Text = "No lo sé."
+        Me.Rbtn1_Idk_P_H.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.Rbtn1_Idk_P_H.UncheckedState.BorderThickness = 3
+        Me.Rbtn1_Idk_P_H.UncheckedState.FillColor = System.Drawing.Color.White
+        Me.Rbtn1_Idk_P_H.UncheckedState.InnerColor = System.Drawing.Color.White
         '
-        'Rbtn1_No
+        'Rbtn1_No_P_H
         '
-        Me.Rbtn1_No.AccessibleDescription = "Rbtn1_No"
-        Me.Rbtn1_No.AccessibleName = "Rbtn1_No"
-        Me.Rbtn1_No.Animated = True
-        Me.Rbtn1_No.AutoSize = True
-        Me.Rbtn1_No.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(133, Byte), Integer))
-        Me.Rbtn1_No.CheckedState.BorderThickness = 0
-        Me.Rbtn1_No.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(133, Byte), Integer))
-        Me.Rbtn1_No.CheckedState.InnerColor = System.Drawing.Color.White
-        Me.Rbtn1_No.CheckedState.InnerOffset = -4
-        Me.Rbtn1_No.Font = New System.Drawing.Font("Segoe UI Emoji", 14.25!)
-        Me.Rbtn1_No.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer))
-        Me.Rbtn1_No.Location = New System.Drawing.Point(176, 0)
-        Me.Rbtn1_No.Name = "Rbtn1_No"
-        Me.Rbtn1_No.Size = New System.Drawing.Size(64, 30)
-        Me.Rbtn1_No.TabIndex = 1
-        Me.Rbtn1_No.Text = " No."
-        Me.Rbtn1_No.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
-        Me.Rbtn1_No.UncheckedState.BorderThickness = 3
-        Me.Rbtn1_No.UncheckedState.FillColor = System.Drawing.Color.White
-        Me.Rbtn1_No.UncheckedState.InnerColor = System.Drawing.Color.White
+        Me.Rbtn1_No_P_H.AccessibleDescription = "Rbtn1_No_P_H"
+        Me.Rbtn1_No_P_H.AccessibleName = "Rbtn1_No_P_H"
+        Me.Rbtn1_No_P_H.Animated = True
+        Me.Rbtn1_No_P_H.AutoSize = True
+        Me.Rbtn1_No_P_H.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(133, Byte), Integer))
+        Me.Rbtn1_No_P_H.CheckedState.BorderThickness = 0
+        Me.Rbtn1_No_P_H.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(133, Byte), Integer))
+        Me.Rbtn1_No_P_H.CheckedState.InnerColor = System.Drawing.Color.White
+        Me.Rbtn1_No_P_H.CheckedState.InnerOffset = -4
+        Me.Rbtn1_No_P_H.Font = New System.Drawing.Font("Segoe UI Emoji", 14.25!)
+        Me.Rbtn1_No_P_H.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer))
+        Me.Rbtn1_No_P_H.Location = New System.Drawing.Point(176, 0)
+        Me.Rbtn1_No_P_H.Name = "Rbtn1_No_P_H"
+        Me.Rbtn1_No_P_H.Size = New System.Drawing.Size(64, 30)
+        Me.Rbtn1_No_P_H.TabIndex = 1
+        Me.Rbtn1_No_P_H.Text = " No."
+        Me.Rbtn1_No_P_H.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.Rbtn1_No_P_H.UncheckedState.BorderThickness = 3
+        Me.Rbtn1_No_P_H.UncheckedState.FillColor = System.Drawing.Color.White
+        Me.Rbtn1_No_P_H.UncheckedState.InnerColor = System.Drawing.Color.White
         '
-        'Rbtn1_Yes
+        'Rbtn1_Yes_P_H
         '
-        Me.Rbtn1_Yes.AccessibleDescription = "Rbtn1_Yes"
-        Me.Rbtn1_Yes.AccessibleName = "Rbtn1_Yes"
-        Me.Rbtn1_Yes.Animated = True
-        Me.Rbtn1_Yes.AutoSize = True
-        Me.Rbtn1_Yes.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(133, Byte), Integer))
-        Me.Rbtn1_Yes.CheckedState.BorderThickness = 0
-        Me.Rbtn1_Yes.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(133, Byte), Integer))
-        Me.Rbtn1_Yes.CheckedState.InnerColor = System.Drawing.Color.White
-        Me.Rbtn1_Yes.CheckedState.InnerOffset = -4
-        Me.Rbtn1_Yes.Font = New System.Drawing.Font("Segoe UI Emoji", 14.25!)
-        Me.Rbtn1_Yes.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer))
-        Me.Rbtn1_Yes.Location = New System.Drawing.Point(82, 2)
-        Me.Rbtn1_Yes.Name = "Rbtn1_Yes"
-        Me.Rbtn1_Yes.Size = New System.Drawing.Size(54, 30)
-        Me.Rbtn1_Yes.TabIndex = 0
-        Me.Rbtn1_Yes.Text = " Si."
-        Me.Rbtn1_Yes.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
-        Me.Rbtn1_Yes.UncheckedState.BorderThickness = 3
-        Me.Rbtn1_Yes.UncheckedState.FillColor = System.Drawing.Color.White
-        Me.Rbtn1_Yes.UncheckedState.InnerColor = System.Drawing.Color.White
+        Me.Rbtn1_Yes_P_H.AccessibleDescription = "Rbtn1_Yes_P_H"
+        Me.Rbtn1_Yes_P_H.AccessibleName = "Rbtn1_Yes_P_H"
+        Me.Rbtn1_Yes_P_H.Animated = True
+        Me.Rbtn1_Yes_P_H.AutoSize = True
+        Me.Rbtn1_Yes_P_H.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(133, Byte), Integer))
+        Me.Rbtn1_Yes_P_H.CheckedState.BorderThickness = 0
+        Me.Rbtn1_Yes_P_H.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(133, Byte), Integer))
+        Me.Rbtn1_Yes_P_H.CheckedState.InnerColor = System.Drawing.Color.White
+        Me.Rbtn1_Yes_P_H.CheckedState.InnerOffset = -4
+        Me.Rbtn1_Yes_P_H.Font = New System.Drawing.Font("Segoe UI Emoji", 14.25!)
+        Me.Rbtn1_Yes_P_H.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer))
+        Me.Rbtn1_Yes_P_H.Location = New System.Drawing.Point(82, 2)
+        Me.Rbtn1_Yes_P_H.Name = "Rbtn1_Yes_P_H"
+        Me.Rbtn1_Yes_P_H.Size = New System.Drawing.Size(54, 30)
+        Me.Rbtn1_Yes_P_H.TabIndex = 0
+        Me.Rbtn1_Yes_P_H.Text = " Si."
+        Me.Rbtn1_Yes_P_H.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.Rbtn1_Yes_P_H.UncheckedState.BorderThickness = 3
+        Me.Rbtn1_Yes_P_H.UncheckedState.FillColor = System.Drawing.Color.White
+        Me.Rbtn1_Yes_P_H.UncheckedState.InnerColor = System.Drawing.Color.White
         '
         'PnlIntro2
         '
         Me.PnlIntro2.AccessibleDescription = "PnlIntro2"
         Me.PnlIntro2.AccessibleName = "PnlIntro2"
         Me.PnlIntro2.BackgroundImage = Global.PatientApp.My.Resources.Resources.Panel__Type_1
-        Me.PnlIntro2.Controls.Add(Me.Guna2HtmlLabel1)
-        Me.PnlIntro2.Controls.Add(Me.Label1)
-        Me.PnlIntro2.Controls.Add(Me.BtnNext_Patient)
+        Me.PnlIntro2.Controls.Add(Me.LblTitleIntro2_P_H)
+        Me.PnlIntro2.Controls.Add(Me.LblInfo1Intro2_P_H)
+        Me.PnlIntro2.Controls.Add(Me.BtnNext_Patient_P_H)
         Me.PnlIntro2.Controls.Add(Me.PctbxTerms)
         Me.PnlIntro2.Location = New System.Drawing.Point(234, 0)
         Me.PnlIntro2.Name = "PnlIntro2"
@@ -2100,53 +2158,57 @@ Partial Class FrmHome
         Me.PnlIntro2.Size = New System.Drawing.Size(1064, 753)
         Me.PnlIntro2.TabIndex = 1
         '
-        'Guna2HtmlLabel1
+        'LblTitleIntro2_P_H
         '
-        Me.Guna2HtmlLabel1.AutoSize = False
-        Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Microsoft YaHei UI", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
-        Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(33, 259)
-        Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
-        Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(693, 52)
-        Me.Guna2HtmlLabel1.TabIndex = 2
-        Me.Guna2HtmlLabel1.Text = "Términos de licencia."
-        Me.Guna2HtmlLabel1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LblTitleIntro2_P_H.AccessibleDescription = "LblTitleIntro2_P_H"
+        Me.LblTitleIntro2_P_H.AccessibleName = "LblTitleIntro2_P_H"
+        Me.LblTitleIntro2_P_H.AutoSize = False
+        Me.LblTitleIntro2_P_H.BackColor = System.Drawing.Color.Transparent
+        Me.LblTitleIntro2_P_H.Font = New System.Drawing.Font("Microsoft YaHei UI", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblTitleIntro2_P_H.ForeColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.LblTitleIntro2_P_H.Location = New System.Drawing.Point(33, 259)
+        Me.LblTitleIntro2_P_H.Name = "LblTitleIntro2_P_H"
+        Me.LblTitleIntro2_P_H.Size = New System.Drawing.Size(693, 52)
+        Me.LblTitleIntro2_P_H.TabIndex = 2
+        Me.LblTitleIntro2_P_H.Text = "Términos de licencia."
+        Me.LblTitleIntro2_P_H.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label1
+        'LblInfo1Intro2_P_H
         '
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI Emoji", 14.25!)
-        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(28, 340)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(1018, 201)
-        Me.Label1.TabIndex = 4
-        Me.Label1.Text = resources.GetString("Label1.Text")
+        Me.LblInfo1Intro2_P_H.AccessibleDescription = "LblInfo1Intro2_P_H"
+        Me.LblInfo1Intro2_P_H.AccessibleName = "LblInfo1Intro2_P_H"
+        Me.LblInfo1Intro2_P_H.Font = New System.Drawing.Font("Segoe UI Emoji", 14.25!)
+        Me.LblInfo1Intro2_P_H.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer))
+        Me.LblInfo1Intro2_P_H.Location = New System.Drawing.Point(28, 340)
+        Me.LblInfo1Intro2_P_H.Name = "LblInfo1Intro2_P_H"
+        Me.LblInfo1Intro2_P_H.Size = New System.Drawing.Size(1018, 201)
+        Me.LblInfo1Intro2_P_H.TabIndex = 4
+        Me.LblInfo1Intro2_P_H.Text = resources.GetString("LblInfo1Intro2_P_H.Text")
         '
-        'BtnNext_Patient
+        'BtnNext_Patient_P_H
         '
-        Me.BtnNext_Patient.AccessibleDescription = "BtnNext_Patient"
-        Me.BtnNext_Patient.AccessibleName = "BtnNext_Patient"
-        Me.BtnNext_Patient.Animated = True
-        Me.BtnNext_Patient.BackColor = System.Drawing.Color.White
-        Me.BtnNext_Patient.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
-        Me.BtnNext_Patient.BorderRadius = 15
-        Me.BtnNext_Patient.BorderThickness = 2
-        Me.BtnNext_Patient.CheckedState.Parent = Me.BtnNext_Patient
-        Me.BtnNext_Patient.CustomImages.Parent = Me.BtnNext_Patient
-        Me.BtnNext_Patient.FillColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
-        Me.BtnNext_Patient.Font = New System.Drawing.Font("Microsoft YaHei UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnNext_Patient.ForeColor = System.Drawing.Color.White
-        Me.BtnNext_Patient.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
-        Me.BtnNext_Patient.HoverState.FillColor = System.Drawing.Color.White
-        Me.BtnNext_Patient.HoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
-        Me.BtnNext_Patient.HoverState.Parent = Me.BtnNext_Patient
-        Me.BtnNext_Patient.Location = New System.Drawing.Point(863, 674)
-        Me.BtnNext_Patient.Name = "BtnNext_Patient"
-        Me.BtnNext_Patient.ShadowDecoration.Parent = Me.BtnNext_Patient
-        Me.BtnNext_Patient.Size = New System.Drawing.Size(180, 60)
-        Me.BtnNext_Patient.TabIndex = 1
-        Me.BtnNext_Patient.Text = "SIGUIENTE"
+        Me.BtnNext_Patient_P_H.AccessibleDescription = "BtnNext_Patient_P_H"
+        Me.BtnNext_Patient_P_H.AccessibleName = "BtnNext_Patient_P_H"
+        Me.BtnNext_Patient_P_H.Animated = True
+        Me.BtnNext_Patient_P_H.BackColor = System.Drawing.Color.White
+        Me.BtnNext_Patient_P_H.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.BtnNext_Patient_P_H.BorderRadius = 15
+        Me.BtnNext_Patient_P_H.BorderThickness = 2
+        Me.BtnNext_Patient_P_H.CheckedState.Parent = Me.BtnNext_Patient_P_H
+        Me.BtnNext_Patient_P_H.CustomImages.Parent = Me.BtnNext_Patient_P_H
+        Me.BtnNext_Patient_P_H.FillColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.BtnNext_Patient_P_H.Font = New System.Drawing.Font("Microsoft YaHei UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnNext_Patient_P_H.ForeColor = System.Drawing.Color.White
+        Me.BtnNext_Patient_P_H.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.BtnNext_Patient_P_H.HoverState.FillColor = System.Drawing.Color.White
+        Me.BtnNext_Patient_P_H.HoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.BtnNext_Patient_P_H.HoverState.Parent = Me.BtnNext_Patient_P_H
+        Me.BtnNext_Patient_P_H.Location = New System.Drawing.Point(863, 674)
+        Me.BtnNext_Patient_P_H.Name = "BtnNext_Patient_P_H"
+        Me.BtnNext_Patient_P_H.ShadowDecoration.Parent = Me.BtnNext_Patient_P_H
+        Me.BtnNext_Patient_P_H.Size = New System.Drawing.Size(180, 60)
+        Me.BtnNext_Patient_P_H.TabIndex = 1
+        Me.BtnNext_Patient_P_H.Text = "SIGUIENTE"
         '
         'PctbxTerms
         '
@@ -2166,10 +2228,10 @@ Partial Class FrmHome
         Me.PnlIntro1.AccessibleDescription = "PnlIntro1"
         Me.PnlIntro1.AccessibleName = "PnlIntro1"
         Me.PnlIntro1.BackgroundImage = Global.PatientApp.My.Resources.Resources.Panel__Type_1
-        Me.PnlIntro1.Controls.Add(Me.Label3)
-        Me.PnlIntro1.Controls.Add(Me.Label2)
-        Me.PnlIntro1.Controls.Add(Me.Guna2HtmlLabel2)
-        Me.PnlIntro1.Controls.Add(Me.BtnNext_Intro2)
+        Me.PnlIntro1.Controls.Add(Me.LblInfo2Intro1_P_H)
+        Me.PnlIntro1.Controls.Add(Me.LblInfo1Intro1_P_H)
+        Me.PnlIntro1.Controls.Add(Me.LblTitleIntro_P_H)
+        Me.PnlIntro1.Controls.Add(Me.BtnNext_Intro2_P_H)
         Me.PnlIntro1.Controls.Add(Me.PctbxWelcome)
         Me.PnlIntro1.Location = New System.Drawing.Point(234, 0)
         Me.PnlIntro1.Name = "PnlIntro1"
@@ -2177,65 +2239,71 @@ Partial Class FrmHome
         Me.PnlIntro1.Size = New System.Drawing.Size(1064, 753)
         Me.PnlIntro1.TabIndex = 5
         '
-        'Label3
+        'LblInfo2Intro1_P_H
         '
-        Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.Font = New System.Drawing.Font("Segoe UI Emoji", 14.25!)
-        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(28, 439)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(1018, 201)
-        Me.Label3.TabIndex = 5
-        Me.Label3.Text = resources.GetString("Label3.Text")
+        Me.LblInfo2Intro1_P_H.AccessibleDescription = "LblInfo2Intro1_P_H"
+        Me.LblInfo2Intro1_P_H.AccessibleName = "LblInfo2Intro1_P_H"
+        Me.LblInfo2Intro1_P_H.BackColor = System.Drawing.Color.Transparent
+        Me.LblInfo2Intro1_P_H.Font = New System.Drawing.Font("Segoe UI Emoji", 14.25!)
+        Me.LblInfo2Intro1_P_H.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer))
+        Me.LblInfo2Intro1_P_H.Location = New System.Drawing.Point(28, 439)
+        Me.LblInfo2Intro1_P_H.Name = "LblInfo2Intro1_P_H"
+        Me.LblInfo2Intro1_P_H.Size = New System.Drawing.Size(1018, 201)
+        Me.LblInfo2Intro1_P_H.TabIndex = 5
+        Me.LblInfo2Intro1_P_H.Text = resources.GetString("LblInfo2Intro1_P_H.Text")
         '
-        'Label2
+        'LblInfo1Intro1_P_H
         '
-        Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI Emoji", 14.25!)
-        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(28, 340)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(1015, 89)
-        Me.Label2.TabIndex = 4
-        Me.Label2.Text = resources.GetString("Label2.Text")
+        Me.LblInfo1Intro1_P_H.AccessibleDescription = "LblInfo1Intro1_P_H"
+        Me.LblInfo1Intro1_P_H.AccessibleName = "LblInfo1Intro1_P_H"
+        Me.LblInfo1Intro1_P_H.BackColor = System.Drawing.Color.Transparent
+        Me.LblInfo1Intro1_P_H.Font = New System.Drawing.Font("Segoe UI Emoji", 14.25!)
+        Me.LblInfo1Intro1_P_H.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer))
+        Me.LblInfo1Intro1_P_H.Location = New System.Drawing.Point(28, 340)
+        Me.LblInfo1Intro1_P_H.Name = "LblInfo1Intro1_P_H"
+        Me.LblInfo1Intro1_P_H.Size = New System.Drawing.Size(1015, 89)
+        Me.LblInfo1Intro1_P_H.TabIndex = 4
+        Me.LblInfo1Intro1_P_H.Text = resources.GetString("LblInfo1Intro1_P_H.Text")
         '
-        'Guna2HtmlLabel2
+        'LblTitleIntro_P_H
         '
-        Me.Guna2HtmlLabel2.AutoSize = False
-        Me.Guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2HtmlLabel2.Font = New System.Drawing.Font("Microsoft YaHei UI", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2HtmlLabel2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
-        Me.Guna2HtmlLabel2.Location = New System.Drawing.Point(33, 244)
-        Me.Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
-        Me.Guna2HtmlLabel2.Size = New System.Drawing.Size(663, 52)
-        Me.Guna2HtmlLabel2.TabIndex = 2
-        Me.Guna2HtmlLabel2.Text = "¡Hola!"
-        Me.Guna2HtmlLabel2.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LblTitleIntro_P_H.AccessibleDescription = "LblTitleIntro_P_H"
+        Me.LblTitleIntro_P_H.AccessibleName = "LblTitleIntro_P_H"
+        Me.LblTitleIntro_P_H.AutoSize = False
+        Me.LblTitleIntro_P_H.BackColor = System.Drawing.Color.Transparent
+        Me.LblTitleIntro_P_H.Font = New System.Drawing.Font("Microsoft YaHei UI", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblTitleIntro_P_H.ForeColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.LblTitleIntro_P_H.Location = New System.Drawing.Point(33, 244)
+        Me.LblTitleIntro_P_H.Name = "LblTitleIntro_P_H"
+        Me.LblTitleIntro_P_H.Size = New System.Drawing.Size(663, 52)
+        Me.LblTitleIntro_P_H.TabIndex = 2
+        Me.LblTitleIntro_P_H.Text = "¡Hola!"
+        Me.LblTitleIntro_P_H.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'BtnNext_Intro2
+        'BtnNext_Intro2_P_H
         '
-        Me.BtnNext_Intro2.AccessibleDescription = "BtnNext_Intro2"
-        Me.BtnNext_Intro2.AccessibleName = "BtnNext_Intro2"
-        Me.BtnNext_Intro2.Animated = True
-        Me.BtnNext_Intro2.BackColor = System.Drawing.Color.White
-        Me.BtnNext_Intro2.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
-        Me.BtnNext_Intro2.BorderRadius = 15
-        Me.BtnNext_Intro2.BorderThickness = 2
-        Me.BtnNext_Intro2.CheckedState.Parent = Me.BtnNext_Intro2
-        Me.BtnNext_Intro2.CustomImages.Parent = Me.BtnNext_Intro2
-        Me.BtnNext_Intro2.FillColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
-        Me.BtnNext_Intro2.Font = New System.Drawing.Font("Microsoft YaHei UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnNext_Intro2.ForeColor = System.Drawing.Color.White
-        Me.BtnNext_Intro2.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
-        Me.BtnNext_Intro2.HoverState.FillColor = System.Drawing.Color.White
-        Me.BtnNext_Intro2.HoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
-        Me.BtnNext_Intro2.HoverState.Parent = Me.BtnNext_Intro2
-        Me.BtnNext_Intro2.Location = New System.Drawing.Point(863, 674)
-        Me.BtnNext_Intro2.Name = "BtnNext_Intro2"
-        Me.BtnNext_Intro2.ShadowDecoration.Parent = Me.BtnNext_Intro2
-        Me.BtnNext_Intro2.Size = New System.Drawing.Size(180, 60)
-        Me.BtnNext_Intro2.TabIndex = 1
-        Me.BtnNext_Intro2.Text = "EMPEZAR"
+        Me.BtnNext_Intro2_P_H.AccessibleDescription = "BtnNext_Intro2_P_H"
+        Me.BtnNext_Intro2_P_H.AccessibleName = "BtnNext_Intro2_P_H"
+        Me.BtnNext_Intro2_P_H.Animated = True
+        Me.BtnNext_Intro2_P_H.BackColor = System.Drawing.Color.White
+        Me.BtnNext_Intro2_P_H.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.BtnNext_Intro2_P_H.BorderRadius = 15
+        Me.BtnNext_Intro2_P_H.BorderThickness = 2
+        Me.BtnNext_Intro2_P_H.CheckedState.Parent = Me.BtnNext_Intro2_P_H
+        Me.BtnNext_Intro2_P_H.CustomImages.Parent = Me.BtnNext_Intro2_P_H
+        Me.BtnNext_Intro2_P_H.FillColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.BtnNext_Intro2_P_H.Font = New System.Drawing.Font("Microsoft YaHei UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnNext_Intro2_P_H.ForeColor = System.Drawing.Color.White
+        Me.BtnNext_Intro2_P_H.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.BtnNext_Intro2_P_H.HoverState.FillColor = System.Drawing.Color.White
+        Me.BtnNext_Intro2_P_H.HoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.BtnNext_Intro2_P_H.HoverState.Parent = Me.BtnNext_Intro2_P_H
+        Me.BtnNext_Intro2_P_H.Location = New System.Drawing.Point(863, 674)
+        Me.BtnNext_Intro2_P_H.Name = "BtnNext_Intro2_P_H"
+        Me.BtnNext_Intro2_P_H.ShadowDecoration.Parent = Me.BtnNext_Intro2_P_H
+        Me.BtnNext_Intro2_P_H.Size = New System.Drawing.Size(180, 60)
+        Me.BtnNext_Intro2_P_H.TabIndex = 1
+        Me.BtnNext_Intro2_P_H.Text = "EMPEZAR"
         '
         'PctbxWelcome
         '
@@ -2252,6 +2320,15 @@ Partial Class FrmHome
         Me.PctbxWelcome.TabIndex = 0
         Me.PctbxWelcome.TabStop = False
         '
+
+        'TimerRequest
+        '
+        Me.TimerRequest.Interval = 1000
+        '
+        'TimerChat
+        '
+        Me.TimerChat.Interval = 1000
+        '
         'FrmHome
         '
         Me.AccessibleDescription = "FrmHome"
@@ -2261,9 +2338,9 @@ Partial Class FrmHome
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1299, 754)
         Me.ControlBox = False
-        Me.Controls.Add(Me.PnlChat)
         Me.Controls.Add(Me.PnlResult)
         Me.Controls.Add(Me.PnlSymptom)
+        Me.Controls.Add(Me.PnlChat)
         Me.Controls.Add(Me.PnlPatient)
         Me.Controls.Add(Me.PnlIntro2)
         Me.Controls.Add(Me.PnlIntro1)
@@ -2335,7 +2412,7 @@ Partial Class FrmHome
     Friend WithEvents PnlLeft As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Pctbx1_Intro As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents Line1_Intro As Guna.UI2.WinForms.Guna2PictureBox
-    Friend WithEvents Lbl1_Intro As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents Lbl1_Intro_P_H As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents ElipseHome As Guna.UI2.WinForms.Guna2Elipse
     Friend WithEvents Pctbx5_Chat As Guna.UI2.WinForms.Guna2PictureBox
@@ -2343,109 +2420,109 @@ Partial Class FrmHome
     Friend WithEvents Pctbx3_Symptom As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents Pctbx2_Patient As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents Line5_Chat As Guna.UI2.WinForms.Guna2PictureBox
-    Friend WithEvents Lbl5_Chat As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents Lbl5_Chat_P_H As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Line4_Result As Guna.UI2.WinForms.Guna2PictureBox
-    Friend WithEvents Lbl4_Result As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents Lbl4_Result_P_H As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Line3_Symptom As Guna.UI2.WinForms.Guna2PictureBox
-    Friend WithEvents Lbl3_Symptom As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents Lbl3_Symptom_P_H As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Line2_Patient As Guna.UI2.WinForms.Guna2PictureBox
-    Friend WithEvents Lbl2_Patient As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents Lbl2_Patient_P_H As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents PnlIntro2 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents BtnNext_Patient As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents BtnNext_Patient_P_H As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents PctbxTerms As Guna.UI2.WinForms.Guna2PictureBox
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Guna2HtmlLabel1 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents LblInfo1Intro2_P_H As Label
+    Friend WithEvents LblTitleIntro2_P_H As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents PnlIntro1 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Guna2HtmlLabel2 As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents BtnNext_Intro2 As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents LblInfo2Intro1_P_H As Label
+    Friend WithEvents LblInfo1Intro1_P_H As Label
+    Friend WithEvents LblTitleIntro_P_H As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents BtnNext_Intro2_P_H As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents PctbxWelcome As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents PnlPatient As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label5 As Label
-    Friend WithEvents LblTxt1_Info As Label
+    Friend WithEvents LblSubTitle1Patient_P_H As Label
+    Friend WithEvents LblTitle1Patient_P_H As Label
+    Friend WithEvents LblTxt1_Info_P_H As Label
     Friend WithEvents Grpbx_Item1 As Guna.UI2.WinForms.Guna2GroupBox
-    Friend WithEvents Rbtn1_Yes As Guna.UI2.WinForms.Guna2RadioButton
-    Friend WithEvents Rbtn1_Idk As Guna.UI2.WinForms.Guna2RadioButton
-    Friend WithEvents Rbtn1_No As Guna.UI2.WinForms.Guna2RadioButton
+    Friend WithEvents Rbtn1_Yes_P_H As Guna.UI2.WinForms.Guna2RadioButton
+    Friend WithEvents Rbtn1_Idk_P_H As Guna.UI2.WinForms.Guna2RadioButton
+    Friend WithEvents Rbtn1_No_P_H As Guna.UI2.WinForms.Guna2RadioButton
     Friend WithEvents Guna2PictureBox2 As Guna.UI2.WinForms.Guna2PictureBox
-    Friend WithEvents BtnBack_Intro2 As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents BtnNext_Symptom1 As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents BtnBack_Intro2_P_H As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents BtnNext_Symptom1_P_H As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2PictureBox7 As Guna.UI2.WinForms.Guna2PictureBox
-    Friend WithEvents LblTxt6_Info As Label
+    Friend WithEvents LblTxt6_Info_P_H As Label
     Friend WithEvents Grpbx_Item6 As Guna.UI2.WinForms.Guna2GroupBox
-    Friend WithEvents Rbtn6_Idk As Guna.UI2.WinForms.Guna2RadioButton
+    Friend WithEvents Rbtn6_Idk_P_H As Guna.UI2.WinForms.Guna2RadioButton
     Friend WithEvents Rbtn6_No As Guna.UI2.WinForms.Guna2RadioButton
-    Friend WithEvents Rbtn6_Yes As Guna.UI2.WinForms.Guna2RadioButton
+    Friend WithEvents Rbtn6_Yes_P_H As Guna.UI2.WinForms.Guna2RadioButton
     Friend WithEvents Guna2PictureBox6 As Guna.UI2.WinForms.Guna2PictureBox
-    Friend WithEvents LblTxt5_Info As Label
+    Friend WithEvents LblTxt5_Info_P_H As Label
     Friend WithEvents Grpbx_Item5 As Guna.UI2.WinForms.Guna2GroupBox
-    Friend WithEvents Rbtn5_Idk As Guna.UI2.WinForms.Guna2RadioButton
-    Friend WithEvents Rbtn5_No As Guna.UI2.WinForms.Guna2RadioButton
-    Friend WithEvents Rbtn5_Yes As Guna.UI2.WinForms.Guna2RadioButton
+    Friend WithEvents Rbtn5_Idk_P_H As Guna.UI2.WinForms.Guna2RadioButton
+    Friend WithEvents Rbtn5_No_P_H As Guna.UI2.WinForms.Guna2RadioButton
+    Friend WithEvents Rbtn5_Yes_P_H As Guna.UI2.WinForms.Guna2RadioButton
     Friend WithEvents Guna2PictureBox5 As Guna.UI2.WinForms.Guna2PictureBox
-    Friend WithEvents LblTxt4_Info As Label
+    Friend WithEvents LblTxt4_Info_P_H As Label
     Friend WithEvents Grpbx_Item4 As Guna.UI2.WinForms.Guna2GroupBox
-    Friend WithEvents Rbtn4_Idk As Guna.UI2.WinForms.Guna2RadioButton
-    Friend WithEvents Rbtn4_No As Guna.UI2.WinForms.Guna2RadioButton
-    Friend WithEvents Rbtn4_Yes As Guna.UI2.WinForms.Guna2RadioButton
+    Friend WithEvents Rbtn4_Idk_P_H As Guna.UI2.WinForms.Guna2RadioButton
+    Friend WithEvents Rbtn4_No_P_H As Guna.UI2.WinForms.Guna2RadioButton
+    Friend WithEvents Rbtn4_Yes_P_H As Guna.UI2.WinForms.Guna2RadioButton
     Friend WithEvents Guna2PictureBox4 As Guna.UI2.WinForms.Guna2PictureBox
-    Friend WithEvents LblTxt3_Info As Label
+    Friend WithEvents LblTxt3_Info_P_H As Label
     Friend WithEvents Grpbx_Item3 As Guna.UI2.WinForms.Guna2GroupBox
-    Friend WithEvents Rbtn3_Idk As Guna.UI2.WinForms.Guna2RadioButton
-    Friend WithEvents Rbtn3_No As Guna.UI2.WinForms.Guna2RadioButton
-    Friend WithEvents Rbtn3_Yes As Guna.UI2.WinForms.Guna2RadioButton
+    Friend WithEvents Rbtn3_Idk_P_H As Guna.UI2.WinForms.Guna2RadioButton
+    Friend WithEvents Rbtn3_No_P_H As Guna.UI2.WinForms.Guna2RadioButton
+    Friend WithEvents Rbtn3_Yes_P_H As Guna.UI2.WinForms.Guna2RadioButton
     Friend WithEvents Guna2PictureBox3 As Guna.UI2.WinForms.Guna2PictureBox
-    Friend WithEvents LblTxt2_Info As Label
+    Friend WithEvents LblTxt2_Info_P_H As Label
     Friend WithEvents Grpbx_Item2 As Guna.UI2.WinForms.Guna2GroupBox
-    Friend WithEvents Rbtn2_Idk As Guna.UI2.WinForms.Guna2RadioButton
-    Friend WithEvents Rbtn2_No As Guna.UI2.WinForms.Guna2RadioButton
-    Friend WithEvents Rbtn2_Yes As Guna.UI2.WinForms.Guna2RadioButton
+    Friend WithEvents Rbtn2_Idk_P_H As Guna.UI2.WinForms.Guna2RadioButton
+    Friend WithEvents Rbtn2_No_P_H As Guna.UI2.WinForms.Guna2RadioButton
+    Friend WithEvents Rbtn2_Yes_P_H As Guna.UI2.WinForms.Guna2RadioButton
     Friend WithEvents PnlSymptom As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents BtnBack_Patient1 As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents BtnNext_Result As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents Label6 As Label
-    Friend WithEvents Label7 As Label
+    Friend WithEvents BtnBack_Patient1_P_H As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents BtnNext_Result_P_H As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents LblSubTitle1Symp_P_H As Label
+    Friend WithEvents LblTitle1Symp_P_H As Label
     Friend WithEvents Guna2Panel2 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents BtnForeText1 As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents CbxSysSymptoms As Guna.UI2.WinForms.Guna2ComboBox
-    Friend WithEvents BtnDropPathology As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents BtnDropPathology_P_H As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents LbxSufferedPatient As ListBox
     Friend WithEvents PnlResult As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents BtnEnd As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents BtnEnd_P_H As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents PnlResultItems As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents LblChat As Label
+    Friend WithEvents LblChat_P_H As Label
     Friend WithEvents LblResultUrgent As Label
     Friend WithEvents PnlColorInfo As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Guna2PictureBox8 As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents ElipsePnlResult As Guna.UI2.WinForms.Guna2Elipse
     Friend WithEvents PnlSubPath As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents LblResultInfoo As Label
-    Friend WithEvents LblResults As Label
+    Friend WithEvents LblResultInfoo_P_H As Label
+    Friend WithEvents LblResults_P_H As Label
     Friend WithEvents ElipsePnlSubPath As Guna.UI2.WinForms.Guna2Elipse
     Friend WithEvents PnlHeader As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents Label8 As Label
+    Friend WithEvents LblResultsTitle_P_H As Label
     Friend WithEvents PnlHead As Guna.UI2.WinForms.Guna2Elipse
     Friend WithEvents DgvPhatologies As Guna.UI2.WinForms.Guna2DataGridView
     Friend WithEvents AnimateHome As Guna.UI2.WinForms.Guna2AnimateWindow
     Friend WithEvents DragCtrl As Guna.UI2.WinForms.Guna2DragControl
-    Friend WithEvents Label10 As Label
-    Friend WithEvents Label9 As Label
+    Friend WithEvents LblSubTitle2Symp_P_H As Label
+    Friend WithEvents LblTitle2Symp_P_H As Label
     Friend WithEvents Guna2PictureBox11 As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents Guna2PictureBox10 As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents PnlPetition As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents BtnSendChatP As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents BtnSendChatP_P_H As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents BtnCancelPetition As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents ElipsePnlRequest As Guna.UI2.WinForms.Guna2Elipse
-    Friend WithEvents LblPetitionInfo As Label
+    Friend WithEvents LblPetitionInfo_P_H As Label
     Friend WithEvents PctbxPetition As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents PnlChat As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents ElipseChat As Guna.UI2.WinForms.Guna2Elipse
     Friend WithEvents PnlTittleChat As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents LblMedic As Label
-    Friend WithEvents Label12 As Label
+    Friend WithEvents LblTitleNameMedic_P_H As Label
     Friend WithEvents TxtChatSend As TextBox
     Friend WithEvents BtnSend As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button

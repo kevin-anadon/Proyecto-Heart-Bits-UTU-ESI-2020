@@ -222,7 +222,7 @@ Public Class FrmHome
     End Sub
 
     Private Sub FrmHome_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Medic = FrmLogin.MedicLog
+        Medic = FrmLogin.MedicLogged
         LblName.Text = MedicName
         LblCi.Text = Ci
         LblAge.Text = Age

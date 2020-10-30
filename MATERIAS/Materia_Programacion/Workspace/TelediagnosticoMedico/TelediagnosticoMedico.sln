@@ -15,6 +15,11 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "PatientApp", "PatientApp\Pa
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "MedicApp", "MedicApp\MedicApp.vbproj", "{0AEEB590-CEF5-44B4-A05F-625A86E769DC}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C8D0CDDB-35EF-4014-AAAD-5902CADBEC09}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

@@ -12,4 +12,5 @@
         Me.speciality = speciality
     End Sub 'Full Constructor
 
+
 End Class 'Medic

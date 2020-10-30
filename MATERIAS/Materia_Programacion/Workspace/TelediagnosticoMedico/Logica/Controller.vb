@@ -1,136 +1,197 @@
 ﻿Imports Persistencia
 Imports Data
 
-Public Class Controller
+Public Class Controller 'Logic
     'Atributos
     Private ReadOnly CQConnection As New DataBaseConn()
     Public Shared Property Instance As New Controller
     Private Property idRoom As Integer = 0
+
+
     'Herramientas de conexión
     Public Sub TryConnection()
         Try
             CQConnection.TryConnection()
         Catch ex As Exception
-            Throw New Exception(ex.Message)
+            Throw ex
         End Try
     End Sub
 
 
-    'Conexión Otros
+    'Conexión Chat
     Public Sub SetRoom(id As Integer)
-        idRoom = id
+        Me.idRoom = id
     End Sub
     Public Function ObtainRoom() As Integer
-        Return idRoom
+        Return Me.idRoom
     End Function
     Public Function ObtainRoomMed() As Integer
         Try
             Return CQConnection.ObtainRoomMed()
         Catch ex As Exception
-            Throw New Exception(ex.Message)
+            Throw ex
         End Try
     End Function
-    Public Function CreateRoom() As Integer
-        Try
-            Return CQConnection.CreateRoom()
-        Catch ex As Exception
-            Throw New Exception(ex.Message)
-        End Try
-    End Function
-    Public Sub SendMessage(id As Integer, idRoom As Integer, msg As String, Hour As String)
-        Try
-            CQConnection.SendMessage(id, idRoom, msg, Hour)
-        Catch ex As Exception
-            Throw New Exception(ex.Message)
-        End Try
-    End Sub
     Public Function ObtainMessages(id As Integer, idRoom As Integer) As List(Of Message)
         Try
             Return CQConnection.ObtainMessages(id, idRoom)
         Catch ex As Exception
-            Throw New Exception(ex.Message)
+            Throw ex
         End Try
     End Function
     Public Function ObtainRequestsDataSet() As DataSet
         Try
             Return CQConnection.ObtainRequestsDataSet()
         Catch ex As Exception
-            Throw New Exception(ex.Message)
+            Throw ex
         End Try
     End Function
+    Public Function ObtainTalkingMed(idPatient As Integer, dateI As String) As Medic
+        Try
+            Return CQConnection.ObtainTalkingMed(idPatient, dateI)
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Function
+    Public Function CreateRoom() As Integer
+        Try
+            Return CQConnection.CreateRoom()
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Function
+    Public Sub SendMessage(id As Integer, idRoom As Integer, msg As String, Hour As String)
+        Try
+            CQConnection.SendMessage(id, idRoom, msg, Hour)
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Sub
     Public Sub AcceptRequest(idMed As Integer, idPatient As Integer, dateI As String, dateF As String)
         Try
             CQConnection.AcceptRequest(idMed, idPatient, dateI, dateF)
         Catch ex As Exception
-            Throw New Exception(ex.Message)
+            Throw ex
         End Try
     End Sub
     Public Sub WaitingAccept(idPatient As Integer, dateI As String)
         Try
             CQConnection.WaitingAccept(idPatient, dateI)
         Catch ex As Exception
-            Throw New Exception(ex.Message)
+            Throw ex
         End Try
     End Sub
-    Public Function ObtainTalkingMed(idPatient As Integer, dateI As String) As Medic
+    Public Function MakePetition(idPatient As Integer, motive As String, datetI As String, datetF As String) As Boolean
         Try
-            Return CQConnection.ObtainTalkingMed(idPatient, dateI)
+            Return CQConnection.MakePetition(idPatient, motive, datetI, datetF)
         Catch ex As Exception
-            Throw New Exception(ex.Message)
+            Throw ex
         End Try
     End Function
-    Public Function MakePetition(idPatient As Integer, motive As String, datetI As String, datetF As String) As Boolean
-        Return CQConnection.MakePetition(idPatient, motive, datetI, datetF)
-    End Function
     Public Function StopPetition(idPatient As Integer, motive As String, datetI As String, datetF As String) As Boolean
-        Return CQConnection.StopPetition(idPatient, motive, datetI, datetF)
+        Try
+            Return CQConnection.StopPetition(idPatient, motive, datetI, datetF)
+        Catch ex As Exception
+            Throw ex
+        End Try
+
+    End Function
+
+
+    'Conexión Otros
+    Public Function GetNowDateTime(prefix As Short) As String
+        Select Case prefix
+            Case 1 'Devuelve 'YYYY-MM-DD HH:MM:SS'
+                Dim nowDate As String = Now.ToString("yyy-MM-dd")
+                Dim nowHMS As String = Now.ToLongTimeString
+                Return nowDate + " " + nowHMS
+            Case 2 'Devuelve 'YYYY-MM-DD'
+                Return Now.ToString("yyy-MM-dd")
+            Case 3
+                Return Now.ToString("yyy")
+            Case Else
+                Return Nothing
+        End Select
     End Function
     Public Function ObtainRegions() As List(Of Region)
-        Return CQConnection.ObtainRegions()
+        Try
+            Return CQConnection.ObtainRegions()
+        Catch ex As Exception
+            Throw ex
+        End Try
     End Function
     Public Function ObtainCities() As List(Of City)
-        Return CQConnection.ObtainCities()
+        Try
+            Return CQConnection.ObtainCities()
+        Catch ex As Exception
+            Throw ex
+        End Try
     End Function
     Public Function ObtainPriorities() As List(Of Priority)
-        Return CQConnection.ObtainPriorities()
+        Try
+            Return CQConnection.ObtainPriorities()
+        Catch ex As Exception
+            Throw ex
+        End Try
     End Function
     Public Function ObtainKindPath() As List(Of KindPath)
         Try
             Return CQConnection.ObtainKindPath()
         Catch ex As Exception
-            Throw New Exception(ex.Message)
+            Throw ex
         End Try
-        Return Nothing
     End Function
     Public Function ObtainMortalityPath(pat As String) As Integer
-        Return CQConnection.ObtainMortalityPath(pat)
+        Try
+            Return CQConnection.ObtainMortalityPath(pat)
+        Catch ex As Exception
+            Throw ex
+        End Try
     End Function
     Public Function ObtainSpecialities() As List(Of String)
-        Return CQConnection.ObtainSpecialities()
+        Try
+            Return CQConnection.ObtainSpecialities()
+        Catch ex As Exception
+            Throw ex
+        End Try
     End Function
     Public Function ObtainTreatments(pat As String) As List(Of Treatment)
-        Return CQConnection.ObtainTreatments(pat)
+        Try
+            Return CQConnection.ObtainTreatments(pat)
+        Catch ex As Exception
+            Throw ex
+        End Try
     End Function
     Public Function ObtainTreatmentsAll() As List(Of Treatment)
-        Return CQConnection.ObtainTreatmentsAll()
+        Try
+            Return CQConnection.ObtainTreatmentsAll()
+        Catch ex As Exception
+            Throw ex
+        End Try
     End Function
     Public Function ObtainTreatmentsForMod(idPath As Integer) As List(Of Treatment)
         Try
             Return CQConnection.ObtainTreatmentsForMod(idPath)
         Catch ex As Exception
-            Throw New Exception(ex.Message)
+            Throw ex
         End Try
-        Return Nothing
     End Function
-
 
 
     'Conexión Patológias
     Public Function ObtainPath() As List(Of Pathology)
-        Return CQConnection.ObtainPath()
+        Try
+            Return CQConnection.ObtainPath()
+        Catch ex As Exception
+            Throw ex
+        End Try
     End Function
     Public Function ObtainPathForSymptoms(Sympt As String) As List(Of Pathology)
-        Return CQConnection.ObtainPathForSymptoms(Sympt)
+        Try
+            Return CQConnection.ObtainPathForSymptoms(Sympt)
+        Catch ex As Exception
+            Throw ex
+        End Try
     End Function
     Public Function ObtainPathsDataSet() As DataSet
         Try
@@ -138,7 +199,6 @@ Public Class Controller
         Catch ex As Exception
             Console.WriteLine(ex.ToString())
         End Try
-        Return Nothing
     End Function
     Public Function ObtainPathForMod(NamePath As String) As Pathology
         Try
@@ -146,20 +206,19 @@ Public Class Controller
         Catch ex As Exception
             Console.WriteLine(ex.ToString())
         End Try
-        Return Nothing
     End Function
     Public Sub AddPathology(Path As Pathology, Treatments As List(Of Treatment))
         Try
             CQConnection.AddPathology(Path, Treatments)
         Catch ex As Exception
-            Throw New Exception(ex.Message)
+            Throw ex
         End Try
     End Sub
     Public Sub DeletePathology(idPath As Integer)
         Try
             CQConnection.DeletePathology(idPath)
         Catch ex As Exception
-            Throw New Exception(ex.Message)
+            Throw ex
         End Try
     End Sub
     Public Function SearchPathology(NamePath As String) As DataSet
@@ -168,7 +227,6 @@ Public Class Controller
         Catch ex As Exception
             Console.WriteLine(ex.ToString())
         End Try
-        Return Nothing
     End Function
     Public Function CheckUpdatePathology(Path As Pathology, Treatments As List(Of Treatment)) As Integer
         Dim checkPat As Boolean = False
@@ -188,7 +246,6 @@ Public Class Controller
             Next
         Next
 
-
         If checkPat = True And checkTreat = True Then
             check = 4
         ElseIf checkPat = True And checkTreat = False Then
@@ -203,14 +260,25 @@ Public Class Controller
         Try
             CQConnection.UpdatePathology(Path, Treatments)
         Catch ex As Exception
-            Throw New Exception(ex.Message)
+            Throw ex
         End Try
     End Sub
 
 
     'Conexión Síntomas
+    Public Function ObtainIdSymptoms(desc As List(Of String), idPathology As Integer) As List(Of String)
+        Try
+            Return CQConnection.ObtainIdSymptoms(desc, idPathology)
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Function
     Public Function ObtainSymptoms() As List(Of Symptom)
-        Return CQConnection.ObtainSymptoms
+        Try
+            Return CQConnection.ObtainSymptoms
+        Catch ex As Exception
+            Throw ex
+        End Try
     End Function
     Public Function ObtainSymptomsDataSet() As DataSet
         Try
@@ -218,54 +286,69 @@ Public Class Controller
         Catch ex As Exception
             Console.WriteLine(ex.ToString())
         End Try
-        Return Nothing
     End Function
     Public Sub AddSymptoms(Sympt As Symptom, Paths As List(Of Pathology))
         Try
             CQConnection.AddSymptoms(Sympt, Paths)
         Catch ex As Exception
-            Throw New Exception(ex.Message)
+            Throw ex
         End Try
     End Sub
     Public Sub UpdateSymptoms(Sympt As Symptom, Paths As List(Of Pathology))
         Try
             CQConnection.UpdateSymptoms(Sympt, Paths)
         Catch ex As Exception
-            Throw New Exception(ex.Message)
+            Throw ex
         End Try
     End Sub
     Public Sub DeleteSymptoms(idSympt As Integer)
         Try
             CQConnection.DeleteSymptoms(idSympt)
         Catch ex As Exception
-            Throw New Exception(ex.Message)
+            Throw ex
         End Try
     End Sub
     Public Function SearchSymptoms(Descr As String) As DataSet
         Try
             Return CQConnection.SearchSymptoms(Descr)
         Catch ex As Exception
-            Throw New Exception(ex.Message)
-            Return Nothing
+            Throw ex
         End Try
     End Function
-    Public Function GetNowDateTime(prefix As Short) As String
-        Select Case prefix
-            Case 1 'Devuelve 'YYYY-MM-DD HH:MM:SS'
-                Dim nowDate As String = Now.ToString("yyy-MM-dd")
-                Dim nowHMS As String = Now.ToLongTimeString
-                Return nowDate + " " + nowHMS
-            Case 2 'Devuelve 'YYYY-MM-DD'
-                Return Now.ToString("yyy-MM-dd")
-            Case 3
-                Return Now.ToString("yyy")
-            Case Else
-                Return Nothing
-        End Select
-    End Function
-
 
     'Conexión Personas
+    Public Function FilterPathologies(descSympSuffered As List(Of String), descSympPath As List(Of String), pathology As Data.Pathology) As Data.Pathology
+        Dim qtyMatch As Integer = 0 'La cantidad de veces que el Sintoma que tiene la patología, coincide con el Sintoma Sufrido
+        Dim pat As Data.Pathology
+        For Each sympSuffered As String In descSympSuffered
+
+            For Each sympPath As String In descSympPath
+                If sympPath.Equals(sympSuffered) Then
+                    qtyMatch = qtyMatch + 1
+                End If
+            Next
+        Next
+
+        pat = Me.SetProbability(qtyMatch, descSympSuffered.Count(), pathology)
+
+        If IsNothing(pat) Then
+            Return Nothing
+        Else
+            Return pat
+        End If
+    End Function
+
+    Private Function SetProbability(qtyMatch As Integer, maxSympSuffered As Integer, pathology As Data.Pathology) As Data.Pathology
+        Dim probability As Double = (qtyMatch * 100) / maxSympSuffered 'Regla de tres.
+
+        If probability > 60 Then
+            'Si es mayor a 60% de coincidencia, entonces:
+            pathology.probability = probability
+            Return pathology
+        Else
+            Return Nothing
+        End If
+    End Function
     Public Function ObtainSymptomsSuffered(idPatient As Integer, DateNow As String) As List(Of Symptom)
         Try
             Return CQConnection.ObtainSymptomsSuffered(idPatient, DateNow)
@@ -294,6 +377,7 @@ Public Class Controller
             Throw New Exception(ex.Message)
         End Try
     End Sub
+
     Public Sub LoadSympSuffred(idPatientLoggedOn As Integer, sympSuffred As List(Of String))
         Dim symptoms As List(Of Data.Symptom) = Me.ObtainSymptoms()
         Dim idSympSuffered As New List(Of Integer)
@@ -310,7 +394,11 @@ Public Class Controller
         Me.SetPatientSufferSymp(idPatientLoggedOn, idSympSuffered, Me.GetNowDateTime(2))
     End Sub
     Public Function matchPatientLoggedOn(ci As String) As Integer
-        Return CQConnection.matchPatientLoggedOn(ci)
+        Try
+            Return CQConnection.matchPatientLoggedOn(ci)
+        Catch ex As Exception
+            Throw ex
+        End Try
     End Function
     Public Sub SetPatientSufferSymp(idPatient As Integer, idSympSuffered As List(Of Integer), nowDate As String)
         CQConnection.SetPatientSufferSymp(idPatient, idSympSuffered, nowDate)
@@ -319,106 +407,153 @@ Public Class Controller
         CQConnection.UnsuscribePatient(idPatient)
     End Sub
     Public Function ObtainPatholgiesSuffered(idPatient As Integer) As List(Of Pathology)
-        Return CQConnection.ObtainPatholgiesSuffered(idPatient)
+        Try
+            Return CQConnection.ObtainPatholgiesSuffered(idPatient)
+        Catch ex As Exception
+            Throw ex
+        End Try
     End Function
-    Public Function LogginPatient(ci As String) As Short
-        Return CQConnection.LoginPatient(ci)
+    Public Function LoginPatient(ci As String) As Short
+        Try
+            Return CQConnection.LoginPatient(ci)
+        Catch ex As Exception
+            Throw ex
+        End Try
     End Function
     Public Function LoginAdmin(user As String, pass As String) As Admin
-        Return CQConnection.LoginAdmin(user, pass)
+        Try
+            Return CQConnection.LoginAdmin(user, pass)
+        Catch ex As Exception
+            Throw ex
+        End Try
     End Function
     Public Function SearchAdmin(Ci As Integer) As DataSet
-        Return CQConnection.SearchAdmin(Ci)
+        Try
+            Return CQConnection.SearchAdmin(Ci)
+        Catch ex As Exception
+            Throw ex
+        End Try
     End Function
     Public Function ObtainAdmins() As List(Of Admin)
         Return CQConnection.ObtainAdmins()
     End Function
     Public Function ObtainAdminsDataSet() As DataSet
-        Return CQConnection.ObtainAdminsDataSet()
+        Try
+            Return CQConnection.ObtainAdminsDataSet()
+        Catch ex As Exception
+            Throw ex
+        End Try
     End Function
     Public Sub DeleteAdmin(idAdmin As Integer)
         Try
             CQConnection.DeleteAdmin(idAdmin)
         Catch ex As Exception
-            Throw New Exception(ex.Message)
+            Throw ex
         End Try
     End Sub
     Public Sub AddAdmin(Admin As Admin)
         Try
             CQConnection.AddAdmin(Admin)
         Catch ex As Exception
-            Throw New Exception(ex.Message)
+            Throw ex
         End Try
     End Sub
     Public Sub UpdateAdmin(Admin As Admin)
         Try
             CQConnection.UpdateAdmin(Admin)
         Catch ex As Exception
-            Throw New Exception(ex.Message)
+            Throw ex
         End Try
     End Sub
-    Public Function LoginMedic(user As String, pass As String) As Medic
+    Public Function LoginMedic(user As String, passwd As String) As Medic
         Try
-            Return CQConnection.LoginMedic(user, pass)
+            Return CQConnection.LoginMedic(user, passwd)
         Catch ex As Exception
-            Throw New Exception(ex.Message)
+            Throw ex
+        End Try
+    End Function
+    Public Function InfoEmployeeLogged(user As String, passwd As String) As Short
+        Try
+            Return CQConnection.InfoEmployeeLogged(user, passwd)
+        Catch ex As Exception
+            Throw ex
         End Try
     End Function
     Public Function ObtainMedics() As List(Of Medic)
-        Return CQConnection.ObtainMedics()
+        Try
+            Return CQConnection.ObtainMedics()
+        Catch ex As Exception
+            Throw ex
+        End Try
     End Function
     Public Function ObtainMedicsDataSet() As DataSet
-        Return CQConnection.ObtainMedicsDataSet()
+        Try
+            Return CQConnection.ObtainMedicsDataSet()
+        Catch ex As Exception
+            Throw ex
+        End Try
     End Function
     Public Sub AddMedic(Medic As Medic)
         Try
             CQConnection.AddMedic(Medic)
         Catch ex As Exception
-            Throw New Exception(ex.Message)
+            Throw ex
         End Try
     End Sub
     Public Sub UpdateMedic(Medic As Medic)
         Try
             CQConnection.UpdateMedic(Medic)
         Catch ex As Exception
-            Throw New Exception(ex.Message)
+            Throw ex
         End Try
     End Sub
     Public Sub DeleteMedic(idMedic As Integer)
         Try
             CQConnection.DeleteMedic(idMedic)
         Catch ex As Exception
-            Throw New Exception(ex.Message)
+            Throw ex
         End Try
     End Sub
     Public Function SearchMedic(Ci As Integer) As DataSet
-        Return CQConnection.SearchMedic(Ci)
+        Try
+            Return CQConnection.SearchMedic(Ci)
+        Catch ex As Exception
+            Throw ex
+        End Try
     End Function
     Public Function ObtainPatients() As List(Of People)
-        Return CQConnection.ObtainPatients()
+        Try
+            Return CQConnection.ObtainPatients()
+        Catch ex As Exception
+            Throw ex
+        End Try
     End Function
     Public Function ObtainPatientsDataSet() As DataSet
-        Return CQConnection.ObtainPatientsDataSet()
+        Try
+            Return CQConnection.ObtainPatientsDataSet()
+        Catch ex As Exception
+            Throw ex
+        End Try
     End Function
     Public Sub AddPatient(Patient As People)
         Try
             CQConnection.AddPatient(Patient)
         Catch ex As Exception
-            Throw New Exception(ex.Message)
+            Throw ex
         End Try
     End Sub
     Public Sub UpdatePatient(Patient As People)
         Try
             CQConnection.UpdatePatient(Patient)
         Catch ex As Exception
-            Throw New Exception(ex.Message)
+            Throw ex
         End Try
     End Sub
     Public Sub DeletePatient(idPatient As Integer)
         Try
             CQConnection.DeletePatient(idPatient)
         Catch ex As Exception
-            Throw New Exception(ex.Message)
+            Throw ex
         End Try
     End Sub
     Public Sub AllowPatient(idPatient As Integer)
@@ -428,11 +563,12 @@ Public Class Controller
         CQConnection.DisablePatient(idPatient)
     End Sub
     Public Function SearchPatient(Ci As Integer) As DataSet
-        Return CQConnection.SearchPatient(Ci)
+        Try
+            Return CQConnection.SearchPatient(Ci)
+        Catch ex As Exception
+            Throw ex
+        End Try
     End Function
-
-
-
 
 
 End Class 'Logic

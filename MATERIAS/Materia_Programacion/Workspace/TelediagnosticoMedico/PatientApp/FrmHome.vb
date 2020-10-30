@@ -1,27 +1,25 @@
 ﻿Imports Logic
 Imports Data
 
-Public Class FrmHome
+Public Class FrmHome 'Paciente
     'Resource Manager: Administrador de Recursos propios del Proyecto 'PatientApp'.
     Private ReadOnly RM As Resources.ResourceManager = New Resources.ResourceManager("PatientApp.Resources", System.Reflection.Assembly.GetExecutingAssembly)
 
 
     'Atributos:
     Private ReadOnly L1 As New Logic.Controller()
+    Private ReadOnly Translator As New Logic.Translator()
     Public ciPatientLoggedOn As String
     Private idPatientLoggedOn As Integer
     Private patientLoggedOn As New Data.People
     Private dateTimeMadePetition As String
-    Private chargePathology As List(Of Pathology)
     Private time As Integer = 0
     Private idRoom As Integer = 0
     Private talkingMed As Medic
     Private chat As String = ""
-
-
-    'Query:
     Private PatholgiesSuffered As List(Of Pathology)
 
+    'Private a As String = Me.Translator.Translate("a", "asd")
 
     'Comportamientos:
     ''' <summary>
@@ -42,20 +40,20 @@ Public Class FrmHome
         'Label: Me centro en los atributos variantes para cada Panel.
         Select Case myConfigPreset
             Case 1 '1 = Stage Intro
-                Lbl1_Intro.ForeColor = Color.Black
-                Lbl1_Intro.Font = New Font(Lbl1_Intro.Font, FontStyle.Bold)
+                Lbl1_Intro_P_H.ForeColor = Color.Black
+                Lbl1_Intro_P_H.Font = New Font(Lbl1_Intro_P_H.Font, FontStyle.Bold)
 
-                Lbl2_Patient.ForeColor = Color.FromArgb(181, 181, 181)
-                Lbl2_Patient.Font = New Font(Lbl2_Patient.Font, FontStyle.Regular)
+                Lbl2_Patient_P_H.ForeColor = Color.FromArgb(181, 181, 181)
+                Lbl2_Patient_P_H.Font = New Font(Lbl2_Patient_P_H.Font, FontStyle.Regular)
 
-                Lbl3_Symptom.ForeColor = Color.FromArgb(181, 181, 181)
-                Lbl3_Symptom.Font = New Font(Lbl2_Patient.Font, FontStyle.Regular)
+                Lbl3_Symptom_P_H.ForeColor = Color.FromArgb(181, 181, 181)
+                Lbl3_Symptom_P_H.Font = New Font(Lbl2_Patient_P_H.Font, FontStyle.Regular)
 
-                Lbl4_Result.ForeColor = Color.FromArgb(181, 181, 181)
-                Lbl4_Result.Font = New Font(Lbl2_Patient.Font, FontStyle.Regular)
+                Lbl4_Result_P_H.ForeColor = Color.FromArgb(181, 181, 181)
+                Lbl4_Result_P_H.Font = New Font(Lbl2_Patient_P_H.Font, FontStyle.Regular)
 
-                Lbl5_Chat.ForeColor = Color.FromArgb(181, 181, 181)
-                Lbl5_Chat.Font = New Font(Lbl2_Patient.Font, FontStyle.Regular)
+                Lbl5_Chat_P_H.ForeColor = Color.FromArgb(181, 181, 181)
+                Lbl5_Chat_P_H.Font = New Font(Lbl2_Patient_P_H.Font, FontStyle.Regular)
 
                 'Vertical Bar: Imágenes variantes - Vertical Bar 
                 Line1_Intro.Image = RM.GetObject("BarVertical_Green")
@@ -65,20 +63,20 @@ Public Class FrmHome
                 Line5_Chat.Image = RM.GetObject("BarVertical_Grey")
 
             Case 2 '3 = Stage Patient
-                Lbl1_Intro.ForeColor = Color.Black
-                Lbl1_Intro.Font = New Font(Lbl1_Intro.Font, FontStyle.Regular)
+                Lbl1_Intro_P_H.ForeColor = Color.Black
+                Lbl1_Intro_P_H.Font = New Font(Lbl1_Intro_P_H.Font, FontStyle.Regular)
 
-                Lbl2_Patient.ForeColor = Color.Black
-                Lbl2_Patient.Font = New Font(Lbl2_Patient.Font, FontStyle.Bold)
+                Lbl2_Patient_P_H.ForeColor = Color.Black
+                Lbl2_Patient_P_H.Font = New Font(Lbl2_Patient_P_H.Font, FontStyle.Bold)
 
-                Lbl3_Symptom.ForeColor = Color.FromArgb(181, 181, 181)
-                Lbl3_Symptom.Font = New Font(Lbl2_Patient.Font, FontStyle.Regular)
+                Lbl3_Symptom_P_H.ForeColor = Color.FromArgb(181, 181, 181)
+                Lbl3_Symptom_P_H.Font = New Font(Lbl2_Patient_P_H.Font, FontStyle.Regular)
 
-                Lbl4_Result.ForeColor = Color.FromArgb(181, 181, 181)
-                Lbl4_Result.Font = New Font(Lbl2_Patient.Font, FontStyle.Regular)
+                Lbl4_Result_P_H.ForeColor = Color.FromArgb(181, 181, 181)
+                Lbl4_Result_P_H.Font = New Font(Lbl2_Patient_P_H.Font, FontStyle.Regular)
 
-                Lbl5_Chat.ForeColor = Color.FromArgb(181, 181, 181)
-                Lbl5_Chat.Font = New Font(Lbl2_Patient.Font, FontStyle.Regular)
+                Lbl5_Chat_P_H.ForeColor = Color.FromArgb(181, 181, 181)
+                Lbl5_Chat_P_H.Font = New Font(Lbl2_Patient_P_H.Font, FontStyle.Regular)
 
                 'Vertical Bar: Imágenes variantes - Vertical Bar 
                 Line1_Intro.Image = RM.GetObject("BarVertical_Grey")
@@ -88,20 +86,20 @@ Public Class FrmHome
                 Line5_Chat.Image = RM.GetObject("BarVertical_Grey")
 
             Case 3 '3 = Stage Symptom
-                Lbl1_Intro.ForeColor = Color.Black
-                Lbl1_Intro.Font = New Font(Lbl1_Intro.Font, FontStyle.Regular)
+                Lbl1_Intro_P_H.ForeColor = Color.Black
+                Lbl1_Intro_P_H.Font = New Font(Lbl1_Intro_P_H.Font, FontStyle.Regular)
 
-                Lbl2_Patient.ForeColor = Color.Black
-                Lbl2_Patient.Font = New Font(Lbl2_Patient.Font, FontStyle.Regular)
+                Lbl2_Patient_P_H.ForeColor = Color.Black
+                Lbl2_Patient_P_H.Font = New Font(Lbl2_Patient_P_H.Font, FontStyle.Regular)
 
-                Lbl3_Symptom.ForeColor = Color.Black
-                Lbl3_Symptom.Font = New Font(Lbl2_Patient.Font, FontStyle.Bold)
+                Lbl3_Symptom_P_H.ForeColor = Color.Black
+                Lbl3_Symptom_P_H.Font = New Font(Lbl2_Patient_P_H.Font, FontStyle.Bold)
 
-                Lbl4_Result.ForeColor = Color.FromArgb(181, 181, 181)
-                Lbl4_Result.Font = New Font(Lbl2_Patient.Font, FontStyle.Regular)
+                Lbl4_Result_P_H.ForeColor = Color.FromArgb(181, 181, 181)
+                Lbl4_Result_P_H.Font = New Font(Lbl2_Patient_P_H.Font, FontStyle.Regular)
 
-                Lbl5_Chat.ForeColor = Color.FromArgb(181, 181, 181)
-                Lbl5_Chat.Font = New Font(Lbl2_Patient.Font, FontStyle.Regular)
+                Lbl5_Chat_P_H.ForeColor = Color.FromArgb(181, 181, 181)
+                Lbl5_Chat_P_H.Font = New Font(Lbl2_Patient_P_H.Font, FontStyle.Regular)
 
                 'Vertical Bar: Imágenes variantes - Vertical Bar 
                 Line1_Intro.Image = RM.GetObject("BarVertical_Grey")
@@ -111,20 +109,20 @@ Public Class FrmHome
                 Line5_Chat.Image = RM.GetObject("BarVertical_Grey")
 
             Case 4 '4 = Stage Result
-                Lbl1_Intro.ForeColor = Color.Black
-                Lbl1_Intro.Font = New Font(Lbl1_Intro.Font, FontStyle.Regular)
+                Lbl1_Intro_P_H.ForeColor = Color.Black
+                Lbl1_Intro_P_H.Font = New Font(Lbl1_Intro_P_H.Font, FontStyle.Regular)
 
-                Lbl2_Patient.ForeColor = Color.Black
-                Lbl2_Patient.Font = New Font(Lbl2_Patient.Font, FontStyle.Regular)
+                Lbl2_Patient_P_H.ForeColor = Color.Black
+                Lbl2_Patient_P_H.Font = New Font(Lbl2_Patient_P_H.Font, FontStyle.Regular)
 
-                Lbl3_Symptom.ForeColor = Color.Black
-                Lbl3_Symptom.Font = New Font(Lbl2_Patient.Font, FontStyle.Regular)
+                Lbl3_Symptom_P_H.ForeColor = Color.Black
+                Lbl3_Symptom_P_H.Font = New Font(Lbl2_Patient_P_H.Font, FontStyle.Regular)
 
-                Lbl4_Result.ForeColor = Color.Black
-                Lbl4_Result.Font = New Font(Lbl2_Patient.Font, FontStyle.Bold)
+                Lbl4_Result_P_H.ForeColor = Color.Black
+                Lbl4_Result_P_H.Font = New Font(Lbl2_Patient_P_H.Font, FontStyle.Bold)
 
-                Lbl5_Chat.ForeColor = Color.FromArgb(181, 181, 181)
-                Lbl5_Chat.Font = New Font(Lbl2_Patient.Font, FontStyle.Regular)
+                Lbl5_Chat_P_H.ForeColor = Color.FromArgb(181, 181, 181)
+                Lbl5_Chat_P_H.Font = New Font(Lbl2_Patient_P_H.Font, FontStyle.Regular)
 
                 'Vertical Bar: Imágenes variantes - Vertical Bar 
                 Line1_Intro.Image = RM.GetObject("BarVertical_Grey")
@@ -134,20 +132,20 @@ Public Class FrmHome
                 Line5_Chat.Image = RM.GetObject("BarVertical_Grey")
 
             Case 5
-                Lbl1_Intro.ForeColor = Color.Black
-                Lbl1_Intro.Font = New Font(Lbl1_Intro.Font, FontStyle.Regular)
+                Lbl1_Intro_P_H.ForeColor = Color.Black
+                Lbl1_Intro_P_H.Font = New Font(Lbl1_Intro_P_H.Font, FontStyle.Regular)
 
-                Lbl2_Patient.ForeColor = Color.Black
-                Lbl2_Patient.Font = New Font(Lbl2_Patient.Font, FontStyle.Regular)
+                Lbl2_Patient_P_H.ForeColor = Color.Black
+                Lbl2_Patient_P_H.Font = New Font(Lbl2_Patient_P_H.Font, FontStyle.Regular)
 
-                Lbl3_Symptom.ForeColor = Color.Black
-                Lbl3_Symptom.Font = New Font(Lbl2_Patient.Font, FontStyle.Regular)
+                Lbl3_Symptom_P_H.ForeColor = Color.Black
+                Lbl3_Symptom_P_H.Font = New Font(Lbl2_Patient_P_H.Font, FontStyle.Regular)
 
-                Lbl4_Result.ForeColor = Color.Black
-                Lbl4_Result.Font = New Font(Lbl2_Patient.Font, FontStyle.Regular)
+                Lbl4_Result_P_H.ForeColor = Color.Black
+                Lbl4_Result_P_H.Font = New Font(Lbl2_Patient_P_H.Font, FontStyle.Regular)
 
-                Lbl5_Chat.ForeColor = Color.Black
-                Lbl5_Chat.Font = New Font(Lbl2_Patient.Font, FontStyle.Bold)
+                Lbl5_Chat_P_H.ForeColor = Color.Black
+                Lbl5_Chat_P_H.Font = New Font(Lbl2_Patient_P_H.Font, FontStyle.Bold)
 
                 Try
                     talkingMed = L1.ObtainTalkingMed(idPatientLoggedOn, dateTimeMadePetition)
@@ -183,31 +181,41 @@ Public Class FrmHome
         PnlChat.Visible = myBool11
     End Sub
     Private Sub VisualSettingPetition(info As String, image As String, b1 As Boolean, b2 As Boolean, b3 As Boolean, b4 As Boolean, b5 As Boolean, b6 As Boolean, b7 As Boolean, b8 As Boolean)
-        BtnSendChatP.Visible = b1
-        BtnSendChatP.Enabled = b2
-        BtnEnd.Visible = b3
-        BtnEnd.Enabled = b4
+        BtnSendChatP_P_H.Visible = b1
+        BtnSendChatP_P_H.Enabled = b2
+        BtnEnd_P_H.Visible = b3
+        BtnEnd_P_H.Enabled = b4
         PnlPetition.Visible = b5
         PnlPetition.Enabled = b6
         BtnCancelPetition.Visible = b7
         BtnCancelPetition.Enabled = b8
-        LblPetitionInfo.Text = info
+        LblPetitionInfo_P_H.Text = info
         PctbxPetition.Image = RM.GetObject(image)
 
     End Sub
-    Private Function ObtainSymptoms()
-        Return L1.ObtainSymptoms()
-    End Function
     Private Sub LoadIdPatientLoggedOn()
         Me.idPatientLoggedOn = L1.matchPatientLoggedOn(Me.ciPatientLoggedOn)
     End Sub
-    Private Sub LoadSympSuffred(lbxSuffredPatient As System.Windows.Forms.ListBox)
+    Private Function FilterPathologies(descSympPath As List(Of String), pathology As Data.Pathology) As Data.Pathology
+        Return L1.FilterPathologies(ObtainDescSympSuffered(LbxSufferedPatient), descSympPath, pathology)
+    End Function
+    Private Function ObtainDescSympSuffered(lbxSuffredPatient As System.Windows.Forms.ListBox) As List(Of String)
         Dim sympSuffred As New List(Of String)
 
         For Each lbxSympSuffred In lbxSuffredPatient.Items
             sympSuffred.Add(lbxSympSuffred.ToString)
         Next
 
+        Return sympSuffred
+    End Function
+    Private Function ObtainSymptoms()
+        Return L1.ObtainSymptoms()
+    End Function
+    Private Function ObtainIdSymptoms(idPathology As Integer) As List(Of String)
+        Return L1.ObtainIdSymptoms(ObtainDescSympSuffered(LbxSufferedPatient), idPathology)
+    End Function
+    Private Sub LoadSympSuffered(lbxSuffredPatient As System.Windows.Forms.ListBox)
+        Dim sympSuffred As List(Of String) = ObtainDescSympSuffered(lbxSuffredPatient)
         L1.LoadSympSuffred(Me.idPatientLoggedOn, sympSuffred)
     End Sub
     Private Function GetNowDateTime(prefix As Short) As String
@@ -216,104 +224,73 @@ Public Class FrmHome
 
 
     'Eventos:
-    Private Sub BtnNext_Intro2_Click(sender As Object, e As EventArgs) Handles BtnNext_Intro2.Click
+    Private Sub BtnNext_Intro2_Click(sender As Object, e As EventArgs) Handles BtnNext_Intro2_P_H.Click
         VisualSettings(1, True, False, False, False, False, False, True, False, False, False, False)
     End Sub
-    Private Sub BtnNext_Patient_Click(sender As Object, e As EventArgs) Handles BtnNext_Patient.Click
+    Private Sub BtnNext_Patient_Click(sender As Object, e As EventArgs) Handles BtnNext_Patient_P_H.Click
         VisualSettings(2, False, True, False, False, False, False, False, True, False, False, False)
     End Sub
-    Private Sub BtnNext_Symptom1_Click(sender As Object, e As EventArgs) Handles BtnNext_Symptom1.Click
+    Private Sub BtnNext_Symptom1_Click(sender As Object, e As EventArgs) Handles BtnNext_Symptom1_P_H.Click
         VisualSettings(3, False, False, True, False, False, False, False, False, True, False, False)
     End Sub
-    Private Sub BtnBack_Intro2_Click(sender As Object, e As EventArgs) Handles BtnBack_Intro2.Click
+    Private Sub BtnBack_Intro2_Click(sender As Object, e As EventArgs) Handles BtnBack_Intro2_P_H.Click
         VisualSettings(1, True, False, False, False, False, False, True, False, False, False, False)
     End Sub
-    Private Sub BtnNext_Result_Click(sender As Object, e As EventArgs) Handles BtnNext_Result.Click
+    Private Sub BtnNext_Result_Click(sender As Object, e As EventArgs) Handles BtnNext_Result_P_H.Click
         If LbxSufferedPatient.Items.Contains(" ") Then
             Console.WriteLine("No se asignaron sintomas para proceder.")
-        Else
+        Else 'Hay sintomas para defenir la patologia
+            Dim patholgiesSuffered As List(Of Data.Pathology) 'Colección de Data.Patologia sufridas
+            Dim filteredPathologies As New List(Of Data.Pathology) 'Lista filtrada con las Patologias con mas probabilidad.
+            Dim qtySympSelected As Integer = LbxSufferedPatient.Items.Count()
+
             VisualSettings(4, False, False, False, True, False, False, False, False, False, True, False)
 
-            Me.LoadSympSuffred(LbxSufferedPatient)
+            Me.LoadSympSuffered(LbxSufferedPatient)
+            Try 'Intento cargar las Patologias Sufridas en una Lista
+                patholgiesSuffered = L1.ObtainPatholgiesSuffered(idPatientLoggedOn)
 
-            'Cargo las Patologias Sufridas en una Lista
-            PatholgiesSuffered = New List(Of Pathology)
-            Try
-                Me.PatholgiesSuffered = L1.ObtainPatholgiesSuffered(idPatientLoggedOn)
+                'Cargo la lista "chargePathology"
+                For Each pathology As Data.Pathology In patholgiesSuffered
+                    'Analizo las evidencias para cada Patologia obtenida.
+                    If pathology.mortalityIndex < 33 Then
+                        pathology.evidence = "EVIDENCIA BAJA"
+                    ElseIf pathology.mortalityIndex > 32 And pathology.mortalityIndex < 66 Then
+                        pathology.evidence = "EVIDENCIA MEDIA"
+                    ElseIf pathology.mortalityIndex > 65 Then
+                        pathology.evidence = "EVIDENCIA ALTA"
+                    End If
+                Next
+
+                For Each pathology As Data.Pathology In patholgiesSuffered
+                    Dim descSympSuffered As List(Of String) = Me.ObtainIdSymptoms(pathology.id) 'Me traigo la lista de Sintomas que posee una Patologia
+                    Dim pathFiltered As Data.Pathology = Me.FilterPathologies(descSympSuffered, pathology)
+
+                    If Not IsNothing(pathFiltered) Then
+                        'Si no pertenece a la probabilidad esperada, tengo un Nothing
+                        filteredPathologies.Add(pathFiltered)
+                    End If
+                Next
+
             Catch ex As Exception
                 MessageBox.Show(ex.Message)
             End Try
 
-            'Trato el Panel con los Resultados
-            'Hago un diagnostico (resumen/media) de los datos de "id_prioridad" -> Me define el color y mensaje del header.
-            Dim qtyLeve As Integer = Nothing
-            Dim qtyMedia As Integer = Nothing
-            Dim qtyUrgente As Integer = Nothing
-
-            chargePathology = New List(Of Pathology)
-            Dim evidences As New List(Of String)
-            evidences.Add("EVIDENCIA ALTA")
-            evidences.Add("EVIDENCIA MEDIA")
-            evidences.Add("EVIDENCIA BAJA")
-            Dim orderedChargePathology As New List(Of Pathology)
-
-            For Each pathology As Pathology In PatholgiesSuffered
-                'Analizo mis cantidades de tipos de prioridades.
-                Select Case pathology.priority.id
-                    Case 1 'Prioridad = 1 "Alta"
-                        qtyUrgente = qtyUrgente + 1
-                    Case 2 'Prioridad = 2 "Media"
-                        qtyMedia = qtyMedia + 1
-                    Case 3 'Prioridad = 3 "Baja"
-                        qtyLeve = qtyLeve + 1
-                End Select
-
-                'Analizo las evidencias para cada patologia obtenida.
-                If pathology.mortalityIndex < 33 Then
-                    chargePathology.Add(New Pathology(pathology.name, "EVIDENCIA BAJA"))
-                ElseIf pathology.mortalityIndex > 32 And pathology.mortalityIndex < 66 Then
-                    chargePathology.Add(New Pathology(pathology.name, "EVIDENCIA MEDIA"))
-                ElseIf pathology.mortalityIndex > 65 Then
-                    chargePathology.Add(New Pathology(pathology.name, "EVIDENCIA ALTA"))
-                End If
-            Next
-
-            'Defino el resultado general.
-            If qtyLeve > qtyMedia And qtyLeve > qtyUrgente Then
-                'Panel informativo de color Verde = Poco o Leve Riesgo de Salud
-                'No requiere valoración médica urgente
-                PnlColorInfo.FillColor = Color.FromArgb(98, 186, 172)
-                LblResultUrgent.Text = "No requiere de una valoración médica urgente."
-
-            ElseIf qtyMedia > qtyUrgente Then
-                'Panel informativo de color Ambar = Riesgo de Salud
-                'Requiere valoración médica urgente
-                PnlColorInfo.FillColor = Color.FromArgb(255, 208, 52)
-                LblResultUrgent.Text = "Requiere de una pronta valoración médica."
-            Else
-                'Panel informativo de color Corál = Grave Riesgo de Salud
-                'Requiere valoración médica urgente
-                PnlColorInfo.FillColor = Color.FromArgb(251, 136, 133)
-                LblResultUrgent.Text = "Requiere de una valoración médica urgente."
-            End If
-
-            'Ordeno por Evidencia la lista a cargar de patologias sufridas. Se ordena de mas alto a mas bajo las evidencias de las patologias
-            For Each evidencess In evidences
-                For Each path In chargePathology
-                    If path.evidence.Equals(evidencess) Then
-                        orderedChargePathology.Add(path)
-                    End If
+            'Cargo el resultado en el DataGridView de Patologias Sufridas
+            If filteredPathologies.Count() <> 0 Then
+                For Each pat As Data.Pathology In filteredPathologies
+                    DgvPhatologies.Rows.Add(pat.name, pat.evidence)
                 Next
-            Next
-
-            For Each pat As Pathology In orderedChargePathology
+            Else
+#Disable Warning BC42104 ' Variable is used before it has been assigned a value
+                Dim pat As Data.Pathology = patholgiesSuffered.Item(0)
+#Enable Warning BC42104 ' Variable is used before it has been assigned a value
                 DgvPhatologies.Rows.Add(pat.name, pat.evidence)
-            Next
+            End If
             DgvPhatologies.Refresh()
-
         End If
     End Sub
-    Private Sub BtnBack_Patient1_Click(sender As Object, e As EventArgs) Handles BtnBack_Patient1.Click
+    Private Sub BtnBack_Patient1_Click(sender As Object, e As EventArgs) Handles BtnBack_Patient1_P_H.Click
         VisualSettings(2, False, True, False, False, False, False, False, True, False, False, False)
     End Sub
     Private Sub CbxSysSymptoms_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CbxSysSymptoms.SelectedIndexChanged
@@ -343,7 +320,7 @@ Public Class FrmHome
         End If
 
     End Sub
-    Private Sub BtnDropPathology_Click(sender As Object, e As EventArgs) Handles BtnDropPathology.Click
+    Private Sub BtnDropPathology_Click(sender As Object, e As EventArgs) Handles BtnDropPathology_P_H.Click
         'Quiero eliminar el GhostItem?
         If LbxSufferedPatient.Items.Count = 0 Then
             LbxSufferedPatient.Items.RemoveAt(LbxSufferedPatient.SelectedIndex)
@@ -388,13 +365,13 @@ Public Class FrmHome
         DgvPhatologies.Columns.Add(col1)
         DgvPhatologies.Columns.Add(col2)
     End Sub
-    Private Sub BtnEnd_Click(sender As Object, e As EventArgs) Handles BtnEnd.Click
+    Private Sub BtnEnd_Click(sender As Object, e As EventArgs) Handles BtnEnd_P_H.Click
         L1.UnsuscribePatient(idPatientLoggedOn)
         VisualSettings(1, True, False, False, False, False, True, False, False, False, False, False)
         PatientApp.FrmLogin.Show()
         Me.Close()
     End Sub
-    Private Sub BtnSendChatP_Click(sender As Object, e As EventArgs) Handles BtnSendChatP.Click
+    Private Sub BtnSendChatP_Click(sender As Object, e As EventArgs) Handles BtnSendChatP_P_H.Click
         VisualSettingPetition("GENERANDO PETICIÓN", "loading", False, False, False, False, True, True, True, True)
 
         Me.dateTimeMadePetition = Me.GetNowDateTime(1)
@@ -415,8 +392,6 @@ Public Class FrmHome
             VisualSettingPetition("GENERANDO PETICIÓN", "loading", True, True, True, True, False, False, False, False)
         End If
     End Sub
-
-    'Chat
     Private Sub BtnSend_Click(sender As Object, e As EventArgs) Handles BtnSend.Click
         If Not TxtChatSend.Text.Trim.Length = 0 Then
             Try
@@ -430,7 +405,6 @@ Public Class FrmHome
             TxtChatSend.Focus()
         End If
     End Sub
-
     Public Sub ObtainMsg()
         chat = Nothing
         Try
@@ -452,7 +426,6 @@ Public Class FrmHome
             MessageBox.Show(ex.Message)
         End Try
     End Sub
-
     Private Sub TxtChatSend_KeyDown(sender As Object, e As KeyEventArgs) Handles TxtChatSend.KeyDown
         If e.KeyCode = Keys.Enter Then
             BtnSend.PerformClick()
