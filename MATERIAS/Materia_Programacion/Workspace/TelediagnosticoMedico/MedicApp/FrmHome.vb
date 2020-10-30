@@ -83,7 +83,7 @@ Public Class FrmHome
     End Sub
 
     Private Sub BtnEndChat_Click(sender As Object, e As EventArgs) Handles BtnEndChat.Click
-        If MsgBox("Está seguro que desea finalizar el chat ?", MsgBoxStyle.YesNoCancel, "Cerrar Programa") = MsgBoxResult.Yes Then
+        If MsgBox("Está seguro que desea finalizar el chat ?", MsgBoxStyle.YesNoCancel, "Cerrar Chat") = MsgBoxResult.Yes Then
             LeaveRoom()
         End If
     End Sub

@@ -35,17 +35,21 @@ Partial Class FrmLogin
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PicLogo = New System.Windows.Forms.PictureBox()
-        Me.PicbxLogin = New System.Windows.Forms.PictureBox()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.PictureBox6 = New System.Windows.Forms.PictureBox()
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
+        Me.PnlInfo = New Guna.UI2.WinForms.Guna2Panel()
+        Me.BtnCloseInfo = New Guna.UI2.WinForms.Guna2Button()
+        Me.LblNotification = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.PicbxLogin = New System.Windows.Forms.PictureBox()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PicLogo, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PicbxLogin, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PnlInfo.SuspendLayout()
+        CType(Me.PicbxLogin, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'LblTitle1
@@ -135,7 +139,7 @@ Partial Class FrmLogin
         Me.TxtPass.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtPass.Location = New System.Drawing.Point(684, 410)
         Me.TxtPass.Name = "TxtPass"
-        Me.TxtPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.TxtPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.TxtPass.Radius = 11
         Me.TxtPass.SelectedText = ""
         Me.TxtPass.Size = New System.Drawing.Size(318, 49)
@@ -245,16 +249,6 @@ Partial Class FrmLogin
         Me.PicLogo.TabIndex = 2
         Me.PicLogo.TabStop = False
         '
-        'PicbxLogin
-        '
-        Me.PicbxLogin.Dock = System.Windows.Forms.DockStyle.Left
-        Me.PicbxLogin.Image = CType(resources.GetObject("PicbxLogin.Image"), System.Drawing.Image)
-        Me.PicbxLogin.Location = New System.Drawing.Point(0, 0)
-        Me.PicbxLogin.Name = "PicbxLogin"
-        Me.PicbxLogin.Size = New System.Drawing.Size(622, 640)
-        Me.PicbxLogin.TabIndex = 0
-        Me.PicbxLogin.TabStop = False
-        '
         'PictureBox5
         '
         Me.PictureBox5.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -280,6 +274,63 @@ Partial Class FrmLogin
         Me.Guna2Elipse1.BorderRadius = 20
         Me.Guna2Elipse1.TargetControl = Me
         '
+        'PnlInfo
+        '
+        Me.PnlInfo.AccessibleDescription = "PnlInfo"
+        Me.PnlInfo.AccessibleName = "PnlInfo"
+        Me.PnlInfo.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.PnlInfo.BorderRadius = 20
+        Me.PnlInfo.BorderThickness = 4
+        Me.PnlInfo.Controls.Add(Me.BtnCloseInfo)
+        Me.PnlInfo.Controls.Add(Me.LblNotification)
+        Me.PnlInfo.Location = New System.Drawing.Point(644, 557)
+        Me.PnlInfo.Name = "PnlInfo"
+        Me.PnlInfo.ShadowDecoration.Parent = Me.PnlInfo
+        Me.PnlInfo.Size = New System.Drawing.Size(404, 81)
+        Me.PnlInfo.TabIndex = 35
+        '
+        'BtnCloseInfo
+        '
+        Me.BtnCloseInfo.AccessibleDescription = "BtnCloseInfo"
+        Me.BtnCloseInfo.AccessibleName = "BtnCloseInfo"
+        Me.BtnCloseInfo.BorderRadius = 2
+        Me.BtnCloseInfo.CheckedState.Parent = Me.BtnCloseInfo
+        Me.BtnCloseInfo.CustomImages.Parent = Me.BtnCloseInfo
+        Me.BtnCloseInfo.FillColor = System.Drawing.Color.FromArgb(CType(CType(246, Byte), Integer), CType(CType(135, Byte), Integer), CType(CType(124, Byte), Integer))
+        Me.BtnCloseInfo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.BtnCloseInfo.ForeColor = System.Drawing.Color.White
+        Me.BtnCloseInfo.HoverState.Parent = Me.BtnCloseInfo
+        Me.BtnCloseInfo.Location = New System.Drawing.Point(364, 13)
+        Me.BtnCloseInfo.Name = "BtnCloseInfo"
+        Me.BtnCloseInfo.ShadowDecoration.Parent = Me.BtnCloseInfo
+        Me.BtnCloseInfo.Size = New System.Drawing.Size(29, 29)
+        Me.BtnCloseInfo.TabIndex = 2
+        Me.BtnCloseInfo.Text = "X"
+        '
+        'LblNotification
+        '
+        Me.LblNotification.AccessibleDescription = "LblNotification"
+        Me.LblNotification.AccessibleName = "LblNotification"
+        Me.LblNotification.AutoSize = False
+        Me.LblNotification.BackColor = System.Drawing.Color.Transparent
+        Me.LblNotification.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblNotification.Location = New System.Drawing.Point(14, 13)
+        Me.LblNotification.Name = "LblNotification"
+        Me.LblNotification.Size = New System.Drawing.Size(344, 31)
+        Me.LblNotification.TabIndex = 1
+        Me.LblNotification.Text = "LblNotification"
+        Me.LblNotification.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'PicbxLogin
+        '
+        Me.PicbxLogin.Dock = System.Windows.Forms.DockStyle.Left
+        Me.PicbxLogin.Image = CType(resources.GetObject("PicbxLogin.Image"), System.Drawing.Image)
+        Me.PicbxLogin.Location = New System.Drawing.Point(0, 0)
+        Me.PicbxLogin.Name = "PicbxLogin"
+        Me.PicbxLogin.Size = New System.Drawing.Size(619, 640)
+        Me.PicbxLogin.TabIndex = 36
+        Me.PicbxLogin.TabStop = False
+        '
         'FrmLogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
@@ -290,6 +341,7 @@ Partial Class FrmLogin
         Me.BackgroundImage = Global.AdminApp.My.Resources.Resources.Login__Type_2
         Me.ClientSize = New System.Drawing.Size(1060, 640)
         Me.ControlBox = False
+        Me.Controls.Add(Me.PicbxLogin)
         Me.Controls.Add(Me.PicLogo)
         Me.Controls.Add(Me.PictureBox6)
         Me.Controls.Add(Me.PictureBox5)
@@ -303,7 +355,7 @@ Partial Class FrmLogin
         Me.Controls.Add(Me.LblInfoText1)
         Me.Controls.Add(Me.Lbltitle2)
         Me.Controls.Add(Me.LblTitle1)
-        Me.Controls.Add(Me.PicbxLogin)
+        Me.Controls.Add(Me.PnlInfo)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(2)
@@ -313,14 +365,13 @@ Partial Class FrmLogin
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PicLogo, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PicbxLogin, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.PnlInfo.ResumeLayout(False)
+        CType(Me.PicbxLogin, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
-
-    Friend WithEvents PicbxLogin As PictureBox
     Friend WithEvents PicLogo As PictureBox
     Public WithEvents LblTitle1 As Label
     Public WithEvents Lbltitle2 As Label
@@ -335,4 +386,8 @@ Partial Class FrmLogin
     Friend WithEvents PictureBox6 As PictureBox
     Friend WithEvents PictureBox5 As PictureBox
     Friend WithEvents Guna2Elipse1 As Guna.UI2.WinForms.Guna2Elipse
+    Friend WithEvents PnlInfo As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents BtnCloseInfo As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents LblNotification As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents PicbxLogin As PictureBox
 End Class

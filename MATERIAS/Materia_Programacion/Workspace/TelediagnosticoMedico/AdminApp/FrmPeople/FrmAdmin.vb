@@ -288,6 +288,7 @@ Public Class FrmAdmin
                     BtnAllow.Visible = True
                     Identify = 2
                     ReloadDgv()
+                    ObtainSelected()
                 End If
             Case 2 'Para los Administradores
                 If Not Identify = 3 Then

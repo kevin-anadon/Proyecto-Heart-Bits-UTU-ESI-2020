@@ -37,7 +37,7 @@ Public Class FrmPath
         Dim frm As New FrmAddModPath()
         FrmAddModPath.Add = True
         frm.LblPathTop.Text = "INSERTAR NUEVA PATOLOGÍA"
-        frm.BtnAdd.Text = "ALMACENAR PATOLOGÍA"
+        frm.BtnAdd.Text = "Almacenar Patología"
         frm.ShowDialog()
         ReloadDgv(3)
     End Sub

@@ -582,12 +582,18 @@ Public Class DataBaseConn
         Dim con As Connection = Me.Connect
 
         Try
+            con.BeginTrans()
+
             Dim fecha As String = DateTime.Now.ToString("yyy-MM-dd HH:mm:ss")
             Dim rsAllowed As Recordset = con.Execute("INSERT INTO salaChat(estado,fechaHoraInicio) VALUES(1,'" & fecha & "');")
             Dim rsSelectIdRoom As Recordset = con.Execute("SELECT id FROM salaChat WHERE fechaHoraInicio='" + fecha + "';")
             Dim idRoom As Integer = DirectCast(rsSelectIdRoom.Fields("id").Value, Integer)
+            con.CommitTrans()
+
             Return idRoom
         Catch ex As Exception
+            con.RollbackTrans()
+
             Console.WriteLine(ex.ToString())
             Throw New Exception("Error al crear la Sala de chat")
         Finally
@@ -600,8 +606,13 @@ Public Class DataBaseConn
         Dim con As Connection = Me.Connect
 
         Try
+            con.BeginTrans()
+
             Dim rsLeaveRoom As Recordset = con.Execute("UPDATE salaChat SET estado=0,motivo='El médico finalizó el chat',fechaHoraFin='" + DateNow + "' WHERE id=" & idRoom & ";")
+
+            con.CommitTrans()
         Catch ex As Exception
+            con.RollbackTrans()
             Console.WriteLine(ex.ToString())
             Throw New Exception("Error al finalizar la Sala de Chat")
         Finally
@@ -630,8 +641,13 @@ Public Class DataBaseConn
         Dim con As Connection = Me.Connect
 
         Try
+            con.BeginTrans()
+
             Dim rsSendMessage As Recordset = con.Execute("INSERT INTO conversa VALUES(" & id & "," & idRoom & ",'" & msg & "','" & Hour & "');")
+
+            con.CommitTrans()
         Catch ex As Exception
+            con.RollbackTrans()
             Console.WriteLine(ex.ToString())
             Throw New Exception("Error al enviar el mensaje")
         Finally
@@ -905,6 +921,8 @@ Public Class DataBaseConn
         Dim genre As Char = ""
 
         Try
+            con.BeginTrans()
+
             If Admin.genrePeople = 0 Then
                 genre = "H"
             Else
@@ -914,7 +932,10 @@ Public Class DataBaseConn
 
             Dim rsUpdateAdmin As Recordset = con.Execute("UPDATE persona SET primerNom='" & Admin.fstName & "',segundoNom='" & Admin.scndName & "',primerApe='" & Admin.fstSurname & "',segundoApe='" & Admin.scndSurname & "',genero='" & genre & "',fechaNacimiento='" & BirthdateString & "',email='" & Admin.email & "',calle='" & Admin.street & "',npuerta=" & Admin.numDoor & ",id_ciudad=" & Admin.city.Id & ",usuario='" & Admin.username & "',contrasena='" & Admin.password & "',pin=" & Admin.pin & " WHERE id=" & Admin.id & ";")
             Dim rsUpdatePhone As Recordset = con.Execute("UPDATE cel_empleado SET celular='" & Admin.numPhone & "' WHERE id_empleado=" & Admin.id & ";")
+
+            con.CommitTrans()
         Catch ex As Exception
+            con.RollbackTrans()
             Console.WriteLine(ex.ToString())
             Throw New Exception("Error al modificar el Administrador")
         End Try
@@ -1108,6 +1129,8 @@ Public Class DataBaseConn
         Dim genre As Char = ""
 
         Try
+            con.BeginTrans()
+
             If Medic.genrePeople = 0 Then
                 genre = "H"
             Else
@@ -1117,7 +1140,11 @@ Public Class DataBaseConn
 
             Dim rsUpdateAdmin As Recordset = con.Execute("UPDATE persona SET primerNom='" & Medic.fstName & "',segundoNom='" & Medic.scndName & "',primerApe='" & Medic.fstSurname & "',segundoApe='" & Medic.scndSurname & "',genero='" & genre & "',fechaNacimiento='" & BirthdateString & "',email='" & Medic.email & "',calle='" & Medic.street & "',npuerta=" & Medic.numDoor & ",id_ciudad=" & Medic.city.Id & ",usuario='" & Medic.username & "',contrasena='" & Medic.password & "',especialidad='" & Medic.speciality & "' WHERE id=" & Medic.id & ";")
             Dim rsUpdatePhone As Recordset = con.Execute("UPDATE cel_empleado SET celular='" & Medic.numPhone & "' WHERE id_empleado=" & Medic.id & ";")
+
+            con.CommitTrans()
         Catch ex As Exception
+            con.RollbackTrans()
+
             Console.WriteLine(ex.ToString())
             Throw New Exception("Error al modificar el Médico")
         End Try
@@ -1275,6 +1302,8 @@ Public Class DataBaseConn
         Dim genre As Char = ""
 
         Try
+            con.BeginTrans()
+
             If Patient.genrePeople = 0 Then
                 genre = "H"
             Else
@@ -1284,7 +1313,10 @@ Public Class DataBaseConn
 
             Dim rsUpdateAdmin As Recordset = con.Execute("UPDATE persona SET primerNom='" & Patient.fstName & "',segundoNom='" & Patient.scndName & "',primerApe='" & Patient.fstSurname & "',segundoApe='" & Patient.scndSurname & "',genero='" & genre & "',fechaNacimiento='" & BirthdateString & "',email='" & Patient.email & "',calle='" & Patient.street & "',npuerta=" & Patient.numDoor & ",id_ciudad=" & Patient.city.Id & " WHERE id=" & Patient.id & ";")
             Dim rsUpdatePhone As Recordset = con.Execute("UPDATE cel_paciente SET celular='" & Patient.numPhone & "' WHERE id_paciente=" & Patient.id & ";")
+
+            con.CommitTrans()
         Catch ex As Exception
+            con.RollbackTrans
             Console.WriteLine(ex.ToString())
             Throw New Exception("Error al modificar el Paciente")
         End Try
@@ -1349,8 +1381,13 @@ Public Class DataBaseConn
         Dim con As Connection = Me.Connect()
 
         Try
+            con.BeginTrans()
+
             Dim rsAllow As Recordset = con.Execute("UPDATE persona SET habilitado=True WHERE id=" & idPatient & ";")
+
+            con.CommitTrans()
         Catch ex As Exception
+            con.RollbackTrans()
             Console.WriteLine(ex.ToString())
             Throw New Exception("Error al habilitar al paciente")
         Finally
@@ -1442,8 +1479,13 @@ Public Class DataBaseConn
     Public Sub UnsuscribePatient(idPatient As Integer)
         Dim con As Connection = Me.Connect
         Try
+            con.BeginTrans()
+
             Dim rsUpdate As Recordset = con.Execute("UPDATE persona SET habilitado='" & 0 & "' WHERE id=" & idPatient)
+
+            con.CommitTrans()
         Catch ex As Exception
+            con.RollbackTrans()
             Console.WriteLine(ex.Message)
         Finally
             con.Close()
@@ -1500,13 +1542,18 @@ Public Class DataBaseConn
             If rsSearchRequest.EOF Then
                 Throw New Exception("No existe la peticion")
             Else
+                con.BeginTrans()
+
                 Dim IdRequest As Integer = DirectCast(rsSearchRequest.Fields("id").Value, Integer)
                 Dim rsAcceptRequestA As Recordset = con.Execute("UPDATE peticion p SET p.estado=" & 0 & " WHERE p.id=" & IdRequest)
                 Dim rsStopPetitionB As Recordset = con.Execute("UPDATE peticion p SET p.motivo='" + "Peticion aceptada" + "' WHERE p.id=" & IdRequest)
                 Dim rsStopPetitionC As Recordset = con.Execute("UPDATE peticion p SET p.fechaHoraFin='" + dateF + "' WHERE p.id=" & IdRequest)
                 Dim rsInsertAcepta As Recordset = con.Execute("INSERT INTO acepta VALUES(" & idMed & "," & IdRequest & ");")
+
+                con.CommitTrans()
             End If
         Catch ex As Exception
+            con.RollbackTrans()
             Console.WriteLine(ex.ToString())
             Throw New Exception("Error al aceptar la peticion")
         Finally
@@ -1576,13 +1623,18 @@ Public Class DataBaseConn
                 Console.WriteLine("No existe tal petición.")
                 Return False
             Else
+                con.BeginTrans()
+
                 Dim rsIdPetition As Integer = DirectCast(rsSearchPetition.Fields("id").Value, Integer)
                 Dim rsStopPetitionA As Recordset = con.Execute("UPDATE peticion p SET p.estado=" & 0 & " WHERE p.id=" & rsIdPetition)
                 Dim rsStopPetitionB As Recordset = con.Execute("UPDATE peticion p SET p.motivo='" + motive + "' WHERE p.id=" & rsIdPetition)
                 Dim rsStopPetitionC As Recordset = con.Execute("UPDATE peticion p SET p.fechaHoraFin='" + datetF + "' WHERE p.id=" & rsIdPetition)
+
+                con.CommitTrans()
                 Return True
             End If
         Catch ex As Exception
+            con.RollbackTrans
             Console.WriteLine(ex)
             Return Nothing
         Finally

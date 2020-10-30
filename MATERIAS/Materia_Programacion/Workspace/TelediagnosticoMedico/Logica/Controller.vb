@@ -217,6 +217,7 @@ Public Class Controller 'Logic
             Return CQConnection.ObtainPathForMod(NamePath)
         Catch ex As Exception
             Console.WriteLine(ex.ToString())
+            Throw ex
         End Try
     End Function
     Public Sub AddPathology(Path As Pathology, Treatments As List(Of Treatment))
@@ -297,10 +298,19 @@ Public Class Controller 'Logic
             Return CQConnection.ObtainSymptomsDataSet()
         Catch ex As Exception
             Console.WriteLine(ex.ToString())
+            Throw ex
         End Try
     End Function
+    Private Sub ValidateSymptom(Sympt As Symptom)
+        For Each Symptom As Symptom In ObtainSymptoms()
+            If Symptom.Description.ToLower().Equals(Sympt.Description.ToLower()) And Symptom.Id <> Sympt.Id Then
+                Throw New Exception("Descripcion de síntoma ya existente")
+            End If
+        Next
+    End Sub
     Public Sub AddSymptoms(Sympt As Symptom, Paths As List(Of Pathology))
         Try
+            ValidateSymptom(Sympt)
             CQConnection.AddSymptoms(Sympt, Paths)
         Catch ex As Exception
             Throw ex
@@ -308,6 +318,7 @@ Public Class Controller 'Logic
     End Sub
     Public Sub UpdateSymptoms(Sympt As Symptom, Paths As List(Of Pathology))
         Try
+            ValidateSymptom(Sympt)
             CQConnection.UpdateSymptoms(Sympt, Paths)
         Catch ex As Exception
             Throw ex
@@ -458,6 +469,7 @@ Public Class Controller 'Logic
     End Sub
     Public Sub AddAdmin(Admin As Admin)
         Try
+            ValidateAdmin(Admin)
             CQConnection.AddAdmin(Admin)
         Catch ex As Exception
             Throw ex
@@ -465,6 +477,7 @@ Public Class Controller 'Logic
     End Sub
     Public Sub UpdateAdmin(Admin As Admin)
         Try
+            ValidateAdmin(Admin)
             CQConnection.UpdateAdmin(Admin)
         Catch ex As Exception
             Throw ex
@@ -500,6 +513,7 @@ Public Class Controller 'Logic
     End Function
     Public Sub AddMedic(Medic As Medic)
         Try
+            ValidateMedic(Medic)
             CQConnection.AddMedic(Medic)
         Catch ex As Exception
             Throw ex
@@ -507,6 +521,7 @@ Public Class Controller 'Logic
     End Sub
     Public Sub UpdateMedic(Medic As Medic)
         Try
+            ValidateMedic(Medic)
             CQConnection.UpdateMedic(Medic)
         Catch ex As Exception
             Throw ex
@@ -542,6 +557,7 @@ Public Class Controller 'Logic
     End Function
     Public Sub AddPatient(Patient As People)
         Try
+            ValidatePatient(Patient)
             CQConnection.AddPatient(Patient)
         Catch ex As Exception
             Throw ex
@@ -549,6 +565,7 @@ Public Class Controller 'Logic
     End Sub
     Public Sub UpdatePatient(Patient As People)
         Try
+            ValidatePatient(Patient)
             CQConnection.UpdatePatient(Patient)
         Catch ex As Exception
             Throw ex
@@ -574,6 +591,67 @@ Public Class Controller 'Logic
             Throw ex
         End Try
     End Function
+
+    'Validaciones
+    Private Sub ValidateAdmin(Admin As Admin)
+        For Each Admins As Admin In ObtainAdmins()
+            If Admins.id <> Admin.id Then 'Compara con Administradores diferentes
+                If Admins.ci = Admin.ci Then
+                    Throw New Exception("Cédula de identidad Ya existente")
+                End If
+
+                If Admins.numPhone.Equals(Admin.numPhone) Then
+                    Throw New Exception("Número de telefono ya existente")
+                End If
+
+                If Admins.email.Equals(Admin.email) Then
+                    Throw New Exception("Email ya existente")
+                End If
+
+                If Admins.username.Equals(Admin.username) Then
+                    Throw New Exception("Nombre de usuario ya existente")
+                End If
+            End If
+        Next
+    End Sub
+
+    Private Sub ValidateMedic(Medic As Medic)
+        For Each Medics As Medic In ObtainMedics()
+            If Medics.id <> Medic.id Then 'Compara con médicos diferentes
+                If Medics.ci = Medic.ci Then
+                    Throw New Exception("Cédula de identidad Ya existente")
+                End If
+                If Medics.numPhone.Equals(Medic.numPhone) Then
+                    Throw New Exception("Número de telefono ya existente")
+                End If
+
+                If Medics.email.Equals(Medic.email) Then
+                    Throw New Exception("Email ya existente")
+                End If
+
+                If Medics.username.Equals(Medic.username) Then
+                    Throw New Exception("Nombre de usuario ya existente")
+                End If
+            End If
+        Next
+    End Sub
+
+    Private Sub ValidatePatient(Patient As People)
+        For Each Patients As People In ObtainPatients()
+            If Patients.id <> Patient.id Then 'Compara con pacientes diferentes
+                If Patients.ci = Patient.ci Then
+                    Throw New Exception("Cédula de identidad Ya existente")
+                End If
+                If Patients.numPhone.Equals(Patient.numPhone) Then
+                    Throw New Exception("Número de telefono ya existente")
+                End If
+
+                If Patients.email.Equals(Patient.email) Then
+                    Throw New Exception("Email ya existente")
+                End If
+            End If
+        Next
+    End Sub
 
 
 End Class 'Logic

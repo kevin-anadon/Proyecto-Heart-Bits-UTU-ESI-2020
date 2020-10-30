@@ -1,5 +1,4 @@
-﻿Imports System.Runtime.InteropServices
-Imports Data
+﻿Imports Data
 Imports Logic
 Public Class FrmAddModSympt
     Dim log As New Logic.Controller()
@@ -113,7 +112,7 @@ Public Class FrmAddModSympt
     Private Sub BtnMod_Click(sender As Object, e As EventArgs) Handles BtnMod.Click
         Dim SymptAfter As String = ""
 
-        If TxtDescr.Text.Trim.Length = 0 Or ChkListPath.CheckedItems.Count - 1 = 0 Then
+        If TxtDescr.Text.Trim.Length = 0 Or ChkListPath.CheckedItems.Count = 0 Then
             MessageBox.Show("Campos vacios o No selecciono patología asociada")
         Else
             SymptAfter = TxtDescr.Text
