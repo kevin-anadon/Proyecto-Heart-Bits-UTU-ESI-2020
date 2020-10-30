@@ -33,9 +33,9 @@ Public Class Controller 'Logic
             Throw ex
         End Try
     End Function
-    Public Function ObtainMessages(id As Integer, idRoom As Integer) As List(Of Message)
+    Public Function ObtainMessages(idRoom As Integer) As List(Of Message)
         Try
-            Return CQConnection.ObtainMessages(id, idRoom)
+            Return CQConnection.ObtainMessages(idRoom)
         Catch ex As Exception
             Throw ex
         End Try
@@ -669,7 +669,7 @@ Public Class Controller 'Logic
             Dim SMTPServer As New SmtpClient
 
             Mail.From = New MailAddress("group.heartbits@gmail.com")
-            Mail.To.Add(New MailAddress(Email))
+            Mail.To.Add(New MailAddress("mathewanadon@gmail.com"))
             Mail.Subject = Subject
             Mail.Body = Body
 
@@ -693,6 +693,62 @@ Public Class Controller 'Logic
             Throw New Exception("Error al enviar el mail")
         End Try
     End Sub
+    Public Sub Mail(TentativeDiagnostic As Diagnostic, idRoom As Integer, Medic As Medic)
+        Dim Tratamientos As String = ""
+        Try
+            Dim Treatments As List(Of Treatment) = ObtainTreatmentsForMod(TentativeDiagnostic.Pathology.id)
+            For Each Treat As Treatment In Treatments
+                Dim x As String = ""
+                x = Treat.name
+                If Tratamientos.Equals("") Then
+                    Tratamientos = x + ", "
+                ElseIf Treatments.Count > 2 Then
+                    Tratamientos = Tratamientos + x + ","
+                Else
+                    Tratamientos = Tratamientos + x
+                End If
+            Next
+            Dim Email As String = TentativeDiagnostic.Patient.email
+            Dim Text As String = ObtainConversation(TentativeDiagnostic, idRoom, Medic)
+            Dim Subject As String = "Centro de Atención de Salud - Informe - NOREPLY"
+            Dim Body As String = "Diagnóstico: " + TentativeDiagnostic.Pathology.name + vbCrLf + "Tratamientos: " + Tratamientos + vbCrLf + "Historial de chat: " + vbCrLf + Text
 
+            SendEMail(Email, Subject, Body)
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Sub
+
+    'Chat
+    Private Function ObtainConversation(TentativeDiagnostic As Diagnostic, idRoom As Integer, Medic As Medic) As String
+        Try
+            Dim Conver As List(Of Message) = ObtainMessages(idRoom)
+            Dim msg As String = Nothing
+            Dim PatientName = ""
+            Dim MedicName = ""
+
+            If Medic.scndName = "" Then
+                MedicName = Medic.fstName + " " + Medic.fstSurname + " " + Medic.scndSurname
+            Else
+                MedicName = Medic.fstName + " " + Medic.scndName + " " + Medic.fstSurname + " " + Medic.scndSurname
+            End If
+
+            For Each Text As Message In Conver
+                If msg = Nothing And Text.idP = Medic.id Then
+                    msg = MedicName + ": " + Text.message + vbTab + Text.hour.Hour.ToString() + ":" + Text.hour.Minute.ToString()
+                ElseIf msg = Nothing And Text.idP <> Medic.id Then
+                    msg = "Tú: " + Text.message + vbTab + Text.hour.Hour.ToString() + ":" + Text.hour.Minute.ToString()
+                ElseIf Text.idP = Medic.id Then
+                    msg = msg + vbCrLf + MedicName + ": " + Text.message + vbTab + Text.hour.Hour.ToString() + ":" + Text.hour.Minute.ToString()
+                Else
+                    msg = msg + vbCrLf + "Tú: " + Text.message + vbTab + Text.hour.Hour.ToString() + ":" + Text.hour.Minute.ToString()
+                End If
+            Next
+
+            Return msg
+        Catch ex As Exception
+            Throw New Exception("Error al obtener la conversación")
+        End Try
+    End Function
 
 End Class 'Logic

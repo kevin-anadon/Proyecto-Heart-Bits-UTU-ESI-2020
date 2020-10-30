@@ -408,7 +408,7 @@ Public Class FrmHome 'Paciente
     Public Sub ObtainMsg()
         chat = Nothing
         Try
-            For Each msg As Message In L1.ObtainMessages(idPatientLoggedOn, idRoom)
+            For Each msg As Message In L1.ObtainMessages(idRoom)
                 If chat = Nothing And msg.idP = idPatientLoggedOn Then
                     chat = "Tú: " + msg.message + vbTab + msg.hour.Hour.ToString() + ":" + msg.hour.Minute.ToString()
                 ElseIf chat = Nothing And msg.idP <> idPatientLoggedOn Then

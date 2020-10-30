@@ -668,7 +668,7 @@ Public Class DataBaseConn
             con.Close()
         End Try
     End Sub
-    Public Function ObtainMessages(id As Integer, idRoom As Integer) As List(Of Message)
+    Public Function ObtainMessages(idRoom As Integer) As List(Of Message)
         Dim con As Connection = Me.Connect
         Dim Msgs As New List(Of Message)
 

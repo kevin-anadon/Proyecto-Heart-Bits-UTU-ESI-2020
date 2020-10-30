@@ -13,36 +13,6 @@ Public Class FrmHome
     Dim TentativeDiagnostic As Diagnostic
     Dim ListPath As New List(Of Pathology)
 
-    'Metodos relacionados al mail
-    Private Sub Mail()
-        Dim Tratamientos As String = ""
-        Try
-            Dim Treatments As List(Of Treatment) = log.ObtainTreatmentsForMod(TentativeDiagnostic.Pathology.id)
-            For Each Treat As Treatment In Treatments
-                Dim x As String = ""
-                x = Treat.name
-                If Tratamientos.Equals("") Then
-                    Tratamientos = x + ", "
-                ElseIf Treatments.Count > 2 Then
-                    Tratamientos = Tratamientos + x + ","
-                Else
-                    Tratamientos = Tratamientos + x
-                End If
-            Next
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-        End Try
-        Dim Email As String = PatientSelected.email
-        Dim Subject As String = "Centro de Atención de Salud - Informe - NOREPLY"
-        Dim Body As String = "Diagnóstico: " + TentativeDiagnostic.Pathology.name + vbCrLf + "Tratamientos: " + Tratamientos + vbCrLf + "Historial de chat: " + vbCrLf + TxtChat.Text
-
-        Try
-            log.SendEmail(Email, Subject, Body)
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-        End Try
-    End Sub
-
     'Métodos relacionados a la Sala de chat
     Private Sub JoinRoom()
         Try
@@ -58,7 +28,7 @@ Public Class FrmHome
             VerifyDiagnostic()
             log.LeaveRoom(idRoom, GetNowDateTime(1))
             log.DisablePatient(PatientSelected.id)
-            Mail()
+            log.Mail(TentativeDiagnostic, idRoom, Medic)
             ChangePanels(0)
             TimerChat.Stop()
         Catch ex As Exception
@@ -185,7 +155,7 @@ Public Class FrmHome
     Private Sub ObtainMsg()
         chat = Nothing
         Try
-            For Each msg As Message In log.ObtainMessages(Medic.id, idRoom)
+            For Each msg As Message In log.ObtainMessages(idRoom)
                 If chat = Nothing And msg.idP = Medic.id Then
                     chat = "Tú: " + msg.message + vbTab + msg.hour.Hour.ToString() + ":" + msg.hour.Minute.ToString()
                 ElseIf chat = Nothing And msg.idP <> Medic.id Then
