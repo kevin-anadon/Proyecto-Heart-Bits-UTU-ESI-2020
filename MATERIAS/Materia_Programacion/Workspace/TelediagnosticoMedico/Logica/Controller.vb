@@ -1,6 +1,7 @@
 ﻿Imports Persistencia
 Imports Data
-
+Imports System.Net
+Imports System.Net.Mail
 Public Class Controller 'Logic
     'Atributos
     Private ReadOnly CQConnection As New DataBaseConn()
@@ -642,7 +643,6 @@ Public Class Controller 'Logic
             End If
         Next
     End Sub
-
     Private Sub ValidatePatient(Patient As People)
         For Each Patients As People In ObtainPatients()
             If Patients.id <> Patient.id Then 'Compara con pacientes diferentes
@@ -658,6 +658,40 @@ Public Class Controller 'Logic
                 End If
             End If
         Next
+    End Sub
+
+    'Mail
+    Public Sub SendEMail(Email As String, Subject As String, Body As String)
+        Dim Mail As New MailMessage()
+
+        Try
+            'Declaramos nuestro objeto servidor SMTP
+            Dim SMTPServer As New SmtpClient
+
+            Mail.From = New MailAddress("group.heartbits@gmail.com")
+            Mail.To.Add(New MailAddress(Email))
+            Mail.Subject = Subject
+            Mail.Body = Body
+
+            'Especificamos cual es nuestro servidor SMTP
+            SMTPServer.Host = "smtp.gmail.com"
+            'Puerto SMTP de nuestro server
+            SMTPServer.Port = 587
+            'Credenciales de acceso de la cuenta de envio
+            SMTPServer.Credentials = New System.Net.NetworkCredential("group.heartbits@gmail.com", "heartbits2002")
+            'Si nuestro servidor de correo admite SSL
+            SMTPServer.EnableSsl = True
+            'Enviamos el correo
+            SMTPServer.Send(Mail)
+
+            'Destruimos el objeto de correo
+            Mail.Dispose()
+
+            Console.WriteLine("Correo enviado")
+
+        Catch ex As Exception
+            Throw New Exception("Error al enviar el mail")
+        End Try
     End Sub
 
 

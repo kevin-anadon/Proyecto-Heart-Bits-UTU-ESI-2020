@@ -1,7 +1,5 @@
 ﻿Imports Data
 Imports Logic
-Imports System.Net
-Imports System.Net.Mail
 Public Class FrmHome
     Dim time As Integer = 0
     Public Shared MedicName = "", Ci = "", Age = "", Email = "", Phone = "", Connect = ""
@@ -38,39 +36,10 @@ Public Class FrmHome
         Dim Subject As String = "Centro de Atención de Salud - Informe - NOREPLY"
         Dim Body As String = "Diagnóstico: " + TentativeDiagnostic.Pathology.name + vbCrLf + "Tratamientos: " + Tratamientos + vbCrLf + "Historial de chat: " + vbCrLf + TxtChat.Text
 
-        SendMail(Email, Subject, Body)
-    End Sub
-    Private Sub SendMail(Email As String, Subject As String, Body As String)
-        Dim Mail As New MailMessage()
-
         Try
-            'Declaramos nuestro objeto servidor SMTP
-            Dim SMTPServer As New SmtpClient
-
-            Mail.From = New MailAddress("group.heartbits@gmail.com")
-            Mail.To.Add(New MailAddress(Email))
-            Mail.Subject = Subject
-            Mail.Body = Body
-
-            'Especificamos cual es nuestro servidor SMTP
-            SMTPServer.Host = "smtp.gmail.com"
-            'Puerto SMTP de nuestro server
-            SMTPServer.Port = 587
-            'Credenciales de acceso de la cuenta de envio
-            SMTPServer.Credentials = New System.Net.NetworkCredential("group.heartbits@gmail.com", "heartbits2002")
-            'Si nuestro servidor de correo admite SSL
-            SMTPServer.EnableSsl = True
-            'Enviamos el correo
-            SMTPServer.Send(Mail)
-
-            'Destruimos el objeto de correo
-            Mail.Dispose()
-
-            Console.WriteLine("Correo enviado")
-
+            log.SendEmail(Email, Subject, Body)
         Catch ex As Exception
-            Console.WriteLine(ex.Message)
-            MessageBox.Show("Ocurrio un error al enviar el correo: ")
+            MessageBox.Show(ex.Message)
         End Try
     End Sub
 
@@ -85,12 +54,16 @@ Public Class FrmHome
         End Try
     End Sub
     Private Sub LeaveRoom()
-        VerifyDiagnostic()
-        log.LeaveRoom(idRoom, GetNowDateTime(1))
-        log.DisablePatient(PatientSelected.id)
-        Mail()
-        ChangePanels(0)
-        TimerChat.Stop()
+        Try
+            VerifyDiagnostic()
+            log.LeaveRoom(idRoom, GetNowDateTime(1))
+            log.DisablePatient(PatientSelected.id)
+            Mail()
+            ChangePanels(0)
+            TimerChat.Stop()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
     End Sub
     Private Function CheckStateRoom() As Integer
         Try
