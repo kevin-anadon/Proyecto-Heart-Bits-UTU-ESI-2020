@@ -95,8 +95,22 @@ Public Class DataBaseConn
         Try
             Dim rsInsertVerification As Recordset = con.Execute("INSERT INTO verifica VALUES(" & idDiag & "," & idMed & ");")
         Catch ex As Exception
-            Throw New Exception("")
+            Throw New Exception("Error al verificar el diagnóstico")
+        Finally
+            con.Close()
         End Try
+    End Sub
+    Public Sub UpdateDiagnostic(idDiagnostic As Integer, idPath As Integer)
+        Dim con As Connection = Me.Connect()
+
+        Try
+            Dim rsInsertVerification As Recordset = con.Execute("UPDATE diagnostico SET id_patologia=" & idPath & " WHERE id=" & idDiagnostic & ";")
+        Catch ex As Exception
+            Throw New Exception("Error al modificar el diagnóstico")
+        Finally
+            con.Close()
+        End Try
+
     End Sub
     Public Function ObtainTreatments(pat As String) As List(Of Treatment)
         Dim con As Connection = Me.Connect()

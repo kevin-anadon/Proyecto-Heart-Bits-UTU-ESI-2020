@@ -140,7 +140,7 @@ Partial Class FrmAlertRemove
         Me.TxtPin.Radius = 5
         Me.TxtPin.SelectedText = ""
         Me.TxtPin.Size = New System.Drawing.Size(115, 39)
-        Me.TxtPin.TabIndex = 25
+        Me.TxtPin.TabIndex = 0
         Me.TxtPin.TextOffsetX = 5
         '
         'BtnPin
@@ -235,7 +235,7 @@ Partial Class FrmAlertRemove
         Me.Controls.Add(Me.PanelTop)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.NameX = "FrmAlertRemove"
+        Me.Name = "FrmAlertRemove"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.PanelTop.ResumeLayout(False)
         Me.PanelTop.PerformLayout()

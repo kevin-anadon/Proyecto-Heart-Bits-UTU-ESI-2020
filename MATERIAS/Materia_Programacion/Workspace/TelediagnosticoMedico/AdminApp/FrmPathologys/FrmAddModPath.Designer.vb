@@ -161,7 +161,7 @@ Partial Class FrmAddModPath
         Me.CmbTipo.OnHoverItemForeColor = System.Drawing.Color.White
         Me.CmbTipo.Radius = 5
         Me.CmbTipo.Size = New System.Drawing.Size(203, 26)
-        Me.CmbTipo.TabIndex = 85
+        Me.CmbTipo.TabIndex = 3
         '
         'GunaSeparator7
         '
@@ -195,7 +195,7 @@ Partial Class FrmAddModPath
         Me.RbnQ.Location = New System.Drawing.Point(153, 407)
         Me.RbnQ.Name = "RbnQ"
         Me.RbnQ.Size = New System.Drawing.Size(80, 19)
-        Me.RbnQ.TabIndex = 82
+        Me.RbnQ.TabIndex = 7
         Me.RbnQ.Text = "Quirurjico"
         Me.RbnQ.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
         Me.RbnQ.UncheckedState.BorderThickness = 2
@@ -290,7 +290,7 @@ Partial Class FrmAddModPath
         Me.RbnMed.Location = New System.Drawing.Point(18, 407)
         Me.RbnMed.Name = "RbnMed"
         Me.RbnMed.Size = New System.Drawing.Size(102, 19)
-        Me.RbnMed.TabIndex = 81
+        Me.RbnMed.TabIndex = 6
         Me.RbnMed.Text = "Medicamento"
         Me.RbnMed.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
         Me.RbnMed.UncheckedState.BorderThickness = 2
@@ -323,7 +323,7 @@ Partial Class FrmAddModPath
         Me.BtnAdd.OnPressedColor = System.Drawing.Color.Black
         Me.BtnAdd.Radius = 2
         Me.BtnAdd.Size = New System.Drawing.Size(150, 42)
-        Me.BtnAdd.TabIndex = 78
+        Me.BtnAdd.TabIndex = 11
         Me.BtnAdd.Text = "Modificar Patología"
         Me.BtnAdd.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -353,7 +353,7 @@ Partial Class FrmAddModPath
         Me.BtnModTreat.OnPressedColor = System.Drawing.Color.Black
         Me.BtnModTreat.Radius = 2
         Me.BtnModTreat.Size = New System.Drawing.Size(33, 33)
-        Me.BtnModTreat.TabIndex = 77
+        Me.BtnModTreat.TabIndex = 10
         Me.BtnModTreat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'BtnDelTreat
@@ -382,7 +382,7 @@ Partial Class FrmAddModPath
         Me.BtnDelTreat.OnPressedColor = System.Drawing.Color.Black
         Me.BtnDelTreat.Radius = 2
         Me.BtnDelTreat.Size = New System.Drawing.Size(33, 33)
-        Me.BtnDelTreat.TabIndex = 76
+        Me.BtnDelTreat.TabIndex = 9
         Me.BtnDelTreat.Text = "-"
         Me.BtnDelTreat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -412,7 +412,7 @@ Partial Class FrmAddModPath
         Me.BtnAddTreat.OnPressedColor = System.Drawing.Color.Black
         Me.BtnAddTreat.Radius = 2
         Me.BtnAddTreat.Size = New System.Drawing.Size(33, 33)
-        Me.BtnAddTreat.TabIndex = 41
+        Me.BtnAddTreat.TabIndex = 8
         Me.BtnAddTreat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Guna2PictureBox2
@@ -526,7 +526,7 @@ Partial Class FrmAddModPath
         Me.TxtTreatDesc.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.TxtTreatDesc.SelectedText = ""
         Me.TxtTreatDesc.Size = New System.Drawing.Size(389, 30)
-        Me.TxtTreatDesc.TabIndex = 64
+        Me.TxtTreatDesc.TabIndex = 5
         '
         'LblTreatmentDesc
         '
@@ -565,7 +565,7 @@ Partial Class FrmAddModPath
         Me.TxtTreatName.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.TxtTreatName.SelectedText = ""
         Me.TxtTreatName.Size = New System.Drawing.Size(389, 30)
-        Me.TxtTreatName.TabIndex = 61
+        Me.TxtTreatName.TabIndex = 4
         '
         'LblTreatmentName
         '
@@ -594,7 +594,7 @@ Partial Class FrmAddModPath
         Me.TxtDescr.Name = "TxtDescr"
         Me.TxtDescr.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None
         Me.TxtDescr.Size = New System.Drawing.Size(389, 64)
-        Me.TxtDescr.TabIndex = 57
+        Me.TxtDescr.TabIndex = 2
         Me.TxtDescr.Text = ""
         '
         'LblPrioridad
@@ -640,7 +640,7 @@ Partial Class FrmAddModPath
         Me.Spinner.Name = "Spinner"
         Me.Spinner.ShadowDecoration.Parent = Me.Spinner
         Me.Spinner.Size = New System.Drawing.Size(50, 23)
-        Me.Spinner.TabIndex = 53
+        Me.Spinner.TabIndex = 1
         Me.Spinner.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(246, Byte), Integer), CType(CType(135, Byte), Integer), CType(CType(124, Byte), Integer))
         Me.Spinner.UpDownButtonForeColor = System.Drawing.Color.White
         Me.Spinner.Value = New Decimal(New Integer() {1, 0, 0, 0})
@@ -734,7 +734,7 @@ Partial Class FrmAddModPath
         Me.TxtName.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.TxtName.SelectedText = ""
         Me.TxtName.Size = New System.Drawing.Size(184, 30)
-        Me.TxtName.TabIndex = 45
+        Me.TxtName.TabIndex = 0
         '
         'PicPrior
         '
@@ -824,7 +824,7 @@ Partial Class FrmAddModPath
         Me.LblListado.Text = "LISTADO DE TRATAMIENTOS PARA LA PATOLOGÍA"
         Me.LblListado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'FrmModPath
+        'FrmAddModPath
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font

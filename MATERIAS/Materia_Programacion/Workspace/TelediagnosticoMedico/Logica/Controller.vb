@@ -109,6 +109,13 @@ Public Class Controller 'Logic
             Throw ex
         End Try
     End Sub
+    Public Sub UpdateDiagnostic(idDiagnostic As Integer, idPath As Integer)
+        Try
+            CQConnection.UpdateDiagnostic(idDiagnostic, idPath)
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Sub
 
     'Conexión Otros
     Public Function GetNowDateTime(prefix As Short) As String

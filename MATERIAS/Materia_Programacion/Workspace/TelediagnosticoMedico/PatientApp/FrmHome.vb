@@ -449,7 +449,6 @@ Public Class FrmHome 'Paciente
                 Else
                     TimerChat.Stop()
                     MessageBox.Show("El chat ha finalizado!")
-                    L1.DisablePatient(idPatientLoggedOn)
                     FrmLogin.Show()
                     Me.Close()
                 End If

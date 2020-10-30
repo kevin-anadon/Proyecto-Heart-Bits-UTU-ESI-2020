@@ -131,7 +131,7 @@ Partial Class FrmAddModSympt
         Me.ChkReg.Name = "ChkReg"
         Me.ChkReg.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.ChkReg.Size = New System.Drawing.Size(110, 20)
-        Me.ChkReg.TabIndex = 43
+        Me.ChkReg.TabIndex = 3
         Me.ChkReg.Text = "Modificar región"
         '
         'Cmbreg
@@ -152,7 +152,7 @@ Partial Class FrmAddModSympt
         Me.Cmbreg.OnHoverItemForeColor = System.Drawing.Color.White
         Me.Cmbreg.Radius = 5
         Me.Cmbreg.Size = New System.Drawing.Size(203, 26)
-        Me.Cmbreg.TabIndex = 42
+        Me.Cmbreg.TabIndex = 2
         Me.Cmbreg.Visible = False
         '
         'BtnCancel
@@ -209,7 +209,7 @@ Partial Class FrmAddModSympt
         Me.BtnMod.OnPressedColor = System.Drawing.Color.Black
         Me.BtnMod.Radius = 6
         Me.BtnMod.Size = New System.Drawing.Size(76, 39)
-        Me.BtnMod.TabIndex = 40
+        Me.BtnMod.TabIndex = 4
         Me.BtnMod.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Lblreg
@@ -251,7 +251,7 @@ Partial Class FrmAddModSympt
         Me.ChkListPath.Location = New System.Drawing.Point(11, 104)
         Me.ChkListPath.Name = "ChkListPath"
         Me.ChkListPath.Size = New System.Drawing.Size(200, 94)
-        Me.ChkListPath.TabIndex = 36
+        Me.ChkListPath.TabIndex = 1
         '
         'GunaLabel3
         '
@@ -290,7 +290,7 @@ Partial Class FrmAddModSympt
         Me.TxtDescr.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.TxtDescr.SelectedText = ""
         Me.TxtDescr.Size = New System.Drawing.Size(650, 30)
-        Me.TxtDescr.TabIndex = 33
+        Me.TxtDescr.TabIndex = 0
         '
         'GunaLabel2
         '

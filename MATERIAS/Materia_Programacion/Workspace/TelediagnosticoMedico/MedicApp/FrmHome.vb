@@ -1,5 +1,7 @@
 ﻿Imports Data
 Imports Logic
+Imports System.Net
+Imports System.Net.Mail
 Public Class FrmHome
     Dim time As Integer = 0
     Public Shared MedicName = "", Ci = "", Age = "", Email = "", Phone = "", Connect = ""
@@ -11,6 +13,66 @@ Public Class FrmHome
     Dim row As DataGridViewRow
     Dim PatientSelected As People
     Dim TentativeDiagnostic As Diagnostic
+    Dim ListPath As New List(Of Pathology)
+
+    'Metodos relacionados al mail
+    Private Sub Mail()
+        Dim Tratamientos As String = ""
+        Try
+            Dim Treatments As List(Of Treatment) = log.ObtainTreatmentsForMod(TentativeDiagnostic.Pathology.id)
+            For Each Treat As Treatment In Treatments
+                Dim x As String = ""
+                x = Treat.name
+                If Tratamientos.Equals("") Then
+                    Tratamientos = x + ", "
+                ElseIf Treatments.Count > 2 Then
+                    Tratamientos = Tratamientos + x + ","
+                Else
+                    Tratamientos = Tratamientos + x
+                End If
+            Next
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+        Dim Email As String = PatientSelected.email
+        Dim Subject As String = "Centro de Atención de Salud - Informe - NOREPLY"
+        Dim Body As String = "Diagnóstico: " + TentativeDiagnostic.Pathology.name + vbCrLf + "Tratamientos: " + Tratamientos + vbCrLf + "Historial de chat: " + vbCrLf + TxtChat.Text
+
+        SendMail(Email, Subject, Body)
+    End Sub
+    Private Sub SendMail(Email As String, Subject As String, Body As String)
+        Dim Mail As New MailMessage()
+
+        Try
+            'Declaramos nuestro objeto servidor SMTP
+            Dim SMTPServer As New SmtpClient
+
+            Mail.From = New MailAddress("group.heartbits@gmail.com")
+            Mail.To.Add(New MailAddress(Email))
+            Mail.Subject = Subject
+            Mail.Body = Body
+
+            'Especificamos cual es nuestro servidor SMTP
+            SMTPServer.Host = "smtp.gmail.com"
+            'Puerto SMTP de nuestro server
+            SMTPServer.Port = 587
+            'Credenciales de acceso de la cuenta de envio
+            SMTPServer.Credentials = New System.Net.NetworkCredential("group.heartbits@gmail.com", "heartbits2002")
+            'Si nuestro servidor de correo admite SSL
+            SMTPServer.EnableSsl = True
+            'Enviamos el correo
+            SMTPServer.Send(Mail)
+
+            'Destruimos el objeto de correo
+            Mail.Dispose()
+
+            Console.WriteLine("Correo enviado")
+
+        Catch ex As Exception
+            Console.WriteLine(ex.Message)
+            MessageBox.Show("Ocurrio un error al enviar el correo: ")
+        End Try
+    End Sub
 
     'Métodos relacionados a la Sala de chat
     Private Sub JoinRoom()
@@ -25,6 +87,8 @@ Public Class FrmHome
     Private Sub LeaveRoom()
         VerifyDiagnostic()
         log.LeaveRoom(idRoom, GetNowDateTime(1))
+        log.DisablePatient(PatientSelected.id)
+        Mail()
         ChangePanels(0)
         TimerChat.Stop()
     End Sub
@@ -114,6 +178,9 @@ Public Class FrmHome
         If MsgBox("Está seguro que desea cerrar sesión ?", MsgBoxStyle.YesNoCancel, "Cerrar Programa") = MsgBoxResult.Yes Then
             End
         End If
+    End Sub
+    Private Sub BtnCloseModDiag_Click(sender As Object, e As EventArgs) Handles BtnCloseModDiag.Click
+        PnlCmbDiag.Visible = False
     End Sub
 
     'Metodos relacionados al Chat
@@ -206,6 +273,22 @@ Public Class FrmHome
         LblPhone.Text = Phone
         LblConnect.Text = Connect
     End Sub
+    Private Sub LoadModDiag()
+        PnlCmbDiag.Visible = True
+        Try
+            ListPath = log.ObtainPath()
+            For Each Path As Pathology In ListPath
+                CmbPath.Items.Add(Path.name)
+            Next
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+        For i = 0 To CmbPath.Items.Count - 1
+            If CmbPath.Items(i).ToString.Equals(TentativeDiagnostic.Pathology.name) Then
+                CmbPath.SelectedIndex = i
+            End If
+        Next
+    End Sub
 
     'Timers
     Private Sub TimerRequests_Tick(sender As Object, e As EventArgs) Handles TimerRequests.Tick
@@ -215,6 +298,7 @@ Public Class FrmHome
             time = 0
         End If
     End Sub
+
     Private Sub TimerChat_Tick(sender As Object, e As EventArgs) Handles TimerChat.Tick
         time = time + 1
         If time > 4 Then
@@ -277,6 +361,33 @@ Public Class FrmHome
                 TxtChatSend.Focus()
                 TimerChat.Start()
         End Select
+    End Sub
+
+    'Modificación del diagnóstico
+    Public Sub ReloadDgvDiagnostic()
+        DgvInfoPatientPaths.Rows(0).Cells(0).Value = TentativeDiagnostic.Pathology.name
+        DgvInfoPatientPaths.Rows(0).Cells(1).Value = TentativeDiagnostic.Pathology.priority.name
+    End Sub
+    Private Sub CmbPath_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CmbPath.SelectedIndexChanged
+        If Not CmbPath.SelectedItem.Equals(TentativeDiagnostic.Pathology.name) Then
+            Try
+                Dim PathSelected As Pathology = ListPath.Item(CmbPath.SelectedIndex)
+                log.UpdateDiagnostic(TentativeDiagnostic.Id, PathSelected.id)
+                MessageBox.Show("Diagnóstico modificado con exito")
+                PnlCmbDiag.Visible = False
+                TentativeDiagnostic.Pathology = PathSelected
+                ReloadDgvDiagnostic()
+            Catch ex As Exception
+                MessageBox.Show(ex.Message)
+            End Try
+        End If
+    End Sub
+    Private Sub ChkModDiag_CheckedChanged(sender As Object, e As EventArgs) Handles ChkModDiag.CheckedChanged
+        If ChkModDiag.Checked = True Then
+            LoadModDiag()
+        Else
+            PnlCmbDiag.Visible = False
+        End If
     End Sub
 
     'Otros métodos

@@ -123,7 +123,7 @@ Partial Class FrmLogin
         Me.TxtUser.Radius = 11
         Me.TxtUser.SelectedText = ""
         Me.TxtUser.Size = New System.Drawing.Size(318, 49)
-        Me.TxtUser.TabIndex = 17
+        Me.TxtUser.TabIndex = 0
         Me.TxtUser.TextOffsetX = 35
         '
         'TxtPass
@@ -143,7 +143,7 @@ Partial Class FrmLogin
         Me.TxtPass.Radius = 11
         Me.TxtPass.SelectedText = ""
         Me.TxtPass.Size = New System.Drawing.Size(318, 49)
-        Me.TxtPass.TabIndex = 18
+        Me.TxtPass.TabIndex = 1
         Me.TxtPass.TextOffsetX = 38
         '
         'BtnLogin
@@ -170,7 +170,7 @@ Partial Class FrmLogin
         Me.BtnLogin.OnPressedColor = System.Drawing.Color.Black
         Me.BtnLogin.Radius = 11
         Me.BtnLogin.Size = New System.Drawing.Size(150, 49)
-        Me.BtnLogin.TabIndex = 21
+        Me.BtnLogin.TabIndex = 2
         Me.BtnLogin.Text = "INICIAR SESIÓN"
         Me.BtnLogin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
