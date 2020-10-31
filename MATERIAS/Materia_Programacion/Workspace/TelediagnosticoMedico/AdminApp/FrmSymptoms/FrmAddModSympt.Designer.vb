@@ -40,6 +40,8 @@ Partial Class FrmAddModSympt
         Me.GunaSeparator1 = New Guna.UI.WinForms.GunaSeparator()
         Me.TxtDescr = New Guna.UI.WinForms.GunaTextBox()
         Me.GunaLabel2 = New Guna.UI.WinForms.GunaLabel()
+        Me.OfdAddSympt = New System.Windows.Forms.OpenFileDialog()
+        Me.BtnImportCsv = New Guna.UI.WinForms.GunaButton()
         Me.PanelTop.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -103,6 +105,7 @@ Partial Class FrmAddModSympt
         Me.Panel1.BackColor = System.Drawing.Color.White
         Me.Panel1.BackgroundImage = CType(resources.GetObject("Panel1.BackgroundImage"), System.Drawing.Image)
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel1.Controls.Add(Me.BtnImportCsv)
         Me.Panel1.Controls.Add(Me.ChkReg)
         Me.Panel1.Controls.Add(Me.Cmbreg)
         Me.Panel1.Controls.Add(Me.BtnCancel)
@@ -303,6 +306,39 @@ Partial Class FrmAddModSympt
         Me.GunaLabel2.TabIndex = 32
         Me.GunaLabel2.Text = "Descripción"
         '
+        'OfdAddSympt
+        '
+        Me.OfdAddSympt.Filter = "CSV files (*.csv)|*.csv|All files (*.*)|*.*"" ;"
+        Me.OfdAddSympt.Title = "Agregar síntoma"
+        '
+        'BtnImportCsv
+        '
+        Me.BtnImportCsv.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnImportCsv.Animated = True
+        Me.BtnImportCsv.AnimationHoverSpeed = 0.07!
+        Me.BtnImportCsv.AnimationSpeed = 0.03!
+        Me.BtnImportCsv.BackColor = System.Drawing.Color.Transparent
+        Me.BtnImportCsv.BaseColor = System.Drawing.Color.Transparent
+        Me.BtnImportCsv.BorderColor = System.Drawing.Color.DarkGray
+        Me.BtnImportCsv.DialogResult = System.Windows.Forms.DialogResult.None
+        Me.BtnImportCsv.FocusedColor = System.Drawing.Color.Empty
+        Me.BtnImportCsv.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnImportCsv.ForeColor = System.Drawing.Color.Black
+        Me.BtnImportCsv.Image = CType(resources.GetObject("BtnImportCsv.Image"), System.Drawing.Image)
+        Me.BtnImportCsv.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.BtnImportCsv.ImageSize = New System.Drawing.Size(39, 39)
+        Me.BtnImportCsv.Location = New System.Drawing.Point(622, 5)
+        Me.BtnImportCsv.Name = "BtnImportCsv"
+        Me.BtnImportCsv.OnHoverBaseColor = System.Drawing.Color.Silver
+        Me.BtnImportCsv.OnHoverBorderColor = System.Drawing.Color.Black
+        Me.BtnImportCsv.OnHoverForeColor = System.Drawing.Color.White
+        Me.BtnImportCsv.OnHoverImage = Nothing
+        Me.BtnImportCsv.OnPressedColor = System.Drawing.Color.Black
+        Me.BtnImportCsv.Radius = 6
+        Me.BtnImportCsv.Size = New System.Drawing.Size(39, 39)
+        Me.BtnImportCsv.TabIndex = 42
+        Me.BtnImportCsv.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
         'FrmAddModSympt
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -340,4 +376,6 @@ Partial Class FrmAddModSympt
     Friend WithEvents ChkReg As Guna.UI.WinForms.GunaCheckBox
     Friend WithEvents Cmbreg As Guna.UI.WinForms.GunaComboBox
     Friend WithEvents ChkListPath As CheckedListBox
+    Friend WithEvents OfdAddSympt As OpenFileDialog
+    Friend WithEvents BtnImportCsv As Guna.UI.WinForms.GunaButton
 End Class

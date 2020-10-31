@@ -18,6 +18,24 @@ Public Class Controller 'Logic
         End Try
     End Sub
 
+    'Conexión CSV
+    Private Sub ValidateSymptFromCsv(Symptoms As List(Of Symptom))
+        For Each Symptom As Symptom In ObtainSymptoms()
+            For Each sympsAdd As Symptom In Symptoms
+                If Symptom.Description.ToLower().Equals(sympsAdd.Description.ToLower()) And Symptom.Id <> sympsAdd.Id Then
+                    Throw New Exception("Descripcion de síntoma ya existente")
+                End If
+            Next
+        Next
+    End Sub
+    Public Sub AddSymptomsFromCsv(Symptoms As List(Of Symptom))
+        Try
+            ValidateSymptFromCsv(Symptoms)
+            CQConnection.AddSymptomsFromCsv(Symptoms)
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Sub
 
     'Conexión Chat
     Public Sub SetRoom(id As Integer)

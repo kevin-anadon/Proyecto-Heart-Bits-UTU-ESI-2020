@@ -1682,5 +1682,23 @@ Public Class DataBaseConn
         Return Nothing
     End Function
 
+    'Add From CSV
+    Public Sub AddSymptomsFromCsv(Symptoms As List(Of Symptom))
+        Dim con As Connection = Me.Connect()
+
+        Try
+            For Each Sympt As Symptom In Symptoms
+                If IsNothing(Sympt.Region) Then
+                    Dim rsInsertSympt As Recordset = con.Execute("INSERT INTO sintoma(id_region,descripcion) VALUES(NULL,'" + Sympt.Description + "');")
+
+                Else
+                    Dim rsInsertSympt As Recordset = con.Execute("INSERT INTO sintoma(id_region,descripcion) VALUES(" & Sympt.Region.id & ",'" + Sympt.Description + "');")
+                End If
+            Next
+        Catch ex As Exception
+            Throw New Exception("Error al añadir síntomas desde archivo csv")
+        End Try
+    End Sub
+
 
 End Class 'DataBaseConn

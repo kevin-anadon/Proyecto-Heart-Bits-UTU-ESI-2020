@@ -140,4 +140,31 @@ Public Class FrmAddModSympt
             End If
         End If
     End Sub
+
+    Private Sub BtnImportCsv_Click(sender As Object, e As EventArgs) Handles BtnImportCsv.Click
+        Dim Symptoms As New List(Of Symptom)
+        Dim region As List(Of Region) = log.ObtainRegions()
+        Try
+            If OfdAddSympt.ShowDialog And OfdAddSympt.FileName.Length > 0 Then
+                Dim lines As String() = IO.File.ReadAllLines(OfdAddSympt.FileName)
+                For Each line As String In lines
+                    Dim result As String() = line.Split(",")
+                    For Each Reg As Region In region
+                        If Reg.id.ToString().Equals(result(0)) Then
+                            Symptoms.Add(New Symptom(-1, Reg, result(1)))
+                        End If
+                    Next
+                    If result(0).Equals("NULL") Then
+                        Symptoms.Add(New Symptom(-1, result(1)))
+                    End If
+                Next
+            End If
+            log.AddSymptomsFromCsv(Symptoms)
+            MessageBox.Show("Agregado con exito" + vbCrLf + "Luego debe asociarle una o más patologias")
+            Me.Close()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+
+    End Sub
 End Class
