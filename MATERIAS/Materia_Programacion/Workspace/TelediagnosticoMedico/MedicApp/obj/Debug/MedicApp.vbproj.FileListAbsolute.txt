@@ -49,3 +49,28 @@ C:\Users\Yorel Acosta\Desktop\Study ESIMdeo\Clase 3BB 2020\Proyecto-Heart-Bits-U
 C:\Users\Yorel Acosta\Desktop\Study ESIMdeo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\MedicApp\bin\Debug\Persistencia.pdb
 C:\Users\Yorel Acosta\Desktop\Study ESIMdeo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\MedicApp\bin\Debug\Persistencia.xml
 C:\Users\Yorel Acosta\Desktop\Study ESIMdeo\Clase 3BB 2020\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\MedicApp\obj\Debug\MedicApp.FrmHome.resources
+C:\Users\mayza\Desktop\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\MedicApp\bin\Debug\MedicApp.exe.config
+C:\Users\mayza\Desktop\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\MedicApp\bin\Debug\MedicApp.exe
+C:\Users\mayza\Desktop\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\MedicApp\bin\Debug\MedicApp.pdb
+C:\Users\mayza\Desktop\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\MedicApp\bin\Debug\MedicApp.xml
+C:\Users\mayza\Desktop\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\MedicApp\bin\Debug\Data.dll
+C:\Users\mayza\Desktop\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\MedicApp\bin\Debug\Guna.UI2.dll
+C:\Users\mayza\Desktop\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\MedicApp\bin\Debug\Logic.dll
+C:\Users\mayza\Desktop\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\MedicApp\bin\Debug\Persistencia.dll
+C:\Users\mayza\Desktop\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\MedicApp\bin\Debug\Data.pdb
+C:\Users\mayza\Desktop\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\MedicApp\bin\Debug\Data.xml
+C:\Users\mayza\Desktop\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\MedicApp\bin\Debug\Logic.pdb
+C:\Users\mayza\Desktop\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\MedicApp\bin\Debug\Logic.xml
+C:\Users\mayza\Desktop\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\MedicApp\bin\Debug\Persistencia.pdb
+C:\Users\mayza\Desktop\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\MedicApp\bin\Debug\Persistencia.xml
+C:\Users\mayza\Desktop\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\MedicApp\obj\Debug\MedicApp.vbprojAssemblyReference.cache
+C:\Users\mayza\Desktop\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\MedicApp\obj\Debug\MedicApp.FrmHome.resources
+C:\Users\mayza\Desktop\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\MedicApp\obj\Debug\MedicApp.FrmLogin.resources
+C:\Users\mayza\Desktop\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\MedicApp\obj\Debug\MedicApp.FrmSplashScreen.resources
+C:\Users\mayza\Desktop\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\MedicApp\obj\Debug\MedicApp.Resources.resources
+C:\Users\mayza\Desktop\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\MedicApp\obj\Debug\MedicApp.vbproj.GenerateResource.cache
+C:\Users\mayza\Desktop\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\MedicApp\obj\Debug\MedicApp.vbproj.CoreCompileInputs.cache
+C:\Users\mayza\Desktop\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\MedicApp\obj\Debug\MedicApp.vbproj.CopyComplete
+C:\Users\mayza\Desktop\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\MedicApp\obj\Debug\MedicApp.exe
+C:\Users\mayza\Desktop\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\MedicApp\obj\Debug\MedicApp.xml
+C:\Users\mayza\Desktop\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\MedicApp\obj\Debug\MedicApp.pdb

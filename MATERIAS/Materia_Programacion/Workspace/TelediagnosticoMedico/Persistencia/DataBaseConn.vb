@@ -18,8 +18,8 @@ Public Class DataBaseConn
     Public Sub TryConnection()
         Dim connnection As New Connection()
         Try
-            'connection.ConnectionString = "driver={MySql ODBC 8.0 Unicode Driver};server=192.168.5.50;port=3306;database=kevin_anadon;uid=kevin.anadon;pwd=52108971"
-            'connection.ConnectionString = "driver={MySql ODBC 8.0 Unicode Driver};server=vdo.dyndns.org;port=3306;database=telediagnosticomedico_heartbits;uid=heartbits;pwd=h34rtbits;"
+            'connnection.ConnectionString = "driver={MySql ODBC 8.0 Unicode Driver};server=192.168.5.50;port=3306;database=kevin_anadon;uid=kevin.anadon;pwd=52108971"
+            'connnection.ConnectionString = "driver={MySql ODBC 8.0 Unicode Driver};server=vdo.dyndns.org;port=3306;database=telediagnosticomedico_heartbits;uid=heartbits;pwd=h34rtbits;"
             connnection.ConnectionString = "driver={MySql ODBC 8.0 Unicode Driver};server=127.17.0.0;port=3306;database=telediagnosticomedico_heartbits;uid=root;pwd=;"
             connnection.Open()
         Catch ex As Exception
@@ -381,11 +381,9 @@ Public Class DataBaseConn
         Catch ex As Exception
             Console.WriteLine(ex.ToString())
             Throw New Exception("Error al obtener la tabla de patologías")
-            Return Nothing
         Finally
             con.Close()
         End Try
-
     End Function
     Public Function ObtainPathForMod(NamePath As String) As Pathology
         Dim con As Connection = Me.Connect()
@@ -651,13 +649,13 @@ Public Class DataBaseConn
     End Sub
 
 
-    Public Sub SendMessage(id As Integer, idRoom As Integer, msg As String, Hour As String)
+    Public Sub SendMessage(idPeople As Integer, idRoom As Integer, msg As String, Hour As String)
         Dim con As Connection = Me.Connect
 
         Try
             con.BeginTrans()
 
-            Dim rsSendMessage As Recordset = con.Execute("INSERT INTO conversa VALUES(" & id & "," & idRoom & ",'" & msg & "','" & Hour & "');")
+            Dim rsSendMessage As Recordset = con.Execute("INSERT INTO conversa VALUES(" & idPeople & "," & idRoom & ",'" & msg & "','" & Hour & "');")
 
             con.CommitTrans()
         Catch ex As Exception
@@ -671,9 +669,15 @@ Public Class DataBaseConn
     Public Function ObtainMessages(idRoom As Integer) As List(Of Message)
         Dim con As Connection = Me.Connect
         Dim Msgs As New List(Of Message)
+        Dim x As Integer = 0
 
         Try
             Dim rsObtainMessage As Recordset = con.Execute("SELECT mensaje,id_persona,hora FROM conversa WHERE id_sala=" & idRoom & " ORDER BY hora asc;")
+            If x = 0 And rsObtainMessage.EOF Then
+                Throw New Exception("No existen mensajes en esa sala de chat")
+                x += 1
+            End If
+
             While Not rsObtainMessage.EOF
                 Dim Msg As String = TryCast(rsObtainMessage.Fields("mensaje").Value, String)
                 Dim idP As Integer = DirectCast(rsObtainMessage.Fields("id_persona").Value, Integer)
@@ -683,7 +687,7 @@ Public Class DataBaseConn
             End While
             Return Msgs
         Catch ex As Exception
-            Throw New Exception(ex.Message)
+            Throw New Exception("Error al obtener los mensajes")
         End Try
     End Function
 

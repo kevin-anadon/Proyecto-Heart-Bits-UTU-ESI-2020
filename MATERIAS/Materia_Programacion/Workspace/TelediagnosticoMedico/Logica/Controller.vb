@@ -79,9 +79,9 @@ Public Class Controller 'Logic
             Throw ex
         End Try
     End Function
-    Public Sub SendMessage(id As Integer, idRoom As Integer, msg As String, Hour As String)
+    Public Sub SendMessage(idPeople As Integer, idRoom As Integer, msg As String, Hour As String)
         Try
-            CQConnection.SendMessage(id, idRoom, msg, Hour)
+            CQConnection.SendMessage(idPeople, idRoom, msg, Hour)
         Catch ex As Exception
             Throw ex
         End Try
@@ -116,7 +116,15 @@ Public Class Controller 'Logic
     End Function
     Public Function ObtainTentativeDiagnostic(Patient As People, DateI As String) As Diagnostic
         Try
-            Return CQConnection.ObtainTentativeDiagnostic(Patient, DateI)
+            If Not IsNothing(Patient) Or Not IsNothing(DateI) Then
+                Return CQConnection.ObtainTentativeDiagnostic(Patient, DateI)
+            ElseIf IsNothing(Patient) Then
+                Throw New Exception("Paciente nulo")
+            ElseIf IsNothing(DateI) Then
+                Throw New Exception("Fecha nula")
+            Else
+                Throw New Exception("Paciente y Fecha nulos")
+            End If
         Catch ex As Exception
             Throw ex
         End Try
@@ -181,7 +189,13 @@ Public Class Controller 'Logic
     End Function
     Public Function ObtainMortalityPath(pat As String) As Integer
         Try
-            Return CQConnection.ObtainMortalityPath(pat)
+            If pat.Equals(" ") Then
+                Return 0
+            ElseIf pat.Trim.Length = 0 Then
+                Return 0
+            Else
+                Return CQConnection.ObtainMortalityPath(pat)
+            End If
         Catch ex As Exception
             Throw ex
         End Try
@@ -248,7 +262,11 @@ Public Class Controller 'Logic
     End Function
     Public Sub AddPathology(Path As Pathology, Treatments As List(Of Treatment))
         Try
-            CQConnection.AddPathology(Path, Treatments)
+            If Not Path.name.Equals("") Then
+                CQConnection.AddPathology(Path, Treatments)
+            Else
+                Throw New Exception("Nombre vacio")
+            End If
         Catch ex As Exception
             Throw ex
         End Try
@@ -262,9 +280,14 @@ Public Class Controller 'Logic
     End Sub
     Public Function SearchPathology(NamePath As String) As DataSet
         Try
-            Return CQConnection.SearchPathology(NamePath)
+            If NamePath.Equals(" ") Then
+                Throw New Exception("Espacio en lugar de la patologia")
+            Else
+                Return CQConnection.SearchPathology(NamePath)
+            End If
         Catch ex As Exception
             Console.WriteLine(ex.ToString())
+            Throw ex
         End Try
     End Function
     Public Function CheckUpdatePathology(Path As Pathology, Treatments As List(Of Treatment)) As Integer
@@ -297,7 +320,11 @@ Public Class Controller 'Logic
     End Function
     Public Sub UpdatePathology(Path As Pathology, Treatments As List(Of Treatment))
         Try
-            CQConnection.UpdatePathology(Path, Treatments)
+            If Not Path.name.Equals("") Then
+                CQConnection.UpdatePathology(Path, Treatments)
+            Else
+                Throw New Exception("Nombre vacio")
+            End If
         Catch ex As Exception
             Throw ex
         End Try
@@ -328,11 +355,26 @@ Public Class Controller 'Logic
         End Try
     End Function
     Private Sub ValidateSymptom(Sympt As Symptom)
-        For Each Symptom As Symptom In ObtainSymptoms()
-            If Symptom.Description.ToLower().Equals(Sympt.Description.ToLower()) And Symptom.Id <> Sympt.Id Then
-                Throw New Exception("Descripcion de síntoma ya existente")
+        If Not IsNothing(Sympt) Then
+            Dim Check As Boolean = False
+            For Each i As Char In Sympt.Description
+                If Char.IsNumber(i) Then
+                    Check = True
+                End If
+            Next
+            If Check = True Then
+                Throw New Exception("La descripción tiene un formato incorrecto")
+            Else
+
+                For Each Symptom As Symptom In ObtainSymptoms()
+                    If Symptom.Description.ToLower().Equals(Sympt.Description.ToLower()) And Symptom.Id <> Sympt.Id Then
+                        Throw New Exception("Descripcion de síntoma ya existente")
+                    End If
+                Next
             End If
-        Next
+        ElseIf IsNothing(Sympt) Then
+            Throw New Exception("Descripcion vacia")
+        End If
     End Sub
     Public Sub AddSymptoms(Sympt As Symptom, Paths As List(Of Pathology))
         Try
