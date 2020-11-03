@@ -196,9 +196,9 @@ Public Class FrmHome 'Paciente
     Private Sub LoadIdPatientLoggedOn()
         Me.idPatientLoggedOn = L1.matchPatientLoggedOn(Me.ciPatientLoggedOn)
     End Sub
-    Private Function FilterPathologies(descSympPath As List(Of String), pathology As Data.Pathology) As Data.Pathology
-        Return L1.FilterPathologies(ObtainDescSympSuffered(LbxSufferedPatient), descSympPath, pathology)
-    End Function
+    Private Sub FilterPathologies(descSympPath As List(Of String), pathology As Data.Pathology)
+        L1.FilterPathologies(ObtainDescSympSuffered(LbxSufferedPatient), descSympPath, pathology)
+    End Sub
     Private Function ObtainDescSympSuffered(lbxSuffredPatient As System.Windows.Forms.ListBox) As List(Of String)
         Dim sympSuffred As New List(Of String)
 
@@ -241,7 +241,7 @@ Public Class FrmHome 'Paciente
             Console.WriteLine("No se asignaron sintomas para proceder.")
         Else 'Hay sintomas para defenir la patologia
             Dim patholgiesSuffered As List(Of Data.Pathology) 'Colección de Data.Patologia sufridas
-            Dim filteredPathologies As New List(Of Data.Pathology) 'Lista filtrada con las Patologias con mas probabilidad.
+            Dim pathFiltered As Data.Pathology = Nothing 'Lista filtrada con las Patologias con mas probabilidad.
             Dim qtySympSelected As Integer = LbxSufferedPatient.Items.Count()
 
             VisualSettings(4, False, False, False, True, False, False, False, False, False, True, False)
@@ -250,44 +250,20 @@ Public Class FrmHome 'Paciente
             Try 'Intento cargar las Patologias Sufridas en una Lista
                 patholgiesSuffered = L1.ObtainPatholgiesSuffered(idPatientLoggedOn)
 
-                'Cargo la lista "chargePathology"
-                For Each pathology As Data.Pathology In patholgiesSuffered
-                    'Analizo las evidencias para cada Patologia obtenida.
-                    If pathology.mortalityIndex < 33 Then
-                        pathology.evidence = "EVIDENCIA BAJA"
-                    ElseIf pathology.mortalityIndex > 32 And pathology.mortalityIndex < 66 Then
-                        pathology.evidence = "EVIDENCIA MEDIA"
-                    ElseIf pathology.mortalityIndex > 65 Then
-                        pathology.evidence = "EVIDENCIA ALTA"
-                    End If
-                Next
-
                 For Each pathology As Data.Pathology In patholgiesSuffered
                     Dim descSympSuffered As List(Of String) = Me.ObtainIdSymptoms(pathology.id) 'Me traigo la lista de Sintomas que posee una Patologia
-                    Dim pathFiltered As Data.Pathology = Me.FilterPathologies(descSympSuffered, pathology)
-
-                    If Not IsNothing(pathFiltered) Then
-                        'Si no pertenece a la probabilidad esperada, tengo un Nothing
-                        filteredPathologies.Add(pathFiltered)
-                    End If
+                    Me.FilterPathologies(descSympSuffered, pathology)
                 Next
-
+                pathFiltered = L1.ObtainMostProbablyPath()
             Catch ex As Exception
                 MessageBox.Show(ex.Message)
             End Try
 
             'Cargo el resultado en el DataGridView de Patologias Sufridas
-            If filteredPathologies.Count() <> 0 Then
-                For Each pat As Data.Pathology In filteredPathologies
-                    DgvPhatologies.Rows.Add(pat.name, pat.evidence)
-                Next
-            Else
-#Disable Warning BC42104 ' Variable is used before it has been assigned a value
-                Dim pat As Data.Pathology = patholgiesSuffered.Item(0)
-#Enable Warning BC42104 ' Variable is used before it has been assigned a value
-                DgvPhatologies.Rows.Add(pat.name, pat.evidence)
+            If Not IsNothing(pathFiltered) Then
+                DgvPhatologies.Rows.Add(pathFiltered.name, pathFiltered.evidence + "% de Probabilidad")
+                DgvPhatologies.Refresh()
             End If
-            DgvPhatologies.Refresh()
         End If
     End Sub
     Private Sub BtnBack_Patient1_Click(sender As Object, e As EventArgs) Handles BtnBack_Patient1_P_H.Click
@@ -315,10 +291,13 @@ Public Class FrmHome 'Paciente
             Next
         End If
 
-        If doesExistInTheLbx = False Then
-            LbxSufferedPatient.Items.Add(CbxSysSymptoms.SelectedItem)
-        End If
+        Try
+            If doesExistInTheLbx = False Then
+                LbxSufferedPatient.Items.Add(CbxSysSymptoms.SelectedItem)
+            End If
+        Catch ex As Exception
 
+        End Try
     End Sub
     Private Sub BtnDropPathology_Click(sender As Object, e As EventArgs) Handles BtnDropPathology_P_H.Click
         'Quiero eliminar el GhostItem?

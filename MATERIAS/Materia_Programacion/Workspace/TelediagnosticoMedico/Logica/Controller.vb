@@ -7,6 +7,8 @@ Public Class Controller 'Logic
     Private ReadOnly CQConnection As New DataBaseConn()
     Public Shared Property Instance As New Controller
     Private Property idRoom As Integer = 0
+    Dim ProbabilitySelected As Integer = 0 'Indicador de cuanta probabilidad tiene una patología de ser la diagnosticada
+    Dim PathMostProbably As Pathology = Nothing 'Patología que será la que tenga más probabilidad de tener el usuario
 
 
     'Herramientas de conexión
@@ -408,37 +410,29 @@ Public Class Controller 'Logic
     End Function
 
     'Conexión Personas
-    Public Function FilterPathologies(descSympSuffered As List(Of String), descSympPath As List(Of String), pathology As Data.Pathology) As Data.Pathology
-        Dim qtyMatch As Integer = 0 'La cantidad de veces que el Sintoma que tiene la patología, coincide con el Sintoma Sufrido
-        Dim pat As Data.Pathology
-        For Each sympSuffered As String In descSympSuffered
+    Public Sub FilterPathologies(descSympSuffered As List(Of String), descSympPath As List(Of String), pathology As Data.Pathology)
+        Dim qtyMatchA As Integer = 0 'La cantidad de veces que el Sintoma que tiene la patología, coincide con el Sintoma Sufrido  
+        Dim ProbabilityPathCompare As Integer = 0
+        Dim pat As Data.Pathology = Nothing
 
-            For Each sympPath As String In descSympPath
+        For Each sympSuffered As String In descSympSuffered 'Por cada síntoma que el paciente seleccionó se recorre
+            For Each sympPath As String In descSympPath 'Por cada síntoma que componen a las posibles patologías se recorre
                 If sympPath.Equals(sympSuffered) Then
-                    qtyMatch = qtyMatch + 1
+                    qtyMatchA = qtyMatchA + 1
                 End If
             Next
         Next
 
-        pat = Me.SetProbability(qtyMatch, descSympSuffered.Count(), pathology)
+        ProbabilityPathCompare = (qtyMatchA * 100) / descSympPath.Count 'Aplico una regla de tres para obtener la probabilidad que tiene de ser esa patología
 
-        If IsNothing(pat) Then
-            Return Nothing
-        Else
-            Return pat
+        If ProbabilityPathCompare > ProbabilitySelected Then 'Comparo si la probabilidad actual es mayor a la actual
+            ProbabilitySelected = ProbabilityPathCompare
+            PathMostProbably = pathology
+            PathMostProbably.evidence = ProbabilitySelected
         End If
-    End Function
-
-    Private Function SetProbability(qtyMatch As Integer, maxSympSuffered As Integer, pathology As Data.Pathology) As Data.Pathology
-        Dim probability As Double = (qtyMatch * 100) / maxSympSuffered 'Regla de tres.
-
-        If probability > 60 Then
-            'Si es mayor a 60% de coincidencia, entonces:
-            pathology.probability = probability
-            Return pathology
-        Else
-            Return Nothing
-        End If
+    End Sub
+    Public Function ObtainMostProbablyPath() As Pathology
+        Return PathMostProbably
     End Function
     Public Function ObtainSymptomsSuffered(idPatient As Integer, DateNow As String) As List(Of Symptom)
         Try
@@ -492,7 +486,7 @@ Public Class Controller 'Logic
     End Sub
     Public Function ObtainPatholgiesSuffered(idPatient As Integer) As List(Of Pathology)
         Try
-            Return CQConnection.ObtainPatholgiesSuffered(idPatient)
+            Return CQConnection.ObtainPatholgiesSuffered(idPatient, GetNowDateTime(2))
         Catch ex As Exception
             Throw ex
         End Try

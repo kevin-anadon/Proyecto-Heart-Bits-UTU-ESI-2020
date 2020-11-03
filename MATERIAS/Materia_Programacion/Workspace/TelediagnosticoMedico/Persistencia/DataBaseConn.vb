@@ -1457,11 +1457,11 @@ Public Class DataBaseConn
             con.Close()
         End Try
     End Sub
-    Public Function ObtainPatholgiesSuffered(idPatient As Integer) As List(Of Pathology)
+    Public Function ObtainPatholgiesSuffered(idPatient As Integer, DateI As String) As List(Of Pathology)
         Dim con As Connection = Me.Connect()
         Dim Pathologies As New List(Of Pathology)
         Try
-            Dim rsPathologiesSuffered As Recordset = con.Execute("SELECT DISTINCT p.id, p.nombre, p.indiceMortalidad, p.id_prioridad FROM paciente_sufre ps JOIN sintoma s ON(ps.id_sintoma = s.id) JOIN sintoma_compone sc ON(s.id = sc.id_sintoma) JOIN patologia p ON(sc.id_patologia = p.id) WHERE ps.id_paciente=" & idPatient & " ORDER BY p.indiceMortalidad DESC;")
+            Dim rsPathologiesSuffered As Recordset = con.Execute("SELECT DISTINCT p.id, p.nombre, p.indiceMortalidad, p.id_prioridad FROM paciente_sufre ps JOIN sintoma s ON(ps.id_sintoma = s.id) JOIN sintoma_compone sc ON(s.id = sc.id_sintoma) JOIN patologia p ON(sc.id_patologia = p.id) WHERE ps.id_paciente=" & idPatient & " AND ps.fecha='" + DateI + "' ORDER BY p.indiceMortalidad DESC;")
 
             While (Not rsPathologiesSuffered.EOF)
                 Dim idPathology As Integer = DirectCast(rsPathologiesSuffered.Fields("id").Value, Integer)
