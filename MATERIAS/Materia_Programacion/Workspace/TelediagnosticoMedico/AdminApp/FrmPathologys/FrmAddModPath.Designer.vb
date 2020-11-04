@@ -904,7 +904,6 @@ Partial Class FrmAddModPath
         Me.Controls.Add(Me.PanelTop)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.name = "FrmAddModPath"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FrmModPath"
         Me.PanelMain.ResumeLayout(False)

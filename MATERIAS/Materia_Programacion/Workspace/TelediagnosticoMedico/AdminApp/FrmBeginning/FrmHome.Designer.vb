@@ -102,7 +102,7 @@ Partial Class FrmHome
         Me.BtnLogout_A_H.CheckedState.Parent = Me.BtnLogout_A_H
         Me.BtnLogout_A_H.CustomImages.Parent = Me.BtnLogout_A_H
         Me.BtnLogout_A_H.FillColor = System.Drawing.Color.White
-        Me.BtnLogout_A_H.Font = New System.Drawing.Font("Roboto", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnLogout_A_H.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnLogout_A_H.ForeColor = System.Drawing.Color.FromArgb(CType(CType(62, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.BtnLogout_A_H.HoverState.Parent = Me.BtnLogout_A_H
         Me.BtnLogout_A_H.Image = Global.AdminApp.My.Resources.Resources.logout
@@ -125,7 +125,7 @@ Partial Class FrmHome
         Me.BtnPathologies_A_H.CheckedState.Parent = Me.BtnPathologies_A_H
         Me.BtnPathologies_A_H.CustomImages.Parent = Me.BtnPathologies_A_H
         Me.BtnPathologies_A_H.FillColor = System.Drawing.Color.White
-        Me.BtnPathologies_A_H.Font = New System.Drawing.Font("Roboto", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnPathologies_A_H.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnPathologies_A_H.ForeColor = System.Drawing.Color.FromArgb(CType(CType(62, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.BtnPathologies_A_H.HoverState.Parent = Me.BtnPathologies_A_H
         Me.BtnPathologies_A_H.Image = Global.AdminApp.My.Resources.Resources.Pathology
@@ -148,7 +148,7 @@ Partial Class FrmHome
         Me.BtnSymp_A_H.CheckedState.Parent = Me.BtnSymp_A_H
         Me.BtnSymp_A_H.CustomImages.Parent = Me.BtnSymp_A_H
         Me.BtnSymp_A_H.FillColor = System.Drawing.Color.White
-        Me.BtnSymp_A_H.Font = New System.Drawing.Font("Roboto", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnSymp_A_H.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnSymp_A_H.ForeColor = System.Drawing.Color.FromArgb(CType(CType(62, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.BtnSymp_A_H.HoverState.Parent = Me.BtnSymp_A_H
         Me.BtnSymp_A_H.Image = Global.AdminApp.My.Resources.Resources.symp
@@ -171,7 +171,7 @@ Partial Class FrmHome
         Me.BtnAdmins_A_H.CheckedState.Parent = Me.BtnAdmins_A_H
         Me.BtnAdmins_A_H.CustomImages.Parent = Me.BtnAdmins_A_H
         Me.BtnAdmins_A_H.FillColor = System.Drawing.Color.White
-        Me.BtnAdmins_A_H.Font = New System.Drawing.Font("Roboto", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnAdmins_A_H.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnAdmins_A_H.ForeColor = System.Drawing.Color.FromArgb(CType(CType(62, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.BtnAdmins_A_H.HoverState.Parent = Me.BtnAdmins_A_H
         Me.BtnAdmins_A_H.Image = Global.AdminApp.My.Resources.Resources.person
@@ -194,7 +194,7 @@ Partial Class FrmHome
         Me.BtnMedics_A_H.CheckedState.Parent = Me.BtnMedics_A_H
         Me.BtnMedics_A_H.CustomImages.Parent = Me.BtnMedics_A_H
         Me.BtnMedics_A_H.FillColor = System.Drawing.Color.White
-        Me.BtnMedics_A_H.Font = New System.Drawing.Font("Roboto", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnMedics_A_H.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnMedics_A_H.ForeColor = System.Drawing.Color.FromArgb(CType(CType(62, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.BtnMedics_A_H.HoverState.Parent = Me.BtnMedics_A_H
         Me.BtnMedics_A_H.Image = Global.AdminApp.My.Resources.Resources.person
@@ -217,7 +217,7 @@ Partial Class FrmHome
         Me.BtnPatients_A_H.CheckedState.Parent = Me.BtnPatients_A_H
         Me.BtnPatients_A_H.CustomImages.Parent = Me.BtnPatients_A_H
         Me.BtnPatients_A_H.FillColor = System.Drawing.Color.White
-        Me.BtnPatients_A_H.Font = New System.Drawing.Font("Roboto", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnPatients_A_H.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnPatients_A_H.ForeColor = System.Drawing.Color.FromArgb(CType(CType(62, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.BtnPatients_A_H.HoverState.Parent = Me.BtnPatients_A_H
         Me.BtnPatients_A_H.Image = Global.AdminApp.My.Resources.Resources.person
@@ -252,7 +252,7 @@ Partial Class FrmHome
         Me.BtnHome_A_H.CheckedState.Parent = Me.BtnHome_A_H
         Me.BtnHome_A_H.CustomImages.Parent = Me.BtnHome_A_H
         Me.BtnHome_A_H.FillColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
-        Me.BtnHome_A_H.Font = New System.Drawing.Font("Roboto", 11.25!)
+        Me.BtnHome_A_H.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
         Me.BtnHome_A_H.ForeColor = System.Drawing.Color.White
         Me.BtnHome_A_H.HoverState.Parent = Me.BtnHome_A_H
         Me.BtnHome_A_H.Image = Global.AdminApp.My.Resources.Resources.home
@@ -308,13 +308,13 @@ Partial Class FrmHome
         Me.LblConnect.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.LblConnect.BackColor = System.Drawing.Color.Transparent
         Me.LblConnect.Cursor = System.Windows.Forms.Cursors.Default
-        Me.LblConnect.Font = New System.Drawing.Font("Roboto", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblConnect.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblConnect.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
         Me.LblConnect.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.LblConnect.Location = New System.Drawing.Point(138, 349)
+        Me.LblConnect.Location = New System.Drawing.Point(147, 349)
         Me.LblConnect.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LblConnect.Name = "LblConnect"
-        Me.LblConnect.Size = New System.Drawing.Size(376, 25)
+        Me.LblConnect.Size = New System.Drawing.Size(367, 25)
         Me.LblConnect.TabIndex = 33
         Me.LblConnect.Text = "Conexion"
         Me.LblConnect.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -326,7 +326,7 @@ Partial Class FrmHome
         Me.LblEmail.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.LblEmail.BackColor = System.Drawing.Color.Transparent
         Me.LblEmail.Cursor = System.Windows.Forms.Cursors.Default
-        Me.LblEmail.Font = New System.Drawing.Font("Roboto", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblEmail.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblEmail.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
         Me.LblEmail.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.LblEmail.Location = New System.Drawing.Point(14, 267)
@@ -343,7 +343,7 @@ Partial Class FrmHome
         Me.LblTitle2_A_H.AccessibleName = "LblTitle2_A_H"
         Me.LblTitle2_A_H.AutoSize = False
         Me.LblTitle2_A_H.BackColor = System.Drawing.Color.Transparent
-        Me.LblTitle2_A_H.Font = New System.Drawing.Font("Roboto Black", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblTitle2_A_H.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblTitle2_A_H.ForeColor = System.Drawing.Color.FromArgb(CType(CType(62, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.LblTitle2_A_H.Location = New System.Drawing.Point(3, 46)
         Me.LblTitle2_A_H.Name = "LblTitle2_A_H"
@@ -359,7 +359,7 @@ Partial Class FrmHome
         Me.LblSubTitleConn_A_H.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.LblSubTitleConn_A_H.BackColor = System.Drawing.Color.Transparent
         Me.LblSubTitleConn_A_H.Cursor = System.Windows.Forms.Cursors.Default
-        Me.LblSubTitleConn_A_H.Font = New System.Drawing.Font("Roboto", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblSubTitleConn_A_H.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblSubTitleConn_A_H.ForeColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
         Me.LblSubTitleConn_A_H.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.LblSubTitleConn_A_H.Location = New System.Drawing.Point(15, 349)
@@ -377,7 +377,7 @@ Partial Class FrmHome
         Me.LblName.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.LblName.BackColor = System.Drawing.Color.Transparent
         Me.LblName.Cursor = System.Windows.Forms.Cursors.Default
-        Me.LblName.Font = New System.Drawing.Font("Roboto", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblName.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblName.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
         Me.LblName.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.LblName.Location = New System.Drawing.Point(13, 115)
@@ -395,7 +395,7 @@ Partial Class FrmHome
         Me.LblPhone.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.LblPhone.BackColor = System.Drawing.Color.Transparent
         Me.LblPhone.Cursor = System.Windows.Forms.Cursors.Default
-        Me.LblPhone.Font = New System.Drawing.Font("Roboto", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblPhone.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblPhone.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
         Me.LblPhone.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.LblPhone.Location = New System.Drawing.Point(16, 315)
@@ -413,7 +413,7 @@ Partial Class FrmHome
         Me.LblCi.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.LblCi.BackColor = System.Drawing.Color.Transparent
         Me.LblCi.Cursor = System.Windows.Forms.Cursors.Default
-        Me.LblCi.Font = New System.Drawing.Font("Roboto", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblCi.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblCi.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
         Me.LblCi.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.LblCi.Location = New System.Drawing.Point(12, 166)
@@ -431,7 +431,7 @@ Partial Class FrmHome
         Me.LblAge.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.LblAge.BackColor = System.Drawing.Color.Transparent
         Me.LblAge.Cursor = System.Windows.Forms.Cursors.Default
-        Me.LblAge.Font = New System.Drawing.Font("Roboto", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblAge.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblAge.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
         Me.LblAge.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.LblAge.Location = New System.Drawing.Point(14, 217)
@@ -460,7 +460,7 @@ Partial Class FrmHome
         Me.LblSubTitleTel_A_H.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.LblSubTitleTel_A_H.BackColor = System.Drawing.Color.Transparent
         Me.LblSubTitleTel_A_H.Cursor = System.Windows.Forms.Cursors.Default
-        Me.LblSubTitleTel_A_H.Font = New System.Drawing.Font("Roboto", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblSubTitleTel_A_H.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblSubTitleTel_A_H.ForeColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
         Me.LblSubTitleTel_A_H.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.LblSubTitleTel_A_H.Location = New System.Drawing.Point(15, 295)
@@ -478,7 +478,7 @@ Partial Class FrmHome
         Me.LblSubTitleName_A_H.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.LblSubTitleName_A_H.BackColor = System.Drawing.Color.Transparent
         Me.LblSubTitleName_A_H.Cursor = System.Windows.Forms.Cursors.Default
-        Me.LblSubTitleName_A_H.Font = New System.Drawing.Font("Roboto", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblSubTitleName_A_H.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblSubTitleName_A_H.ForeColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
         Me.LblSubTitleName_A_H.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.LblSubTitleName_A_H.Location = New System.Drawing.Point(12, 95)
@@ -496,7 +496,7 @@ Partial Class FrmHome
         Me.LblSubTitleCred_A_H.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.LblSubTitleCred_A_H.BackColor = System.Drawing.Color.Transparent
         Me.LblSubTitleCred_A_H.Cursor = System.Windows.Forms.Cursors.Default
-        Me.LblSubTitleCred_A_H.Font = New System.Drawing.Font("Roboto", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblSubTitleCred_A_H.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblSubTitleCred_A_H.ForeColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
         Me.LblSubTitleCred_A_H.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.LblSubTitleCred_A_H.Location = New System.Drawing.Point(12, 146)
@@ -514,7 +514,7 @@ Partial Class FrmHome
         Me.LblSubTitleAge_A_H.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.LblSubTitleAge_A_H.BackColor = System.Drawing.Color.Transparent
         Me.LblSubTitleAge_A_H.Cursor = System.Windows.Forms.Cursors.Default
-        Me.LblSubTitleAge_A_H.Font = New System.Drawing.Font("Roboto", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblSubTitleAge_A_H.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblSubTitleAge_A_H.ForeColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
         Me.LblSubTitleAge_A_H.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.LblSubTitleAge_A_H.Location = New System.Drawing.Point(13, 196)
@@ -532,7 +532,7 @@ Partial Class FrmHome
         Me.LblSubTitleEmail_A_H.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.LblSubTitleEmail_A_H.BackColor = System.Drawing.Color.Transparent
         Me.LblSubTitleEmail_A_H.Cursor = System.Windows.Forms.Cursors.Default
-        Me.LblSubTitleEmail_A_H.Font = New System.Drawing.Font("Roboto", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblSubTitleEmail_A_H.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblSubTitleEmail_A_H.ForeColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
         Me.LblSubTitleEmail_A_H.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.LblSubTitleEmail_A_H.Location = New System.Drawing.Point(14, 249)
@@ -575,7 +575,7 @@ Partial Class FrmHome
         Me.LblInfo4_A_H.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.LblInfo4_A_H.BackColor = System.Drawing.Color.Transparent
         Me.LblInfo4_A_H.Cursor = System.Windows.Forms.Cursors.Default
-        Me.LblInfo4_A_H.Font = New System.Drawing.Font("Roboto", 9.75!)
+        Me.LblInfo4_A_H.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.LblInfo4_A_H.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
         Me.LblInfo4_A_H.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.LblInfo4_A_H.Location = New System.Drawing.Point(28, 352)
@@ -593,7 +593,7 @@ Partial Class FrmHome
         Me.Label15.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label15.BackColor = System.Drawing.Color.Transparent
         Me.Label15.Cursor = System.Windows.Forms.Cursors.Default
-        Me.Label15.Font = New System.Drawing.Font("Roboto", 9.75!)
+        Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.Label15.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
         Me.Label15.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.Label15.Location = New System.Drawing.Point(29, 310)
@@ -611,7 +611,7 @@ Partial Class FrmHome
         Me.Label13.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label13.BackColor = System.Drawing.Color.Transparent
         Me.Label13.Cursor = System.Windows.Forms.Cursors.Default
-        Me.Label13.Font = New System.Drawing.Font("Roboto", 9.75!)
+        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.Label13.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
         Me.Label13.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.Label13.Location = New System.Drawing.Point(29, 290)
@@ -629,7 +629,7 @@ Partial Class FrmHome
         Me.LblSubTitle4_A_H.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.LblSubTitle4_A_H.BackColor = System.Drawing.Color.Transparent
         Me.LblSubTitle4_A_H.Cursor = System.Windows.Forms.Cursors.Default
-        Me.LblSubTitle4_A_H.Font = New System.Drawing.Font("Roboto", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblSubTitle4_A_H.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblSubTitle4_A_H.ForeColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
         Me.LblSubTitle4_A_H.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.LblSubTitle4_A_H.Location = New System.Drawing.Point(27, 252)
@@ -647,7 +647,7 @@ Partial Class FrmHome
         Me.Label12.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label12.BackColor = System.Drawing.Color.Transparent
         Me.Label12.Cursor = System.Windows.Forms.Cursors.Default
-        Me.Label12.Font = New System.Drawing.Font("Roboto", 9.75!)
+        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.Label12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
         Me.Label12.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.Label12.Location = New System.Drawing.Point(28, 270)
@@ -665,7 +665,7 @@ Partial Class FrmHome
         Me.LblSubTitle3_A_H.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.LblSubTitle3_A_H.BackColor = System.Drawing.Color.Transparent
         Me.LblSubTitle3_A_H.Cursor = System.Windows.Forms.Cursors.Default
-        Me.LblSubTitle3_A_H.Font = New System.Drawing.Font("Roboto", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblSubTitle3_A_H.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblSubTitle3_A_H.ForeColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
         Me.LblSubTitle3_A_H.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.LblSubTitle3_A_H.Location = New System.Drawing.Point(26, 199)
@@ -683,7 +683,7 @@ Partial Class FrmHome
         Me.LblInfo3_A_H.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.LblInfo3_A_H.BackColor = System.Drawing.Color.Transparent
         Me.LblInfo3_A_H.Cursor = System.Windows.Forms.Cursors.Default
-        Me.LblInfo3_A_H.Font = New System.Drawing.Font("Roboto", 9.75!)
+        Me.LblInfo3_A_H.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.LblInfo3_A_H.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
         Me.LblInfo3_A_H.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.LblInfo3_A_H.Location = New System.Drawing.Point(27, 217)
@@ -701,7 +701,7 @@ Partial Class FrmHome
         Me.LblSubTitle2_A_H.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.LblSubTitle2_A_H.BackColor = System.Drawing.Color.Transparent
         Me.LblSubTitle2_A_H.Cursor = System.Windows.Forms.Cursors.Default
-        Me.LblSubTitle2_A_H.Font = New System.Drawing.Font("Roboto", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblSubTitle2_A_H.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblSubTitle2_A_H.ForeColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
         Me.LblSubTitle2_A_H.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.LblSubTitle2_A_H.Location = New System.Drawing.Point(25, 149)
@@ -719,7 +719,7 @@ Partial Class FrmHome
         Me.LblInfo2_A_H.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.LblInfo2_A_H.BackColor = System.Drawing.Color.Transparent
         Me.LblInfo2_A_H.Cursor = System.Windows.Forms.Cursors.Default
-        Me.LblInfo2_A_H.Font = New System.Drawing.Font("Roboto", 9.75!)
+        Me.LblInfo2_A_H.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.LblInfo2_A_H.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
         Me.LblInfo2_A_H.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.LblInfo2_A_H.Location = New System.Drawing.Point(26, 167)
@@ -737,7 +737,7 @@ Partial Class FrmHome
         Me.LblSubTitle1_A_H.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.LblSubTitle1_A_H.BackColor = System.Drawing.Color.Transparent
         Me.LblSubTitle1_A_H.Cursor = System.Windows.Forms.Cursors.Default
-        Me.LblSubTitle1_A_H.Font = New System.Drawing.Font("Roboto", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblSubTitle1_A_H.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblSubTitle1_A_H.ForeColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
         Me.LblSubTitle1_A_H.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.LblSubTitle1_A_H.Location = New System.Drawing.Point(23, 98)
@@ -755,7 +755,7 @@ Partial Class FrmHome
         Me.LblInfo1_A_H.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.LblInfo1_A_H.BackColor = System.Drawing.Color.Transparent
         Me.LblInfo1_A_H.Cursor = System.Windows.Forms.Cursors.Default
-        Me.LblInfo1_A_H.Font = New System.Drawing.Font("Roboto", 9.75!)
+        Me.LblInfo1_A_H.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.LblInfo1_A_H.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
         Me.LblInfo1_A_H.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.LblInfo1_A_H.Location = New System.Drawing.Point(24, 116)
@@ -772,7 +772,7 @@ Partial Class FrmHome
         Me.LblTitle1_A_H.AccessibleName = "LblTitle1_A_H"
         Me.LblTitle1_A_H.AutoSize = False
         Me.LblTitle1_A_H.BackColor = System.Drawing.Color.Transparent
-        Me.LblTitle1_A_H.Font = New System.Drawing.Font("Roboto Black", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblTitle1_A_H.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblTitle1_A_H.ForeColor = System.Drawing.Color.FromArgb(CType(CType(62, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.LblTitle1_A_H.Location = New System.Drawing.Point(0, 46)
         Me.LblTitle1_A_H.Name = "LblTitle1_A_H"
@@ -799,7 +799,7 @@ Partial Class FrmHome
         Me.Label16.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label16.BackColor = System.Drawing.Color.Transparent
         Me.Label16.Cursor = System.Windows.Forms.Cursors.Default
-        Me.Label16.Font = New System.Drawing.Font("Roboto", 9.75!)
+        Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.Label16.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
         Me.Label16.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.Label16.Location = New System.Drawing.Point(29, 329)

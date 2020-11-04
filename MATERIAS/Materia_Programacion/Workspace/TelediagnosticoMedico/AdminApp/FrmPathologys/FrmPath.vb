@@ -100,7 +100,7 @@ Public Class FrmPath
         End If
     End Sub
 
-    Private Sub BtnSympt_Click(sender As Object, e As EventArgs) Handles BtnSympt.Click, BtnSymp_A_HP.Click
+    Private Sub BtnSympt_Click(sender As Object, e As EventArgs) Handles BtnSymp_A_HP.Click
         Dim frm As New FrmSympt
         Me.Dispose()
         frm.Show()

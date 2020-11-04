@@ -52,17 +52,17 @@ Public Class FrmAddModPath
         TxtTreatDesc.Clear()
         If RdbtnMedicine_A_HPP.Checked Then
             RdbtnMedicine_A_HPP.Checked = False
-        ElseIf RbnQ.Checked Then
-            RbnQ.Checked = False
+        ElseIf RdbtnQuir_A_HPP.Checked Then
+            RdbtnQuir_A_HPP.Checked = False
         End If
     End Sub
 
     Private Sub BtnAddTreat_Click(sender As Object, e As EventArgs) Handles BtnAddTreat.Click
         Dim Exist As Boolean = False
-        If Not TxtTreatDesc.Text.Trim.Length = 0 Or Not TxtTreatName.Text.Trim.Length = 0 Or RdbtnMedicine_A_HPP.Checked Or RbnQ.Checked Then
+        If Not TxtTreatDesc.Text.Trim.Length = 0 Or Not TxtTreatName.Text.Trim.Length = 0 Or RdbtnMedicine_A_HPP.Checked Or RdbtnQuir_A_HPP.Checked Then
             If RdbtnMedicine_A_HPP.Checked Then
                 Kind = "Medicamento"
-            ElseIf RbnQ.Checked Then
+            ElseIf RdbtnQuir_A_HPP.Checked Then
                 Kind = "Quirurjico"
             Else
                 MessageBox.Show("Campos de tratamiento vacios!")
@@ -97,7 +97,7 @@ Public Class FrmAddModPath
             TxtTreatName.Clear()
             TxtTreatDesc.Clear()
             RdbtnMedicine_A_HPP.Checked = False
-            RbnQ.Checked = False
+            RdbtnQuir_A_HPP.Checked = False
         Else
             MessageBox.Show("No existen tratamientos que eliminar!")
         End If
@@ -112,7 +112,7 @@ Public Class FrmAddModPath
         If CStr(row.Cells("type").Value).Equals("Medicamento") Then
             RdbtnMedicine_A_HPP.Checked = True
         Else
-            RbnQ.Checked = True
+            RdbtnQuir_A_HPP.Checked = True
         End If
     End Sub
 
@@ -121,7 +121,7 @@ Public Class FrmAddModPath
         If DgvTreat.Rows.Count - 1 > 0 Then
             If RdbtnMedicine_A_HPP.Checked Then
                 Kind = "Medicamento"
-            ElseIf RbnQ.Checked Then
+            ElseIf RdbtnQuir_A_HPP.Checked Then
                 Kind = "Quirurjico"
             Else
                 MessageBox.Show("Campos de tratamientos vacios!")
@@ -134,8 +134,8 @@ Public Class FrmAddModPath
             TxtTreatDesc.Clear()
             If RdbtnMedicine_A_HPP.Checked Then
                 RdbtnMedicine_A_HPP.Checked = False
-            ElseIf RbnQ.Checked Then
-                RbnQ.Checked = False
+            ElseIf RdbtnQuir_A_HPP.Checked Then
+                RdbtnQuir_A_HPP.Checked = False
             End If
         Else
             MessageBox.Show("No existen tratamientos que modificar!!")
