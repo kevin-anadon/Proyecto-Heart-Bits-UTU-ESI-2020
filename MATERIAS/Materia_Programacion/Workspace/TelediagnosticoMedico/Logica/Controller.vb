@@ -38,6 +38,23 @@ Public Class Controller 'Logic
             Throw ex
         End Try
     End Sub
+    Private Sub ValidatePathologyFromCsv(Pathologies As List(Of Pathology))
+        For Each Path As Pathology In ObtainPath()
+            For Each pathB As Pathology In Pathologies
+                If Path.name.ToLower().Equals(pathB.name.ToLower()) And Path.id <> pathB.id Then
+                    Throw New Exception("Nombre de síntoma ya existente")
+                End If
+            Next
+        Next
+    End Sub
+    Public Sub AddPathologyFromCsv(Pathologies As List(Of Pathology))
+        Try
+            ValidatePathologyFromCsv(Pathologies)
+            CQConnection.AddPathologyFromCsv(Pathologies)
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Sub
 
     'Conexión Chat
     Public Sub SetRoom(id As Integer)

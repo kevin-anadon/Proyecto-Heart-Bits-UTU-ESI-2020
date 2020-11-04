@@ -40,6 +40,8 @@ Public Class FrmAddModPath
             LblPat.Text = PathMod.name.ToUpper()
             ReloadDgv()
             ReloadPat()
+        Else
+            BtnImportCsv.Visible = True
         End If
     End Sub
 
@@ -159,6 +161,7 @@ Public Class FrmAddModPath
     End Sub
 
     Private Sub BtnClose_Click(sender As Object, e As EventArgs) Handles BtnClose.Click
+        Add = False
         Me.Close()
     End Sub
 
@@ -238,5 +241,35 @@ Public Class FrmAddModPath
         Else
             MessageBox.Show("Campos de patología vacios!!")
         End If
+    End Sub
+
+    Private Sub BtnImportCsv_Click(sender As Object, e As EventArgs) Handles BtnImportCsv.Click
+        Dim Pathologies As New List(Of Pathology)
+        Dim priorities As List(Of Priority) = log.ObtainPriorities()
+        Dim kinds As List(Of KindPath) = log.ObtainKindPath()
+
+        Try
+            If OfdAddPathology.ShowDialog And OfdAddPathology.FileName.Length > 0 Then
+                Dim lines As String() = IO.File.ReadAllLines(OfdAddPathology.FileName)
+                For Each line As String In lines
+                    Dim result As String() = line.Split(",")
+                    For Each Prior As Priority In priorities
+                        For Each Kind As KindPath In kinds
+                            If Prior.id.ToString().Equals(result(0)) And Kind.id.ToString().Equals(result(4)) Then
+                                Pathologies.Add(New Pathology(-1, Prior, result(1), result(2), result(3), Kind))
+                            End If
+                        Next
+                    Next
+                Next
+            End If
+            If Pathologies.Count > 0 Then
+                log.AddPathologyFromCsv(Pathologies)
+                MessageBox.Show("Agregado con exito" + vbCrLf + "Luego debe asociarle uno o más tratamientos")
+                Add = False
+                Me.Close()
+            End If
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
     End Sub
 End Class

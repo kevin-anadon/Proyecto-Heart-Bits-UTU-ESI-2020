@@ -1703,6 +1703,17 @@ Public Class DataBaseConn
             Throw New Exception("Error al añadir síntomas desde archivo csv")
         End Try
     End Sub
+    Public Sub AddPathologyFromCsv(Pathologies As List(Of Pathology))
+        Dim con As Connection = Me.Connect()
+
+        Try
+            For Each Path As Pathology In Pathologies
+                Dim rsInsertPath As Recordset = con.Execute("INSERT INTO patologia(id_prioridad,nombre,descripcion,indiceMortalidad,id_tipo) VALUES(" & Path.priority.id & ",'" & Path.name & "','" & Path.description & "'," & Path.mortalityIndex & "," & Path.kind.id & ");")
+            Next
+        Catch ex As Exception
+            Throw New Exception("Error al añadir patologías desde archivo csv")
+        End Try
+    End Sub
 
 
 End Class 'DataBaseConn

@@ -58,6 +58,8 @@ Public Class FrmAddModSympt
             LblSymptTop.Text = SymptBefore.ToUpper()
             TxtDescr.Text = SymptBefore
             Lblreg.Text = reg
+        Else
+            BtnImportCsv.Visible = True
         End If
         ReloadCmb()
         ReloadPat()
@@ -159,9 +161,11 @@ Public Class FrmAddModSympt
                     End If
                 Next
             End If
-            log.AddSymptomsFromCsv(Symptoms)
-            MessageBox.Show("Agregado con exito" + vbCrLf + "Luego debe asociarle una o más patologias")
-            Me.Close()
+            If Symptoms.Count > 0 Then
+                log.AddSymptomsFromCsv(Symptoms)
+                MessageBox.Show("Agregado con exito" + vbCrLf + "Luego debe asociarle una o más patologias")
+                Me.Close()
+            End If
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try

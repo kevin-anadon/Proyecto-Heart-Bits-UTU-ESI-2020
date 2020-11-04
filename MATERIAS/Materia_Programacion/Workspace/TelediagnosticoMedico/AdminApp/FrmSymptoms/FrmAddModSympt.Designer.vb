@@ -28,6 +28,7 @@ Partial Class FrmAddModSympt
         Me.BtnClose = New Guna.UI.WinForms.GunaButton()
         Me.LblTittle = New Guna.UI.WinForms.GunaLabel()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.BtnImportCsv = New Guna.UI.WinForms.GunaButton()
         Me.ChkReg = New Guna.UI.WinForms.GunaCheckBox()
         Me.Cmbreg = New Guna.UI.WinForms.GunaComboBox()
         Me.BtnCancel = New Guna.UI.WinForms.GunaButton()
@@ -41,7 +42,6 @@ Partial Class FrmAddModSympt
         Me.TxtDescr = New Guna.UI.WinForms.GunaTextBox()
         Me.GunaLabel2 = New Guna.UI.WinForms.GunaLabel()
         Me.OfdAddSympt = New System.Windows.Forms.OpenFileDialog()
-        Me.BtnImportCsv = New Guna.UI.WinForms.GunaButton()
         Me.PanelTop.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -122,6 +122,35 @@ Partial Class FrmAddModSympt
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(671, 202)
         Me.Panel1.TabIndex = 32
+        '
+        'BtnImportCsv
+        '
+        Me.BtnImportCsv.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnImportCsv.Animated = True
+        Me.BtnImportCsv.AnimationHoverSpeed = 0.07!
+        Me.BtnImportCsv.AnimationSpeed = 0.03!
+        Me.BtnImportCsv.BackColor = System.Drawing.Color.Transparent
+        Me.BtnImportCsv.BaseColor = System.Drawing.Color.Transparent
+        Me.BtnImportCsv.BorderColor = System.Drawing.Color.DarkGray
+        Me.BtnImportCsv.DialogResult = System.Windows.Forms.DialogResult.None
+        Me.BtnImportCsv.FocusedColor = System.Drawing.Color.Empty
+        Me.BtnImportCsv.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnImportCsv.ForeColor = System.Drawing.Color.Black
+        Me.BtnImportCsv.Image = CType(resources.GetObject("BtnImportCsv.Image"), System.Drawing.Image)
+        Me.BtnImportCsv.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.BtnImportCsv.ImageSize = New System.Drawing.Size(39, 39)
+        Me.BtnImportCsv.Location = New System.Drawing.Point(622, 5)
+        Me.BtnImportCsv.Name = "BtnImportCsv"
+        Me.BtnImportCsv.OnHoverBaseColor = System.Drawing.Color.Silver
+        Me.BtnImportCsv.OnHoverBorderColor = System.Drawing.Color.Black
+        Me.BtnImportCsv.OnHoverForeColor = System.Drawing.Color.White
+        Me.BtnImportCsv.OnHoverImage = Nothing
+        Me.BtnImportCsv.OnPressedColor = System.Drawing.Color.Black
+        Me.BtnImportCsv.Radius = 6
+        Me.BtnImportCsv.Size = New System.Drawing.Size(39, 39)
+        Me.BtnImportCsv.TabIndex = 42
+        Me.BtnImportCsv.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.BtnImportCsv.Visible = False
         '
         'ChkReg
         '
@@ -310,34 +339,6 @@ Partial Class FrmAddModSympt
         '
         Me.OfdAddSympt.Filter = "CSV files (*.csv)|*.csv|All files (*.*)|*.*"" ;"
         Me.OfdAddSympt.Title = "Agregar síntoma"
-        '
-        'BtnImportCsv
-        '
-        Me.BtnImportCsv.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnImportCsv.Animated = True
-        Me.BtnImportCsv.AnimationHoverSpeed = 0.07!
-        Me.BtnImportCsv.AnimationSpeed = 0.03!
-        Me.BtnImportCsv.BackColor = System.Drawing.Color.Transparent
-        Me.BtnImportCsv.BaseColor = System.Drawing.Color.Transparent
-        Me.BtnImportCsv.BorderColor = System.Drawing.Color.DarkGray
-        Me.BtnImportCsv.DialogResult = System.Windows.Forms.DialogResult.None
-        Me.BtnImportCsv.FocusedColor = System.Drawing.Color.Empty
-        Me.BtnImportCsv.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnImportCsv.ForeColor = System.Drawing.Color.Black
-        Me.BtnImportCsv.Image = CType(resources.GetObject("BtnImportCsv.Image"), System.Drawing.Image)
-        Me.BtnImportCsv.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.BtnImportCsv.ImageSize = New System.Drawing.Size(39, 39)
-        Me.BtnImportCsv.Location = New System.Drawing.Point(622, 5)
-        Me.BtnImportCsv.Name = "BtnImportCsv"
-        Me.BtnImportCsv.OnHoverBaseColor = System.Drawing.Color.Silver
-        Me.BtnImportCsv.OnHoverBorderColor = System.Drawing.Color.Black
-        Me.BtnImportCsv.OnHoverForeColor = System.Drawing.Color.White
-        Me.BtnImportCsv.OnHoverImage = Nothing
-        Me.BtnImportCsv.OnPressedColor = System.Drawing.Color.Black
-        Me.BtnImportCsv.Radius = 6
-        Me.BtnImportCsv.Size = New System.Drawing.Size(39, 39)
-        Me.BtnImportCsv.TabIndex = 42
-        Me.BtnImportCsv.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'FrmAddModSympt
         '

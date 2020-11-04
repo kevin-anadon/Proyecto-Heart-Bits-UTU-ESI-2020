@@ -75,6 +75,8 @@ Partial Class FrmAddModPath
         Me.BtnClose = New Guna.UI.WinForms.GunaButton()
         Me.LblPathTop = New Guna.UI.WinForms.GunaLabel()
         Me.LblListado = New System.Windows.Forms.Label()
+        Me.BtnImportCsv = New Guna.UI.WinForms.GunaButton()
+        Me.OfdAddPathology = New System.Windows.Forms.OpenFileDialog()
         Me.PanelMain.SuspendLayout()
         CType(Me.DgvTreat, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -88,6 +90,7 @@ Partial Class FrmAddModPath
         Me.PanelMain.BackColor = System.Drawing.Color.White
         Me.PanelMain.BackgroundImage = CType(resources.GetObject("PanelMain.BackgroundImage"), System.Drawing.Image)
         Me.PanelMain.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PanelMain.Controls.Add(Me.BtnImportCsv)
         Me.PanelMain.Controls.Add(Me.GunaLabel9)
         Me.PanelMain.Controls.Add(Me.CmbTipo)
         Me.PanelMain.Controls.Add(Me.GunaSeparator7)
@@ -824,6 +827,40 @@ Partial Class FrmAddModPath
         Me.LblListado.Text = "LISTADO DE TRATAMIENTOS PARA LA PATOLOGÍA"
         Me.LblListado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
+        'BtnImportCsv
+        '
+        Me.BtnImportCsv.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnImportCsv.Animated = True
+        Me.BtnImportCsv.AnimationHoverSpeed = 0.07!
+        Me.BtnImportCsv.AnimationSpeed = 0.03!
+        Me.BtnImportCsv.BackColor = System.Drawing.Color.Transparent
+        Me.BtnImportCsv.BaseColor = System.Drawing.Color.Transparent
+        Me.BtnImportCsv.BorderColor = System.Drawing.Color.DarkGray
+        Me.BtnImportCsv.DialogResult = System.Windows.Forms.DialogResult.None
+        Me.BtnImportCsv.FocusedColor = System.Drawing.Color.Empty
+        Me.BtnImportCsv.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnImportCsv.ForeColor = System.Drawing.Color.Black
+        Me.BtnImportCsv.Image = CType(resources.GetObject("BtnImportCsv.Image"), System.Drawing.Image)
+        Me.BtnImportCsv.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.BtnImportCsv.ImageSize = New System.Drawing.Size(39, 39)
+        Me.BtnImportCsv.Location = New System.Drawing.Point(872, 328)
+        Me.BtnImportCsv.Name = "BtnImportCsv"
+        Me.BtnImportCsv.OnHoverBaseColor = System.Drawing.Color.Silver
+        Me.BtnImportCsv.OnHoverBorderColor = System.Drawing.Color.Black
+        Me.BtnImportCsv.OnHoverForeColor = System.Drawing.Color.White
+        Me.BtnImportCsv.OnHoverImage = Nothing
+        Me.BtnImportCsv.OnPressedColor = System.Drawing.Color.Black
+        Me.BtnImportCsv.Radius = 6
+        Me.BtnImportCsv.Size = New System.Drawing.Size(39, 39)
+        Me.BtnImportCsv.TabIndex = 87
+        Me.BtnImportCsv.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.BtnImportCsv.Visible = False
+        '
+        'OfdAddPathology
+        '
+        Me.OfdAddPathology.Filter = "CSV files (*.csv)|*.csv|All files (*.*)|*.*"" ;"
+        Me.OfdAddPathology.Title = "Agregar patología"
+        '
         'FrmAddModPath
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -897,4 +934,6 @@ Partial Class FrmAddModPath
     Friend WithEvents GunaLabel5 As Guna.UI.WinForms.GunaLabel
     Friend WithEvents CmbTipo As Guna.UI.WinForms.GunaComboBox
     Friend WithEvents GunaLabel9 As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents BtnImportCsv As Guna.UI.WinForms.GunaButton
+    Friend WithEvents OfdAddPathology As OpenFileDialog
 End Class

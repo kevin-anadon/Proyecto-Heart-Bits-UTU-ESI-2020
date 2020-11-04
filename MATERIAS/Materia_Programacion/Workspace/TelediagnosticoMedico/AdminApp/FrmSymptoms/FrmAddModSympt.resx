@@ -384,25 +384,6 @@
         NVzJoA//2Q==
 </value>
   </data>
-  <data name="BtnCancel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EwAACxMBAJqcGAAAAIJJREFUOE+lkosNgCAMBRmF/ZdgFEepHLwGqxIkXoKt7xNjQjKzXE9hpgUhqwWO
-        eqZlPGWg3IXXMpo8GBkWCRDK7NIgeA0EGdACOvOSg6EAMNclh4CCzroEhBR2tr/GvO6f/4/3h6Z4B0EG
-        hAC7NBgeiwQIJQdNHvRMffy6cpuX3PIJJBag7Jaq6T4AAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="BtnMod.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABIAAAAOCAYAAAAi2ky3AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EwAACxMBAJqcGAAAAHFJREFUOE/lkcsNgDAMQzMKmzMKozACIxQ/5B4QVaHpkSdFjRrb6idmKaUsbvMo
-        ZFXtU2EOgXyQjL8KYVO1NYdGs/eTaEAINEXa+3YdhhbBTax+7E0QWQyXSZV7WMQ2weF1LKSCyWbIhVQw
-        q7q/+CTiBLuyAxgKXgLYAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <metadata name="OfdAddSympt.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <data name="BtnImportCsv.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAA+gAAAPoCAYAAABNo9TkAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAACt
@@ -725,6 +706,25 @@
         AACAccUhAAAAMK44BAAAAMb0wz/6/wEpY2KusNPRwAAAAABJRU5ErkJggg==
 </value>
   </data>
+  <data name="BtnCancel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        EwAACxMBAJqcGAAAAIJJREFUOE+lkosNgCAMBRmF/ZdgFEepHLwGqxIkXoKt7xNjQjKzXE9hpgUhqwWO
+        eqZlPGWg3IXXMpo8GBkWCRDK7NIgeA0EGdACOvOSg6EAMNclh4CCzroEhBR2tr/GvO6f/4/3h6Z4B0EG
+        hAC7NBgeiwQIJQdNHvRMffy6cpuX3PIJJBag7Jaq6T4AAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="BtnMod.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABIAAAAOCAYAAAAi2ky3AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        EwAACxMBAJqcGAAAAHFJREFUOE/lkcsNgDAMQzMKmzMKozACIxQ/5B4QVaHpkSdFjRrb6idmKaUsbvMo
+        ZFXtU2EOgXyQjL8KYVO1NYdGs/eTaEAINEXa+3YdhhbBTax+7E0QWQyXSZV7WMQ2weF1LKSCyWbIhVQw
+        q7q/+CTiBLuyAxgKXgLYAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <metadata name="OfdAddSympt.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAkJAAAAEAIABoTwEAFgAAACgAAACQAAAAIAEAAAEAIAAAAAAAAEQBAMMOAADDDgAAAAAAAAAA
