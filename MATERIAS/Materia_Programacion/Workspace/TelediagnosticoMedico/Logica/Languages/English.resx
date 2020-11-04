@@ -117,45 +117,125 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="BtnAddPath_A_HP" xml:space="preserve">
+    <value>ADD PATHOLOGY</value>
+    <comment>Admin. Home. Button. Title.</comment>
+  </data>
+  <data name="BtnAddPath_A_HPP" xml:space="preserve">
+    <value>Modify pathology</value>
+    <comment>Admin. HomePP. Boton. Titulo.</comment>
+  </data>
+  <data name="BtnAdmins_A_H" xml:space="preserve">
+    <value>Admins</value>
+    <comment>Admin. Home. Button. Title.</comment>
+  </data>
+  <data name="BtnAdmins_A_HP" xml:space="preserve">
+    <value>Admins</value>
+    <comment>Admin. Home. Button. Title.</comment>
+  </data>
   <data name="BtnBack_Intro2_P_H" xml:space="preserve">
     <value>BACK</value>
-    <comment>Patient. Home. Boton. Title.</comment>
+    <comment>Patient. Home. Button. Title.</comment>
   </data>
   <data name="BtnBack_Patient1_P_H" xml:space="preserve">
     <value>BACK</value>
-    <comment>Patient. Home. Boton. Title.</comment>
+    <comment>Patient. Home. Button. Title.</comment>
   </data>
   <data name="BtnDropPathology_P_H" xml:space="preserve">
     <value>REMOVE SYMPTOM</value>
-    <comment>Patient. Home. Boton. Title.</comment>
+    <comment>Patient. Home. Button. Title.</comment>
   </data>
   <data name="BtnEnd_P_H" xml:space="preserve">
     <value>FINALIZE</value>
-    <comment>Patient. Home. Boton. Title.</comment>
+    <comment>Patient. Home. Button. Title.</comment>
+  </data>
+  <data name="BtnExit_A_L" xml:space="preserve">
+    <value>LOGOUT</value>
+    <comment>Admin. Login. Button. Title2.</comment>
+  </data>
+  <data name="BtnHome_A_H" xml:space="preserve">
+    <value>Home</value>
+    <comment>Admin. Home. Button. Title.</comment>
+  </data>
+  <data name="BtnHome_A_HP" xml:space="preserve">
+    <value>Home</value>
+    <comment>Admin. Home. Button. Title.</comment>
+  </data>
+  <data name="BtnLogin_A_L" xml:space="preserve">
+    <value>LOGIN</value>
+    <comment>Admin. Login. Button. Title1.</comment>
   </data>
   <data name="BtnLogin_P_L" xml:space="preserve">
     <value>LOGIN</value>
-    <comment>Patient. Login. Boton. Titulo.</comment>
+    <comment>Patient. Login. Button. Title.</comment>
+  </data>
+  <data name="BtnLogout_A_H" xml:space="preserve">
+    <value>Logout</value>
+    <comment>Admin. Home. Button. Title.</comment>
+  </data>
+  <data name="BtnLogout_A_HP" xml:space="preserve">
+    <value>Logout</value>
+    <comment>Admin. Home. Button. Title.</comment>
+  </data>
+  <data name="BtnMedics_A_H" xml:space="preserve">
+    <value>Medics</value>
+    <comment>Admin. Home. Button. Title.</comment>
+  </data>
+  <data name="BtnMedics_A_HP" xml:space="preserve">
+    <value>Medics</value>
+    <comment>Admin. Home. Button. Title.</comment>
+  </data>
+  <data name="BtnModifyPath_A_HP" xml:space="preserve">
+    <value>MODIFY PATHOLOGY</value>
+    <comment>Admin. Home. Button. Title.</comment>
   </data>
   <data name="BtnNext_Intro2_P_H" xml:space="preserve">
     <value>START</value>
-    <comment>Patient. Home. Boton. Titulo.</comment>
+    <comment>Patient. Home. Button. Title.</comment>
   </data>
   <data name="BtnNext_Patient_P_H" xml:space="preserve">
     <value>NEXT</value>
-    <comment>Patient. Home. Boton. Titulo.</comment>
+    <comment>Patient. Home. Button. Title.</comment>
   </data>
   <data name="BtnNext_Result_P_H" xml:space="preserve">
     <value>NEXT</value>
-    <comment>Patient. Home. Boton. Title.</comment>
+    <comment>Patient. Home. Button. Title.</comment>
   </data>
   <data name="BtnNext_Symptom1_P_H" xml:space="preserve">
     <value>NEXT</value>
-    <comment>Patient. Home. Boton. Title.</comment>
+    <comment>Patient. Home. Button. Title.</comment>
+  </data>
+  <data name="BtnPathologies_A_H" xml:space="preserve">
+    <value>Pathologies</value>
+    <comment>Admin. Home. Button. Title.</comment>
+  </data>
+  <data name="BtnPathologies_A_HP" xml:space="preserve">
+    <value>Pathologies</value>
+    <comment>Admin. Home. Button. Title.</comment>
+  </data>
+  <data name="BtnPatients_A_H" xml:space="preserve">
+    <value>Patients</value>
+    <comment>Admin. Home. Button. Title.</comment>
+  </data>
+  <data name="BtnPatients_A_HP" xml:space="preserve">
+    <value>Patients</value>
+    <comment>Admin. Home. Button. Title.</comment>
+  </data>
+  <data name="BtnRmPath_A_HP" xml:space="preserve">
+    <value>REMOVE PATHOLOGY</value>
+    <comment>Admin. Home. Button. Title.</comment>
   </data>
   <data name="BtnSendChatP_P_H" xml:space="preserve">
     <value>REQUEST CHAT</value>
-    <comment>Patient. Home. Boton. Title.</comment>
+    <comment>Patient. Home. Button. Title.</comment>
+  </data>
+  <data name="BtnSymp_A_H" xml:space="preserve">
+    <value>Symptoms</value>
+    <comment>Admin. Home. Button. Title.</comment>
+  </data>
+  <data name="BtnSymp_A_HP" xml:space="preserve">
+    <value>Symptoms</value>
+    <comment>Admin. Home. Button. Title.</comment>
   </data>
   <data name="Lbl1_Intro_P_H" xml:space="preserve">
     <value>Introduction</value>
@@ -193,6 +273,14 @@ The checkup is for informational purposes and is not a substitute for a doctor's
 Do not use in an emergency. In the event of a health emergency, call your local emergency number immediately. Your data is safe. The information you provide is anonymous and will not be shared with anyone.</value>
     <comment>Patient. Home. Label. Info 1.</comment>
   </data>
+  <data name="LblInfo1_A_HPP" xml:space="preserve">
+    <value>Required field</value>
+    <comment>Admin. HomePP. Label. Info.</comment>
+  </data>
+  <data name="LblInfo1_A_SS" xml:space="preserve">
+    <value>Generating connection with the Database.</value>
+    <comment>Admin. FrmSplashScreen. Label.</comment>
+  </data>
   <data name="LblInfo1_P_SS" xml:space="preserve">
     <value>Generating connection with the Database.</value>
     <comment>Patient. FrmSplashScreen. Label.</comment>
@@ -203,9 +291,31 @@ Do not use in an emergency. In the event of a health emergency, call your local 
 Enjoy our service. Tap the button below to start the anonymous diagnosis and it will not be shared with anyone.</value>
     <comment>Patient. Home. Label. Info 2.</comment>
   </data>
+  <data name="LblInfo2_A_H" xml:space="preserve">
+    <value>Management System for Administrators.</value>
+    <comment>Admin. Home. Label. Info.</comment>
+  </data>
+  <data name="LblInfo2_A_HPP" xml:space="preserve">
+    <value>Management treatments</value>
+    <comment>Admin. HomePP. Label. Info.</comment>
+  </data>
+  <data name="LblInfo4_A_H" xml:space="preserve">
+    <value>© Telediagnóstico Médico 2020. All rights reserved.</value>
+    <comment>Admin. Home. Label. Info.</comment>
+  </data>
+  <data name="LblInfoText_A_L" xml:space="preserve">
+    <value>Ingrese su usuario y contraseña 
+para autenticar y verificar sus credenciales.
+Este Software le permitirá gestionar al Personal, a los Pacientes, los Síntomas y sus Patologías asociadas.</value>
+    <comment>Admin. Login. Label. Info1.</comment>
+  </data>
   <data name="LblInfoText_P_L" xml:space="preserve">
     <value>Enter your Identity Card to authenticate and verify your credentials. This Software will allow you to make Primary Diagnoses and based on them you will decide if you want to start a conversation with a Medical Specialist.</value>
     <comment>Patient. Login. Label. Info.</comment>
+  </data>
+  <data name="LblMgmentPath_A_HP" xml:space="preserve">
+    <value>MANAGEMENT PATHOLOGIES</value>
+    <comment>Admin. Home. Label. Title.</comment>
   </data>
   <data name="LblPetitionInfo_P_H" xml:space="preserve">
     <value>GENERATING REQUEST</value>
@@ -215,6 +325,10 @@ Enjoy our service. Tap the button below to start the anonymous diagnosis and it 
     <value>Please note that the list may not be complete and that the information provided is for informational purposes and does not reflect an actual medical opinion.</value>
     <comment>Patient. Home. Label. SubTitulo 3.</comment>
   </data>
+  <data name="LblResultPath_A_HP" xml:space="preserve">
+    <value>LIST OF PATHOLOGIES</value>
+    <comment>Admin. Home. Label. SubTitle.</comment>
+  </data>
   <data name="LblResultsTitle_P_H" xml:space="preserve">
     <value>PATHOLOGIES SUFFERED</value>
     <comment>Patient. Home. Label. SubTitulo 3.</comment>
@@ -222,6 +336,10 @@ Enjoy our service. Tap the button below to start the anonymous diagnosis and it 
   <data name="LblResults_P_H" xml:space="preserve">
     <value>Results</value>
     <comment>Patient. Home. Label. SubTitulo 2.</comment>
+  </data>
+  <data name="LblSearch_A_HP" xml:space="preserve">
+    <value>SEARCH CRITERIA</value>
+    <comment>Admin. Home. Label. SubTitle.</comment>
   </data>
   <data name="LblSubTitle1Patient_P_H" xml:space="preserve">
     <value>Choose one answer in each row.</value>
@@ -231,9 +349,81 @@ Enjoy our service. Tap the button below to start the anonymous diagnosis and it 
     <value>Please choose the symptoms from the drop down list.</value>
     <comment>Patient. Home. Label. SubTitulo 1.</comment>
   </data>
+  <data name="LblSubTitle1_A_H" xml:space="preserve">
+    <value>Owner</value>
+    <comment>Admin. Home. Label. SubTitle.</comment>
+  </data>
+  <data name="LblSubTitle1_A_HPP" xml:space="preserve">
+    <value>Pathology name</value>
+    <comment>Admin. HomePP. Label. SubTitle.</comment>
+  </data>
   <data name="LblSubTitle2Symp_P_H" xml:space="preserve">
     <value>Select an item to delete</value>
     <comment>Patient. Home. Label. SubTitulo 2.</comment>
+  </data>
+  <data name="LblSubTitle2_A_H" xml:space="preserve">
+    <value>System</value>
+    <comment>Admin. Home. Label. SubTitle.</comment>
+  </data>
+  <data name="LblSubTitle2_A_HPP" xml:space="preserve">
+    <value>Mortality index</value>
+    <comment>Admin. HomePP. Label. SubTitle.</comment>
+  </data>
+  <data name="LblSubTitle3_A_H" xml:space="preserve">
+    <value>System version</value>
+    <comment>Admin. Home. Label. SubTitle.</comment>
+  </data>
+  <data name="LblSubTitle3_A_HPP" xml:space="preserve">
+    <value>Pathology description</value>
+    <comment>Admin. HomePP. Label. SubTitle.</comment>
+  </data>
+  <data name="LblSubTitle4_A_H" xml:space="preserve">
+    <value>System's developers</value>
+    <comment>Admin. Home. Label. SubTitle.</comment>
+  </data>
+  <data name="LblSubTitle4_A_HPP" xml:space="preserve">
+    <value>Kind of pathology</value>
+    <comment>Admin. HomePP. Label. SubTitle.</comment>
+  </data>
+  <data name="LblSubTitle5_A_HPP" xml:space="preserve">
+    <value>Treatment name</value>
+    <comment>Admin. HomePP. Label. SubTitle.</comment>
+  </data>
+  <data name="LblSubTitle6_A_HPP" xml:space="preserve">
+    <value>Treatment description</value>
+    <comment>Admin. HomePP. Label. SubTitle.</comment>
+  </data>
+  <data name="LblSubTitle7_A_HPP" xml:space="preserve">
+    <value>Kind of treatment</value>
+    <comment>Admin. HomePP. Label. SubTitle.</comment>
+  </data>
+  <data name="LblSubTitle8_A_HPP" xml:space="preserve">
+    <value>LIST OF TREATMENTS FOR PATHOLOGY</value>
+    <comment>Admin. HomePP. Label. SubTitle.</comment>
+  </data>
+  <data name="LblSubTitleAge_A_H" xml:space="preserve">
+    <value>Age</value>
+    <comment>Admin. Home. Label. SubTitle.</comment>
+  </data>
+  <data name="LblSubTitleConn_A_H" xml:space="preserve">
+    <value>Last Connection</value>
+    <comment>Admin. Home. Label. SubTitle.</comment>
+  </data>
+  <data name="LblSubTitleCred_A_H" xml:space="preserve">
+    <value>Credential</value>
+    <comment>Admin. Home. Label. SubTitle.</comment>
+  </data>
+  <data name="LblSubTitleEmail_A_H" xml:space="preserve">
+    <value>Email</value>
+    <comment>Admin. Home. Label. SubTitle.</comment>
+  </data>
+  <data name="LblSubTitleName_A_H" xml:space="preserve">
+    <value>Full Name</value>
+    <comment>Admin. Home. Label. SubTitle.</comment>
+  </data>
+  <data name="LblSubTitleTel_A_H" xml:space="preserve">
+    <value>Number Phone</value>
+    <comment>Admin. Home. Label. SubTitle.</comment>
   </data>
   <data name="LblTitle1Patient_P_H" xml:space="preserve">
     <value>Please select all statements
@@ -244,17 +434,37 @@ that apply to you.</value>
     <value>Add your symptoms to the list.</value>
     <comment>Patient. Home. Label. Titulo 1.</comment>
   </data>
+  <data name="LblTitle1_A_H" xml:space="preserve">
+    <value>ABOUT SYSTEM</value>
+    <comment>Admin. Home. Label. Title1.</comment>
+  </data>
+  <data name="LblTitle1_A_HPP" xml:space="preserve">
+    <value>MODIFY PATHOLOGY</value>
+    <comment>Admin. HomePP. Label. Title.</comment>
+  </data>
+  <data name="LblTitle1_A_L" xml:space="preserve">
+    <value>WELCOME BACK</value>
+    <comment>Admin. Login. Label. Title1.</comment>
+  </data>
   <data name="LblTitle1_P_L" xml:space="preserve">
     <value>WELCOME BACK</value>
-    <comment>Patient. Login. Label. Titulo1.</comment>
+    <comment>Patient. Login. Label. Title1.</comment>
   </data>
   <data name="LblTitle2Symp_P_H" xml:space="preserve">
     <value>Symptoms you suffer from.</value>
     <comment>Patient. Home. Label. Titulo 2.</comment>
   </data>
+  <data name="LblTitle2_A_H" xml:space="preserve">
+    <value>ABOUT ADMINISTRATOR</value>
+    <comment>Admin. Home. Label. Title2.</comment>
+  </data>
+  <data name="LblTitle2_A_L" xml:space="preserve">
+    <value> </value>
+    <comment>Admin. Login. Label. Title2.</comment>
+  </data>
   <data name="LblTitle2_P_L" xml:space="preserve">
     <value>   </value>
-    <comment>Patient. Login. Label. Titulo2.</comment>
+    <comment>Patient. Login. Label. Title2.</comment>
   </data>
   <data name="LblTitleIntro2_P_H" xml:space="preserve">
     <value>License Terms.</value>
@@ -299,5 +509,17 @@ that apply to you.</value>
   <data name="Rbtn1_Yes_P_H" xml:space="preserve">
     <value>Yes.</value>
     <comment>Patient. Home. RadioBtn 1. Title.</comment>
+  </data>
+  <data name="RdbtnMedicine_A_HPP" xml:space="preserve">
+    <value>Medicine</value>
+    <comment>Admin. HomePP. Radiobutton. Title.</comment>
+  </data>
+  <data name="RdbtnQuir_A_HPP" xml:space="preserve">
+    <value>Surgical</value>
+    <comment>Admin. HomePP. Radiobutton. Title.</comment>
+  </data>
+  <data name="TxtSearchPath_A_HP" xml:space="preserve">
+    <value>Make search by pathologies</value>
+    <comment>Admin. HomeP. Textbox. Title.</comment>
   </data>
 </root>

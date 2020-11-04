@@ -65,6 +65,42 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to ADD PATHOLOGY.
+        '''</summary>
+        Friend Shared ReadOnly Property BtnAddPath_A_HP() As String
+            Get
+                Return ResourceManager.GetString("BtnAddPath_A_HP", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Modify pathology.
+        '''</summary>
+        Friend Shared ReadOnly Property BtnAddPath_A_HPP() As String
+            Get
+                Return ResourceManager.GetString("BtnAddPath_A_HPP", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Admins.
+        '''</summary>
+        Friend Shared ReadOnly Property BtnAdmins_A_H() As String
+            Get
+                Return ResourceManager.GetString("BtnAdmins_A_H", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Admins.
+        '''</summary>
+        Friend Shared ReadOnly Property BtnAdmins_A_HP() As String
+            Get
+                Return ResourceManager.GetString("BtnAdmins_A_HP", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to BACK.
         '''</summary>
         Friend Shared ReadOnly Property BtnBack_Intro2_P_H() As String
@@ -101,11 +137,92 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to LOGOUT.
+        '''</summary>
+        Friend Shared ReadOnly Property BtnExit_A_L() As String
+            Get
+                Return ResourceManager.GetString("BtnExit_A_L", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Home.
+        '''</summary>
+        Friend Shared ReadOnly Property BtnHome_A_H() As String
+            Get
+                Return ResourceManager.GetString("BtnHome_A_H", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Home.
+        '''</summary>
+        Friend Shared ReadOnly Property BtnHome_A_HP() As String
+            Get
+                Return ResourceManager.GetString("BtnHome_A_HP", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to LOGIN.
+        '''</summary>
+        Friend Shared ReadOnly Property BtnLogin_A_L() As String
+            Get
+                Return ResourceManager.GetString("BtnLogin_A_L", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to LOGIN.
         '''</summary>
         Friend Shared ReadOnly Property BtnLogin_P_L() As String
             Get
                 Return ResourceManager.GetString("BtnLogin_P_L", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Logout.
+        '''</summary>
+        Friend Shared ReadOnly Property BtnLogout_A_H() As String
+            Get
+                Return ResourceManager.GetString("BtnLogout_A_H", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Logout.
+        '''</summary>
+        Friend Shared ReadOnly Property BtnLogout_A_HP() As String
+            Get
+                Return ResourceManager.GetString("BtnLogout_A_HP", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Medics.
+        '''</summary>
+        Friend Shared ReadOnly Property BtnMedics_A_H() As String
+            Get
+                Return ResourceManager.GetString("BtnMedics_A_H", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Medics.
+        '''</summary>
+        Friend Shared ReadOnly Property BtnMedics_A_HP() As String
+            Get
+                Return ResourceManager.GetString("BtnMedics_A_HP", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to MODIFY PATHOLOGY.
+        '''</summary>
+        Friend Shared ReadOnly Property BtnModifyPath_A_HP() As String
+            Get
+                Return ResourceManager.GetString("BtnModifyPath_A_HP", resourceCulture)
             End Get
         End Property
         
@@ -146,11 +263,74 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to Pathologies.
+        '''</summary>
+        Friend Shared ReadOnly Property BtnPathologies_A_H() As String
+            Get
+                Return ResourceManager.GetString("BtnPathologies_A_H", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Pathologies.
+        '''</summary>
+        Friend Shared ReadOnly Property BtnPathologies_A_HP() As String
+            Get
+                Return ResourceManager.GetString("BtnPathologies_A_HP", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Patients.
+        '''</summary>
+        Friend Shared ReadOnly Property BtnPatients_A_H() As String
+            Get
+                Return ResourceManager.GetString("BtnPatients_A_H", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Patients.
+        '''</summary>
+        Friend Shared ReadOnly Property BtnPatients_A_HP() As String
+            Get
+                Return ResourceManager.GetString("BtnPatients_A_HP", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to REMOVE PATHOLOGY.
+        '''</summary>
+        Friend Shared ReadOnly Property BtnRmPath_A_HP() As String
+            Get
+                Return ResourceManager.GetString("BtnRmPath_A_HP", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to REQUEST CHAT.
         '''</summary>
         Friend Shared ReadOnly Property BtnSendChatP_P_H() As String
             Get
                 Return ResourceManager.GetString("BtnSendChatP_P_H", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Symptoms.
+        '''</summary>
+        Friend Shared ReadOnly Property BtnSymp_A_H() As String
+            Get
+                Return ResourceManager.GetString("BtnSymp_A_H", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Symptoms.
+        '''</summary>
+        Friend Shared ReadOnly Property BtnSymp_A_HP() As String
+            Get
+                Return ResourceManager.GetString("BtnSymp_A_HP", resourceCulture)
             End Get
         End Property
         
@@ -209,6 +389,24 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to Required field.
+        '''</summary>
+        Friend Shared ReadOnly Property LblInfo1_A_HPP() As String
+            Get
+                Return ResourceManager.GetString("LblInfo1_A_HPP", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Generating connection with the Database..
+        '''</summary>
+        Friend Shared ReadOnly Property LblInfo1_A_SS() As String
+            Get
+                Return ResourceManager.GetString("LblInfo1_A_SS", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to Generating connection with the Database..
         '''</summary>
         Friend Shared ReadOnly Property LblInfo1_P_SS() As String
@@ -240,6 +438,24 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to Management System for Administrators..
+        '''</summary>
+        Friend Shared ReadOnly Property LblInfo2_A_H() As String
+            Get
+                Return ResourceManager.GetString("LblInfo2_A_H", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Management treatments.
+        '''</summary>
+        Friend Shared ReadOnly Property LblInfo2_A_HPP() As String
+            Get
+                Return ResourceManager.GetString("LblInfo2_A_HPP", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to This Medical System was created with the purpose of fulfilling the expectations of an Assistant Program, which will guide you throughout your diagnosis of pathologies that you may suffer. As this is an Assistant, you will be able to know your Pathologies in the most agile and simple way.
         '''
         '''Enjoy our service. Tap the button below to start the anonymous diagnosis and it will not be shared with anyone..
@@ -251,11 +467,40 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to © Telediagnóstico Médico 2020. All rights reserved..
+        '''</summary>
+        Friend Shared ReadOnly Property LblInfo4_A_H() As String
+            Get
+                Return ResourceManager.GetString("LblInfo4_A_H", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Ingrese su usuario y contraseña 
+        '''para autenticar y verificar sus credenciales.
+        '''Este Software le permitirá gestionar al Personal, a los Pacientes, los Síntomas y sus Patologías asociadas..
+        '''</summary>
+        Friend Shared ReadOnly Property LblInfoText_A_L() As String
+            Get
+                Return ResourceManager.GetString("LblInfoText_A_L", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to Enter your Identity Card to authenticate and verify your credentials. This Software will allow you to make Primary Diagnoses and based on them you will decide if you want to start a conversation with a Medical Specialist..
         '''</summary>
         Friend Shared ReadOnly Property LblInfoText_P_L() As String
             Get
                 Return ResourceManager.GetString("LblInfoText_P_L", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to MANAGEMENT PATHOLOGIES.
+        '''</summary>
+        Friend Shared ReadOnly Property LblMgmentPath_A_HP() As String
+            Get
+                Return ResourceManager.GetString("LblMgmentPath_A_HP", resourceCulture)
             End Get
         End Property
         
@@ -278,6 +523,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to LIST OF PATHOLOGIES.
+        '''</summary>
+        Friend Shared ReadOnly Property LblResultPath_A_HP() As String
+            Get
+                Return ResourceManager.GetString("LblResultPath_A_HP", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to Results.
         '''</summary>
         Friend Shared ReadOnly Property LblResults_P_H() As String
@@ -292,6 +546,33 @@ Namespace My.Resources
         Friend Shared ReadOnly Property LblResultsTitle_P_H() As String
             Get
                 Return ResourceManager.GetString("LblResultsTitle_P_H", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to SEARCH CRITERIA.
+        '''</summary>
+        Friend Shared ReadOnly Property LblSearch_A_HP() As String
+            Get
+                Return ResourceManager.GetString("LblSearch_A_HP", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Owner.
+        '''</summary>
+        Friend Shared ReadOnly Property LblSubTitle1_A_H() As String
+            Get
+                Return ResourceManager.GetString("LblSubTitle1_A_H", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Pathology name.
+        '''</summary>
+        Friend Shared ReadOnly Property LblSubTitle1_A_HPP() As String
+            Get
+                Return ResourceManager.GetString("LblSubTitle1_A_HPP", resourceCulture)
             End Get
         End Property
         
@@ -314,11 +595,182 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to System.
+        '''</summary>
+        Friend Shared ReadOnly Property LblSubTitle2_A_H() As String
+            Get
+                Return ResourceManager.GetString("LblSubTitle2_A_H", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Mortality index.
+        '''</summary>
+        Friend Shared ReadOnly Property LblSubTitle2_A_HPP() As String
+            Get
+                Return ResourceManager.GetString("LblSubTitle2_A_HPP", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to Select an item to delete.
         '''</summary>
         Friend Shared ReadOnly Property LblSubTitle2Symp_P_H() As String
             Get
                 Return ResourceManager.GetString("LblSubTitle2Symp_P_H", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to System version.
+        '''</summary>
+        Friend Shared ReadOnly Property LblSubTitle3_A_H() As String
+            Get
+                Return ResourceManager.GetString("LblSubTitle3_A_H", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Pathology description.
+        '''</summary>
+        Friend Shared ReadOnly Property LblSubTitle3_A_HPP() As String
+            Get
+                Return ResourceManager.GetString("LblSubTitle3_A_HPP", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to System&apos;s developers.
+        '''</summary>
+        Friend Shared ReadOnly Property LblSubTitle4_A_H() As String
+            Get
+                Return ResourceManager.GetString("LblSubTitle4_A_H", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Kind of pathology.
+        '''</summary>
+        Friend Shared ReadOnly Property LblSubTitle4_A_HPP() As String
+            Get
+                Return ResourceManager.GetString("LblSubTitle4_A_HPP", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Treatment name.
+        '''</summary>
+        Friend Shared ReadOnly Property LblSubTitle5_A_HPP() As String
+            Get
+                Return ResourceManager.GetString("LblSubTitle5_A_HPP", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Treatment description.
+        '''</summary>
+        Friend Shared ReadOnly Property LblSubTitle6_A_HPP() As String
+            Get
+                Return ResourceManager.GetString("LblSubTitle6_A_HPP", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Kind of treatment.
+        '''</summary>
+        Friend Shared ReadOnly Property LblSubTitle7_A_HPP() As String
+            Get
+                Return ResourceManager.GetString("LblSubTitle7_A_HPP", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to LIST OF TREATMENTS FOR PATHOLOGY.
+        '''</summary>
+        Friend Shared ReadOnly Property LblSubTitle8_A_HPP() As String
+            Get
+                Return ResourceManager.GetString("LblSubTitle8_A_HPP", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Age.
+        '''</summary>
+        Friend Shared ReadOnly Property LblSubTitleAge_A_H() As String
+            Get
+                Return ResourceManager.GetString("LblSubTitleAge_A_H", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Last Connection.
+        '''</summary>
+        Friend Shared ReadOnly Property LblSubTitleConn_A_H() As String
+            Get
+                Return ResourceManager.GetString("LblSubTitleConn_A_H", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Credential.
+        '''</summary>
+        Friend Shared ReadOnly Property LblSubTitleCred_A_H() As String
+            Get
+                Return ResourceManager.GetString("LblSubTitleCred_A_H", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Email.
+        '''</summary>
+        Friend Shared ReadOnly Property LblSubTitleEmail_A_H() As String
+            Get
+                Return ResourceManager.GetString("LblSubTitleEmail_A_H", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Full Name.
+        '''</summary>
+        Friend Shared ReadOnly Property LblSubTitleName_A_H() As String
+            Get
+                Return ResourceManager.GetString("LblSubTitleName_A_H", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Number Phone.
+        '''</summary>
+        Friend Shared ReadOnly Property LblSubTitleTel_A_H() As String
+            Get
+                Return ResourceManager.GetString("LblSubTitleTel_A_H", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to ABOUT SYSTEM.
+        '''</summary>
+        Friend Shared ReadOnly Property LblTitle1_A_H() As String
+            Get
+                Return ResourceManager.GetString("LblTitle1_A_H", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to MODIFY PATHOLOGY.
+        '''</summary>
+        Friend Shared ReadOnly Property LblTitle1_A_HPP() As String
+            Get
+                Return ResourceManager.GetString("LblTitle1_A_HPP", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to WELCOME BACK.
+        '''</summary>
+        Friend Shared ReadOnly Property LblTitle1_A_L() As String
+            Get
+                Return ResourceManager.GetString("LblTitle1_A_L", resourceCulture)
             End Get
         End Property
         
@@ -347,6 +799,24 @@ Namespace My.Resources
         Friend Shared ReadOnly Property LblTitle1Symp_P_H() As String
             Get
                 Return ResourceManager.GetString("LblTitle1Symp_P_H", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to ABOUT ADMINISTRATOR.
+        '''</summary>
+        Friend Shared ReadOnly Property LblTitle2_A_H() As String
+            Get
+                Return ResourceManager.GetString("LblTitle2_A_H", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to  .
+        '''</summary>
+        Friend Shared ReadOnly Property LblTitle2_A_L() As String
+            Get
+                Return ResourceManager.GetString("LblTitle2_A_L", resourceCulture)
             End Get
         End Property
         
@@ -464,6 +934,33 @@ Namespace My.Resources
         Friend Shared ReadOnly Property Rbtn1_Yes_P_H() As String
             Get
                 Return ResourceManager.GetString("Rbtn1_Yes_P_H", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Medicine.
+        '''</summary>
+        Friend Shared ReadOnly Property RdbtnMedicine_A_HPP() As String
+            Get
+                Return ResourceManager.GetString("RdbtnMedicine_A_HPP", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Surgical.
+        '''</summary>
+        Friend Shared ReadOnly Property RdbtnQuir_A_HPP() As String
+            Get
+                Return ResourceManager.GetString("RdbtnQuir_A_HPP", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Make search by pathologies.
+        '''</summary>
+        Friend Shared ReadOnly Property TxtSearchPath_A_HP() As String
+            Get
+                Return ResourceManager.GetString("TxtSearchPath_A_HP", resourceCulture)
             End Get
         End Property
     End Class

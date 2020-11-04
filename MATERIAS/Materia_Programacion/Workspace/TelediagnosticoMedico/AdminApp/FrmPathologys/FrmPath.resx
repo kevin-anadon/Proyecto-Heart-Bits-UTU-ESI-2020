@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="BtnDelPat.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="BtnRmPath_A_HP.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         EwAACxMBAJqcGAAAAYtJREFUOE+VVE1OwkAU7hE8mkfwCL2BJG11g5E7sNNFjd6ABbRa0sTAFExMS8CN
@@ -131,7 +131,7 @@
         AElFTkSuQmCC
 </value>
   </data>
-  <data name="BtnAddPat.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="BtnAddPath_A_HP.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         EwAACxMBAJqcGAAAASBJREFUOE+tlFFuwjAMhnuEHY0j7Ai9wZBaxuM4BzwUbXeAdHuINkEQSKgP03jh
@@ -167,7 +167,7 @@
         MmhnQtUg8yIAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="BtnLogout.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="BtnLogout_A_HP.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         EwAACxMBAJqcGAAAASBJREFUOE/dk+2NgzAMhhnhRkBChP5klG5AN2hHuE1SqU3Y4XSc1UluhI7Q+k0c
@@ -178,7 +178,7 @@
         6g6XX/QzPiOqGQAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="BtnPath.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="BtnPathologies_A_HP.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         EwAACxMBAJqcGAAAATFJREFUOE+9lDFOQzEQRP9ROEqOkBuQG5AbJC1VcgEENwnUaSNRRqKkIBISDRRm
@@ -189,7 +189,7 @@
         pTEMeKZrhpwoqRLw8g/2d+i6b6/RQoZtZv8UAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="BtnSympt.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="BtnSymp_A_HP.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         EwAACxMBAJqcGAAAAa5JREFUOE+VVO1tgzAQzQjZoB2hI3SEjGDsAZoN2g2aDei/qhhE/0QEoyojpBsw
@@ -202,7 +202,7 @@
         /x6qwPsthMgxb0ARiNBPqORU4e2EhfoDHhh3Ia0LIQEAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="BtnAdmin.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="BtnAdmins_A_HP.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         EwAACxMBAJqcGAAAAMpJREFUOE9jGAUYIGH7aofkXWvng3DSrlUJUGHyQNLutfVJu9b8R8FAMag0aSBh
@@ -211,7 +211,7 @@
         mglQ7ZgAGqNYNeLGa+dDtWOCpO2gsIMUBMRikB6o9pEJGBgAWFsqYO0bNt8AAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="BtnMed.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="BtnMedics_A_HP.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         EwAACxMBAJqcGAAAAMpJREFUOE9jGAUYIGH7aofkXWvng3DSrlUJUGHyQNLutfVJu9b8R8FAMag0aSBh
@@ -220,7 +220,7 @@
         mglQ7ZgAGqNYNeLGa+dDtWOCpO2gsIMUBMRikB6o9pEJGBgAWFsqYO0bNt8AAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="BtnPac.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="BtnPatients_A_HP.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         EwAACxMBAJqcGAAAAMpJREFUOE9jGAUYIGH7aofkXWvng3DSrlUJUGHyQNLutfVJu9b8R8FAMag0aSBh
@@ -229,7 +229,7 @@
         mglQ7ZgAGqNYNeLGa+dDtWOCpO2gsIMUBMRikB6o9pEJGBgAWFsqYO0bNt8AAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="BtnHome.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="BtnHome_A_HP.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         EwAACxMBAJqcGAAAAMVJREFUOE/tk9ENgjAYhBnBERzBEdzE0jqAGziCbtBHk9LiI/j3gVEYgRHwb/wN
@@ -334,7 +334,7 @@
         S5kuep71SvVabalXxFVzr153lJ89apUndv3tTaqTrCgAoAD/2Q==
 </value>
   </data>
-  <data name="BtnMod.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="BtnModifyPath_A_HP.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         EwAACxMBAJqcGAAAAWRJREFUOE+VlFFKw0AQhnsEj+YRPEJuYCGJvgj2wTd7hwjeoU2islrbrSIkvohF

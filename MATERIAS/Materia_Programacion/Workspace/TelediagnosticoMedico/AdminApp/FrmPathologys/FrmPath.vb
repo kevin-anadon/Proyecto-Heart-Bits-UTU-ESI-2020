@@ -9,9 +9,9 @@ Public Class FrmPath
 
     Private Sub FrmPath_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ReloadDgv(0)
-        BtnAddPat.BackColor = Color.FromArgb(240, 240, 240)
-        BtnMod.BackColor = Color.FromArgb(240, 240, 240)
-        BtnDelPat.BackColor = Color.FromArgb(240, 240, 240)
+        BtnAddPath_A_HP.BackColor = Color.FromArgb(240, 240, 240)
+        BtnModifyPath_A_HP.BackColor = Color.FromArgb(240, 240, 240)
+        BtnRmPath_A_HP.BackColor = Color.FromArgb(240, 240, 240)
     End Sub
 
     Public Sub ReloadDgv(i As Integer)
@@ -33,16 +33,16 @@ Public Class FrmPath
         End If
     End Sub
 
-    Private Sub BtnAddPat_Click(sender As Object, e As EventArgs) Handles BtnAddPat.Click
+    Private Sub BtnAddPat_Click(sender As Object, e As EventArgs) Handles BtnAddPath_A_HP.Click
         Dim frm As New FrmAddModPath()
         FrmAddModPath.Add = True
-        frm.LblPathTop.Text = "INSERTAR NUEVA PATOLOGÍA"
-        frm.BtnAdd.Text = "Almacenar Patología"
+        frm.LblTitle1_A_HPP.Text = "INSERTAR NUEVA PATOLOGÍA"
+        frm.BtnAddPath_A_HPP.Text = "Almacenar Patología"
         frm.ShowDialog()
         ReloadDgv(3)
     End Sub
 
-    Private Sub BtnDelPat_Click(sender As Object, e As EventArgs) Handles BtnDelPat.Click
+    Private Sub BtnDelPat_Click(sender As Object, e As EventArgs) Handles BtnRmPath_A_HP.Click
         Dim alerta As New FrmAlertRemove()
         row = DgvPat.CurrentRow
         PathSelected = CStr(row.Cells("Patología").Value) 'Obtengo la Patología seleccionada
@@ -84,60 +84,60 @@ Public Class FrmPath
         ModPath()
     End Sub
 
-    Private Sub BtnMod_Click(sender As Object, e As EventArgs) Handles BtnMod.Click  'Otra manera de modificar una patología
+    Private Sub BtnMod_Click(sender As Object, e As EventArgs) Handles BtnModifyPath_A_HP.Click  'Otra manera de modificar una patología
         ModPath()
     End Sub
 
-    Private Sub BtnHome_Click(sender As Object, e As EventArgs) Handles BtnHome.Click
+    Private Sub BtnHome_Click(sender As Object, e As EventArgs) Handles BtnHome_A_HP.Click
         Dim frmhome As New FrmHome()
         Me.Dispose()
         frmhome.Show()
     End Sub
 
-    Private Sub BtnLogout_Click(sender As Object, e As EventArgs) Handles BtnLogout.Click
+    Private Sub BtnLogout_Click(sender As Object, e As EventArgs) Handles BtnLogout_A_HP.Click
         If MsgBox("Está seguro que desea cerrar sesión ?", MsgBoxStyle.YesNoCancel, "Cerrar Programa") = MsgBoxResult.Yes Then
             End
         End If
     End Sub
 
-    Private Sub BtnSympt_Click(sender As Object, e As EventArgs) Handles BtnSympt.Click
+    Private Sub BtnSympt_Click(sender As Object, e As EventArgs) Handles BtnSympt.Click, BtnSymp_A_HP.Click
         Dim frm As New FrmSympt
         Me.Dispose()
         frm.Show()
     End Sub
 
-    Private Sub BtnPat_MouseClick(sender As Object, e As MouseEventArgs) Handles TxtPat.MouseClick
-        TxtPat.Clear()
+    Private Sub BtnPat_MouseClick(sender As Object, e As MouseEventArgs) Handles TxtSearchPath_A_HP.MouseClick
+        TxtSearchPath_A_HP.Clear()
     End Sub
 
     Private Sub BtnClose_Click(sender As Object, e As EventArgs)
         End
     End Sub
 
-    Private Sub BtnAdmin_Click(sender As Object, e As EventArgs) Handles BtnAdmin.Click
+    Private Sub BtnAdmin_Click(sender As Object, e As EventArgs) Handles BtnAdmins_A_HP.Click
         Dim frm As New FrmAdmin()
         Me.Dispose()
         frm.IdentifyPeople(2)
         frm.Show()
     End Sub
-    Private Sub BtnPac_Click(sender As Object, e As EventArgs) Handles BtnPac.Click
+    Private Sub BtnPac_Click(sender As Object, e As EventArgs) Handles BtnPatients_A_HP.Click
         Dim frm As New FrmAdmin()
         Me.Dispose()
         frm.IdentifyPeople(1)
         frm.Show()
     End Sub
 
-    Private Sub BtnMed_Click(sender As Object, e As EventArgs) Handles BtnMed.Click
+    Private Sub BtnMed_Click(sender As Object, e As EventArgs) Handles BtnMedics_A_HP.Click
         Dim frm As New FrmAdmin()
         Me.Dispose()
         frm.IdentifyPeople(0)
         frm.Show()
     End Sub
 
-    Private Sub TxtPat_TextChanged(sender As Object, e As EventArgs) Handles TxtPat.TextChanged
-        If Not TxtPat.Text.Equals("") Or Not TxtPat.Text = Nothing Then
+    Private Sub TxtPat_TextChanged(sender As Object, e As EventArgs) Handles TxtSearchPath_A_HP.TextChanged
+        If Not TxtSearchPath_A_HP.Text.Equals("") Or Not TxtSearchPath_A_HP.Text = Nothing Then
             Try
-                DgvPat.DataSource = log.SearchPathology(TxtPat.Text).Tables("Search")
+                DgvPat.DataSource = log.SearchPathology(TxtSearchPath_A_HP.Text).Tables("Search")
                 DgvPat.Refresh()
             Catch ex As Exception
                 MsgBox(ex.Message)

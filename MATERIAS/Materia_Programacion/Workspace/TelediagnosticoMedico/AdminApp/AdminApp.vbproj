@@ -24,6 +24,7 @@
     <OutputPath>bin\Debug\</OutputPath>
     <DocumentationFile>AdminApp.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -236,6 +237,20 @@
     <None Include="Resources\Login_ Type 2.jpg" />
     <None Include="Resources\AdminWhite.png" />
     <None Include="Resources\GreenPerson.png" />
+    <None Include="Resources\Eng.jpg" />
+    <None Include="Resources\Eng_Selected.jpg" />
+    <None Include="Resources\Es.jpg" />
+    <None Include="Resources\Es_Selected.jpg" />
+    <None Include="Resources\Medics.jpg" />
+    <None Include="Resources\Logo.png" />
+    <None Include="Resources\AboutSystem.png" />
+    <None Include="Resources\User.png" />
+    <None Include="Resources\Pathology.png" />
+    <None Include="Resources\person.png" />
+    <None Include="Resources\symp.png" />
+    <None Include="Resources\logout.png" />
+    <None Include="Resources\home.png" />
+    <None Include="Resources\Logo2.png" />
     <Content Include="TelediganosticoMedico_Logo.ico" />
   </ItemGroup>
   <ItemGroup>

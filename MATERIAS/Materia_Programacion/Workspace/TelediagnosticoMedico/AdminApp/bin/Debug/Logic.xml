@@ -301,6 +301,16 @@ that apply to you..
   Looks up a localized string similar to FINALIZAR.
 </summary>
 </member>
+<member name="P:Logic.My.Resources.Spanish.BtnExit_A_L">
+<summary>
+  Looks up a localized string similar to CERRAR SESIÓN.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.Spanish.BtnLogin_A_L">
+<summary>
+  Looks up a localized string similar to INICIAR SESIÓN.
+</summary>
+</member>
 <member name="P:Logic.My.Resources.Spanish.BtnLogin_P_L">
 <summary>
   Looks up a localized string similar to INICIAR SESIÓN.
@@ -361,6 +371,11 @@ that apply to you..
   Looks up a localized string similar to En las próximas versiones de nuestro sistema, podrá consultar con un Médico..
 </summary>
 </member>
+<member name="P:Logic.My.Resources.Spanish.LblInfo1_A_SS">
+<summary>
+  Looks up a localized string similar to Generando conexión con la Base de Datos..
+</summary>
+</member>
 <member name="P:Logic.My.Resources.Spanish.LblInfo1_P_SS">
 <summary>
   Looks up a localized string similar to Generando conexión con la Base de Datos..
@@ -385,6 +400,13 @@ No usar en caso de emergencias. En caso de una emergencia de salud, llame a su n
   Looks up a localized string similar to Este Sistema Médico fué creado con el propósito de cumplir las expecativas de un Programa Asistente, el cual lo guiará a usted a lo largo de su diagnóstico de patológias que pueda sufrir. Al ser este un Asistente, ustéd podrá conocer sus Patologías de la forma más ágil y simple.
 
 Que disfrute de nuestro servicio. Toque el botón debajo para empezar el diagnóstico.anónima y no será compartida con nadie..
+</summary>
+</member>
+<member name="P:Logic.My.Resources.Spanish.LblInfoText_A_L">
+<summary>
+  Looks up a localized string similar to Ingrese su usuario y contraseña 
+para autenticar y verificar sus credenciales.
+Este Software le permitirá gestionar al Personal, a los Pacientes, los Síntomas y sus Patologías asociadas..
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.LblInfoText_P_L">
@@ -427,6 +449,11 @@ Que disfrute de nuestro servicio. Toque el botón debajo para empezar el diagnó
   Looks up a localized string similar to Seleccione un ítem para eliminarlo.
 </summary>
 </member>
+<member name="P:Logic.My.Resources.Spanish.LblTitle1_A_L">
+<summary>
+  Looks up a localized string similar to GUSTO EN VERLO.
+</summary>
+</member>
 <member name="P:Logic.My.Resources.Spanish.LblTitle1_P_L">
 <summary>
   Looks up a localized string similar to GUSTO EN VERLO.
@@ -441,6 +468,11 @@ que se apliquen a usted..
 <member name="P:Logic.My.Resources.Spanish.LblTitle1Symp_P_H">
 <summary>
   Looks up a localized string similar to Añada sus síntomas a la lista..
+</summary>
+</member>
+<member name="P:Logic.My.Resources.Spanish.LblTitle2_A_L">
+<summary>
+  Looks up a localized string similar to NUEVAMENTE..
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.LblTitle2_P_L">

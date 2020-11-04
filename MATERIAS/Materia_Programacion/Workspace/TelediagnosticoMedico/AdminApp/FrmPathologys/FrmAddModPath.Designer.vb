@@ -22,66 +22,68 @@ Partial Class FrmAddModPath
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmAddModPath))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.PanelMain = New System.Windows.Forms.Panel()
+        Me.LblPrioridad = New Guna.UI.WinForms.GunaLabel()
+        Me.PicPrior = New Guna.UI2.WinForms.Guna2PictureBox()
+        Me.BtnImportCsv = New Guna.UI.WinForms.GunaButton()
         Me.GunaLabel9 = New Guna.UI.WinForms.GunaLabel()
         Me.CmbTipo = New Guna.UI.WinForms.GunaComboBox()
         Me.GunaSeparator7 = New Guna.UI.WinForms.GunaSeparator()
-        Me.GunaLabel5 = New Guna.UI.WinForms.GunaLabel()
-        Me.RbnQ = New Guna.UI2.WinForms.Guna2RadioButton()
+        Me.LblSubTitle4_A_HPP = New Guna.UI.WinForms.GunaLabel()
+        Me.RdbtnQuir_A_HPP = New Guna.UI2.WinForms.Guna2RadioButton()
         Me.DgvTreat = New Guna.UI.WinForms.GunaDataGridView()
         Me.name = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.desc = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.type = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.RbnMed = New Guna.UI2.WinForms.Guna2RadioButton()
-        Me.BtnAdd = New Guna.UI.WinForms.GunaButton()
+        Me.RdbtnMedicine_A_HPP = New Guna.UI2.WinForms.Guna2RadioButton()
+        Me.BtnAddPath_A_HPP = New Guna.UI.WinForms.GunaButton()
         Me.BtnModTreat = New Guna.UI.WinForms.GunaButton()
         Me.BtnDelTreat = New Guna.UI.WinForms.GunaButton()
         Me.BtnAddTreat = New Guna.UI.WinForms.GunaButton()
         Me.Guna2PictureBox2 = New Guna.UI2.WinForms.Guna2PictureBox()
-        Me.GunaLabel4 = New Guna.UI.WinForms.GunaLabel()
-        Me.GunaLabel3 = New Guna.UI.WinForms.GunaLabel()
+        Me.LblInfo2_A_HPP = New Guna.UI.WinForms.GunaLabel()
+        Me.LblInfo1_A_HPP = New Guna.UI.WinForms.GunaLabel()
         Me.GunaLabel8 = New Guna.UI.WinForms.GunaLabel()
         Me.GunaLabel7 = New Guna.UI.WinForms.GunaLabel()
         Me.GunaLabel6 = New Guna.UI.WinForms.GunaLabel()
         Me.GunaSeparator6 = New Guna.UI.WinForms.GunaSeparator()
-        Me.LblTreatmentType = New Guna.UI.WinForms.GunaLabel()
+        Me.LblSubTitle7_A_HPP = New Guna.UI.WinForms.GunaLabel()
         Me.GunaSeparator5 = New Guna.UI.WinForms.GunaSeparator()
         Me.TxtTreatDesc = New Guna.UI.WinForms.GunaTextBox()
-        Me.LblTreatmentDesc = New Guna.UI.WinForms.GunaLabel()
+        Me.LblSubTitle6_A_HPP = New Guna.UI.WinForms.GunaLabel()
         Me.GunaSeparator4 = New Guna.UI.WinForms.GunaSeparator()
         Me.TxtTreatName = New Guna.UI.WinForms.GunaTextBox()
-        Me.LblTreatmentName = New Guna.UI.WinForms.GunaLabel()
+        Me.LblSubTitle5_A_HPP = New Guna.UI.WinForms.GunaLabel()
         Me.GunaSeparator3 = New Guna.UI.WinForms.GunaSeparator()
         Me.TxtDescr = New System.Windows.Forms.RichTextBox()
-        Me.LblPrioridad = New Guna.UI.WinForms.GunaLabel()
         Me.GunaLabel2 = New Guna.UI.WinForms.GunaLabel()
         Me.Spinner = New Guna.UI2.WinForms.Guna2NumericUpDown()
         Me.GunaSeparator2 = New Guna.UI.WinForms.GunaSeparator()
         Me.GunaLabel1 = New Guna.UI.WinForms.GunaLabel()
-        Me.LblMortality = New Guna.UI.WinForms.GunaLabel()
+        Me.LblSubTitle2_A_HPP = New Guna.UI.WinForms.GunaLabel()
         Me.Asterisco = New Guna.UI.WinForms.GunaLabel()
-        Me.LblDescr = New Guna.UI.WinForms.GunaLabel()
+        Me.LblSubTitle3_A_HPP = New Guna.UI.WinForms.GunaLabel()
         Me.GunaSeparator1 = New Guna.UI.WinForms.GunaSeparator()
-        Me.LblPatName = New Guna.UI.WinForms.GunaLabel()
+        Me.LblSubTitle1_A_HPP = New Guna.UI.WinForms.GunaLabel()
         Me.TxtName = New Guna.UI.WinForms.GunaTextBox()
-        Me.PicPrior = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.PanelTop = New System.Windows.Forms.Panel()
         Me.LblPat = New Guna.UI.WinForms.GunaLabel()
         Me.LblPatTop = New Guna.UI.WinForms.GunaLabel()
         Me.BtnClose = New Guna.UI.WinForms.GunaButton()
-        Me.LblPathTop = New Guna.UI.WinForms.GunaLabel()
-        Me.LblListado = New System.Windows.Forms.Label()
-        Me.BtnImportCsv = New Guna.UI.WinForms.GunaButton()
+        Me.LblTitle1_A_HPP = New Guna.UI.WinForms.GunaLabel()
+        Me.LblSubTitle8_A_HPP = New System.Windows.Forms.Label()
         Me.OfdAddPathology = New System.Windows.Forms.OpenFileDialog()
+        Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.PanelMain.SuspendLayout()
+        CType(Me.PicPrior, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DgvTreat, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Spinner, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PicPrior, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelTop.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -90,50 +92,102 @@ Partial Class FrmAddModPath
         Me.PanelMain.BackColor = System.Drawing.Color.White
         Me.PanelMain.BackgroundImage = CType(resources.GetObject("PanelMain.BackgroundImage"), System.Drawing.Image)
         Me.PanelMain.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PanelMain.Controls.Add(Me.LblPrioridad)
+        Me.PanelMain.Controls.Add(Me.PicPrior)
         Me.PanelMain.Controls.Add(Me.BtnImportCsv)
         Me.PanelMain.Controls.Add(Me.GunaLabel9)
         Me.PanelMain.Controls.Add(Me.CmbTipo)
         Me.PanelMain.Controls.Add(Me.GunaSeparator7)
-        Me.PanelMain.Controls.Add(Me.GunaLabel5)
-        Me.PanelMain.Controls.Add(Me.RbnQ)
+        Me.PanelMain.Controls.Add(Me.LblSubTitle4_A_HPP)
+        Me.PanelMain.Controls.Add(Me.RdbtnQuir_A_HPP)
         Me.PanelMain.Controls.Add(Me.DgvTreat)
-        Me.PanelMain.Controls.Add(Me.RbnMed)
-        Me.PanelMain.Controls.Add(Me.BtnAdd)
+        Me.PanelMain.Controls.Add(Me.RdbtnMedicine_A_HPP)
+        Me.PanelMain.Controls.Add(Me.BtnAddPath_A_HPP)
         Me.PanelMain.Controls.Add(Me.BtnModTreat)
         Me.PanelMain.Controls.Add(Me.BtnDelTreat)
         Me.PanelMain.Controls.Add(Me.BtnAddTreat)
         Me.PanelMain.Controls.Add(Me.Guna2PictureBox2)
-        Me.PanelMain.Controls.Add(Me.GunaLabel4)
-        Me.PanelMain.Controls.Add(Me.GunaLabel3)
+        Me.PanelMain.Controls.Add(Me.LblInfo2_A_HPP)
+        Me.PanelMain.Controls.Add(Me.LblInfo1_A_HPP)
         Me.PanelMain.Controls.Add(Me.GunaLabel8)
         Me.PanelMain.Controls.Add(Me.GunaLabel7)
         Me.PanelMain.Controls.Add(Me.GunaLabel6)
         Me.PanelMain.Controls.Add(Me.GunaSeparator6)
-        Me.PanelMain.Controls.Add(Me.LblTreatmentType)
+        Me.PanelMain.Controls.Add(Me.LblSubTitle7_A_HPP)
         Me.PanelMain.Controls.Add(Me.GunaSeparator5)
         Me.PanelMain.Controls.Add(Me.TxtTreatDesc)
-        Me.PanelMain.Controls.Add(Me.LblTreatmentDesc)
+        Me.PanelMain.Controls.Add(Me.LblSubTitle6_A_HPP)
         Me.PanelMain.Controls.Add(Me.GunaSeparator4)
         Me.PanelMain.Controls.Add(Me.TxtTreatName)
-        Me.PanelMain.Controls.Add(Me.LblTreatmentName)
+        Me.PanelMain.Controls.Add(Me.LblSubTitle5_A_HPP)
         Me.PanelMain.Controls.Add(Me.GunaSeparator3)
         Me.PanelMain.Controls.Add(Me.TxtDescr)
-        Me.PanelMain.Controls.Add(Me.LblPrioridad)
         Me.PanelMain.Controls.Add(Me.GunaLabel2)
         Me.PanelMain.Controls.Add(Me.Spinner)
         Me.PanelMain.Controls.Add(Me.GunaSeparator2)
         Me.PanelMain.Controls.Add(Me.GunaLabel1)
-        Me.PanelMain.Controls.Add(Me.LblMortality)
+        Me.PanelMain.Controls.Add(Me.LblSubTitle2_A_HPP)
         Me.PanelMain.Controls.Add(Me.Asterisco)
-        Me.PanelMain.Controls.Add(Me.LblDescr)
+        Me.PanelMain.Controls.Add(Me.LblSubTitle3_A_HPP)
         Me.PanelMain.Controls.Add(Me.GunaSeparator1)
-        Me.PanelMain.Controls.Add(Me.LblPatName)
+        Me.PanelMain.Controls.Add(Me.LblSubTitle1_A_HPP)
         Me.PanelMain.Controls.Add(Me.TxtName)
-        Me.PanelMain.Controls.Add(Me.PicPrior)
         Me.PanelMain.Location = New System.Drawing.Point(0, 33)
         Me.PanelMain.Name = "PanelMain"
         Me.PanelMain.Size = New System.Drawing.Size(927, 443)
         Me.PanelMain.TabIndex = 35
+        '
+        'LblPrioridad
+        '
+        Me.LblPrioridad.AutoSize = True
+        Me.LblPrioridad.BackColor = System.Drawing.Color.FromArgb(CType(CType(246, Byte), Integer), CType(CType(135, Byte), Integer), CType(CType(124, Byte), Integer))
+        Me.LblPrioridad.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.LblPrioridad.ForeColor = System.Drawing.Color.White
+        Me.LblPrioridad.Location = New System.Drawing.Point(288, 39)
+        Me.LblPrioridad.Name = "LblPrioridad"
+        Me.LblPrioridad.Size = New System.Drawing.Size(35, 15)
+        Me.LblPrioridad.TabIndex = 55
+        Me.LblPrioridad.Text = "BAJA"
+        '
+        'PicPrior
+        '
+        Me.PicPrior.Image = CType(resources.GetObject("PicPrior.Image"), System.Drawing.Image)
+        Me.PicPrior.Location = New System.Drawing.Point(283, 36)
+        Me.PicPrior.Name = "PicPrior"
+        Me.PicPrior.ShadowDecoration.Parent = Me.PicPrior
+        Me.PicPrior.Size = New System.Drawing.Size(124, 21)
+        Me.PicPrior.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PicPrior.TabIndex = 56
+        Me.PicPrior.TabStop = False
+        '
+        'BtnImportCsv
+        '
+        Me.BtnImportCsv.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnImportCsv.Animated = True
+        Me.BtnImportCsv.AnimationHoverSpeed = 0.07!
+        Me.BtnImportCsv.AnimationSpeed = 0.03!
+        Me.BtnImportCsv.BackColor = System.Drawing.Color.Transparent
+        Me.BtnImportCsv.BaseColor = System.Drawing.Color.Transparent
+        Me.BtnImportCsv.BorderColor = System.Drawing.Color.DarkGray
+        Me.BtnImportCsv.DialogResult = System.Windows.Forms.DialogResult.None
+        Me.BtnImportCsv.FocusedColor = System.Drawing.Color.Empty
+        Me.BtnImportCsv.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnImportCsv.ForeColor = System.Drawing.Color.Black
+        Me.BtnImportCsv.Image = CType(resources.GetObject("BtnImportCsv.Image"), System.Drawing.Image)
+        Me.BtnImportCsv.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.BtnImportCsv.ImageSize = New System.Drawing.Size(39, 39)
+        Me.BtnImportCsv.Location = New System.Drawing.Point(872, 328)
+        Me.BtnImportCsv.Name = "BtnImportCsv"
+        Me.BtnImportCsv.OnHoverBaseColor = System.Drawing.Color.Silver
+        Me.BtnImportCsv.OnHoverBorderColor = System.Drawing.Color.Black
+        Me.BtnImportCsv.OnHoverForeColor = System.Drawing.Color.White
+        Me.BtnImportCsv.OnHoverImage = Nothing
+        Me.BtnImportCsv.OnPressedColor = System.Drawing.Color.Black
+        Me.BtnImportCsv.Radius = 6
+        Me.BtnImportCsv.Size = New System.Drawing.Size(39, 39)
+        Me.BtnImportCsv.TabIndex = 87
+        Me.BtnImportCsv.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.BtnImportCsv.Visible = False
         '
         'GunaLabel9
         '
@@ -174,36 +228,40 @@ Partial Class FrmAddModPath
         Me.GunaSeparator7.Size = New System.Drawing.Size(389, 1)
         Me.GunaSeparator7.TabIndex = 84
         '
-        'GunaLabel5
+        'LblSubTitle4_A_HPP
         '
-        Me.GunaLabel5.AutoSize = True
-        Me.GunaLabel5.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GunaLabel5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
-        Me.GunaLabel5.Location = New System.Drawing.Point(13, 174)
-        Me.GunaLabel5.Name = "GunaLabel5"
-        Me.GunaLabel5.Size = New System.Drawing.Size(159, 25)
-        Me.GunaLabel5.TabIndex = 83
-        Me.GunaLabel5.Text = "Tipo de Patología"
+        Me.LblSubTitle4_A_HPP.AccessibleDescription = "LblSubTitle4_A_HPP"
+        Me.LblSubTitle4_A_HPP.AccessibleName = "LblSubTitle4_A_HPP"
+        Me.LblSubTitle4_A_HPP.AutoSize = True
+        Me.LblSubTitle4_A_HPP.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblSubTitle4_A_HPP.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
+        Me.LblSubTitle4_A_HPP.Location = New System.Drawing.Point(13, 174)
+        Me.LblSubTitle4_A_HPP.Name = "LblSubTitle4_A_HPP"
+        Me.LblSubTitle4_A_HPP.Size = New System.Drawing.Size(159, 25)
+        Me.LblSubTitle4_A_HPP.TabIndex = 83
+        Me.LblSubTitle4_A_HPP.Text = "Tipo de Patología"
         '
-        'RbnQ
+        'RdbtnQuir_A_HPP
         '
-        Me.RbnQ.AutoSize = True
-        Me.RbnQ.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
-        Me.RbnQ.CheckedState.BorderThickness = 0
-        Me.RbnQ.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(246, Byte), Integer), CType(CType(135, Byte), Integer), CType(CType(124, Byte), Integer))
-        Me.RbnQ.CheckedState.InnerColor = System.Drawing.Color.FromArgb(CType(CType(246, Byte), Integer), CType(CType(135, Byte), Integer), CType(CType(124, Byte), Integer))
-        Me.RbnQ.CheckedState.InnerOffset = -4
-        Me.RbnQ.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RbnQ.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
-        Me.RbnQ.Location = New System.Drawing.Point(153, 407)
-        Me.RbnQ.Name = "RbnQ"
-        Me.RbnQ.Size = New System.Drawing.Size(80, 19)
-        Me.RbnQ.TabIndex = 7
-        Me.RbnQ.Text = "Quirurjico"
-        Me.RbnQ.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
-        Me.RbnQ.UncheckedState.BorderThickness = 2
-        Me.RbnQ.UncheckedState.FillColor = System.Drawing.Color.Transparent
-        Me.RbnQ.UncheckedState.InnerColor = System.Drawing.Color.Transparent
+        Me.RdbtnQuir_A_HPP.AccessibleDescription = "RdbtnQuir_A_HPP"
+        Me.RdbtnQuir_A_HPP.AccessibleName = "RdbtnQuir_A_HPP"
+        Me.RdbtnQuir_A_HPP.AutoSize = True
+        Me.RdbtnQuir_A_HPP.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.RdbtnQuir_A_HPP.CheckedState.BorderThickness = 0
+        Me.RdbtnQuir_A_HPP.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(246, Byte), Integer), CType(CType(135, Byte), Integer), CType(CType(124, Byte), Integer))
+        Me.RdbtnQuir_A_HPP.CheckedState.InnerColor = System.Drawing.Color.FromArgb(CType(CType(246, Byte), Integer), CType(CType(135, Byte), Integer), CType(CType(124, Byte), Integer))
+        Me.RdbtnQuir_A_HPP.CheckedState.InnerOffset = -4
+        Me.RdbtnQuir_A_HPP.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RdbtnQuir_A_HPP.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
+        Me.RdbtnQuir_A_HPP.Location = New System.Drawing.Point(153, 407)
+        Me.RdbtnQuir_A_HPP.Name = "RdbtnQuir_A_HPP"
+        Me.RdbtnQuir_A_HPP.Size = New System.Drawing.Size(84, 19)
+        Me.RdbtnQuir_A_HPP.TabIndex = 7
+        Me.RdbtnQuir_A_HPP.Text = "Quirúrgico"
+        Me.RdbtnQuir_A_HPP.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.RdbtnQuir_A_HPP.UncheckedState.BorderThickness = 2
+        Me.RdbtnQuir_A_HPP.UncheckedState.FillColor = System.Drawing.Color.Transparent
+        Me.RdbtnQuir_A_HPP.UncheckedState.InnerColor = System.Drawing.Color.Transparent
         '
         'DgvTreat
         '
@@ -282,53 +340,57 @@ Partial Class FrmAddModPath
         Me.type.Name = "type"
         Me.type.ReadOnly = True
         '
-        'RbnMed
+        'RdbtnMedicine_A_HPP
         '
-        Me.RbnMed.AutoSize = True
-        Me.RbnMed.CheckedState.BorderThickness = 0
-        Me.RbnMed.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(246, Byte), Integer), CType(CType(135, Byte), Integer), CType(CType(124, Byte), Integer))
-        Me.RbnMed.CheckedState.InnerColor = System.Drawing.Color.FromArgb(CType(CType(246, Byte), Integer), CType(CType(135, Byte), Integer), CType(CType(124, Byte), Integer))
-        Me.RbnMed.CheckedState.InnerOffset = -4
-        Me.RbnMed.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RbnMed.Location = New System.Drawing.Point(18, 407)
-        Me.RbnMed.Name = "RbnMed"
-        Me.RbnMed.Size = New System.Drawing.Size(102, 19)
-        Me.RbnMed.TabIndex = 6
-        Me.RbnMed.Text = "Medicamento"
-        Me.RbnMed.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
-        Me.RbnMed.UncheckedState.BorderThickness = 2
-        Me.RbnMed.UncheckedState.FillColor = System.Drawing.Color.Transparent
-        Me.RbnMed.UncheckedState.InnerColor = System.Drawing.Color.Transparent
+        Me.RdbtnMedicine_A_HPP.AccessibleDescription = "RdbtnMedicine_A_HPP"
+        Me.RdbtnMedicine_A_HPP.AccessibleName = "RdbtnMedicine_A_HPP"
+        Me.RdbtnMedicine_A_HPP.AutoSize = True
+        Me.RdbtnMedicine_A_HPP.CheckedState.BorderThickness = 0
+        Me.RdbtnMedicine_A_HPP.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(246, Byte), Integer), CType(CType(135, Byte), Integer), CType(CType(124, Byte), Integer))
+        Me.RdbtnMedicine_A_HPP.CheckedState.InnerColor = System.Drawing.Color.FromArgb(CType(CType(246, Byte), Integer), CType(CType(135, Byte), Integer), CType(CType(124, Byte), Integer))
+        Me.RdbtnMedicine_A_HPP.CheckedState.InnerOffset = -4
+        Me.RdbtnMedicine_A_HPP.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RdbtnMedicine_A_HPP.Location = New System.Drawing.Point(18, 407)
+        Me.RdbtnMedicine_A_HPP.Name = "RdbtnMedicine_A_HPP"
+        Me.RdbtnMedicine_A_HPP.Size = New System.Drawing.Size(102, 19)
+        Me.RdbtnMedicine_A_HPP.TabIndex = 6
+        Me.RdbtnMedicine_A_HPP.Text = "Medicamento"
+        Me.RdbtnMedicine_A_HPP.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.RdbtnMedicine_A_HPP.UncheckedState.BorderThickness = 2
+        Me.RdbtnMedicine_A_HPP.UncheckedState.FillColor = System.Drawing.Color.Transparent
+        Me.RdbtnMedicine_A_HPP.UncheckedState.InnerColor = System.Drawing.Color.Transparent
         '
-        'BtnAdd
+        'BtnAddPath_A_HPP
         '
-        Me.BtnAdd.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnAdd.Animated = True
-        Me.BtnAdd.AnimationHoverSpeed = 0.07!
-        Me.BtnAdd.AnimationSpeed = 0.03!
-        Me.BtnAdd.BackColor = System.Drawing.Color.Transparent
-        Me.BtnAdd.BaseColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
-        Me.BtnAdd.BorderColor = System.Drawing.Color.DarkGray
-        Me.BtnAdd.BorderSize = 1
-        Me.BtnAdd.DialogResult = System.Windows.Forms.DialogResult.None
-        Me.BtnAdd.FocusedColor = System.Drawing.Color.Empty
-        Me.BtnAdd.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnAdd.ForeColor = System.Drawing.Color.White
-        Me.BtnAdd.Image = Nothing
-        Me.BtnAdd.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.BtnAdd.ImageSize = New System.Drawing.Size(20, 20)
-        Me.BtnAdd.Location = New System.Drawing.Point(764, 389)
-        Me.BtnAdd.Name = "BtnAdd"
-        Me.BtnAdd.OnHoverBaseColor = System.Drawing.Color.Silver
-        Me.BtnAdd.OnHoverBorderColor = System.Drawing.Color.Black
-        Me.BtnAdd.OnHoverForeColor = System.Drawing.Color.White
-        Me.BtnAdd.OnHoverImage = Nothing
-        Me.BtnAdd.OnPressedColor = System.Drawing.Color.Black
-        Me.BtnAdd.Radius = 2
-        Me.BtnAdd.Size = New System.Drawing.Size(150, 42)
-        Me.BtnAdd.TabIndex = 11
-        Me.BtnAdd.Text = "Modificar Patología"
-        Me.BtnAdd.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.BtnAddPath_A_HPP.AccessibleDescription = "BtnAddPath_A_HPP"
+        Me.BtnAddPath_A_HPP.AccessibleName = "BtnAddPath_A_HPP"
+        Me.BtnAddPath_A_HPP.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnAddPath_A_HPP.Animated = True
+        Me.BtnAddPath_A_HPP.AnimationHoverSpeed = 0.07!
+        Me.BtnAddPath_A_HPP.AnimationSpeed = 0.03!
+        Me.BtnAddPath_A_HPP.BackColor = System.Drawing.Color.Transparent
+        Me.BtnAddPath_A_HPP.BaseColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
+        Me.BtnAddPath_A_HPP.BorderColor = System.Drawing.Color.DarkGray
+        Me.BtnAddPath_A_HPP.BorderSize = 1
+        Me.BtnAddPath_A_HPP.DialogResult = System.Windows.Forms.DialogResult.None
+        Me.BtnAddPath_A_HPP.FocusedColor = System.Drawing.Color.Empty
+        Me.BtnAddPath_A_HPP.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnAddPath_A_HPP.ForeColor = System.Drawing.Color.White
+        Me.BtnAddPath_A_HPP.Image = Nothing
+        Me.BtnAddPath_A_HPP.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.BtnAddPath_A_HPP.ImageSize = New System.Drawing.Size(20, 20)
+        Me.BtnAddPath_A_HPP.Location = New System.Drawing.Point(764, 389)
+        Me.BtnAddPath_A_HPP.Name = "BtnAddPath_A_HPP"
+        Me.BtnAddPath_A_HPP.OnHoverBaseColor = System.Drawing.Color.Silver
+        Me.BtnAddPath_A_HPP.OnHoverBorderColor = System.Drawing.Color.Black
+        Me.BtnAddPath_A_HPP.OnHoverForeColor = System.Drawing.Color.White
+        Me.BtnAddPath_A_HPP.OnHoverImage = Nothing
+        Me.BtnAddPath_A_HPP.OnPressedColor = System.Drawing.Color.Black
+        Me.BtnAddPath_A_HPP.Radius = 2
+        Me.BtnAddPath_A_HPP.Size = New System.Drawing.Size(150, 42)
+        Me.BtnAddPath_A_HPP.TabIndex = 11
+        Me.BtnAddPath_A_HPP.Text = "Modificar Patología"
+        Me.BtnAddPath_A_HPP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'BtnModTreat
         '
@@ -429,27 +491,31 @@ Partial Class FrmAddModPath
         Me.Guna2PictureBox2.TabIndex = 75
         Me.Guna2PictureBox2.TabStop = False
         '
-        'GunaLabel4
+        'LblInfo2_A_HPP
         '
-        Me.GunaLabel4.AutoSize = True
-        Me.GunaLabel4.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GunaLabel4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(246, Byte), Integer), CType(CType(135, Byte), Integer), CType(CType(124, Byte), Integer))
-        Me.GunaLabel4.Location = New System.Drawing.Point(420, 373)
-        Me.GunaLabel4.Name = "GunaLabel4"
-        Me.GunaLabel4.Size = New System.Drawing.Size(187, 13)
-        Me.GunaLabel4.TabIndex = 74
-        Me.GunaLabel4.Text = "Administración de los Tratamientos"
+        Me.LblInfo2_A_HPP.AccessibleDescription = "LblInfo2_A_HPP"
+        Me.LblInfo2_A_HPP.AccessibleName = "LblInfo2_A_HPP"
+        Me.LblInfo2_A_HPP.AutoSize = True
+        Me.LblInfo2_A_HPP.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblInfo2_A_HPP.ForeColor = System.Drawing.Color.FromArgb(CType(CType(246, Byte), Integer), CType(CType(135, Byte), Integer), CType(CType(124, Byte), Integer))
+        Me.LblInfo2_A_HPP.Location = New System.Drawing.Point(420, 373)
+        Me.LblInfo2_A_HPP.Name = "LblInfo2_A_HPP"
+        Me.LblInfo2_A_HPP.Size = New System.Drawing.Size(187, 13)
+        Me.LblInfo2_A_HPP.TabIndex = 74
+        Me.LblInfo2_A_HPP.Text = "Administración de los Tratamientos"
         '
-        'GunaLabel3
+        'LblInfo1_A_HPP
         '
-        Me.GunaLabel3.AutoSize = True
-        Me.GunaLabel3.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GunaLabel3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(246, Byte), Integer), CType(CType(135, Byte), Integer), CType(CType(124, Byte), Integer))
-        Me.GunaLabel3.Location = New System.Drawing.Point(794, 1)
-        Me.GunaLabel3.Name = "GunaLabel3"
-        Me.GunaLabel3.Size = New System.Drawing.Size(120, 13)
-        Me.GunaLabel3.TabIndex = 73
-        Me.GunaLabel3.Text = "Campo Obligatorio [*]"
+        Me.LblInfo1_A_HPP.AccessibleDescription = "LblInfo1_A_HPP"
+        Me.LblInfo1_A_HPP.AccessibleName = "LblInfo1_A_HPP"
+        Me.LblInfo1_A_HPP.AutoSize = True
+        Me.LblInfo1_A_HPP.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblInfo1_A_HPP.ForeColor = System.Drawing.Color.FromArgb(CType(CType(246, Byte), Integer), CType(CType(135, Byte), Integer), CType(CType(124, Byte), Integer))
+        Me.LblInfo1_A_HPP.Location = New System.Drawing.Point(794, 1)
+        Me.LblInfo1_A_HPP.Name = "LblInfo1_A_HPP"
+        Me.LblInfo1_A_HPP.Size = New System.Drawing.Size(120, 13)
+        Me.LblInfo1_A_HPP.TabIndex = 73
+        Me.LblInfo1_A_HPP.Text = "Campo Obligatorio [*]"
         '
         'GunaLabel8
         '
@@ -492,16 +558,18 @@ Partial Class FrmAddModPath
         Me.GunaSeparator6.Size = New System.Drawing.Size(389, 1)
         Me.GunaSeparator6.TabIndex = 66
         '
-        'LblTreatmentType
+        'LblSubTitle7_A_HPP
         '
-        Me.LblTreatmentType.AutoSize = True
-        Me.LblTreatmentType.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblTreatmentType.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
-        Me.LblTreatmentType.Location = New System.Drawing.Point(13, 373)
-        Me.LblTreatmentType.Name = "LblTreatmentType"
-        Me.LblTreatmentType.Size = New System.Drawing.Size(180, 25)
-        Me.LblTreatmentType.TabIndex = 65
-        Me.LblTreatmentType.Text = "Tipo de Tratamiento"
+        Me.LblSubTitle7_A_HPP.AccessibleDescription = "LblSubTitle7_A_HPP"
+        Me.LblSubTitle7_A_HPP.AccessibleName = "LblSubTitle7_A_HPP"
+        Me.LblSubTitle7_A_HPP.AutoSize = True
+        Me.LblSubTitle7_A_HPP.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblSubTitle7_A_HPP.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
+        Me.LblSubTitle7_A_HPP.Location = New System.Drawing.Point(13, 373)
+        Me.LblSubTitle7_A_HPP.Name = "LblSubTitle7_A_HPP"
+        Me.LblSubTitle7_A_HPP.Size = New System.Drawing.Size(180, 25)
+        Me.LblSubTitle7_A_HPP.TabIndex = 65
+        Me.LblSubTitle7_A_HPP.Text = "Tipo de Tratamiento"
         '
         'GunaSeparator5
         '
@@ -531,16 +599,18 @@ Partial Class FrmAddModPath
         Me.TxtTreatDesc.Size = New System.Drawing.Size(389, 30)
         Me.TxtTreatDesc.TabIndex = 5
         '
-        'LblTreatmentDesc
+        'LblSubTitle6_A_HPP
         '
-        Me.LblTreatmentDesc.AutoSize = True
-        Me.LblTreatmentDesc.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblTreatmentDesc.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
-        Me.LblTreatmentDesc.Location = New System.Drawing.Point(13, 312)
-        Me.LblTreatmentDesc.Name = "LblTreatmentDesc"
-        Me.LblTreatmentDesc.Size = New System.Drawing.Size(247, 25)
-        Me.LblTreatmentDesc.TabIndex = 62
-        Me.LblTreatmentDesc.Text = "Descripción del Tratamiento"
+        Me.LblSubTitle6_A_HPP.AccessibleDescription = "LblSubTitle6_A_HPP"
+        Me.LblSubTitle6_A_HPP.AccessibleName = "LblSubTitle6_A_HPP"
+        Me.LblSubTitle6_A_HPP.AutoSize = True
+        Me.LblSubTitle6_A_HPP.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblSubTitle6_A_HPP.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
+        Me.LblSubTitle6_A_HPP.Location = New System.Drawing.Point(13, 312)
+        Me.LblSubTitle6_A_HPP.Name = "LblSubTitle6_A_HPP"
+        Me.LblSubTitle6_A_HPP.Size = New System.Drawing.Size(247, 25)
+        Me.LblSubTitle6_A_HPP.TabIndex = 62
+        Me.LblSubTitle6_A_HPP.Text = "Descripción del Tratamiento"
         '
         'GunaSeparator4
         '
@@ -570,16 +640,18 @@ Partial Class FrmAddModPath
         Me.TxtTreatName.Size = New System.Drawing.Size(389, 30)
         Me.TxtTreatName.TabIndex = 4
         '
-        'LblTreatmentName
+        'LblSubTitle5_A_HPP
         '
-        Me.LblTreatmentName.AutoSize = True
-        Me.LblTreatmentName.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblTreatmentName.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
-        Me.LblTreatmentName.Location = New System.Drawing.Point(13, 241)
-        Me.LblTreatmentName.Name = "LblTreatmentName"
-        Me.LblTreatmentName.Size = New System.Drawing.Size(217, 25)
-        Me.LblTreatmentName.TabIndex = 59
-        Me.LblTreatmentName.Text = "Nombre del Tratamiento"
+        Me.LblSubTitle5_A_HPP.AccessibleDescription = "LblSubTitle5_A_HPP"
+        Me.LblSubTitle5_A_HPP.AccessibleName = "LblSubTitle5_A_HPP"
+        Me.LblSubTitle5_A_HPP.AutoSize = True
+        Me.LblSubTitle5_A_HPP.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblSubTitle5_A_HPP.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
+        Me.LblSubTitle5_A_HPP.Location = New System.Drawing.Point(13, 241)
+        Me.LblSubTitle5_A_HPP.Name = "LblSubTitle5_A_HPP"
+        Me.LblSubTitle5_A_HPP.Size = New System.Drawing.Size(217, 25)
+        Me.LblSubTitle5_A_HPP.TabIndex = 59
+        Me.LblSubTitle5_A_HPP.Text = "Nombre del Tratamiento"
         '
         'GunaSeparator3
         '
@@ -599,18 +671,6 @@ Partial Class FrmAddModPath
         Me.TxtDescr.Size = New System.Drawing.Size(389, 64)
         Me.TxtDescr.TabIndex = 2
         Me.TxtDescr.Text = ""
-        '
-        'LblPrioridad
-        '
-        Me.LblPrioridad.AutoSize = True
-        Me.LblPrioridad.BackColor = System.Drawing.Color.FromArgb(CType(CType(246, Byte), Integer), CType(CType(135, Byte), Integer), CType(CType(124, Byte), Integer))
-        Me.LblPrioridad.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.LblPrioridad.ForeColor = System.Drawing.Color.White
-        Me.LblPrioridad.Location = New System.Drawing.Point(288, 39)
-        Me.LblPrioridad.Name = "LblPrioridad"
-        Me.LblPrioridad.Size = New System.Drawing.Size(35, 15)
-        Me.LblPrioridad.TabIndex = 55
-        Me.LblPrioridad.Text = "BAJA"
         '
         'GunaLabel2
         '
@@ -667,16 +727,18 @@ Partial Class FrmAddModPath
         Me.GunaLabel1.TabIndex = 50
         Me.GunaLabel1.Text = "*"
         '
-        'LblMortality
+        'LblSubTitle2_A_HPP
         '
-        Me.LblMortality.AutoSize = True
-        Me.LblMortality.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblMortality.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
-        Me.LblMortality.Location = New System.Drawing.Point(218, 10)
-        Me.LblMortality.Name = "LblMortality"
-        Me.LblMortality.Size = New System.Drawing.Size(172, 25)
-        Me.LblMortality.TabIndex = 49
-        Me.LblMortality.Text = "Tasa de Mortalidad"
+        Me.LblSubTitle2_A_HPP.AccessibleDescription = "LblSubTitle2_A_HPP"
+        Me.LblSubTitle2_A_HPP.AccessibleName = "LblSubTitle2_A_HPP"
+        Me.LblSubTitle2_A_HPP.AutoSize = True
+        Me.LblSubTitle2_A_HPP.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblSubTitle2_A_HPP.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
+        Me.LblSubTitle2_A_HPP.Location = New System.Drawing.Point(218, 10)
+        Me.LblSubTitle2_A_HPP.Name = "LblSubTitle2_A_HPP"
+        Me.LblSubTitle2_A_HPP.Size = New System.Drawing.Size(172, 25)
+        Me.LblSubTitle2_A_HPP.TabIndex = 49
+        Me.LblSubTitle2_A_HPP.Text = "Tasa de Mortalidad"
         '
         'Asterisco
         '
@@ -689,16 +751,18 @@ Partial Class FrmAddModPath
         Me.Asterisco.TabIndex = 47
         Me.Asterisco.Text = "*"
         '
-        'LblDescr
+        'LblSubTitle3_A_HPP
         '
-        Me.LblDescr.AutoSize = True
-        Me.LblDescr.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblDescr.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
-        Me.LblDescr.Location = New System.Drawing.Point(13, 76)
-        Me.LblDescr.Name = "LblDescr"
-        Me.LblDescr.Size = New System.Drawing.Size(241, 25)
-        Me.LblDescr.TabIndex = 46
-        Me.LblDescr.Text = "Descripción de la Patología"
+        Me.LblSubTitle3_A_HPP.AccessibleDescription = "LblSubTitle3_A_HPP"
+        Me.LblSubTitle3_A_HPP.AccessibleName = "LblSubTitle3_A_HPP"
+        Me.LblSubTitle3_A_HPP.AutoSize = True
+        Me.LblSubTitle3_A_HPP.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblSubTitle3_A_HPP.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
+        Me.LblSubTitle3_A_HPP.Location = New System.Drawing.Point(13, 76)
+        Me.LblSubTitle3_A_HPP.Name = "LblSubTitle3_A_HPP"
+        Me.LblSubTitle3_A_HPP.Size = New System.Drawing.Size(241, 25)
+        Me.LblSubTitle3_A_HPP.TabIndex = 46
+        Me.LblSubTitle3_A_HPP.Text = "Descripción de la Patología"
         '
         'GunaSeparator1
         '
@@ -708,16 +772,18 @@ Partial Class FrmAddModPath
         Me.GunaSeparator1.Size = New System.Drawing.Size(184, 1)
         Me.GunaSeparator1.TabIndex = 44
         '
-        'LblPatName
+        'LblSubTitle1_A_HPP
         '
-        Me.LblPatName.AutoSize = True
-        Me.LblPatName.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblPatName.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
-        Me.LblPatName.Location = New System.Drawing.Point(13, 10)
-        Me.LblPatName.Name = "LblPatName"
-        Me.LblPatName.Size = New System.Drawing.Size(165, 25)
-        Me.LblPatName.TabIndex = 42
-        Me.LblPatName.Text = "Nombre Patología"
+        Me.LblSubTitle1_A_HPP.AccessibleDescription = "LblSubTitle1_A_HPP"
+        Me.LblSubTitle1_A_HPP.AccessibleName = "LblSubTitle1_A_HPP"
+        Me.LblSubTitle1_A_HPP.AutoSize = True
+        Me.LblSubTitle1_A_HPP.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblSubTitle1_A_HPP.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
+        Me.LblSubTitle1_A_HPP.Location = New System.Drawing.Point(13, 10)
+        Me.LblSubTitle1_A_HPP.Name = "LblSubTitle1_A_HPP"
+        Me.LblSubTitle1_A_HPP.Size = New System.Drawing.Size(165, 25)
+        Me.LblSubTitle1_A_HPP.TabIndex = 42
+        Me.LblSubTitle1_A_HPP.Text = "Nombre Patología"
         '
         'TxtName
         '
@@ -739,23 +805,13 @@ Partial Class FrmAddModPath
         Me.TxtName.Size = New System.Drawing.Size(184, 30)
         Me.TxtName.TabIndex = 0
         '
-        'PicPrior
-        '
-        Me.PicPrior.Image = CType(resources.GetObject("PicPrior.Image"), System.Drawing.Image)
-        Me.PicPrior.Location = New System.Drawing.Point(283, 38)
-        Me.PicPrior.Name = "PicPrior"
-        Me.PicPrior.ShadowDecoration.Parent = Me.PicPrior
-        Me.PicPrior.Size = New System.Drawing.Size(124, 19)
-        Me.PicPrior.TabIndex = 56
-        Me.PicPrior.TabStop = False
-        '
         'PanelTop
         '
         Me.PanelTop.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.PanelTop.Controls.Add(Me.LblPat)
         Me.PanelTop.Controls.Add(Me.LblPatTop)
         Me.PanelTop.Controls.Add(Me.BtnClose)
-        Me.PanelTop.Controls.Add(Me.LblPathTop)
+        Me.PanelTop.Controls.Add(Me.LblTitle1_A_HPP)
         Me.PanelTop.Location = New System.Drawing.Point(0, 0)
         Me.PanelTop.Name = "PanelTop"
         Me.PanelTop.Size = New System.Drawing.Size(927, 35)
@@ -803,82 +859,60 @@ Partial Class FrmAddModPath
         Me.BtnClose.Size = New System.Drawing.Size(40, 24)
         Me.BtnClose.TabIndex = 28
         '
-        'LblPathTop
+        'LblTitle1_A_HPP
         '
-        Me.LblPathTop.AutoSize = True
-        Me.LblPathTop.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblPathTop.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
-        Me.LblPathTop.Location = New System.Drawing.Point(3, 0)
-        Me.LblPathTop.Name = "LblPathTop"
-        Me.LblPathTop.Size = New System.Drawing.Size(356, 30)
-        Me.LblPathTop.TabIndex = 0
-        Me.LblPathTop.Text = "MODIFICACIÓN DE LA PATOLOGÍA"
+        Me.LblTitle1_A_HPP.AccessibleDescription = "LblTitle1_A_HPP"
+        Me.LblTitle1_A_HPP.AccessibleName = "LblTitle1_A_HPP"
+        Me.LblTitle1_A_HPP.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblTitle1_A_HPP.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
+        Me.LblTitle1_A_HPP.Location = New System.Drawing.Point(3, 3)
+        Me.LblTitle1_A_HPP.Name = "LblTitle1_A_HPP"
+        Me.LblTitle1_A_HPP.Size = New System.Drawing.Size(728, 30)
+        Me.LblTitle1_A_HPP.TabIndex = 0
+        Me.LblTitle1_A_HPP.Text = "MODIFICACIÓN DE LA PATOLOGÍA"
         '
-        'LblListado
+        'LblSubTitle8_A_HPP
         '
-        Me.LblListado.AccessibleDescription = "LblResults"
-        Me.LblListado.AccessibleName = "LblResults"
-        Me.LblListado.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblListado.ForeColor = System.Drawing.Color.FromArgb(CType(CType(181, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(181, Byte), Integer))
-        Me.LblListado.Location = New System.Drawing.Point(423, 50)
-        Me.LblListado.Name = "LblListado"
-        Me.LblListado.Size = New System.Drawing.Size(491, 38)
-        Me.LblListado.TabIndex = 83
-        Me.LblListado.Text = "LISTADO DE TRATAMIENTOS PARA LA PATOLOGÍA"
-        Me.LblListado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'BtnImportCsv
-        '
-        Me.BtnImportCsv.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnImportCsv.Animated = True
-        Me.BtnImportCsv.AnimationHoverSpeed = 0.07!
-        Me.BtnImportCsv.AnimationSpeed = 0.03!
-        Me.BtnImportCsv.BackColor = System.Drawing.Color.Transparent
-        Me.BtnImportCsv.BaseColor = System.Drawing.Color.Transparent
-        Me.BtnImportCsv.BorderColor = System.Drawing.Color.DarkGray
-        Me.BtnImportCsv.DialogResult = System.Windows.Forms.DialogResult.None
-        Me.BtnImportCsv.FocusedColor = System.Drawing.Color.Empty
-        Me.BtnImportCsv.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnImportCsv.ForeColor = System.Drawing.Color.Black
-        Me.BtnImportCsv.Image = CType(resources.GetObject("BtnImportCsv.Image"), System.Drawing.Image)
-        Me.BtnImportCsv.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.BtnImportCsv.ImageSize = New System.Drawing.Size(39, 39)
-        Me.BtnImportCsv.Location = New System.Drawing.Point(872, 328)
-        Me.BtnImportCsv.Name = "BtnImportCsv"
-        Me.BtnImportCsv.OnHoverBaseColor = System.Drawing.Color.Silver
-        Me.BtnImportCsv.OnHoverBorderColor = System.Drawing.Color.Black
-        Me.BtnImportCsv.OnHoverForeColor = System.Drawing.Color.White
-        Me.BtnImportCsv.OnHoverImage = Nothing
-        Me.BtnImportCsv.OnPressedColor = System.Drawing.Color.Black
-        Me.BtnImportCsv.Radius = 6
-        Me.BtnImportCsv.Size = New System.Drawing.Size(39, 39)
-        Me.BtnImportCsv.TabIndex = 87
-        Me.BtnImportCsv.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.BtnImportCsv.Visible = False
+        Me.LblSubTitle8_A_HPP.AccessibleDescription = "LblSubTitle8_A_HPP"
+        Me.LblSubTitle8_A_HPP.AccessibleName = "LblSubTitle8_A_HPP"
+        Me.LblSubTitle8_A_HPP.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblSubTitle8_A_HPP.ForeColor = System.Drawing.Color.FromArgb(CType(CType(181, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(181, Byte), Integer))
+        Me.LblSubTitle8_A_HPP.Location = New System.Drawing.Point(423, 50)
+        Me.LblSubTitle8_A_HPP.Name = "LblSubTitle8_A_HPP"
+        Me.LblSubTitle8_A_HPP.Size = New System.Drawing.Size(491, 38)
+        Me.LblSubTitle8_A_HPP.TabIndex = 83
+        Me.LblSubTitle8_A_HPP.Text = "LISTADO DE TRATAMIENTOS PARA LA PATOLOGÍA"
+        Me.LblSubTitle8_A_HPP.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'OfdAddPathology
         '
         Me.OfdAddPathology.Filter = "CSV files (*.csv)|*.csv|All files (*.*)|*.*"" ;"
         Me.OfdAddPathology.Title = "Agregar patología"
         '
+        'Guna2Elipse1
+        '
+        Me.Guna2Elipse1.BorderRadius = 20
+        Me.Guna2Elipse1.TargetControl = Me
+        '
         'FrmAddModPath
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(927, 477)
-        Me.Controls.Add(Me.LblListado)
+        Me.Controls.Add(Me.LblSubTitle8_A_HPP)
         Me.Controls.Add(Me.PanelMain)
         Me.Controls.Add(Me.PanelTop)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.name = "FrmAddModPath"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FrmModPath"
         Me.PanelMain.ResumeLayout(False)
         Me.PanelMain.PerformLayout()
+        CType(Me.PicPrior, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DgvTreat, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Spinner, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PicPrior, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelTop.ResumeLayout(False)
         Me.PanelTop.PerformLayout()
         Me.ResumeLayout(False)
@@ -886,24 +920,24 @@ Partial Class FrmAddModPath
     End Sub
 
     Friend WithEvents PanelMain As Panel
-    Friend WithEvents BtnAdd As Guna.UI.WinForms.GunaButton
+    Friend WithEvents BtnAddPath_A_HPP As Guna.UI.WinForms.GunaButton
     Friend WithEvents BtnModTreat As Guna.UI.WinForms.GunaButton
     Friend WithEvents BtnDelTreat As Guna.UI.WinForms.GunaButton
     Friend WithEvents BtnAddTreat As Guna.UI.WinForms.GunaButton
     Friend WithEvents Guna2PictureBox2 As Guna.UI2.WinForms.Guna2PictureBox
-    Friend WithEvents GunaLabel4 As Guna.UI.WinForms.GunaLabel
-    Friend WithEvents GunaLabel3 As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents LblInfo2_A_HPP As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents LblInfo1_A_HPP As Guna.UI.WinForms.GunaLabel
     Friend WithEvents GunaLabel8 As Guna.UI.WinForms.GunaLabel
     Friend WithEvents GunaLabel7 As Guna.UI.WinForms.GunaLabel
     Friend WithEvents GunaLabel6 As Guna.UI.WinForms.GunaLabel
     Friend WithEvents GunaSeparator6 As Guna.UI.WinForms.GunaSeparator
-    Friend WithEvents LblTreatmentType As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents LblSubTitle7_A_HPP As Guna.UI.WinForms.GunaLabel
     Friend WithEvents GunaSeparator5 As Guna.UI.WinForms.GunaSeparator
     Friend WithEvents TxtTreatDesc As Guna.UI.WinForms.GunaTextBox
-    Friend WithEvents LblTreatmentDesc As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents LblSubTitle6_A_HPP As Guna.UI.WinForms.GunaLabel
     Friend WithEvents GunaSeparator4 As Guna.UI.WinForms.GunaSeparator
     Friend WithEvents TxtTreatName As Guna.UI.WinForms.GunaTextBox
-    Friend WithEvents LblTreatmentName As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents LblSubTitle5_A_HPP As Guna.UI.WinForms.GunaLabel
     Friend WithEvents GunaSeparator3 As Guna.UI.WinForms.GunaSeparator
     Friend WithEvents TxtDescr As RichTextBox
     Friend WithEvents LblPrioridad As Guna.UI.WinForms.GunaLabel
@@ -911,29 +945,30 @@ Partial Class FrmAddModPath
     Friend WithEvents Spinner As Guna.UI2.WinForms.Guna2NumericUpDown
     Friend WithEvents GunaSeparator2 As Guna.UI.WinForms.GunaSeparator
     Friend WithEvents GunaLabel1 As Guna.UI.WinForms.GunaLabel
-    Friend WithEvents LblMortality As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents LblSubTitle2_A_HPP As Guna.UI.WinForms.GunaLabel
     Friend WithEvents Asterisco As Guna.UI.WinForms.GunaLabel
-    Friend WithEvents LblDescr As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents LblSubTitle3_A_HPP As Guna.UI.WinForms.GunaLabel
     Friend WithEvents GunaSeparator1 As Guna.UI.WinForms.GunaSeparator
-    Friend WithEvents LblPatName As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents LblSubTitle1_A_HPP As Guna.UI.WinForms.GunaLabel
     Friend WithEvents TxtName As Guna.UI.WinForms.GunaTextBox
     Friend WithEvents PicPrior As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents PanelTop As Panel
     Friend WithEvents BtnClose As Guna.UI.WinForms.GunaButton
-    Friend WithEvents LblPathTop As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents LblTitle1_A_HPP As Guna.UI.WinForms.GunaLabel
     Friend WithEvents LblPatTop As Guna.UI.WinForms.GunaLabel
     Friend WithEvents DgvTreat As Guna.UI.WinForms.GunaDataGridView
     Friend WithEvents name As DataGridViewTextBoxColumn
     Friend WithEvents desc As DataGridViewTextBoxColumn
     Friend WithEvents type As DataGridViewTextBoxColumn
-    Friend WithEvents RbnQ As Guna.UI2.WinForms.Guna2RadioButton
-    Friend WithEvents RbnMed As Guna.UI2.WinForms.Guna2RadioButton
+    Friend WithEvents RdbtnMedicine_A_HPP As Guna.UI2.WinForms.Guna2RadioButton
     Friend WithEvents LblPat As Guna.UI.WinForms.GunaLabel
-    Friend WithEvents LblListado As Label
+    Friend WithEvents LblSubTitle8_A_HPP As Label
     Friend WithEvents GunaSeparator7 As Guna.UI.WinForms.GunaSeparator
-    Friend WithEvents GunaLabel5 As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents LblSubTitle4_A_HPP As Guna.UI.WinForms.GunaLabel
     Friend WithEvents CmbTipo As Guna.UI.WinForms.GunaComboBox
     Friend WithEvents GunaLabel9 As Guna.UI.WinForms.GunaLabel
     Friend WithEvents BtnImportCsv As Guna.UI.WinForms.GunaButton
     Friend WithEvents OfdAddPathology As OpenFileDialog
+    Friend WithEvents Guna2Elipse1 As Guna.UI2.WinForms.Guna2Elipse
+    Friend WithEvents RdbtnQuir_A_HPP As Guna.UI2.WinForms.Guna2RadioButton
 End Class

@@ -117,6 +117,22 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="BtnAddPath_A_HP" xml:space="preserve">
+    <value>NUEVA PATOLOGÍA</value>
+    <comment>Admin. HomeP. Boton. Titulo.</comment>
+  </data>
+  <data name="BtnAddPath_A_HPP" xml:space="preserve">
+    <value>Modificar Patología</value>
+    <comment>Admin. HomePP. Boton. Titulo.</comment>
+  </data>
+  <data name="BtnAdmins_A_H" xml:space="preserve">
+    <value>Administradores</value>
+    <comment>Admin. Home. Boton. Titulo5.</comment>
+  </data>
+  <data name="BtnAdmins_A_HP" xml:space="preserve">
+    <value>Administradores</value>
+    <comment>Admin. HomeP. Boton. Titulo.</comment>
+  </data>
   <data name="BtnBack_Intro2_P_H" xml:space="preserve">
     <value>ATRAS</value>
     <comment>Patient. Home. Boton. Title.</comment>
@@ -133,9 +149,45 @@
     <value>FINALIZAR</value>
     <comment>Patient. Home. Boton. Title.</comment>
   </data>
+  <data name="BtnExit_A_L" xml:space="preserve">
+    <value>CERRAR SESIÓN</value>
+    <comment>Admin. Login. Boton. Titulo2.</comment>
+  </data>
+  <data name="BtnHome_A_H" xml:space="preserve">
+    <value>Página principal</value>
+    <comment>Admin. Home. Boton. Titulo2.</comment>
+  </data>
+  <data name="BtnHome_A_HP" xml:space="preserve">
+    <value>Página principal</value>
+    <comment>Admin. HomeP. Boton. Titulo.</comment>
+  </data>
+  <data name="BtnLogin_A_L" xml:space="preserve">
+    <value>INICIAR SESIÓN</value>
+    <comment>Admin. Login. Boton. Titulo1.</comment>
+  </data>
   <data name="BtnLogin_P_L" xml:space="preserve">
     <value>INICIAR SESIÓN</value>
     <comment>Patient. Login. Boton. Titulo.</comment>
+  </data>
+  <data name="BtnLogout_A_H" xml:space="preserve">
+    <value>Cerrar sesión</value>
+    <comment>Admin. Home. Boton. Titulo8.</comment>
+  </data>
+  <data name="BtnLogout_A_HP" xml:space="preserve">
+    <value>Cerrar sesión</value>
+    <comment>Admin. HomeP. Boton. Titulo.</comment>
+  </data>
+  <data name="BtnMedics_A_H" xml:space="preserve">
+    <value>Médicos</value>
+    <comment>Admin. Home. Boton. Titulo4.</comment>
+  </data>
+  <data name="BtnMedics_A_HP" xml:space="preserve">
+    <value>Médicos</value>
+    <comment>Admin. HomeP. Boton. Titulo.</comment>
+  </data>
+  <data name="BtnModifyPath_A_HP" xml:space="preserve">
+    <value>MODIFICAR PATOLOGÍA</value>
+    <comment>Admin. HomeP. Boton. Titulo.</comment>
   </data>
   <data name="BtnNext_Intro2_P_H" xml:space="preserve">
     <value>EMPEZAR</value>
@@ -153,9 +205,37 @@
     <value>SIGUIENTE</value>
     <comment>Patient. Home. Boton. Title.</comment>
   </data>
+  <data name="BtnPathologies_A_H" xml:space="preserve">
+    <value>Patologías</value>
+    <comment>Admin. Home. Boton. Titulo7.</comment>
+  </data>
+  <data name="BtnPathologies_A_HP" xml:space="preserve">
+    <value>Patologías</value>
+    <comment>Admin. HomeP. Boton. Titulo.</comment>
+  </data>
+  <data name="BtnPatients_A_H" xml:space="preserve">
+    <value>Pacientes</value>
+    <comment>Admin. Home. Boton. Titulo3.</comment>
+  </data>
+  <data name="BtnPatients_A_HP" xml:space="preserve">
+    <value>Pacientes</value>
+    <comment>Admin. HomeP. Boton. Titulo.</comment>
+  </data>
+  <data name="BtnRmPath_A_HP" xml:space="preserve">
+    <value>ELIMINAR PATOLOGÍA</value>
+    <comment>Admin. HomeP. Boton. Titulo.</comment>
+  </data>
   <data name="BtnSendChatP_P_H" xml:space="preserve">
     <value>SOLICITAR CHAT</value>
     <comment>Patient. Home. Boton. Title.</comment>
+  </data>
+  <data name="BtnSymp_A_H" xml:space="preserve">
+    <value>Síntomas</value>
+    <comment>Admin. Home. Boton. Titulo6.</comment>
+  </data>
+  <data name="BtnSymp_A_HP" xml:space="preserve">
+    <value>Síntomas</value>
+    <comment>Admin. HomeP. Boton. Titulo.</comment>
   </data>
   <data name="Lbl1_Intro_P_H" xml:space="preserve">
     <value>Introducción</value>
@@ -193,6 +273,14 @@ El chequeo tiene finalidad informativa y no sustituye la opinión de un médico.
 No usar en caso de emergencias. En caso de una emergencia de salud, llame a su número de emergencias locales inmediatamente. Sus datos están a salvo. La información que usted proporcione es anónima y no será compartida con nadie.</value>
     <comment>Patient. Home. Label. Info 1.</comment>
   </data>
+  <data name="LblInfo1_A_HPP" xml:space="preserve">
+    <value>Campo Obligatorio [*]</value>
+    <comment>Admin. HomePP. Label. Info.</comment>
+  </data>
+  <data name="LblInfo1_A_SS" xml:space="preserve">
+    <value>Generando conexión con la Base de Datos.</value>
+    <comment>Patient. FrmSplashScreen. Label.</comment>
+  </data>
   <data name="LblInfo1_P_SS" xml:space="preserve">
     <value>Generando conexión con la Base de Datos.</value>
     <comment>Patient. FrmSplashScreen. Label.</comment>
@@ -203,9 +291,31 @@ No usar en caso de emergencias. En caso de una emergencia de salud, llame a su n
 Que disfrute de nuestro servicio. Toque el botón debajo para empezar el diagnóstico.anónima y no será compartida con nadie.</value>
     <comment>Patient. Home. Label. Info 2.</comment>
   </data>
+  <data name="LblInfo2_A_H" xml:space="preserve">
+    <value>Sistema de Gestión para Administradores.</value>
+    <comment>Admin. Home. Label. Info2.</comment>
+  </data>
+  <data name="LblInfo2_A_HPP" xml:space="preserve">
+    <value>Administración de los Tratamientos</value>
+    <comment>Admin. HomePP. Label. Info.</comment>
+  </data>
+  <data name="LblInfo4_A_H" xml:space="preserve">
+    <value>© Telediagnóstico Médico 2020. Derechos reservados</value>
+    <comment>Admin. Home. Label. Info4.</comment>
+  </data>
+  <data name="LblInfoText_A_L" xml:space="preserve">
+    <value>Ingrese su usuario y contraseña 
+para autenticar y verificar sus credenciales.
+Este Software le permitirá gestionar al Personal, a los Pacientes, los Síntomas y sus Patologías asociadas.</value>
+    <comment>Admin. Login. Label. Info.</comment>
+  </data>
   <data name="LblInfoText_P_L" xml:space="preserve">
     <value>Ingrese su Cédula de Identidad para autenticar y  verificar sus credenciales. Este Software le permitirá realizar Diagnósticos Primarios y en base de ellos decidirá si quiere iniciar una conversación con un Médico Especialista.</value>
     <comment>Patient. Login. Label. Info.</comment>
+  </data>
+  <data name="LblMgmentPath_A_HP" xml:space="preserve">
+    <value>GESTIÓN DE PATOLOGÍAS</value>
+    <comment>Admin. HomeP. Label. Titulo.</comment>
   </data>
   <data name="LblPetitionInfo_P_H" xml:space="preserve">
     <value>GENERANDO PETICIÓN</value>
@@ -215,6 +325,10 @@ Que disfrute de nuestro servicio. Toque el botón debajo para empezar el diagnó
     <value>Por favor, tenga en cuenta que la lista podría no ser completa y que la información proporcionada tiene una finalidad informativa y no se corresponde con una opinión médica real.</value>
     <comment>Patient. Home. Label. SubTitulo 3.</comment>
   </data>
+  <data name="LblResultPath_A_HP" xml:space="preserve">
+    <value>LISTADO PATOLOGÍAS</value>
+    <comment>Admin. HomeP. Label. SubTitulo.</comment>
+  </data>
   <data name="LblResultsTitle_P_H" xml:space="preserve">
     <value>PATOLOGÍAS SUFRIDAS</value>
     <comment>Patient. Home. Label. SubTitulo 3.</comment>
@@ -222,6 +336,10 @@ Que disfrute de nuestro servicio. Toque el botón debajo para empezar el diagnó
   <data name="LblResults_P_H" xml:space="preserve">
     <value>Resultados</value>
     <comment>Patient. Home. Label. SubTitulo 2.</comment>
+  </data>
+  <data name="LblSearch_A_HP" xml:space="preserve">
+    <value>CRITERIOS DE BÚSQUEDA</value>
+    <comment>Admin. HomeP. Label. SubTitulo.</comment>
   </data>
   <data name="LblSubTitle1Patient_P_H" xml:space="preserve">
     <value>Escoja una respuesta en cada fila.</value>
@@ -231,9 +349,81 @@ Que disfrute de nuestro servicio. Toque el botón debajo para empezar el diagnó
     <value>Por favor, escoja los síntomas desde la lista desplegable.</value>
     <comment>Patient. Home. Label. SubTitulo 1. </comment>
   </data>
+  <data name="LblSubTitle1_A_H" xml:space="preserve">
+    <value>Propietario</value>
+    <comment>Admin. Home. Label. SubTitulo1.</comment>
+  </data>
+  <data name="LblSubTitle1_A_HPP" xml:space="preserve">
+    <value>Nombre Patología</value>
+    <comment>Admin. HomePP. Label. SubTitle.</comment>
+  </data>
   <data name="LblSubTitle2Symp_P_H" xml:space="preserve">
     <value>Seleccione un ítem para eliminarlo</value>
     <comment>Patient. Home. Label. SubTitulo 2.</comment>
+  </data>
+  <data name="LblSubTitle2_A_H" xml:space="preserve">
+    <value>Sistema</value>
+    <comment>Admin. Home. Label. SubTitulo2.</comment>
+  </data>
+  <data name="LblSubTitle2_A_HPP" xml:space="preserve">
+    <value>Tasa de Mortalidad</value>
+    <comment>Admin. HomePP. Label. SubTitle.</comment>
+  </data>
+  <data name="LblSubTitle3_A_H" xml:space="preserve">
+    <value>Versión del Sistema</value>
+    <comment>Admin. Home. Label. SubTitulo3.</comment>
+  </data>
+  <data name="LblSubTitle3_A_HPP" xml:space="preserve">
+    <value>Descripción de la Patología</value>
+    <comment>Admin. HomePP. Label. SubTitle.</comment>
+  </data>
+  <data name="LblSubTitle4_A_H" xml:space="preserve">
+    <value>Desarrolladores del Sistema</value>
+    <comment>Admin. Home. Label. SubTitulo4.</comment>
+  </data>
+  <data name="LblSubTitle4_A_HPP" xml:space="preserve">
+    <value>Tipo de Patología</value>
+    <comment>Admin. HomePP. Label. SubTitle.</comment>
+  </data>
+  <data name="LblSubTitle5_A_HPP" xml:space="preserve">
+    <value>Nombre del Tratamiento</value>
+    <comment>Admin. HomePP. Label. SubTitle.</comment>
+  </data>
+  <data name="LblSubTitle6_A_HPP" xml:space="preserve">
+    <value>Descripción del Tratamiento</value>
+    <comment>Admin. HomePP. Label. SubTitle.</comment>
+  </data>
+  <data name="LblSubTitle7_A_HPP" xml:space="preserve">
+    <value>Tipo de Tratamiento</value>
+    <comment>Admin. HomePP. Label. SubTitle.</comment>
+  </data>
+  <data name="LblSubTitle8_A_HPP" xml:space="preserve">
+    <value>LISTADO DE TRATAMIENTOS PARA LA PATOLOGÍA</value>
+    <comment>Admin. HomePP. Label. SubTitle.</comment>
+  </data>
+  <data name="LblSubTitleAge_A_H" xml:space="preserve">
+    <value>Edad</value>
+    <comment>Admin. Home. Label. SubTitulo7.</comment>
+  </data>
+  <data name="LblSubTitleConn_A_H" xml:space="preserve">
+    <value>Última Conexión</value>
+    <comment>Admin. Home. Label. SubTitulo10.</comment>
+  </data>
+  <data name="LblSubTitleCred_A_H" xml:space="preserve">
+    <value>Documento o Credencial</value>
+    <comment>Admin. Home. Label. SubTitulo6.</comment>
+  </data>
+  <data name="LblSubTitleEmail_A_H" xml:space="preserve">
+    <value>Dirección de correo electrónico</value>
+    <comment>Admin. Home. Label. SubTitulo8.</comment>
+  </data>
+  <data name="LblSubTitleName_A_H" xml:space="preserve">
+    <value>Nombre Completo</value>
+    <comment>Admin. Home. Label. SubTitulo5.</comment>
+  </data>
+  <data name="LblSubTitleTel_A_H" xml:space="preserve">
+    <value>Número telefónico</value>
+    <comment>Admin. Home. Label. SubTitulo9.</comment>
   </data>
   <data name="LblTitle1Patient_P_H" xml:space="preserve">
     <value>Por favor, seleccione todas las afirmaciones 
@@ -244,6 +434,18 @@ que se apliquen a usted.</value>
     <value>Añada sus síntomas a la lista.</value>
     <comment>Patient. Home. Label. Titulo 1.</comment>
   </data>
+  <data name="LblTitle1_A_H" xml:space="preserve">
+    <value>ACERCA DEL SISTEMA</value>
+    <comment>Admin. Home. Label. Titulo1.</comment>
+  </data>
+  <data name="LblTitle1_A_HPP" xml:space="preserve">
+    <value>MODIFICACIÓN DE LA PATOLOGÍA</value>
+    <comment>Admin. HomePP. Label. Title.</comment>
+  </data>
+  <data name="LblTitle1_A_L" xml:space="preserve">
+    <value>GUSTO EN VERLO</value>
+    <comment>Admin. Login. Label. Titulo1.</comment>
+  </data>
   <data name="LblTitle1_P_L" xml:space="preserve">
     <value>GUSTO EN VERLO</value>
     <comment>Patient. Login. Label. Titulo1.</comment>
@@ -251,6 +453,14 @@ que se apliquen a usted.</value>
   <data name="LblTitle2Symp_P_H" xml:space="preserve">
     <value>Síntomas que padece.</value>
     <comment>Patient. Home. Label. Titulo 2.</comment>
+  </data>
+  <data name="LblTitle2_A_H" xml:space="preserve">
+    <value>ACERCA DEL ADMINISTRADOR</value>
+    <comment>Admin. Home. Label. Titulo2.</comment>
+  </data>
+  <data name="LblTitle2_A_L" xml:space="preserve">
+    <value>NUEVAMENTE.</value>
+    <comment>Admin. Login. Label. Titulo2.</comment>
   </data>
   <data name="LblTitle2_P_L" xml:space="preserve">
     <value>NUEVAMENTE</value>
@@ -299,5 +509,17 @@ que se apliquen a usted.</value>
   <data name="Rbtn1_Yes_P_H" xml:space="preserve">
     <value>Si.</value>
     <comment>Patient. Home. RadioBtn 1. Title.</comment>
+  </data>
+  <data name="RdbtnMedicine_A_HPP" xml:space="preserve">
+    <value>Medicamento</value>
+    <comment>Admin. HomePP. Radiobutton. Title.</comment>
+  </data>
+  <data name="RdbtnQuir_A_HPP" xml:space="preserve">
+    <value>Quirúrgico</value>
+    <comment>Admin. HomePP. Radiobutton. Title.</comment>
+  </data>
+  <data name="TxtSearchPath_A_HP" xml:space="preserve">
+    <value>Realizar busqueda por patología</value>
+    <comment>Admin. HomeP. Textbox. Titulo.</comment>
   </data>
 </root>

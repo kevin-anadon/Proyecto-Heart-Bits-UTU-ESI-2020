@@ -26,7 +26,7 @@ Partial Class FrmSplashScreen
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmSplashScreen))
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.LblTitle4 = New System.Windows.Forms.Label()
-        Me.LblTitle3 = New System.Windows.Forms.Label()
+        Me.LblInfo1_A_SS = New System.Windows.Forms.Label()
         Me.PicbxLogoCAS = New System.Windows.Forms.PictureBox()
         Me.LblInfo1 = New System.Windows.Forms.Label()
         Me.LblInfo2 = New System.Windows.Forms.Label()
@@ -67,22 +67,22 @@ Partial Class FrmSplashScreen
         Me.LblTitle4.TabIndex = 24
         Me.LblTitle4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'LblTitle3
+        'LblInfo1_A_SS
         '
-        Me.LblTitle3.AccessibleDescription = "LblTitle3"
-        Me.LblTitle3.AccessibleName = "LblTitle3"
-        Me.LblTitle3.BackColor = System.Drawing.Color.Transparent
-        Me.LblTitle3.Cursor = System.Windows.Forms.Cursors.Default
-        Me.LblTitle3.Font = New System.Drawing.Font("Segoe UI Emoji", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblTitle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
-        Me.LblTitle3.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.LblTitle3.Location = New System.Drawing.Point(374, 340)
-        Me.LblTitle3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.LblTitle3.Name = "LblTitle3"
-        Me.LblTitle3.Size = New System.Drawing.Size(513, 19)
-        Me.LblTitle3.TabIndex = 23
-        Me.LblTitle3.Text = "Generando conexión con la Base de Datos."
-        Me.LblTitle3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LblInfo1_A_SS.AccessibleDescription = "LblInfo1_A_SS"
+        Me.LblInfo1_A_SS.AccessibleName = "LblInfo1_A_SS"
+        Me.LblInfo1_A_SS.BackColor = System.Drawing.Color.Transparent
+        Me.LblInfo1_A_SS.Cursor = System.Windows.Forms.Cursors.Default
+        Me.LblInfo1_A_SS.Font = New System.Drawing.Font("Segoe UI Emoji", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblInfo1_A_SS.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
+        Me.LblInfo1_A_SS.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.LblInfo1_A_SS.Location = New System.Drawing.Point(374, 340)
+        Me.LblInfo1_A_SS.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.LblInfo1_A_SS.Name = "LblInfo1_A_SS"
+        Me.LblInfo1_A_SS.Size = New System.Drawing.Size(513, 19)
+        Me.LblInfo1_A_SS.TabIndex = 23
+        Me.LblInfo1_A_SS.Text = "Generando conexión con la Base de Datos."
+        Me.LblInfo1_A_SS.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'PicbxLogoCAS
         '
@@ -219,7 +219,7 @@ Partial Class FrmSplashScreen
         Me.Controls.Add(Me.PrgbarLoadSplashScreen)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.LblTitle4)
-        Me.Controls.Add(Me.LblTitle3)
+        Me.Controls.Add(Me.LblInfo1_A_SS)
         Me.Controls.Add(Me.PicbxLogoCAS)
         Me.Controls.Add(Me.LblInfo1)
         Me.Controls.Add(Me.LblInfo2)
@@ -237,7 +237,7 @@ Partial Class FrmSplashScreen
 
     Friend WithEvents PictureBox1 As PictureBox
     Public WithEvents LblTitle4 As Label
-    Public WithEvents LblTitle3 As Label
+    Public WithEvents LblInfo1_A_SS As Label
     Public WithEvents PicbxLogoCAS As PictureBox
     Public WithEvents LblInfo1 As Label
     Private WithEvents LblInfo2 As Label

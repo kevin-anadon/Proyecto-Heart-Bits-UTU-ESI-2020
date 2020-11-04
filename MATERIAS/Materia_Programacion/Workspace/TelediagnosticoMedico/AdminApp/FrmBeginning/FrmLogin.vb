@@ -47,7 +47,7 @@ Public Class FrmLogin
         LblNotification.Text = " "
         PnlInfo.BorderColor = Color.FromArgb(97, 97, 97) 'Color Gris Mate = Default
     End Sub
-    Private Sub BtnLogin_Click(sender As Object, e As EventArgs) Handles BtnLogin.Click
+    Private Sub BtnLogin_Click(sender As Object, e As EventArgs) Handles BtnLogin_A_L.Click
         PnlInfo.Visible = True
 
         If TxtUser.Text.Trim.Length = 0 Or TxtPass.Text.Trim.Length = 0 Then 'Verifico si hay algun espacio vacio en las credenciales
@@ -76,7 +76,7 @@ Public Class FrmLogin
     Private Sub TxtPass_KeyDown(sender As Object, e As KeyEventArgs) Handles TxtPass.KeyDown
         'Detectar si presiona enter, que accione el botón Iniciar Sesión
         If e.KeyCode = Keys.Enter Then
-            BtnLogin.PerformClick()
+            BtnLogin_A_L.PerformClick()
         End If
     End Sub
 
@@ -85,14 +85,14 @@ Public Class FrmLogin
         If e.KeyCode = Keys.K AndAlso e.Modifiers = Keys.Control Then
             TxtUser.Text = "mel64"
             TxtPass.Text = "84ulkc"
-            BtnLogin.PerformClick()
+            BtnLogin_A_L.PerformClick()
         End If
     End Sub
     Private Sub BtnCloseInfo_Click(sender As Object, e As EventArgs) Handles BtnCloseInfo.Click
         PnlInfo.Visible = False
     End Sub
 
-    Private Sub BtnExit_Click(sender As Object, e As EventArgs) Handles BtnExit.Click
+    Private Sub BtnExit_Click(sender As Object, e As EventArgs) Handles BtnExit_A_L.Click
         If MsgBox("Está seguro que desea salir ?", MsgBoxStyle.YesNoCancel, "Cerrar Programa") = MsgBoxResult.Yes Then
             End
         End If

@@ -50,8 +50,8 @@ Public Class FrmAddModPath
         DgvTreat.Refresh()
         TxtTreatName.Clear()
         TxtTreatDesc.Clear()
-        If RbnMed.Checked Then
-            RbnMed.Checked = False
+        If RdbtnMedicine_A_HPP.Checked Then
+            RdbtnMedicine_A_HPP.Checked = False
         ElseIf RbnQ.Checked Then
             RbnQ.Checked = False
         End If
@@ -59,8 +59,8 @@ Public Class FrmAddModPath
 
     Private Sub BtnAddTreat_Click(sender As Object, e As EventArgs) Handles BtnAddTreat.Click
         Dim Exist As Boolean = False
-        If Not TxtTreatDesc.Text.Trim.Length = 0 Or Not TxtTreatName.Text.Trim.Length = 0 Or RbnMed.Checked Or RbnQ.Checked Then
-            If RbnMed.Checked Then
+        If Not TxtTreatDesc.Text.Trim.Length = 0 Or Not TxtTreatName.Text.Trim.Length = 0 Or RdbtnMedicine_A_HPP.Checked Or RbnQ.Checked Then
+            If RdbtnMedicine_A_HPP.Checked Then
                 Kind = "Medicamento"
             ElseIf RbnQ.Checked Then
                 Kind = "Quirurjico"
@@ -96,7 +96,7 @@ Public Class FrmAddModPath
             DgvTreat.Rows.Remove(row)
             TxtTreatName.Clear()
             TxtTreatDesc.Clear()
-            RbnMed.Checked = False
+            RdbtnMedicine_A_HPP.Checked = False
             RbnQ.Checked = False
         Else
             MessageBox.Show("No existen tratamientos que eliminar!")
@@ -110,7 +110,7 @@ Public Class FrmAddModPath
             Return
         End If
         If CStr(row.Cells("type").Value).Equals("Medicamento") Then
-            RbnMed.Checked = True
+            RdbtnMedicine_A_HPP.Checked = True
         Else
             RbnQ.Checked = True
         End If
@@ -119,7 +119,7 @@ Public Class FrmAddModPath
     Private Sub BtnModTreat_Click(sender As Object, e As EventArgs) Handles BtnModTreat.Click
 
         If DgvTreat.Rows.Count - 1 > 0 Then
-            If RbnMed.Checked Then
+            If RdbtnMedicine_A_HPP.Checked Then
                 Kind = "Medicamento"
             ElseIf RbnQ.Checked Then
                 Kind = "Quirurjico"
@@ -132,8 +132,8 @@ Public Class FrmAddModPath
             row.SetValues(TxtTreatName.Text, TxtTreatDesc.Text, Kind)
             TxtTreatName.Clear()
             TxtTreatDesc.Clear()
-            If RbnMed.Checked Then
-                RbnMed.Checked = False
+            If RdbtnMedicine_A_HPP.Checked Then
+                RdbtnMedicine_A_HPP.Checked = False
             ElseIf RbnQ.Checked Then
                 RbnQ.Checked = False
             End If
@@ -165,7 +165,7 @@ Public Class FrmAddModPath
         Me.Close()
     End Sub
 
-    Private Sub BtnAdd_Click(sender As Object, e As EventArgs) Handles BtnAdd.Click
+    Private Sub BtnAdd_Click(sender As Object, e As EventArgs) Handles BtnAddPath_A_HPP.Click
         Dim Prior As Integer = 0
 
         If Not TxtName.Text.Trim.Length = 0 Or Not TxtDescr.Text.Trim.Length = 0 Then

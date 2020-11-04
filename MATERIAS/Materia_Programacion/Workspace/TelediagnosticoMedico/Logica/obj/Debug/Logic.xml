@@ -22,6 +22,11 @@ Logic
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="P:Logic.My.Resources.English.BtnAdmins_A_H">
+<summary>
+  Looks up a localized string similar to Admins.
+</summary>
+</member>
 <member name="P:Logic.My.Resources.English.BtnBack_Intro2_P_H">
 <summary>
   Looks up a localized string similar to BACK.
@@ -42,9 +47,34 @@ Logic
   Looks up a localized string similar to FINALIZE.
 </summary>
 </member>
+<member name="P:Logic.My.Resources.English.BtnExit_A_L">
+<summary>
+  Looks up a localized string similar to LOGOUT.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.English.BtnHome_A_H">
+<summary>
+  Looks up a localized string similar to Home.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.English.BtnLogin_A_L">
+<summary>
+  Looks up a localized string similar to LOGIN.
+</summary>
+</member>
 <member name="P:Logic.My.Resources.English.BtnLogin_P_L">
 <summary>
   Looks up a localized string similar to LOGIN.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.English.BtnLogout_A_H">
+<summary>
+  Looks up a localized string similar to Logout.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.English.BtnMedics_A_H">
+<summary>
+  Looks up a localized string similar to Medics.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.BtnNext_Intro2_P_H">
@@ -67,9 +97,24 @@ Logic
   Looks up a localized string similar to NEXT.
 </summary>
 </member>
+<member name="P:Logic.My.Resources.English.BtnPathologies_A_H">
+<summary>
+  Looks up a localized string similar to Pathologies.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.English.BtnPatients_A_H">
+<summary>
+  Looks up a localized string similar to Patients.
+</summary>
+</member>
 <member name="P:Logic.My.Resources.English.BtnSendChatP_P_H">
 <summary>
   Looks up a localized string similar to REQUEST CHAT.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.English.BtnSymp_A_H">
+<summary>
+  Looks up a localized string similar to Symptoms.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.Lbl1_Intro_P_H">
@@ -102,6 +147,11 @@ Logic
   Looks up a localized string similar to In future versions of our system, you will be able to consult with a Doctor..
 </summary>
 </member>
+<member name="P:Logic.My.Resources.English.LblInfo1_A_SS">
+<summary>
+  Looks up a localized string similar to Generating connection with the Database..
+</summary>
+</member>
 <member name="P:Logic.My.Resources.English.LblInfo1_P_SS">
 <summary>
   Looks up a localized string similar to Generating connection with the Database..
@@ -121,11 +171,28 @@ The checkup is for informational purposes and is not a substitute for a doctor&a
 Do not use in an emergency. In the event of a health emergency, call your local emergency number immediately. Your data is safe. The information you provide is anonymous and will not be shared with anyone..
 </summary>
 </member>
+<member name="P:Logic.My.Resources.English.LblInfo2_A_H">
+<summary>
+  Looks up a localized string similar to Management System for Administrators..
+</summary>
+</member>
 <member name="P:Logic.My.Resources.English.LblInfo2Intro1_P_H">
 <summary>
   Looks up a localized string similar to This Medical System was created with the purpose of fulfilling the expectations of an Assistant Program, which will guide you throughout your diagnosis of pathologies that you may suffer. As this is an Assistant, you will be able to know your Pathologies in the most agile and simple way.
 
 Enjoy our service. Tap the button below to start the anonymous diagnosis and it will not be shared with anyone..
+</summary>
+</member>
+<member name="P:Logic.My.Resources.English.LblInfo4_A_H">
+<summary>
+  Looks up a localized string similar to © Telediagnóstico Médico 2020. All rights reserved..
+</summary>
+</member>
+<member name="P:Logic.My.Resources.English.LblInfoText_A_L">
+<summary>
+  Looks up a localized string similar to Ingrese su usuario y contraseña 
+para autenticar y verificar sus credenciales.
+Este Software le permitirá gestionar al Personal, a los Pacientes, los Síntomas y sus Patologías asociadas..
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.LblInfoText_P_L">
@@ -153,6 +220,11 @@ Enjoy our service. Tap the button below to start the anonymous diagnosis and it 
   Looks up a localized string similar to PATHOLOGIES SUFFERED.
 </summary>
 </member>
+<member name="P:Logic.My.Resources.English.LblSubTitle1_A_H">
+<summary>
+  Looks up a localized string similar to Owner.
+</summary>
+</member>
 <member name="P:Logic.My.Resources.English.LblSubTitle1Patient_P_H">
 <summary>
   Looks up a localized string similar to Choose one answer in each row..
@@ -163,9 +235,64 @@ Enjoy our service. Tap the button below to start the anonymous diagnosis and it 
   Looks up a localized string similar to Please choose the symptoms from the drop down list..
 </summary>
 </member>
+<member name="P:Logic.My.Resources.English.LblSubTitle2_A_H">
+<summary>
+  Looks up a localized string similar to System.
+</summary>
+</member>
 <member name="P:Logic.My.Resources.English.LblSubTitle2Symp_P_H">
 <summary>
   Looks up a localized string similar to Select an item to delete.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.English.LblSubTitle3_A_H">
+<summary>
+  Looks up a localized string similar to System version.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.English.LblSubTitle4_A_H">
+<summary>
+  Looks up a localized string similar to System&apos;s developers.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.English.LblSubTitleAge_A_H">
+<summary>
+  Looks up a localized string similar to Age.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.English.LblSubTitleConn_A_H">
+<summary>
+  Looks up a localized string similar to Last Connection.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.English.LblSubTitleCred_A_H">
+<summary>
+  Looks up a localized string similar to Credential.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.English.LblSubTitleEmail_A_H">
+<summary>
+  Looks up a localized string similar to Email.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.English.LblSubTitleName_A_H">
+<summary>
+  Looks up a localized string similar to Full Name.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.English.LblSubTitleTel_A_H">
+<summary>
+  Looks up a localized string similar to Number Phone.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.English.LblTitle1_A_H">
+<summary>
+  Looks up a localized string similar to ABOUT SYSTEM.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.English.LblTitle1_A_L">
+<summary>
+  Looks up a localized string similar to WELCOME BACK.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.LblTitle1_P_L">
@@ -182,6 +309,16 @@ that apply to you..
 <member name="P:Logic.My.Resources.English.LblTitle1Symp_P_H">
 <summary>
   Looks up a localized string similar to Add your symptoms to the list..
+</summary>
+</member>
+<member name="P:Logic.My.Resources.English.LblTitle2_A_H">
+<summary>
+  Looks up a localized string similar to ABOUT ADMINISTRATOR.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.English.LblTitle2_A_L">
+<summary>
+  Looks up a localized string similar to  .
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.LblTitle2_P_L">
@@ -281,6 +418,11 @@ that apply to you..
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="P:Logic.My.Resources.Spanish.BtnAdmins_A_H">
+<summary>
+  Looks up a localized string similar to Administradores.
+</summary>
+</member>
 <member name="P:Logic.My.Resources.Spanish.BtnBack_Intro2_P_H">
 <summary>
   Looks up a localized string similar to ATRAS.
@@ -301,9 +443,34 @@ that apply to you..
   Looks up a localized string similar to FINALIZAR.
 </summary>
 </member>
+<member name="P:Logic.My.Resources.Spanish.BtnExit_A_L">
+<summary>
+  Looks up a localized string similar to CERRAR SESIÓN.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.Spanish.BtnHome_A_H">
+<summary>
+  Looks up a localized string similar to Página principal.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.Spanish.BtnLogin_A_L">
+<summary>
+  Looks up a localized string similar to INICIAR SESIÓN.
+</summary>
+</member>
 <member name="P:Logic.My.Resources.Spanish.BtnLogin_P_L">
 <summary>
   Looks up a localized string similar to INICIAR SESIÓN.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.Spanish.BtnLogout_A_H">
+<summary>
+  Looks up a localized string similar to Cerrar sesión.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.Spanish.BtnMedics_A_H">
+<summary>
+  Looks up a localized string similar to Médicos.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.BtnNext_Intro2_P_H">
@@ -326,9 +493,24 @@ that apply to you..
   Looks up a localized string similar to SIGUIENTE.
 </summary>
 </member>
+<member name="P:Logic.My.Resources.Spanish.BtnPathologies_A_H">
+<summary>
+  Looks up a localized string similar to Patologías.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.Spanish.BtnPatients_A_H">
+<summary>
+  Looks up a localized string similar to Pacientes.
+</summary>
+</member>
 <member name="P:Logic.My.Resources.Spanish.BtnSendChatP_P_H">
 <summary>
   Looks up a localized string similar to SOLICITAR CHAT.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.Spanish.BtnSymp_A_H">
+<summary>
+  Looks up a localized string similar to Síntomas.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.Lbl1_Intro_P_H">
@@ -361,6 +543,11 @@ that apply to you..
   Looks up a localized string similar to En las próximas versiones de nuestro sistema, podrá consultar con un Médico..
 </summary>
 </member>
+<member name="P:Logic.My.Resources.Spanish.LblInfo1_A_SS">
+<summary>
+  Looks up a localized string similar to Generando conexión con la Base de Datos..
+</summary>
+</member>
 <member name="P:Logic.My.Resources.Spanish.LblInfo1_P_SS">
 <summary>
   Looks up a localized string similar to Generando conexión con la Base de Datos..
@@ -380,11 +567,28 @@ El chequeo tiene finalidad informativa y no sustituye la opinión de un médico.
 No usar en caso de emergencias. En caso de una emergencia de salud, llame a su número de emergencias locales inmediatamente. Sus datos están a salvo. La información que usted proporcione es anónima y no será compartida con nadie..
 </summary>
 </member>
+<member name="P:Logic.My.Resources.Spanish.LblInfo2_A_H">
+<summary>
+  Looks up a localized string similar to Sistema de Gestión para Administradores..
+</summary>
+</member>
 <member name="P:Logic.My.Resources.Spanish.LblInfo2Intro1_P_H">
 <summary>
   Looks up a localized string similar to Este Sistema Médico fué creado con el propósito de cumplir las expecativas de un Programa Asistente, el cual lo guiará a usted a lo largo de su diagnóstico de patológias que pueda sufrir. Al ser este un Asistente, ustéd podrá conocer sus Patologías de la forma más ágil y simple.
 
 Que disfrute de nuestro servicio. Toque el botón debajo para empezar el diagnóstico.anónima y no será compartida con nadie..
+</summary>
+</member>
+<member name="P:Logic.My.Resources.Spanish.LblInfo4_A_H">
+<summary>
+  Looks up a localized string similar to © Telediagnóstico Médico 2020. Derechos reservados.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.Spanish.LblInfoText_A_L">
+<summary>
+  Looks up a localized string similar to Ingrese su usuario y contraseña 
+para autenticar y verificar sus credenciales.
+Este Software le permitirá gestionar al Personal, a los Pacientes, los Síntomas y sus Patologías asociadas..
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.LblInfoText_P_L">
@@ -412,6 +616,11 @@ Que disfrute de nuestro servicio. Toque el botón debajo para empezar el diagnó
   Looks up a localized string similar to PATOLOGÍAS SUFRIDAS.
 </summary>
 </member>
+<member name="P:Logic.My.Resources.Spanish.LblSubTitle1_A_H">
+<summary>
+  Looks up a localized string similar to Propietario.
+</summary>
+</member>
 <member name="P:Logic.My.Resources.Spanish.LblSubTitle1Patient_P_H">
 <summary>
   Looks up a localized string similar to Escoja una respuesta en cada fila..
@@ -422,9 +631,64 @@ Que disfrute de nuestro servicio. Toque el botón debajo para empezar el diagnó
   Looks up a localized string similar to Por favor, escoja los síntomas desde la lista desplegable..
 </summary>
 </member>
+<member name="P:Logic.My.Resources.Spanish.LblSubTitle2_A_H">
+<summary>
+  Looks up a localized string similar to Sistema.
+</summary>
+</member>
 <member name="P:Logic.My.Resources.Spanish.LblSubTitle2Symp_P_H">
 <summary>
   Looks up a localized string similar to Seleccione un ítem para eliminarlo.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.Spanish.LblSubTitle3_A_H">
+<summary>
+  Looks up a localized string similar to Versión del Sistema.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.Spanish.LblSubTitle4_A_H">
+<summary>
+  Looks up a localized string similar to Desarrolladores del Sistema.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.Spanish.LblSubTitleAge_A_H">
+<summary>
+  Looks up a localized string similar to Edad.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.Spanish.LblSubTitleConn_A_H">
+<summary>
+  Looks up a localized string similar to Última Conexión.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.Spanish.LblSubTitleCred_A_H">
+<summary>
+  Looks up a localized string similar to Documento o Credencial.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.Spanish.LblSubTitleEmail_A_H">
+<summary>
+  Looks up a localized string similar to Dirección de correo electrónico.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.Spanish.LblSubTitleName_A_H">
+<summary>
+  Looks up a localized string similar to Nombre Completo.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.Spanish.LblSubTitleTel_A_H">
+<summary>
+  Looks up a localized string similar to Número telefónico.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.Spanish.LblTitle1_A_H">
+<summary>
+  Looks up a localized string similar to ACERCA DEL SISTEMA.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.Spanish.LblTitle1_A_L">
+<summary>
+  Looks up a localized string similar to GUSTO EN VERLO.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.LblTitle1_P_L">
@@ -441,6 +705,16 @@ que se apliquen a usted..
 <member name="P:Logic.My.Resources.Spanish.LblTitle1Symp_P_H">
 <summary>
   Looks up a localized string similar to Añada sus síntomas a la lista..
+</summary>
+</member>
+<member name="P:Logic.My.Resources.Spanish.LblTitle2_A_H">
+<summary>
+  Looks up a localized string similar to ACERCA DEL ADMINISTRADOR.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.Spanish.LblTitle2_A_L">
+<summary>
+  Looks up a localized string similar to NUEVAMENTE..
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.LblTitle2_P_L">

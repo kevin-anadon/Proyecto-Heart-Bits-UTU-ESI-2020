@@ -1479,6 +1479,15 @@
         Oc6P1I/GUqgzmPZ///vf/wfrylCcGwSZ9AAAAABJRU5ErkJggg==
 </value>
   </data>
+  <data name="PicPrior.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAHgAAAASCAYAAACQCxruAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        EwAACxMBAJqcGAAAAKVJREFUaEPt2c0JhEAMhuGUZinWIYEVRFLWlOTBv+OuibqnNJCPb+C5OHN7UWQi
+        71on7U7Ttpsuh+mXavKG2zz0T9Z7XQ8/2WGqy5tG3M2GPjtA9a2mnb+9Lduk+rytZBsEY2FgcAwMjoHB
+        MTA4BgbHwOAYGBwDgxMOF7DxqhJYXFX6hXS2SfX9x4bXZ3rMDlBd3jTivsvHhvxc1/b8T7UYE8YS+QEg
+        k+BzEWf45QAAAABJRU5ErkJggg==
+</value>
+  </data>
   <data name="BtnImportCsv.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAA+gAAAPoCAYAAABNo9TkAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAACt
@@ -1834,15 +1843,6 @@
         pZQ/8tg3Z2EWRx4AAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="PicPrior.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAHgAAAASCAYAAACQCxruAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EwAACxMBAJqcGAAAAKVJREFUaEPt2c0JhEAMhuGUZinWIYEVRFLWlOTBv+OuibqnNJCPb+C5OHN7UWQi
-        71on7U7Ttpsuh+mXavKG2zz0T9Z7XQ8/2WGqy5tG3M2GPjtA9a2mnb+9Lduk+rytZBsEY2FgcAwMjoHB
-        MTA4BgbHwOAYGBwDgxMOF7DxqhJYXFX6hXS2SfX9x4bXZ3rMDlBd3jTivsvHhvxc1/b8T7UYE8YS+QEg
-        k+BzEWf45QAAAABJRU5ErkJggg==
-</value>
-  </data>
   <data name="BtnClose.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
@@ -1856,6 +1856,9 @@
   </data>
   <metadata name="OfdAddPathology.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
+  </metadata>
+  <metadata name="Guna2Elipse1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>167, 17</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>46</value>
