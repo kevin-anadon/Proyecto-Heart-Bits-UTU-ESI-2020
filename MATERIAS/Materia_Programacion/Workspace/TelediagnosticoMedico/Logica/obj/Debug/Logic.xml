@@ -37,6 +37,11 @@ Logic
   Busca una cadena traducida similar a Modify pathology.
 </summary>
 </member>
+<member name="P:Logic.My.Resources.English.BtnAddSympt_A_S">
+<summary>
+  Busca una cadena traducida similar a ADD SYMPTOM.
+</summary>
+</member>
 <member name="P:Logic.My.Resources.English.BtnAdmins_A_H">
 <summary>
   Busca una cadena traducida similar a Admins.
@@ -62,6 +67,11 @@ Logic
   Busca una cadena traducida similar a CANCELL.
 </summary>
 </member>
+<member name="P:Logic.My.Resources.English.BtnDelSympt_A_S">
+<summary>
+  Busca una cadena traducida similar a DELETE SYMPTOM.
+</summary>
+</member>
 <member name="P:Logic.My.Resources.English.BtnDropPathology_P_H">
 <summary>
   Busca una cadena traducida similar a REMOVE SYMPTOM.
@@ -75,6 +85,11 @@ Logic
 <member name="P:Logic.My.Resources.English.BtnExit_A_L">
 <summary>
   Busca una cadena traducida similar a LOGOUT.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.English.BtnFaq_A_H">
+<summary>
+  Busca una cadena traducida similar a FAQ.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.BtnHome_A_H">
@@ -130,6 +145,11 @@ Logic
 <member name="P:Logic.My.Resources.English.BtnMedics_A_HP">
 <summary>
   Busca una cadena traducida similar a Medics.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.English.BtnMod_A_S">
+<summary>
+  Busca una cadena traducida similar a MODIFY SYMPTOM.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.BtnModifyPath_A_HP">
@@ -217,6 +237,11 @@ Logic
   Busca una cadena traducida similar a Modify Diagnose.
 </summary>
 </member>
+<member name="P:Logic.My.Resources.English.ChkReg_A_SA">
+<summary>
+  Busca una cadena traducida similar a Modify region.
+</summary>
+</member>
 <member name="P:Logic.My.Resources.English.CiWrong">
 <summary>
   Busca una cadena traducida similar a Wrong Identity Card..
@@ -297,6 +322,31 @@ Logic
   Busca una cadena traducida similar a Chat.
 </summary>
 </member>
+<member name="P:Logic.My.Resources.English.LblActual_A_SA">
+<summary>
+  Busca una cadena traducida similar a Current: .
+</summary>
+</member>
+<member name="P:Logic.My.Resources.English.LblAddRegion_A_SA">
+<summary>
+  Busca una cadena traducida similar a Add region.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.English.LblAddSympt_A_SA">
+<summary>
+  Busca una cadena traducida similar a INSERT NEW SYMPTOM.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.English.LblAsocPath_A_SA">
+<summary>
+  Busca una cadena traducida similar a Association of pathologies.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.English.LblAsocReg_A_SA">
+<summary>
+  Busca una cadena traducida similar a Association to the region.
+</summary>
+</member>
 <member name="P:Logic.My.Resources.English.LblBody_M_L">
 <summary>
   Busca una cadena traducida similar a Enter your username and password
@@ -307,6 +357,16 @@ This Software will allow you to treat your Patients, providing them with informa
 <member name="P:Logic.My.Resources.English.LblChat_P_H">
 <summary>
   Busca una cadena traducida similar a If you wish, you can consult a doctor..
+</summary>
+</member>
+<member name="P:Logic.My.Resources.English.LblCrit_A_S">
+<summary>
+  Busca una cadena traducida similar a SEARCH CRITERIA.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.English.LblDescSympt_A_SA">
+<summary>
+  Busca una cadena traducida similar a Description.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.LblInfo1_A_H">
@@ -398,6 +458,11 @@ Enjoy our service. Tap the button below to start the anonymous diagnosis and it 
 <member name="P:Logic.My.Resources.English.LblInfoText_P_L">
 <summary>
   Busca una cadena traducida similar a Enter your Identity Card to authenticate and verify your credentials. This Software will allow you to make Primary Diagnoses and based on them you will decide if you want to start a conversation with a Medical Specialist..
+</summary>
+</member>
+<member name="P:Logic.My.Resources.English.LblListado_A_S">
+<summary>
+  Busca una cadena traducida similar a SYMPTOM LIST.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.LblListadoPet_M_P">
@@ -666,9 +731,19 @@ that apply to you..
   Busca una cadena traducida similar a WELCOME BACK.
 </summary>
 </member>
+<member name="P:Logic.My.Resources.English.LblTittleAddSymp_A_SA">
+<summary>
+  Busca una cadena traducida similar a SYMPTOM MODIFICATION.
+</summary>
+</member>
 <member name="P:Logic.My.Resources.English.LblTittleChat_M_C">
 <summary>
   Busca una cadena traducida similar a In a conversation with the Patient:.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.English.LblTittleSymps_A_S">
+<summary>
+  Busca una cadena traducida similar a SYMPTOM MANAGEMENT.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.LblTxt1_Info_P_H">
@@ -761,6 +836,11 @@ that apply to you..
   Busca una cadena traducida similar a Make search by pathologies.
 </summary>
 </member>
+<member name="P:Logic.My.Resources.English.TxtSympt_A_S">
+<summary>
+  Busca una cadena traducida similar a Search by symptom.
+</summary>
+</member>
 <member name="P:Logic.My.Resources.English.UserInfoHome_A_H">
 <summary>
   Busca una cadena traducida similar a User .
@@ -823,6 +903,11 @@ that apply to you..
   Busca una cadena traducida similar a Modificar Patología.
 </summary>
 </member>
+<member name="P:Logic.My.Resources.Spanish.BtnAddSympt_A_S">
+<summary>
+  Busca una cadena traducida similar a NUEVO SÍNTOMA.
+</summary>
+</member>
 <member name="P:Logic.My.Resources.Spanish.BtnAdmins_A_H">
 <summary>
   Busca una cadena traducida similar a Administradores.
@@ -848,6 +933,11 @@ that apply to you..
   Busca una cadena traducida similar a CANCELAR.
 </summary>
 </member>
+<member name="P:Logic.My.Resources.Spanish.BtnDelSympt_A_S">
+<summary>
+  Busca una cadena traducida similar a ELIMINAR SÍNTOMA.
+</summary>
+</member>
 <member name="P:Logic.My.Resources.Spanish.BtnDropPathology_P_H">
 <summary>
   Busca una cadena traducida similar a QUITAR SÍNTOMA.
@@ -861,6 +951,11 @@ that apply to you..
 <member name="P:Logic.My.Resources.Spanish.BtnExit_A_L">
 <summary>
   Busca una cadena traducida similar a CERRAR SESIÓN.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.Spanish.BtnFaq_A_H">
+<summary>
+  Busca una cadena traducida similar a FAQ.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.BtnHome_A_H">
@@ -916,6 +1011,11 @@ that apply to you..
 <member name="P:Logic.My.Resources.Spanish.BtnMedics_A_HP">
 <summary>
   Busca una cadena traducida similar a Médicos.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.Spanish.BtnMod_A_S">
+<summary>
+  Busca una cadena traducida similar a MODIFICAR SÍNTOMA.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.BtnModifyPath_A_HP">
@@ -1003,6 +1103,11 @@ that apply to you..
   Busca una cadena traducida similar a Modificar Diagnóstico.
 </summary>
 </member>
+<member name="P:Logic.My.Resources.Spanish.ChkReg_A_SA">
+<summary>
+  Busca una cadena traducida similar a Modificar región.
+</summary>
+</member>
 <member name="P:Logic.My.Resources.Spanish.CiWrong">
 <summary>
   Busca una cadena traducida similar a Cedula de identidad errónea.
@@ -1083,6 +1188,31 @@ that apply to you..
   Busca una cadena traducida similar a Chat.
 </summary>
 </member>
+<member name="P:Logic.My.Resources.Spanish.LblActual_A_SA">
+<summary>
+  Busca una cadena traducida similar a Actual: .
+</summary>
+</member>
+<member name="P:Logic.My.Resources.Spanish.LblAddRegion_A_SA">
+<summary>
+  Busca una cadena traducida similar a Agregar región.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.Spanish.LblAddSympt_A_SA">
+<summary>
+  Busca una cadena traducida similar a INSERTAR NUEVO SÍNTOMA.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.Spanish.LblAsocPath_A_SA">
+<summary>
+  Busca una cadena traducida similar a Asociación de patologías.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.Spanish.LblAsocReg_A_SA">
+<summary>
+  Busca una cadena traducida similar a Asociación a la región.
+</summary>
+</member>
 <member name="P:Logic.My.Resources.Spanish.LblBody_M_L">
 <summary>
   Busca una cadena traducida similar a Ingrese su usuario y contraseña 
@@ -1093,6 +1223,16 @@ Este Software le permitirá tratar a sus Pacientes, brindándoles a estos, infor
 <member name="P:Logic.My.Resources.Spanish.LblChat_P_H">
 <summary>
   Busca una cadena traducida similar a Si usted lo desea puede consultar a un Médico..
+</summary>
+</member>
+<member name="P:Logic.My.Resources.Spanish.LblCrit_A_S">
+<summary>
+  Busca una cadena traducida similar a CRITERIOS DE BÚSQUEDA.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.Spanish.LblDescSympt_A_SA">
+<summary>
+  Busca una cadena traducida similar a Descripción.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.LblInfo1_A_H">
@@ -1186,6 +1326,11 @@ Este Software le permitirá gestionar al Personal, a los Pacientes, los Síntoma
 <member name="P:Logic.My.Resources.Spanish.LblInfoText_P_L">
 <summary>
   Busca una cadena traducida similar a Ingrese su Cédula de Identidad para autenticar y  verificar sus credenciales. Este Software le permitirá realizar Diagnósticos Primarios y en base de ellos decidirá si quiere iniciar una conversación con un Médico Especialista..
+</summary>
+</member>
+<member name="P:Logic.My.Resources.Spanish.LblListado_A_S">
+<summary>
+  Busca una cadena traducida similar a LISTADO DE SÍNTOMAS.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.LblListadoPet_M_P">
@@ -1449,9 +1594,19 @@ que se apliquen a usted..
   Busca una cadena traducida similar a NUEVAMENTE..
 </summary>
 </member>
+<member name="P:Logic.My.Resources.Spanish.LblTittleAddSymp_A_SA">
+<summary>
+  Busca una cadena traducida similar a MODIFICACIÓN DEL SÍNTOMA.
+</summary>
+</member>
 <member name="P:Logic.My.Resources.Spanish.LblTittleChat_M_C">
 <summary>
   Busca una cadena traducida similar a En una conversación con el Paciente:.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.Spanish.LblTittleSymps_A_S">
+<summary>
+  Busca una cadena traducida similar a GESTIÓN DE SÍNTOMAS.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.LblTxt1_Info_P_H">
@@ -1547,6 +1702,11 @@ que se apliquen a usted..
 <member name="P:Logic.My.Resources.Spanish.TxtSearchPath_A_HP">
 <summary>
   Busca una cadena traducida similar a Realizar busqueda por patología.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.Spanish.TxtSympt_A_S">
+<summary>
+  Busca una cadena traducida similar a Realizar búsqueda por síntoma.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.UserInfoHome_A_H">

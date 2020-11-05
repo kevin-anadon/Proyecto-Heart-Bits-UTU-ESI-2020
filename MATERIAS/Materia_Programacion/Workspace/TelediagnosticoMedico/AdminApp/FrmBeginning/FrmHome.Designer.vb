@@ -257,7 +257,7 @@ Partial Class FrmHome
         Me.BtnHome_A_H.HoverState.Parent = Me.BtnHome_A_H
         Me.BtnHome_A_H.Image = Global.AdminApp.My.Resources.Resources.home
         Me.BtnHome_A_H.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.BtnHome_A_H.ImageOffset = New System.Drawing.Point(0, -2)
+        Me.BtnHome_A_H.ImageOffset = New System.Drawing.Point(-2, -2)
         Me.BtnHome_A_H.ImageSize = New System.Drawing.Size(20, 17)
         Me.BtnHome_A_H.Location = New System.Drawing.Point(19, 130)
         Me.BtnHome_A_H.Name = "BtnHome_A_H"
@@ -265,7 +265,6 @@ Partial Class FrmHome
         Me.BtnHome_A_H.Size = New System.Drawing.Size(160, 39)
         Me.BtnHome_A_H.TabIndex = 29
         Me.BtnHome_A_H.Text = "Página principal"
-        Me.BtnHome_A_H.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'DragCtrl
         '

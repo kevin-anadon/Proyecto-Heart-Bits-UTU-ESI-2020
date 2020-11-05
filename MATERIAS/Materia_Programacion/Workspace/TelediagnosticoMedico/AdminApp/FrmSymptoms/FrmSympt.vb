@@ -10,10 +10,12 @@ Public Class FrmSympt
     Dim Pathologies As New List(Of String)
 
     Private Sub FrmSympt_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Translator.Instance.TranslateForm(Me)
+        TxtSympt_A_S.Text = Translator.Instance.Translate("TxtSympt_A_S")
         ReloadDgv(0)
-        BtnAddSympt.BackColor = Color.FromArgb(240, 240, 240)
-        BtnMod.BackColor = Color.FromArgb(240, 240, 240)
-        BtnDelSympt.BackColor = Color.FromArgb(240, 240, 240)
+        BtnAddSympt_A_S.BackColor = Color.FromArgb(240, 240, 240)
+        BtnMod_A_S.BackColor = Color.FromArgb(240, 240, 240)
+        BtnDelSympt_A_S.BackColor = Color.FromArgb(240, 240, 240)
     End Sub
 
     Public Sub ReloadDgv(i As Integer)
@@ -40,14 +42,14 @@ Public Class FrmSympt
         End
     End Sub
 
-    Private Sub TxtSympt_MouseClick(sender As Object, e As MouseEventArgs) Handles TxtSympt.MouseClick
-        TxtSympt.Text = Nothing
+    Private Sub TxtSympt_MouseClick(sender As Object, e As MouseEventArgs) Handles TxtSympt_A_S.MouseClick
+        TxtSympt_A_S.Text = Nothing
     End Sub
 
-    Private Sub TxtSympt_TextChanged(sender As Object, e As EventArgs) Handles TxtSympt.TextChanged 'Buscar sintoma
-        If Not TxtSympt.Text.Equals("") Or Not TxtSympt.Text = Nothing Then
+    Private Sub TxtSympt_TextChanged(sender As Object, e As EventArgs) Handles TxtSympt_A_S.TextChanged 'Buscar sintoma
+        If Not TxtSympt_A_S.Text.Equals("") Or Not TxtSympt_A_S.Text = Nothing Then
             Try
-                DgvSympt.DataSource = log.SearchSymptoms(TxtSympt.Text).Tables("Search")
+                DgvSympt.DataSource = log.SearchSymptoms(TxtSympt_A_S.Text).Tables("Search")
                 DgvSympt.Refresh()
             Catch ex As Exception
                 MsgBox(ex.Message)
@@ -57,16 +59,16 @@ Public Class FrmSympt
         End If
     End Sub
 
-    Private Sub BtnHome_Click_1(sender As Object, e As EventArgs) Handles BtnHome.Click
+    Private Sub BtnHome_Click_1(sender As Object, e As EventArgs) Handles BtnHome_A_H.Click
         Me.Dispose()
         FrmHome.Show()
     End Sub
 
-    Private Sub TxtSympt_Enter(sender As Object, e As EventArgs) Handles TxtSympt.Enter
-        TxtSympt.Clear()
+    Private Sub TxtSympt_Enter(sender As Object, e As EventArgs) Handles TxtSympt_A_S.Enter
+        TxtSympt_A_S.Clear()
     End Sub
 
-    Private Sub BtnAddSympt_Click(sender As Object, e As EventArgs) Handles BtnAddSympt.Click
+    Private Sub BtnAddSympt_Click(sender As Object, e As EventArgs) Handles BtnAddSympt_A_S.Click
         Dim frmAdd As New FrmAddModSympt()
         'Insercion de nuevo síntoma
         frmAdd.AddSympt()
@@ -74,7 +76,7 @@ Public Class FrmSympt
         ReloadDgv(3)
     End Sub
 
-    Private Sub BtnDelSympt_Click(sender As Object, e As EventArgs) Handles BtnDelSympt.Click
+    Private Sub BtnDelSympt_Click(sender As Object, e As EventArgs) Handles BtnDelSympt_A_S.Click
         Dim alerta As New FrmAlertRemove()
         row = DgvSympt.CurrentRow
         SymptSelected = CStr(row.Cells("Síntoma").Value) 'Obtengo el síntoma seleccionado
@@ -116,36 +118,36 @@ Public Class FrmSympt
         End If
     End Sub
 
-    Private Sub BtnMod_Click(sender As Object, e As EventArgs) Handles BtnMod.Click 'Otra manera de modificar un síntoma
+    Private Sub BtnMod_Click(sender As Object, e As EventArgs) Handles BtnMod_A_S.Click 'Otra manera de modificar un síntoma
         ModSympt()
     End Sub
 
-    Private Sub BtnLogout_Click(sender As Object, e As EventArgs) Handles BtnLogout.Click
+    Private Sub BtnLogout_Click(sender As Object, e As EventArgs) Handles BtnLogout_A_H.Click
         If MsgBox("Está seguro que desea cerrar sesión ?", MsgBoxStyle.YesNoCancel, "Cerrar Programa") = MsgBoxResult.Yes Then
             End
         End If
     End Sub
 
-    Private Sub BtnPath_Click(sender As Object, e As EventArgs) Handles BtnPath.Click
+    Private Sub BtnPath_Click(sender As Object, e As EventArgs) Handles BtnPathologies_A_H.Click
         Dim frm As New FrmPath()
         Me.Dispose()
         frm.Show()
     End Sub
 
-    Private Sub BtnAdmin_Click(sender As Object, e As EventArgs) Handles BtnAdmin.Click
+    Private Sub BtnAdmin_Click(sender As Object, e As EventArgs) Handles BtnAdmins_A_H.Click
         Dim frm As New FrmAdmin()
         Me.Dispose()
         frm.IdentifyPeople(2)
         frm.Show()
     End Sub
-    Private Sub BtnPac_Click(sender As Object, e As EventArgs) Handles BtnPac.Click
+    Private Sub BtnPac_Click(sender As Object, e As EventArgs) Handles BtnPatients_A_H.Click
         Dim frm As New FrmAdmin()
         Me.Dispose()
         frm.IdentifyPeople(1)
         frm.Show()
     End Sub
 
-    Private Sub BtnMed_Click(sender As Object, e As EventArgs) Handles BtnMed.Click
+    Private Sub BtnMed_Click(sender As Object, e As EventArgs) Handles BtnMedics_A_H.Click
         Dim frm As New FrmAdmin()
         Me.Dispose()
         frm.IdentifyPeople(0)

@@ -129,6 +129,9 @@
     <value>Modify pathology</value>
     <comment>Admin. HomePP. Boton. Titulo.</comment>
   </data>
+  <data name="BtnAddSympt_A_S" xml:space="preserve">
+    <value>ADD SYMPTOM</value>
+  </data>
   <data name="BtnAdmins_A_H" xml:space="preserve">
     <value>Admins</value>
     <comment>Admin. Home. Button. Title.</comment>
@@ -149,6 +152,9 @@
     <value>CANCELL</value>
     <comment>Patient. HomeD. Button</comment>
   </data>
+  <data name="BtnDelSympt_A_S" xml:space="preserve">
+    <value>DELETE SYMPTOM</value>
+  </data>
   <data name="BtnDropPathology_P_H" xml:space="preserve">
     <value>REMOVE SYMPTOM</value>
     <comment>Patient. Home. Button. Title.</comment>
@@ -160,6 +166,9 @@
   <data name="BtnExit_A_L" xml:space="preserve">
     <value>LOGOUT</value>
     <comment>Admin. Login. Button. Title2.</comment>
+  </data>
+  <data name="BtnFaq_A_H" xml:space="preserve">
+    <value>FAQ</value>
   </data>
   <data name="BtnHome_A_H" xml:space="preserve">
     <value>Home</value>
@@ -208,6 +217,9 @@
   <data name="BtnModifyPath_A_HP" xml:space="preserve">
     <value>MODIFY PATHOLOGY</value>
     <comment>Admin. Home. Button. Title.</comment>
+  </data>
+  <data name="BtnMod_A_S" xml:space="preserve">
+    <value>MODIFY SYMPTOM</value>
   </data>
   <data name="BtnNext_Intro2_P_H" xml:space="preserve">
     <value>START</value>
@@ -272,6 +284,10 @@
     <value>Modify Diagnose</value>
     <comment>Medic. ChatInfo. CheckBox</comment>
   </data>
+  <data name="ChkReg_A_SA" xml:space="preserve">
+    <value>Modify region</value>
+    <comment>Admin. SymptomAdd</comment>
+  </data>
   <data name="CiWrong" xml:space="preserve">
     <value>Wrong Identity Card.</value>
   </data>
@@ -329,6 +345,24 @@
     <value>Chat</value>
     <comment>Patient. Home. Label. Title.</comment>
   </data>
+  <data name="LblActual_A_SA" xml:space="preserve">
+    <value>Current: </value>
+    <comment>Admin. SymptomAdd</comment>
+  </data>
+  <data name="LblAddRegion_A_SA" xml:space="preserve">
+    <value>Add region</value>
+  </data>
+  <data name="LblAddSympt_A_SA" xml:space="preserve">
+    <value>INSERT NEW SYMPTOM</value>
+  </data>
+  <data name="LblAsocPath_A_SA" xml:space="preserve">
+    <value>Association of pathologies</value>
+    <comment>Admin. SymptomAdd</comment>
+  </data>
+  <data name="LblAsocReg_A_SA" xml:space="preserve">
+    <value>Association to the region</value>
+    <comment>Admin. SymptomAdd</comment>
+  </data>
   <data name="LblBody_M_L" xml:space="preserve">
     <value>Enter your username and password
 to authenticate and verify your credentials.
@@ -338,6 +372,13 @@ This Software will allow you to treat your Patients, providing them with informa
   <data name="LblChat_P_H" xml:space="preserve">
     <value>If you wish, you can consult a doctor.</value>
     <comment>Patient. Home. Label. SubTitulo 1.</comment>
+  </data>
+  <data name="LblCrit_A_S" xml:space="preserve">
+    <value>SEARCH CRITERIA</value>
+  </data>
+  <data name="LblDescSympt_A_SA" xml:space="preserve">
+    <value>Description</value>
+    <comment>Admin. SymptomAdd</comment>
   </data>
   <data name="LblInfo1Intro1_P_H" xml:space="preserve">
     <value>You are about to perform a brief (3 min), safe and anonymous medical check-up. Your answers will be carefully analyzed and you will be told the possible causes of your safe symptoms. The information you provide is anonymous and will not be shared with anyone.</value>
@@ -416,6 +457,9 @@ Enjoy our service. Tap the button below to start the anonymous diagnosis and it 
   <data name="LblListadoPet_M_P" xml:space="preserve">
     <value>LIST OF REQUESTS</value>
     <comment>Medic. Home. Label. Petitions</comment>
+  </data>
+  <data name="LblListado_A_S" xml:space="preserve">
+    <value>SYMPTOM LIST</value>
   </data>
   <data name="LblMedic_P_HC" xml:space="preserve">
     <value>Medic</value>
@@ -626,9 +670,16 @@ that apply to you.</value>
     <value>WELCOME BACK</value>
     <comment>Medic. Login. Tittle2.</comment>
   </data>
+  <data name="LblTittleAddSymp_A_SA" xml:space="preserve">
+    <value>SYMPTOM MODIFICATION</value>
+    <comment>Admin. SymptomAdd</comment>
+  </data>
   <data name="LblTittleChat_M_C" xml:space="preserve">
     <value>In a conversation with the Patient:</value>
     <comment>Medic. Chat. Label</comment>
+  </data>
+  <data name="LblTittleSymps_A_S" xml:space="preserve">
+    <value>SYMPTOM MANAGEMENT</value>
   </data>
   <data name="LblTxt1_Info_P_H" xml:space="preserve">
     <value>I am overweight, or I am obese.</value>
@@ -698,6 +749,9 @@ that apply to you.</value>
   <data name="TxtSearchPath_A_HP" xml:space="preserve">
     <value>Make search by pathologies</value>
     <comment>Admin. HomeP. Textbox. Title.</comment>
+  </data>
+  <data name="TxtSympt_A_S" xml:space="preserve">
+    <value>Search by symptom</value>
   </data>
   <data name="UserInfoHomeCon_A_H" xml:space="preserve">
     <value>connected at </value>

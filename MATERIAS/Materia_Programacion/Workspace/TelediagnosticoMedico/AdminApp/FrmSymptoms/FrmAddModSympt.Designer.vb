@@ -26,21 +26,21 @@ Partial Class FrmAddModSympt
         Me.PanelTop = New System.Windows.Forms.Panel()
         Me.LblSymptTop = New Guna.UI.WinForms.GunaLabel()
         Me.BtnClose = New Guna.UI.WinForms.GunaButton()
-        Me.LblTittle = New Guna.UI.WinForms.GunaLabel()
+        Me.LblTittleAddSymp_A_SA = New Guna.UI.WinForms.GunaLabel()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.BtnImportCsv = New Guna.UI.WinForms.GunaButton()
-        Me.ChkReg = New Guna.UI.WinForms.GunaCheckBox()
+        Me.ChkReg_A_SA = New Guna.UI.WinForms.GunaCheckBox()
         Me.Cmbreg = New Guna.UI.WinForms.GunaComboBox()
         Me.BtnCancel = New Guna.UI.WinForms.GunaButton()
         Me.BtnMod = New Guna.UI.WinForms.GunaButton()
         Me.Lblreg = New Guna.UI.WinForms.GunaLabel()
-        Me.LblActual = New Guna.UI.WinForms.GunaLabel()
-        Me.GunaLabel4 = New Guna.UI.WinForms.GunaLabel()
+        Me.LblActual_A_SA = New Guna.UI.WinForms.GunaLabel()
+        Me.LblAsocReg_A_SA = New Guna.UI.WinForms.GunaLabel()
         Me.ChkListPath = New System.Windows.Forms.CheckedListBox()
-        Me.GunaLabel3 = New Guna.UI.WinForms.GunaLabel()
+        Me.LblAsocPath_A_SA = New Guna.UI.WinForms.GunaLabel()
         Me.GunaSeparator1 = New Guna.UI.WinForms.GunaSeparator()
         Me.TxtDescr = New Guna.UI.WinForms.GunaTextBox()
-        Me.GunaLabel2 = New Guna.UI.WinForms.GunaLabel()
+        Me.LblDescSympt_A_SA = New Guna.UI.WinForms.GunaLabel()
         Me.OfdAddSympt = New System.Windows.Forms.OpenFileDialog()
         Me.PanelTop.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -51,7 +51,7 @@ Partial Class FrmAddModSympt
         Me.PanelTop.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.PanelTop.Controls.Add(Me.LblSymptTop)
         Me.PanelTop.Controls.Add(Me.BtnClose)
-        Me.PanelTop.Controls.Add(Me.LblTittle)
+        Me.PanelTop.Controls.Add(Me.LblTittleAddSymp_A_SA)
         Me.PanelTop.Location = New System.Drawing.Point(1, 0)
         Me.PanelTop.Name = "PanelTop"
         Me.PanelTop.Size = New System.Drawing.Size(674, 35)
@@ -89,16 +89,16 @@ Partial Class FrmAddModSympt
         Me.BtnClose.Size = New System.Drawing.Size(40, 24)
         Me.BtnClose.TabIndex = 28
         '
-        'LblTittle
+        'LblTittleAddSymp_A_SA
         '
-        Me.LblTittle.AutoSize = True
-        Me.LblTittle.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblTittle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
-        Me.LblTittle.Location = New System.Drawing.Point(3, 0)
-        Me.LblTittle.Name = "LblTittle"
-        Me.LblTittle.Size = New System.Drawing.Size(317, 30)
-        Me.LblTittle.TabIndex = 0
-        Me.LblTittle.Text = "MODIFICACIÓN DEL SÍNTOMA"
+        Me.LblTittleAddSymp_A_SA.AutoSize = True
+        Me.LblTittleAddSymp_A_SA.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblTittleAddSymp_A_SA.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
+        Me.LblTittleAddSymp_A_SA.Location = New System.Drawing.Point(3, 0)
+        Me.LblTittleAddSymp_A_SA.Name = "LblTittleAddSymp_A_SA"
+        Me.LblTittleAddSymp_A_SA.Size = New System.Drawing.Size(317, 30)
+        Me.LblTittleAddSymp_A_SA.TabIndex = 0
+        Me.LblTittleAddSymp_A_SA.Text = "MODIFICACIÓN DEL SÍNTOMA"
         '
         'Panel1
         '
@@ -106,18 +106,18 @@ Partial Class FrmAddModSympt
         Me.Panel1.BackgroundImage = CType(resources.GetObject("Panel1.BackgroundImage"), System.Drawing.Image)
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel1.Controls.Add(Me.BtnImportCsv)
-        Me.Panel1.Controls.Add(Me.ChkReg)
+        Me.Panel1.Controls.Add(Me.ChkReg_A_SA)
         Me.Panel1.Controls.Add(Me.Cmbreg)
         Me.Panel1.Controls.Add(Me.BtnCancel)
         Me.Panel1.Controls.Add(Me.BtnMod)
         Me.Panel1.Controls.Add(Me.Lblreg)
-        Me.Panel1.Controls.Add(Me.LblActual)
-        Me.Panel1.Controls.Add(Me.GunaLabel4)
+        Me.Panel1.Controls.Add(Me.LblActual_A_SA)
+        Me.Panel1.Controls.Add(Me.LblAsocReg_A_SA)
         Me.Panel1.Controls.Add(Me.ChkListPath)
-        Me.Panel1.Controls.Add(Me.GunaLabel3)
+        Me.Panel1.Controls.Add(Me.LblAsocPath_A_SA)
         Me.Panel1.Controls.Add(Me.GunaSeparator1)
         Me.Panel1.Controls.Add(Me.TxtDescr)
-        Me.Panel1.Controls.Add(Me.GunaLabel2)
+        Me.Panel1.Controls.Add(Me.LblDescSympt_A_SA)
         Me.Panel1.Location = New System.Drawing.Point(1, 33)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(671, 202)
@@ -152,19 +152,19 @@ Partial Class FrmAddModSympt
         Me.BtnImportCsv.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.BtnImportCsv.Visible = False
         '
-        'ChkReg
+        'ChkReg_A_SA
         '
-        Me.ChkReg.BackColor = System.Drawing.Color.White
-        Me.ChkReg.BaseColor = System.Drawing.Color.White
-        Me.ChkReg.CheckedOffColor = System.Drawing.SystemColors.Desktop
-        Me.ChkReg.CheckedOnColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
-        Me.ChkReg.FillColor = System.Drawing.Color.White
-        Me.ChkReg.Location = New System.Drawing.Point(232, 138)
-        Me.ChkReg.Name = "ChkReg"
-        Me.ChkReg.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.ChkReg.Size = New System.Drawing.Size(110, 20)
-        Me.ChkReg.TabIndex = 3
-        Me.ChkReg.Text = "Modificar región"
+        Me.ChkReg_A_SA.BackColor = System.Drawing.Color.White
+        Me.ChkReg_A_SA.BaseColor = System.Drawing.Color.White
+        Me.ChkReg_A_SA.CheckedOffColor = System.Drawing.SystemColors.Desktop
+        Me.ChkReg_A_SA.CheckedOnColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.ChkReg_A_SA.FillColor = System.Drawing.Color.White
+        Me.ChkReg_A_SA.Location = New System.Drawing.Point(232, 138)
+        Me.ChkReg_A_SA.Name = "ChkReg_A_SA"
+        Me.ChkReg_A_SA.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.ChkReg_A_SA.Size = New System.Drawing.Size(110, 20)
+        Me.ChkReg_A_SA.TabIndex = 3
+        Me.ChkReg_A_SA.Text = "Modificar región"
         '
         'Cmbreg
         '
@@ -254,26 +254,26 @@ Partial Class FrmAddModSympt
         Me.Lblreg.Size = New System.Drawing.Size(0, 15)
         Me.Lblreg.TabIndex = 39
         '
-        'LblActual
+        'LblActual_A_SA
         '
-        Me.LblActual.AutoSize = True
-        Me.LblActual.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.LblActual.Location = New System.Drawing.Point(229, 104)
-        Me.LblActual.Name = "LblActual"
-        Me.LblActual.Size = New System.Drawing.Size(47, 15)
-        Me.LblActual.TabIndex = 38
-        Me.LblActual.Text = "Actual: "
+        Me.LblActual_A_SA.AutoSize = True
+        Me.LblActual_A_SA.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.LblActual_A_SA.Location = New System.Drawing.Point(229, 104)
+        Me.LblActual_A_SA.Name = "LblActual_A_SA"
+        Me.LblActual_A_SA.Size = New System.Drawing.Size(47, 15)
+        Me.LblActual_A_SA.TabIndex = 38
+        Me.LblActual_A_SA.Text = "Actual: "
         '
-        'GunaLabel4
+        'LblAsocReg_A_SA
         '
-        Me.GunaLabel4.AutoSize = True
-        Me.GunaLabel4.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GunaLabel4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
-        Me.GunaLabel4.Location = New System.Drawing.Point(227, 71)
-        Me.GunaLabel4.Name = "GunaLabel4"
-        Me.GunaLabel4.Size = New System.Drawing.Size(217, 30)
-        Me.GunaLabel4.TabIndex = 37
-        Me.GunaLabel4.Text = "Asociación a la región"
+        Me.LblAsocReg_A_SA.AutoSize = True
+        Me.LblAsocReg_A_SA.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblAsocReg_A_SA.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
+        Me.LblAsocReg_A_SA.Location = New System.Drawing.Point(227, 71)
+        Me.LblAsocReg_A_SA.Name = "LblAsocReg_A_SA"
+        Me.LblAsocReg_A_SA.Size = New System.Drawing.Size(217, 30)
+        Me.LblAsocReg_A_SA.TabIndex = 37
+        Me.LblAsocReg_A_SA.Text = "Asociación a la región"
         '
         'ChkListPath
         '
@@ -285,16 +285,16 @@ Partial Class FrmAddModSympt
         Me.ChkListPath.Size = New System.Drawing.Size(200, 94)
         Me.ChkListPath.TabIndex = 1
         '
-        'GunaLabel3
+        'LblAsocPath_A_SA
         '
-        Me.GunaLabel3.AutoSize = True
-        Me.GunaLabel3.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GunaLabel3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
-        Me.GunaLabel3.Location = New System.Drawing.Point(6, 71)
-        Me.GunaLabel3.Name = "GunaLabel3"
-        Me.GunaLabel3.Size = New System.Drawing.Size(215, 30)
-        Me.GunaLabel3.TabIndex = 35
-        Me.GunaLabel3.Text = "Asociación patologías"
+        Me.LblAsocPath_A_SA.AutoSize = True
+        Me.LblAsocPath_A_SA.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblAsocPath_A_SA.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
+        Me.LblAsocPath_A_SA.Location = New System.Drawing.Point(6, 71)
+        Me.LblAsocPath_A_SA.Name = "LblAsocPath_A_SA"
+        Me.LblAsocPath_A_SA.Size = New System.Drawing.Size(215, 30)
+        Me.LblAsocPath_A_SA.TabIndex = 35
+        Me.LblAsocPath_A_SA.Text = "Asociación patologías"
         '
         'GunaSeparator1
         '
@@ -324,16 +324,16 @@ Partial Class FrmAddModSympt
         Me.TxtDescr.Size = New System.Drawing.Size(650, 30)
         Me.TxtDescr.TabIndex = 0
         '
-        'GunaLabel2
+        'LblDescSympt_A_SA
         '
-        Me.GunaLabel2.AutoSize = True
-        Me.GunaLabel2.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GunaLabel2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
-        Me.GunaLabel2.Location = New System.Drawing.Point(3, 5)
-        Me.GunaLabel2.Name = "GunaLabel2"
-        Me.GunaLabel2.Size = New System.Drawing.Size(121, 30)
-        Me.GunaLabel2.TabIndex = 32
-        Me.GunaLabel2.Text = "Descripción"
+        Me.LblDescSympt_A_SA.AutoSize = True
+        Me.LblDescSympt_A_SA.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblDescSympt_A_SA.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
+        Me.LblDescSympt_A_SA.Location = New System.Drawing.Point(3, 5)
+        Me.LblDescSympt_A_SA.Name = "LblDescSympt_A_SA"
+        Me.LblDescSympt_A_SA.Size = New System.Drawing.Size(121, 30)
+        Me.LblDescSympt_A_SA.TabIndex = 32
+        Me.LblDescSympt_A_SA.Text = "Descripción"
         '
         'OfdAddSympt
         '
@@ -362,19 +362,19 @@ Partial Class FrmAddModSympt
 
     Friend WithEvents PanelTop As Panel
     Friend WithEvents BtnClose As Guna.UI.WinForms.GunaButton
-    Friend WithEvents LblTittle As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents LblTittleAddSymp_A_SA As Guna.UI.WinForms.GunaLabel
     Friend WithEvents LblSymptTop As Guna.UI.WinForms.GunaLabel
     Friend WithEvents Panel1 As Panel
     Friend WithEvents TxtDescr As Guna.UI.WinForms.GunaTextBox
-    Friend WithEvents GunaLabel2 As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents LblDescSympt_A_SA As Guna.UI.WinForms.GunaLabel
     Friend WithEvents GunaSeparator1 As Guna.UI.WinForms.GunaSeparator
-    Friend WithEvents GunaLabel3 As Guna.UI.WinForms.GunaLabel
-    Friend WithEvents GunaLabel4 As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents LblAsocPath_A_SA As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents LblAsocReg_A_SA As Guna.UI.WinForms.GunaLabel
     Friend WithEvents Lblreg As Guna.UI.WinForms.GunaLabel
-    Friend WithEvents LblActual As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents LblActual_A_SA As Guna.UI.WinForms.GunaLabel
     Friend WithEvents BtnMod As Guna.UI.WinForms.GunaButton
     Friend WithEvents BtnCancel As Guna.UI.WinForms.GunaButton
-    Friend WithEvents ChkReg As Guna.UI.WinForms.GunaCheckBox
+    Friend WithEvents ChkReg_A_SA As Guna.UI.WinForms.GunaCheckBox
     Friend WithEvents Cmbreg As Guna.UI.WinForms.GunaComboBox
     Friend WithEvents ChkListPath As CheckedListBox
     Friend WithEvents OfdAddSympt As OpenFileDialog

@@ -28,28 +28,28 @@ Partial Class FrmSympt
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.PanelButtons = New System.Windows.Forms.Panel()
-        Me.BtnFaq = New Guna.UI.WinForms.GunaButton()
-        Me.BtnLogout = New Guna.UI.WinForms.GunaButton()
-        Me.BtnPath = New Guna.UI.WinForms.GunaButton()
-        Me.BtnSympt = New Guna.UI.WinForms.GunaButton()
-        Me.BtnAdmin = New Guna.UI.WinForms.GunaButton()
-        Me.BtnMed = New Guna.UI.WinForms.GunaButton()
-        Me.BtnPac = New Guna.UI.WinForms.GunaButton()
-        Me.BtnHome = New Guna.UI.WinForms.GunaButton()
+        Me.BtnFaq_A_H = New Guna.UI.WinForms.GunaButton()
+        Me.BtnLogout_A_H = New Guna.UI.WinForms.GunaButton()
+        Me.BtnPathologies_A_H = New Guna.UI.WinForms.GunaButton()
+        Me.BtnSymp_A_H = New Guna.UI.WinForms.GunaButton()
+        Me.BtnAdmins_A_H = New Guna.UI.WinForms.GunaButton()
+        Me.BtnMedics_A_H = New Guna.UI.WinForms.GunaButton()
+        Me.BtnPatients_A_H = New Guna.UI.WinForms.GunaButton()
+        Me.BtnHome_A_H = New Guna.UI.WinForms.GunaButton()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PanelLeft = New System.Windows.Forms.Panel()
         Me.PanelBody = New System.Windows.Forms.Panel()
         Me.PicLogo = New System.Windows.Forms.PictureBox()
         Me.DgvSympt = New Guna.UI.WinForms.GunaDataGridView()
-        Me.TxtSympt = New Guna.UI.WinForms.GunaTextBox()
-        Me.BtnAddSympt = New Guna.UI.WinForms.GunaButton()
-        Me.BtnDelSympt = New Guna.UI.WinForms.GunaButton()
+        Me.TxtSympt_A_S = New Guna.UI.WinForms.GunaTextBox()
+        Me.BtnAddSympt_A_S = New Guna.UI.WinForms.GunaButton()
+        Me.BtnDelSympt_A_S = New Guna.UI.WinForms.GunaButton()
         Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
-        Me.BtnMod = New Guna.UI.WinForms.GunaButton()
-        Me.LblListado = New System.Windows.Forms.Label()
-        Me.LblCrit = New System.Windows.Forms.Label()
+        Me.BtnMod_A_S = New Guna.UI.WinForms.GunaButton()
+        Me.LblListado_A_S = New System.Windows.Forms.Label()
+        Me.LblCrit_A_S = New System.Windows.Forms.Label()
         Me.PnlTittle = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.LblTittleSymps_A_S = New System.Windows.Forms.Label()
         Me.Guna2ControlBox2 = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.Guna2ControlBox1 = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.DragCtrl = New Guna.UI2.WinForms.Guna2DragControl(Me.components)
@@ -65,242 +65,242 @@ Partial Class FrmSympt
         '
         'PanelButtons
         '
-        Me.PanelButtons.Controls.Add(Me.BtnFaq)
-        Me.PanelButtons.Controls.Add(Me.BtnLogout)
-        Me.PanelButtons.Controls.Add(Me.BtnPath)
-        Me.PanelButtons.Controls.Add(Me.BtnSympt)
-        Me.PanelButtons.Controls.Add(Me.BtnAdmin)
-        Me.PanelButtons.Controls.Add(Me.BtnMed)
-        Me.PanelButtons.Controls.Add(Me.BtnPac)
-        Me.PanelButtons.Controls.Add(Me.BtnHome)
+        Me.PanelButtons.Controls.Add(Me.BtnFaq_A_H)
+        Me.PanelButtons.Controls.Add(Me.BtnLogout_A_H)
+        Me.PanelButtons.Controls.Add(Me.BtnPathologies_A_H)
+        Me.PanelButtons.Controls.Add(Me.BtnSymp_A_H)
+        Me.PanelButtons.Controls.Add(Me.BtnAdmins_A_H)
+        Me.PanelButtons.Controls.Add(Me.BtnMedics_A_H)
+        Me.PanelButtons.Controls.Add(Me.BtnPatients_A_H)
+        Me.PanelButtons.Controls.Add(Me.BtnHome_A_H)
         Me.PanelButtons.Location = New System.Drawing.Point(19, 108)
         Me.PanelButtons.Name = "PanelButtons"
         Me.PanelButtons.Size = New System.Drawing.Size(166, 515)
         Me.PanelButtons.TabIndex = 1
         '
-        'BtnFaq
+        'BtnFaq_A_H
         '
-        Me.BtnFaq.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnFaq.Animated = True
-        Me.BtnFaq.AnimationHoverSpeed = 0.07!
-        Me.BtnFaq.AnimationSpeed = 0.03!
-        Me.BtnFaq.BackColor = System.Drawing.Color.Transparent
-        Me.BtnFaq.BaseColor = System.Drawing.Color.White
-        Me.BtnFaq.BorderColor = System.Drawing.Color.Black
-        Me.BtnFaq.DialogResult = System.Windows.Forms.DialogResult.None
-        Me.BtnFaq.FocusedColor = System.Drawing.Color.Empty
-        Me.BtnFaq.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnFaq.ForeColor = System.Drawing.Color.Black
-        Me.BtnFaq.Image = CType(resources.GetObject("BtnFaq.Image"), System.Drawing.Image)
-        Me.BtnFaq.ImageSize = New System.Drawing.Size(20, 20)
-        Me.BtnFaq.Location = New System.Drawing.Point(9, 447)
-        Me.BtnFaq.Name = "BtnFaq"
-        Me.BtnFaq.OnHoverBaseColor = System.Drawing.Color.Silver
-        Me.BtnFaq.OnHoverBorderColor = System.Drawing.Color.Black
-        Me.BtnFaq.OnHoverForeColor = System.Drawing.Color.White
-        Me.BtnFaq.OnHoverImage = Nothing
-        Me.BtnFaq.OnPressedColor = System.Drawing.Color.Black
-        Me.BtnFaq.Radius = 6
-        Me.BtnFaq.Size = New System.Drawing.Size(146, 30)
-        Me.BtnFaq.TabIndex = 29
-        Me.BtnFaq.Text = "FAQ"
-        Me.BtnFaq.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.BtnFaq_A_H.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnFaq_A_H.Animated = True
+        Me.BtnFaq_A_H.AnimationHoverSpeed = 0.07!
+        Me.BtnFaq_A_H.AnimationSpeed = 0.03!
+        Me.BtnFaq_A_H.BackColor = System.Drawing.Color.Transparent
+        Me.BtnFaq_A_H.BaseColor = System.Drawing.Color.White
+        Me.BtnFaq_A_H.BorderColor = System.Drawing.Color.Black
+        Me.BtnFaq_A_H.DialogResult = System.Windows.Forms.DialogResult.None
+        Me.BtnFaq_A_H.FocusedColor = System.Drawing.Color.Empty
+        Me.BtnFaq_A_H.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnFaq_A_H.ForeColor = System.Drawing.Color.Black
+        Me.BtnFaq_A_H.Image = CType(resources.GetObject("BtnFaq_A_H.Image"), System.Drawing.Image)
+        Me.BtnFaq_A_H.ImageSize = New System.Drawing.Size(20, 20)
+        Me.BtnFaq_A_H.Location = New System.Drawing.Point(9, 447)
+        Me.BtnFaq_A_H.Name = "BtnFaq_A_H"
+        Me.BtnFaq_A_H.OnHoverBaseColor = System.Drawing.Color.Silver
+        Me.BtnFaq_A_H.OnHoverBorderColor = System.Drawing.Color.Black
+        Me.BtnFaq_A_H.OnHoverForeColor = System.Drawing.Color.White
+        Me.BtnFaq_A_H.OnHoverImage = Nothing
+        Me.BtnFaq_A_H.OnPressedColor = System.Drawing.Color.Black
+        Me.BtnFaq_A_H.Radius = 6
+        Me.BtnFaq_A_H.Size = New System.Drawing.Size(146, 30)
+        Me.BtnFaq_A_H.TabIndex = 29
+        Me.BtnFaq_A_H.Text = "FAQ"
+        Me.BtnFaq_A_H.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'BtnLogout
+        'BtnLogout_A_H
         '
-        Me.BtnLogout.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnLogout.Animated = True
-        Me.BtnLogout.AnimationHoverSpeed = 0.07!
-        Me.BtnLogout.AnimationSpeed = 0.03!
-        Me.BtnLogout.BackColor = System.Drawing.Color.Transparent
-        Me.BtnLogout.BaseColor = System.Drawing.Color.White
-        Me.BtnLogout.BorderColor = System.Drawing.Color.Black
-        Me.BtnLogout.DialogResult = System.Windows.Forms.DialogResult.None
-        Me.BtnLogout.FocusedColor = System.Drawing.Color.Empty
-        Me.BtnLogout.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnLogout.ForeColor = System.Drawing.Color.Black
-        Me.BtnLogout.Image = CType(resources.GetObject("BtnLogout.Image"), System.Drawing.Image)
-        Me.BtnLogout.ImageSize = New System.Drawing.Size(20, 20)
-        Me.BtnLogout.Location = New System.Drawing.Point(9, 483)
-        Me.BtnLogout.Name = "BtnLogout"
-        Me.BtnLogout.OnHoverBaseColor = System.Drawing.Color.Silver
-        Me.BtnLogout.OnHoverBorderColor = System.Drawing.Color.Black
-        Me.BtnLogout.OnHoverForeColor = System.Drawing.Color.White
-        Me.BtnLogout.OnHoverImage = Nothing
-        Me.BtnLogout.OnPressedColor = System.Drawing.Color.Black
-        Me.BtnLogout.Radius = 6
-        Me.BtnLogout.Size = New System.Drawing.Size(146, 30)
-        Me.BtnLogout.TabIndex = 28
-        Me.BtnLogout.Text = "Cerrar sesión"
-        Me.BtnLogout.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.BtnLogout_A_H.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnLogout_A_H.Animated = True
+        Me.BtnLogout_A_H.AnimationHoverSpeed = 0.07!
+        Me.BtnLogout_A_H.AnimationSpeed = 0.03!
+        Me.BtnLogout_A_H.BackColor = System.Drawing.Color.Transparent
+        Me.BtnLogout_A_H.BaseColor = System.Drawing.Color.White
+        Me.BtnLogout_A_H.BorderColor = System.Drawing.Color.Black
+        Me.BtnLogout_A_H.DialogResult = System.Windows.Forms.DialogResult.None
+        Me.BtnLogout_A_H.FocusedColor = System.Drawing.Color.Empty
+        Me.BtnLogout_A_H.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnLogout_A_H.ForeColor = System.Drawing.Color.Black
+        Me.BtnLogout_A_H.Image = CType(resources.GetObject("BtnLogout_A_H.Image"), System.Drawing.Image)
+        Me.BtnLogout_A_H.ImageSize = New System.Drawing.Size(20, 20)
+        Me.BtnLogout_A_H.Location = New System.Drawing.Point(9, 483)
+        Me.BtnLogout_A_H.Name = "BtnLogout_A_H"
+        Me.BtnLogout_A_H.OnHoverBaseColor = System.Drawing.Color.Silver
+        Me.BtnLogout_A_H.OnHoverBorderColor = System.Drawing.Color.Black
+        Me.BtnLogout_A_H.OnHoverForeColor = System.Drawing.Color.White
+        Me.BtnLogout_A_H.OnHoverImage = Nothing
+        Me.BtnLogout_A_H.OnPressedColor = System.Drawing.Color.Black
+        Me.BtnLogout_A_H.Radius = 6
+        Me.BtnLogout_A_H.Size = New System.Drawing.Size(146, 30)
+        Me.BtnLogout_A_H.TabIndex = 28
+        Me.BtnLogout_A_H.Text = "Cerrar sesión"
+        Me.BtnLogout_A_H.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'BtnPath
+        'BtnPathologies_A_H
         '
-        Me.BtnPath.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnPath.Animated = True
-        Me.BtnPath.AnimationHoverSpeed = 0.07!
-        Me.BtnPath.AnimationSpeed = 0.03!
-        Me.BtnPath.BackColor = System.Drawing.Color.Transparent
-        Me.BtnPath.BaseColor = System.Drawing.Color.White
-        Me.BtnPath.BorderColor = System.Drawing.Color.Black
-        Me.BtnPath.DialogResult = System.Windows.Forms.DialogResult.None
-        Me.BtnPath.FocusedColor = System.Drawing.Color.Empty
-        Me.BtnPath.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnPath.ForeColor = System.Drawing.Color.Black
-        Me.BtnPath.Image = CType(resources.GetObject("BtnPath.Image"), System.Drawing.Image)
-        Me.BtnPath.ImageSize = New System.Drawing.Size(20, 20)
-        Me.BtnPath.Location = New System.Drawing.Point(9, 202)
-        Me.BtnPath.Name = "BtnPath"
-        Me.BtnPath.OnHoverBaseColor = System.Drawing.Color.Silver
-        Me.BtnPath.OnHoverBorderColor = System.Drawing.Color.Black
-        Me.BtnPath.OnHoverForeColor = System.Drawing.Color.White
-        Me.BtnPath.OnHoverImage = Nothing
-        Me.BtnPath.OnPressedColor = System.Drawing.Color.Black
-        Me.BtnPath.Radius = 6
-        Me.BtnPath.Size = New System.Drawing.Size(146, 30)
-        Me.BtnPath.TabIndex = 27
-        Me.BtnPath.Text = "Patologías"
-        Me.BtnPath.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.BtnPathologies_A_H.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnPathologies_A_H.Animated = True
+        Me.BtnPathologies_A_H.AnimationHoverSpeed = 0.07!
+        Me.BtnPathologies_A_H.AnimationSpeed = 0.03!
+        Me.BtnPathologies_A_H.BackColor = System.Drawing.Color.Transparent
+        Me.BtnPathologies_A_H.BaseColor = System.Drawing.Color.White
+        Me.BtnPathologies_A_H.BorderColor = System.Drawing.Color.Black
+        Me.BtnPathologies_A_H.DialogResult = System.Windows.Forms.DialogResult.None
+        Me.BtnPathologies_A_H.FocusedColor = System.Drawing.Color.Empty
+        Me.BtnPathologies_A_H.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnPathologies_A_H.ForeColor = System.Drawing.Color.Black
+        Me.BtnPathologies_A_H.Image = CType(resources.GetObject("BtnPathologies_A_H.Image"), System.Drawing.Image)
+        Me.BtnPathologies_A_H.ImageSize = New System.Drawing.Size(20, 20)
+        Me.BtnPathologies_A_H.Location = New System.Drawing.Point(9, 202)
+        Me.BtnPathologies_A_H.Name = "BtnPathologies_A_H"
+        Me.BtnPathologies_A_H.OnHoverBaseColor = System.Drawing.Color.Silver
+        Me.BtnPathologies_A_H.OnHoverBorderColor = System.Drawing.Color.Black
+        Me.BtnPathologies_A_H.OnHoverForeColor = System.Drawing.Color.White
+        Me.BtnPathologies_A_H.OnHoverImage = Nothing
+        Me.BtnPathologies_A_H.OnPressedColor = System.Drawing.Color.Black
+        Me.BtnPathologies_A_H.Radius = 6
+        Me.BtnPathologies_A_H.Size = New System.Drawing.Size(146, 30)
+        Me.BtnPathologies_A_H.TabIndex = 27
+        Me.BtnPathologies_A_H.Text = "Patologías"
+        Me.BtnPathologies_A_H.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'BtnSympt
+        'BtnSymp_A_H
         '
-        Me.BtnSympt.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnSympt.Animated = True
-        Me.BtnSympt.AnimationHoverSpeed = 0.07!
-        Me.BtnSympt.AnimationSpeed = 0.03!
-        Me.BtnSympt.BackColor = System.Drawing.Color.Transparent
-        Me.BtnSympt.BaseColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
-        Me.BtnSympt.BorderColor = System.Drawing.Color.BlanchedAlmond
-        Me.BtnSympt.DialogResult = System.Windows.Forms.DialogResult.None
-        Me.BtnSympt.FocusedColor = System.Drawing.Color.Empty
-        Me.BtnSympt.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnSympt.ForeColor = System.Drawing.Color.White
-        Me.BtnSympt.Image = CType(resources.GetObject("BtnSympt.Image"), System.Drawing.Image)
-        Me.BtnSympt.ImageSize = New System.Drawing.Size(20, 20)
-        Me.BtnSympt.Location = New System.Drawing.Point(9, 166)
-        Me.BtnSympt.Name = "BtnSympt"
-        Me.BtnSympt.OnHoverBaseColor = System.Drawing.Color.Silver
-        Me.BtnSympt.OnHoverBorderColor = System.Drawing.Color.Black
-        Me.BtnSympt.OnHoverForeColor = System.Drawing.Color.White
-        Me.BtnSympt.OnHoverImage = Nothing
-        Me.BtnSympt.OnPressedColor = System.Drawing.Color.Black
-        Me.BtnSympt.Radius = 6
-        Me.BtnSympt.Size = New System.Drawing.Size(146, 30)
-        Me.BtnSympt.TabIndex = 26
-        Me.BtnSympt.Text = "Síntomas"
-        Me.BtnSympt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.BtnSymp_A_H.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnSymp_A_H.Animated = True
+        Me.BtnSymp_A_H.AnimationHoverSpeed = 0.07!
+        Me.BtnSymp_A_H.AnimationSpeed = 0.03!
+        Me.BtnSymp_A_H.BackColor = System.Drawing.Color.Transparent
+        Me.BtnSymp_A_H.BaseColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.BtnSymp_A_H.BorderColor = System.Drawing.Color.BlanchedAlmond
+        Me.BtnSymp_A_H.DialogResult = System.Windows.Forms.DialogResult.None
+        Me.BtnSymp_A_H.FocusedColor = System.Drawing.Color.Empty
+        Me.BtnSymp_A_H.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnSymp_A_H.ForeColor = System.Drawing.Color.White
+        Me.BtnSymp_A_H.Image = CType(resources.GetObject("BtnSymp_A_H.Image"), System.Drawing.Image)
+        Me.BtnSymp_A_H.ImageSize = New System.Drawing.Size(20, 20)
+        Me.BtnSymp_A_H.Location = New System.Drawing.Point(9, 166)
+        Me.BtnSymp_A_H.Name = "BtnSymp_A_H"
+        Me.BtnSymp_A_H.OnHoverBaseColor = System.Drawing.Color.Silver
+        Me.BtnSymp_A_H.OnHoverBorderColor = System.Drawing.Color.Black
+        Me.BtnSymp_A_H.OnHoverForeColor = System.Drawing.Color.White
+        Me.BtnSymp_A_H.OnHoverImage = Nothing
+        Me.BtnSymp_A_H.OnPressedColor = System.Drawing.Color.Black
+        Me.BtnSymp_A_H.Radius = 6
+        Me.BtnSymp_A_H.Size = New System.Drawing.Size(146, 30)
+        Me.BtnSymp_A_H.TabIndex = 26
+        Me.BtnSymp_A_H.Text = "Síntomas"
+        Me.BtnSymp_A_H.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'BtnAdmin
+        'BtnAdmins_A_H
         '
-        Me.BtnAdmin.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnAdmin.Animated = True
-        Me.BtnAdmin.AnimationHoverSpeed = 0.07!
-        Me.BtnAdmin.AnimationSpeed = 0.03!
-        Me.BtnAdmin.BackColor = System.Drawing.Color.Transparent
-        Me.BtnAdmin.BaseColor = System.Drawing.Color.White
-        Me.BtnAdmin.BorderColor = System.Drawing.Color.Black
-        Me.BtnAdmin.DialogResult = System.Windows.Forms.DialogResult.None
-        Me.BtnAdmin.FocusedColor = System.Drawing.Color.Empty
-        Me.BtnAdmin.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnAdmin.ForeColor = System.Drawing.Color.Black
-        Me.BtnAdmin.Image = CType(resources.GetObject("BtnAdmin.Image"), System.Drawing.Image)
-        Me.BtnAdmin.ImageSize = New System.Drawing.Size(20, 20)
-        Me.BtnAdmin.Location = New System.Drawing.Point(9, 130)
-        Me.BtnAdmin.Name = "BtnAdmin"
-        Me.BtnAdmin.OnHoverBaseColor = System.Drawing.Color.Silver
-        Me.BtnAdmin.OnHoverBorderColor = System.Drawing.Color.Black
-        Me.BtnAdmin.OnHoverForeColor = System.Drawing.Color.White
-        Me.BtnAdmin.OnHoverImage = Nothing
-        Me.BtnAdmin.OnPressedColor = System.Drawing.Color.Black
-        Me.BtnAdmin.Radius = 6
-        Me.BtnAdmin.Size = New System.Drawing.Size(146, 30)
-        Me.BtnAdmin.TabIndex = 25
-        Me.BtnAdmin.Text = "Administradores"
-        Me.BtnAdmin.TextOffsetX = 2
+        Me.BtnAdmins_A_H.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnAdmins_A_H.Animated = True
+        Me.BtnAdmins_A_H.AnimationHoverSpeed = 0.07!
+        Me.BtnAdmins_A_H.AnimationSpeed = 0.03!
+        Me.BtnAdmins_A_H.BackColor = System.Drawing.Color.Transparent
+        Me.BtnAdmins_A_H.BaseColor = System.Drawing.Color.White
+        Me.BtnAdmins_A_H.BorderColor = System.Drawing.Color.Black
+        Me.BtnAdmins_A_H.DialogResult = System.Windows.Forms.DialogResult.None
+        Me.BtnAdmins_A_H.FocusedColor = System.Drawing.Color.Empty
+        Me.BtnAdmins_A_H.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnAdmins_A_H.ForeColor = System.Drawing.Color.Black
+        Me.BtnAdmins_A_H.Image = CType(resources.GetObject("BtnAdmins_A_H.Image"), System.Drawing.Image)
+        Me.BtnAdmins_A_H.ImageSize = New System.Drawing.Size(20, 20)
+        Me.BtnAdmins_A_H.Location = New System.Drawing.Point(9, 130)
+        Me.BtnAdmins_A_H.Name = "BtnAdmins_A_H"
+        Me.BtnAdmins_A_H.OnHoverBaseColor = System.Drawing.Color.Silver
+        Me.BtnAdmins_A_H.OnHoverBorderColor = System.Drawing.Color.Black
+        Me.BtnAdmins_A_H.OnHoverForeColor = System.Drawing.Color.White
+        Me.BtnAdmins_A_H.OnHoverImage = Nothing
+        Me.BtnAdmins_A_H.OnPressedColor = System.Drawing.Color.Black
+        Me.BtnAdmins_A_H.Radius = 6
+        Me.BtnAdmins_A_H.Size = New System.Drawing.Size(146, 30)
+        Me.BtnAdmins_A_H.TabIndex = 25
+        Me.BtnAdmins_A_H.Text = "Administradores"
+        Me.BtnAdmins_A_H.TextOffsetX = 2
         '
-        'BtnMed
+        'BtnMedics_A_H
         '
-        Me.BtnMed.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnMed.Animated = True
-        Me.BtnMed.AnimationHoverSpeed = 0.07!
-        Me.BtnMed.AnimationSpeed = 0.03!
-        Me.BtnMed.BackColor = System.Drawing.Color.Transparent
-        Me.BtnMed.BaseColor = System.Drawing.Color.White
-        Me.BtnMed.BorderColor = System.Drawing.Color.Black
-        Me.BtnMed.DialogResult = System.Windows.Forms.DialogResult.None
-        Me.BtnMed.FocusedColor = System.Drawing.Color.Empty
-        Me.BtnMed.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnMed.ForeColor = System.Drawing.Color.Black
-        Me.BtnMed.Image = CType(resources.GetObject("BtnMed.Image"), System.Drawing.Image)
-        Me.BtnMed.ImageSize = New System.Drawing.Size(20, 20)
-        Me.BtnMed.Location = New System.Drawing.Point(9, 94)
-        Me.BtnMed.Name = "BtnMed"
-        Me.BtnMed.OnHoverBaseColor = System.Drawing.Color.Silver
-        Me.BtnMed.OnHoverBorderColor = System.Drawing.Color.Black
-        Me.BtnMed.OnHoverForeColor = System.Drawing.Color.White
-        Me.BtnMed.OnHoverImage = Nothing
-        Me.BtnMed.OnPressedColor = System.Drawing.Color.Black
-        Me.BtnMed.Radius = 6
-        Me.BtnMed.Size = New System.Drawing.Size(146, 30)
-        Me.BtnMed.TabIndex = 24
-        Me.BtnMed.Text = "Médicos"
-        Me.BtnMed.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.BtnMedics_A_H.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnMedics_A_H.Animated = True
+        Me.BtnMedics_A_H.AnimationHoverSpeed = 0.07!
+        Me.BtnMedics_A_H.AnimationSpeed = 0.03!
+        Me.BtnMedics_A_H.BackColor = System.Drawing.Color.Transparent
+        Me.BtnMedics_A_H.BaseColor = System.Drawing.Color.White
+        Me.BtnMedics_A_H.BorderColor = System.Drawing.Color.Black
+        Me.BtnMedics_A_H.DialogResult = System.Windows.Forms.DialogResult.None
+        Me.BtnMedics_A_H.FocusedColor = System.Drawing.Color.Empty
+        Me.BtnMedics_A_H.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnMedics_A_H.ForeColor = System.Drawing.Color.Black
+        Me.BtnMedics_A_H.Image = CType(resources.GetObject("BtnMedics_A_H.Image"), System.Drawing.Image)
+        Me.BtnMedics_A_H.ImageSize = New System.Drawing.Size(20, 20)
+        Me.BtnMedics_A_H.Location = New System.Drawing.Point(9, 94)
+        Me.BtnMedics_A_H.Name = "BtnMedics_A_H"
+        Me.BtnMedics_A_H.OnHoverBaseColor = System.Drawing.Color.Silver
+        Me.BtnMedics_A_H.OnHoverBorderColor = System.Drawing.Color.Black
+        Me.BtnMedics_A_H.OnHoverForeColor = System.Drawing.Color.White
+        Me.BtnMedics_A_H.OnHoverImage = Nothing
+        Me.BtnMedics_A_H.OnPressedColor = System.Drawing.Color.Black
+        Me.BtnMedics_A_H.Radius = 6
+        Me.BtnMedics_A_H.Size = New System.Drawing.Size(146, 30)
+        Me.BtnMedics_A_H.TabIndex = 24
+        Me.BtnMedics_A_H.Text = "Médicos"
+        Me.BtnMedics_A_H.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'BtnPac
+        'BtnPatients_A_H
         '
-        Me.BtnPac.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnPac.Animated = True
-        Me.BtnPac.AnimationHoverSpeed = 0.07!
-        Me.BtnPac.AnimationSpeed = 0.03!
-        Me.BtnPac.BackColor = System.Drawing.Color.Transparent
-        Me.BtnPac.BaseColor = System.Drawing.Color.White
-        Me.BtnPac.BorderColor = System.Drawing.Color.Black
-        Me.BtnPac.DialogResult = System.Windows.Forms.DialogResult.None
-        Me.BtnPac.FocusedColor = System.Drawing.Color.Empty
-        Me.BtnPac.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnPac.ForeColor = System.Drawing.Color.Black
-        Me.BtnPac.Image = CType(resources.GetObject("BtnPac.Image"), System.Drawing.Image)
-        Me.BtnPac.ImageSize = New System.Drawing.Size(20, 20)
-        Me.BtnPac.Location = New System.Drawing.Point(9, 58)
-        Me.BtnPac.Name = "BtnPac"
-        Me.BtnPac.OnHoverBaseColor = System.Drawing.Color.Silver
-        Me.BtnPac.OnHoverBorderColor = System.Drawing.Color.Black
-        Me.BtnPac.OnHoverForeColor = System.Drawing.Color.White
-        Me.BtnPac.OnHoverImage = Nothing
-        Me.BtnPac.OnPressedColor = System.Drawing.Color.Black
-        Me.BtnPac.Radius = 6
-        Me.BtnPac.Size = New System.Drawing.Size(146, 30)
-        Me.BtnPac.TabIndex = 23
-        Me.BtnPac.Text = "Pacientes"
-        Me.BtnPac.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.BtnPatients_A_H.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnPatients_A_H.Animated = True
+        Me.BtnPatients_A_H.AnimationHoverSpeed = 0.07!
+        Me.BtnPatients_A_H.AnimationSpeed = 0.03!
+        Me.BtnPatients_A_H.BackColor = System.Drawing.Color.Transparent
+        Me.BtnPatients_A_H.BaseColor = System.Drawing.Color.White
+        Me.BtnPatients_A_H.BorderColor = System.Drawing.Color.Black
+        Me.BtnPatients_A_H.DialogResult = System.Windows.Forms.DialogResult.None
+        Me.BtnPatients_A_H.FocusedColor = System.Drawing.Color.Empty
+        Me.BtnPatients_A_H.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnPatients_A_H.ForeColor = System.Drawing.Color.Black
+        Me.BtnPatients_A_H.Image = CType(resources.GetObject("BtnPatients_A_H.Image"), System.Drawing.Image)
+        Me.BtnPatients_A_H.ImageSize = New System.Drawing.Size(20, 20)
+        Me.BtnPatients_A_H.Location = New System.Drawing.Point(9, 58)
+        Me.BtnPatients_A_H.Name = "BtnPatients_A_H"
+        Me.BtnPatients_A_H.OnHoverBaseColor = System.Drawing.Color.Silver
+        Me.BtnPatients_A_H.OnHoverBorderColor = System.Drawing.Color.Black
+        Me.BtnPatients_A_H.OnHoverForeColor = System.Drawing.Color.White
+        Me.BtnPatients_A_H.OnHoverImage = Nothing
+        Me.BtnPatients_A_H.OnPressedColor = System.Drawing.Color.Black
+        Me.BtnPatients_A_H.Radius = 6
+        Me.BtnPatients_A_H.Size = New System.Drawing.Size(146, 30)
+        Me.BtnPatients_A_H.TabIndex = 23
+        Me.BtnPatients_A_H.Text = "Pacientes"
+        Me.BtnPatients_A_H.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'BtnHome
+        'BtnHome_A_H
         '
-        Me.BtnHome.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnHome.Animated = True
-        Me.BtnHome.AnimationHoverSpeed = 0.07!
-        Me.BtnHome.AnimationSpeed = 0.03!
-        Me.BtnHome.BackColor = System.Drawing.Color.Transparent
-        Me.BtnHome.BaseColor = System.Drawing.Color.Transparent
-        Me.BtnHome.BorderColor = System.Drawing.Color.Transparent
-        Me.BtnHome.DialogResult = System.Windows.Forms.DialogResult.None
-        Me.BtnHome.FocusedColor = System.Drawing.Color.Empty
-        Me.BtnHome.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnHome.ForeColor = System.Drawing.Color.Black
-        Me.BtnHome.Image = CType(resources.GetObject("BtnHome.Image"), System.Drawing.Image)
-        Me.BtnHome.ImageSize = New System.Drawing.Size(20, 20)
-        Me.BtnHome.Location = New System.Drawing.Point(9, 22)
-        Me.BtnHome.Name = "BtnHome"
-        Me.BtnHome.OnHoverBaseColor = System.Drawing.Color.Silver
-        Me.BtnHome.OnHoverBorderColor = System.Drawing.Color.Black
-        Me.BtnHome.OnHoverForeColor = System.Drawing.Color.White
-        Me.BtnHome.OnHoverImage = Nothing
-        Me.BtnHome.OnPressedColor = System.Drawing.Color.Black
-        Me.BtnHome.Radius = 6
-        Me.BtnHome.Size = New System.Drawing.Size(146, 30)
-        Me.BtnHome.TabIndex = 22
-        Me.BtnHome.Text = "Página principal"
-        Me.BtnHome.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.BtnHome_A_H.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnHome_A_H.Animated = True
+        Me.BtnHome_A_H.AnimationHoverSpeed = 0.07!
+        Me.BtnHome_A_H.AnimationSpeed = 0.03!
+        Me.BtnHome_A_H.BackColor = System.Drawing.Color.Transparent
+        Me.BtnHome_A_H.BaseColor = System.Drawing.Color.Transparent
+        Me.BtnHome_A_H.BorderColor = System.Drawing.Color.Transparent
+        Me.BtnHome_A_H.DialogResult = System.Windows.Forms.DialogResult.None
+        Me.BtnHome_A_H.FocusedColor = System.Drawing.Color.Empty
+        Me.BtnHome_A_H.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnHome_A_H.ForeColor = System.Drawing.Color.Black
+        Me.BtnHome_A_H.Image = CType(resources.GetObject("BtnHome_A_H.Image"), System.Drawing.Image)
+        Me.BtnHome_A_H.ImageSize = New System.Drawing.Size(20, 20)
+        Me.BtnHome_A_H.Location = New System.Drawing.Point(9, 22)
+        Me.BtnHome_A_H.Name = "BtnHome_A_H"
+        Me.BtnHome_A_H.OnHoverBaseColor = System.Drawing.Color.Silver
+        Me.BtnHome_A_H.OnHoverBorderColor = System.Drawing.Color.Black
+        Me.BtnHome_A_H.OnHoverForeColor = System.Drawing.Color.White
+        Me.BtnHome_A_H.OnHoverImage = Nothing
+        Me.BtnHome_A_H.OnPressedColor = System.Drawing.Color.Black
+        Me.BtnHome_A_H.Radius = 6
+        Me.BtnHome_A_H.Size = New System.Drawing.Size(146, 30)
+        Me.BtnHome_A_H.TabIndex = 22
+        Me.BtnHome_A_H.Text = "Página principal"
+        Me.BtnHome_A_H.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'PictureBox1
         '
@@ -398,86 +398,86 @@ Partial Class FrmSympt
         Me.DgvSympt.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.DgvSympt.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
         '
-        'TxtSympt
+        'TxtSympt_A_S
         '
-        Me.TxtSympt.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.TxtSympt.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
-        Me.TxtSympt.BackColor = System.Drawing.Color.Transparent
-        Me.TxtSympt.BaseColor = System.Drawing.Color.White
-        Me.TxtSympt.BorderColor = System.Drawing.Color.Silver
-        Me.TxtSympt.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.TxtSympt.FocusedBaseColor = System.Drawing.Color.White
-        Me.TxtSympt.FocusedBorderColor = System.Drawing.Color.Silver
-        Me.TxtSympt.FocusedForeColor = System.Drawing.SystemColors.ControlText
-        Me.TxtSympt.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.TxtSympt.ForeColor = System.Drawing.Color.FromArgb(CType(CType(55, Byte), Integer), CType(CType(55, Byte), Integer), CType(CType(55, Byte), Integer))
-        Me.TxtSympt.Location = New System.Drawing.Point(234, 153)
-        Me.TxtSympt.Multiline = True
-        Me.TxtSympt.Name = "TxtSympt"
-        Me.TxtSympt.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.TxtSympt.Radius = 8
-        Me.TxtSympt.SelectedText = ""
-        Me.TxtSympt.Size = New System.Drawing.Size(187, 30)
-        Me.TxtSympt.TabIndex = 14
-        Me.TxtSympt.Text = "Realizar busqueda por síntoma"
+        Me.TxtSympt_A_S.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.TxtSympt_A_S.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
+        Me.TxtSympt_A_S.BackColor = System.Drawing.Color.Transparent
+        Me.TxtSympt_A_S.BaseColor = System.Drawing.Color.White
+        Me.TxtSympt_A_S.BorderColor = System.Drawing.Color.Silver
+        Me.TxtSympt_A_S.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TxtSympt_A_S.FocusedBaseColor = System.Drawing.Color.White
+        Me.TxtSympt_A_S.FocusedBorderColor = System.Drawing.Color.Silver
+        Me.TxtSympt_A_S.FocusedForeColor = System.Drawing.SystemColors.ControlText
+        Me.TxtSympt_A_S.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.TxtSympt_A_S.ForeColor = System.Drawing.Color.FromArgb(CType(CType(55, Byte), Integer), CType(CType(55, Byte), Integer), CType(CType(55, Byte), Integer))
+        Me.TxtSympt_A_S.Location = New System.Drawing.Point(234, 153)
+        Me.TxtSympt_A_S.Multiline = True
+        Me.TxtSympt_A_S.Name = "TxtSympt_A_S"
+        Me.TxtSympt_A_S.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.TxtSympt_A_S.Radius = 8
+        Me.TxtSympt_A_S.SelectedText = ""
+        Me.TxtSympt_A_S.Size = New System.Drawing.Size(187, 30)
+        Me.TxtSympt_A_S.TabIndex = 14
+        Me.TxtSympt_A_S.Text = "Realizar busqueda por síntoma"
         '
-        'BtnAddSympt
+        'BtnAddSympt_A_S
         '
-        Me.BtnAddSympt.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnAddSympt.Animated = True
-        Me.BtnAddSympt.AnimationHoverSpeed = 0.07!
-        Me.BtnAddSympt.AnimationSpeed = 0.03!
-        Me.BtnAddSympt.BackColor = System.Drawing.Color.Transparent
-        Me.BtnAddSympt.BaseColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
-        Me.BtnAddSympt.BorderColor = System.Drawing.Color.Black
-        Me.BtnAddSympt.DialogResult = System.Windows.Forms.DialogResult.None
-        Me.BtnAddSympt.FocusedColor = System.Drawing.Color.Empty
-        Me.BtnAddSympt.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnAddSympt.ForeColor = System.Drawing.Color.White
-        Me.BtnAddSympt.Image = CType(resources.GetObject("BtnAddSympt.Image"), System.Drawing.Image)
-        Me.BtnAddSympt.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right
-        Me.BtnAddSympt.ImageOffsetX = -10
-        Me.BtnAddSympt.ImageSize = New System.Drawing.Size(20, 20)
-        Me.BtnAddSympt.Location = New System.Drawing.Point(897, 214)
-        Me.BtnAddSympt.Name = "BtnAddSympt"
-        Me.BtnAddSympt.OnHoverBaseColor = System.Drawing.Color.Teal
-        Me.BtnAddSympt.OnHoverBorderColor = System.Drawing.Color.Black
-        Me.BtnAddSympt.OnHoverForeColor = System.Drawing.Color.White
-        Me.BtnAddSympt.OnHoverImage = Nothing
-        Me.BtnAddSympt.OnPressedColor = System.Drawing.Color.Black
-        Me.BtnAddSympt.Radius = 11
-        Me.BtnAddSympt.Size = New System.Drawing.Size(138, 20)
-        Me.BtnAddSympt.TabIndex = 23
-        Me.BtnAddSympt.Text = "NUEVO SÍNTOMA"
+        Me.BtnAddSympt_A_S.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnAddSympt_A_S.Animated = True
+        Me.BtnAddSympt_A_S.AnimationHoverSpeed = 0.07!
+        Me.BtnAddSympt_A_S.AnimationSpeed = 0.03!
+        Me.BtnAddSympt_A_S.BackColor = System.Drawing.Color.Transparent
+        Me.BtnAddSympt_A_S.BaseColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.BtnAddSympt_A_S.BorderColor = System.Drawing.Color.Black
+        Me.BtnAddSympt_A_S.DialogResult = System.Windows.Forms.DialogResult.None
+        Me.BtnAddSympt_A_S.FocusedColor = System.Drawing.Color.Empty
+        Me.BtnAddSympt_A_S.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnAddSympt_A_S.ForeColor = System.Drawing.Color.White
+        Me.BtnAddSympt_A_S.Image = CType(resources.GetObject("BtnAddSympt_A_S.Image"), System.Drawing.Image)
+        Me.BtnAddSympt_A_S.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.BtnAddSympt_A_S.ImageOffsetX = -10
+        Me.BtnAddSympt_A_S.ImageSize = New System.Drawing.Size(20, 20)
+        Me.BtnAddSympt_A_S.Location = New System.Drawing.Point(897, 214)
+        Me.BtnAddSympt_A_S.Name = "BtnAddSympt_A_S"
+        Me.BtnAddSympt_A_S.OnHoverBaseColor = System.Drawing.Color.Teal
+        Me.BtnAddSympt_A_S.OnHoverBorderColor = System.Drawing.Color.Black
+        Me.BtnAddSympt_A_S.OnHoverForeColor = System.Drawing.Color.White
+        Me.BtnAddSympt_A_S.OnHoverImage = Nothing
+        Me.BtnAddSympt_A_S.OnPressedColor = System.Drawing.Color.Black
+        Me.BtnAddSympt_A_S.Radius = 11
+        Me.BtnAddSympt_A_S.Size = New System.Drawing.Size(138, 20)
+        Me.BtnAddSympt_A_S.TabIndex = 23
+        Me.BtnAddSympt_A_S.Text = "NUEVO SÍNTOMA"
         '
-        'BtnDelSympt
+        'BtnDelSympt_A_S
         '
-        Me.BtnDelSympt.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnDelSympt.Animated = True
-        Me.BtnDelSympt.AnimationHoverSpeed = 0.07!
-        Me.BtnDelSympt.AnimationSpeed = 0.03!
-        Me.BtnDelSympt.BackColor = System.Drawing.Color.Transparent
-        Me.BtnDelSympt.BaseColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
-        Me.BtnDelSympt.BorderColor = System.Drawing.Color.Black
-        Me.BtnDelSympt.DialogResult = System.Windows.Forms.DialogResult.None
-        Me.BtnDelSympt.FocusedColor = System.Drawing.Color.Empty
-        Me.BtnDelSympt.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnDelSympt.ForeColor = System.Drawing.Color.White
-        Me.BtnDelSympt.Image = CType(resources.GetObject("BtnDelSympt.Image"), System.Drawing.Image)
-        Me.BtnDelSympt.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right
-        Me.BtnDelSympt.ImageOffsetX = -10
-        Me.BtnDelSympt.ImageSize = New System.Drawing.Size(20, 20)
-        Me.BtnDelSympt.Location = New System.Drawing.Point(738, 214)
-        Me.BtnDelSympt.Name = "BtnDelSympt"
-        Me.BtnDelSympt.OnHoverBaseColor = System.Drawing.Color.Teal
-        Me.BtnDelSympt.OnHoverBorderColor = System.Drawing.Color.Black
-        Me.BtnDelSympt.OnHoverForeColor = System.Drawing.Color.White
-        Me.BtnDelSympt.OnHoverImage = Nothing
-        Me.BtnDelSympt.OnPressedColor = System.Drawing.Color.Black
-        Me.BtnDelSympt.Radius = 11
-        Me.BtnDelSympt.Size = New System.Drawing.Size(153, 20)
-        Me.BtnDelSympt.TabIndex = 27
-        Me.BtnDelSympt.Text = "ELIMINAR SÍNTOMA"
+        Me.BtnDelSympt_A_S.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnDelSympt_A_S.Animated = True
+        Me.BtnDelSympt_A_S.AnimationHoverSpeed = 0.07!
+        Me.BtnDelSympt_A_S.AnimationSpeed = 0.03!
+        Me.BtnDelSympt_A_S.BackColor = System.Drawing.Color.Transparent
+        Me.BtnDelSympt_A_S.BaseColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.BtnDelSympt_A_S.BorderColor = System.Drawing.Color.Black
+        Me.BtnDelSympt_A_S.DialogResult = System.Windows.Forms.DialogResult.None
+        Me.BtnDelSympt_A_S.FocusedColor = System.Drawing.Color.Empty
+        Me.BtnDelSympt_A_S.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnDelSympt_A_S.ForeColor = System.Drawing.Color.White
+        Me.BtnDelSympt_A_S.Image = CType(resources.GetObject("BtnDelSympt_A_S.Image"), System.Drawing.Image)
+        Me.BtnDelSympt_A_S.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.BtnDelSympt_A_S.ImageOffsetX = -10
+        Me.BtnDelSympt_A_S.ImageSize = New System.Drawing.Size(20, 20)
+        Me.BtnDelSympt_A_S.Location = New System.Drawing.Point(738, 214)
+        Me.BtnDelSympt_A_S.Name = "BtnDelSympt_A_S"
+        Me.BtnDelSympt_A_S.OnHoverBaseColor = System.Drawing.Color.Teal
+        Me.BtnDelSympt_A_S.OnHoverBorderColor = System.Drawing.Color.Black
+        Me.BtnDelSympt_A_S.OnHoverForeColor = System.Drawing.Color.White
+        Me.BtnDelSympt_A_S.OnHoverImage = Nothing
+        Me.BtnDelSympt_A_S.OnPressedColor = System.Drawing.Color.Black
+        Me.BtnDelSympt_A_S.Radius = 11
+        Me.BtnDelSympt_A_S.Size = New System.Drawing.Size(153, 20)
+        Me.BtnDelSympt_A_S.TabIndex = 27
+        Me.BtnDelSympt_A_S.Text = "ELIMINAR SÍNTOMA"
         '
         'Guna2PictureBox1
         '
@@ -491,67 +491,67 @@ Partial Class FrmSympt
         Me.Guna2PictureBox1.TabStop = False
         Me.Guna2PictureBox1.UseTransparentBackground = True
         '
-        'BtnMod
+        'BtnMod_A_S
         '
-        Me.BtnMod.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnMod.Animated = True
-        Me.BtnMod.AnimationHoverSpeed = 0.07!
-        Me.BtnMod.AnimationSpeed = 0.03!
-        Me.BtnMod.BackColor = System.Drawing.Color.Transparent
-        Me.BtnMod.BaseColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
-        Me.BtnMod.BorderColor = System.Drawing.Color.Black
-        Me.BtnMod.DialogResult = System.Windows.Forms.DialogResult.None
-        Me.BtnMod.FocusedColor = System.Drawing.Color.Empty
-        Me.BtnMod.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnMod.ForeColor = System.Drawing.Color.White
-        Me.BtnMod.Image = CType(resources.GetObject("BtnMod.Image"), System.Drawing.Image)
-        Me.BtnMod.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right
-        Me.BtnMod.ImageOffsetX = -10
-        Me.BtnMod.ImageSize = New System.Drawing.Size(20, 20)
-        Me.BtnMod.Location = New System.Drawing.Point(570, 214)
-        Me.BtnMod.Name = "BtnMod"
-        Me.BtnMod.OnHoverBaseColor = System.Drawing.Color.Teal
-        Me.BtnMod.OnHoverBorderColor = System.Drawing.Color.Black
-        Me.BtnMod.OnHoverForeColor = System.Drawing.Color.White
-        Me.BtnMod.OnHoverImage = Nothing
-        Me.BtnMod.OnPressedColor = System.Drawing.Color.Black
-        Me.BtnMod.Radius = 11
-        Me.BtnMod.Size = New System.Drawing.Size(162, 20)
-        Me.BtnMod.TabIndex = 47
-        Me.BtnMod.Text = "MODIFICAR SÍNTOMA"
+        Me.BtnMod_A_S.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnMod_A_S.Animated = True
+        Me.BtnMod_A_S.AnimationHoverSpeed = 0.07!
+        Me.BtnMod_A_S.AnimationSpeed = 0.03!
+        Me.BtnMod_A_S.BackColor = System.Drawing.Color.Transparent
+        Me.BtnMod_A_S.BaseColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.BtnMod_A_S.BorderColor = System.Drawing.Color.Black
+        Me.BtnMod_A_S.DialogResult = System.Windows.Forms.DialogResult.None
+        Me.BtnMod_A_S.FocusedColor = System.Drawing.Color.Empty
+        Me.BtnMod_A_S.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnMod_A_S.ForeColor = System.Drawing.Color.White
+        Me.BtnMod_A_S.Image = CType(resources.GetObject("BtnMod_A_S.Image"), System.Drawing.Image)
+        Me.BtnMod_A_S.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.BtnMod_A_S.ImageOffsetX = -10
+        Me.BtnMod_A_S.ImageSize = New System.Drawing.Size(20, 20)
+        Me.BtnMod_A_S.Location = New System.Drawing.Point(570, 214)
+        Me.BtnMod_A_S.Name = "BtnMod_A_S"
+        Me.BtnMod_A_S.OnHoverBaseColor = System.Drawing.Color.Teal
+        Me.BtnMod_A_S.OnHoverBorderColor = System.Drawing.Color.Black
+        Me.BtnMod_A_S.OnHoverForeColor = System.Drawing.Color.White
+        Me.BtnMod_A_S.OnHoverImage = Nothing
+        Me.BtnMod_A_S.OnPressedColor = System.Drawing.Color.Black
+        Me.BtnMod_A_S.Radius = 11
+        Me.BtnMod_A_S.Size = New System.Drawing.Size(162, 20)
+        Me.BtnMod_A_S.TabIndex = 47
+        Me.BtnMod_A_S.Text = "MODIFICAR SÍNTOMA"
         '
-        'LblListado
+        'LblListado_A_S
         '
-        Me.LblListado.AccessibleDescription = "LblResults"
-        Me.LblListado.AccessibleName = "LblResults"
-        Me.LblListado.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblListado.ForeColor = System.Drawing.Color.FromArgb(CType(CType(181, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(181, Byte), Integer))
-        Me.LblListado.Location = New System.Drawing.Point(204, 204)
-        Me.LblListado.Name = "LblListado"
-        Me.LblListado.Size = New System.Drawing.Size(844, 37)
-        Me.LblListado.TabIndex = 49
-        Me.LblListado.Text = "LISTADO SÍNTOMAS"
-        Me.LblListado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LblListado_A_S.AccessibleDescription = "LblResults"
+        Me.LblListado_A_S.AccessibleName = "LblResults"
+        Me.LblListado_A_S.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblListado_A_S.ForeColor = System.Drawing.Color.FromArgb(CType(CType(181, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(181, Byte), Integer))
+        Me.LblListado_A_S.Location = New System.Drawing.Point(204, 204)
+        Me.LblListado_A_S.Name = "LblListado_A_S"
+        Me.LblListado_A_S.Size = New System.Drawing.Size(844, 37)
+        Me.LblListado_A_S.TabIndex = 49
+        Me.LblListado_A_S.Text = "LISTADO SÍNTOMAS"
+        Me.LblListado_A_S.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'LblCrit
+        'LblCrit_A_S
         '
-        Me.LblCrit.AccessibleDescription = "LblResults"
-        Me.LblCrit.AccessibleName = "LblResults"
-        Me.LblCrit.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblCrit.ForeColor = System.Drawing.Color.FromArgb(CType(CType(181, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(181, Byte), Integer))
-        Me.LblCrit.Location = New System.Drawing.Point(205, 108)
-        Me.LblCrit.Name = "LblCrit"
-        Me.LblCrit.Size = New System.Drawing.Size(843, 39)
-        Me.LblCrit.TabIndex = 50
-        Me.LblCrit.Text = "CRITERIOS DE BÚSQUEDA"
-        Me.LblCrit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LblCrit_A_S.AccessibleDescription = "LblResults"
+        Me.LblCrit_A_S.AccessibleName = "LblResults"
+        Me.LblCrit_A_S.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblCrit_A_S.ForeColor = System.Drawing.Color.FromArgb(CType(CType(181, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(181, Byte), Integer))
+        Me.LblCrit_A_S.Location = New System.Drawing.Point(205, 108)
+        Me.LblCrit_A_S.Name = "LblCrit_A_S"
+        Me.LblCrit_A_S.Size = New System.Drawing.Size(843, 39)
+        Me.LblCrit_A_S.TabIndex = 50
+        Me.LblCrit_A_S.Text = "CRITERIOS DE BÚSQUEDA"
+        Me.LblCrit_A_S.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'PnlTittle
         '
         Me.PnlTittle.AccessibleDescription = "PnlColorInfo"
         Me.PnlTittle.AccessibleName = "PnlColorInfo"
         Me.PnlTittle.BorderRadius = 11
-        Me.PnlTittle.Controls.Add(Me.Label1)
+        Me.PnlTittle.Controls.Add(Me.LblTittleSymps_A_S)
         Me.PnlTittle.FillColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
         Me.PnlTittle.Location = New System.Drawing.Point(198, 42)
         Me.PnlTittle.Name = "PnlTittle"
@@ -559,19 +559,19 @@ Partial Class FrmSympt
         Me.PnlTittle.Size = New System.Drawing.Size(850, 51)
         Me.PnlTittle.TabIndex = 51
         '
-        'Label1
+        'LblTittleSymps_A_S
         '
-        Me.Label1.AccessibleDescription = "LblResults"
-        Me.Label1.AccessibleName = "LblResults"
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Calibri", 30.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(4, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(436, 51)
-        Me.Label1.TabIndex = 52
-        Me.Label1.Text = "GESTIÓN DE SÍNTOMAS"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LblTittleSymps_A_S.AccessibleDescription = "LblResults"
+        Me.LblTittleSymps_A_S.AccessibleName = "LblResults"
+        Me.LblTittleSymps_A_S.BackColor = System.Drawing.Color.Transparent
+        Me.LblTittleSymps_A_S.Font = New System.Drawing.Font("Calibri", 30.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblTittleSymps_A_S.ForeColor = System.Drawing.Color.White
+        Me.LblTittleSymps_A_S.Location = New System.Drawing.Point(4, 0)
+        Me.LblTittleSymps_A_S.Name = "LblTittleSymps_A_S"
+        Me.LblTittleSymps_A_S.Size = New System.Drawing.Size(436, 51)
+        Me.LblTittleSymps_A_S.TabIndex = 52
+        Me.LblTittleSymps_A_S.Text = "GESTIÓN DE SÍNTOMAS"
+        Me.LblTittleSymps_A_S.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Guna2ControlBox2
         '
@@ -620,13 +620,13 @@ Partial Class FrmSympt
         Me.Controls.Add(Me.Guna2ControlBox2)
         Me.Controls.Add(Me.Guna2ControlBox1)
         Me.Controls.Add(Me.PnlTittle)
-        Me.Controls.Add(Me.BtnMod)
+        Me.Controls.Add(Me.BtnMod_A_S)
         Me.Controls.Add(Me.Guna2PictureBox1)
-        Me.Controls.Add(Me.BtnDelSympt)
-        Me.Controls.Add(Me.BtnAddSympt)
-        Me.Controls.Add(Me.LblListado)
-        Me.Controls.Add(Me.TxtSympt)
-        Me.Controls.Add(Me.LblCrit)
+        Me.Controls.Add(Me.BtnDelSympt_A_S)
+        Me.Controls.Add(Me.BtnAddSympt_A_S)
+        Me.Controls.Add(Me.LblListado_A_S)
+        Me.Controls.Add(Me.TxtSympt_A_S)
+        Me.Controls.Add(Me.LblCrit_A_S)
         Me.Controls.Add(Me.DgvSympt)
         Me.Controls.Add(Me.PanelLeft)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -646,26 +646,26 @@ Partial Class FrmSympt
     Friend WithEvents PanelLeft As Panel
     Friend WithEvents PanelButtons As Panel
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents BtnFaq As Guna.UI.WinForms.GunaButton
-    Friend WithEvents BtnLogout As Guna.UI.WinForms.GunaButton
-    Friend WithEvents BtnPath As Guna.UI.WinForms.GunaButton
-    Friend WithEvents BtnSympt As Guna.UI.WinForms.GunaButton
-    Friend WithEvents BtnAdmin As Guna.UI.WinForms.GunaButton
-    Friend WithEvents BtnMed As Guna.UI.WinForms.GunaButton
-    Friend WithEvents BtnPac As Guna.UI.WinForms.GunaButton
-    Friend WithEvents BtnHome As Guna.UI.WinForms.GunaButton
+    Friend WithEvents BtnFaq_A_H As Guna.UI.WinForms.GunaButton
+    Friend WithEvents BtnLogout_A_H As Guna.UI.WinForms.GunaButton
+    Friend WithEvents BtnPathologies_A_H As Guna.UI.WinForms.GunaButton
+    Friend WithEvents BtnSymp_A_H As Guna.UI.WinForms.GunaButton
+    Friend WithEvents BtnAdmins_A_H As Guna.UI.WinForms.GunaButton
+    Friend WithEvents BtnMedics_A_H As Guna.UI.WinForms.GunaButton
+    Friend WithEvents BtnPatients_A_H As Guna.UI.WinForms.GunaButton
+    Friend WithEvents BtnHome_A_H As Guna.UI.WinForms.GunaButton
     Friend WithEvents PicLogo As PictureBox
     Friend WithEvents PanelBody As Panel
     Friend WithEvents DgvSympt As Guna.UI.WinForms.GunaDataGridView
-    Friend WithEvents TxtSympt As Guna.UI.WinForms.GunaTextBox
-    Friend WithEvents BtnAddSympt As Guna.UI.WinForms.GunaButton
-    Friend WithEvents BtnDelSympt As Guna.UI.WinForms.GunaButton
+    Friend WithEvents TxtSympt_A_S As Guna.UI.WinForms.GunaTextBox
+    Friend WithEvents BtnAddSympt_A_S As Guna.UI.WinForms.GunaButton
+    Friend WithEvents BtnDelSympt_A_S As Guna.UI.WinForms.GunaButton
     Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
-    Friend WithEvents BtnMod As Guna.UI.WinForms.GunaButton
-    Friend WithEvents LblListado As Label
-    Friend WithEvents LblCrit As Label
+    Friend WithEvents BtnMod_A_S As Guna.UI.WinForms.GunaButton
+    Friend WithEvents LblListado_A_S As Label
+    Friend WithEvents LblCrit_A_S As Label
     Friend WithEvents PnlTittle As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents Label1 As Label
+    Friend WithEvents LblTittleSymps_A_S As Label
     Friend WithEvents Guna2ControlBox2 As Guna.UI2.WinForms.Guna2ControlBox
     Friend WithEvents Guna2ControlBox1 As Guna.UI2.WinForms.Guna2ControlBox
     Friend WithEvents DragCtrl As Guna.UI2.WinForms.Guna2DragControl

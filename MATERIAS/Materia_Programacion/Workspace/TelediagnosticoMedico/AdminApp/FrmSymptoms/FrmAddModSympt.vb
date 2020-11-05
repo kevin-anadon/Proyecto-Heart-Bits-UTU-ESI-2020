@@ -14,9 +14,9 @@ Public Class FrmAddModSympt
     Dim idSympt As Integer = 0
 
     Public Sub AddSympt()
-        LblTittle.Text = "INSERTAR NUEVO SÍNTOMA"
-        LblActual.Text = ""
-        ChkReg.Text = "Agregar región"
+        LblTittleAddSymp_A_SA.Text = Translator.Instance.Translate("LblAddSympt_A_SA")
+        LblActual_A_SA.Text = ""
+        ChkReg_A_SA.Text = Translator.Instance.Translate("LblAddRegion_A_SA")
         Add = True
     End Sub
 
@@ -54,6 +54,7 @@ Public Class FrmAddModSympt
     End Sub
 
     Private Sub FrmModSympt_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Translator.Instance.TranslateForm(Me)
         If Add = False Then
             LblSymptTop.Text = SymptBefore.ToUpper()
             TxtDescr.Text = SymptBefore
@@ -69,8 +70,8 @@ Public Class FrmAddModSympt
         Me.Close()
     End Sub
 
-    Private Sub ChkReg_CheckedChanged(sender As Object, e As EventArgs) Handles ChkReg.CheckedChanged
-        If ChkReg.Checked Then
+    Private Sub ChkReg_CheckedChanged(sender As Object, e As EventArgs) Handles ChkReg_A_SA.CheckedChanged
+        If ChkReg_A_SA.Checked Then
             Cmbreg.Show()
         Else
             Cmbreg.Hide()
@@ -94,11 +95,11 @@ Public Class FrmAddModSympt
     End Sub
     Public Sub AddNewRegion()
         For Each regiones As Region In RegBefore
-            If ChkReg.Checked = True Then
+            If ChkReg_A_SA.Checked = True Then
                 If regiones.name = Cmbreg.SelectedItem.ToString() Then
                     RegAfter = New Region(regiones.id, regiones.name)
                 End If
-            ElseIf ChkReg.Checked = False And Add = True Then
+            ElseIf ChkReg_A_SA.Checked = False And Add = True Then
                 RegAfter = New Region(-1, "Null")
             ElseIf Not Lblreg.Text.Equals("No tiene") Then
                 If regiones.name = Lblreg.Text Then
