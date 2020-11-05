@@ -669,14 +669,9 @@ Public Class DataBaseConn
     Public Function ObtainMessages(idRoom As Integer) As List(Of Message)
         Dim con As Connection = Me.Connect
         Dim Msgs As New List(Of Message)
-        Dim x As Integer = 0
 
         Try
             Dim rsObtainMessage As Recordset = con.Execute("SELECT mensaje,id_persona,hora FROM conversa WHERE id_sala=" & idRoom & " ORDER BY hora asc;")
-            If x = 0 And rsObtainMessage.EOF Then
-                Throw New Exception("No existen mensajes en esa sala de chat")
-                x += 1
-            End If
 
             While Not rsObtainMessage.EOF
                 Dim Msg As String = TryCast(rsObtainMessage.Fields("mensaje").Value, String)

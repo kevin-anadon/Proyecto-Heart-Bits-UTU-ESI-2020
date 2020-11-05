@@ -117,6 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="BtnAcceptPet_M_P" xml:space="preserve">
+    <value>Aceptar</value>
+    <comment>Medic. Home. Button. Petitions</comment>
+  </data>
   <data name="BtnAddPath_A_HP" xml:space="preserve">
     <value>NUEVA PATOLOGÍA</value>
     <comment>Admin. HomeP. Boton. Titulo.</comment>
@@ -161,9 +165,17 @@
     <value>Página principal</value>
     <comment>Admin. HomeP. Boton. Titulo.</comment>
   </data>
+  <data name="BtnHome_M_H" xml:space="preserve">
+    <value>Página principal</value>
+    <comment>Medic. Home. Button. Home</comment>
+  </data>
   <data name="BtnLogin_A_L" xml:space="preserve">
     <value>INICIAR SESIÓN</value>
     <comment>Admin. Login. Boton. Titulo1.</comment>
+  </data>
+  <data name="BtnLogin_M_L" xml:space="preserve">
+    <value>INICIAR SESIÓN</value>
+    <comment>Medic. Login. BtnLogin.</comment>
   </data>
   <data name="BtnLogin_P_L" xml:space="preserve">
     <value>INICIAR SESIÓN</value>
@@ -176,6 +188,10 @@
   <data name="BtnLogout_A_HP" xml:space="preserve">
     <value>Cerrar sesión</value>
     <comment>Admin. HomeP. Boton. Titulo.</comment>
+  </data>
+  <data name="BtnLogOut_M_H" xml:space="preserve">
+    <value>Cerrar Sesión</value>
+    <comment>Medic. Home. Button. Log out</comment>
   </data>
   <data name="BtnMedics_A_H" xml:space="preserve">
     <value>Médicos</value>
@@ -221,6 +237,10 @@
     <value>Pacientes</value>
     <comment>Admin. HomeP. Boton. Titulo.</comment>
   </data>
+  <data name="BtnRequest_M_H" xml:space="preserve">
+    <value>Peticiones</value>
+    <comment>Medic. Home. Button. Request</comment>
+  </data>
   <data name="BtnRmPath_A_HP" xml:space="preserve">
     <value>ELIMINAR PATOLOGÍA</value>
     <comment>Admin. HomeP. Boton. Titulo.</comment>
@@ -236,6 +256,34 @@
   <data name="BtnSymp_A_HP" xml:space="preserve">
     <value>Síntomas</value>
     <comment>Admin. HomeP. Boton. Titulo.</comment>
+  </data>
+  <data name="ChkModDiag_M_C" xml:space="preserve">
+    <value>Modificar Diagnóstico</value>
+    <comment>Medic. ChatInfo. CheckBox</comment>
+  </data>
+  <data name="CloseChat_M_C" xml:space="preserve">
+    <value>Cerrar Chat</value>
+    <comment>Medic. Chat. MessageBox</comment>
+  </data>
+  <data name="CloseProgram_M_H" xml:space="preserve">
+    <value>Cerrar Programa</value>
+    <comment>Medic. Home. Message. Tittle</comment>
+  </data>
+  <data name="EndChat_M_C" xml:space="preserve">
+    <value>Está seguro que desea finalizar el chat ?</value>
+    <comment>Medic. Chat. Button</comment>
+  </data>
+  <data name="Label13" xml:space="preserve">
+    <value>Agustín Yorel Acosta Bergonzoni.</value>
+  </data>
+  <data name="Label14" xml:space="preserve">
+    <value>Kevin Mathew Anadón Wappler.</value>
+  </data>
+  <data name="Label15" xml:space="preserve">
+    <value>Mayza Daniela Ferreira Hernández.</value>
+  </data>
+  <data name="Label16" xml:space="preserve">
+    <value>Ignacio Rodríguez Sosa.</value>
   </data>
   <data name="Lbl1_Intro_P_H" xml:space="preserve">
     <value>Introducción</value>
@@ -257,6 +305,12 @@
     <value>Chat</value>
     <comment>Patient. Home. Label. Title.</comment>
   </data>
+  <data name="LblBody_M_L" xml:space="preserve">
+    <value>Ingrese su usuario y contraseña 
+para autenticar y verificar sus credenciales.
+Este Software le permitirá tratar a sus Pacientes, brindándoles a estos, información para concluir un Telediagnóstico.</value>
+    <comment>Medic. Login. Body.</comment>
+  </data>
   <data name="LblChat_P_H" xml:space="preserve">
     <value>En las próximas versiones de nuestro sistema, podrá consultar con un Médico.</value>
     <comment>Patient. Home. Label. SubTitulo 1.</comment>
@@ -272,6 +326,10 @@ Recuerde que:
 El chequeo tiene finalidad informativa y no sustituye la opinión de un médico.
 No usar en caso de emergencias. En caso de una emergencia de salud, llame a su número de emergencias locales inmediatamente. Sus datos están a salvo. La información que usted proporcione es anónima y no será compartida con nadie.</value>
     <comment>Patient. Home. Label. Info 1.</comment>
+  </data>
+  <data name="LblInfo1_A_H" xml:space="preserve">
+    <value>Centro de Atención de Salud.</value>
+    <comment>Medic. Home. Label. Tittle1.</comment>
   </data>
   <data name="LblInfo1_A_HPP" xml:space="preserve">
     <value>Campo Obligatorio [*]</value>
@@ -299,9 +357,29 @@ Que disfrute de nuestro servicio. Toque el botón debajo para empezar el diagnó
     <value>Administración de los Tratamientos</value>
     <comment>Admin. HomePP. Label. Info.</comment>
   </data>
+  <data name="LblInfo3_A_H" xml:space="preserve">
+    <value>V2.0.1 Beta.</value>
+    <comment>Medic. Home. Label. Info 3.</comment>
+  </data>
   <data name="LblInfo4_A_H" xml:space="preserve">
     <value>© Telediagnóstico Médico 2020. Derechos reservados</value>
     <comment>Admin. Home. Label. Info4.</comment>
+  </data>
+  <data name="LblInfoEnd_M_C" xml:space="preserve">
+    <value>FIN</value>
+    <comment>Medic. ChatEnd. Label</comment>
+  </data>
+  <data name="LblInfoPathSuffered_M_C" xml:space="preserve">
+    <value>PATOLOGÍA DIAGNOSTICADA</value>
+    <comment>Medic. ChatInfo. Label</comment>
+  </data>
+  <data name="LblInfoPatient_M_C" xml:space="preserve">
+    <value>PACIENTE</value>
+    <comment>Medic. ChatInfo. Label</comment>
+  </data>
+  <data name="LblInfoSympsSuffered_M_C" xml:space="preserve">
+    <value>SÍNTOMAS SUFRIDOS</value>
+    <comment>Medic. ChatInfo. Label</comment>
   </data>
   <data name="LblInfoText_A_L" xml:space="preserve">
     <value>Ingrese su usuario y contraseña 
@@ -313,13 +391,29 @@ Este Software le permitirá gestionar al Personal, a los Pacientes, los Síntoma
     <value>Ingrese su Cédula de Identidad para autenticar y  verificar sus credenciales. Este Software le permitirá realizar Diagnósticos Primarios y en base de ellos decidirá si quiere iniciar una conversación con un Médico Especialista.</value>
     <comment>Patient. Login. Label. Info.</comment>
   </data>
+  <data name="LblListadoPet_M_P" xml:space="preserve">
+    <value>LISTADO DE PETICIONES</value>
+    <comment>Medic. Home. Label. Petitions</comment>
+  </data>
   <data name="LblMgmentPath_A_HP" xml:space="preserve">
     <value>GESTIÓN DE PATOLOGÍAS</value>
     <comment>Admin. HomeP. Label. Titulo.</comment>
   </data>
+  <data name="LblModDiagnostic_M_C" xml:space="preserve">
+    <value>MODIFICAR DIAGNÓSTICO</value>
+    <comment>Medic. ChatInfoMod. Label</comment>
+  </data>
+  <data name="LblModDiagPath_M_C" xml:space="preserve">
+    <value>Patología</value>
+    <comment>Medic. ChatInfoMod. Label</comment>
+  </data>
   <data name="LblPetitionInfo_P_H" xml:space="preserve">
     <value>GENERANDO PETICIÓN</value>
     <comment>Patient. Home. Label. SubTitulo 4.</comment>
+  </data>
+  <data name="LblPet_M_P" xml:space="preserve">
+    <value>PETICIONES SOLICITADAS</value>
+    <comment>Medic. Home. Label. Petitions</comment>
   </data>
   <data name="LblResultInfoo_P_H" xml:space="preserve">
     <value>Por favor, tenga en cuenta que la lista podría no ser completa y que la información proporcionada tiene una finalidad informativa y no se corresponde con una opinión médica real.</value>
@@ -425,6 +519,10 @@ Este Software le permitirá gestionar al Personal, a los Pacientes, los Síntoma
     <value>Número telefónico</value>
     <comment>Admin. Home. Label. SubTitulo9.</comment>
   </data>
+  <data name="LblSystemChat_M_C" xml:space="preserve">
+    <value>Sistema</value>
+    <comment>Medic. Chat. Label</comment>
+  </data>
   <data name="LblTitle1Patient_P_H" xml:space="preserve">
     <value>Por favor, seleccione todas las afirmaciones 
 que se apliquen a usted.</value>
@@ -462,6 +560,10 @@ que se apliquen a usted.</value>
     <value>NUEVAMENTE.</value>
     <comment>Admin. Login. Label. Titulo2.</comment>
   </data>
+  <data name="LblTitle2_M_H" xml:space="preserve">
+    <value>ACERCA DEL MÉDICO</value>
+    <comment>Medic. Home. Label. Title2.</comment>
+  </data>
   <data name="LblTitle2_P_L" xml:space="preserve">
     <value>NUEVAMENTE</value>
     <comment>Patient. Login. Label. Titulo2.</comment>
@@ -473,6 +575,18 @@ que se apliquen a usted.</value>
   <data name="LblTitleIntro_P_H" xml:space="preserve">
     <value>¡Hola!</value>
     <comment>Patient. Home. Label. Titulo.</comment>
+  </data>
+  <data name="LblTittle1_M_L" xml:space="preserve">
+    <value>GUSTO EN VERLO</value>
+    <comment>Medic. Login. Tittle1.</comment>
+  </data>
+  <data name="LblTittle2_M_L" xml:space="preserve">
+    <value>NUEVAMENTE.</value>
+    <comment>Medic. Login. Tittle2.</comment>
+  </data>
+  <data name="LblTittleChat_M_C" xml:space="preserve">
+    <value>En una conversación con el Paciente:</value>
+    <comment>Medic. Chat. Label</comment>
   </data>
   <data name="LblTxt1_Info_P_H" xml:space="preserve">
     <value>Tengo sobrepeso, o estoy obeso.</value>
@@ -497,6 +611,14 @@ que se apliquen a usted.</value>
   <data name="LblTxt6_Info_P_H" xml:space="preserve">
     <value>Tengo diabétes.</value>
     <comment>Patient. Home. Label. Info 6.</comment>
+  </data>
+  <data name="LogOut_M_H" xml:space="preserve">
+    <value>Está seguro que desea cerrar sesión ?</value>
+    <comment>Medic. Home. Message</comment>
+  </data>
+  <data name="Medic. Chat. Label" xml:space="preserve">
+    <value>Patient</value>
+    <comment>Medic. Chat. Label</comment>
   </data>
   <data name="Rbtn1_Idk_P_H" xml:space="preserve">
     <value>No lo sé.</value>

@@ -209,6 +209,8 @@
     <None Include="Resources\Eng_Selected.jpg" />
     <None Include="Resources\Es.jpg" />
     <None Include="Resources\Es_Selected.jpg" />
+    <Content Include="Resources\AboutSystem.png" />
+    <None Include="Resources\UserMed.png" />
     <Content Include="TelediganosticoMedico_Logo.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

@@ -61,3 +61,4 @@ D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMe
 D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\Testing\obj\Debug\Testing.dll
 D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\Testing\obj\Debug\Testing.xml
 D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\Testing\obj\Debug\Testing.pdb
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\Testing\bin\Debug\Guna.UI2.dll

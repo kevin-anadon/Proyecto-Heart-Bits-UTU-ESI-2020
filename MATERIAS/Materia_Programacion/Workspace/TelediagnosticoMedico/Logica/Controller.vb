@@ -6,7 +6,7 @@ Public Class Controller 'Logic
     'Atributos
     Private ReadOnly CQConnection As New DataBaseConn()
     Public Shared Property Instance As New Controller
-    Private Property idRoom As Integer = 0
+    Dim idRoom As Integer = 0
     Dim ProbabilitySelected As Integer = 0 'Indicador de cuanta probabilidad tiene una patología de ser la diagnosticada
     Dim PathMostProbably As Pathology = Nothing 'Patología que será la que tenga más probabilidad de tener el usuario
 
@@ -72,7 +72,13 @@ Public Class Controller 'Logic
     End Function
     Public Function ObtainMessages(idRoom As Integer) As List(Of Message)
         Try
-            Return CQConnection.ObtainMessages(idRoom)
+            If idRoom = 0 Then
+                Throw New Exception("Id de la sala no puede ser 0")
+            ElseIf idRoom = Nothing Then
+                Throw New Exception("Id de la sala fue nothing")
+            Else
+                Return CQConnection.ObtainMessages(idRoom)
+            End If
         Catch ex As Exception
             Throw ex
         End Try
@@ -740,7 +746,7 @@ Public Class Controller 'Logic
             Dim SMTPServer As New SmtpClient
 
             Mail.From = New MailAddress("group.heartbits@gmail.com")
-            Mail.To.Add(New MailAddress("mathewanadon@gmail.com"))
+            Mail.To.Add(New MailAddress(Email))
             Mail.Subject = Subject
             Mail.Body = Body
 

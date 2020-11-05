@@ -8,223 +8,300 @@ Logic
 <members>
 <member name="T:Logic.My.Resources.English">
 <summary>
-  A strongly-typed resource class, for looking up localized strings, etc.
+  Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.ResourceManager">
 <summary>
-  Returns the cached ResourceManager instance used by this class.
+  Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.Culture">
 <summary>
-  Overrides the current thread's CurrentUICulture property for all
-  resource lookups using this strongly typed resource class.
+  Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
+  búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.English.BtnAcceptPet_M_P">
+<summary>
+  Busca una cadena traducida similar a Accept.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.BtnAddPath_A_HP">
 <summary>
-  Looks up a localized string similar to ADD PATHOLOGY.
+  Busca una cadena traducida similar a ADD PATHOLOGY.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.BtnAddPath_A_HPP">
 <summary>
-  Looks up a localized string similar to Modify pathology.
+  Busca una cadena traducida similar a Modify pathology.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.BtnAdmins_A_H">
 <summary>
-  Looks up a localized string similar to Admins.
+  Busca una cadena traducida similar a Admins.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.BtnAdmins_A_HP">
 <summary>
-  Looks up a localized string similar to Admins.
+  Busca una cadena traducida similar a Admins.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.BtnBack_Intro2_P_H">
 <summary>
-  Looks up a localized string similar to BACK.
+  Busca una cadena traducida similar a BACK.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.BtnBack_Patient1_P_H">
 <summary>
-  Looks up a localized string similar to BACK.
+  Busca una cadena traducida similar a BACK.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.BtnDropPathology_P_H">
 <summary>
-  Looks up a localized string similar to REMOVE SYMPTOM.
+  Busca una cadena traducida similar a REMOVE SYMPTOM.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.BtnEnd_P_H">
 <summary>
-  Looks up a localized string similar to FINALIZE.
+  Busca una cadena traducida similar a FINALIZE.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.BtnExit_A_L">
 <summary>
-  Looks up a localized string similar to LOGOUT.
+  Busca una cadena traducida similar a LOGOUT.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.BtnHome_A_H">
 <summary>
-  Looks up a localized string similar to Home.
+  Busca una cadena traducida similar a Home.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.BtnHome_A_HP">
 <summary>
-  Looks up a localized string similar to Home.
+  Busca una cadena traducida similar a Home.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.English.BtnHome_M_H">
+<summary>
+  Busca una cadena traducida similar a Home page.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.BtnLogin_A_L">
 <summary>
-  Looks up a localized string similar to LOGIN.
+  Busca una cadena traducida similar a LOGIN.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.English.BtnLogin_M_L">
+<summary>
+  Busca una cadena traducida similar a LOGIN.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.BtnLogin_P_L">
 <summary>
-  Looks up a localized string similar to LOGIN.
+  Busca una cadena traducida similar a LOGIN.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.BtnLogout_A_H">
 <summary>
-  Looks up a localized string similar to Logout.
+  Busca una cadena traducida similar a Logout.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.BtnLogout_A_HP">
 <summary>
-  Looks up a localized string similar to Logout.
+  Busca una cadena traducida similar a Logout.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.English.BtnLogOut_M_H">
+<summary>
+  Busca una cadena traducida similar a Log out.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.BtnMedics_A_H">
 <summary>
-  Looks up a localized string similar to Medics.
+  Busca una cadena traducida similar a Medics.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.BtnMedics_A_HP">
 <summary>
-  Looks up a localized string similar to Medics.
+  Busca una cadena traducida similar a Medics.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.BtnModifyPath_A_HP">
 <summary>
-  Looks up a localized string similar to MODIFY PATHOLOGY.
+  Busca una cadena traducida similar a MODIFY PATHOLOGY.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.BtnNext_Intro2_P_H">
 <summary>
-  Looks up a localized string similar to START.
+  Busca una cadena traducida similar a START.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.BtnNext_Patient_P_H">
 <summary>
-  Looks up a localized string similar to NEXT.
+  Busca una cadena traducida similar a NEXT.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.BtnNext_Result_P_H">
 <summary>
-  Looks up a localized string similar to NEXT.
+  Busca una cadena traducida similar a NEXT.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.BtnNext_Symptom1_P_H">
 <summary>
-  Looks up a localized string similar to NEXT.
+  Busca una cadena traducida similar a NEXT.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.BtnPathologies_A_H">
 <summary>
-  Looks up a localized string similar to Pathologies.
+  Busca una cadena traducida similar a Pathologies.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.BtnPathologies_A_HP">
 <summary>
-  Looks up a localized string similar to Pathologies.
+  Busca una cadena traducida similar a Pathologies.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.BtnPatients_A_H">
 <summary>
-  Looks up a localized string similar to Patients.
+  Busca una cadena traducida similar a Patients.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.BtnPatients_A_HP">
 <summary>
-  Looks up a localized string similar to Patients.
+  Busca una cadena traducida similar a Patients.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.English.BtnRequest_M_H">
+<summary>
+  Busca una cadena traducida similar a Requests.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.BtnRmPath_A_HP">
 <summary>
-  Looks up a localized string similar to REMOVE PATHOLOGY.
+  Busca una cadena traducida similar a REMOVE PATHOLOGY.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.BtnSendChatP_P_H">
 <summary>
-  Looks up a localized string similar to REQUEST CHAT.
+  Busca una cadena traducida similar a REQUEST CHAT.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.BtnSymp_A_H">
 <summary>
-  Looks up a localized string similar to Symptoms.
+  Busca una cadena traducida similar a Symptoms.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.BtnSymp_A_HP">
 <summary>
-  Looks up a localized string similar to Symptoms.
+  Busca una cadena traducida similar a Symptoms.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.English.ChkModDiag_M_C">
+<summary>
+  Busca una cadena traducida similar a Modify Diagnose.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.English.CloseChat_M_C">
+<summary>
+  Busca una cadena traducida similar a Close Chat.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.English.CloseProgram_M_H">
+<summary>
+  Busca una cadena traducida similar a Close Program.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.English.EndChat_M_C">
+<summary>
+  Busca una cadena traducida similar a Are you sure you want to end the chat?.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.English.Label13">
+<summary>
+  Busca una cadena traducida similar a Agustín Yorel Acosta Bergonzoni..
+</summary>
+</member>
+<member name="P:Logic.My.Resources.English.Label14">
+<summary>
+  Busca una cadena traducida similar a Kevin Mathew Anadón Wappler..
+</summary>
+</member>
+<member name="P:Logic.My.Resources.English.Label15">
+<summary>
+  Busca una cadena traducida similar a Mayza Daniela Ferreira Hernández..
+</summary>
+</member>
+<member name="P:Logic.My.Resources.English.Label16">
+<summary>
+  Busca una cadena traducida similar a Ignacio Rodríguez Sosa..
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.Lbl1_Intro_P_H">
 <summary>
-  Looks up a localized string similar to Introduction.
+  Busca una cadena traducida similar a Introduction.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.Lbl2_Patient_P_H">
 <summary>
-  Looks up a localized string similar to Patient.
+  Busca una cadena traducida similar a Patient.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.Lbl3_Symptom_P_H">
 <summary>
-  Looks up a localized string similar to Symptoms.
+  Busca una cadena traducida similar a Symptoms.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.Lbl4_Result_P_H">
 <summary>
-  Looks up a localized string similar to Results.
+  Busca una cadena traducida similar a Results.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.Lbl5_Chat_P_H">
 <summary>
-  Looks up a localized string similar to Chat.
+  Busca una cadena traducida similar a Chat.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.English.LblBody_M_L">
+<summary>
+  Busca una cadena traducida similar a Enter your username and password
+to authenticate and verify your credentials.
+This Software will allow you to treat your Patients, providing them with information to conclude a Tele Diagnosis..
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.LblChat_P_H">
 <summary>
-  Looks up a localized string similar to In future versions of our system, you will be able to consult with a Doctor..
+  Busca una cadena traducida similar a In future versions of our system, you will be able to consult with a Doctor..
+</summary>
+</member>
+<member name="P:Logic.My.Resources.English.LblInfo1_A_H">
+<summary>
+  Busca una cadena traducida similar a Health Care Center.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.LblInfo1_A_HPP">
 <summary>
-  Looks up a localized string similar to Required field.
+  Busca una cadena traducida similar a Required field.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.LblInfo1_A_SS">
 <summary>
-  Looks up a localized string similar to Generating connection with the Database..
+  Busca una cadena traducida similar a Generating connection with the Database..
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.LblInfo1_P_SS">
 <summary>
-  Looks up a localized string similar to Generating connection with the Database..
+  Busca una cadena traducida similar a Generating connection with the Database..
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.LblInfo1Intro1_P_H">
 <summary>
-  Looks up a localized string similar to You are about to perform a brief (3 min), safe and anonymous medical check-up. Your answers will be carefully analyzed and you will be told the possible causes of your safe symptoms. The information you provide is anonymous and will not be shared with anyone..
+  Busca una cadena traducida similar a You are about to perform a brief (3 min), safe and anonymous medical check-up. Your answers will be carefully analyzed and you will be told the possible causes of your safe symptoms. The information you provide is anonymous and will not be shared with anyone..
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.LblInfo1Intro2_P_H">
 <summary>
-  Looks up a localized string similar to Before using this tool, please read the terms of service.
+  Busca una cadena traducida similar a Before using this tool, please read the terms of service.
 
 Remember that:
 The checkup is for informational purposes and is not a substitute for a doctor&apos;s opinion.
@@ -233,297 +310,377 @@ Do not use in an emergency. In the event of a health emergency, call your local 
 </member>
 <member name="P:Logic.My.Resources.English.LblInfo2_A_H">
 <summary>
-  Looks up a localized string similar to Management System for Administrators..
+  Busca una cadena traducida similar a Management System for Administrators..
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.LblInfo2_A_HPP">
 <summary>
-  Looks up a localized string similar to Management treatments.
+  Busca una cadena traducida similar a Management treatments.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.LblInfo2Intro1_P_H">
 <summary>
-  Looks up a localized string similar to This Medical System was created with the purpose of fulfilling the expectations of an Assistant Program, which will guide you throughout your diagnosis of pathologies that you may suffer. As this is an Assistant, you will be able to know your Pathologies in the most agile and simple way.
+  Busca una cadena traducida similar a This Medical System was created with the purpose of fulfilling the expectations of an Assistant Program, which will guide you throughout your diagnosis of pathologies that you may suffer. As this is an Assistant, you will be able to know your Pathologies in the most agile and simple way.
 
 Enjoy our service. Tap the button below to start the anonymous diagnosis and it will not be shared with anyone..
 </summary>
 </member>
+<member name="P:Logic.My.Resources.English.LblInfo3_A_H">
+<summary>
+  Busca una cadena traducida similar a V2.0.1 Beta..
+</summary>
+</member>
 <member name="P:Logic.My.Resources.English.LblInfo4_A_H">
 <summary>
-  Looks up a localized string similar to © Telediagnóstico Médico 2020. All rights reserved..
+  Busca una cadena traducida similar a © Telediagnóstico Médico 2020. All rights reserved..
+</summary>
+</member>
+<member name="P:Logic.My.Resources.English.LblInfoEnd_M_C">
+<summary>
+  Busca una cadena traducida similar a END.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.English.LblInfoPathSuffered_M_C">
+<summary>
+  Busca una cadena traducida similar a DIAGNOSED PATHOLOGY.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.English.LblInfoPatient_M_C">
+<summary>
+  Busca una cadena traducida similar a PATIENT.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.English.LblInfoSympsSuffered_M_C">
+<summary>
+  Busca una cadena traducida similar a SUFFERED SYMPTOMS.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.LblInfoText_A_L">
 <summary>
-  Looks up a localized string similar to Ingrese su usuario y contraseña 
+  Busca una cadena traducida similar a Ingrese su usuario y contraseña 
 para autenticar y verificar sus credenciales.
 Este Software le permitirá gestionar al Personal, a los Pacientes, los Síntomas y sus Patologías asociadas..
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.LblInfoText_P_L">
 <summary>
-  Looks up a localized string similar to Enter your Identity Card to authenticate and verify your credentials. This Software will allow you to make Primary Diagnoses and based on them you will decide if you want to start a conversation with a Medical Specialist..
+  Busca una cadena traducida similar a Enter your Identity Card to authenticate and verify your credentials. This Software will allow you to make Primary Diagnoses and based on them you will decide if you want to start a conversation with a Medical Specialist..
+</summary>
+</member>
+<member name="P:Logic.My.Resources.English.LblListadoPet_M_P">
+<summary>
+  Busca una cadena traducida similar a LIST OF REQUESTS.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.LblMgmentPath_A_HP">
 <summary>
-  Looks up a localized string similar to MANAGEMENT PATHOLOGIES.
+  Busca una cadena traducida similar a MANAGEMENT PATHOLOGIES.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.English.LblModDiagnostic_M_C">
+<summary>
+  Busca una cadena traducida similar a MODIFY DIAGNOSE.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.English.LblModDiagPath_M_C">
+<summary>
+  Busca una cadena traducida similar a Pathology.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.English.LblPatientChat_M_C">
+<summary>
+  Busca una cadena traducida similar a Patient.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.English.LblPet_M_P">
+<summary>
+  Busca una cadena traducida similar a REQUESTED PETITIONS.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.LblPetitionInfo_P_H">
 <summary>
-  Looks up a localized string similar to GENERATING REQUEST.
+  Busca una cadena traducida similar a GENERATING REQUEST.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.LblResultInfoo_P_H">
 <summary>
-  Looks up a localized string similar to Please note that the list may not be complete and that the information provided is for informational purposes and does not reflect an actual medical opinion..
+  Busca una cadena traducida similar a Please note that the list may not be complete and that the information provided is for informational purposes and does not reflect an actual medical opinion..
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.LblResultPath_A_HP">
 <summary>
-  Looks up a localized string similar to LIST OF PATHOLOGIES.
+  Busca una cadena traducida similar a LIST OF PATHOLOGIES.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.LblResults_P_H">
 <summary>
-  Looks up a localized string similar to Results.
+  Busca una cadena traducida similar a Results.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.LblResultsTitle_P_H">
 <summary>
-  Looks up a localized string similar to PATHOLOGIES SUFFERED.
+  Busca una cadena traducida similar a PATHOLOGIES SUFFERED.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.LblSearch_A_HP">
 <summary>
-  Looks up a localized string similar to SEARCH CRITERIA.
+  Busca una cadena traducida similar a SEARCH CRITERIA.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.LblSubTitle1_A_H">
 <summary>
-  Looks up a localized string similar to Owner.
+  Busca una cadena traducida similar a Owner.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.LblSubTitle1_A_HPP">
 <summary>
-  Looks up a localized string similar to Pathology name.
+  Busca una cadena traducida similar a Pathology name.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.LblSubTitle1Patient_P_H">
 <summary>
-  Looks up a localized string similar to Choose one answer in each row..
+  Busca una cadena traducida similar a Choose one answer in each row..
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.LblSubTitle1Symp_P_H">
 <summary>
-  Looks up a localized string similar to Please choose the symptoms from the drop down list..
+  Busca una cadena traducida similar a Please choose the symptoms from the drop down list..
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.LblSubTitle2_A_H">
 <summary>
-  Looks up a localized string similar to System.
+  Busca una cadena traducida similar a System.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.LblSubTitle2_A_HPP">
 <summary>
-  Looks up a localized string similar to Mortality index.
+  Busca una cadena traducida similar a Mortality index.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.LblSubTitle2Symp_P_H">
 <summary>
-  Looks up a localized string similar to Select an item to delete.
+  Busca una cadena traducida similar a Select an item to delete.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.LblSubTitle3_A_H">
 <summary>
-  Looks up a localized string similar to System version.
+  Busca una cadena traducida similar a System version.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.LblSubTitle3_A_HPP">
 <summary>
-  Looks up a localized string similar to Pathology description.
+  Busca una cadena traducida similar a Pathology description.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.LblSubTitle4_A_H">
 <summary>
-  Looks up a localized string similar to System&apos;s developers.
+  Busca una cadena traducida similar a System&apos;s developers.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.LblSubTitle4_A_HPP">
 <summary>
-  Looks up a localized string similar to Kind of pathology.
+  Busca una cadena traducida similar a Kind of pathology.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.LblSubTitle5_A_HPP">
 <summary>
-  Looks up a localized string similar to Treatment name.
+  Busca una cadena traducida similar a Treatment name.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.LblSubTitle6_A_HPP">
 <summary>
-  Looks up a localized string similar to Treatment description.
+  Busca una cadena traducida similar a Treatment description.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.LblSubTitle7_A_HPP">
 <summary>
-  Looks up a localized string similar to Kind of treatment.
+  Busca una cadena traducida similar a Kind of treatment.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.LblSubTitle8_A_HPP">
 <summary>
-  Looks up a localized string similar to LIST OF TREATMENTS FOR PATHOLOGY.
+  Busca una cadena traducida similar a LIST OF TREATMENTS FOR PATHOLOGY.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.LblSubTitleAge_A_H">
 <summary>
-  Looks up a localized string similar to Age.
+  Busca una cadena traducida similar a Age.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.LblSubTitleConn_A_H">
 <summary>
-  Looks up a localized string similar to Last Connection.
+  Busca una cadena traducida similar a Last Connection.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.LblSubTitleCred_A_H">
 <summary>
-  Looks up a localized string similar to Credential.
+  Busca una cadena traducida similar a Credential.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.LblSubTitleEmail_A_H">
 <summary>
-  Looks up a localized string similar to Email.
+  Busca una cadena traducida similar a Email.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.LblSubTitleName_A_H">
 <summary>
-  Looks up a localized string similar to Full Name.
+  Busca una cadena traducida similar a Full Name.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.LblSubTitleTel_A_H">
 <summary>
-  Looks up a localized string similar to Number Phone.
+  Busca una cadena traducida similar a Number Phone.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.English.LblSystemChat_M_C">
+<summary>
+  Busca una cadena traducida similar a System.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.LblTitle1_A_H">
 <summary>
-  Looks up a localized string similar to ABOUT SYSTEM.
+  Busca una cadena traducida similar a ABOUT SYSTEM.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.LblTitle1_A_HPP">
 <summary>
-  Looks up a localized string similar to MODIFY PATHOLOGY.
+  Busca una cadena traducida similar a MODIFY PATHOLOGY.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.LblTitle1_A_L">
 <summary>
-  Looks up a localized string similar to WELCOME BACK.
+  Busca una cadena traducida similar a WELCOME BACK.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.LblTitle1_P_L">
 <summary>
-  Looks up a localized string similar to WELCOME BACK.
+  Busca una cadena traducida similar a WELCOME BACK.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.LblTitle1Patient_P_H">
 <summary>
-  Looks up a localized string similar to Please select all statements
+  Busca una cadena traducida similar a Please select all statements
 that apply to you..
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.LblTitle1Symp_P_H">
 <summary>
-  Looks up a localized string similar to Add your symptoms to the list..
+  Busca una cadena traducida similar a Add your symptoms to the list..
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.LblTitle2_A_H">
 <summary>
-  Looks up a localized string similar to ABOUT ADMINISTRATOR.
+  Busca una cadena traducida similar a ABOUT ADMINISTRATOR.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.LblTitle2_A_L">
 <summary>
-  Looks up a localized string similar to  .
+  Busca una cadena traducida similar a  .
+</summary>
+</member>
+<member name="P:Logic.My.Resources.English.LblTitle2_M_H">
+<summary>
+  Busca una cadena traducida similar a ABOUT MEDIC.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.LblTitle2_P_L">
 <summary>
-  Looks up a localized string similar to    .
+  Busca una cadena traducida similar a    .
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.LblTitle2Symp_P_H">
 <summary>
-  Looks up a localized string similar to Symptoms you suffer from..
+  Busca una cadena traducida similar a Symptoms you suffer from..
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.LblTitleIntro_P_H">
 <summary>
-  Looks up a localized string similar to Hello!.
+  Busca una cadena traducida similar a Hello!.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.LblTitleIntro2_P_H">
 <summary>
-  Looks up a localized string similar to License Terms..
+  Busca una cadena traducida similar a License Terms..
+</summary>
+</member>
+<member name="P:Logic.My.Resources.English.LblTittle1_M_L">
+<summary>
+  Busca una cadena traducida similar a  .
+</summary>
+</member>
+<member name="P:Logic.My.Resources.English.LblTittle2_M_L">
+<summary>
+  Busca una cadena traducida similar a WELCOME BACK.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.English.LblTittleChat_M_C">
+<summary>
+  Busca una cadena traducida similar a In a conversation with the Patient:.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.LblTxt1_Info_P_H">
 <summary>
-  Looks up a localized string similar to I am overweight, or I am obese..
+  Busca una cadena traducida similar a I am overweight, or I am obese..
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.LblTxt2_Info_P_H">
 <summary>
-  Looks up a localized string similar to I smoke cigarettes..
+  Busca una cadena traducida similar a I smoke cigarettes..
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.LblTxt3_Info_P_H">
 <summary>
-  Looks up a localized string similar to I have recently suffered an injury..
+  Busca una cadena traducida similar a I have recently suffered an injury..
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.LblTxt4_Info_P_H">
 <summary>
-  Looks up a localized string similar to I have high cholesterol..
+  Busca una cadena traducida similar a I have high cholesterol..
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.LblTxt5_Info_P_H">
 <summary>
-  Looks up a localized string similar to I have hypertension..
+  Busca una cadena traducida similar a I have hypertension..
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.LblTxt6_Info_P_H">
 <summary>
-  Looks up a localized string similar to I have diabetes..
+  Busca una cadena traducida similar a I have diabetes..
+</summary>
+</member>
+<member name="P:Logic.My.Resources.English.LogOut_M_H">
+<summary>
+  Busca una cadena traducida similar a Are you sure you want to log out?.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.Rbtn1_Idk_P_H">
 <summary>
-  Looks up a localized string similar to I don&apos;t know..
+  Busca una cadena traducida similar a I don&apos;t know..
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.Rbtn1_No_P_H">
 <summary>
-  Looks up a localized string similar to No..
+  Busca una cadena traducida similar a No..
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.Rbtn1_Yes_P_H">
 <summary>
-  Looks up a localized string similar to Yes..
+  Busca una cadena traducida similar a Yes..
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.RdbtnMedicine_A_HPP">
 <summary>
-  Looks up a localized string similar to Medicine.
+  Busca una cadena traducida similar a Medicine.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.RdbtnQuir_A_HPP">
 <summary>
-  Looks up a localized string similar to Surgical.
+  Busca una cadena traducida similar a Surgical.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.TxtSearchPath_A_HP">
 <summary>
-  Looks up a localized string similar to Make search by pathologies.
+  Busca una cadena traducida similar a Make search by pathologies.
 </summary>
 </member>
 <member name="T:Logic.My.Resources.Resources">
@@ -544,223 +701,300 @@ that apply to you..
 </member>
 <member name="T:Logic.My.Resources.Spanish">
 <summary>
-  A strongly-typed resource class, for looking up localized strings, etc.
+  Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.ResourceManager">
 <summary>
-  Returns the cached ResourceManager instance used by this class.
+  Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.Culture">
 <summary>
-  Overrides the current thread's CurrentUICulture property for all
-  resource lookups using this strongly typed resource class.
+  Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
+  búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.Spanish.BtnAcceptPet_M_P">
+<summary>
+  Busca una cadena traducida similar a Aceptar.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.BtnAddPath_A_HP">
 <summary>
-  Looks up a localized string similar to NUEVA PATOLOGÍA.
+  Busca una cadena traducida similar a NUEVA PATOLOGÍA.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.BtnAddPath_A_HPP">
 <summary>
-  Looks up a localized string similar to Modificar Patología.
+  Busca una cadena traducida similar a Modificar Patología.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.BtnAdmins_A_H">
 <summary>
-  Looks up a localized string similar to Administradores.
+  Busca una cadena traducida similar a Administradores.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.BtnAdmins_A_HP">
 <summary>
-  Looks up a localized string similar to Administradores.
+  Busca una cadena traducida similar a Administradores.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.BtnBack_Intro2_P_H">
 <summary>
-  Looks up a localized string similar to ATRAS.
+  Busca una cadena traducida similar a ATRAS.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.BtnBack_Patient1_P_H">
 <summary>
-  Looks up a localized string similar to ATRAS.
+  Busca una cadena traducida similar a ATRAS.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.BtnDropPathology_P_H">
 <summary>
-  Looks up a localized string similar to QUITAR SÍNTOMA.
+  Busca una cadena traducida similar a QUITAR SÍNTOMA.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.BtnEnd_P_H">
 <summary>
-  Looks up a localized string similar to FINALIZAR.
+  Busca una cadena traducida similar a FINALIZAR.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.BtnExit_A_L">
 <summary>
-  Looks up a localized string similar to CERRAR SESIÓN.
+  Busca una cadena traducida similar a CERRAR SESIÓN.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.BtnHome_A_H">
 <summary>
-  Looks up a localized string similar to Página principal.
+  Busca una cadena traducida similar a Página principal.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.BtnHome_A_HP">
 <summary>
-  Looks up a localized string similar to Página principal.
+  Busca una cadena traducida similar a Página principal.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.Spanish.BtnHome_M_H">
+<summary>
+  Busca una cadena traducida similar a Página principal.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.BtnLogin_A_L">
 <summary>
-  Looks up a localized string similar to INICIAR SESIÓN.
+  Busca una cadena traducida similar a INICIAR SESIÓN.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.Spanish.BtnLogin_M_L">
+<summary>
+  Busca una cadena traducida similar a INICIAR SESIÓN.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.BtnLogin_P_L">
 <summary>
-  Looks up a localized string similar to INICIAR SESIÓN.
+  Busca una cadena traducida similar a INICIAR SESIÓN.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.BtnLogout_A_H">
 <summary>
-  Looks up a localized string similar to Cerrar sesión.
+  Busca una cadena traducida similar a Cerrar sesión.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.BtnLogout_A_HP">
 <summary>
-  Looks up a localized string similar to Cerrar sesión.
+  Busca una cadena traducida similar a Cerrar sesión.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.Spanish.BtnLogOut_M_H">
+<summary>
+  Busca una cadena traducida similar a Cerrar Sesión.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.BtnMedics_A_H">
 <summary>
-  Looks up a localized string similar to Médicos.
+  Busca una cadena traducida similar a Médicos.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.BtnMedics_A_HP">
 <summary>
-  Looks up a localized string similar to Médicos.
+  Busca una cadena traducida similar a Médicos.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.BtnModifyPath_A_HP">
 <summary>
-  Looks up a localized string similar to MODIFICAR PATOLOGÍA.
+  Busca una cadena traducida similar a MODIFICAR PATOLOGÍA.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.BtnNext_Intro2_P_H">
 <summary>
-  Looks up a localized string similar to EMPEZAR.
+  Busca una cadena traducida similar a EMPEZAR.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.BtnNext_Patient_P_H">
 <summary>
-  Looks up a localized string similar to SIGUIENTE.
+  Busca una cadena traducida similar a SIGUIENTE.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.BtnNext_Result_P_H">
 <summary>
-  Looks up a localized string similar to SIGUIENTE.
+  Busca una cadena traducida similar a SIGUIENTE.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.BtnNext_Symptom1_P_H">
 <summary>
-  Looks up a localized string similar to SIGUIENTE.
+  Busca una cadena traducida similar a SIGUIENTE.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.BtnPathologies_A_H">
 <summary>
-  Looks up a localized string similar to Patologías.
+  Busca una cadena traducida similar a Patologías.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.BtnPathologies_A_HP">
 <summary>
-  Looks up a localized string similar to Patologías.
+  Busca una cadena traducida similar a Patologías.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.BtnPatients_A_H">
 <summary>
-  Looks up a localized string similar to Pacientes.
+  Busca una cadena traducida similar a Pacientes.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.BtnPatients_A_HP">
 <summary>
-  Looks up a localized string similar to Pacientes.
+  Busca una cadena traducida similar a Pacientes.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.Spanish.BtnRequest_M_H">
+<summary>
+  Busca una cadena traducida similar a Peticiones.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.BtnRmPath_A_HP">
 <summary>
-  Looks up a localized string similar to ELIMINAR PATOLOGÍA.
+  Busca una cadena traducida similar a ELIMINAR PATOLOGÍA.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.BtnSendChatP_P_H">
 <summary>
-  Looks up a localized string similar to SOLICITAR CHAT.
+  Busca una cadena traducida similar a SOLICITAR CHAT.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.BtnSymp_A_H">
 <summary>
-  Looks up a localized string similar to Síntomas.
+  Busca una cadena traducida similar a Síntomas.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.BtnSymp_A_HP">
 <summary>
-  Looks up a localized string similar to Síntomas.
+  Busca una cadena traducida similar a Síntomas.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.Spanish.ChkModDiag_M_C">
+<summary>
+  Busca una cadena traducida similar a Modificar Diagnóstico.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.Spanish.CloseChat_M_C">
+<summary>
+  Busca una cadena traducida similar a Cerrar Chat.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.Spanish.CloseProgram_M_H">
+<summary>
+  Busca una cadena traducida similar a Cerrar Programa.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.Spanish.EndChat_M_C">
+<summary>
+  Busca una cadena traducida similar a Está seguro que desea finalizar el chat ?.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.Spanish.Label13">
+<summary>
+  Busca una cadena traducida similar a Agustín Yorel Acosta Bergonzoni..
+</summary>
+</member>
+<member name="P:Logic.My.Resources.Spanish.Label14">
+<summary>
+  Busca una cadena traducida similar a Kevin Mathew Anadón Wappler..
+</summary>
+</member>
+<member name="P:Logic.My.Resources.Spanish.Label15">
+<summary>
+  Busca una cadena traducida similar a Mayza Daniela Ferreira Hernández..
+</summary>
+</member>
+<member name="P:Logic.My.Resources.Spanish.Label16">
+<summary>
+  Busca una cadena traducida similar a Ignacio Rodríguez Sosa..
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.Lbl1_Intro_P_H">
 <summary>
-  Looks up a localized string similar to Introducción.
+  Busca una cadena traducida similar a Introducción.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.Lbl2_Patient_P_H">
 <summary>
-  Looks up a localized string similar to Paciente.
+  Busca una cadena traducida similar a Paciente.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.Lbl3_Symptom_P_H">
 <summary>
-  Looks up a localized string similar to Síntomas.
+  Busca una cadena traducida similar a Síntomas.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.Lbl4_Result_P_H">
 <summary>
-  Looks up a localized string similar to Resultados.
+  Busca una cadena traducida similar a Resultados.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.Lbl5_Chat_P_H">
 <summary>
-  Looks up a localized string similar to Chat.
+  Busca una cadena traducida similar a Chat.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.Spanish.LblBody_M_L">
+<summary>
+  Busca una cadena traducida similar a Ingrese su usuario y contraseña 
+para autenticar y verificar sus credenciales.
+Este Software le permitirá tratar a sus Pacientes, brindándoles a estos, información para concluir un Telediagnóstico..
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.LblChat_P_H">
 <summary>
-  Looks up a localized string similar to En las próximas versiones de nuestro sistema, podrá consultar con un Médico..
+  Busca una cadena traducida similar a En las próximas versiones de nuestro sistema, podrá consultar con un Médico..
+</summary>
+</member>
+<member name="P:Logic.My.Resources.Spanish.LblInfo1_A_H">
+<summary>
+  Busca una cadena traducida similar a Centro de Atención de Salud..
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.LblInfo1_A_HPP">
 <summary>
-  Looks up a localized string similar to Campo Obligatorio [*].
+  Busca una cadena traducida similar a Campo Obligatorio [*].
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.LblInfo1_A_SS">
 <summary>
-  Looks up a localized string similar to Generando conexión con la Base de Datos..
+  Busca una cadena traducida similar a Generando conexión con la Base de Datos..
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.LblInfo1_P_SS">
 <summary>
-  Looks up a localized string similar to Generando conexión con la Base de Datos..
+  Busca una cadena traducida similar a Generando conexión con la Base de Datos..
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.LblInfo1Intro1_P_H">
 <summary>
-  Looks up a localized string similar to Está a punto de realizar un chequeo médico breve (3 min), seguro y anónimo. Sus respuestas serán analizadas cuidadosamente y se le dirá las posibles causas de sus síntomas a salvo. La información que usted proporcione es anónima y no será compartida con nadie..
+  Busca una cadena traducida similar a Está a punto de realizar un chequeo médico breve (3 min), seguro y anónimo. Sus respuestas serán analizadas cuidadosamente y se le dirá las posibles causas de sus síntomas a salvo. La información que usted proporcione es anónima y no será compartida con nadie..
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.LblInfo1Intro2_P_H">
 <summary>
-  Looks up a localized string similar to Antes de utilizar esta herramienta, por favor, lea los términos del servicio. 
+  Busca una cadena traducida similar a Antes de utilizar esta herramienta, por favor, lea los términos del servicio. 
 
 Recuerde que:
 El chequeo tiene finalidad informativa y no sustituye la opinión de un médico.
@@ -769,297 +1003,377 @@ No usar en caso de emergencias. En caso de una emergencia de salud, llame a su n
 </member>
 <member name="P:Logic.My.Resources.Spanish.LblInfo2_A_H">
 <summary>
-  Looks up a localized string similar to Sistema de Gestión para Administradores..
+  Busca una cadena traducida similar a Sistema de Gestión para Administradores..
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.LblInfo2_A_HPP">
 <summary>
-  Looks up a localized string similar to Administración de los Tratamientos.
+  Busca una cadena traducida similar a Administración de los Tratamientos.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.LblInfo2Intro1_P_H">
 <summary>
-  Looks up a localized string similar to Este Sistema Médico fué creado con el propósito de cumplir las expecativas de un Programa Asistente, el cual lo guiará a usted a lo largo de su diagnóstico de patológias que pueda sufrir. Al ser este un Asistente, ustéd podrá conocer sus Patologías de la forma más ágil y simple.
+  Busca una cadena traducida similar a Este Sistema Médico fué creado con el propósito de cumplir las expecativas de un Programa Asistente, el cual lo guiará a usted a lo largo de su diagnóstico de patológias que pueda sufrir. Al ser este un Asistente, ustéd podrá conocer sus Patologías de la forma más ágil y simple.
 
 Que disfrute de nuestro servicio. Toque el botón debajo para empezar el diagnóstico.anónima y no será compartida con nadie..
 </summary>
 </member>
+<member name="P:Logic.My.Resources.Spanish.LblInfo3_A_H">
+<summary>
+  Busca una cadena traducida similar a V2.0.1 Beta..
+</summary>
+</member>
 <member name="P:Logic.My.Resources.Spanish.LblInfo4_A_H">
 <summary>
-  Looks up a localized string similar to © Telediagnóstico Médico 2020. Derechos reservados.
+  Busca una cadena traducida similar a © Telediagnóstico Médico 2020. Derechos reservados.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.Spanish.LblInfoEnd_M_C">
+<summary>
+  Busca una cadena traducida similar a FIN.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.Spanish.LblInfoPathSuffered_M_C">
+<summary>
+  Busca una cadena traducida similar a PATOLOGÍA DIAGNOSTICADA.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.Spanish.LblInfoPatient_M_C">
+<summary>
+  Busca una cadena traducida similar a PACIENTE.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.Spanish.LblInfoSympsSuffered_M_C">
+<summary>
+  Busca una cadena traducida similar a SÍNTOMAS SUFRIDOS.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.LblInfoText_A_L">
 <summary>
-  Looks up a localized string similar to Ingrese su usuario y contraseña 
+  Busca una cadena traducida similar a Ingrese su usuario y contraseña 
 para autenticar y verificar sus credenciales.
 Este Software le permitirá gestionar al Personal, a los Pacientes, los Síntomas y sus Patologías asociadas..
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.LblInfoText_P_L">
 <summary>
-  Looks up a localized string similar to Ingrese su Cédula de Identidad para autenticar y  verificar sus credenciales. Este Software le permitirá realizar Diagnósticos Primarios y en base de ellos decidirá si quiere iniciar una conversación con un Médico Especialista..
+  Busca una cadena traducida similar a Ingrese su Cédula de Identidad para autenticar y  verificar sus credenciales. Este Software le permitirá realizar Diagnósticos Primarios y en base de ellos decidirá si quiere iniciar una conversación con un Médico Especialista..
+</summary>
+</member>
+<member name="P:Logic.My.Resources.Spanish.LblListadoPet_M_P">
+<summary>
+  Busca una cadena traducida similar a LISTADO DE PETICIONES.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.LblMgmentPath_A_HP">
 <summary>
-  Looks up a localized string similar to GESTIÓN DE PATOLOGÍAS.
+  Busca una cadena traducida similar a GESTIÓN DE PATOLOGÍAS.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.Spanish.LblModDiagnostic_M_C">
+<summary>
+  Busca una cadena traducida similar a MODIFICAR DIAGNÓSTICO.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.Spanish.LblModDiagPath_M_C">
+<summary>
+  Busca una cadena traducida similar a Patología.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.Spanish.LblPet_M_P">
+<summary>
+  Busca una cadena traducida similar a PETICIONES SOLICITADAS.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.LblPetitionInfo_P_H">
 <summary>
-  Looks up a localized string similar to GENERANDO PETICIÓN.
+  Busca una cadena traducida similar a GENERANDO PETICIÓN.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.LblResultInfoo_P_H">
 <summary>
-  Looks up a localized string similar to Por favor, tenga en cuenta que la lista podría no ser completa y que la información proporcionada tiene una finalidad informativa y no se corresponde con una opinión médica real..
+  Busca una cadena traducida similar a Por favor, tenga en cuenta que la lista podría no ser completa y que la información proporcionada tiene una finalidad informativa y no se corresponde con una opinión médica real..
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.LblResultPath_A_HP">
 <summary>
-  Looks up a localized string similar to LISTADO PATOLOGÍAS.
+  Busca una cadena traducida similar a LISTADO PATOLOGÍAS.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.LblResults_P_H">
 <summary>
-  Looks up a localized string similar to Resultados.
+  Busca una cadena traducida similar a Resultados.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.LblResultsTitle_P_H">
 <summary>
-  Looks up a localized string similar to PATOLOGÍAS SUFRIDAS.
+  Busca una cadena traducida similar a PATOLOGÍAS SUFRIDAS.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.LblSearch_A_HP">
 <summary>
-  Looks up a localized string similar to CRITERIOS DE BÚSQUEDA.
+  Busca una cadena traducida similar a CRITERIOS DE BÚSQUEDA.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.LblSubTitle1_A_H">
 <summary>
-  Looks up a localized string similar to Propietario.
+  Busca una cadena traducida similar a Propietario.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.LblSubTitle1_A_HPP">
 <summary>
-  Looks up a localized string similar to Nombre Patología.
+  Busca una cadena traducida similar a Nombre Patología.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.LblSubTitle1Patient_P_H">
 <summary>
-  Looks up a localized string similar to Escoja una respuesta en cada fila..
+  Busca una cadena traducida similar a Escoja una respuesta en cada fila..
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.LblSubTitle1Symp_P_H">
 <summary>
-  Looks up a localized string similar to Por favor, escoja los síntomas desde la lista desplegable..
+  Busca una cadena traducida similar a Por favor, escoja los síntomas desde la lista desplegable..
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.LblSubTitle2_A_H">
 <summary>
-  Looks up a localized string similar to Sistema.
+  Busca una cadena traducida similar a Sistema.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.LblSubTitle2_A_HPP">
 <summary>
-  Looks up a localized string similar to Tasa de Mortalidad.
+  Busca una cadena traducida similar a Tasa de Mortalidad.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.LblSubTitle2Symp_P_H">
 <summary>
-  Looks up a localized string similar to Seleccione un ítem para eliminarlo.
+  Busca una cadena traducida similar a Seleccione un ítem para eliminarlo.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.LblSubTitle3_A_H">
 <summary>
-  Looks up a localized string similar to Versión del Sistema.
+  Busca una cadena traducida similar a Versión del Sistema.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.LblSubTitle3_A_HPP">
 <summary>
-  Looks up a localized string similar to Descripción de la Patología.
+  Busca una cadena traducida similar a Descripción de la Patología.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.LblSubTitle4_A_H">
 <summary>
-  Looks up a localized string similar to Desarrolladores del Sistema.
+  Busca una cadena traducida similar a Desarrolladores del Sistema.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.LblSubTitle4_A_HPP">
 <summary>
-  Looks up a localized string similar to Tipo de Patología.
+  Busca una cadena traducida similar a Tipo de Patología.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.LblSubTitle5_A_HPP">
 <summary>
-  Looks up a localized string similar to Nombre del Tratamiento.
+  Busca una cadena traducida similar a Nombre del Tratamiento.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.LblSubTitle6_A_HPP">
 <summary>
-  Looks up a localized string similar to Descripción del Tratamiento.
+  Busca una cadena traducida similar a Descripción del Tratamiento.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.LblSubTitle7_A_HPP">
 <summary>
-  Looks up a localized string similar to Tipo de Tratamiento.
+  Busca una cadena traducida similar a Tipo de Tratamiento.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.LblSubTitle8_A_HPP">
 <summary>
-  Looks up a localized string similar to LISTADO DE TRATAMIENTOS PARA LA PATOLOGÍA.
+  Busca una cadena traducida similar a LISTADO DE TRATAMIENTOS PARA LA PATOLOGÍA.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.LblSubTitleAge_A_H">
 <summary>
-  Looks up a localized string similar to Edad.
+  Busca una cadena traducida similar a Edad.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.LblSubTitleConn_A_H">
 <summary>
-  Looks up a localized string similar to Última Conexión.
+  Busca una cadena traducida similar a Última Conexión.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.LblSubTitleCred_A_H">
 <summary>
-  Looks up a localized string similar to Documento o Credencial.
+  Busca una cadena traducida similar a Documento o Credencial.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.LblSubTitleEmail_A_H">
 <summary>
-  Looks up a localized string similar to Dirección de correo electrónico.
+  Busca una cadena traducida similar a Dirección de correo electrónico.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.LblSubTitleName_A_H">
 <summary>
-  Looks up a localized string similar to Nombre Completo.
+  Busca una cadena traducida similar a Nombre Completo.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.LblSubTitleTel_A_H">
 <summary>
-  Looks up a localized string similar to Número telefónico.
+  Busca una cadena traducida similar a Número telefónico.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.Spanish.LblSystemChat_M_C">
+<summary>
+  Busca una cadena traducida similar a Sistema.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.LblTitle1_A_H">
 <summary>
-  Looks up a localized string similar to ACERCA DEL SISTEMA.
+  Busca una cadena traducida similar a ACERCA DEL SISTEMA.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.LblTitle1_A_HPP">
 <summary>
-  Looks up a localized string similar to MODIFICACIÓN DE LA PATOLOGÍA.
+  Busca una cadena traducida similar a MODIFICACIÓN DE LA PATOLOGÍA.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.LblTitle1_A_L">
 <summary>
-  Looks up a localized string similar to GUSTO EN VERLO.
+  Busca una cadena traducida similar a GUSTO EN VERLO.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.LblTitle1_P_L">
 <summary>
-  Looks up a localized string similar to GUSTO EN VERLO.
+  Busca una cadena traducida similar a GUSTO EN VERLO.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.LblTitle1Patient_P_H">
 <summary>
-  Looks up a localized string similar to Por favor, seleccione todas las afirmaciones 
+  Busca una cadena traducida similar a Por favor, seleccione todas las afirmaciones 
 que se apliquen a usted..
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.LblTitle1Symp_P_H">
 <summary>
-  Looks up a localized string similar to Añada sus síntomas a la lista..
+  Busca una cadena traducida similar a Añada sus síntomas a la lista..
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.LblTitle2_A_H">
 <summary>
-  Looks up a localized string similar to ACERCA DEL ADMINISTRADOR.
+  Busca una cadena traducida similar a ACERCA DEL ADMINISTRADOR.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.LblTitle2_A_L">
 <summary>
-  Looks up a localized string similar to NUEVAMENTE..
+  Busca una cadena traducida similar a NUEVAMENTE..
+</summary>
+</member>
+<member name="P:Logic.My.Resources.Spanish.LblTitle2_M_H">
+<summary>
+  Busca una cadena traducida similar a ACERCA DEL MÉDICO.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.LblTitle2_P_L">
 <summary>
-  Looks up a localized string similar to NUEVAMENTE.
+  Busca una cadena traducida similar a NUEVAMENTE.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.LblTitle2Symp_P_H">
 <summary>
-  Looks up a localized string similar to Síntomas que padece..
+  Busca una cadena traducida similar a Síntomas que padece..
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.LblTitleIntro_P_H">
 <summary>
-  Looks up a localized string similar to ¡Hola!.
+  Busca una cadena traducida similar a ¡Hola!.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.LblTitleIntro2_P_H">
 <summary>
-  Looks up a localized string similar to Términos de licencia..
+  Busca una cadena traducida similar a Términos de licencia..
+</summary>
+</member>
+<member name="P:Logic.My.Resources.Spanish.LblTittle1_M_L">
+<summary>
+  Busca una cadena traducida similar a GUSTO EN VERLO.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.Spanish.LblTittle2_M_L">
+<summary>
+  Busca una cadena traducida similar a NUEVAMENTE..
+</summary>
+</member>
+<member name="P:Logic.My.Resources.Spanish.LblTittleChat_M_C">
+<summary>
+  Busca una cadena traducida similar a En una conversación con el Paciente:.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.LblTxt1_Info_P_H">
 <summary>
-  Looks up a localized string similar to Tengo sobrepeso, o estoy obeso..
+  Busca una cadena traducida similar a Tengo sobrepeso, o estoy obeso..
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.LblTxt2_Info_P_H">
 <summary>
-  Looks up a localized string similar to Fumo cigarrillos..
+  Busca una cadena traducida similar a Fumo cigarrillos..
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.LblTxt3_Info_P_H">
 <summary>
-  Looks up a localized string similar to He sufrido una lesión recientemente..
+  Busca una cadena traducida similar a He sufrido una lesión recientemente..
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.LblTxt4_Info_P_H">
 <summary>
-  Looks up a localized string similar to Tengo el colesterol alto..
+  Busca una cadena traducida similar a Tengo el colesterol alto..
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.LblTxt5_Info_P_H">
 <summary>
-  Looks up a localized string similar to Tengo hipertensión..
+  Busca una cadena traducida similar a Tengo hipertensión..
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.LblTxt6_Info_P_H">
 <summary>
-  Looks up a localized string similar to Tengo diabétes..
+  Busca una cadena traducida similar a Tengo diabétes..
+</summary>
+</member>
+<member name="P:Logic.My.Resources.Spanish.LogOut_M_H">
+<summary>
+  Busca una cadena traducida similar a Está seguro que desea cerrar sesión ?.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.Spanish.Medic__Chat__Label">
+<summary>
+  Busca una cadena traducida similar a Patient.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.Rbtn1_Idk_P_H">
 <summary>
-  Looks up a localized string similar to No lo sé..
+  Busca una cadena traducida similar a No lo sé..
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.Rbtn1_No_P_H">
 <summary>
-  Looks up a localized string similar to No..
+  Busca una cadena traducida similar a No..
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.Rbtn1_Yes_P_H">
 <summary>
-  Looks up a localized string similar to Si..
+  Busca una cadena traducida similar a Si..
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.RdbtnMedicine_A_HPP">
 <summary>
-  Looks up a localized string similar to Medicamento.
+  Busca una cadena traducida similar a Medicamento.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.RdbtnQuir_A_HPP">
 <summary>
-  Looks up a localized string similar to Quirúrgico.
+  Busca una cadena traducida similar a Quirúrgico.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.TxtSearchPath_A_HP">
 <summary>
-  Looks up a localized string similar to Realizar busqueda por patología.
+  Busca una cadena traducida similar a Realizar busqueda por patología.
 </summary>
 </member>
 </members>

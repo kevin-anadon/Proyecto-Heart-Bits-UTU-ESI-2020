@@ -30,9 +30,9 @@ Partial Class FrmLogin
         Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Guna2PictureBox4 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Guna2PictureBox3 = New Guna.UI2.WinForms.Guna2PictureBox()
-        Me.BtnLogin = New Guna.UI2.WinForms.Guna2Button()
+        Me.BtnLogin_M_L = New Guna.UI2.WinForms.Guna2Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Lblbody = New System.Windows.Forms.Label()
+        Me.LblBody_M_L = New System.Windows.Forms.Label()
         Me.BtnForeText1 = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
         Me.TxtCredPass = New System.Windows.Forms.TextBox()
@@ -40,9 +40,11 @@ Partial Class FrmLogin
         Me.PnlInfo = New Guna.UI2.WinForms.Guna2Panel()
         Me.BtnCloseInfo = New Guna.UI2.WinForms.Guna2Button()
         Me.LblNotification = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Me.Lbltitle2 = New System.Windows.Forms.Label()
-        Me.LblTitle1 = New System.Windows.Forms.Label()
+        Me.LblTittle2_M_L = New System.Windows.Forms.Label()
+        Me.LblTittle1_M_L = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.RbnEng = New Guna.UI.WinForms.GunaImageRadioButton()
+        Me.RbnSpanish = New Guna.UI.WinForms.GunaImageRadioButton()
         CType(Me.PicbxLogin, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -115,24 +117,24 @@ Partial Class FrmLogin
         Me.Guna2PictureBox3.TabIndex = 32
         Me.Guna2PictureBox3.TabStop = False
         '
-        'BtnLogin
+        'BtnLogin_M_L
         '
-        Me.BtnLogin.AccessibleDescription = "BtnLogin"
-        Me.BtnLogin.AccessibleName = "BtnLogin"
-        Me.BtnLogin.Animated = True
-        Me.BtnLogin.BorderRadius = 10
-        Me.BtnLogin.CheckedState.Parent = Me.BtnLogin
-        Me.BtnLogin.CustomImages.Parent = Me.BtnLogin
-        Me.BtnLogin.FillColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
-        Me.BtnLogin.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnLogin.ForeColor = System.Drawing.Color.White
-        Me.BtnLogin.HoverState.Parent = Me.BtnLogin
-        Me.BtnLogin.Location = New System.Drawing.Point(689, 497)
-        Me.BtnLogin.Name = "BtnLogin"
-        Me.BtnLogin.ShadowDecoration.Parent = Me.BtnLogin
-        Me.BtnLogin.Size = New System.Drawing.Size(312, 45)
-        Me.BtnLogin.TabIndex = 2
-        Me.BtnLogin.Text = "INICIAR SESIÓN"
+        Me.BtnLogin_M_L.AccessibleDescription = "BtnLogin"
+        Me.BtnLogin_M_L.AccessibleName = "BtnLogin"
+        Me.BtnLogin_M_L.Animated = True
+        Me.BtnLogin_M_L.BorderRadius = 10
+        Me.BtnLogin_M_L.CheckedState.Parent = Me.BtnLogin_M_L
+        Me.BtnLogin_M_L.CustomImages.Parent = Me.BtnLogin_M_L
+        Me.BtnLogin_M_L.FillColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.BtnLogin_M_L.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnLogin_M_L.ForeColor = System.Drawing.Color.White
+        Me.BtnLogin_M_L.HoverState.Parent = Me.BtnLogin_M_L
+        Me.BtnLogin_M_L.Location = New System.Drawing.Point(689, 497)
+        Me.BtnLogin_M_L.Name = "BtnLogin_M_L"
+        Me.BtnLogin_M_L.ShadowDecoration.Parent = Me.BtnLogin_M_L
+        Me.BtnLogin_M_L.Size = New System.Drawing.Size(312, 45)
+        Me.BtnLogin_M_L.TabIndex = 2
+        Me.BtnLogin_M_L.Text = "INICIAR SESIÓN"
         '
         'PictureBox1
         '
@@ -147,25 +149,25 @@ Partial Class FrmLogin
         Me.PictureBox1.TabIndex = 22
         Me.PictureBox1.TabStop = False
         '
-        'Lblbody
+        'LblBody_M_L
         '
-        Me.Lblbody.AccessibleDescription = "LblTitle3"
-        Me.Lblbody.AccessibleName = "LblTitle3"
-        Me.Lblbody.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Lblbody.BackColor = System.Drawing.Color.Transparent
-        Me.Lblbody.Cursor = System.Windows.Forms.Cursors.Default
-        Me.Lblbody.Font = New System.Drawing.Font("Segoe UI", 9.75!)
-        Me.Lblbody.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
-        Me.Lblbody.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Lblbody.Location = New System.Drawing.Point(689, 240)
-        Me.Lblbody.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Lblbody.Name = "Lblbody"
-        Me.Lblbody.Size = New System.Drawing.Size(313, 99)
-        Me.Lblbody.TabIndex = 24
-        Me.Lblbody.Text = "Ingrese su usuario y contraseña " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "para autenticar y verificar sus credenciales." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) &
+        Me.LblBody_M_L.AccessibleDescription = "LblTitle3"
+        Me.LblBody_M_L.AccessibleName = "LblTitle3"
+        Me.LblBody_M_L.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.LblBody_M_L.BackColor = System.Drawing.Color.Transparent
+        Me.LblBody_M_L.Cursor = System.Windows.Forms.Cursors.Default
+        Me.LblBody_M_L.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.LblBody_M_L.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
+        Me.LblBody_M_L.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.LblBody_M_L.Location = New System.Drawing.Point(689, 240)
+        Me.LblBody_M_L.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.LblBody_M_L.Name = "LblBody_M_L"
+        Me.LblBody_M_L.Size = New System.Drawing.Size(313, 99)
+        Me.LblBody_M_L.TabIndex = 24
+        Me.LblBody_M_L.Text = "Ingrese su usuario y contraseña " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "para autenticar y verificar sus credenciales." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) &
     "Este Software le permitirá tratar a sus Pacientes, brindándoles a estos, informa" &
     "ción para concluir un Telediagnóstico."
-        Me.Lblbody.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LblBody_M_L.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'BtnForeText1
         '
@@ -266,7 +268,7 @@ Partial Class FrmLogin
         Me.BtnCloseInfo.CheckedState.Parent = Me.BtnCloseInfo
         Me.BtnCloseInfo.CustomImages.Parent = Me.BtnCloseInfo
         Me.BtnCloseInfo.FillColor = System.Drawing.Color.FromArgb(CType(CType(246, Byte), Integer), CType(CType(135, Byte), Integer), CType(CType(124, Byte), Integer))
-        Me.BtnCloseInfo.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.BtnCloseInfo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
         Me.BtnCloseInfo.ForeColor = System.Drawing.Color.White
         Me.BtnCloseInfo.HoverState.Parent = Me.BtnCloseInfo
         Me.BtnCloseInfo.Location = New System.Drawing.Point(364, 13)
@@ -290,39 +292,39 @@ Partial Class FrmLogin
         Me.LblNotification.Text = "LblNotification"
         Me.LblNotification.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Lbltitle2
+        'LblTittle2_M_L
         '
-        Me.Lbltitle2.AccessibleDescription = "LblTitle2"
-        Me.Lbltitle2.AccessibleName = "LblTitle2"
-        Me.Lbltitle2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Lbltitle2.BackColor = System.Drawing.Color.Transparent
-        Me.Lbltitle2.Font = New System.Drawing.Font("Microsoft YaHei UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Lbltitle2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Lbltitle2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Lbltitle2.Location = New System.Drawing.Point(687, 207)
-        Me.Lbltitle2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Lbltitle2.Name = "Lbltitle2"
-        Me.Lbltitle2.Size = New System.Drawing.Size(314, 27)
-        Me.Lbltitle2.TabIndex = 36
-        Me.Lbltitle2.Text = "NUEVAMENTE."
-        Me.Lbltitle2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LblTittle2_M_L.AccessibleDescription = "LblTitle2"
+        Me.LblTittle2_M_L.AccessibleName = "LblTitle2"
+        Me.LblTittle2_M_L.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.LblTittle2_M_L.BackColor = System.Drawing.Color.Transparent
+        Me.LblTittle2_M_L.Font = New System.Drawing.Font("Microsoft YaHei UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblTittle2_M_L.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.LblTittle2_M_L.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LblTittle2_M_L.Location = New System.Drawing.Point(687, 207)
+        Me.LblTittle2_M_L.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.LblTittle2_M_L.Name = "LblTittle2_M_L"
+        Me.LblTittle2_M_L.Size = New System.Drawing.Size(314, 27)
+        Me.LblTittle2_M_L.TabIndex = 36
+        Me.LblTittle2_M_L.Text = "NUEVAMENTE."
+        Me.LblTittle2_M_L.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'LblTitle1
+        'LblTittle1_M_L
         '
-        Me.LblTitle1.AccessibleDescription = "LblTitle1"
-        Me.LblTitle1.AccessibleName = "LblTitle1"
-        Me.LblTitle1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.LblTitle1.BackColor = System.Drawing.Color.Transparent
-        Me.LblTitle1.Font = New System.Drawing.Font("Microsoft YaHei UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblTitle1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.LblTitle1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.LblTitle1.Location = New System.Drawing.Point(687, 176)
-        Me.LblTitle1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.LblTitle1.Name = "LblTitle1"
-        Me.LblTitle1.Size = New System.Drawing.Size(314, 27)
-        Me.LblTitle1.TabIndex = 35
-        Me.LblTitle1.Text = "GUSTO EN VERLO "
-        Me.LblTitle1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LblTittle1_M_L.AccessibleDescription = "LblTitle1"
+        Me.LblTittle1_M_L.AccessibleName = "LblTitle1"
+        Me.LblTittle1_M_L.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.LblTittle1_M_L.BackColor = System.Drawing.Color.Transparent
+        Me.LblTittle1_M_L.Font = New System.Drawing.Font("Microsoft YaHei UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblTittle1_M_L.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.LblTittle1_M_L.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LblTittle1_M_L.Location = New System.Drawing.Point(687, 176)
+        Me.LblTittle1_M_L.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.LblTittle1_M_L.Name = "LblTittle1_M_L"
+        Me.LblTittle1_M_L.Size = New System.Drawing.Size(314, 27)
+        Me.LblTittle1_M_L.TabIndex = 35
+        Me.LblTittle1_M_L.Text = "GUSTO EN VERLO "
+        Me.LblTittle1_M_L.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'PictureBox2
         '
@@ -335,6 +337,27 @@ Partial Class FrmLogin
         Me.PictureBox2.TabIndex = 37
         Me.PictureBox2.TabStop = False
         '
+        'RbnEng
+        '
+        Me.RbnEng.ImageCheckedOff = Global.MedicApp.My.Resources.Resources.Eng
+        Me.RbnEng.ImageCheckedOn = Global.MedicApp.My.Resources.Resources.Eng_Selected
+        Me.RbnEng.ImageSize = New System.Drawing.Size(20, 20)
+        Me.RbnEng.Location = New System.Drawing.Point(994, 12)
+        Me.RbnEng.Name = "RbnEng"
+        Me.RbnEng.Size = New System.Drawing.Size(24, 24)
+        Me.RbnEng.TabIndex = 38
+        '
+        'RbnSpanish
+        '
+        Me.RbnSpanish.Checked = True
+        Me.RbnSpanish.ImageCheckedOff = Global.MedicApp.My.Resources.Resources.Es
+        Me.RbnSpanish.ImageCheckedOn = Global.MedicApp.My.Resources.Resources.Es_Selected
+        Me.RbnSpanish.ImageSize = New System.Drawing.Size(20, 20)
+        Me.RbnSpanish.Location = New System.Drawing.Point(1024, 12)
+        Me.RbnSpanish.Name = "RbnSpanish"
+        Me.RbnSpanish.Size = New System.Drawing.Size(24, 24)
+        Me.RbnSpanish.TabIndex = 39
+        '
         'FrmLogin
         '
         Me.AccessibleDescription = "FrmLogin"
@@ -345,9 +368,11 @@ Partial Class FrmLogin
         Me.BackgroundImage = Global.MedicApp.My.Resources.Resources.Panel__Type_1
         Me.ClientSize = New System.Drawing.Size(1060, 640)
         Me.ControlBox = False
+        Me.Controls.Add(Me.RbnSpanish)
+        Me.Controls.Add(Me.RbnEng)
         Me.Controls.Add(Me.PictureBox2)
-        Me.Controls.Add(Me.Lbltitle2)
-        Me.Controls.Add(Me.LblTitle1)
+        Me.Controls.Add(Me.LblTittle2_M_L)
+        Me.Controls.Add(Me.LblTittle1_M_L)
         Me.Controls.Add(Me.PnlInfo)
         Me.Controls.Add(Me.TxtCredUser)
         Me.Controls.Add(Me.Guna2PictureBox3)
@@ -355,10 +380,10 @@ Partial Class FrmLogin
         Me.Controls.Add(Me.Guna2Button1)
         Me.Controls.Add(Me.PicbxLogin)
         Me.Controls.Add(Me.TxtCredPass)
-        Me.Controls.Add(Me.BtnLogin)
+        Me.Controls.Add(Me.BtnLogin_M_L)
         Me.Controls.Add(Me.Guna2PictureBox2)
         Me.Controls.Add(Me.Guna2PictureBox1)
-        Me.Controls.Add(Me.Lblbody)
+        Me.Controls.Add(Me.LblBody_M_L)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.BtnForeText1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -383,10 +408,10 @@ Partial Class FrmLogin
     Friend WithEvents Guna2PictureBox3 As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents Guna2PictureBox4 As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents BtnLogin As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents BtnLogin_M_L As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2PictureBox2 As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
-    Public WithEvents Lblbody As Label
+    Public WithEvents LblBody_M_L As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents BtnForeText1 As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents TxtCredUser As TextBox
@@ -394,7 +419,9 @@ Partial Class FrmLogin
     Friend WithEvents PnlInfo As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents BtnCloseInfo As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents LblNotification As Guna.UI2.WinForms.Guna2HtmlLabel
-    Public WithEvents Lbltitle2 As Label
-    Public WithEvents LblTitle1 As Label
+    Public WithEvents LblTittle2_M_L As Label
+    Public WithEvents LblTittle1_M_L As Label
     Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents RbnSpanish As Guna.UI.WinForms.GunaImageRadioButton
+    Friend WithEvents RbnEng As Guna.UI.WinForms.GunaImageRadioButton
 End Class

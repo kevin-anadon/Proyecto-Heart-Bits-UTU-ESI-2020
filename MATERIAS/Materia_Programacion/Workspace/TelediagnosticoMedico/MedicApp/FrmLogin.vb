@@ -46,7 +46,7 @@ Public Class FrmLogin 'Empleado Medico
         LblNotification.Text = " "
         PnlInfo.BorderColor = Color.FromArgb(97, 97, 97) 'Color Gris Mate = Default
     End Sub
-    Private Sub BtnLogin_Click(sender As Object, e As EventArgs) Handles BtnLogin.Click
+    Private Sub BtnLogin_Click(sender As Object, e As EventArgs) Handles BtnLogin_M_L.Click
         PnlInfo.Visible = True
 
         If TxtCredUser.Text.Trim.Length = 0 Or TxtCredPass.Text.Trim.Length = 0 Then 'Verifico si hay algun espacio vacio en las credenciales
@@ -74,7 +74,7 @@ Public Class FrmLogin 'Empleado Medico
     Private Sub TxtPass_KeyDown(sender As Object, e As KeyEventArgs) Handles TxtCredPass.KeyDown
         'Detectar si presiona enter, que accione el botón Iniciar Sesión
         If e.KeyCode = Keys.Enter Then
-            BtnLogin.PerformClick()
+            BtnLogin_M_L.PerformClick()
         End If
     End Sub
     Private Sub TxtUser_KeyDown(sender As Object, e As KeyEventArgs) Handles TxtCredUser.KeyDown
@@ -82,10 +82,20 @@ Public Class FrmLogin 'Empleado Medico
         If e.KeyCode = Keys.K AndAlso e.Modifiers = Keys.Control Then
             TxtCredUser.Text = "jul59"
             TxtCredPass.Text = "681nlo"
-            BtnLogin.PerformClick()
+            BtnLogin_M_L.PerformClick()
         End If
     End Sub
     Private Sub BtnCloseInfo_Click(sender As Object, e As EventArgs) Handles BtnCloseInfo.Click
         PnlInfo.Visible = False
+    End Sub
+
+    Private Sub RbnEng_CheckedChanged(sender As Object, e As EventArgs) Handles RbnEng.CheckedChanged
+        Translator.Instance.LoadLanguage("English")
+        Translator.Instance.TraducirForm(Me)
+    End Sub
+
+    Private Sub RbnSpanish_CheckedChanged(sender As Object, e As EventArgs) Handles RbnSpanish.CheckedChanged
+        Translator.Instance.LoadLanguage("Spanish")
+        Translator.Instance.TraducirForm(Me)
     End Sub
 End Class 'FrmLogin

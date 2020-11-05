@@ -17,8 +17,8 @@ Public Class FrmHome
     Private Sub JoinRoom()
         Try
             'Creo una sala para que conversen
-            Controller.Instance.SetRoom(log.CreateRoom())
-            idRoom = Controller.Instance.ObtainRoom()
+            log.SetRoom(log.CreateRoom())
+            idRoom = log.ObtainRoom()
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
@@ -74,14 +74,14 @@ Public Class FrmHome
     End Sub
 
     'Botones
-    Private Sub BtnHome_Click(sender As Object, e As EventArgs) Handles BtnHome.Click
+    Private Sub BtnHome_Click(sender As Object, e As EventArgs) Handles BtnHome_M_H.Click
         ChangePanels(1)
     End Sub
 
-    Private Sub BtnRequest_Click(sender As Object, e As EventArgs) Handles BtnRequest.Click
+    Private Sub BtnRequest_Click(sender As Object, e As EventArgs) Handles BtnRequest_M_H.Click
         ChangePanels(0)
     End Sub
-    Private Sub BtnMore_Click(sender As Object, e As EventArgs) Handles BtnMore.Click
+    Private Sub BtnMore_Click(sender As Object, e As EventArgs) Handles BtnMore_M_C.Click
         If PnlMoreInfo.Visible = True Then
             PnlMoreInfo.Visible = False
         ElseIf PnlMoreInfo.Visible = False And PnlViewPatientInfo.Visible = False Then
@@ -90,7 +90,7 @@ Public Class FrmHome
     End Sub
 
     Private Sub BtnEndChat_Click(sender As Object, e As EventArgs) Handles BtnEndChat.Click
-        If MsgBox("Está seguro que desea finalizar el chat ?", MsgBoxStyle.YesNoCancel, "Cerrar Chat") = MsgBoxResult.Yes Then
+        If MsgBox(Translator.Instance.Translate("EndChat_M_C"), MsgBoxStyle.YesNoCancel, Translator.Instance.Translate("CloseChat_M_C")) = MsgBoxResult.Yes Then
             LeaveRoom()
         End If
     End Sub
@@ -103,7 +103,7 @@ Public Class FrmHome
         PnlViewPatientInfo.Visible = False
         PnlChat.Enabled = True
     End Sub
-    Private Sub BtnSend_Click(sender As Object, e As EventArgs) Handles BtnSend.Click
+    Private Sub BtnSend_Click(sender As Object, e As EventArgs) Handles BtnSend_M_C.Click
         If Not TxtChatSend.Text.Trim.Length = 0 Then
             Try
 
@@ -117,8 +117,8 @@ Public Class FrmHome
             TxtChatSend.Focus()
         End If
     End Sub
-    Private Sub BtnLogOut_Click(sender As Object, e As EventArgs) Handles BtnLogOut.Click
-        If MsgBox("Está seguro que desea cerrar sesión ?", MsgBoxStyle.YesNoCancel, "Cerrar Programa") = MsgBoxResult.Yes Then
+    Private Sub BtnLogOut_Click(sender As Object, e As EventArgs) Handles BtnLogOut_M_H.Click
+        If MsgBox(Translator.Instance.Translate("LogOut_M_H"), MsgBoxStyle.YesNoCancel, Translator.Instance.Translate("CloseProgram_M_H")) = MsgBoxResult.Yes Then
             End
         End If
     End Sub
@@ -137,7 +137,7 @@ Public Class FrmHome
             LblInfoPatientName.Text = PatientSelected.fstName + " " + PatientSelected.scndName
         End If
         LblInfoPatientSurn.Text = PatientSelected.fstSurname + " " + PatientSelected.scndSurname
-            LblInfoPatientAge.Text = PatientSelected.CalcAge(PatientSelected.dateBirth).ToString() + " Años"
+        LblInfoPatientAge.Text = PatientSelected.CalcAge(PatientSelected.dateBirth).ToString() + " Años"
         Try
             DgvInfoPatientSympts.Columns.Add("Sympt", "")
             Dim DateNow As String = GetNowDateTime(2)
@@ -174,7 +174,7 @@ Public Class FrmHome
     End Sub
     Private Sub TxtChatSend_KeyDown(sender As Object, e As KeyEventArgs) Handles TxtChatSend.KeyDown
         If e.KeyCode = Keys.Enter Then
-            BtnSend.PerformClick()
+            BtnSend_M_C.PerformClick()
         End If
     End Sub
 
@@ -186,8 +186,8 @@ Public Class FrmHome
             If TimerRequests.Enabled = False And Not DgvRequests.Columns.Count > 5 Then
                 Dim btn As New DataGridViewButtonColumn()
                 DgvRequests.Columns.Add(btn)
-                btn.HeaderText = "Aceptar"
-                btn.Text = "Aceptar"
+                btn.HeaderText = Translator.Instance.Translate("BtnAcceptPet_M_P")
+                btn.Text = Translator.Instance.Translate("BtnAcceptPet_M_P")
                 btn.Name = "btn"
                 btn.UseColumnTextForButtonValue = True
                 TimerRequests.Start()
@@ -207,7 +207,7 @@ Public Class FrmHome
             MessageBox.Show(ex.Message)
         End Try
     End Sub
-    Private Sub FrmHome_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub LoadMedInfo()
         Medic = FrmLogin.MedicLogged
         LblName.Text = MedicName
         LblCi.Text = Ci
@@ -215,6 +215,10 @@ Public Class FrmHome
         LblEmail.Text = Email
         LblPhone.Text = Phone
         LblConnect.Text = Connect
+    End Sub
+    Private Sub FrmHome_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Translator.Instance.TraducirForm(Me)
+        LoadMedInfo()
     End Sub
     Private Sub LoadModDiag()
         PnlCmbDiag.Visible = True
@@ -268,15 +272,15 @@ Public Class FrmHome
                 PnlChat.Visible = False
                 PnlRequest.Visible = True
                 PicBar.Location = New Point(160, 58)
-                BtnHome.FillColor = Color.White
-                BtnHome.ForeColor = Color.Black
-                BtnHome.Font = New Font(BtnHome.Font, FontStyle.Regular)
-                BtnHome.Image = My.Resources.mdi_home
+                BtnHome_M_H.FillColor = Color.White
+                BtnHome_M_H.ForeColor = Color.Black
+                BtnHome_M_H.Font = New Font(BtnHome_M_H.Font, FontStyle.Regular)
+                BtnHome_M_H.Image = My.Resources.mdi_home
 
-                BtnRequest.FillColor = Color.FromArgb(98, 186, 172)
-                BtnRequest.ForeColor = Color.White
-                BtnRequest.Font = New Font(BtnRequest.Font, FontStyle.Bold)
-                BtnRequest.Image = My.Resources.AdminWhite
+                BtnRequest_M_H.FillColor = Color.FromArgb(98, 186, 172)
+                BtnRequest_M_H.ForeColor = Color.White
+                BtnRequest_M_H.Font = New Font(BtnRequest_M_H.Font, FontStyle.Bold)
+                BtnRequest_M_H.Image = My.Resources.AdminWhite
                 ReloadDgv()
             Case 1 'Inicio
                 TimerRequests.Stop()
@@ -284,15 +288,15 @@ Public Class FrmHome
                 PnlChat.Visible = False
                 PanelHome.Visible = True
                 PicBar.Location = New Point(160, 22)
-                BtnRequest.FillColor = Color.White
-                BtnRequest.ForeColor = Color.Black
-                BtnRequest.Font = New Font(BtnHome.Font, FontStyle.Regular)
-                BtnRequest.Image = My.Resources.GreenPerson
+                BtnRequest_M_H.FillColor = Color.White
+                BtnRequest_M_H.ForeColor = Color.Black
+                BtnRequest_M_H.Font = New Font(BtnHome_M_H.Font, FontStyle.Regular)
+                BtnRequest_M_H.Image = My.Resources.GreenPerson
 
-                BtnHome.FillColor = Color.FromArgb(98, 186, 172)
-                BtnHome.ForeColor = Color.White
-                BtnHome.Font = New Font(BtnRequest.Font, FontStyle.Bold)
-                BtnHome.Image = My.Resources.mdi_home_white
+                BtnHome_M_H.FillColor = Color.FromArgb(98, 186, 172)
+                BtnHome_M_H.ForeColor = Color.White
+                BtnHome_M_H.Font = New Font(BtnRequest_M_H.Font, FontStyle.Bold)
+                BtnHome_M_H.Image = My.Resources.mdi_home_white
             Case 2 'Chat
                 TimerRequests.Stop()
                 JoinRoom()
@@ -300,7 +304,7 @@ Public Class FrmHome
                 LoadPatientInfo()
                 PnlRequest.Visible = False
                 PnlChat.Visible = True
-                LblPatient.Text = PatientName
+                LblPatientChat_M_C.Text = PatientName
                 TxtChatSend.Focus()
                 TimerChat.Start()
         End Select
@@ -325,8 +329,8 @@ Public Class FrmHome
             End Try
         End If
     End Sub
-    Private Sub ChkModDiag_CheckedChanged(sender As Object, e As EventArgs) Handles ChkModDiag.CheckedChanged
-        If ChkModDiag.Checked = True Then
+    Private Sub ChkModDiag_CheckedChanged(sender As Object, e As EventArgs) Handles ChkModDiag_M_C.CheckedChanged
+        If ChkModDiag_M_C.Checked = True Then
             LoadModDiag()
         Else
             PnlCmbDiag.Visible = False
