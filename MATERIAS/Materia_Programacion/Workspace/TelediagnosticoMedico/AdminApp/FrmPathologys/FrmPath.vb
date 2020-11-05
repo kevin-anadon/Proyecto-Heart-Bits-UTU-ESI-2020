@@ -54,7 +54,7 @@ Public Class FrmPath
         alerta.Obtain(PathSelected, 1)
         alerta.LblEliminar.Text = "ELIMINAR PATOLOGÍA"
         alerta.LblElimBody.Text = "Eliminar la patología: "
-        alerta.LblPregunta.Text = "¿Está usted seguro de que quiere eliminar esta patología?"
+        alerta.LblPregunta_A_R.Text = "¿Está usted seguro de que quiere eliminar esta patología?"
         alerta.ShowDialog()
         ReloadDgv(1)
     End Sub

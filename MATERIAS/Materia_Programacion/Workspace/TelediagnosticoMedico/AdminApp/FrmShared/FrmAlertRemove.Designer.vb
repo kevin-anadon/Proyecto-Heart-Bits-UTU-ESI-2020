@@ -30,12 +30,12 @@ Partial Class FrmAlertRemove
         Me.GunaLabel6 = New Guna.UI.WinForms.GunaLabel()
         Me.PicVector = New System.Windows.Forms.PictureBox()
         Me.TxtPin = New Guna.UI.WinForms.GunaTextBox()
-        Me.BtnPin = New Guna.UI.WinForms.GunaButton()
-        Me.LblPregunta = New Guna.UI.WinForms.GunaLabel()
+        Me.BtnPin_A_R = New Guna.UI.WinForms.GunaButton()
+        Me.LblPregunta_A_R = New Guna.UI.WinForms.GunaLabel()
         Me.LblSympt = New Guna.UI.WinForms.GunaLabel()
         Me.LblElimBody = New Guna.UI.WinForms.GunaLabel()
-        Me.GunaLabel3 = New Guna.UI.WinForms.GunaLabel()
-        Me.GunaLabel2 = New Guna.UI.WinForms.GunaLabel()
+        Me.Lbl1_A_R = New Guna.UI.WinForms.GunaLabel()
+        Me.LblAttention_A_R = New Guna.UI.WinForms.GunaLabel()
         Me.PanelTop.SuspendLayout()
         Me.PanelBody.SuspendLayout()
         CType(Me.PicVector, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -93,12 +93,12 @@ Partial Class FrmAlertRemove
         Me.PanelBody.Controls.Add(Me.GunaLabel6)
         Me.PanelBody.Controls.Add(Me.PicVector)
         Me.PanelBody.Controls.Add(Me.TxtPin)
-        Me.PanelBody.Controls.Add(Me.BtnPin)
-        Me.PanelBody.Controls.Add(Me.LblPregunta)
+        Me.PanelBody.Controls.Add(Me.BtnPin_A_R)
+        Me.PanelBody.Controls.Add(Me.LblPregunta_A_R)
         Me.PanelBody.Controls.Add(Me.LblSympt)
         Me.PanelBody.Controls.Add(Me.LblElimBody)
-        Me.PanelBody.Controls.Add(Me.GunaLabel3)
-        Me.PanelBody.Controls.Add(Me.GunaLabel2)
+        Me.PanelBody.Controls.Add(Me.Lbl1_A_R)
+        Me.PanelBody.Controls.Add(Me.LblAttention_A_R)
         Me.PanelBody.Location = New System.Drawing.Point(0, 33)
         Me.PanelBody.Name = "PanelBody"
         Me.PanelBody.Size = New System.Drawing.Size(433, 123)
@@ -143,45 +143,45 @@ Partial Class FrmAlertRemove
         Me.TxtPin.TabIndex = 0
         Me.TxtPin.TextOffsetX = 5
         '
-        'BtnPin
+        'BtnPin_A_R
         '
-        Me.BtnPin.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnPin.Animated = True
-        Me.BtnPin.AnimationHoverSpeed = 0.07!
-        Me.BtnPin.AnimationSpeed = 0.03!
-        Me.BtnPin.BackColor = System.Drawing.Color.Transparent
-        Me.BtnPin.BaseColor = System.Drawing.Color.White
-        Me.BtnPin.BorderColor = System.Drawing.Color.Black
-        Me.BtnPin.BorderSize = 1
-        Me.BtnPin.DialogResult = System.Windows.Forms.DialogResult.None
-        Me.BtnPin.FocusedColor = System.Drawing.Color.Empty
-        Me.BtnPin.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnPin.ForeColor = System.Drawing.Color.Black
-        Me.BtnPin.Image = Nothing
-        Me.BtnPin.ImageSize = New System.Drawing.Size(20, 20)
-        Me.BtnPin.Location = New System.Drawing.Point(127, 78)
-        Me.BtnPin.Name = "BtnPin"
-        Me.BtnPin.OnHoverBaseColor = System.Drawing.Color.Silver
-        Me.BtnPin.OnHoverBorderColor = System.Drawing.Color.Black
-        Me.BtnPin.OnHoverForeColor = System.Drawing.Color.White
-        Me.BtnPin.OnHoverImage = Nothing
-        Me.BtnPin.OnPressedColor = System.Drawing.Color.Black
-        Me.BtnPin.Radius = 6
-        Me.BtnPin.Size = New System.Drawing.Size(135, 39)
-        Me.BtnPin.TabIndex = 24
-        Me.BtnPin.Text = "Remover"
-        Me.BtnPin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.BtnPin_A_R.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnPin_A_R.Animated = True
+        Me.BtnPin_A_R.AnimationHoverSpeed = 0.07!
+        Me.BtnPin_A_R.AnimationSpeed = 0.03!
+        Me.BtnPin_A_R.BackColor = System.Drawing.Color.Transparent
+        Me.BtnPin_A_R.BaseColor = System.Drawing.Color.White
+        Me.BtnPin_A_R.BorderColor = System.Drawing.Color.Black
+        Me.BtnPin_A_R.BorderSize = 1
+        Me.BtnPin_A_R.DialogResult = System.Windows.Forms.DialogResult.None
+        Me.BtnPin_A_R.FocusedColor = System.Drawing.Color.Empty
+        Me.BtnPin_A_R.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnPin_A_R.ForeColor = System.Drawing.Color.Black
+        Me.BtnPin_A_R.Image = Nothing
+        Me.BtnPin_A_R.ImageSize = New System.Drawing.Size(20, 20)
+        Me.BtnPin_A_R.Location = New System.Drawing.Point(127, 78)
+        Me.BtnPin_A_R.Name = "BtnPin_A_R"
+        Me.BtnPin_A_R.OnHoverBaseColor = System.Drawing.Color.Silver
+        Me.BtnPin_A_R.OnHoverBorderColor = System.Drawing.Color.Black
+        Me.BtnPin_A_R.OnHoverForeColor = System.Drawing.Color.White
+        Me.BtnPin_A_R.OnHoverImage = Nothing
+        Me.BtnPin_A_R.OnPressedColor = System.Drawing.Color.Black
+        Me.BtnPin_A_R.Radius = 6
+        Me.BtnPin_A_R.Size = New System.Drawing.Size(135, 39)
+        Me.BtnPin_A_R.TabIndex = 24
+        Me.BtnPin_A_R.Text = "Remover"
+        Me.BtnPin_A_R.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'LblPregunta
+        'LblPregunta_A_R
         '
-        Me.LblPregunta.AutoSize = True
-        Me.LblPregunta.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblPregunta.ForeColor = System.Drawing.Color.FromArgb(CType(CType(181, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(181, Byte), Integer))
-        Me.LblPregunta.Location = New System.Drawing.Point(3, 49)
-        Me.LblPregunta.Name = "LblPregunta"
-        Me.LblPregunta.Size = New System.Drawing.Size(356, 17)
-        Me.LblPregunta.TabIndex = 5
-        Me.LblPregunta.Text = "¿Está usted seguro de que quiere eliminar este síntoma?"
+        Me.LblPregunta_A_R.AutoSize = True
+        Me.LblPregunta_A_R.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblPregunta_A_R.ForeColor = System.Drawing.Color.FromArgb(CType(CType(181, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(181, Byte), Integer))
+        Me.LblPregunta_A_R.Location = New System.Drawing.Point(3, 49)
+        Me.LblPregunta_A_R.Name = "LblPregunta_A_R"
+        Me.LblPregunta_A_R.Size = New System.Drawing.Size(356, 17)
+        Me.LblPregunta_A_R.TabIndex = 5
+        Me.LblPregunta_A_R.Text = "¿Está usted seguro de que quiere eliminar este síntoma?"
         '
         'LblSympt
         '
@@ -204,27 +204,27 @@ Partial Class FrmAlertRemove
         Me.LblElimBody.TabIndex = 3
         Me.LblElimBody.Text = "Eliminar el síntoma:"
         '
-        'GunaLabel3
+        'Lbl1_A_R
         '
-        Me.GunaLabel3.AutoSize = True
-        Me.GunaLabel3.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GunaLabel3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(181, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(181, Byte), Integer))
-        Me.GunaLabel3.Location = New System.Drawing.Point(3, 32)
-        Me.GunaLabel3.Name = "GunaLabel3"
-        Me.GunaLabel3.Size = New System.Drawing.Size(143, 17)
-        Me.GunaLabel3.TabIndex = 2
-        Me.GunaLabel3.Text = "Usted está a punto de"
+        Me.Lbl1_A_R.AutoSize = True
+        Me.Lbl1_A_R.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lbl1_A_R.ForeColor = System.Drawing.Color.FromArgb(CType(CType(181, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(181, Byte), Integer))
+        Me.Lbl1_A_R.Location = New System.Drawing.Point(3, 32)
+        Me.Lbl1_A_R.Name = "Lbl1_A_R"
+        Me.Lbl1_A_R.Size = New System.Drawing.Size(143, 17)
+        Me.Lbl1_A_R.TabIndex = 2
+        Me.Lbl1_A_R.Text = "Usted está a punto de"
         '
-        'GunaLabel2
+        'LblAttention_A_R
         '
-        Me.GunaLabel2.AutoSize = True
-        Me.GunaLabel2.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GunaLabel2.ForeColor = System.Drawing.Color.DarkGray
-        Me.GunaLabel2.Location = New System.Drawing.Point(3, 2)
-        Me.GunaLabel2.Name = "GunaLabel2"
-        Me.GunaLabel2.Size = New System.Drawing.Size(120, 30)
-        Me.GunaLabel2.TabIndex = 1
-        Me.GunaLabel2.Text = "ATENCIÓN"
+        Me.LblAttention_A_R.AutoSize = True
+        Me.LblAttention_A_R.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblAttention_A_R.ForeColor = System.Drawing.Color.DarkGray
+        Me.LblAttention_A_R.Location = New System.Drawing.Point(3, 2)
+        Me.LblAttention_A_R.Name = "LblAttention_A_R"
+        Me.LblAttention_A_R.Size = New System.Drawing.Size(120, 30)
+        Me.LblAttention_A_R.TabIndex = 1
+        Me.LblAttention_A_R.Text = "ATENCIÓN"
         '
         'FrmAlertRemove
         '
@@ -248,12 +248,12 @@ Partial Class FrmAlertRemove
     Friend WithEvents PanelBody As Panel
     Friend WithEvents PanelTop As Panel
     Friend WithEvents LblEliminar As Guna.UI.WinForms.GunaLabel
-    Friend WithEvents GunaLabel3 As Guna.UI.WinForms.GunaLabel
-    Friend WithEvents GunaLabel2 As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents Lbl1_A_R As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents LblAttention_A_R As Guna.UI.WinForms.GunaLabel
     Friend WithEvents LblElimBody As Guna.UI.WinForms.GunaLabel
     Friend WithEvents LblSympt As Guna.UI.WinForms.GunaLabel
-    Friend WithEvents LblPregunta As Guna.UI.WinForms.GunaLabel
-    Friend WithEvents BtnPin As Guna.UI.WinForms.GunaButton
+    Friend WithEvents LblPregunta_A_R As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents BtnPin_A_R As Guna.UI.WinForms.GunaButton
     Friend WithEvents TxtPin As Guna.UI.WinForms.GunaTextBox
     Friend WithEvents PicVector As PictureBox
     Friend WithEvents GunaLabel6 As Guna.UI.WinForms.GunaLabel

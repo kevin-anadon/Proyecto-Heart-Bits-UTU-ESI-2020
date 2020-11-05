@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AddWithSuccess" xml:space="preserve">
+    <value>Agregado con éxito</value>
+  </data>
   <data name="BtnAcceptPet_M_P" xml:space="preserve">
     <value>Aceptar</value>
     <comment>Medic. Home. Button. Petitions</comment>
@@ -257,6 +260,9 @@
     <value>Pacientes</value>
     <comment>Admin. HomeP. Boton. Titulo.</comment>
   </data>
+  <data name="BtnPin_A_R" xml:space="preserve">
+    <value>REMOVER</value>
+  </data>
   <data name="BtnRequest_M_H" xml:space="preserve">
     <value>Peticiones</value>
     <comment>Medic. Home. Button. Request</comment>
@@ -288,6 +294,10 @@
     <value>Modificar Diagnóstico</value>
     <comment>Medic. ChatInfo. CheckBox</comment>
   </data>
+  <data name="ChkRegAdd_A_SA" xml:space="preserve">
+    <value>Agregar región</value>
+    <comment>Admin. SymptomAdd</comment>
+  </data>
   <data name="ChkReg_A_SA" xml:space="preserve">
     <value>Modificar región</value>
     <comment>Admin. SymptomAdd</comment>
@@ -306,9 +316,19 @@
   <data name="ConnectionFailed" xml:space="preserve">
     <value>Conexión fallida. Intentado recopilar datos...</value>
   </data>
+  <data name="CsvSymptomsMsg" xml:space="preserve">
+    <value>Luego debe asociarle una o más patologias</value>
+  </data>
   <data name="DiagnosticModSuccess_M_C" xml:space="preserve">
     <value>Diagnóstico modificado con exito</value>
     <comment>Medic. Chat. MessageBox</comment>
+  </data>
+  <data name="EliminatedSuccessfull_A_R" xml:space="preserve">
+    <value> eliminado con éxito</value>
+  </data>
+  <data name="EmptyFields_A_SA" xml:space="preserve">
+    <value>Campos vacios o No selecciono patología asociada</value>
+    <comment>Admin. SymptomAdd MessageBox</comment>
   </data>
   <data name="EndChat_M_C" xml:space="preserve">
     <value>Está seguro que desea finalizar el chat ?</value>
@@ -328,6 +348,9 @@
   </data>
   <data name="Label16" xml:space="preserve">
     <value>Ignacio Rodríguez Sosa.</value>
+  </data>
+  <data name="Lbl1_A_R" xml:space="preserve">
+    <value>Usted está a punto de</value>
   </data>
   <data name="Lbl1_Intro_P_H" xml:space="preserve">
     <value>Introducción</value>
@@ -369,6 +392,9 @@
     <value>Asociación a la región</value>
     <comment>Admin. SymptomAdd</comment>
   </data>
+  <data name="LblAttention_A_R" xml:space="preserve">
+    <value>ATENCIÓN</value>
+  </data>
   <data name="LblBody_M_L" xml:space="preserve">
     <value>Ingrese su usuario y contraseña 
 para autenticar y verificar sus credenciales.
@@ -386,6 +412,12 @@ Este Software le permitirá tratar a sus Pacientes, brindándoles a estos, infor
   <data name="LblDescSympt_A_SA" xml:space="preserve">
     <value>Descripción</value>
     <comment>Admin. SymptomAdd</comment>
+  </data>
+  <data name="LblElimBodySympt" xml:space="preserve">
+    <value>Eliminar el síntoma:</value>
+  </data>
+  <data name="LblEliminarSympt" xml:space="preserve">
+    <value>ELIMINAR SÍNTOMA</value>
   </data>
   <data name="LblInfo1Intro1_P_H" xml:space="preserve">
     <value>Está a punto de realizar un chequeo médico breve (3 min), seguro y anónimo. Sus respuestas serán analizadas cuidadosamente y se le dirá las posibles causas de sus síntomas a salvo. La información que usted proporcione es anónima y no será compartida con nadie.</value>
@@ -494,6 +526,9 @@ Este Software le permitirá gestionar al Personal, a los Pacientes, los Síntoma
   <data name="LblPet_M_P" xml:space="preserve">
     <value>PETICIONES SOLICITADAS</value>
     <comment>Medic. Home. Label. Petitions</comment>
+  </data>
+  <data name="LblPregunta_A_RSympt" xml:space="preserve">
+    <value>¿Está usted seguro de que quiere eliminar este síntoma?</value>
   </data>
   <data name="LblResultInfoo_P_H" xml:space="preserve">
     <value>Por favor, tenga en cuenta que la lista podría no ser completa y que la información proporcionada tiene una finalidad informativa y no se corresponde con una opinión médica real.</value>
@@ -728,6 +763,9 @@ que se apliquen a usted.</value>
     <value>Patient</value>
     <comment>Medic. Chat. Label</comment>
   </data>
+  <data name="ModifyWithSuccess" xml:space="preserve">
+    <value>Modificado con éxito</value>
+  </data>
   <data name="MsgExit" xml:space="preserve">
     <value>Está seguro que desea salir ?</value>
   </data>
@@ -775,5 +813,8 @@ que se apliquen a usted.</value>
   </data>
   <data name="UserOrPassWrong" xml:space="preserve">
     <value>Usuario y/o Contraseña erroneos.</value>
+  </data>
+  <data name="WrongPin_A_R" xml:space="preserve">
+    <value>PIN incorrecto</value>
   </data>
 </root>

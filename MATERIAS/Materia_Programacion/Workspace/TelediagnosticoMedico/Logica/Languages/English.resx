@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AddWithSuccess" xml:space="preserve">
+    <value>Successfully added</value>
+  </data>
   <data name="BtnAcceptPet_M_P" xml:space="preserve">
     <value>Accept</value>
     <comment>Medic. Home. Button. Petitions</comment>
@@ -253,6 +256,9 @@
     <value>Patients</value>
     <comment>Admin. Home. Button. Title.</comment>
   </data>
+  <data name="BtnPin_A_R" xml:space="preserve">
+    <value>REMOVE</value>
+  </data>
   <data name="BtnRequest_M_H" xml:space="preserve">
     <value>Requests</value>
     <comment>Medic. Home. Button. Request</comment>
@@ -284,6 +290,10 @@
     <value>Modify Diagnose</value>
     <comment>Medic. ChatInfo. CheckBox</comment>
   </data>
+  <data name="ChkRegAdd_A_SA" xml:space="preserve">
+    <value>Add region</value>
+    <comment>Admin. SymptomAdd</comment>
+  </data>
   <data name="ChkReg_A_SA" xml:space="preserve">
     <value>Modify region</value>
     <comment>Admin. SymptomAdd</comment>
@@ -302,9 +312,19 @@
   <data name="ConnectionFailed" xml:space="preserve">
     <value>Connection failed. Trying to recover data...</value>
   </data>
+  <data name="CsvSymptomsMsg" xml:space="preserve">
+    <value>Then you must associate one or more pathologies</value>
+  </data>
   <data name="DiagnosticModSuccess_M_C" xml:space="preserve">
     <value>Successfully modified diagnosis</value>
     <comment>Medic. Chat. MessageBox</comment>
+  </data>
+  <data name="EliminatedSuccessfull_A_R" xml:space="preserve">
+    <value> successfully removed</value>
+  </data>
+  <data name="EmptyFields_A_SA" xml:space="preserve">
+    <value>Empty fields o Do not select associated pathology</value>
+    <comment>Admin. SymptomAdd MessageBox</comment>
   </data>
   <data name="EndChat_M_C" xml:space="preserve">
     <value>Are you sure you want to end the chat?</value>
@@ -324,6 +344,9 @@
   </data>
   <data name="Label16" xml:space="preserve">
     <value>Ignacio Rodríguez Sosa.</value>
+  </data>
+  <data name="Lbl1_A_R" xml:space="preserve">
+    <value>You are about to</value>
   </data>
   <data name="Lbl1_Intro_P_H" xml:space="preserve">
     <value>Introduction</value>
@@ -356,12 +379,15 @@
     <value>INSERT NEW SYMPTOM</value>
   </data>
   <data name="LblAsocPath_A_SA" xml:space="preserve">
-    <value>Association of pathologies</value>
+    <value>Association of paths</value>
     <comment>Admin. SymptomAdd</comment>
   </data>
   <data name="LblAsocReg_A_SA" xml:space="preserve">
     <value>Association to the region</value>
     <comment>Admin. SymptomAdd</comment>
+  </data>
+  <data name="LblAttention_A_R" xml:space="preserve">
+    <value>ATTENTION</value>
   </data>
   <data name="LblBody_M_L" xml:space="preserve">
     <value>Enter your username and password
@@ -379,6 +405,12 @@ This Software will allow you to treat your Patients, providing them with informa
   <data name="LblDescSympt_A_SA" xml:space="preserve">
     <value>Description</value>
     <comment>Admin. SymptomAdd</comment>
+  </data>
+  <data name="LblElimBodySympt" xml:space="preserve">
+    <value>Delete the sypmtom:</value>
+  </data>
+  <data name="LblEliminarSympt" xml:space="preserve">
+    <value>DELETE SYMPTOM</value>
   </data>
   <data name="LblInfo1Intro1_P_H" xml:space="preserve">
     <value>You are about to perform a brief (3 min), safe and anonymous medical check-up. Your answers will be carefully analyzed and you will be told the possible causes of your safe symptoms. The information you provide is anonymous and will not be shared with anyone.</value>
@@ -488,6 +520,9 @@ Enjoy our service. Tap the button below to start the anonymous diagnosis and it 
   <data name="LblPet_M_P" xml:space="preserve">
     <value>REQUESTED PETITIONS</value>
     <comment>Medic. Home. Label. Petitions</comment>
+  </data>
+  <data name="LblPregunta_A_RSympt" xml:space="preserve">
+    <value>Are you sure you want to remove this symptom?</value>
   </data>
   <data name="LblResultInfoo_P_H" xml:space="preserve">
     <value>Please note that the list may not be complete and that the information provided is for informational purposes and does not reflect an actual medical opinion.</value>
@@ -717,6 +752,9 @@ that apply to you.</value>
     <value>MAKING REQUEST</value>
     <comment>Patient. HomeD. Alert</comment>
   </data>
+  <data name="ModifyWithSuccess" xml:space="preserve">
+    <value>Successfully modified</value>
+  </data>
   <data name="MsgExit" xml:space="preserve">
     <value>Are you sure you want to exit ?</value>
   </data>
@@ -763,5 +801,8 @@ that apply to you.</value>
   </data>
   <data name="UserOrPassWrong" xml:space="preserve">
     <value>User or Password wrong.</value>
+  </data>
+  <data name="WrongPin_A_R" xml:space="preserve">
+    <value>Wrong PIN</value>
   </data>
 </root>

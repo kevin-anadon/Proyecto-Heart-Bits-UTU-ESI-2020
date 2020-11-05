@@ -39,19 +39,19 @@ Public Class FrmAdmin
         If Identify = 1 Then 'Medico
             FrmAlertRemove.idMedic = SelectedMedic.id
             alerta.Obtain(SelectedMedic.CiScript(CiSelected), 3)
-            alerta.LblPregunta.Text = "¿Está usted seguro de que quiere eliminar este médico?"
+            alerta.LblPregunta_A_R.Text = "¿Está usted seguro de que quiere eliminar este médico?"
             alerta.LblEliminar.Text = "Eliminar Médico"
             alerta.LblElimBody.Text = "Eliminar al médico "
         ElseIf Identify = 2 Then 'Paciente
             FrmAlertRemove.idPatient = SelectedPatient.id
             alerta.Obtain(SelectedPatient.CiScript(CiSelected), 4)
-            alerta.LblPregunta.Text = "¿Está usted seguro de que quiere eliminar este paciente?"
+            alerta.LblPregunta_A_R.Text = "¿Está usted seguro de que quiere eliminar este paciente?"
             alerta.LblEliminar.Text = "Eliminar Paciente"
             alerta.LblElimBody.Text = "Eliminar al paciente "
         ElseIf Identify = 3 Then 'Administrador
             FrmAlertRemove.idAdmin = SelectedAdmin.id
             alerta.Obtain(SelectedAdmin.CiScript(CiSelected), 2)
-            alerta.LblPregunta.Text = "¿Está usted seguro de que quiere eliminar este administrador?"
+            alerta.LblPregunta_A_R.Text = "¿Está usted seguro de que quiere eliminar este administrador?"
             alerta.LblEliminar.Text = "Eliminar Administrador"
             alerta.LblElimBody.Text = "Eliminar al administrador "
             alerta.LblSympt.Location = New Point(312, 34)

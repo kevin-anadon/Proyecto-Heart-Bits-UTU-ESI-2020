@@ -65,6 +65,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Busca una cadena traducida similar a Agregado con éxito.
+        '''</summary>
+        Friend Shared ReadOnly Property AddWithSuccess() As String
+            Get
+                Return ResourceManager.GetString("AddWithSuccess", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Busca una cadena traducida similar a Aceptar.
         '''</summary>
         Friend Shared ReadOnly Property BtnAcceptPet_M_P() As String
@@ -380,6 +389,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Busca una cadena traducida similar a REMOVER.
+        '''</summary>
+        Friend Shared ReadOnly Property BtnPin_A_R() As String
+            Get
+                Return ResourceManager.GetString("BtnPin_A_R", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Busca una cadena traducida similar a Peticiones.
         '''</summary>
         Friend Shared ReadOnly Property BtnRequest_M_H() As String
@@ -461,6 +479,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Busca una cadena traducida similar a Agregar región.
+        '''</summary>
+        Friend Shared ReadOnly Property ChkRegAdd_A_SA() As String
+            Get
+                Return ResourceManager.GetString("ChkRegAdd_A_SA", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Busca una cadena traducida similar a Cedula de identidad errónea.
         '''</summary>
         Friend Shared ReadOnly Property CiWrong() As String
@@ -497,11 +524,38 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Busca una cadena traducida similar a Luego debe asociarle una o más patologias.
+        '''</summary>
+        Friend Shared ReadOnly Property CsvSymptomsMsg() As String
+            Get
+                Return ResourceManager.GetString("CsvSymptomsMsg", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Busca una cadena traducida similar a Diagnóstico modificado con exito.
         '''</summary>
         Friend Shared ReadOnly Property DiagnosticModSuccess_M_C() As String
             Get
                 Return ResourceManager.GetString("DiagnosticModSuccess_M_C", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca una cadena traducida similar a  eliminado con éxito.
+        '''</summary>
+        Friend Shared ReadOnly Property EliminatedSuccessfull_A_R() As String
+            Get
+                Return ResourceManager.GetString("EliminatedSuccessfull_A_R", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca una cadena traducida similar a Campos vacios o No selecciono patología asociada.
+        '''</summary>
+        Friend Shared ReadOnly Property EmptyFields_A_SA() As String
+            Get
+                Return ResourceManager.GetString("EmptyFields_A_SA", resourceCulture)
             End Get
         End Property
         
@@ -556,6 +610,15 @@ Namespace My.Resources
         Friend Shared ReadOnly Property Label16() As String
             Get
                 Return ResourceManager.GetString("Label16", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca una cadena traducida similar a Usted está a punto de.
+        '''</summary>
+        Friend Shared ReadOnly Property Lbl1_A_R() As String
+            Get
+                Return ResourceManager.GetString("Lbl1_A_R", resourceCulture)
             End Get
         End Property
         
@@ -650,6 +713,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Busca una cadena traducida similar a ATENCIÓN.
+        '''</summary>
+        Friend Shared ReadOnly Property LblAttention_A_R() As String
+            Get
+                Return ResourceManager.GetString("LblAttention_A_R", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Busca una cadena traducida similar a Ingrese su usuario y contraseña 
         '''para autenticar y verificar sus credenciales.
         '''Este Software le permitirá tratar a sus Pacientes, brindándoles a estos, información para concluir un Telediagnóstico..
@@ -684,6 +756,24 @@ Namespace My.Resources
         Friend Shared ReadOnly Property LblDescSympt_A_SA() As String
             Get
                 Return ResourceManager.GetString("LblDescSympt_A_SA", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca una cadena traducida similar a Eliminar el síntoma:.
+        '''</summary>
+        Friend Shared ReadOnly Property LblElimBodySympt() As String
+            Get
+                Return ResourceManager.GetString("LblElimBodySympt", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca una cadena traducida similar a ELIMINAR SÍNTOMA.
+        '''</summary>
+        Friend Shared ReadOnly Property LblEliminarSympt() As String
+            Get
+                Return ResourceManager.GetString("LblEliminarSympt", resourceCulture)
             End Get
         End Property
         
@@ -917,6 +1007,15 @@ Namespace My.Resources
         Friend Shared ReadOnly Property LblPetitionInfo_P_H() As String
             Get
                 Return ResourceManager.GetString("LblPetitionInfo_P_H", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca una cadena traducida similar a ¿Está usted seguro de que quiere eliminar este síntoma?.
+        '''</summary>
+        Friend Shared ReadOnly Property LblPregunta_A_RSympt() As String
+            Get
+                Return ResourceManager.GetString("LblPregunta_A_RSympt", resourceCulture)
             End Get
         End Property
         
@@ -1444,6 +1543,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Busca una cadena traducida similar a Modificado con éxito.
+        '''</summary>
+        Friend Shared ReadOnly Property ModifyWithSuccess() As String
+            Get
+                Return ResourceManager.GetString("ModifyWithSuccess", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Busca una cadena traducida similar a Está seguro que desea salir ?.
         '''</summary>
         Friend Shared ReadOnly Property MsgExit() As String
@@ -1557,6 +1665,15 @@ Namespace My.Resources
         Friend Shared ReadOnly Property UserOrPassWrong() As String
             Get
                 Return ResourceManager.GetString("UserOrPassWrong", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca una cadena traducida similar a PIN incorrecto.
+        '''</summary>
+        Friend Shared ReadOnly Property WrongPin_A_R() As String
+            Get
+                Return ResourceManager.GetString("WrongPin_A_R", resourceCulture)
             End Get
         End Property
     End Class

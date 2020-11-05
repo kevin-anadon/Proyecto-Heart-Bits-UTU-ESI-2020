@@ -66,6 +66,7 @@ Partial Class FrmAddModSympt
         Me.LblSymptTop.Name = "LblSymptTop"
         Me.LblSymptTop.Size = New System.Drawing.Size(0, 30)
         Me.LblSymptTop.TabIndex = 29
+        Me.LblSymptTop.Visible = False
         '
         'BtnClose
         '
@@ -159,7 +160,7 @@ Partial Class FrmAddModSympt
         Me.ChkReg_A_SA.CheckedOffColor = System.Drawing.SystemColors.Desktop
         Me.ChkReg_A_SA.CheckedOnColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
         Me.ChkReg_A_SA.FillColor = System.Drawing.Color.White
-        Me.ChkReg_A_SA.Location = New System.Drawing.Point(232, 138)
+        Me.ChkReg_A_SA.Location = New System.Drawing.Point(274, 138)
         Me.ChkReg_A_SA.Name = "ChkReg_A_SA"
         Me.ChkReg_A_SA.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.ChkReg_A_SA.Size = New System.Drawing.Size(110, 20)
@@ -178,7 +179,7 @@ Partial Class FrmAddModSympt
         Me.Cmbreg.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.Cmbreg.ForeColor = System.Drawing.Color.White
         Me.Cmbreg.FormattingEnabled = True
-        Me.Cmbreg.Location = New System.Drawing.Point(232, 164)
+        Me.Cmbreg.Location = New System.Drawing.Point(274, 164)
         Me.Cmbreg.Name = "Cmbreg"
         Me.Cmbreg.OnHoverItemBaseColor = System.Drawing.Color.Teal
         Me.Cmbreg.OnHoverItemForeColor = System.Drawing.Color.White
@@ -203,7 +204,7 @@ Partial Class FrmAddModSympt
         Me.BtnCancel.ForeColor = System.Drawing.Color.Black
         Me.BtnCancel.Image = CType(resources.GetObject("BtnCancel.Image"), System.Drawing.Image)
         Me.BtnCancel.ImageSize = New System.Drawing.Size(20, 20)
-        Me.BtnCancel.Location = New System.Drawing.Point(481, 151)
+        Me.BtnCancel.Location = New System.Drawing.Point(540, 151)
         Me.BtnCancel.Name = "BtnCancel"
         Me.BtnCancel.OnHoverBaseColor = System.Drawing.Color.Silver
         Me.BtnCancel.OnHoverBorderColor = System.Drawing.Color.Black
@@ -232,7 +233,7 @@ Partial Class FrmAddModSympt
         Me.BtnMod.Image = CType(resources.GetObject("BtnMod.Image"), System.Drawing.Image)
         Me.BtnMod.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.BtnMod.ImageSize = New System.Drawing.Size(20, 20)
-        Me.BtnMod.Location = New System.Drawing.Point(526, 151)
+        Me.BtnMod.Location = New System.Drawing.Point(585, 151)
         Me.BtnMod.Name = "BtnMod"
         Me.BtnMod.OnHoverBaseColor = System.Drawing.Color.Silver
         Me.BtnMod.OnHoverBorderColor = System.Drawing.Color.Black
@@ -249,16 +250,17 @@ Partial Class FrmAddModSympt
         Me.Lblreg.AutoSize = True
         Me.Lblreg.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Lblreg.ForeColor = System.Drawing.Color.FromArgb(CType(CType(181, Byte), Integer), CType(CType(181, Byte), Integer), CType(CType(181, Byte), Integer))
-        Me.Lblreg.Location = New System.Drawing.Point(282, 104)
+        Me.Lblreg.Location = New System.Drawing.Point(324, 104)
         Me.Lblreg.Name = "Lblreg"
         Me.Lblreg.Size = New System.Drawing.Size(0, 15)
         Me.Lblreg.TabIndex = 39
+        Me.Lblreg.Visible = False
         '
         'LblActual_A_SA
         '
         Me.LblActual_A_SA.AutoSize = True
         Me.LblActual_A_SA.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.LblActual_A_SA.Location = New System.Drawing.Point(229, 104)
+        Me.LblActual_A_SA.Location = New System.Drawing.Point(271, 104)
         Me.LblActual_A_SA.Name = "LblActual_A_SA"
         Me.LblActual_A_SA.Size = New System.Drawing.Size(47, 15)
         Me.LblActual_A_SA.TabIndex = 38
@@ -269,7 +271,7 @@ Partial Class FrmAddModSympt
         Me.LblAsocReg_A_SA.AutoSize = True
         Me.LblAsocReg_A_SA.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblAsocReg_A_SA.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
-        Me.LblAsocReg_A_SA.Location = New System.Drawing.Point(227, 71)
+        Me.LblAsocReg_A_SA.Location = New System.Drawing.Point(269, 71)
         Me.LblAsocReg_A_SA.Name = "LblAsocReg_A_SA"
         Me.LblAsocReg_A_SA.Size = New System.Drawing.Size(217, 30)
         Me.LblAsocReg_A_SA.TabIndex = 37

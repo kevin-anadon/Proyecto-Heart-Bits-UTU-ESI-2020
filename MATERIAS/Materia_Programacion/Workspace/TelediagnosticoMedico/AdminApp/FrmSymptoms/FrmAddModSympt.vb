@@ -15,9 +15,15 @@ Public Class FrmAddModSympt
 
     Public Sub AddSympt()
         LblTittleAddSymp_A_SA.Text = Translator.Instance.Translate("LblAddSympt_A_SA")
-        LblActual_A_SA.Text = ""
-        ChkReg_A_SA.Text = Translator.Instance.Translate("LblAddRegion_A_SA")
+        LblActual_A_SA.Text = Translator.Instance.Translate("LblActual_A_SA")
+        Lblreg.Text = ""
+        ChkReg_A_SA.Text = Translator.Instance.Translate("ChkRegAdd_A_SA")
         Add = True
+    End Sub
+
+    Public Sub ModSympt(Sympt As String, Region As String)
+        LblSymptTop.Text = Sympt
+        Lblreg.Text = Region
     End Sub
 
     Public Sub ObtainSympt(s As String, r As String)
@@ -56,10 +62,13 @@ Public Class FrmAddModSympt
     Private Sub FrmModSympt_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Translator.Instance.TranslateForm(Me)
         If Add = False Then
+            LblSymptTop.Visible = True
             LblSymptTop.Text = SymptBefore.ToUpper()
+            Lblreg.Visible = True
             TxtDescr.Text = SymptBefore
             Lblreg.Text = reg
         Else
+            AddSympt()
             BtnImportCsv.Visible = True
         End If
         ReloadCmb()
@@ -116,7 +125,7 @@ Public Class FrmAddModSympt
         Dim SymptAfter As String = ""
 
         If TxtDescr.Text.Trim.Length = 0 Or ChkListPath.CheckedItems.Count = 0 Then
-            MessageBox.Show("Campos vacios o No selecciono patología asociada")
+            MessageBox.Show(Translator.Instance.Translate("EmptyFields_A_SA"))
         Else
             SymptAfter = TxtDescr.Text
             AddNewPaths()
@@ -126,7 +135,7 @@ Public Class FrmAddModSympt
                 symptSend = New Symptom(-1, RegAfter, SymptAfter)
                 Try
                     log.AddSymptoms(symptSend, PatAfter)
-                    MessageBox.Show("Agregado con exito")
+                    MessageBox.Show(Translator.Instance.Translate("AddWithSuccess"))
                     Me.Close()
                 Catch ex As Exception
                     MessageBox.Show(ex.Message)
@@ -135,7 +144,7 @@ Public Class FrmAddModSympt
                 symptSend = New Symptom(idSympt, RegAfter, SymptAfter)
                 Try
                     log.UpdateSymptoms(symptSend, PatAfter)
-                    MessageBox.Show("Modificado con exito!!")
+                    MessageBox.Show(Translator.Instance.Translate("ModifyWithSuccess"))
                     Me.Close()
                 Catch ex As Exception
                     MessageBox.Show(ex.Message)
@@ -164,7 +173,7 @@ Public Class FrmAddModSympt
             End If
             If Symptoms.Count > 0 Then
                 log.AddSymptomsFromCsv(Symptoms)
-                MessageBox.Show("Agregado con exito" + vbCrLf + "Luego debe asociarle una o más patologias")
+                MessageBox.Show(Translator.Instance.Translate("AddWithSuccess") + vbCrLf + Translator.Instance.Translate("CsvSymptomsMsg"))
                 Me.Close()
             End If
         Catch ex As Exception
