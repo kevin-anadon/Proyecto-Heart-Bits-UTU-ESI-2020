@@ -311,7 +311,7 @@ Partial Class FrmHome
         Me.LblConnect.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblConnect.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
         Me.LblConnect.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.LblConnect.Location = New System.Drawing.Point(147, 349)
+        Me.LblConnect.Location = New System.Drawing.Point(16, 374)
         Me.LblConnect.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LblConnect.Name = "LblConnect"
         Me.LblConnect.Size = New System.Drawing.Size(367, 25)

@@ -15,13 +15,13 @@ Public Class FrmLogin 'Empleado Medico
     Private Sub IdentifyPreset(preset As Integer)
         Select Case preset
             Case 1 'Validando las Credenciales / En espera.
-                ShowNotification("Validando campos", 255, 208, 52)
+                ShowNotification(Translator.Instance.Translate("CheckingFields"), 255, 208, 52)
             Case 2 'Logeo Exitoso.
-                ShowNotification("Inicio de sesión exitoso.", 98, 186, 172)
+                ShowNotification(Translator.Instance.Translate("SuccessLogin"), 98, 186, 172)
             Case 3 'Error de Conexión.
-                ShowNotification("Conexión fallida. Intentado recopilar datos...", 251, 136, 133)
+                ShowNotification(Translator.Instance.Translate("ConnectionFailed"), 251, 136, 133)
             Case 4 'Cédula de identidad errónea.
-                ShowNotification("Usuario y/o Contraseña erroneos.", 251, 136, 133)
+                ShowNotification(Translator.Instance.Translate("UserOrPassWrong"), 251, 136, 133)
         End Select
     End Sub
     Private Function LoginMedic(user As String, passwd As String) As Data.Medic
@@ -50,7 +50,7 @@ Public Class FrmLogin 'Empleado Medico
         PnlInfo.Visible = True
 
         If TxtCredUser.Text.Trim.Length = 0 Or TxtCredPass.Text.Trim.Length = 0 Then 'Verifico si hay algun espacio vacio en las credenciales
-            Me.ShowNotification("Hay algún campo vacío.", 255, 208, 52) 'Notifico al usuario.
+            Me.ShowNotification(Translator.Instance.Translate("HayCamposVacios"), 255, 208, 52) 'Notifico al usuario.
         Else 'No hay Espacio vacio
             Try
                 MedicLogged = Me.InfoEmployeeLogged(TxtCredUser.Text.ToString(), TxtCredPass.Text.ToString())
@@ -61,7 +61,7 @@ Public Class FrmLogin 'Empleado Medico
                     FrmHome.Age = MedicLogged.CalcAge(MedicLogged.dateBirth).ToString()
                     FrmHome.Email = MedicLogged.email
                     FrmHome.Phone = MedicLogged.numPhone.ToString()
-                    FrmHome.Connect = "Usuario " & MedicLogged.username & " conectado a las " & TimeOfDay.Hour.ToString() & ":" & TimeOfDay.Minute.ToString() & ":" & TimeOfDay.Millisecond.ToString() & "."
+                    FrmHome.Connect = Translator.Instance.Translate("UserInfoHome_A_H") & MedicLogged.username + " " + Translator.Instance.Translate("UserInfoHomeCon_A_H") & TimeOfDay.Hour.ToString() & ":" & TimeOfDay.Minute.ToString() & ":" & TimeOfDay.Millisecond.ToString() & "."
 
                     FrmHome.Show() 'Inicio el Frame "Pantalla Inicial".
                     Me.Close() 'Cierro el Frame de "LoginEmployee".
@@ -91,11 +91,13 @@ Public Class FrmLogin 'Empleado Medico
 
     Private Sub RbnEng_CheckedChanged(sender As Object, e As EventArgs) Handles RbnEng.CheckedChanged
         Translator.Instance.LoadLanguage("English")
-        Translator.Instance.TraducirForm(Me)
+        Translator.Instance.TranslateForm(Me)
+        BtnCloseInfo.Text = "X"
     End Sub
 
     Private Sub RbnSpanish_CheckedChanged(sender As Object, e As EventArgs) Handles RbnSpanish.CheckedChanged
         Translator.Instance.LoadLanguage("Spanish")
-        Translator.Instance.TraducirForm(Me)
+        Translator.Instance.TranslateForm(Me)
+        BtnCloseInfo.Text = "X"
     End Sub
 End Class 'FrmLogin

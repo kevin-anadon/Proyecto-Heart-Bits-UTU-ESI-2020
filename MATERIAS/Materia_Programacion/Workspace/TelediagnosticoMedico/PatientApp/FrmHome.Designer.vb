@@ -24,16 +24,15 @@ Partial Class FrmHome
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmHome))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.PnlLeft = New Guna.UI2.WinForms.Guna2Panel()
         Me.Pctbx5_Chat = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Pctbx4_Result = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Pctbx3_Symptom = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Pctbx2_Patient = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Line5_Chat = New Guna.UI2.WinForms.Guna2PictureBox()
-
         Me.Lbl5_Chat_P_H = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.Line4_Result = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Lbl4_Result_P_H = New Guna.UI2.WinForms.Guna2HtmlLabel()
@@ -45,21 +44,18 @@ Partial Class FrmHome
         Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Line2_Patient = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Lbl2_Patient_P_H = New Guna.UI2.WinForms.Guna2HtmlLabel()
-
         Me.ElipseHome = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.ElipsePnlResult = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.PnlResultItems = New Guna.UI2.WinForms.Guna2Panel()
         Me.PnlColorInfo = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2PictureBox8 = New Guna.UI2.WinForms.Guna2PictureBox()
-
         Me.LblResultInfoo_P_H = New System.Windows.Forms.Label()
         Me.LblResults_P_H = New System.Windows.Forms.Label()
         Me.LblChat_P_H = New System.Windows.Forms.Label()
-        Me.LblResultUrgent = New System.Windows.Forms.Label()
+        Me.LblResultUrgent_M_C = New System.Windows.Forms.Label()
         Me.PnlSubPath = New Guna.UI2.WinForms.Guna2Panel()
         Me.PnlHeader = New Guna.UI2.WinForms.Guna2Panel()
         Me.LblResultsTitle_P_H = New System.Windows.Forms.Label()
-
         Me.DgvPhatologies = New Guna.UI2.WinForms.Guna2DataGridView()
         Me.ElipsePnlSubPath = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.PnlHead = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
@@ -68,26 +64,22 @@ Partial Class FrmHome
         Me.ElipsePnlRequest = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.PnlPetition = New Guna.UI2.WinForms.Guna2Panel()
         Me.PctbxPetition = New Guna.UI2.WinForms.Guna2PictureBox()
-
         Me.LblPetitionInfo_P_H = New System.Windows.Forms.Label()
         Me.PnlChat = New Guna.UI2.WinForms.Guna2Panel()
         Me.PnlTittleChat = New Guna.UI2.WinForms.Guna2Panel()
-        Me.LblMedic = New System.Windows.Forms.Label()
+        Me.LblMedic_P_HC = New System.Windows.Forms.Label()
         Me.LblTitleNameMedic_P_H = New System.Windows.Forms.Label()
-
         Me.TxtChatSend = New System.Windows.Forms.TextBox()
         Me.BtnSend = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
         Me.PnlChatBack = New Guna.UI2.WinForms.Guna2Panel()
         Me.TxtChat = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.Label11 = New System.Windows.Forms.Label()
+        Me.LblSystemChat_M_C = New System.Windows.Forms.Label()
         Me.ElipseChat = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
-
         Me.PnlResult = New Guna.UI2.WinForms.Guna2Panel()
         Me.BtnSendChatP_P_H = New Guna.UI2.WinForms.Guna2Button()
         Me.BtnEnd_P_H = New Guna.UI2.WinForms.Guna2Button()
-
-        Me.BtnCancelPetition = New Guna.UI2.WinForms.Guna2Button()
+        Me.BtnCancelPetition_P_HD = New Guna.UI2.WinForms.Guna2Button()
         Me.PnlSymptom = New Guna.UI2.WinForms.Guna2Panel()
         Me.CbxSysSymptoms = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.Guna2PictureBox11 = New Guna.UI2.WinForms.Guna2PictureBox()
@@ -155,10 +147,8 @@ Partial Class FrmHome
         Me.LblTitleIntro_P_H = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.BtnNext_Intro2_P_H = New Guna.UI2.WinForms.Guna2Button()
         Me.PctbxWelcome = New Guna.UI2.WinForms.Guna2PictureBox()
-
         Me.TimerRequest = New System.Windows.Forms.Timer(Me.components)
         Me.TimerChat = New System.Windows.Forms.Timer(Me.components)
-
         Me.PnlLeft.SuspendLayout()
         CType(Me.Pctbx5_Chat, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Pctbx4_Result, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -288,7 +278,6 @@ Partial Class FrmHome
         Me.Pctbx2_Patient.TabIndex = 12
         Me.Pctbx2_Patient.TabStop = False
         Me.Pctbx2_Patient.Visible = False
-
         '
         'Line5_Chat
         '
@@ -321,7 +310,6 @@ Partial Class FrmHome
         Me.Lbl5_Chat_P_H.TabIndex = 11
         Me.Lbl5_Chat_P_H.Text = "Chat"
         Me.Lbl5_Chat_P_H.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft
-
         '
         'Line4_Result
         '
@@ -337,7 +325,6 @@ Partial Class FrmHome
         Me.Line4_Result.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
         Me.Line4_Result.TabIndex = 8
         Me.Line4_Result.TabStop = False
-
         '
         'Lbl4_Result_P_H
         '
@@ -355,7 +342,6 @@ Partial Class FrmHome
         Me.Lbl4_Result_P_H.TabIndex = 9
         Me.Lbl4_Result_P_H.Text = "Resultados"
         Me.Lbl4_Result_P_H.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft
-
         '
         'Line3_Symptom
         '
@@ -371,7 +357,6 @@ Partial Class FrmHome
         Me.Line3_Symptom.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
         Me.Line3_Symptom.TabIndex = 6
         Me.Line3_Symptom.TabStop = False
-
         '
         'Lbl3_Symptom_P_H
         '
@@ -389,7 +374,6 @@ Partial Class FrmHome
         Me.Lbl3_Symptom_P_H.TabIndex = 7
         Me.Lbl3_Symptom_P_H.Text = "Síntomas"
         Me.Lbl3_Symptom_P_H.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft
-
         '
         'Pctbx1_Intro
         '
@@ -418,8 +402,7 @@ Partial Class FrmHome
         Me.Line1_Intro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
         Me.Line1_Intro.TabIndex = 1
         Me.Line1_Intro.TabStop = False
-
-
+        '
         'Lbl1_Intro_P_H
         '
         Me.Lbl1_Intro_P_H.AccessibleDescription = "Lbl1_Intro_P_H"
@@ -436,7 +419,6 @@ Partial Class FrmHome
         Me.Lbl1_Intro_P_H.TabIndex = 2
         Me.Lbl1_Intro_P_H.Text = "Introducción"
         Me.Lbl1_Intro_P_H.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft
-
         '
         'Guna2PictureBox1
         '
@@ -463,7 +445,6 @@ Partial Class FrmHome
         Me.Line2_Patient.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
         Me.Line2_Patient.TabIndex = 4
         Me.Line2_Patient.TabStop = False
-
         '
         'Lbl2_Patient_P_H
         '
@@ -481,7 +462,6 @@ Partial Class FrmHome
         Me.Lbl2_Patient_P_H.TabIndex = 5
         Me.Lbl2_Patient_P_H.Text = "Paciente"
         Me.Lbl2_Patient_P_H.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft
-
         '
         'ElipseHome
         '
@@ -503,7 +483,7 @@ Partial Class FrmHome
         Me.PnlResultItems.Controls.Add(Me.LblResultInfoo_P_H)
         Me.PnlResultItems.Controls.Add(Me.LblResults_P_H)
         Me.PnlResultItems.Controls.Add(Me.LblChat_P_H)
-        Me.PnlResultItems.Controls.Add(Me.LblResultUrgent)
+        Me.PnlResultItems.Controls.Add(Me.LblResultUrgent_M_C)
         Me.PnlResultItems.Controls.Add(Me.PnlSubPath)
         Me.PnlResultItems.FillColor = System.Drawing.Color.White
         Me.PnlResultItems.Location = New System.Drawing.Point(9, 12)
@@ -573,20 +553,20 @@ Partial Class FrmHome
         Me.LblChat_P_H.Name = "LblChat_P_H"
         Me.LblChat_P_H.Size = New System.Drawing.Size(815, 30)
         Me.LblChat_P_H.TabIndex = 3
-        Me.LblChat_P_H.Text = "En las próximas versiones de nuestro sitema, podrá consultar con un Médico."
+        Me.LblChat_P_H.Text = "Si usted lo desea puede consultar a un Médico."
         Me.LblChat_P_H.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'LblResultUrgent
+        'LblResultUrgent_M_C
         '
-        Me.LblResultUrgent.AccessibleDescription = "LblResultUrgent"
-        Me.LblResultUrgent.AccessibleName = "LblResultUrgent"
-        Me.LblResultUrgent.Font = New System.Drawing.Font("Calibri", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblResultUrgent.Location = New System.Drawing.Point(215, 9)
-        Me.LblResultUrgent.Name = "LblResultUrgent"
-        Me.LblResultUrgent.Size = New System.Drawing.Size(822, 50)
-        Me.LblResultUrgent.TabIndex = 2
-        Me.LblResultUrgent.Text = "No requiere de una valoración médica urgente."
-        Me.LblResultUrgent.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LblResultUrgent_M_C.AccessibleDescription = "LblResultUrgent"
+        Me.LblResultUrgent_M_C.AccessibleName = "LblResultUrgent"
+        Me.LblResultUrgent_M_C.Font = New System.Drawing.Font("Calibri", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblResultUrgent_M_C.Location = New System.Drawing.Point(215, 9)
+        Me.LblResultUrgent_M_C.Name = "LblResultUrgent_M_C"
+        Me.LblResultUrgent_M_C.Size = New System.Drawing.Size(822, 50)
+        Me.LblResultUrgent_M_C.TabIndex = 2
+        Me.LblResultUrgent_M_C.Text = "No requiere de una valoración médica urgente."
+        Me.LblResultUrgent_M_C.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'PnlSubPath
         '
@@ -637,30 +617,30 @@ Partial Class FrmHome
         Me.DgvPhatologies.AllowUserToDeleteRows = False
         Me.DgvPhatologies.AllowUserToResizeColumns = False
         Me.DgvPhatologies.AllowUserToResizeRows = False
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
-        Me.DgvPhatologies.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle16.BackColor = System.Drawing.Color.White
+        Me.DgvPhatologies.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle16
         Me.DgvPhatologies.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DgvPhatologies.BackgroundColor = System.Drawing.Color.White
         Me.DgvPhatologies.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DgvPhatologies.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.DgvPhatologies.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DgvPhatologies.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle17.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle17.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DgvPhatologies.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle17
         Me.DgvPhatologies.ColumnHeadersHeight = 4
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DgvPhatologies.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle18.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle18.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle18.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DgvPhatologies.DefaultCellStyle = DataGridViewCellStyle18
         Me.DgvPhatologies.EnableHeadersVisualStyles = False
         Me.DgvPhatologies.GridColor = System.Drawing.Color.White
         Me.DgvPhatologies.Location = New System.Drawing.Point(10, 44)
@@ -724,12 +704,10 @@ Partial Class FrmHome
         Me.PnlPetition.AccessibleDescription = "PnlPetition"
         Me.PnlPetition.AccessibleName = "PnlPetition"
         Me.PnlPetition.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
-
         Me.PnlPetition.BorderRadius = 20
         Me.PnlPetition.BorderThickness = 6
         Me.PnlPetition.Controls.Add(Me.PctbxPetition)
         Me.PnlPetition.Controls.Add(Me.LblPetitionInfo_P_H)
-
         Me.PnlPetition.Enabled = False
         Me.PnlPetition.Location = New System.Drawing.Point(9, 674)
         Me.PnlPetition.Name = "PnlPetition"
@@ -750,7 +728,6 @@ Partial Class FrmHome
         Me.PctbxPetition.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PctbxPetition.TabIndex = 26
         Me.PctbxPetition.TabStop = False
-
         '
         'LblPetitionInfo_P_H
         '
@@ -765,7 +742,6 @@ Partial Class FrmHome
         Me.LblPetitionInfo_P_H.TabIndex = 25
         Me.LblPetitionInfo_P_H.Text = "GENERANDO PETICIÓN"
         Me.LblPetitionInfo_P_H.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-
         '
         'PnlChat
         '
@@ -789,7 +765,7 @@ Partial Class FrmHome
         Me.PnlTittleChat.AccessibleDescription = "PnlColorInfo"
         Me.PnlTittleChat.AccessibleName = "PnlColorInfo"
         Me.PnlTittleChat.BorderRadius = 11
-        Me.PnlTittleChat.Controls.Add(Me.LblMedic)
+        Me.PnlTittleChat.Controls.Add(Me.LblMedic_P_HC)
         Me.PnlTittleChat.Controls.Add(Me.LblTitleNameMedic_P_H)
         Me.PnlTittleChat.FillColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
         Me.PnlTittleChat.Location = New System.Drawing.Point(33, 21)
@@ -798,20 +774,19 @@ Partial Class FrmHome
         Me.PnlTittleChat.Size = New System.Drawing.Size(1009, 51)
         Me.PnlTittleChat.TabIndex = 62
         '
-        'LblMedic
+        'LblMedic_P_HC
         '
-        Me.LblMedic.AccessibleDescription = "LblResults"
-        Me.LblMedic.AccessibleName = "LblResults"
-        Me.LblMedic.BackColor = System.Drawing.Color.Transparent
-        Me.LblMedic.Font = New System.Drawing.Font("Calibri", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblMedic.ForeColor = System.Drawing.Color.White
-        Me.LblMedic.Location = New System.Drawing.Point(411, 0)
-        Me.LblMedic.Name = "LblMedic"
-        Me.LblMedic.Size = New System.Drawing.Size(573, 51)
-        Me.LblMedic.TabIndex = 53
-        Me.LblMedic.Text = "Medico"
-        Me.LblMedic.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-
+        Me.LblMedic_P_HC.AccessibleDescription = "LblResults"
+        Me.LblMedic_P_HC.AccessibleName = "LblResults"
+        Me.LblMedic_P_HC.BackColor = System.Drawing.Color.Transparent
+        Me.LblMedic_P_HC.Font = New System.Drawing.Font("Calibri", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblMedic_P_HC.ForeColor = System.Drawing.Color.White
+        Me.LblMedic_P_HC.Location = New System.Drawing.Point(411, 0)
+        Me.LblMedic_P_HC.Name = "LblMedic_P_HC"
+        Me.LblMedic_P_HC.Size = New System.Drawing.Size(573, 51)
+        Me.LblMedic_P_HC.TabIndex = 53
+        Me.LblMedic_P_HC.Text = "Medico"
+        Me.LblMedic_P_HC.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'LblTitleNameMedic_P_H
         '
@@ -820,7 +795,7 @@ Partial Class FrmHome
         Me.LblTitleNameMedic_P_H.BackColor = System.Drawing.Color.Transparent
         Me.LblTitleNameMedic_P_H.Font = New System.Drawing.Font("Calibri", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblTitleNameMedic_P_H.ForeColor = System.Drawing.Color.White
-        Me.LblTitleNameMedic_P_H.Image = CType(resources.GetObject("LblTitleNameMedic_P_H.Image"), System.Drawing.Image)
+        Me.LblTitleNameMedic_P_H.Image = Global.PatientApp.My.Resources.Resources.User
         Me.LblTitleNameMedic_P_H.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.LblTitleNameMedic_P_H.Location = New System.Drawing.Point(6, 0)
         Me.LblTitleNameMedic_P_H.Name = "LblTitleNameMedic_P_H"
@@ -838,13 +813,12 @@ Partial Class FrmHome
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TxtChatSend.BackColor = System.Drawing.Color.White
         Me.TxtChatSend.BorderStyle = System.Windows.Forms.BorderStyle.None
-
         Me.TxtChatSend.Font = New System.Drawing.Font("Segoe UI Emoji", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtChatSend.ForeColor = System.Drawing.Color.Black
         Me.TxtChatSend.Location = New System.Drawing.Point(52, 665)
         Me.TxtChatSend.Name = "TxtChatSend"
-        Me.TxtChatSend.Size = New System.Drawing.Size(862, 22)
-        Me.TxtChatSend.TabIndex = 61
+        Me.TxtChatSend.Size = New System.Drawing.Size(879, 22)
+        Me.TxtChatSend.TabIndex = 0
         '
         'BtnSend
         '
@@ -862,13 +836,12 @@ Partial Class FrmHome
         Me.BtnSend.HoverState.Parent = Me.BtnSend
         Me.BtnSend.Image = Global.PatientApp.My.Resources.Resources.mdi_send
         Me.BtnSend.ImageOffset = New System.Drawing.Point(1, 0)
-        Me.BtnSend.Location = New System.Drawing.Point(989, 649)
+        Me.BtnSend.Location = New System.Drawing.Point(965, 649)
         Me.BtnSend.Name = "BtnSend"
         Me.BtnSend.PressedDepth = 0
         Me.BtnSend.ShadowDecoration.Parent = Me.BtnSend
-        Me.BtnSend.Size = New System.Drawing.Size(53, 45)
+        Me.BtnSend.Size = New System.Drawing.Size(77, 45)
         Me.BtnSend.TabIndex = 66
-
         '
         'Guna2Button1
         '
@@ -888,7 +861,7 @@ Partial Class FrmHome
         Me.Guna2Button1.Name = "Guna2Button1"
         Me.Guna2Button1.PressedDepth = 0
         Me.Guna2Button1.ShadowDecoration.Parent = Me.Guna2Button1
-        Me.Guna2Button1.Size = New System.Drawing.Size(890, 45)
+        Me.Guna2Button1.Size = New System.Drawing.Size(915, 45)
         Me.Guna2Button1.TabIndex = 64
         '
         'PnlChatBack
@@ -899,7 +872,7 @@ Partial Class FrmHome
         Me.PnlChatBack.BorderRadius = 6
         Me.PnlChatBack.BorderThickness = 1
         Me.PnlChatBack.Controls.Add(Me.TxtChat)
-        Me.PnlChatBack.Controls.Add(Me.Label11)
+        Me.PnlChatBack.Controls.Add(Me.LblSystemChat_M_C)
         Me.PnlChatBack.FillColor = System.Drawing.Color.White
         Me.PnlChatBack.Location = New System.Drawing.Point(34, 75)
         Me.PnlChatBack.Name = "PnlChatBack"
@@ -934,19 +907,19 @@ Partial Class FrmHome
         Me.TxtChat.Size = New System.Drawing.Size(1003, 518)
         Me.TxtChat.TabIndex = 55
         '
-        'Label11
+        'LblSystemChat_M_C
         '
-        Me.Label11.AccessibleDescription = "LblResults"
-        Me.Label11.AccessibleName = "LblResults"
-        Me.Label11.BackColor = System.Drawing.Color.Transparent
-        Me.Label11.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.ForeColor = System.Drawing.Color.FromArgb(CType(CType(246, Byte), Integer), CType(CType(135, Byte), Integer), CType(CType(124, Byte), Integer))
-        Me.Label11.Location = New System.Drawing.Point(1, 0)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(76, 30)
-        Me.Label11.TabIndex = 54
-        Me.Label11.Text = "Sistema"
-        Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LblSystemChat_M_C.AccessibleDescription = "LblResults"
+        Me.LblSystemChat_M_C.AccessibleName = "LblResults"
+        Me.LblSystemChat_M_C.BackColor = System.Drawing.Color.Transparent
+        Me.LblSystemChat_M_C.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblSystemChat_M_C.ForeColor = System.Drawing.Color.FromArgb(CType(CType(246, Byte), Integer), CType(CType(135, Byte), Integer), CType(CType(124, Byte), Integer))
+        Me.LblSystemChat_M_C.Location = New System.Drawing.Point(1, 0)
+        Me.LblSystemChat_M_C.Name = "LblSystemChat_M_C"
+        Me.LblSystemChat_M_C.Size = New System.Drawing.Size(76, 30)
+        Me.LblSystemChat_M_C.TabIndex = 54
+        Me.LblSystemChat_M_C.Text = "Sistema"
+        Me.LblSystemChat_M_C.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'ElipseChat
         '
@@ -958,11 +931,10 @@ Partial Class FrmHome
         Me.PnlResult.AccessibleDescription = "PnlResult"
         Me.PnlResult.AccessibleName = "PnlResult"
         Me.PnlResult.BackgroundImage = Global.PatientApp.My.Resources.Resources.Panel__Type_1
-
         Me.PnlResult.Controls.Add(Me.BtnSendChatP_P_H)
         Me.PnlResult.Controls.Add(Me.PnlResultItems)
         Me.PnlResult.Controls.Add(Me.BtnEnd_P_H)
-        Me.PnlResult.Controls.Add(Me.BtnCancelPetition)
+        Me.PnlResult.Controls.Add(Me.BtnCancelPetition_P_HD)
         Me.PnlResult.Controls.Add(Me.PnlPetition)
         Me.PnlResult.Location = New System.Drawing.Point(234, 0)
         Me.PnlResult.Name = "PnlResult"
@@ -970,7 +942,6 @@ Partial Class FrmHome
         Me.PnlResult.Size = New System.Drawing.Size(1064, 753)
         Me.PnlResult.TabIndex = 6
         '
-
         'BtnSendChatP_P_H
         '
         Me.BtnSendChatP_P_H.AccessibleDescription = "BtnSendChatP_P_H"
@@ -1016,29 +987,29 @@ Partial Class FrmHome
         Me.BtnEnd_P_H.TabIndex = 2
         Me.BtnEnd_P_H.Text = "FINALIZAR"
         '
-        'BtnCancelPetition
+        'BtnCancelPetition_P_HD
         '
-        Me.BtnCancelPetition.AccessibleDescription = "BtnCancelPetition"
-        Me.BtnCancelPetition.AccessibleName = "BtnCancelPetition"
-        Me.BtnCancelPetition.Animated = True
-        Me.BtnCancelPetition.BackColor = System.Drawing.Color.White
-        Me.BtnCancelPetition.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
-        Me.BtnCancelPetition.BorderRadius = 15
-        Me.BtnCancelPetition.BorderThickness = 2
-        Me.BtnCancelPetition.CheckedState.Parent = Me.BtnCancelPetition
-        Me.BtnCancelPetition.CustomImages.Parent = Me.BtnCancelPetition
-        Me.BtnCancelPetition.Enabled = False
-        Me.BtnCancelPetition.FillColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
-        Me.BtnCancelPetition.Font = New System.Drawing.Font("Microsoft YaHei UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnCancelPetition.ForeColor = System.Drawing.Color.White
-        Me.BtnCancelPetition.HoverState.Parent = Me.BtnCancelPetition
-        Me.BtnCancelPetition.Location = New System.Drawing.Point(865, 674)
-        Me.BtnCancelPetition.Name = "BtnCancelPetition"
-        Me.BtnCancelPetition.ShadowDecoration.Parent = Me.BtnCancelPetition
-        Me.BtnCancelPetition.Size = New System.Drawing.Size(180, 60)
-        Me.BtnCancelPetition.TabIndex = 5
-        Me.BtnCancelPetition.Text = "CANCELAR"
-        Me.BtnCancelPetition.Visible = False
+        Me.BtnCancelPetition_P_HD.AccessibleDescription = "BtnCancelPetition"
+        Me.BtnCancelPetition_P_HD.AccessibleName = "BtnCancelPetition"
+        Me.BtnCancelPetition_P_HD.Animated = True
+        Me.BtnCancelPetition_P_HD.BackColor = System.Drawing.Color.White
+        Me.BtnCancelPetition_P_HD.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.BtnCancelPetition_P_HD.BorderRadius = 15
+        Me.BtnCancelPetition_P_HD.BorderThickness = 2
+        Me.BtnCancelPetition_P_HD.CheckedState.Parent = Me.BtnCancelPetition_P_HD
+        Me.BtnCancelPetition_P_HD.CustomImages.Parent = Me.BtnCancelPetition_P_HD
+        Me.BtnCancelPetition_P_HD.Enabled = False
+        Me.BtnCancelPetition_P_HD.FillColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.BtnCancelPetition_P_HD.Font = New System.Drawing.Font("Microsoft YaHei UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnCancelPetition_P_HD.ForeColor = System.Drawing.Color.White
+        Me.BtnCancelPetition_P_HD.HoverState.Parent = Me.BtnCancelPetition_P_HD
+        Me.BtnCancelPetition_P_HD.Location = New System.Drawing.Point(865, 674)
+        Me.BtnCancelPetition_P_HD.Name = "BtnCancelPetition_P_HD"
+        Me.BtnCancelPetition_P_HD.ShadowDecoration.Parent = Me.BtnCancelPetition_P_HD
+        Me.BtnCancelPetition_P_HD.Size = New System.Drawing.Size(180, 60)
+        Me.BtnCancelPetition_P_HD.TabIndex = 5
+        Me.BtnCancelPetition_P_HD.Text = "CANCELAR"
+        Me.BtnCancelPetition_P_HD.Visible = False
         '
         'PnlSymptom
         '
@@ -2159,7 +2130,6 @@ Partial Class FrmHome
         Me.LblInfo1Intro2_P_H.Name = "LblInfo1Intro2_P_H"
         Me.LblInfo1Intro2_P_H.Size = New System.Drawing.Size(1018, 201)
         Me.LblInfo1Intro2_P_H.TabIndex = 4
-        Me.LblInfo1Intro2_P_H.Text = resources.GetString("LblInfo1Intro2_P_H.Text")
         '
         'BtnNext_Patient_P_H
         '
@@ -2226,7 +2196,6 @@ Partial Class FrmHome
         Me.LblInfo2Intro1_P_H.Name = "LblInfo2Intro1_P_H"
         Me.LblInfo2Intro1_P_H.Size = New System.Drawing.Size(1018, 201)
         Me.LblInfo2Intro1_P_H.TabIndex = 5
-        Me.LblInfo2Intro1_P_H.Text = resources.GetString("LblInfo2Intro1_P_H.Text")
         '
         'LblInfo1Intro1_P_H
         '
@@ -2239,7 +2208,6 @@ Partial Class FrmHome
         Me.LblInfo1Intro1_P_H.Name = "LblInfo1Intro1_P_H"
         Me.LblInfo1Intro1_P_H.Size = New System.Drawing.Size(1015, 89)
         Me.LblInfo1Intro1_P_H.TabIndex = 4
-        Me.LblInfo1Intro1_P_H.Text = resources.GetString("LblInfo1Intro1_P_H.Text")
         '
         'LblTitleIntro_P_H
         '
@@ -2296,7 +2264,6 @@ Partial Class FrmHome
         Me.PctbxWelcome.TabIndex = 0
         Me.PctbxWelcome.TabStop = False
         '
-
         'TimerRequest
         '
         Me.TimerRequest.Interval = 1000
@@ -2314,9 +2281,9 @@ Partial Class FrmHome
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1299, 754)
         Me.ControlBox = False
+        Me.Controls.Add(Me.PnlChat)
         Me.Controls.Add(Me.PnlResult)
         Me.Controls.Add(Me.PnlSymptom)
-        Me.Controls.Add(Me.PnlChat)
         Me.Controls.Add(Me.PnlPatient)
         Me.Controls.Add(Me.PnlIntro2)
         Me.Controls.Add(Me.PnlIntro1)
@@ -2470,7 +2437,7 @@ Partial Class FrmHome
     Friend WithEvents BtnEnd_P_H As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents PnlResultItems As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents LblChat_P_H As Label
-    Friend WithEvents LblResultUrgent As Label
+    Friend WithEvents LblResultUrgent_M_C As Label
     Friend WithEvents PnlColorInfo As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Guna2PictureBox8 As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents ElipsePnlResult As Guna.UI2.WinForms.Guna2Elipse
@@ -2490,21 +2457,21 @@ Partial Class FrmHome
     Friend WithEvents Guna2PictureBox10 As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents PnlPetition As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents BtnSendChatP_P_H As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents BtnCancelPetition As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents BtnCancelPetition_P_HD As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents ElipsePnlRequest As Guna.UI2.WinForms.Guna2Elipse
     Friend WithEvents LblPetitionInfo_P_H As Label
     Friend WithEvents PctbxPetition As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents PnlChat As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents ElipseChat As Guna.UI2.WinForms.Guna2Elipse
     Friend WithEvents PnlTittleChat As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents LblMedic As Label
+    Friend WithEvents LblMedic_P_HC As Label
     Friend WithEvents LblTitleNameMedic_P_H As Label
     Friend WithEvents TxtChatSend As TextBox
     Friend WithEvents BtnSend As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents PnlChatBack As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents TxtChat As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents Label11 As Label
+    Friend WithEvents LblSystemChat_M_C As Label
     Friend WithEvents TimerRequest As Timer
     Friend WithEvents TimerChat As Timer
 End Class

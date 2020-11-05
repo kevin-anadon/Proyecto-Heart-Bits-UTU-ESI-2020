@@ -39,6 +39,8 @@ Partial Class FrmLogin
         Me.LblNotification = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.LblTitle2_P_L = New System.Windows.Forms.Label()
         Me.LblTitle1_P_L = New System.Windows.Forms.Label()
+        Me.RbnEng = New Guna.UI.WinForms.GunaImageRadioButton()
+        Me.RbnSpanish = New Guna.UI.WinForms.GunaImageRadioButton()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PicbxLogin, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -207,7 +209,7 @@ Partial Class FrmLogin
         Me.BtnCloseInfo.CheckedState.Parent = Me.BtnCloseInfo
         Me.BtnCloseInfo.CustomImages.Parent = Me.BtnCloseInfo
         Me.BtnCloseInfo.FillColor = System.Drawing.Color.FromArgb(CType(CType(246, Byte), Integer), CType(CType(135, Byte), Integer), CType(CType(124, Byte), Integer))
-        Me.BtnCloseInfo.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.BtnCloseInfo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
         Me.BtnCloseInfo.ForeColor = System.Drawing.Color.White
         Me.BtnCloseInfo.HoverState.Parent = Me.BtnCloseInfo
         Me.BtnCloseInfo.Location = New System.Drawing.Point(364, 13)
@@ -265,6 +267,27 @@ Partial Class FrmLogin
         Me.LblTitle1_P_L.Text = "GUSTO EN VERLO "
         Me.LblTitle1_P_L.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
+        'RbnEng
+        '
+        Me.RbnEng.ImageCheckedOff = Global.PatientApp.My.Resources.Resources.Eng
+        Me.RbnEng.ImageCheckedOn = Global.PatientApp.My.Resources.Resources.Eng_Selected
+        Me.RbnEng.ImageSize = New System.Drawing.Size(20, 20)
+        Me.RbnEng.Location = New System.Drawing.Point(994, 12)
+        Me.RbnEng.Name = "RbnEng"
+        Me.RbnEng.Size = New System.Drawing.Size(24, 24)
+        Me.RbnEng.TabIndex = 23
+        '
+        'RbnSpanish
+        '
+        Me.RbnSpanish.Checked = True
+        Me.RbnSpanish.ImageCheckedOff = Global.PatientApp.My.Resources.Resources.Es
+        Me.RbnSpanish.ImageCheckedOn = Global.PatientApp.My.Resources.Resources.Es_Selected
+        Me.RbnSpanish.ImageSize = New System.Drawing.Size(20, 20)
+        Me.RbnSpanish.Location = New System.Drawing.Point(1024, 12)
+        Me.RbnSpanish.Name = "RbnSpanish"
+        Me.RbnSpanish.Size = New System.Drawing.Size(24, 24)
+        Me.RbnSpanish.TabIndex = 24
+        '
         'FrmLogin
         '
         Me.AccessibleDescription = "FrmLogin"
@@ -275,6 +298,8 @@ Partial Class FrmLogin
         Me.BackgroundImage = Global.PatientApp.My.Resources.Resources.Login__Type_2
         Me.ClientSize = New System.Drawing.Size(1060, 640)
         Me.ControlBox = False
+        Me.Controls.Add(Me.RbnSpanish)
+        Me.Controls.Add(Me.RbnEng)
         Me.Controls.Add(Me.LblTitle2_P_L)
         Me.Controls.Add(Me.LblTitle1_P_L)
         Me.Controls.Add(Me.PnlInfo)
@@ -318,4 +343,6 @@ Partial Class FrmLogin
     Friend WithEvents LblNotification As Guna.UI2.WinForms.Guna2HtmlLabel
     Public WithEvents LblTitle2_P_L As Label
     Public WithEvents LblTitle1_P_L As Label
+    Friend WithEvents RbnSpanish As Guna.UI.WinForms.GunaImageRadioButton
+    Friend WithEvents RbnEng As Guna.UI.WinForms.GunaImageRadioButton
 End Class

@@ -27,7 +27,7 @@ Public Class Translator 'Clase dedicada a las traducciones
 
         Return translated
     End Function
-    Public Sub TraducirForm(formulario As Form)
+    Public Sub TranslateForm(formulario As Form)
         For Each control As Control In formulario.Controls
             'Analizo dentro del form los distintos tipos de controles que me puedo encontrar
             If TypeOf control Is Label Then
@@ -35,13 +35,15 @@ Public Class Translator 'Clase dedicada a las traducciones
             ElseIf TypeOf control Is Button Then
                 TranslateButton(control)
             ElseIf TypeOf control Is Guna.UI2.WinForms.Guna2Button Then
-                TranslateGunaButton(control)
+                TranslateGuna2Button(control)
             ElseIf TypeOf control Is Guna.UI2.WinForms.Guna2HtmlLabel Then
                 TranslateGunaHtmlLabel(control)
             ElseIf TypeOf control Is Guna.UI2.WinForms.Guna2CheckBox Then
                 TranslateGuna2CheckBox(control)
             ElseIf TypeOf control Is Guna.UI.WinForms.GunaCheckBox Then
                 TranslateGunaCheckBox(control)
+            ElseIf TypeOf control Is Guna.UI.WinForms.GunaButton Then
+                TranslateGunaButton(control)
             ElseIf TypeOf control Is Panel Then
                 TranslatePanel(control)
             ElseIf TypeOf control Is Guna.UI2.WinForms.Guna2Panel Then
@@ -66,6 +68,9 @@ Public Class Translator 'Clase dedicada a las traducciones
                 TranslateButton(ctrl2)
             End If
             If TypeOf ctrl2 Is Guna.UI2.WinForms.Guna2Button Then
+                TranslateGuna2Button(ctrl2)
+            End If
+            If TypeOf ctrl2 Is Guna.UI.WinForms.GunaButton Then
                 TranslateGunaButton(ctrl2)
             End If
             If TypeOf ctrl2 Is Guna.UI2.WinForms.Guna2CheckBox Then
@@ -92,6 +97,9 @@ Public Class Translator 'Clase dedicada a las traducciones
                 TranslateButton(ctrl2)
             End If
             If TypeOf ctrl2 Is Guna.UI2.WinForms.Guna2Button Then
+                TranslateGuna2Button(ctrl2)
+            End If
+            If TypeOf ctrl2 Is Guna.UI.WinForms.GunaButton Then
                 TranslateGunaButton(ctrl2)
             End If
             If TypeOf ctrl2 Is Guna.UI2.WinForms.Guna2CheckBox Then
@@ -120,7 +128,7 @@ Public Class Translator 'Clase dedicada a las traducciones
         End If
     End Sub
 
-    Private Sub TranslateGunaButton(ctrl As Control)
+    Private Sub TranslateGuna2Button(ctrl As Control)
         Dim Btn As Guna.UI2.WinForms.Guna2Button = DirectCast(ctrl, Guna.UI2.WinForms.Guna2Button)
         If Btn.Text = "" Then
 
@@ -128,7 +136,14 @@ Public Class Translator 'Clase dedicada a las traducciones
             Btn.Text = Translate(Btn.Name)
         End If
     End Sub
+    Private Sub TranslateGunaButton(ctrl As Control)
+        Dim Btn As Guna.UI.WinForms.GunaButton = DirectCast(ctrl, Guna.UI.WinForms.GunaButton)
+        If Btn.Text = "" Then
 
+        Else
+            Btn.Text = Translate(Btn.Name)
+        End If
+    End Sub
     Private Sub TranslateGunaHtmlLabel(ctrl As Control)
         Dim label As Guna.UI2.WinForms.Guna2HtmlLabel = DirectCast(ctrl, Guna.UI2.WinForms.Guna2HtmlLabel)
         label.Text = Translate(label.Name)

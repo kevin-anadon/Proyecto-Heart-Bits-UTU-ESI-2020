@@ -14,13 +14,13 @@ Public Class FrmLogin
     Private Sub IdentifyPreset(preset As Integer)
         Select Case preset
             Case 1 'Validando las Credenciales / En espera.
-                ShowNotification("Validando campos", 255, 208, 52)
+                ShowNotification(Translator.Instance.Translate("CheckingFields"), 255, 208, 52)
             Case 2 'Logeo Exitoso.
-                ShowNotification("Inicio de sesión exitoso.", 98, 186, 172)
+                ShowNotification(Translator.Instance.Translate("SuccessLogin"), 98, 186, 172)
             Case 3 'Error de Conexión.
-                ShowNotification("Conexión fallida. Intentado recopilar datos...", 251, 136, 133)
-            Case 4 'Cédula de identidad errónea.
-                ShowNotification("Usuario y/o Contraseña erroneos.", 251, 136, 133)
+                ShowNotification(Translator.Instance.Translate("ConnectionFailed"), 251, 136, 133)
+            Case 4 'Usuario y/o contraseña erroneo.
+                ShowNotification(Translator.Instance.Translate("UserOrPassWrong"), 251, 136, 133)
         End Select
     End Sub
     Private Function LoginAdmin(user As String, passwd As String) As Data.Admin
@@ -51,7 +51,7 @@ Public Class FrmLogin
         PnlInfo.Visible = True
 
         If TxtUser.Text.Trim.Length = 0 Or TxtPass.Text.Trim.Length = 0 Then 'Verifico si hay algun espacio vacio en las credenciales
-            Me.ShowNotification("Hay algún campo vacío.", 255, 208, 52) 'Notifico al usuario.
+            Me.ShowNotification(Translator.Instance.Translate("HayCamposVacios"), 255, 208, 52) 'Notifico al usuario.
         Else 'No hay Espacio vacio
             Try
                 AdminLog = Me.LoginAdmin(TxtUser.Text.ToString(), TxtPass.Text.ToString())
@@ -62,7 +62,7 @@ Public Class FrmLogin
                     FrmHome.Age = AdminLog.CalcAge(AdminLog.dateBirth).ToString()
                     FrmHome.Email = AdminLog.email
                     FrmHome.Phone = AdminLog.numPhone.ToString()
-                    FrmHome.Connect = "Usuario " & AdminLog.username & " conectado a las " & TimeOfDay.Hour.ToString() & ":" & TimeOfDay.Minute.ToString() & ":" & TimeOfDay.Millisecond.ToString() & "."
+                    FrmHome.Connect = Translator.Instance.Translate("UserInfoHome_A_H") & AdminLog.username + " " + Translator.Instance.Translate("UserInfoHomeCon_A_H") + TimeOfDay.Hour.ToString() & ":" & TimeOfDay.Minute.ToString() & ":" & TimeOfDay.Millisecond.ToString() & "."
 
                     FrmHome.Show() 'Inicio el Frame "Pantalla Inicial".
                     Me.Close() 'Cierro el Frame de "LoginEmployee".
@@ -93,8 +93,20 @@ Public Class FrmLogin
     End Sub
 
     Private Sub BtnExit_Click(sender As Object, e As EventArgs) Handles BtnExit_A_L.Click
-        If MsgBox("Está seguro que desea salir ?", MsgBoxStyle.YesNoCancel, "Cerrar Programa") = MsgBoxResult.Yes Then
+        If MsgBox(Translator.Instance.Translate("MsgExit"), MsgBoxStyle.YesNoCancel, Translator.Instance.Translate("CloseProgram_M_H")) = MsgBoxResult.Yes Then
             End
         End If
+    End Sub
+
+    Private Sub RbnEng_CheckedChanged(sender As Object, e As EventArgs) Handles RbnEng.CheckedChanged
+        Translator.Instance.LoadLanguage("English")
+        Translator.Instance.TranslateForm(Me)
+        BtnCloseInfo.Text = "X"
+    End Sub
+
+    Private Sub RbnSpanish_CheckedChanged(sender As Object, e As EventArgs) Handles RbnSpanish.CheckedChanged
+        Translator.Instance.LoadLanguage("Spanish")
+        Translator.Instance.TranslateForm(Me)
+        BtnCloseInfo.Text = "X"
     End Sub
 End Class

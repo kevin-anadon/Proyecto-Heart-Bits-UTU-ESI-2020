@@ -90,3 +90,4 @@ C:\Users\mayza\Desktop\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Program
 C:\Users\mayza\Desktop\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\PatientApp\obj\Debug\PatientApp.exe
 C:\Users\mayza\Desktop\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\PatientApp\obj\Debug\PatientApp.xml
 C:\Users\mayza\Desktop\Proyecto-Heart-Bits-UTU-ESI-2020\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\PatientApp\obj\Debug\PatientApp.pdb
+D:\Escritorio\Proyecto\MATERIAS\Materia_Programacion\Workspace\TelediagnosticoMedico\PatientApp\bin\Debug\Guna.UI.dll

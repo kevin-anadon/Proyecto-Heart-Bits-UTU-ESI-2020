@@ -15,15 +15,15 @@ Public Class FrmLogin 'Paciente
     Private Sub IdentifyPreset(preset As Integer)
         Select Case preset
             Case 1 'Validando las Credenciales / En espera.
-                ShowNotification("Validando C.I.", 255, 208, 52)
+                ShowNotification(Translator.Instance.Translate("CheckingFields"), 255, 208, 52)
             Case 2 'Logeo Exitoso.
-                ShowNotification("Inicio de sesión exitoso.", 98, 186, 172)
+                ShowNotification(Translator.Instance.Translate("SuccessLogin"), 98, 186, 172)
             Case 3 'Error de Conexión.
-                ShowNotification("Conexión fallida. Intentado recopilar datos...", 251, 136, 133)
-            Case 4 'Cédula de identidad errónea.
-                ShowNotification("Cédula de identidad errónea.", 251, 136, 133)
+                ShowNotification(Translator.Instance.Translate("ConnectionFailed"), 251, 136, 133)
+            Case 4 ''Cédula de identidad errónea..
+                ShowNotification(Translator.Instance.Translate("CiWrong"), 251, 136, 133)
             Case 5 'Paciente inhabilitado.
-                ShowNotification("No se encuentra habilitado.", 255, 208, 52)
+                ShowNotification(Translator.Instance.Translate("NotEnable"), 255, 208, 52)
         End Select
     End Sub
 
@@ -31,7 +31,7 @@ Public Class FrmLogin 'Paciente
     Private Sub BtnLogin_Click(sender As Object, e As EventArgs) Handles BtnLogin_P_L.Click
         PnlInfo.Visible = True
         If TxtCredential1.Text.Trim.Length = 0 Then 'Verifico si hay algun espacio vacio
-            Me.ShowNotification("Hay algún campo vacío. Ingrese alguna C.I.", 255, 208, 52) 'Notifico al usuario.
+            Me.ShowNotification(Translator.Instance.Translate("HayCamposVacios"), 255, 208, 52) 'Notifico al usuario.
         Else 'No hay Espacio vacio
             Dim preset As Short = L1.LoginPatient(TxtCredential1.Text)
             IdentifyPreset(preset) 'Notifico al usuario.
@@ -65,6 +65,19 @@ Public Class FrmLogin 'Paciente
     End Sub
     Private Sub BtnCloseInfo_Click(sender As Object, e As EventArgs) Handles BtnCloseInfo.Click
         PnlInfo.Visible = False
+    End Sub
+
+    'Traduccion
+    Private Sub RbnEng_CheckedChanged(sender As Object, e As EventArgs) Handles RbnEng.CheckedChanged
+        Translator.Instance.LoadLanguage("English")
+        Translator.Instance.TranslateForm(Me)
+        BtnCloseInfo.Text = "X"
+    End Sub
+
+    Private Sub RbnSpanish_CheckedChanged(sender As Object, e As EventArgs) Handles RbnSpanish.CheckedChanged
+        Translator.Instance.LoadLanguage("Spanish")
+        Translator.Instance.TranslateForm(Me)
+        BtnCloseInfo.Text = "X"
     End Sub
 End Class 'FrmLogin
 

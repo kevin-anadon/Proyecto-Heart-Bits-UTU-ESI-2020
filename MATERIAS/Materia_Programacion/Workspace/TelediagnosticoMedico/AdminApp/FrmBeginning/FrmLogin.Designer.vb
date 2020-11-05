@@ -43,6 +43,8 @@ Partial Class FrmLogin
         Me.LblNotification = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.PicbxLogin = New System.Windows.Forms.PictureBox()
         Me.Guna2DragControl1 = New Guna.UI2.WinForms.Guna2DragControl(Me.components)
+        Me.RbnSpanish = New Guna.UI.WinForms.GunaImageRadioButton()
+        Me.RbnEng = New Guna.UI.WinForms.GunaImageRadioButton()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -339,6 +341,27 @@ Partial Class FrmLogin
         '
         Me.Guna2DragControl1.TargetControl = Me.PicbxLogin
         '
+        'RbnSpanish
+        '
+        Me.RbnSpanish.Checked = True
+        Me.RbnSpanish.ImageCheckedOff = Global.AdminApp.My.Resources.Resources.Es
+        Me.RbnSpanish.ImageCheckedOn = Global.AdminApp.My.Resources.Resources.Es_Selected
+        Me.RbnSpanish.ImageSize = New System.Drawing.Size(20, 20)
+        Me.RbnSpanish.Location = New System.Drawing.Point(1024, 12)
+        Me.RbnSpanish.Name = "RbnSpanish"
+        Me.RbnSpanish.Size = New System.Drawing.Size(24, 24)
+        Me.RbnSpanish.TabIndex = 41
+        '
+        'RbnEng
+        '
+        Me.RbnEng.ImageCheckedOff = Global.AdminApp.My.Resources.Resources.Eng
+        Me.RbnEng.ImageCheckedOn = Global.AdminApp.My.Resources.Resources.Eng_Selected
+        Me.RbnEng.ImageSize = New System.Drawing.Size(20, 20)
+        Me.RbnEng.Location = New System.Drawing.Point(994, 12)
+        Me.RbnEng.Name = "RbnEng"
+        Me.RbnEng.Size = New System.Drawing.Size(24, 24)
+        Me.RbnEng.TabIndex = 40
+        '
         'FrmLogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
@@ -349,6 +372,8 @@ Partial Class FrmLogin
         Me.BackgroundImage = Global.AdminApp.My.Resources.Resources.Login__Type_2
         Me.ClientSize = New System.Drawing.Size(1060, 639)
         Me.ControlBox = False
+        Me.Controls.Add(Me.RbnSpanish)
+        Me.Controls.Add(Me.RbnEng)
         Me.Controls.Add(Me.PicbxLogin)
         Me.Controls.Add(Me.PicLogo)
         Me.Controls.Add(Me.PictureBox6)
@@ -399,4 +424,6 @@ Partial Class FrmLogin
     Friend WithEvents LblNotification As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents PicbxLogin As PictureBox
     Friend WithEvents Guna2DragControl1 As Guna.UI2.WinForms.Guna2DragControl
+    Friend WithEvents RbnSpanish As Guna.UI.WinForms.GunaImageRadioButton
+    Friend WithEvents RbnEng As Guna.UI.WinForms.GunaImageRadioButton
 End Class

@@ -8,7 +8,6 @@ Public Class FrmHome 'Paciente
 
     'Atributos:
     Private ReadOnly L1 As New Logic.Controller()
-    Private ReadOnly Translator As New Logic.Translator()
     Public ciPatientLoggedOn As String
     Private idPatientLoggedOn As Integer
     Private patientLoggedOn As New Data.People
@@ -18,8 +17,6 @@ Public Class FrmHome 'Paciente
     Private talkingMed As Medic
     Private chat As String = ""
     Private PatholgiesSuffered As List(Of Pathology)
-
-    'Private a As String = Me.Translator.Translate("a", "asd")
 
     'Comportamientos:
     ''' <summary>
@@ -149,7 +146,7 @@ Public Class FrmHome 'Paciente
 
                 Try
                     talkingMed = L1.ObtainTalkingMed(idPatientLoggedOn, dateTimeMadePetition)
-                    LblMedic.Text = talkingMed.fstName + " " + talkingMed.scndName + " " + talkingMed.fstSurname + " " + talkingMed.scndSurname
+                    LblMedic_P_HC.Text = talkingMed.fstName + " " + talkingMed.scndName + " " + talkingMed.fstSurname + " " + talkingMed.scndSurname
                     idRoom = Controller.Instance.ObtainRoomMed()
                 Catch ex As Exception
 
@@ -187,8 +184,8 @@ Public Class FrmHome 'Paciente
         BtnEnd_P_H.Enabled = b4
         PnlPetition.Visible = b5
         PnlPetition.Enabled = b6
-        BtnCancelPetition.Visible = b7
-        BtnCancelPetition.Enabled = b8
+        BtnCancelPetition_P_HD.Visible = b7
+        BtnCancelPetition_P_HD.Enabled = b8
         LblPetitionInfo_P_H.Text = info
         PctbxPetition.Image = RM.GetObject(image)
 
@@ -255,9 +252,17 @@ Public Class FrmHome 'Paciente
                     Me.FilterPathologies(descSympSuffered, pathology)
                 Next
                 pathFiltered = L1.ObtainMostProbablyPath()
+                AddDiagnostic(pathFiltered.id, idPatientLoggedOn, GetNowDateTime(2)) 'Inserto en la tabla diagnóstico la patología identificada
             Catch ex As Exception
                 MessageBox.Show(ex.Message)
             End Try
+
+            If pathFiltered.priority.id = 1 Or pathFiltered.priority.id = 2 Then
+                LblResultUrgent_M_C.Text = Translator.Instance.Translate("LblResultUrgent_M_C_URGENTE")
+            Else
+                LblResultUrgent_M_C.Text = Translator.Instance.Translate("LblResultUrgent_M_C_NOTURGENTE")
+            End If
+
 
             'Cargo el resultado en el DataGridView de Patologias Sufridas
             If Not IsNothing(pathFiltered) Then
@@ -266,6 +271,14 @@ Public Class FrmHome 'Paciente
             End If
         End If
     End Sub
+    Private Sub AddDiagnostic(idPath As Integer, idPatient As Integer, DateI As String)
+        Try
+            L1.AddDiagnostic(idPath, idPatient, DateI)
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
+
     Private Sub BtnBack_Patient1_Click(sender As Object, e As EventArgs) Handles BtnBack_Patient1_P_H.Click
         VisualSettings(2, False, True, False, False, False, False, False, True, False, False, False)
     End Sub
@@ -321,8 +334,9 @@ Public Class FrmHome 'Paciente
 
     End Sub
     Private Sub FrmHome_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Translator.Instance.TranslateForm(Me)
         VisualSettings(1, True, False, False, False, False, True, False, False, False, False, False)
-        VisualSettingPetition("GENERANDO PETICIÓN", "loading", True, True, True, True, False, False, False, False)
+        VisualSettingPetition(Translator.Instance.Translate("MakingRequest_P_HD"), "loading", True, True, True, True, False, False, False, False)
         LoadIdPatientLoggedOn()
 
         'GhostItem: Es mi elemento del Lbx que me permite utilizarlo (For, recorrer) cuando hay elemento != de Symptoms (Cmbx)
@@ -351,24 +365,24 @@ Public Class FrmHome 'Paciente
         Me.Close()
     End Sub
     Private Sub BtnSendChatP_Click(sender As Object, e As EventArgs) Handles BtnSendChatP_P_H.Click
-        VisualSettingPetition("GENERANDO PETICIÓN", "loading", False, False, False, False, True, True, True, True)
+        VisualSettingPetition(Translator.Instance.Translate("MakingRequest_P_HD"), "loading", False, False, False, False, True, True, True, True)
 
         Me.dateTimeMadePetition = Me.GetNowDateTime(1)
         Dim validate As Boolean = L1.MakePetition(idPatientLoggedOn, "Empty", Me.dateTimeMadePetition, Me.GetNowDateTime(1))
 
         If validate Then
-            VisualSettingPetition("PETICIÓN GENERADA CORRECTAMENTE", "check", False, False, False, False, True, True, True, True)
+            VisualSettingPetition(Translator.Instance.Translate("MadeRequest_P_HD"), "check", False, False, False, False, True, True, True, True)
             time = 0
             TimerRequest.Start()
         Else
-            VisualSettingPetition("GENERANDO PETICIÓN", "loading", True, True, True, True, False, False, False, False)
+            VisualSettingPetition(Translator.Instance.Translate("MakingRequest_P_HD"), "loading", True, True, True, True, False, False, False, False)
         End If
     End Sub
-    Private Sub BtnCancelPetition_Click(sender As Object, e As EventArgs) Handles BtnCancelPetition.Click
+    Private Sub BtnCancelPetition_Click(sender As Object, e As EventArgs) Handles BtnCancelPetition_P_HD.Click
         Dim validate As Boolean = L1.StopPetition(idPatientLoggedOn, "Paciente solicitó cancelar la petición.", Me.dateTimeMadePetition, Me.GetNowDateTime(1))
 
         If validate Then
-            VisualSettingPetition("GENERANDO PETICIÓN", "loading", True, True, True, True, False, False, False, False)
+            VisualSettingPetition(Translator.Instance.Translate("MakingRequest_P_HD"), "loading", True, True, True, True, False, False, False, False)
         End If
     End Sub
     Private Sub BtnSend_Click(sender As Object, e As EventArgs) Handles BtnSend.Click
@@ -427,7 +441,7 @@ Public Class FrmHome 'Paciente
                     time = 0
                 Else
                     TimerChat.Stop()
-                    MessageBox.Show("El chat ha finalizado!")
+                    MessageBox.Show(Translator.Instance.Translate("ChatFinished_P_HC"))
                     FrmLogin.Show()
                     Me.Close()
                 End If

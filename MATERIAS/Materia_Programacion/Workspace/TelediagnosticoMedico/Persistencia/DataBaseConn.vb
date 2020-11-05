@@ -734,45 +734,50 @@ Public Class DataBaseConn
     End Function
     Public Function LoginAdmin(user As String, pass As String) As Admin
         Dim con As Connection = Me.Connect()
+        Dim AdminLog As Admin
         Try
             Dim rsSelectAdmin As Recordset = con.Execute("SELECT * FROM vista_admin WHERE usuario='" & user & "' AND contrasena='" & pass & "';")
+            If Not rsSelectAdmin.EOF Then
 
-            Dim id As Integer = DirectCast(rsSelectAdmin.Fields("id").Value, Integer)
-            Dim ci As Integer = DirectCast(rsSelectAdmin.Fields("ci").Value, Integer)
-            Dim name1 As String = TryCast(rsSelectAdmin.Fields("primerNom").Value, String)
-            Dim name2 As String = TryCast(rsSelectAdmin.Fields("segundoNom").Value, String)
-            Dim surn1 As String = TryCast(rsSelectAdmin.Fields("primerApe").Value, String)
-            Dim surn2 As String = TryCast(rsSelectAdmin.Fields("segundoApe").Value, String)
-            Dim genre As String = TryCast(rsSelectAdmin.Fields("genero").Value, String)
-            Dim birthdate As Date = DirectCast(rsSelectAdmin.Fields("fechaNacimiento").Value, Date)
-            Dim email As String = TryCast(rsSelectAdmin.Fields("email").Value, String)
-            Dim street As String = TryCast(rsSelectAdmin.Fields("calle").Value, String)
-            Dim ndoor As Integer = DirectCast(rsSelectAdmin.Fields("npuerta").Value, Integer)
-            Dim userSelect As String = TryCast(rsSelectAdmin.Fields("usuario").Value, String)
-            Dim password As String = TryCast(rsSelectAdmin.Fields("contrasena").Value, String)
-            Dim pin As Integer = DirectCast(rsSelectAdmin.Fields("pin").Value, Integer)
+                Dim id As Integer = DirectCast(rsSelectAdmin.Fields("id").Value, Integer)
+                Dim ci As Integer = DirectCast(rsSelectAdmin.Fields("ci").Value, Integer)
+                Dim name1 As String = TryCast(rsSelectAdmin.Fields("primerNom").Value, String)
+                Dim name2 As String = TryCast(rsSelectAdmin.Fields("segundoNom").Value, String)
+                Dim surn1 As String = TryCast(rsSelectAdmin.Fields("primerApe").Value, String)
+                Dim surn2 As String = TryCast(rsSelectAdmin.Fields("segundoApe").Value, String)
+                Dim genre As String = TryCast(rsSelectAdmin.Fields("genero").Value, String)
+                Dim birthdate As Date = DirectCast(rsSelectAdmin.Fields("fechaNacimiento").Value, Date)
+                Dim email As String = TryCast(rsSelectAdmin.Fields("email").Value, String)
+                Dim street As String = TryCast(rsSelectAdmin.Fields("calle").Value, String)
+                Dim ndoor As Integer = DirectCast(rsSelectAdmin.Fields("npuerta").Value, Integer)
+                Dim userSelect As String = TryCast(rsSelectAdmin.Fields("usuario").Value, String)
+                Dim password As String = TryCast(rsSelectAdmin.Fields("contrasena").Value, String)
+                Dim pin As Integer = DirectCast(rsSelectAdmin.Fields("pin").Value, Integer)
 
-            Dim rsSelectCity_Dpto As Recordset = con.Execute("SELECT c.id As Idc,c.nombre As Cnombre,d.id As Idd,d.nombre As Dnombre FROM vista_admin va JOIN ciudad c ON(va.id_ciudad=c.id) JOIN departamento d ON(c.id_dpto=d.id) WHERE va.id=" & id & ";") 'Consulta para Obtener el Departamento y Ciudad
+                Dim rsSelectCity_Dpto As Recordset = con.Execute("SELECT c.id As Idc,c.nombre As Cnombre,d.id As Idd,d.nombre As Dnombre FROM vista_admin va JOIN ciudad c ON(va.id_ciudad=c.id) JOIN departamento d ON(c.id_dpto=d.id) WHERE va.id=" & id & ";") 'Consulta para Obtener el Departamento y Ciudad
 
-            Dim rsSelectPhones As Recordset = con.Execute("SELECT group_concat(c.celular) As Celulares FROM vista_admin va JOIN cel_empleado c ON(va.id=c.id_empleado) WHERE va.id=" & id & ";") 'Consulta para Obtener celulares del Admin
+                Dim rsSelectPhones As Recordset = con.Execute("SELECT group_concat(c.celular) As Celulares FROM vista_admin va JOIN cel_empleado c ON(va.id=c.id_empleado) WHERE va.id=" & id & ";") 'Consulta para Obtener celulares del Admin
 
-            Dim id_city As Integer = DirectCast(rsSelectCity_Dpto.Fields("Idc").Value, Integer)
-            Dim CityName As String = TryCast(rsSelectCity_Dpto.Fields("Cnombre").Value, String)
-            Dim id_dpto As Integer = DirectCast(rsSelectCity_Dpto.Fields("Idd").Value, Integer)
-            Dim DptoName As String = TryCast(rsSelectCity_Dpto.Fields("Dnombre").Value, String)
-            Dim Phones As String = TryCast(rsSelectPhones.Fields("Celulares").Value, String)
+                Dim id_city As Integer = DirectCast(rsSelectCity_Dpto.Fields("Idc").Value, Integer)
+                Dim CityName As String = TryCast(rsSelectCity_Dpto.Fields("Cnombre").Value, String)
+                Dim id_dpto As Integer = DirectCast(rsSelectCity_Dpto.Fields("Idd").Value, Integer)
+                Dim DptoName As String = TryCast(rsSelectCity_Dpto.Fields("Dnombre").Value, String)
+                Dim Phones As String = TryCast(rsSelectPhones.Fields("Celulares").Value, String)
 
-            Dim Dpto As New Department(id_dpto, DptoName) 'Creo el objeto Departamento
-            Dim City As New City(id_city, Dpto, CityName) 'Creo el objeto Ciudad
+                Dim Dpto As New Department(id_dpto, DptoName) 'Creo el objeto Departamento
+                Dim City As New City(id_city, Dpto, CityName) 'Creo el objeto Ciudad
 
-            Dim genrenumber As Integer = 0
-            If genre.Equals("M") Then
-                genrenumber = 1
+                Dim genrenumber As Integer = 0
+                If genre.Equals("M") Then
+                    genrenumber = 1
+                Else
+                    genrenumber = 0
+                End If
+
+                AdminLog = New Admin(id, ci, name1, name2, surn1, surn2, genrenumber, birthdate, email, Phones, street, ndoor, City, userSelect, password, pin)
             Else
-                genrenumber = 0
+                AdminLog = Nothing
             End If
-
-            Dim AdminLog As New Admin(id, ci, name1, name2, surn1, surn2, genrenumber, birthdate, email, Phones, street, ndoor, City, userSelect, password, pin)
             Return AdminLog
         Catch ex As Exception
             Console.WriteLine(ex.ToString())
@@ -1469,26 +1474,26 @@ Public Class DataBaseConn
                 rsPathologiesSuffered.MoveNext()
             End While
 
-            Dim idPathEvidenceHigh As Integer = 0
-            Dim laMayor As Integer = 0
-            Dim fecha As String = Date.Now.ToString("yyy-MM-dd")
-            For Each Path As Pathology In Pathologies
-                If Path.mortalityIndex > laMayor Then
-                    laMayor = Path.mortalityIndex
-                    idPathEvidenceHigh = Path.id
-                End If
-            Next
-
-            Dim rsInsertDiagnostic As Recordset = con.Execute("INSERT INTO diagnostico(id_tipo,id_paciente,id_patologia,fecha) VALUES(1," & idPatient & "," & idPathEvidenceHigh & ",'" & fecha & "');")
-
             Return Pathologies
         Catch ex As Exception
             Console.WriteLine(ex)
-            Throw New Exception(ex.Message)
+            Throw New Exception("Error al Obtener las posibles patologías sufridas")
         Finally
             con.Close()
         End Try
     End Function
+    Public Sub AddDiagnostic(idPath As Integer, idPatient As Integer, DateI As String)
+        Dim con As Connection = Me.Connect()
+        Dim Pathologies As New List(Of Pathology)
+        Try
+            Dim rsInsertDiagnostic As Recordset = con.Execute("INSERT INTO diagnostico(id_tipo,id_paciente,id_patologia,fecha) VALUES(1," & idPatient & "," & idPath & ",'" & DateI & "');")
+        Catch ex As Exception
+            Console.WriteLine(ex)
+            Throw New Exception("Error al insertar el diagnóstico")
+        Finally
+            con.Close()
+        End Try
+    End Sub
     Public Sub UnsuscribePatient(idPatient As Integer)
         Dim con As Connection = Me.Connect
         Try

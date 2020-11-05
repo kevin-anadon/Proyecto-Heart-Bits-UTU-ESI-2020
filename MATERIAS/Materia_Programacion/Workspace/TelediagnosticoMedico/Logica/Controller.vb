@@ -514,6 +514,14 @@ Public Class Controller 'Logic
             Throw ex
         End Try
     End Function
+    Public Sub AddDiagnostic(idPath As Integer, idPatient As Integer, DateI As String)
+        Try
+            CQConnection.AddDiagnostic(idPath, idPatient, DateI)
+        Catch ex As Exception
+            Console.WriteLine(ex)
+            Throw ex
+        End Try
+    End Sub
     Public Function LoginPatient(ci As String) As Short
         Try
             Return CQConnection.LoginPatient(ci)

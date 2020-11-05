@@ -1,9 +1,14 @@
 ﻿Imports Data
+Imports Logic
 Public Class FrmHome 'AdminApp
     Public Shared AdmName = "", Ci = "", Age = "", Email = "", Phone = "", Connect = ""
 
     'Eventos
     Private Sub FrmHome_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Translator.Instance.TranslateForm(Me)
+        LoadAdmin()
+    End Sub
+    Private Sub LoadAdmin()
         LblName.Text = AdmName
         LblCi.Text = Ci
         LblAge.Text = Age

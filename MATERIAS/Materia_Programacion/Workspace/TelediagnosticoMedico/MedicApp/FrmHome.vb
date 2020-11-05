@@ -90,6 +90,8 @@ Public Class FrmHome
     End Sub
 
     Private Sub BtnEndChat_Click(sender As Object, e As EventArgs) Handles BtnEndChat.Click
+        Dim s As String = Translator.Instance.Translate("CloseChat_M_C")
+        Console.WriteLine(s)
         If MsgBox(Translator.Instance.Translate("EndChat_M_C"), MsgBoxStyle.YesNoCancel, Translator.Instance.Translate("CloseChat_M_C")) = MsgBoxResult.Yes Then
             LeaveRoom()
         End If
@@ -217,7 +219,7 @@ Public Class FrmHome
         LblConnect.Text = Connect
     End Sub
     Private Sub FrmHome_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Translator.Instance.TraducirForm(Me)
+        Translator.Instance.TranslateForm(Me)
         LoadMedInfo()
     End Sub
     Private Sub LoadModDiag()
@@ -255,7 +257,7 @@ Public Class FrmHome
                     time = 0
                 Else
                     TimerChat.Stop()
-                    MessageBox.Show("El chat ha finalizado!")
+                    MessageBox.Show(Translator.Instance.Translate("ChatFinished_P_HC"))
                     ChangePanels(0)
                 End If
             Catch ex As Exception
@@ -320,7 +322,7 @@ Public Class FrmHome
             Try
                 Dim PathSelected As Pathology = ListPath.Item(CmbPath.SelectedIndex)
                 log.UpdateDiagnostic(TentativeDiagnostic.Id, PathSelected.id)
-                MessageBox.Show("Diagnóstico modificado con exito")
+                MessageBox.Show(Translator.Instance.Translate("DiagnosticModSuccess_M_C"))
                 PnlCmbDiag.Visible = False
                 TentativeDiagnostic.Pathology = PathSelected
                 ReloadDgvDiagnostic()
