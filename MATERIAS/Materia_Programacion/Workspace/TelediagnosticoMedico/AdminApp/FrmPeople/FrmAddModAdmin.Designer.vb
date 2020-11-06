@@ -95,15 +95,15 @@ Partial Class FrmAddModAdmin
         Me.GunaLabel2 = New Guna.UI.WinForms.GunaLabel()
         Me.PnlPatient = New System.Windows.Forms.Panel()
         Me.GunaLabel25 = New Guna.UI.WinForms.GunaLabel()
-        Me.GunaLabel26 = New Guna.UI.WinForms.GunaLabel()
+        Me.LblPStreet = New Guna.UI.WinForms.GunaLabel()
         Me.GunaLabel10 = New Guna.UI.WinForms.GunaLabel()
-        Me.GunaLabel18 = New Guna.UI.WinForms.GunaLabel()
+        Me.LblPDoor = New Guna.UI.WinForms.GunaLabel()
         Me.GunaTextBox1 = New Guna.UI.WinForms.GunaTextBox()
         Me.GunaLabel19 = New Guna.UI.WinForms.GunaLabel()
         Me.GunaSeparator18 = New Guna.UI.WinForms.GunaSeparator()
         Me.TxtPatPhone = New Guna.UI.WinForms.GunaTextBox()
-        Me.GunaLabel20 = New Guna.UI.WinForms.GunaLabel()
-        Me.GunaLabel22 = New Guna.UI.WinForms.GunaLabel()
+        Me.LblPTel = New Guna.UI.WinForms.GunaLabel()
+        Me.LblPCity = New Guna.UI.WinForms.GunaLabel()
         Me.CmbPatCity = New Guna.UI.WinForms.GunaComboBox()
         Me.GunaLabel24 = New Guna.UI.WinForms.GunaLabel()
         Me.GunaSeparator19 = New Guna.UI.WinForms.GunaSeparator()
@@ -113,14 +113,14 @@ Partial Class FrmAddModAdmin
         Me.GunaLabel35 = New Guna.UI.WinForms.GunaLabel()
         Me.GunaSeparator23 = New Guna.UI.WinForms.GunaSeparator()
         Me.TxtPatCi = New Guna.UI.WinForms.GunaTextBox()
-        Me.GunaLabel36 = New Guna.UI.WinForms.GunaLabel()
+        Me.LblPCI = New Guna.UI.WinForms.GunaLabel()
         Me.GunaLabel37 = New Guna.UI.WinForms.GunaLabel()
         Me.GunaSeparator24 = New Guna.UI.WinForms.GunaSeparator()
-        Me.GunaLabel38 = New Guna.UI.WinForms.GunaLabel()
+        Me.LblPDate = New Guna.UI.WinForms.GunaLabel()
         Me.GunaLabel39 = New Guna.UI.WinForms.GunaLabel()
         Me.GunaSeparator25 = New Guna.UI.WinForms.GunaSeparator()
         Me.TxtPatEmail = New Guna.UI.WinForms.GunaTextBox()
-        Me.GunaLabel40 = New Guna.UI.WinForms.GunaLabel()
+        Me.LblPEmail = New Guna.UI.WinForms.GunaLabel()
         Me.GunaSeparator26 = New Guna.UI.WinForms.GunaSeparator()
         Me.TxtPatStreet = New Guna.UI.WinForms.GunaTextBox()
         Me.BtnPatWomen = New System.Windows.Forms.Button()
@@ -131,18 +131,18 @@ Partial Class FrmAddModAdmin
         Me.GunaLabel46 = New Guna.UI.WinForms.GunaLabel()
         Me.GunaSeparator27 = New Guna.UI.WinForms.GunaSeparator()
         Me.TxtPatScndSurn = New Guna.UI.WinForms.GunaTextBox()
-        Me.GunaLabel47 = New Guna.UI.WinForms.GunaLabel()
+        Me.LblPS2 = New Guna.UI.WinForms.GunaLabel()
         Me.GunaSeparator28 = New Guna.UI.WinForms.GunaSeparator()
         Me.TxtPatFstSurn = New Guna.UI.WinForms.GunaTextBox()
-        Me.GunaLabel48 = New Guna.UI.WinForms.GunaLabel()
+        Me.LblPS1 = New Guna.UI.WinForms.GunaLabel()
         Me.GunaSeparator29 = New Guna.UI.WinForms.GunaSeparator()
         Me.TxtPatScndName = New Guna.UI.WinForms.GunaTextBox()
-        Me.GunaLabel49 = New Guna.UI.WinForms.GunaLabel()
+        Me.LblPN2 = New Guna.UI.WinForms.GunaLabel()
         Me.BtnPatAdd = New Guna.UI.WinForms.GunaButton()
         Me.GunaLabel50 = New Guna.UI.WinForms.GunaLabel()
         Me.GunaSeparator30 = New Guna.UI.WinForms.GunaSeparator()
         Me.TxtPatFstName = New Guna.UI.WinForms.GunaTextBox()
-        Me.GunaLabel51 = New Guna.UI.WinForms.GunaLabel()
+        Me.LblPN1 = New Guna.UI.WinForms.GunaLabel()
         Me.PnlPatTop = New System.Windows.Forms.Panel()
         Me.LblPatPatient = New Guna.UI.WinForms.GunaLabel()
         Me.BtnClosePat = New Guna.UI.WinForms.GunaButton()
@@ -1140,15 +1140,15 @@ Partial Class FrmAddModAdmin
         Me.PnlPatient.BackColor = System.Drawing.Color.White
         Me.PnlPatient.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PnlPatient.Controls.Add(Me.GunaLabel25)
-        Me.PnlPatient.Controls.Add(Me.GunaLabel26)
+        Me.PnlPatient.Controls.Add(Me.LblPStreet)
         Me.PnlPatient.Controls.Add(Me.GunaLabel10)
-        Me.PnlPatient.Controls.Add(Me.GunaLabel18)
+        Me.PnlPatient.Controls.Add(Me.LblPDoor)
         Me.PnlPatient.Controls.Add(Me.GunaTextBox1)
         Me.PnlPatient.Controls.Add(Me.GunaLabel19)
         Me.PnlPatient.Controls.Add(Me.GunaSeparator18)
         Me.PnlPatient.Controls.Add(Me.TxtPatPhone)
-        Me.PnlPatient.Controls.Add(Me.GunaLabel20)
-        Me.PnlPatient.Controls.Add(Me.GunaLabel22)
+        Me.PnlPatient.Controls.Add(Me.LblPTel)
+        Me.PnlPatient.Controls.Add(Me.LblPCity)
         Me.PnlPatient.Controls.Add(Me.CmbPatCity)
         Me.PnlPatient.Controls.Add(Me.GunaLabel24)
         Me.PnlPatient.Controls.Add(Me.GunaSeparator19)
@@ -1158,14 +1158,14 @@ Partial Class FrmAddModAdmin
         Me.PnlPatient.Controls.Add(Me.GunaLabel35)
         Me.PnlPatient.Controls.Add(Me.GunaSeparator23)
         Me.PnlPatient.Controls.Add(Me.TxtPatCi)
-        Me.PnlPatient.Controls.Add(Me.GunaLabel36)
+        Me.PnlPatient.Controls.Add(Me.LblPCI)
         Me.PnlPatient.Controls.Add(Me.GunaLabel37)
         Me.PnlPatient.Controls.Add(Me.GunaSeparator24)
-        Me.PnlPatient.Controls.Add(Me.GunaLabel38)
+        Me.PnlPatient.Controls.Add(Me.LblPDate)
         Me.PnlPatient.Controls.Add(Me.GunaLabel39)
         Me.PnlPatient.Controls.Add(Me.GunaSeparator25)
         Me.PnlPatient.Controls.Add(Me.TxtPatEmail)
-        Me.PnlPatient.Controls.Add(Me.GunaLabel40)
+        Me.PnlPatient.Controls.Add(Me.LblPEmail)
         Me.PnlPatient.Controls.Add(Me.GunaSeparator26)
         Me.PnlPatient.Controls.Add(Me.TxtPatStreet)
         Me.PnlPatient.Controls.Add(Me.BtnPatWomen)
@@ -1176,18 +1176,18 @@ Partial Class FrmAddModAdmin
         Me.PnlPatient.Controls.Add(Me.GunaLabel46)
         Me.PnlPatient.Controls.Add(Me.GunaSeparator27)
         Me.PnlPatient.Controls.Add(Me.TxtPatScndSurn)
-        Me.PnlPatient.Controls.Add(Me.GunaLabel47)
+        Me.PnlPatient.Controls.Add(Me.LblPS2)
         Me.PnlPatient.Controls.Add(Me.GunaSeparator28)
         Me.PnlPatient.Controls.Add(Me.TxtPatFstSurn)
-        Me.PnlPatient.Controls.Add(Me.GunaLabel48)
+        Me.PnlPatient.Controls.Add(Me.LblPS1)
         Me.PnlPatient.Controls.Add(Me.GunaSeparator29)
         Me.PnlPatient.Controls.Add(Me.TxtPatScndName)
-        Me.PnlPatient.Controls.Add(Me.GunaLabel49)
+        Me.PnlPatient.Controls.Add(Me.LblPN2)
         Me.PnlPatient.Controls.Add(Me.BtnPatAdd)
         Me.PnlPatient.Controls.Add(Me.GunaLabel50)
         Me.PnlPatient.Controls.Add(Me.GunaSeparator30)
         Me.PnlPatient.Controls.Add(Me.TxtPatFstName)
-        Me.PnlPatient.Controls.Add(Me.GunaLabel51)
+        Me.PnlPatient.Controls.Add(Me.LblPN1)
         Me.PnlPatient.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PnlPatient.Location = New System.Drawing.Point(0, 34)
         Me.PnlPatient.Name = "PnlPatient"
@@ -1205,17 +1205,17 @@ Partial Class FrmAddModAdmin
         Me.GunaLabel25.TabIndex = 137
         Me.GunaLabel25.Text = "*"
         '
-        'GunaLabel26
+        'LblPStreet
         '
-        Me.GunaLabel26.AutoSize = True
-        Me.GunaLabel26.BackColor = System.Drawing.Color.Transparent
-        Me.GunaLabel26.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GunaLabel26.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
-        Me.GunaLabel26.Location = New System.Drawing.Point(218, 236)
-        Me.GunaLabel26.Name = "GunaLabel26"
-        Me.GunaLabel26.Size = New System.Drawing.Size(58, 30)
-        Me.GunaLabel26.TabIndex = 136
-        Me.GunaLabel26.Text = "Calle"
+        Me.LblPStreet.AutoSize = True
+        Me.LblPStreet.BackColor = System.Drawing.Color.Transparent
+        Me.LblPStreet.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblPStreet.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
+        Me.LblPStreet.Location = New System.Drawing.Point(218, 236)
+        Me.LblPStreet.Name = "LblPStreet"
+        Me.LblPStreet.Size = New System.Drawing.Size(58, 30)
+        Me.LblPStreet.TabIndex = 136
+        Me.LblPStreet.Text = "Calle"
         '
         'GunaLabel10
         '
@@ -1227,17 +1227,17 @@ Partial Class FrmAddModAdmin
         Me.GunaLabel10.TabIndex = 135
         Me.GunaLabel10.Text = "*"
         '
-        'GunaLabel18
+        'LblPDoor
         '
-        Me.GunaLabel18.AutoSize = True
-        Me.GunaLabel18.BackColor = System.Drawing.Color.Transparent
-        Me.GunaLabel18.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GunaLabel18.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
-        Me.GunaLabel18.Location = New System.Drawing.Point(458, 4)
-        Me.GunaLabel18.Name = "GunaLabel18"
-        Me.GunaLabel18.Size = New System.Drawing.Size(73, 30)
-        Me.GunaLabel18.TabIndex = 134
-        Me.GunaLabel18.Text = "Puerta"
+        Me.LblPDoor.AutoSize = True
+        Me.LblPDoor.BackColor = System.Drawing.Color.Transparent
+        Me.LblPDoor.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblPDoor.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
+        Me.LblPDoor.Location = New System.Drawing.Point(458, 4)
+        Me.LblPDoor.Name = "LblPDoor"
+        Me.LblPDoor.Size = New System.Drawing.Size(73, 30)
+        Me.LblPDoor.TabIndex = 134
+        Me.LblPDoor.Text = "Puerta"
         '
         'GunaTextBox1
         '
@@ -1297,30 +1297,30 @@ Partial Class FrmAddModAdmin
         Me.TxtPatPhone.Size = New System.Drawing.Size(228, 30)
         Me.TxtPatPhone.TabIndex = 14
         '
-        'GunaLabel20
+        'LblPTel
         '
-        Me.GunaLabel20.AutoSize = True
-        Me.GunaLabel20.BackColor = System.Drawing.Color.Transparent
-        Me.GunaLabel20.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GunaLabel20.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
-        Me.GunaLabel20.Location = New System.Drawing.Point(458, 153)
-        Me.GunaLabel20.Name = "GunaLabel20"
-        Me.GunaLabel20.Size = New System.Drawing.Size(92, 30)
-        Me.GunaLabel20.TabIndex = 122
-        Me.GunaLabel20.Text = "Teléfono"
+        Me.LblPTel.AutoSize = True
+        Me.LblPTel.BackColor = System.Drawing.Color.Transparent
+        Me.LblPTel.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblPTel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
+        Me.LblPTel.Location = New System.Drawing.Point(458, 153)
+        Me.LblPTel.Name = "LblPTel"
+        Me.LblPTel.Size = New System.Drawing.Size(92, 30)
+        Me.LblPTel.TabIndex = 122
+        Me.LblPTel.Text = "Teléfono"
         '
-        'GunaLabel22
+        'LblPCity
         '
-        Me.GunaLabel22.AutoSize = True
-        Me.GunaLabel22.BackColor = System.Drawing.Color.Transparent
-        Me.GunaLabel22.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GunaLabel22.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
-        Me.GunaLabel22.Location = New System.Drawing.Point(458, 71)
-        Me.GunaLabel22.Name = "GunaLabel22"
-        Me.GunaLabel22.Size = New System.Drawing.Size(78, 30)
-        Me.GunaLabel22.TabIndex = 120
-        Me.GunaLabel22.Text = "Ciudad"
-        Me.GunaLabel22.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.LblPCity.AutoSize = True
+        Me.LblPCity.BackColor = System.Drawing.Color.Transparent
+        Me.LblPCity.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblPCity.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
+        Me.LblPCity.Location = New System.Drawing.Point(458, 71)
+        Me.LblPCity.Name = "LblPCity"
+        Me.LblPCity.Size = New System.Drawing.Size(78, 30)
+        Me.LblPCity.TabIndex = 120
+        Me.LblPCity.Text = "Ciudad"
+        Me.LblPCity.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'CmbPatCity
         '
@@ -1449,17 +1449,17 @@ Partial Class FrmAddModAdmin
         Me.TxtPatCi.Size = New System.Drawing.Size(228, 30)
         Me.TxtPatCi.TabIndex = 4
         '
-        'GunaLabel36
+        'LblPCI
         '
-        Me.GunaLabel36.AutoSize = True
-        Me.GunaLabel36.BackColor = System.Drawing.Color.Transparent
-        Me.GunaLabel36.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GunaLabel36.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
-        Me.GunaLabel36.Location = New System.Drawing.Point(213, 4)
-        Me.GunaLabel36.Name = "GunaLabel36"
-        Me.GunaLabel36.Size = New System.Drawing.Size(201, 30)
-        Me.GunaLabel36.TabIndex = 92
-        Me.GunaLabel36.Text = "Número documento"
+        Me.LblPCI.AutoSize = True
+        Me.LblPCI.BackColor = System.Drawing.Color.Transparent
+        Me.LblPCI.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblPCI.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
+        Me.LblPCI.Location = New System.Drawing.Point(213, 4)
+        Me.LblPCI.Name = "LblPCI"
+        Me.LblPCI.Size = New System.Drawing.Size(201, 30)
+        Me.LblPCI.TabIndex = 92
+        Me.LblPCI.Text = "Número documento"
         '
         'GunaLabel37
         '
@@ -1479,17 +1479,17 @@ Partial Class FrmAddModAdmin
         Me.GunaSeparator24.Size = New System.Drawing.Size(228, 10)
         Me.GunaSeparator24.TabIndex = 90
         '
-        'GunaLabel38
+        'LblPDate
         '
-        Me.GunaLabel38.AutoSize = True
-        Me.GunaLabel38.BackColor = System.Drawing.Color.Transparent
-        Me.GunaLabel38.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GunaLabel38.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
-        Me.GunaLabel38.Location = New System.Drawing.Point(213, 71)
-        Me.GunaLabel38.Name = "GunaLabel38"
-        Me.GunaLabel38.Size = New System.Drawing.Size(211, 30)
-        Me.GunaLabel38.TabIndex = 88
-        Me.GunaLabel38.Text = "Fecha de  nacimiento"
+        Me.LblPDate.AutoSize = True
+        Me.LblPDate.BackColor = System.Drawing.Color.Transparent
+        Me.LblPDate.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblPDate.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
+        Me.LblPDate.Location = New System.Drawing.Point(213, 71)
+        Me.LblPDate.Name = "LblPDate"
+        Me.LblPDate.Size = New System.Drawing.Size(211, 30)
+        Me.LblPDate.TabIndex = 88
+        Me.LblPDate.Text = "Fecha de  nacimiento"
         '
         'GunaLabel39
         '
@@ -1529,17 +1529,17 @@ Partial Class FrmAddModAdmin
         Me.TxtPatEmail.Size = New System.Drawing.Size(228, 30)
         Me.TxtPatEmail.TabIndex = 6
         '
-        'GunaLabel40
+        'LblPEmail
         '
-        Me.GunaLabel40.AutoSize = True
-        Me.GunaLabel40.BackColor = System.Drawing.Color.Transparent
-        Me.GunaLabel40.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GunaLabel40.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
-        Me.GunaLabel40.Location = New System.Drawing.Point(210, 153)
-        Me.GunaLabel40.Name = "GunaLabel40"
-        Me.GunaLabel40.Size = New System.Drawing.Size(183, 30)
-        Me.GunaLabel40.TabIndex = 84
-        Me.GunaLabel40.Text = "Correo electrónico"
+        Me.LblPEmail.AutoSize = True
+        Me.LblPEmail.BackColor = System.Drawing.Color.Transparent
+        Me.LblPEmail.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblPEmail.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
+        Me.LblPEmail.Location = New System.Drawing.Point(210, 153)
+        Me.LblPEmail.Name = "LblPEmail"
+        Me.LblPEmail.Size = New System.Drawing.Size(183, 30)
+        Me.LblPEmail.TabIndex = 84
+        Me.LblPEmail.Text = "Correo electrónico"
         '
         'GunaSeparator26
         '
@@ -1609,7 +1609,7 @@ Partial Class FrmAddModAdmin
         '
         Me.GunaLabel43.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GunaLabel43.ForeColor = System.Drawing.Color.FromArgb(CType(CType(246, Byte), Integer), CType(CType(135, Byte), Integer), CType(CType(124, Byte), Integer))
-        Me.GunaLabel43.Location = New System.Drawing.Point(184, 244)
+        Me.GunaLabel43.Location = New System.Drawing.Point(186, 244)
         Me.GunaLabel43.Name = "GunaLabel43"
         Me.GunaLabel43.Size = New System.Drawing.Size(20, 22)
         Me.GunaLabel43.TabIndex = 77
@@ -1674,17 +1674,17 @@ Partial Class FrmAddModAdmin
         Me.TxtPatScndSurn.Size = New System.Drawing.Size(165, 30)
         Me.TxtPatScndSurn.TabIndex = 3
         '
-        'GunaLabel47
+        'LblPS2
         '
-        Me.GunaLabel47.AutoSize = True
-        Me.GunaLabel47.BackColor = System.Drawing.Color.Transparent
-        Me.GunaLabel47.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GunaLabel47.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
-        Me.GunaLabel47.Location = New System.Drawing.Point(18, 236)
-        Me.GunaLabel47.Name = "GunaLabel47"
-        Me.GunaLabel47.Size = New System.Drawing.Size(174, 30)
-        Me.GunaLabel47.TabIndex = 48
-        Me.GunaLabel47.Text = "Segundo apellido"
+        Me.LblPS2.AutoSize = True
+        Me.LblPS2.BackColor = System.Drawing.Color.Transparent
+        Me.LblPS2.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblPS2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
+        Me.LblPS2.Location = New System.Drawing.Point(18, 236)
+        Me.LblPS2.Name = "LblPS2"
+        Me.LblPS2.Size = New System.Drawing.Size(174, 30)
+        Me.LblPS2.TabIndex = 48
+        Me.LblPS2.Text = "Segundo apellido"
         '
         'GunaSeparator28
         '
@@ -1714,17 +1714,17 @@ Partial Class FrmAddModAdmin
         Me.TxtPatFstSurn.Size = New System.Drawing.Size(165, 30)
         Me.TxtPatFstSurn.TabIndex = 2
         '
-        'GunaLabel48
+        'LblPS1
         '
-        Me.GunaLabel48.AutoSize = True
-        Me.GunaLabel48.BackColor = System.Drawing.Color.Transparent
-        Me.GunaLabel48.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GunaLabel48.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
-        Me.GunaLabel48.Location = New System.Drawing.Point(15, 153)
-        Me.GunaLabel48.Name = "GunaLabel48"
-        Me.GunaLabel48.Size = New System.Drawing.Size(152, 30)
-        Me.GunaLabel48.TabIndex = 45
-        Me.GunaLabel48.Text = "Primer apellido"
+        Me.LblPS1.AutoSize = True
+        Me.LblPS1.BackColor = System.Drawing.Color.Transparent
+        Me.LblPS1.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblPS1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
+        Me.LblPS1.Location = New System.Drawing.Point(15, 153)
+        Me.LblPS1.Name = "LblPS1"
+        Me.LblPS1.Size = New System.Drawing.Size(152, 30)
+        Me.LblPS1.TabIndex = 45
+        Me.LblPS1.Text = "Primer apellido"
         '
         'GunaSeparator29
         '
@@ -1754,17 +1754,17 @@ Partial Class FrmAddModAdmin
         Me.TxtPatScndName.Size = New System.Drawing.Size(165, 30)
         Me.TxtPatScndName.TabIndex = 1
         '
-        'GunaLabel49
+        'LblPN2
         '
-        Me.GunaLabel49.AutoSize = True
-        Me.GunaLabel49.BackColor = System.Drawing.Color.Transparent
-        Me.GunaLabel49.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GunaLabel49.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
-        Me.GunaLabel49.Location = New System.Drawing.Point(11, 71)
-        Me.GunaLabel49.Name = "GunaLabel49"
-        Me.GunaLabel49.Size = New System.Drawing.Size(173, 30)
-        Me.GunaLabel49.TabIndex = 42
-        Me.GunaLabel49.Text = "Segundo nombre"
+        Me.LblPN2.AutoSize = True
+        Me.LblPN2.BackColor = System.Drawing.Color.Transparent
+        Me.LblPN2.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblPN2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
+        Me.LblPN2.Location = New System.Drawing.Point(11, 71)
+        Me.LblPN2.Name = "LblPN2"
+        Me.LblPN2.Size = New System.Drawing.Size(173, 30)
+        Me.LblPN2.TabIndex = 42
+        Me.LblPN2.Text = "Segundo nombre"
         '
         'BtnPatAdd
         '
@@ -1834,16 +1834,16 @@ Partial Class FrmAddModAdmin
         Me.TxtPatFstName.Size = New System.Drawing.Size(164, 30)
         Me.TxtPatFstName.TabIndex = 0
         '
-        'GunaLabel51
+        'LblPN1
         '
-        Me.GunaLabel51.AutoSize = True
-        Me.GunaLabel51.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GunaLabel51.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
-        Me.GunaLabel51.Location = New System.Drawing.Point(11, 4)
-        Me.GunaLabel51.Name = "GunaLabel51"
-        Me.GunaLabel51.Size = New System.Drawing.Size(151, 30)
-        Me.GunaLabel51.TabIndex = 32
-        Me.GunaLabel51.Text = "Primer nombre"
+        Me.LblPN1.AutoSize = True
+        Me.LblPN1.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblPN1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
+        Me.LblPN1.Location = New System.Drawing.Point(11, 4)
+        Me.LblPN1.Name = "LblPN1"
+        Me.LblPN1.Size = New System.Drawing.Size(151, 30)
+        Me.LblPN1.TabIndex = 32
+        Me.LblPN1.Text = "Primer nombre"
         '
         'PnlPatTop
         '
@@ -2001,8 +2001,8 @@ Partial Class FrmAddModAdmin
     Friend WithEvents GunaLabel19 As Guna.UI.WinForms.GunaLabel
     Friend WithEvents GunaSeparator18 As Guna.UI.WinForms.GunaSeparator
     Friend WithEvents TxtPatPhone As Guna.UI.WinForms.GunaTextBox
-    Friend WithEvents GunaLabel20 As Guna.UI.WinForms.GunaLabel
-    Friend WithEvents GunaLabel22 As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents LblPTel As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents LblPCity As Guna.UI.WinForms.GunaLabel
     Friend WithEvents CmbPatCity As Guna.UI.WinForms.GunaComboBox
     Friend WithEvents GunaLabel24 As Guna.UI.WinForms.GunaLabel
     Friend WithEvents GunaSeparator19 As Guna.UI.WinForms.GunaSeparator
@@ -2012,14 +2012,14 @@ Partial Class FrmAddModAdmin
     Friend WithEvents GunaLabel35 As Guna.UI.WinForms.GunaLabel
     Friend WithEvents GunaSeparator23 As Guna.UI.WinForms.GunaSeparator
     Friend WithEvents TxtPatCi As Guna.UI.WinForms.GunaTextBox
-    Friend WithEvents GunaLabel36 As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents LblPCI As Guna.UI.WinForms.GunaLabel
     Friend WithEvents GunaLabel37 As Guna.UI.WinForms.GunaLabel
     Friend WithEvents GunaSeparator24 As Guna.UI.WinForms.GunaSeparator
-    Friend WithEvents GunaLabel38 As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents LblPDate As Guna.UI.WinForms.GunaLabel
     Friend WithEvents GunaLabel39 As Guna.UI.WinForms.GunaLabel
     Friend WithEvents GunaSeparator25 As Guna.UI.WinForms.GunaSeparator
     Friend WithEvents TxtPatEmail As Guna.UI.WinForms.GunaTextBox
-    Friend WithEvents GunaLabel40 As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents LblPEmail As Guna.UI.WinForms.GunaLabel
     Friend WithEvents GunaSeparator26 As Guna.UI.WinForms.GunaSeparator
     Friend WithEvents TxtPatStreet As Guna.UI.WinForms.GunaTextBox
     Friend WithEvents BtnPatWomen As Button
@@ -2030,22 +2030,22 @@ Partial Class FrmAddModAdmin
     Friend WithEvents GunaLabel46 As Guna.UI.WinForms.GunaLabel
     Friend WithEvents GunaSeparator27 As Guna.UI.WinForms.GunaSeparator
     Friend WithEvents TxtPatScndSurn As Guna.UI.WinForms.GunaTextBox
-    Friend WithEvents GunaLabel47 As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents LblPS2 As Guna.UI.WinForms.GunaLabel
     Friend WithEvents GunaSeparator28 As Guna.UI.WinForms.GunaSeparator
     Friend WithEvents TxtPatFstSurn As Guna.UI.WinForms.GunaTextBox
-    Friend WithEvents GunaLabel48 As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents LblPS1 As Guna.UI.WinForms.GunaLabel
     Friend WithEvents GunaSeparator29 As Guna.UI.WinForms.GunaSeparator
     Friend WithEvents TxtPatScndName As Guna.UI.WinForms.GunaTextBox
-    Friend WithEvents GunaLabel49 As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents LblPN2 As Guna.UI.WinForms.GunaLabel
     Friend WithEvents BtnPatAdd As Guna.UI.WinForms.GunaButton
     Friend WithEvents GunaLabel50 As Guna.UI.WinForms.GunaLabel
     Friend WithEvents GunaSeparator30 As Guna.UI.WinForms.GunaSeparator
     Friend WithEvents TxtPatFstName As Guna.UI.WinForms.GunaTextBox
-    Friend WithEvents GunaLabel51 As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents LblPN1 As Guna.UI.WinForms.GunaLabel
     Friend WithEvents GunaLabel25 As Guna.UI.WinForms.GunaLabel
-    Friend WithEvents GunaLabel26 As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents LblPStreet As Guna.UI.WinForms.GunaLabel
     Friend WithEvents GunaLabel10 As Guna.UI.WinForms.GunaLabel
-    Friend WithEvents GunaLabel18 As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents LblPDoor As Guna.UI.WinForms.GunaLabel
     Friend WithEvents PnlPatTop As Panel
     Friend WithEvents LblPatPatient As Guna.UI.WinForms.GunaLabel
     Friend WithEvents BtnClosePat As Guna.UI.WinForms.GunaButton

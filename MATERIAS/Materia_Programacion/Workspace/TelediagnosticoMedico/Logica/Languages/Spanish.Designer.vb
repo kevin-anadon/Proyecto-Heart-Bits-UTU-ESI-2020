@@ -632,6 +632,24 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Busca una cadena traducida similar a Cedula de identidad.
+        '''</summary>
+        Friend Shared ReadOnly Property ciP() As String
+            Get
+                Return ResourceManager.GetString("ciP", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca una cadena traducida similar a Ciudad.
+        '''</summary>
+        Friend Shared ReadOnly Property cityP() As String
+            Get
+                Return ResourceManager.GetString("cityP", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Busca una cadena traducida similar a Cedula de identidad errónea.
         '''</summary>
         Friend Shared ReadOnly Property CiWrong() As String
@@ -686,11 +704,29 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Busca una cadena traducida similar a Fecha de nacimiento.
+        '''</summary>
+        Friend Shared ReadOnly Property DateP() As String
+            Get
+                Return ResourceManager.GetString("DateP", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Busca una cadena traducida similar a Diagnóstico modificado con exito.
         '''</summary>
         Friend Shared ReadOnly Property DiagnosticModSuccess_M_C() As String
             Get
                 Return ResourceManager.GetString("DiagnosticModSuccess_M_C", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca una cadena traducida similar a Puerta.
+        '''</summary>
+        Friend Shared ReadOnly Property doorP() As String
+            Get
+                Return ResourceManager.GetString("doorP", resourceCulture)
             End Get
         End Property
         
@@ -1858,6 +1894,24 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Busca una cadena traducida similar a Primer nombre.
+        '''</summary>
+        Friend Shared ReadOnly Property nom1P() As String
+            Get
+                Return ResourceManager.GetString("nom1P", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca una cadena traducida similar a Segundo Nombre.
+        '''</summary>
+        Friend Shared ReadOnly Property nom2P() As String
+            Get
+                Return ResourceManager.GetString("nom2P", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Busca una cadena traducida similar a No se encuentra habilitado..
         '''</summary>
         Friend Shared ReadOnly Property NotEnable() As String
@@ -1939,11 +1993,47 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Busca una cadena traducida similar a Calle.
+        '''</summary>
+        Friend Shared ReadOnly Property streetP() As String
+            Get
+                Return ResourceManager.GetString("streetP", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Busca una cadena traducida similar a Inicio de sesión exitoso..
         '''</summary>
         Friend Shared ReadOnly Property SuccessLogin() As String
             Get
                 Return ResourceManager.GetString("SuccessLogin", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca una cadena traducida similar a Primer Apellido.
+        '''</summary>
+        Friend Shared ReadOnly Property surn1P() As String
+            Get
+                Return ResourceManager.GetString("surn1P", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca una cadena traducida similar a Segundo Apellido.
+        '''</summary>
+        Friend Shared ReadOnly Property surn2P() As String
+            Get
+                Return ResourceManager.GetString("surn2P", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca una cadena traducida similar a Teléfono.
+        '''</summary>
+        Friend Shared ReadOnly Property telP() As String
+            Get
+                Return ResourceManager.GetString("telP", resourceCulture)
             End Get
         End Property
         

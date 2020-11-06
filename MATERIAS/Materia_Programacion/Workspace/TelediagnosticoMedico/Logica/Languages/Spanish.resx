@@ -348,6 +348,12 @@
     <value>Modificar región</value>
     <comment>Admin. SymptomAdd</comment>
   </data>
+  <data name="ciP" xml:space="preserve">
+    <value>Cedula de identidad</value>
+  </data>
+  <data name="cityP" xml:space="preserve">
+    <value>Ciudad</value>
+  </data>
   <data name="CiWrong" xml:space="preserve">
     <value>Cedula de identidad errónea</value>
   </data>
@@ -368,9 +374,15 @@
   <data name="CsvSymptomsMsg" xml:space="preserve">
     <value>Luego debe asociarle una o más patologias</value>
   </data>
+  <data name="DateP" xml:space="preserve">
+    <value>Fecha de nacimiento</value>
+  </data>
   <data name="DiagnosticModSuccess_M_C" xml:space="preserve">
     <value>Diagnóstico modificado con exito</value>
     <comment>Medic. Chat. MessageBox</comment>
+  </data>
+  <data name="doorP" xml:space="preserve">
+    <value>Puerta</value>
   </data>
   <data name="EliminatedSuccessfull_A_R" xml:space="preserve">
     <value> eliminado con éxito</value>
@@ -870,6 +882,12 @@ que se apliquen a usted.</value>
   <data name="MsgExit" xml:space="preserve">
     <value>Está seguro que desea salir ?</value>
   </data>
+  <data name="nom1P" xml:space="preserve">
+    <value>Primer nombre</value>
+  </data>
+  <data name="nom2P" xml:space="preserve">
+    <value>Segundo Nombre</value>
+  </data>
   <data name="NotEnable" xml:space="preserve">
     <value>No se encuentra habilitado.</value>
   </data>
@@ -902,8 +920,20 @@ que se apliquen a usted.</value>
     <value>Quirúrgico</value>
     <comment>Admin. HomePP. Radiobutton. Title.</comment>
   </data>
+  <data name="streetP" xml:space="preserve">
+    <value>Calle</value>
+  </data>
   <data name="SuccessLogin" xml:space="preserve">
     <value>Inicio de sesión exitoso.</value>
+  </data>
+  <data name="surn1P" xml:space="preserve">
+    <value>Primer Apellido</value>
+  </data>
+  <data name="surn2P" xml:space="preserve">
+    <value>Segundo Apellido</value>
+  </data>
+  <data name="telP" xml:space="preserve">
+    <value>Teléfono</value>
   </data>
   <data name="TreatmentAlreadyExists_A_P" xml:space="preserve">
     <value>Tratamiento ya existente</value>

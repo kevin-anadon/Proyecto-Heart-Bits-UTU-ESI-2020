@@ -344,6 +344,12 @@
     <value>Modify region</value>
     <comment>Admin. SymptomAdd</comment>
   </data>
+  <data name="ciP" xml:space="preserve">
+    <value>Identity Card</value>
+  </data>
+  <data name="cityP" xml:space="preserve">
+    <value>City</value>
+  </data>
   <data name="CiWrong" xml:space="preserve">
     <value>Wrong Identity Card.</value>
   </data>
@@ -364,9 +370,15 @@
   <data name="CsvSymptomsMsg" xml:space="preserve">
     <value>Then you must associate one or more pathologies</value>
   </data>
+  <data name="DateP" xml:space="preserve">
+    <value>Birthdate</value>
+  </data>
   <data name="DiagnosticModSuccess_M_C" xml:space="preserve">
     <value>Successfully modified diagnosis</value>
     <comment>Medic. Chat. MessageBox</comment>
+  </data>
+  <data name="doorP" xml:space="preserve">
+    <value>Door</value>
   </data>
   <data name="EliminatedSuccessfull_A_R" xml:space="preserve">
     <value> successfully removed</value>
@@ -859,6 +871,12 @@ that apply to you.</value>
   <data name="MsgExit" xml:space="preserve">
     <value>Are you sure you want to exit ?</value>
   </data>
+  <data name="nom1P" xml:space="preserve">
+    <value>First Name</value>
+  </data>
+  <data name="nom2P" xml:space="preserve">
+    <value>Second Name</value>
+  </data>
   <data name="NotEnable" xml:space="preserve">
     <value>It is not enabled.</value>
   </data>
@@ -891,8 +909,20 @@ that apply to you.</value>
     <value>Surgical</value>
     <comment>Admin. HomePP. Radiobutton. Title.</comment>
   </data>
+  <data name="streetP" xml:space="preserve">
+    <value>Street</value>
+  </data>
   <data name="SuccessLogin" xml:space="preserve">
     <value>Successful Login.</value>
+  </data>
+  <data name="surn1P" xml:space="preserve">
+    <value>First Surname</value>
+  </data>
+  <data name="surn2P" xml:space="preserve">
+    <value>Second Surname</value>
+  </data>
+  <data name="telP" xml:space="preserve">
+    <value>Telephone</value>
   </data>
   <data name="TreatmentAlreadyExists_A_P" xml:space="preserve">
     <value>Existing treatment</value>

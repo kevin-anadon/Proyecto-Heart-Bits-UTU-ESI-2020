@@ -22,6 +22,11 @@ Logic
   búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
 </summary>
 </member>
+<member name="P:Logic.My.Resources.English._Mod">
+<summary>
+  Busca una cadena traducida similar a MODIFY.
+</summary>
+</member>
 <member name="P:Logic.My.Resources.English.AddWithSuccess">
 <summary>
   Busca una cadena traducida similar a Successfully added.
@@ -332,6 +337,16 @@ Logic
   Busca una cadena traducida similar a Add region.
 </summary>
 </member>
+<member name="P:Logic.My.Resources.English.ciP">
+<summary>
+  Busca una cadena traducida similar a Identity Card.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.English.cityP">
+<summary>
+  Busca una cadena traducida similar a City.
+</summary>
+</member>
 <member name="P:Logic.My.Resources.English.CiWrong">
 <summary>
   Busca una cadena traducida similar a Wrong Identity Card..
@@ -362,9 +377,19 @@ Logic
   Busca una cadena traducida similar a Then you must associate one or more pathologies.
 </summary>
 </member>
+<member name="P:Logic.My.Resources.English.DateP">
+<summary>
+  Busca una cadena traducida similar a Birthdate.
+</summary>
+</member>
 <member name="P:Logic.My.Resources.English.DiagnosticModSuccess_M_C">
 <summary>
   Busca una cadena traducida similar a Successfully modified diagnosis.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.English.doorP">
+<summary>
+  Busca una cadena traducida similar a Door.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.EliminatedSuccessfull_A_R">
@@ -385,6 +410,21 @@ Logic
 <member name="P:Logic.My.Resources.English.HayCamposVacios">
 <summary>
   Busca una cadena traducida similar a There is an empty field..
+</summary>
+</member>
+<member name="P:Logic.My.Resources.English.InsertNewAdmin">
+<summary>
+  Busca una cadena traducida similar a INSERT NEW ADMINISTRATOR.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.English.InsertNewMedic">
+<summary>
+  Busca una cadena traducida similar a INSERT NEW MEDIC.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.English.InsertNewPatient">
+<summary>
+  Busca una cadena traducida similar a INSERT NEW PATIENT.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.Label13">
@@ -976,6 +1016,21 @@ that apply to you..
   Busca una cadena traducida similar a MAKING REQUEST.
 </summary>
 </member>
+<member name="P:Logic.My.Resources.English.ModifyAdmin">
+<summary>
+  Busca una cadena traducida similar a MODIFY ADMINISTRATOR .
+</summary>
+</member>
+<member name="P:Logic.My.Resources.English.ModifyMedic">
+<summary>
+  Busca una cadena traducida similar a MODIFY MEDIC .
+</summary>
+</member>
+<member name="P:Logic.My.Resources.English.ModifyPatient">
+<summary>
+  Busca una cadena traducida similar a MODIFY PATIENT .
+</summary>
+</member>
 <member name="P:Logic.My.Resources.English.ModifyWithSuccess">
 <summary>
   Busca una cadena traducida similar a Successfully modified.
@@ -984,6 +1039,16 @@ that apply to you..
 <member name="P:Logic.My.Resources.English.MsgExit">
 <summary>
   Busca una cadena traducida similar a Are you sure you want to exit ?.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.English.nom1P">
+<summary>
+  Busca una cadena traducida similar a First Name.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.English.nom2P">
+<summary>
+  Busca una cadena traducida similar a Second Name.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.NotEnable">
@@ -1031,9 +1096,29 @@ that apply to you..
   Busca una cadena traducida similar a Surgical.
 </summary>
 </member>
+<member name="P:Logic.My.Resources.English.streetP">
+<summary>
+  Busca una cadena traducida similar a Street.
+</summary>
+</member>
 <member name="P:Logic.My.Resources.English.SuccessLogin">
 <summary>
   Busca una cadena traducida similar a Successful Login..
+</summary>
+</member>
+<member name="P:Logic.My.Resources.English.surn1P">
+<summary>
+  Busca una cadena traducida similar a First Surname.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.English.surn2P">
+<summary>
+  Busca una cadena traducida similar a Second Surname.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.English.telP">
+<summary>
+  Busca una cadena traducida similar a Telephone.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.English.TreatmentAlreadyExists_A_P">
@@ -1121,6 +1206,11 @@ that apply to you..
 <summary>
   Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
   búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.Spanish._Mod">
+<summary>
+  Busca una cadena traducida similar a MODIFICAR.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.AddWithSuccess">
@@ -1433,6 +1523,16 @@ that apply to you..
   Busca una cadena traducida similar a Agregar región.
 </summary>
 </member>
+<member name="P:Logic.My.Resources.Spanish.ciP">
+<summary>
+  Busca una cadena traducida similar a Cedula de identidad.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.Spanish.cityP">
+<summary>
+  Busca una cadena traducida similar a Ciudad.
+</summary>
+</member>
 <member name="P:Logic.My.Resources.Spanish.CiWrong">
 <summary>
   Busca una cadena traducida similar a Cedula de identidad errónea.
@@ -1463,9 +1563,19 @@ that apply to you..
   Busca una cadena traducida similar a Luego debe asociarle una o más patologias.
 </summary>
 </member>
+<member name="P:Logic.My.Resources.Spanish.DateP">
+<summary>
+  Busca una cadena traducida similar a Fecha de nacimiento.
+</summary>
+</member>
 <member name="P:Logic.My.Resources.Spanish.DiagnosticModSuccess_M_C">
 <summary>
   Busca una cadena traducida similar a Diagnóstico modificado con exito.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.Spanish.doorP">
+<summary>
+  Busca una cadena traducida similar a Puerta.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.EliminatedSuccessfull_A_R">
@@ -1486,6 +1596,21 @@ that apply to you..
 <member name="P:Logic.My.Resources.Spanish.HayCamposVacios">
 <summary>
   Busca una cadena traducida similar a Hay algún campo vacío..
+</summary>
+</member>
+<member name="P:Logic.My.Resources.Spanish.InsertNewAdmin">
+<summary>
+  Busca una cadena traducida similar a INSERTAR NUEVO ADMINISTRADOR.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.Spanish.InsertNewMedic">
+<summary>
+  Busca una cadena traducida similar a INSERTAR NUEVO MÉDICO.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.Spanish.InsertNewPatient">
+<summary>
+  Busca una cadena traducida similar a INSERTAR NUEVO PACIENTE.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.Label13">
@@ -2079,6 +2204,21 @@ que se apliquen a usted..
   Busca una cadena traducida similar a Patient.
 </summary>
 </member>
+<member name="P:Logic.My.Resources.Spanish.ModifyAdmin">
+<summary>
+  Busca una cadena traducida similar a MODIFICAR ADMINISTRADOR .
+</summary>
+</member>
+<member name="P:Logic.My.Resources.Spanish.ModifyMedic">
+<summary>
+  Busca una cadena traducida similar a MODIFICAR MÉDICO .
+</summary>
+</member>
+<member name="P:Logic.My.Resources.Spanish.ModifyPatient">
+<summary>
+  Busca una cadena traducida similar a MODIFICAR PACIENTE .
+</summary>
+</member>
 <member name="P:Logic.My.Resources.Spanish.ModifyWithSuccess">
 <summary>
   Busca una cadena traducida similar a Modificado con éxito.
@@ -2087,6 +2227,16 @@ que se apliquen a usted..
 <member name="P:Logic.My.Resources.Spanish.MsgExit">
 <summary>
   Busca una cadena traducida similar a Está seguro que desea salir ?.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.Spanish.nom1P">
+<summary>
+  Busca una cadena traducida similar a Primer nombre.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.Spanish.nom2P">
+<summary>
+  Busca una cadena traducida similar a Segundo Nombre.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.NotEnable">
@@ -2134,9 +2284,29 @@ que se apliquen a usted..
   Busca una cadena traducida similar a Quirúrgico.
 </summary>
 </member>
+<member name="P:Logic.My.Resources.Spanish.streetP">
+<summary>
+  Busca una cadena traducida similar a Calle.
+</summary>
+</member>
 <member name="P:Logic.My.Resources.Spanish.SuccessLogin">
 <summary>
   Busca una cadena traducida similar a Inicio de sesión exitoso..
+</summary>
+</member>
+<member name="P:Logic.My.Resources.Spanish.surn1P">
+<summary>
+  Busca una cadena traducida similar a Primer Apellido.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.Spanish.surn2P">
+<summary>
+  Busca una cadena traducida similar a Segundo Apellido.
+</summary>
+</member>
+<member name="P:Logic.My.Resources.Spanish.telP">
+<summary>
+  Busca una cadena traducida similar a Teléfono.
 </summary>
 </member>
 <member name="P:Logic.My.Resources.Spanish.TreatmentAlreadyExists_A_P">

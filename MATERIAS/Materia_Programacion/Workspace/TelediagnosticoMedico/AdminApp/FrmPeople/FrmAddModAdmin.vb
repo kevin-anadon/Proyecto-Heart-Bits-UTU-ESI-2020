@@ -12,11 +12,28 @@ Public Class FrmAddModAdmin
     Public Shared Medic As Medic = Nothing
     Public Shared Patient As People = Nothing
 
+    Private Sub TranslatePatient()
+        LblPN1.Text = Translator.Instance.Translate("nom1P")
+        LblPN2.Text = Translator.Instance.Translate("nom2P")
+        LblPS1.Text = Translator.Instance.Translate("surn1P")
+        LblPS2.Text = Translator.Instance.Translate("surn2P")
+        LblPCI.Text = Translator.Instance.Translate("ciP")
+        LblPDate.Text = Translator.Instance.Translate("DateP")
+        LblStreet.Text = Translator.Instance.Translate("streetP")
+        LblDoor.Text = Translator.Instance.Translate("doorP")
+        LblPCity.Text = Translator.Instance.Translate("cityP")
+        LblPTel.Text = Translator.Instance.Translate("telP")
+        BtnAdd.Text = Translator.Instance.Translate("Mod")
+    End Sub
+
     Private Sub FrmAddModAdmin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If Add = True Then
+            If Identify = 2 Then
+                TranslatePatient()
+            End If
             ReloadCmb(1)
-        Else
-            ReloadCmb(0)
+            Else
+                ReloadCmb(0)
             ReloadData()
         End If
         LoadData()

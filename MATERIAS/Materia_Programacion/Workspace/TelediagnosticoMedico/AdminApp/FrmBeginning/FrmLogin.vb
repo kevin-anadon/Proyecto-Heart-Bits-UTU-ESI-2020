@@ -79,15 +79,6 @@ Public Class FrmLogin
             BtnLogin_A_L.PerformClick()
         End If
     End Sub
-
-    Private Sub TxtUser_KeyDown(sender As Object, e As KeyEventArgs) Handles TxtUser.KeyDown
-        'Utilizable a modo de pruebas, luego para la version final se quitará
-        If e.KeyCode = Keys.K AndAlso e.Modifiers = Keys.Control Then
-            TxtUser.Text = "mel64"
-            TxtPass.Text = "84ulkc"
-            BtnLogin_A_L.PerformClick()
-        End If
-    End Sub
     Private Sub BtnCloseInfo_Click(sender As Object, e As EventArgs) Handles BtnCloseInfo.Click
         PnlInfo.Visible = False
     End Sub
