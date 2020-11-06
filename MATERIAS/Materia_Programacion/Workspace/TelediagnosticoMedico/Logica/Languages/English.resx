@@ -124,6 +124,12 @@
     <value>Accept</value>
     <comment>Medic. Home. Button. Petitions</comment>
   </data>
+  <data name="BtnAddAdmin_A_A" xml:space="preserve">
+    <value>NEW ADMIN</value>
+  </data>
+  <data name="BtnAddMedic_A_M" xml:space="preserve">
+    <value>NEW MEDIC</value>
+  </data>
   <data name="BtnAddPath_A_HP" xml:space="preserve">
     <value>ADD PATHOLOGY</value>
     <comment>Admin. Home. Button. Title.</comment>
@@ -131,6 +137,13 @@
   <data name="BtnAddPath_A_HPP" xml:space="preserve">
     <value>Modify pathology</value>
     <comment>Admin. HomePP. Boton. Titulo.</comment>
+  </data>
+  <data name="BtnAddPath_A_HPP_Add" xml:space="preserve">
+    <value>Store Pathology</value>
+    <comment>Admin. Pathology. Add</comment>
+  </data>
+  <data name="BtnAddPatient_A_P" xml:space="preserve">
+    <value>NEW PATIENT</value>
   </data>
   <data name="BtnAddSympt_A_S" xml:space="preserve">
     <value>ADD SYMPTOM</value>
@@ -142,6 +155,9 @@
   <data name="BtnAdmins_A_HP" xml:space="preserve">
     <value>Admins</value>
     <comment>Admin. Home. Button. Title.</comment>
+  </data>
+  <data name="BtnAllow_A_P" xml:space="preserve">
+    <value>ALLOW</value>
   </data>
   <data name="BtnBack_Intro2_P_H" xml:space="preserve">
     <value>BACK</value>
@@ -155,8 +171,20 @@
     <value>CANCELL</value>
     <comment>Patient. HomeD. Button</comment>
   </data>
+  <data name="BtnDelAdmin_A_A" xml:space="preserve">
+    <value>DELETE ADMIN</value>
+  </data>
+  <data name="BtnDelMedic_A_M" xml:space="preserve">
+    <value>DELETE MEDIC</value>
+  </data>
+  <data name="BtnDelPatient_A_P" xml:space="preserve">
+    <value>DELETE PATIENT</value>
+  </data>
   <data name="BtnDelSympt_A_S" xml:space="preserve">
     <value>DELETE SYMPTOM</value>
+  </data>
+  <data name="BtnDisable_A_P" xml:space="preserve">
+    <value>DISABLE</value>
   </data>
   <data name="BtnDropPathology_P_H" xml:space="preserve">
     <value>REMOVE SYMPTOM</value>
@@ -217,9 +245,18 @@
     <value>Medics</value>
     <comment>Admin. Home. Button. Title.</comment>
   </data>
+  <data name="BtnModAdmin_A_A" xml:space="preserve">
+    <value>MODIFY ADMIN</value>
+  </data>
   <data name="BtnModifyPath_A_HP" xml:space="preserve">
     <value>MODIFY PATHOLOGY</value>
     <comment>Admin. Home. Button. Title.</comment>
+  </data>
+  <data name="BtnModMedic_A_M" xml:space="preserve">
+    <value>MODIFY MEDIC</value>
+  </data>
+  <data name="BtnModPatient_A_P" xml:space="preserve">
+    <value>MODIFY PATIENT</value>
   </data>
   <data name="BtnMod_A_S" xml:space="preserve">
     <value>MODIFY SYMPTOM</value>
@@ -286,6 +323,15 @@
   <data name="CheckingFields" xml:space="preserve">
     <value>Checking fields.</value>
   </data>
+  <data name="CheckPathN&amp;T_A_P" xml:space="preserve">
+    <value>Name of existing pathology and treatment</value>
+  </data>
+  <data name="CheckPathName_A_P" xml:space="preserve">
+    <value>Name of existing pathology</value>
+  </data>
+  <data name="CheckPathTreat_A_P" xml:space="preserve">
+    <value>Name of existing treatment</value>
+  </data>
   <data name="ChkModDiag_M_C" xml:space="preserve">
     <value>Modify Diagnose</value>
     <comment>Medic. ChatInfo. CheckBox</comment>
@@ -312,6 +358,9 @@
   <data name="ConnectionFailed" xml:space="preserve">
     <value>Connection failed. Trying to recover data...</value>
   </data>
+  <data name="CsvPath_A_P" xml:space="preserve">
+    <value>Then you must associate one or more treatments</value>
+  </data>
   <data name="CsvSymptomsMsg" xml:space="preserve">
     <value>Then you must associate one or more pathologies</value>
   </data>
@@ -333,6 +382,15 @@
   <data name="HayCamposVacios" xml:space="preserve">
     <value>There is an empty field.</value>
   </data>
+  <data name="InsertNewAdmin" xml:space="preserve">
+    <value>INSERT NEW ADMINISTRATOR</value>
+  </data>
+  <data name="InsertNewMedic" xml:space="preserve">
+    <value>INSERT NEW MEDIC</value>
+  </data>
+  <data name="InsertNewPatient" xml:space="preserve">
+    <value>INSERT NEW PATIENT</value>
+  </data>
   <data name="Label13" xml:space="preserve">
     <value>Agustín Yorel Acosta Bergonzoni.</value>
   </data>
@@ -346,7 +404,7 @@
     <value>Ignacio Rodríguez Sosa.</value>
   </data>
   <data name="Lbl1_A_R" xml:space="preserve">
-    <value>You are about to</value>
+    <value>Hey, you are about to</value>
   </data>
   <data name="Lbl1_Intro_P_H" xml:space="preserve">
     <value>Introduction</value>
@@ -406,8 +464,14 @@ This Software will allow you to treat your Patients, providing them with informa
     <value>Description</value>
     <comment>Admin. SymptomAdd</comment>
   </data>
+  <data name="LblElimBodyPath" xml:space="preserve">
+    <value>Delete the pathology: </value>
+  </data>
   <data name="LblElimBodySympt" xml:space="preserve">
     <value>Delete the sypmtom:</value>
+  </data>
+  <data name="LblEliminarPath" xml:space="preserve">
+    <value>DELETE PATHOLOGY</value>
   </data>
   <data name="LblEliminarSympt" xml:space="preserve">
     <value>DELETE SYMPTOM</value>
@@ -429,7 +493,7 @@ Do not use in an emergency. In the event of a health emergency, call your local 
     <comment>Medic. Home. Label. Tittle1.</comment>
   </data>
   <data name="LblInfo1_A_HPP" xml:space="preserve">
-    <value>Required field</value>
+    <value>Required field [*]</value>
     <comment>Admin. HomePP. Label. Info.</comment>
   </data>
   <data name="LblInfo1_A_SS" xml:space="preserve">
@@ -486,6 +550,15 @@ Enjoy our service. Tap the button below to start the anonymous diagnosis and it 
     <value>Enter your Identity Card to authenticate and verify your credentials. This Software will allow you to make Primary Diagnoses and based on them you will decide if you want to start a conversation with a Medical Specialist.</value>
     <comment>Patient. Login. Label. Info.</comment>
   </data>
+  <data name="LblListadoAdmin_A_A" xml:space="preserve">
+    <value>ADMINISTRATOR LIST</value>
+  </data>
+  <data name="LblListadoMedic_A_M" xml:space="preserve">
+    <value>MEDIC LIST</value>
+  </data>
+  <data name="LblListadoPatient_A_P" xml:space="preserve">
+    <value>PATIENT LIST</value>
+  </data>
   <data name="LblListadoPet_M_P" xml:space="preserve">
     <value>LIST OF REQUESTS</value>
     <comment>Medic. Home. Label. Petitions</comment>
@@ -498,7 +571,7 @@ Enjoy our service. Tap the button below to start the anonymous diagnosis and it 
     <comment>Patient. HomeC. Label</comment>
   </data>
   <data name="LblMgmentPath_A_HP" xml:space="preserve">
-    <value>MANAGEMENT PATHOLOGIES</value>
+    <value>PATHOLOGIES MANAGEMENT</value>
     <comment>Admin. Home. Label. Title.</comment>
   </data>
   <data name="LblModDiagnostic_M_C" xml:space="preserve">
@@ -520,6 +593,9 @@ Enjoy our service. Tap the button below to start the anonymous diagnosis and it 
   <data name="LblPet_M_P" xml:space="preserve">
     <value>REQUESTED PETITIONS</value>
     <comment>Medic. Home. Label. Petitions</comment>
+  </data>
+  <data name="LblPregunta_A_RPath" xml:space="preserve">
+    <value>Are you sure you want to eliminate this pathology?</value>
   </data>
   <data name="LblPregunta_A_RSympt" xml:space="preserve">
     <value>Are you sure you want to remove this symptom?</value>
@@ -657,6 +733,10 @@ that apply to you.</value>
     <value>MODIFY PATHOLOGY</value>
     <comment>Admin. HomePP. Label. Title.</comment>
   </data>
+  <data name="LblTitle1_A_HPP_Add" xml:space="preserve">
+    <value>INSERT NEW PATHOLOGY</value>
+    <comment>Admin. Pathology. Add</comment>
+  </data>
   <data name="LblTitle1_A_L" xml:space="preserve">
     <value>WELCOME BACK</value>
     <comment>Admin. Login. Label. Title1.</comment>
@@ -709,9 +789,18 @@ that apply to you.</value>
     <value>SYMPTOM MODIFICATION</value>
     <comment>Admin. SymptomAdd</comment>
   </data>
+  <data name="LblTittleAdmin_A_A" xml:space="preserve">
+    <value>ADMINISTRATORS MANAGMENT</value>
+  </data>
   <data name="LblTittleChat_M_C" xml:space="preserve">
     <value>In a conversation with the Patient:</value>
     <comment>Medic. Chat. Label</comment>
+  </data>
+  <data name="LblTittleMedic_A_M" xml:space="preserve">
+    <value>MEDICS MANAGMENT</value>
+  </data>
+  <data name="LblTittlePatient_A_P" xml:space="preserve">
+    <value>PATIENTS MANAGMENT</value>
   </data>
   <data name="LblTittleSymps_A_S" xml:space="preserve">
     <value>SYMPTOM MANAGEMENT</value>
@@ -752,6 +841,18 @@ that apply to you.</value>
     <value>MAKING REQUEST</value>
     <comment>Patient. HomeD. Alert</comment>
   </data>
+  <data name="Mod" xml:space="preserve">
+    <value>MODIFY</value>
+  </data>
+  <data name="ModifyAdmin" xml:space="preserve">
+    <value>MODIFY ADMINISTRATOR </value>
+  </data>
+  <data name="ModifyMedic" xml:space="preserve">
+    <value>MODIFY MEDIC </value>
+  </data>
+  <data name="ModifyPatient" xml:space="preserve">
+    <value>MODIFY PATIENT </value>
+  </data>
   <data name="ModifyWithSuccess" xml:space="preserve">
     <value>Successfully modified</value>
   </data>
@@ -760,6 +861,15 @@ that apply to you.</value>
   </data>
   <data name="NotEnable" xml:space="preserve">
     <value>It is not enabled.</value>
+  </data>
+  <data name="NotExistTreatmentsToDel_A_P" xml:space="preserve">
+    <value>There are no treatments to eliminate</value>
+  </data>
+  <data name="NotExistTreatmentsToMod_A_P" xml:space="preserve">
+    <value>There are no treatments to modify</value>
+  </data>
+  <data name="PathologyEmpty_A_P" xml:space="preserve">
+    <value>Empty pathology fields</value>
   </data>
   <data name="Rbtn1_Idk_P_H" xml:space="preserve">
     <value>I don't know.</value>
@@ -784,12 +894,27 @@ that apply to you.</value>
   <data name="SuccessLogin" xml:space="preserve">
     <value>Successful Login.</value>
   </data>
+  <data name="TreatmentAlreadyExists_A_P" xml:space="preserve">
+    <value>Existing treatment</value>
+  </data>
+  <data name="TreatmentsEmpty_A_P" xml:space="preserve">
+    <value>Empty treatment fields</value>
+  </data>
+  <data name="TreatmentsEmpty_A_P_Add" xml:space="preserve">
+    <value>Empty treatments</value>
+  </data>
+  <data name="TreatmentsEmpty_A_P_AddComment" xml:space="preserve">
+    <value>You must store at least one</value>
+  </data>
+  <data name="TxtCi" xml:space="preserve">
+    <value>Search by c.i</value>
+  </data>
   <data name="TxtSearchPath_A_HP" xml:space="preserve">
-    <value>Make search by pathologies</value>
+    <value>Search by pathologies</value>
     <comment>Admin. HomeP. Textbox. Title.</comment>
   </data>
   <data name="TxtSympt_A_S" xml:space="preserve">
-    <value>Search by symptom</value>
+    <value>Search by symptoms</value>
   </data>
   <data name="UserInfoHomeCon_A_H" xml:space="preserve">
     <value>connected at </value>

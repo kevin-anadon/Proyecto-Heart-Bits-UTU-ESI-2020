@@ -34,13 +34,32 @@ Public Class FrmAddModPath
         Next
     End Sub
 
+    Private Sub FixTranslate()
+        Asterisco.Text = "*"
+        GunaLabel1.Text = "*"
+        GunaLabel2.Text = "*"
+        GunaLabel9.Text = "*"
+        GunaLabel6.Text = "*"
+        GunaLabel7.Text = "*"
+        GunaLabel8.Text = "*"
+        GunaLabel1.Text = "*"
+        BtnDelTreat.Text = "-"
+        LblPat.Text = ""
+        LblPatTop.Text = ""
+        LblPrioridad.Text = "BAJA"
+    End Sub
+
     Private Sub FrmModPath_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Translator.Instance.TranslateForm(Me)
+        FixTranslate()
         ReloadCmb()
         If Add = False Then
             LblPat.Text = PathMod.name.ToUpper()
             ReloadDgv()
             ReloadPat()
         Else
+            LblTitle1_A_HPP.Text = Translator.Instance.Translate("LblTitle1_A_HPP_Add")
+            BtnAddPath_A_HPP.Text = Translator.Instance.Translate("BtnAddPath_A_HPP_Add")
             BtnImportCsv.Visible = True
         End If
     End Sub
@@ -65,14 +84,14 @@ Public Class FrmAddModPath
             ElseIf RdbtnQuir_A_HPP.Checked Then
                 Kind = "Quirurjico"
             Else
-                MessageBox.Show("Campos de tratamiento vacios!")
+                MessageBox.Show(Translator.Instance.Translate("TreatmentsEmpty_A_P"))
                 Return
             End If
 
             If DgvTreat.Rows.Count - 1 > 0 Then
                 For i As Integer = 0 To DgvTreat.Rows.Count - 1
                     If (CStr(DgvTreat.Rows(i).Cells("name").Value) = TxtTreatName.Text) Then
-                        MessageBox.Show("Tratamiento ya existente!!")
+                        MessageBox.Show(Translator.Instance.Translate("TreatmentAlreadyExists_A_P"))
                         Exist = True
                     End If
                 Next
@@ -86,7 +105,7 @@ Public Class FrmAddModPath
             BtnModTreat.BaseColor = Color.Teal
             AddTreat()
         Else
-            MessageBox.Show("Campos de tratamiento vacios!")
+            MessageBox.Show(Translator.Instance.Translate("TreatmentsEmpty_A_P"))
             Return
         End If
     End Sub
@@ -99,7 +118,7 @@ Public Class FrmAddModPath
             RdbtnMedicine_A_HPP.Checked = False
             RdbtnQuir_A_HPP.Checked = False
         Else
-            MessageBox.Show("No existen tratamientos que eliminar!")
+            MessageBox.Show(Translator.Instance.Translate("NotExistTreatmentsToDel_A_P"))
         End If
     End Sub
     Private Sub DgvTreat_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgvTreat.CellClick
@@ -124,7 +143,7 @@ Public Class FrmAddModPath
             ElseIf RdbtnQuir_A_HPP.Checked Then
                 Kind = "Quirurjico"
             Else
-                MessageBox.Show("Campos de tratamientos vacios!")
+                MessageBox.Show(Translator.Instance.Translate("TreatmentsEmpty_A_P"))
                 Return
             End If
             row = DgvTreat.CurrentRow
@@ -138,7 +157,7 @@ Public Class FrmAddModPath
                 RdbtnQuir_A_HPP.Checked = False
             End If
         Else
-            MessageBox.Show("No existen tratamientos que modificar!!")
+            MessageBox.Show(Translator.Instance.Translate("NotExistTreatmentsToMod_A_P"))
         End If
     End Sub
 
@@ -179,7 +198,7 @@ Public Class FrmAddModPath
 
             Try
                 If DgvTreat.Rows.Count - 1 = 0 Then
-                    MessageBox.Show("Tratamientos vacios!!" & vbCrLf & "Debe almacenar uno por lo menos")
+                    MessageBox.Show(Translator.Instance.Translate("TreatmentsEmpty_A_P_Add") & vbCrLf & Translator.Instance.Translate("TreatmentsEmpty_A_P_AddComment"))
                     Return
                 End If
 
@@ -218,28 +237,28 @@ Public Class FrmAddModPath
 
                 If check = 0 And Add = False Then
                     log.UpdatePathology(PathSend, TreatmentsSend) 'Actualizo la patología en conjunto con sus tratamientos asociados
-                    MessageBox.Show("Modificado con exito")
+                    MessageBox.Show(Translator.Instance.Translate("ModifyWithSuccess"))
                     Me.Close()
                 ElseIf check = 0 And Add = True Then
                     log.AddPathology(PathSend, TreatmentsSend) 'Inserto la patología en conjunto con sus tratamientos asociados
-                    MessageBox.Show("Agregado con exito")
+                    MessageBox.Show(Translator.Instance.Translate("AddWithSuccess"))
                     Add = False
                     Me.Close()
                 ElseIf check = 1 Then
-                    MessageBox.Show("Nombre de patologia ya existente")
+                    MessageBox.Show(Translator.Instance.Translate("CheckPathName_A_P"))
                     Return
                 ElseIf check = 3 Then
-                    MessageBox.Show("Nombre de tratamiento ya existente")
+                    MessageBox.Show(Translator.Instance.Translate("CheckPathTreat_A_P"))
                     Return
                 Else
-                    MessageBox.Show("Nombre de patologia y tratamiento ya existente")
+                    MessageBox.Show(Translator.Instance.Translate("CheckPathN&T_A_P"))
                     Return
                 End If
             Catch ex As Exception
                 MessageBox.Show(ex.Message)
             End Try
         Else
-            MessageBox.Show("Campos de patología vacios!!")
+            MessageBox.Show(Translator.Instance.Translate("PathologyEmpty_A_P"))
         End If
     End Sub
 
@@ -264,7 +283,7 @@ Public Class FrmAddModPath
             End If
             If Pathologies.Count > 0 Then
                 log.AddPathologyFromCsv(Pathologies)
-                MessageBox.Show("Agregado con exito" + vbCrLf + "Luego debe asociarle uno o más tratamientos")
+                MessageBox.Show(Translator.Instance.Translate("AddWithSuccess") + vbCrLf + Translator.Instance.Translate("CsvPath_A_P"))
                 Add = False
                 Me.Close()
             End If

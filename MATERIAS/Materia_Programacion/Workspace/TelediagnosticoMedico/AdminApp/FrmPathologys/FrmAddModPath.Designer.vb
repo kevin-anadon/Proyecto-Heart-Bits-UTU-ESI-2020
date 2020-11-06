@@ -350,6 +350,7 @@ Partial Class FrmAddModPath
         Me.RdbtnMedicine_A_HPP.CheckedState.InnerColor = System.Drawing.Color.FromArgb(CType(CType(246, Byte), Integer), CType(CType(135, Byte), Integer), CType(CType(124, Byte), Integer))
         Me.RdbtnMedicine_A_HPP.CheckedState.InnerOffset = -4
         Me.RdbtnMedicine_A_HPP.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RdbtnMedicine_A_HPP.ForeColor = System.Drawing.Color.FromArgb(CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(97, Byte), Integer))
         Me.RdbtnMedicine_A_HPP.Location = New System.Drawing.Point(18, 407)
         Me.RdbtnMedicine_A_HPP.Name = "RdbtnMedicine_A_HPP"
         Me.RdbtnMedicine_A_HPP.Size = New System.Drawing.Size(102, 19)

@@ -33,7 +33,7 @@ Partial Class FrmPath
         Me.PanelBody = New System.Windows.Forms.Panel()
         Me.PanelButtons = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.BtnFaq = New Guna.UI.WinForms.GunaButton()
+        Me.BtnFaq_A_H = New Guna.UI.WinForms.GunaButton()
         Me.BtnLogout_A_HP = New Guna.UI.WinForms.GunaButton()
         Me.BtnPathologies_A_HP = New Guna.UI.WinForms.GunaButton()
         Me.BtnSymp_A_HP = New Guna.UI.WinForms.GunaButton()
@@ -146,7 +146,7 @@ Partial Class FrmPath
         'PanelButtons
         '
         Me.PanelButtons.Controls.Add(Me.PictureBox1)
-        Me.PanelButtons.Controls.Add(Me.BtnFaq)
+        Me.PanelButtons.Controls.Add(Me.BtnFaq_A_H)
         Me.PanelButtons.Controls.Add(Me.BtnLogout_A_HP)
         Me.PanelButtons.Controls.Add(Me.BtnPathologies_A_HP)
         Me.PanelButtons.Controls.Add(Me.BtnSymp_A_HP)
@@ -169,33 +169,33 @@ Partial Class FrmPath
         Me.PictureBox1.TabIndex = 30
         Me.PictureBox1.TabStop = False
         '
-        'BtnFaq
+        'BtnFaq_A_H
         '
-        Me.BtnFaq.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnFaq.Animated = True
-        Me.BtnFaq.AnimationHoverSpeed = 0.07!
-        Me.BtnFaq.AnimationSpeed = 0.03!
-        Me.BtnFaq.BackColor = System.Drawing.Color.Transparent
-        Me.BtnFaq.BaseColor = System.Drawing.Color.White
-        Me.BtnFaq.BorderColor = System.Drawing.Color.Black
-        Me.BtnFaq.DialogResult = System.Windows.Forms.DialogResult.None
-        Me.BtnFaq.FocusedColor = System.Drawing.Color.Empty
-        Me.BtnFaq.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnFaq.ForeColor = System.Drawing.Color.Black
-        Me.BtnFaq.Image = CType(resources.GetObject("BtnFaq.Image"), System.Drawing.Image)
-        Me.BtnFaq.ImageSize = New System.Drawing.Size(20, 20)
-        Me.BtnFaq.Location = New System.Drawing.Point(9, 447)
-        Me.BtnFaq.Name = "BtnFaq"
-        Me.BtnFaq.OnHoverBaseColor = System.Drawing.Color.Silver
-        Me.BtnFaq.OnHoverBorderColor = System.Drawing.Color.Black
-        Me.BtnFaq.OnHoverForeColor = System.Drawing.Color.White
-        Me.BtnFaq.OnHoverImage = Nothing
-        Me.BtnFaq.OnPressedColor = System.Drawing.Color.Black
-        Me.BtnFaq.Radius = 6
-        Me.BtnFaq.Size = New System.Drawing.Size(146, 30)
-        Me.BtnFaq.TabIndex = 29
-        Me.BtnFaq.Text = "FAQ"
-        Me.BtnFaq.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.BtnFaq_A_H.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnFaq_A_H.Animated = True
+        Me.BtnFaq_A_H.AnimationHoverSpeed = 0.07!
+        Me.BtnFaq_A_H.AnimationSpeed = 0.03!
+        Me.BtnFaq_A_H.BackColor = System.Drawing.Color.Transparent
+        Me.BtnFaq_A_H.BaseColor = System.Drawing.Color.White
+        Me.BtnFaq_A_H.BorderColor = System.Drawing.Color.Black
+        Me.BtnFaq_A_H.DialogResult = System.Windows.Forms.DialogResult.None
+        Me.BtnFaq_A_H.FocusedColor = System.Drawing.Color.Empty
+        Me.BtnFaq_A_H.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnFaq_A_H.ForeColor = System.Drawing.Color.Black
+        Me.BtnFaq_A_H.Image = CType(resources.GetObject("BtnFaq_A_H.Image"), System.Drawing.Image)
+        Me.BtnFaq_A_H.ImageSize = New System.Drawing.Size(20, 20)
+        Me.BtnFaq_A_H.Location = New System.Drawing.Point(9, 447)
+        Me.BtnFaq_A_H.Name = "BtnFaq_A_H"
+        Me.BtnFaq_A_H.OnHoverBaseColor = System.Drawing.Color.Silver
+        Me.BtnFaq_A_H.OnHoverBorderColor = System.Drawing.Color.Black
+        Me.BtnFaq_A_H.OnHoverForeColor = System.Drawing.Color.White
+        Me.BtnFaq_A_H.OnHoverImage = Nothing
+        Me.BtnFaq_A_H.OnPressedColor = System.Drawing.Color.Black
+        Me.BtnFaq_A_H.Radius = 6
+        Me.BtnFaq_A_H.Size = New System.Drawing.Size(146, 30)
+        Me.BtnFaq_A_H.TabIndex = 29
+        Me.BtnFaq_A_H.Text = "FAQ"
+        Me.BtnFaq_A_H.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'BtnLogout_A_HP
         '
@@ -677,7 +677,7 @@ Partial Class FrmPath
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents PanelBody As Panel
     Friend WithEvents PanelButtons As Panel
-    Friend WithEvents BtnFaq As Guna.UI.WinForms.GunaButton
+    Friend WithEvents BtnFaq_A_H As Guna.UI.WinForms.GunaButton
     Friend WithEvents BtnLogout_A_HP As Guna.UI.WinForms.GunaButton
     Friend WithEvents BtnPathologies_A_HP As Guna.UI.WinForms.GunaButton
     Friend WithEvents BtnAdmins_A_HP As Guna.UI.WinForms.GunaButton

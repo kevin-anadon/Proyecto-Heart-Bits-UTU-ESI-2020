@@ -24,7 +24,9 @@ Public Class FrmAlertRemove
                 LblElimBody.Text = Translator.Instance.Translate("LblElimBodySympt")
                 LblPregunta_A_R.Text = Translator.Instance.Translate("LblPregunta_A_RSympt")
             Case 1 'Eliminar Patología
-
+                LblEliminar.Text = Translator.Instance.Translate("LblEliminarPath")
+                LblElimBody.Text = Translator.Instance.Translate("LblElimBodyPath")
+                LblPregunta_A_R.Text = Translator.Instance.Translate("LblPregunta_A_RPath")
             Case 2 'Eliminar Administrador
 
             Case 3 'Eliminar Médico

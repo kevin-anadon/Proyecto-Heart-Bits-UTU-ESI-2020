@@ -8,6 +8,8 @@ Public Class FrmPath
     Dim DescSelected As String = Nothing
 
     Private Sub FrmPath_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Translator.Instance.TranslateForm(Me)
+        TxtSearchPath_A_HP.Text = Translator.Instance.Translate("TxtSearchPath_A_HP")
         ReloadDgv(0)
         BtnAddPath_A_HP.BackColor = Color.FromArgb(240, 240, 240)
         BtnModifyPath_A_HP.BackColor = Color.FromArgb(240, 240, 240)
@@ -36,8 +38,6 @@ Public Class FrmPath
     Private Sub BtnAddPat_Click(sender As Object, e As EventArgs) Handles BtnAddPath_A_HP.Click
         Dim frm As New FrmAddModPath()
         FrmAddModPath.Add = True
-        frm.LblTitle1_A_HPP.Text = "INSERTAR NUEVA PATOLOGÍA"
-        frm.BtnAddPath_A_HPP.Text = "Almacenar Patología"
         frm.ShowDialog()
         ReloadDgv(3)
     End Sub
@@ -52,9 +52,6 @@ Public Class FrmPath
             End If
         Next
         alerta.Obtain(PathSelected, 1)
-        alerta.LblEliminar.Text = "ELIMINAR PATOLOGÍA"
-        alerta.LblElimBody.Text = "Eliminar la patología: "
-        alerta.LblPregunta_A_R.Text = "¿Está usted seguro de que quiere eliminar esta patología?"
         alerta.ShowDialog()
         ReloadDgv(1)
     End Sub
@@ -95,7 +92,7 @@ Public Class FrmPath
     End Sub
 
     Private Sub BtnLogout_Click(sender As Object, e As EventArgs) Handles BtnLogout_A_HP.Click
-        If MsgBox("Está seguro que desea cerrar sesión ?", MsgBoxStyle.YesNoCancel, "Cerrar Programa") = MsgBoxResult.Yes Then
+        If MsgBox(Translator.Instance.Translate("LogOut_M_H"), MsgBoxStyle.YesNoCancel, Translator.Instance.Translate("CloseProgram_M_H")) = MsgBoxResult.Yes Then
             End
         End If
     End Sub

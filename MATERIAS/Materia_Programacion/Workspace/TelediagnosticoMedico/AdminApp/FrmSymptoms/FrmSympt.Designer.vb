@@ -568,7 +568,7 @@ Partial Class FrmSympt
         Me.LblTittleSymps_A_S.ForeColor = System.Drawing.Color.White
         Me.LblTittleSymps_A_S.Location = New System.Drawing.Point(4, 0)
         Me.LblTittleSymps_A_S.Name = "LblTittleSymps_A_S"
-        Me.LblTittleSymps_A_S.Size = New System.Drawing.Size(436, 51)
+        Me.LblTittleSymps_A_S.Size = New System.Drawing.Size(624, 51)
         Me.LblTittleSymps_A_S.TabIndex = 52
         Me.LblTittleSymps_A_S.Text = "GESTIÓN DE SÍNTOMAS"
         Me.LblTittleSymps_A_S.TextAlign = System.Drawing.ContentAlignment.MiddleLeft

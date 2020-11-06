@@ -124,6 +124,12 @@
     <value>Aceptar</value>
     <comment>Medic. Home. Button. Petitions</comment>
   </data>
+  <data name="BtnAddAdmin_A_A" xml:space="preserve">
+    <value>NUEVO ADMIN</value>
+  </data>
+  <data name="BtnAddMedic_A_M" xml:space="preserve">
+    <value>NUEVO MÉDICO</value>
+  </data>
   <data name="BtnAddPath_A_HP" xml:space="preserve">
     <value>NUEVA PATOLOGÍA</value>
     <comment>Admin. HomeP. Boton. Titulo.</comment>
@@ -131,6 +137,13 @@
   <data name="BtnAddPath_A_HPP" xml:space="preserve">
     <value>Modificar Patología</value>
     <comment>Admin. HomePP. Boton. Titulo.</comment>
+  </data>
+  <data name="BtnAddPath_A_HPP_Add" xml:space="preserve">
+    <value>Almacenar Patología</value>
+    <comment>Admin. Pathology. Add</comment>
+  </data>
+  <data name="BtnAddPatient_A_P" xml:space="preserve">
+    <value>NUEVO PACIENTE</value>
   </data>
   <data name="BtnAddSympt_A_S" xml:space="preserve">
     <value>NUEVO SÍNTOMA</value>
@@ -144,6 +157,9 @@
     <value>Administradores</value>
     <comment>Admin. HomeP. Boton. Titulo.</comment>
   </data>
+  <data name="BtnAllow_A_P" xml:space="preserve">
+    <value>HABILITAR</value>
+  </data>
   <data name="BtnBack_Intro2_P_H" xml:space="preserve">
     <value>ATRAS</value>
     <comment>Patient. Home. Boton. Title.</comment>
@@ -156,9 +172,21 @@
     <value>CANCELAR</value>
     <comment>Patient. HomeD. Button</comment>
   </data>
+  <data name="BtnDelAdmin_A_A" xml:space="preserve">
+    <value>ELIMINAR ADMIN</value>
+  </data>
+  <data name="BtnDelMedic_A_M" xml:space="preserve">
+    <value>ELIMINAR MÉDICO</value>
+  </data>
+  <data name="BtnDelPatient_A_P" xml:space="preserve">
+    <value>ELIMINAR PACIENTE</value>
+  </data>
   <data name="BtnDelSympt_A_S" xml:space="preserve">
     <value>ELIMINAR SÍNTOMA</value>
     <comment>Admin. Symptom</comment>
+  </data>
+  <data name="BtnDisable_A_P" xml:space="preserve">
+    <value>DESHABILITAR</value>
   </data>
   <data name="BtnDropPathology_P_H" xml:space="preserve">
     <value>QUITAR SÍNTOMA</value>
@@ -220,9 +248,18 @@
     <value>Médicos</value>
     <comment>Admin. HomeP. Boton. Titulo.</comment>
   </data>
+  <data name="BtnModAdmin_A_A" xml:space="preserve">
+    <value>MODIFICAR ADMIN</value>
+  </data>
   <data name="BtnModifyPath_A_HP" xml:space="preserve">
     <value>MODIFICAR PATOLOGÍA</value>
     <comment>Admin. HomeP. Boton. Titulo.</comment>
+  </data>
+  <data name="BtnModMedic_A_M" xml:space="preserve">
+    <value>MODIFICAR MÉDICO</value>
+  </data>
+  <data name="BtnModPatient_A_P" xml:space="preserve">
+    <value>MODIFICAR PACIENTE</value>
   </data>
   <data name="BtnMod_A_S" xml:space="preserve">
     <value>MODIFICAR SÍNTOMA</value>
@@ -290,6 +327,15 @@
   <data name="CheckingFields" xml:space="preserve">
     <value>Validando campos</value>
   </data>
+  <data name="CheckPathN&amp;T_A_P" xml:space="preserve">
+    <value>Nombre de patologia y tratamiento ya existente</value>
+  </data>
+  <data name="CheckPathName_A_P" xml:space="preserve">
+    <value>Nombre de patologia ya existente</value>
+  </data>
+  <data name="CheckPathTreat_A_P" xml:space="preserve">
+    <value>Nombre de tratamiento ya existente</value>
+  </data>
   <data name="ChkModDiag_M_C" xml:space="preserve">
     <value>Modificar Diagnóstico</value>
     <comment>Medic. ChatInfo. CheckBox</comment>
@@ -316,6 +362,9 @@
   <data name="ConnectionFailed" xml:space="preserve">
     <value>Conexión fallida. Intentado recopilar datos...</value>
   </data>
+  <data name="CsvPath_A_P" xml:space="preserve">
+    <value>Luego debe asociarle uno o más tratamientos</value>
+  </data>
   <data name="CsvSymptomsMsg" xml:space="preserve">
     <value>Luego debe asociarle una o más patologias</value>
   </data>
@@ -336,6 +385,15 @@
   </data>
   <data name="HayCamposVacios" xml:space="preserve">
     <value>Hay algún campo vacío.</value>
+  </data>
+  <data name="InsertNewAdmin" xml:space="preserve">
+    <value>INSERTAR NUEVO ADMINISTRADOR</value>
+  </data>
+  <data name="InsertNewMedic" xml:space="preserve">
+    <value>INSERTAR NUEVO MÉDICO</value>
+  </data>
+  <data name="InsertNewPatient" xml:space="preserve">
+    <value>INSERTAR NUEVO PACIENTE</value>
   </data>
   <data name="Label13" xml:space="preserve">
     <value>Agustín Yorel Acosta Bergonzoni.</value>
@@ -413,8 +471,14 @@ Este Software le permitirá tratar a sus Pacientes, brindándoles a estos, infor
     <value>Descripción</value>
     <comment>Admin. SymptomAdd</comment>
   </data>
+  <data name="LblElimBodyPath" xml:space="preserve">
+    <value>Eliminar la patología: </value>
+  </data>
   <data name="LblElimBodySympt" xml:space="preserve">
     <value>Eliminar el síntoma:</value>
+  </data>
+  <data name="LblEliminarPath" xml:space="preserve">
+    <value>ELIMINAR PATOLOGÍA</value>
   </data>
   <data name="LblEliminarSympt" xml:space="preserve">
     <value>ELIMINAR SÍNTOMA</value>
@@ -495,6 +559,15 @@ Este Software le permitirá gestionar al Personal, a los Pacientes, los Síntoma
     <value>Ingrese su Cédula de Identidad para autenticar y  verificar sus credenciales. Este Software le permitirá realizar Diagnósticos Primarios y en base de ellos decidirá si quiere iniciar una conversación con un Médico Especialista.</value>
     <comment>Patient. Login. Label. Info.</comment>
   </data>
+  <data name="LblListadoAdmin_A_A" xml:space="preserve">
+    <value>LISTADO ADMINISTRADORES</value>
+  </data>
+  <data name="LblListadoMedic_A_M" xml:space="preserve">
+    <value>LISTADO MÉDICOS</value>
+  </data>
+  <data name="LblListadoPatient_A_P" xml:space="preserve">
+    <value>LISTADO PACIENTES</value>
+  </data>
   <data name="LblListadoPet_M_P" xml:space="preserve">
     <value>LISTADO DE PETICIONES</value>
     <comment>Medic. Home. Label. Petitions</comment>
@@ -526,6 +599,9 @@ Este Software le permitirá gestionar al Personal, a los Pacientes, los Síntoma
   <data name="LblPet_M_P" xml:space="preserve">
     <value>PETICIONES SOLICITADAS</value>
     <comment>Medic. Home. Label. Petitions</comment>
+  </data>
+  <data name="LblPregunta_A_RPath" xml:space="preserve">
+    <value>¿Está usted seguro de que quiere eliminar esta patología?</value>
   </data>
   <data name="LblPregunta_A_RSympt" xml:space="preserve">
     <value>¿Está usted seguro de que quiere eliminar este síntoma?</value>
@@ -663,6 +739,10 @@ que se apliquen a usted.</value>
     <value>MODIFICACIÓN DE LA PATOLOGÍA</value>
     <comment>Admin. HomePP. Label. Title.</comment>
   </data>
+  <data name="LblTitle1_A_HPP_Add" xml:space="preserve">
+    <value>INSERTAR NUEVA PATOLOGÍA</value>
+    <comment>Admin. Pathology. Add</comment>
+  </data>
   <data name="LblTitle1_A_L" xml:space="preserve">
     <value>GUSTO EN VERLO</value>
     <comment>Admin. Login. Label. Titulo1.</comment>
@@ -715,9 +795,18 @@ que se apliquen a usted.</value>
     <value>MODIFICACIÓN DEL SÍNTOMA</value>
     <comment>Admin. SymptomAdd</comment>
   </data>
+  <data name="LblTittleAdmin_A_A" xml:space="preserve">
+    <value>GESTIÓN DE ADMINISTRADORES</value>
+  </data>
   <data name="LblTittleChat_M_C" xml:space="preserve">
     <value>En una conversación con el Paciente:</value>
     <comment>Medic. Chat. Label</comment>
+  </data>
+  <data name="LblTittleMedic_A_M" xml:space="preserve">
+    <value>GESTIÓN DE MÉDICOS</value>
+  </data>
+  <data name="LblTittlePatient_A_P" xml:space="preserve">
+    <value>GESTIÓN DE PACIENTES</value>
   </data>
   <data name="LblTittleSymps_A_S" xml:space="preserve">
     <value>GESTIÓN DE SÍNTOMAS</value>
@@ -763,6 +852,18 @@ que se apliquen a usted.</value>
     <value>Patient</value>
     <comment>Medic. Chat. Label</comment>
   </data>
+  <data name="Mod" xml:space="preserve">
+    <value>MODIFICAR</value>
+  </data>
+  <data name="ModifyAdmin" xml:space="preserve">
+    <value>MODIFICAR ADMINISTRADOR </value>
+  </data>
+  <data name="ModifyMedic" xml:space="preserve">
+    <value>MODIFICAR MÉDICO </value>
+  </data>
+  <data name="ModifyPatient" xml:space="preserve">
+    <value>MODIFICAR PACIENTE </value>
+  </data>
   <data name="ModifyWithSuccess" xml:space="preserve">
     <value>Modificado con éxito</value>
   </data>
@@ -771,6 +872,15 @@ que se apliquen a usted.</value>
   </data>
   <data name="NotEnable" xml:space="preserve">
     <value>No se encuentra habilitado.</value>
+  </data>
+  <data name="NotExistTreatmentsToDel_A_P" xml:space="preserve">
+    <value>No existen tratamientos que eliminar</value>
+  </data>
+  <data name="NotExistTreatmentsToMod_A_P" xml:space="preserve">
+    <value>No existen tratamientos que modificar</value>
+  </data>
+  <data name="PathologyEmpty_A_P" xml:space="preserve">
+    <value>Campos de patología vacios</value>
   </data>
   <data name="Rbtn1_Idk_P_H" xml:space="preserve">
     <value>No lo sé.</value>
@@ -794,6 +904,21 @@ que se apliquen a usted.</value>
   </data>
   <data name="SuccessLogin" xml:space="preserve">
     <value>Inicio de sesión exitoso.</value>
+  </data>
+  <data name="TreatmentAlreadyExists_A_P" xml:space="preserve">
+    <value>Tratamiento ya existente</value>
+  </data>
+  <data name="TreatmentsEmpty_A_P" xml:space="preserve">
+    <value>Campos de tratamientos vacios</value>
+  </data>
+  <data name="TreatmentsEmpty_A_P_Add" xml:space="preserve">
+    <value>Empty treatments</value>
+  </data>
+  <data name="TreatmentsEmpty_A_P_AddComment" xml:space="preserve">
+    <value>Debe almacenar uno por lo menos</value>
+  </data>
+  <data name="TxtCi" xml:space="preserve">
+    <value>Realizar búsqueda por c.i</value>
   </data>
   <data name="TxtSearchPath_A_HP" xml:space="preserve">
     <value>Realizar busqueda por patología</value>
